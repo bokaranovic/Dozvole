@@ -1,0 +1,1430 @@
+Na temelju članka 26 točke e) i članka 15. stavak 1. točaka e) i h) Ustava Hercegbosanske županije ("Narodne novine Hercegbosanske županije" broj: 3/96, 9/00, 9/04 i 10/05) Skupština Hercegbosanske županije, na sjednici održanoj dana 29.2. 2016.godine
+d o n o s i
+
+
+ZAKON
+o građenju
+
+
+I. OPĆE ODREDBE
+
+
+Članak 1.
+Ovim Zakonom uređuju se: tehnička i druga svojstva kojima moraju udovoljavati građevine na području Hercegbosanske županije (u daljnjem tekstu: Županija), utvrđuju sudionici u građenju, izrada tehničke dokumentacije (u daljnjem tekstu: projektiranje), postupak izdavanja građevinske dozvole, odnosi na gradilištu, postupak izdavanja uporabne dozvole, uporaba i održavanje građevine te njeno uklanjanje, propisuju odredbe o nadzoru kao i odgovarajuće sankcije zbog nepridržavanja odredbi ovog Zakona.
+Članak 2.
+Pojedini pojmovi u smislu ovoga Zakona imaju sljedeće značenje:
+1. Građenje je izvedba građevinskih i drugih radova (pripremni, zemljani, konstrukcijski, instalaterski, završni, te ugradnja građevinskih proizvoda, postrojenja ili opreme),  kojima se gradi nova građevina, rekonstruira, uklanja i održava postojeća građevina.
+2. Građevinom se smatra građevinski objekt na određenoj lokaciji koji se sastoji od građevinskog dijela i ugrađene opreme, koji zajedno čine tehničko-tehnološku cjelinu.
+3. Građevinskim dijelom iz točke 2. ovoga stavka smatra se dio građevine izrađen od građevinskih materijala i proizvoda, s ugrađenim instalacijama i završnim građevinskim radovima.
+4. Opremom se smatraju ugrađena postrojenja, uređaji, strojevi, procesne instalacije i drugi  ugrađeni proizvodi koji su u sklopu tehničko-tehnološkog procesa.
+5. Privremena građevina – objekt,  je objekt izgrađen, odnosno montažni objekt postavljen za potrebe gradilišta, za primjenu odgovarajuće tehnologije građenja, za potrebe održavanja sajmova, javnih manifestacija i drugo (kiosci, telefonske govornice, ljetne terase, reklamni panoi i sl.) u skladu s dokumentom
+prostornog uređenja, općinskom odlukom i sl.
+6. Pripremnim radovima se smatra izvođenje radova i građenje pomoćnih privremenih građevina, koji se izvode za potrebe organiziranja gradilišta i primjenu odgovarajuće tehnologije građenja.
+7. Radovi na zamjeni, dopuni i popuni opreme, ako je to u skladu s namjenom građevine ne smatraju se rekonstrukcijom, kao i radovi koji su posebnim zakonom utvrđeni kao radovi na održavanju građevine.
+8. Održavanjem građevine se smatra praćenje stanja građevine i  poduzimanje mjera nužnih za sigurnost građevine i sigurnost života i zdravlja ljudi.
+9. Sanacijom se smatraju radovi na oštećenim građevinama, kojima se građevina
+dovodi u stanje prije oštećenja.
+10. Radovima redovnog održavanja i sanacije oštećene građevine koji se mogu smatrati radovima tekućeg održavanja, smatraju se radovi koji ne utječu na konstrukciju građevine, zaštitu okoliša, namjenu, promjenu dimenzija ili vanjski izgled (manji popravci, žbukanje, bojenje fasada i njihovo dovođenje u prvobitno stanje, zamjena i bojenje građevinske stolarije, ostakljivanje postojećih otvora, pokrova, manjih dijelova krovne konstrukcije, zidanje pregradnih zidova, zamjena i popravak oštećenih instalacija, zidanje porušenih dimnjaka i sl.) te radovi kojima se ne mijenja usklađenost građevine s lokacijskim uvjetima u skladu s kojima je građevina izgrađena.
+11. Građevinskim proizvodima se smatraju proizvedeni građevinski materijali,
+prerađevine, elementi i industrijski proizvedene konstrukcije.
+12. Rekonstrukcijom građevine se smatraju radovi kojima se mijenjaju konstruktivni elementi koji mogu utjecati na stabilnost građevine ili njezinih dijelova, kojima se uvode nove instalacije i ugrađuje nova oprema u građevinu, mijenja namjena, tehnološki proces ili vanjski izgled građevine, mijenjaju uvjeti pod kojima je, na temelju građevinske dozvole, izgrađena građevina. Zamjena instalacija i opreme, ako se izvodi prema uvjetima utvrđenim u građevinskoj dozvoli, ne smatra se rekonstrukcijom. Rekonstrukcijom građevine, u smislu ovoga  Zakona, smatraju se i radovi kojima se građevina, čije je oštećenje nastalo kao posljedica starosti građevine, ili posljedica elementarnih nepogoda, prirodnih ili  tehničkih katastrofa i ratnih djelovanja prelazi 70%, dovodi u stanje koje je imala prije oštećenja.
+13. Konzerviranjem građevine se smatraju radovi kojima se oštećena ili nedovršena građevina zaštićuje od daljnjeg propadanja, a do stjecanja uvjeta za njezinu sanaciju, rekonstrukciju ili dovršenje radova na nezavršenoj građevini.
+14. Dogradnjom se smatra svako proširenje postojećeg objekta do 50% tlocrtne površine, kojim se zauzima zemljište ili prostor u odnosu na taj objekt i ako dograđeni dio čini  građevinsku i funkcionalnu cjelinu s objektom uz koji se dograđuje.
+15. Nadogradnjom se smatra izgradnja jedne ili više etaža, kao i preuređenje krovišta, odnosno potkrovlja na postojećim građevinama kojima se dobiva novi stambeni ili poslovni prostor.
+16. Promjenom namjene građevine smatra se izvođenje građevinskih (uključujući građevinsko-zanatske i instalaterske radove) kojima se mijenja namjena dana u građevinskoj dozvoli na temelju koje je građevina izgrađena.
+17. Uklanjanjem građevine se smatra rušenje i demontaža te odvoženje preostaloga materijala, opreme i drugih elemenata građevine koja, zbog fizičke dotrajalosti ili većih oštećenja nastalih elementarnim nepogodama, prirodnim ili tehničkim katastrofama ili ratnim djelovanjima, ne može nadalje služiti svojoj namjeni i predstavlja opasnost za ljudske živote i zdravlje te okolne objekte i promet, kao i uklanjanje građevine radi privođenja zemljišta konačnoj namjeni.
+18. Zgrada je objekt čiju građevinsku cjelinu čine horizontalni i vertikalni elementi konstrukcije te krov (sa svim instalacijama i opremom), koji čine funkcionalnu cjelinu, a namijenjena je za stanovanje ili obavljanje određenih djelatnosti, funkcija.
+19. Poslovni objekti su građevine namijenjene za obavljanje poslovnih djelatnosti;
+administrativnih, uslužnih, proizvodnih, skladišnih, opskrbnih, uključujući i
+
+2
+infrastrukturne građevine i njihove dijelove (cestovne, željezničke i zračne mreže, vodoopskrbe, elektro i ptt mreže, GSM mreže, fotonaponski objekti-solari, vjetro- elektrane, hidro i termoelektrane i svi pripadajući dijelovi objekata infrastrukturnih sustava, sportske, zdravstvene, socijalne građevine, građevine za potrebe poljoprivredne i šumarske djelatnosti, lov, ribolov, zaštitu okoliša i sl.).
+20. Višestambena (kolektivna) zgrada je građevina namijenjena stanovanju, koja ima više od tri stambene jedinice građena kao slobodnostojeći objekt ili kao lamelni objekti u nizu.
+21. Višestambena (kolektivna) zgrada s poslovnim sadržajima je zgrada iz prethodne točke koja pored stambenih jedinica ima i poslovne sadržaje namijenjene,primjerene stambenoj zoni, a koji zauzimaju ne više od 50% korisne površine zgrade.
+22. Objekti pod zaštitom su zaštićeni spomenici kulturne i povijesne baštine, te objekti u obuhvatu područja s posebnim obilježjima ( parkova prirode, područja prirodne rijetkosti i izvanredne prirodne ljepote.)
+23.  Zamjenska građevina je nova građevina izgrađena na mjestu ili u neposrednoj blizini mjesta prethodno uklonjene postojeće građevine unutar iste građevne čestice, kojom se bitno ne mijenja namjena, izgled, veličina i utjecaj na okoliš dotadašnje građevine,
+24.  Zgrada javne namjene je zgrada ili dio zgrade koja se koristi za: obavljanje poslova odnosno djelatnosti u području odgoja, obrazovanja, prosvjete, znanosti, kulture, sporta, zdravstva, socijalne i druge skrbi (zgrade jaslica, vrtića, osnovne i srednje škole, visokog učilišta, sveučilišta, instituta, zavoda, kina, kazališta, muzeja, galerija, sportske dvorane i druge zgrade namijenjene sportu i rekreaciji, zgrada primarne zdravstvene zaštite, bolnice i drugih ustanova namijenjenih zdravstveno-socijalnoj i rehabilitacijskoj svrsi, doma umirovljenika, đačkog doma, studentskog doma, radničkog doma, dječjeg i drugog doma namijenjenog privremenom ili stalnom boravku i sl.); rad državnih tijela i organizacija, tijela i organizacija lokalne i dr. uprave (zgrade tijela zakonodavne, izvršne i sudbene vlasti) rad pravnih osoba s javnim  ovlastima, banaka, štedionica i drugih financijskih organizacija, međunarodnih  institucija, gospodarskih, strukovnih i
+građanskih komora i drugih udruga, vjerskih zajednica; pružanje usluga u prometu i telekomunikacijskih usluga (zgrada, cestovnog prometa, zgrada pošta, telekomunikacijskih centara i sl.); pružanje  usluga u trgovini, ugostiteljstvu i turizmu (zgrada trgovine, restorana, hotela, putničkih agencija, i sl.),
+25. Individualni stambeni objekt je građevina stambene namjene na posebnoj građevinskoj parceli s najviše tri stana, koja nema više od podruma i tri nadzemne etaže namijenjene stanovanju i čija bruto površina ne prelazi 400 m2. Nadzemnom etažom smatra se i potkrovlje.
+26. Individualni stambeno-poslovni objekt je građevina stambene i poslovne namjene na posebnoj građevinskoj parceli, maksimalne bruto površine do 400 m2 uključujući podrum i potkrovlje s maksimalno tri etaže, od kojih se jedna etaža koristi za poslovne djelatnosti, a dvije za stanovanje, pri čemu utjecaji na okoliš od
+poslovne djelatnosti moraju ostati u dopuštenim granicama za stambena naselja.
+
+
+
+
+3
+27. Dijelovi (etaže) i visina građevine:
+27.1. Podrum (Po) je potpuno ukopani dio građevine čiji se prostor nalazi ispod
+poda prizemlja, odnosno suterena,
+27.2. Suteren (S) je dio građevine čiji se prostor nalazi ispod poda prizemlja i ukopan  je do 50% svoga volumena u konačno uređeni i zaravnani teren uz pročelje građevine, odnosno da je najmanje jednim svojim pročeljem izvan terena,
+27.3. Prizemlje (P) je dio građevine čiji se prostor nalazi neposredno na površini, odnosno najviše 1,5 m iznad konačno uređenog i zaravnanog terena mjereno na najnižoj točki uz pročelje građevine ili čiji se prostor nalazi iznad podruma i/ili suterena (ispod poda kata ili krova),
+27.4. Kat (K) je dio građevine čiji se prostor nalazi između dva poda iznad
+prizemlja,
+27.5. Potkrovlje (Pk) je dio građevine čiji se prostor nalazi iznad zadnjega kata i neposredno ispod kosog ili zaobljenog krova i može imati nadozidu do 1,40 m.
+27.6. Tavan (T) je prostor iznad posljednje etaže građevine, koji nije namijenjen za stanovanje ili poslovnu djelatnost, s nadzidom do 0,60 m i koji ne ulazi u katnost  zgrade.
+27.7. Visina građevine mjeri se od konačno zaravnanog i uređenog terena uz pročelje građevine na njegovom najnižem dijelu do gornjeg ruba stropne konstrukcije zadnjega kata, odnosno vrha nadozida potkrovlja,
+27.8. Ukupna visina građevine mjeri se od konačno zaravnanog i uređenog terena na njegovom najnižem dijelu uz pročelje građevine do najviše točke krova (sljemena),
+28. Građevinska (bruto) površina objekta(zgrade) je zbroj površina mjerenih u
+razini podova svih dijelova objekta (Po, S, Pr, K, Pk) uključivo površine lođe, balkone i terase, određenih prema vanjskim mjerama obodnih zidova u koje se uračunavaju obloge, obzide, parapete i ograde.
+29. Složena građevina je sklop više međusobno funkcionalno i/ili tehnološki povezanih građevina,
+30. Zaštita spomenika kulture :
+a) Konzervacija spomenika podrazumijeva očuvanje fizičkih ostataka
+spomenika i njegovog okruženja uz zabranu bilo kakve izgradnje novog objekta na istom lokalitetu ili u blizini lokaliteta, te zaštitu od uništenja nalaza i preuređenja koji bi ugrozili autentičnost spomenika,
+b) Restauracija podrazumijeva rekonstrukciju objekta uz potpuno očuvanje raritetne, autentične vrijednosti objekta sa svim njegovim estetskim, umjetničkim i povijesnim vrijednostima uz uporabu tradicionalnih građevnih materijala i radova koji se izvode na temelju postojeće originalne dokumentacije,
+c) Reprodukcija podrazumijeva kopiranje izgleda, strukture i estetike originala radi prezentacije kulturnog ili tradicionalnog fenomena,
+d) Iluminacija  podrazumijeva poduzimanje takvih intervencija na spomeniku ili u
+njegovom neposrednom okruženju radi ugradnje sustava električne rasvjete, koja će istaknuti, a ni na koji način neće ugroziti njegovu vrijednost,
+e) Revitalizacija je poduzimanje mjera za oživljavanje građevina i vraćanje
+prvobitne funkcije građevinama koje su tu funkciju izgubile,
+
+
+
+4
+31. Geodetski situacijski nacrt stvarnog stanja (situacija) za izgrađenu građevinu
+je nacrt koji  je, prema pravilima koja uređuju  izmjeru i katastar,
+izradila osoba ovlaštena za obavljanje poslova  izmjere i katastra
+nekretnina prema posebnom zakonu,
+32. Elaborat iskolčenja građevine je dokument kojim se iskazuje način iskolčenja građevine na terenu i način kojim su stabilizirane točke planirane građevine,
+33. Iskolčenje građevine je geodetski prijenos tlocrta vanjskog obrisa građevine ili osi trase građevine koju je dozvoljeno graditi, na terenu unutar građevne čestice,
+34. Ministarstvo je u ovom Zakonu ministarstvo graditeljstva, obnove, prostornog uređenja i zaštite okoliša, a ministar je ministar graditeljstva, obnove, prostornog uređenja i zaštite okoliša,
+35. Mjerodavni organ je organ uprave mjerodavan za poslove graditeljstva.
+
+
+Članak 3.
+(1) Projektiranje, građenje i održavanje građevine obavlja se prema odredbama ovoga Zakona, posebnih zakona i propisa donesenih na temelju zakona, zakonom utvrđenih normi, kao i prema pravilima struke.
+(2) Odredbe ovoga Zakona koje se odnose na građenje primjenjuju se i na
+rekonstrukciju građevine i uklanjanje građevine ili njezinog dijela.
+II. TEMELJNI ZAHTJEVI ZA GRAĐEVINU Članak 4.
+(1) Svaka građevina, ovisno o svojoj namjeni, mora biti projektirana i izgrađena na
+način da tijekom svog trajanja ispunjava temeljne zahtjeve za građevinu te druge zahtjeve, odnosno uvjete propisane ovim Zakonom i posebnim propisima koji utječu na ispunjavanje temeljnog zahtjeva za građevinu ili na drugi način uvjetuju gradnju građevina ili utječu na građevne i druge proizvode koji se ugrađuju u građevinu.
+(2) Građevni i drugi proizvodi koji se ugrađuju u građevinu moraju ispunjavati
+zahtjeve propisane ovim Zakonom i posebnim propisima.
+Članak 5.
+1.Temeljni zahtjevi za građevinu su:
+1. mehanička otpornost i stabilnost,
+2. sigurnost u slučaju požara,
+3. zaštita ljudskih života i zdravlja,
+4. nesmetan pristup i kretanje u građevini,
+5. zaštita korisnika od ozljeđivanja,
+6. zaštita od buke i vibracija,
+7. ušteda energije i toplinska zaštita
+8.zaštita od štetnog djelovanja okoliša i na okoliš
+1.1. Mehanička otpornost i stabilnost
+Članak 6.
+Građevina mora biti projektirana i izgrađena tako da, tijekom građenja i uporabe, predvidiva djelovanja ne prouzroče:
+a) rušenje građevine ili njezinog dijela
+b) deformacije nedopuštenog stupnja
+c) oštećenja građevinskog dijela ili opreme zbog deformacije nosive konstrukcije
+
+
+5
+d) nerazmjerno velika oštećenja u odnosu na uzrok zbog kojih su nastala
+
+
+1.2.  Sigurnost u slučaju požara
+
+
+Članak 7.
+Građevina mora biti projektirana i izgrađena da se u slučaju požara:
+a) očuva nosivost konstrukcije tijekom određenoga vremena utvrđenoga posebnim
+propisom,
+b) spriječi širenje vatre i dima unutar građevine, c) spriječi širenje vatre na susjedne objekte,
+d) omogući osobama da mogu neozlijeđena napustiti građevinu, odnosno da se
+omogući njihovo spašavanje, e) omogući zaštita spasitelja.
+
+
+1.3. Zaštita ljudskih života i zdravlja
+
+
+Članak 8.
+Građevina mora biti projektirana i izgrađena tako da udovoljava uvjetima zaštite ljudskih života i zdravlja te ne ugrožava radni i životni okoliš, posebno zbog:
+a) oslobađanje opasnih plinova, para i drugih štetnih tvari (onečišćenje zraka i sl.), b) opasnih zračenja,
+c) strujnog udara, d) eksplozije,
+e) zagađenja voda i tla,
+f) neodgovarajućeg rješenja u postupanju s otpadom,
+g) atmosferskog pražnjenja,
+h) mehanički pokretne opreme i dijelova unutar i oko građevine.
+
+
+1.4. Zaštita od ozljeđivanja
+
+
+Članak 9.
+Građevina mora biti projektirana i izgrađena tako da se tijekom njezine uporabe izbjegne moguće ozljeđivanje korisnika građevine.
+
+1.5. Nesmetan pristup i kretanje u građevini
+Članak 10.
+(1) Građevine javne i poslovne namjene moraju se projektirati i graditi tako da se
+osobama smanjene pokretljivosti osigurava nesmetan pristup, kretanje, boravak i rad.
+(2) Građevine stambene i stambeno-poslovne namjene s deset i više stanova moraju se projektirati i graditi tako da je moguća jednostavna prilagodba građevine u najmanje jednom stanu na svakih dvadeset stanova za pristup, kretanje, boravak i rad osobama smanjene pokretljivosti.
+(3) U građevinama iz stavka 1. ovoga članka za koje je izdana građevinska dozvola, odnosno koje su izgrađene prije donošenja ovoga Zakona, arhitektonske barijere koje onemogućavaju pristup i kretanje osobama s poteškoćama u kretanju uklonit će se u roku od dvije godine od stupanja na snagu ovoga Zakona.
+(4) Nalog za uklanjanje arhitektonskih barijera u smislu stavka (3) ovoga članka daje
+mjerodavni organ.
+
+
+
+
+6
+(5) Za uklanjanje arhitektonskih barijera, odnosno za omogućavanje pristupa građevini i kretanja u građevini osobama s teškoćama u kretanju, odgovara vlasnik građevine, odnosno investitor.
+(6) Uvjete i način nesmetanog pristupa, kretanja, boravka i rada osobama smanjene pokretljivosti u građevinama iz stavka 1. ovoga članka, te uvjete i način jednostavne prilagodbe građevina iz stavka 3. ovoga članka propisuje Vlada Hercegbosanske županije na prijedlog Ministarstva.
+
+1.6. Zaštita od buke i vibracija
+
+
+Članak 11.
+Građevina mora biti projektirana i izgrađena tako da nivo buke u građevini i njezinom okolišu ne prelazi dopuštene vrijednosti za tu namjenu, određene posebnim propisom.
+
+1.7. Ušteda energije i toplinska zaštita
+
+
+Članak 12.
+(1) Građevina mora biti projektirana i izgrađena u skladu s tehničkim propisima za toplinsku zaštitu, odnosno toplinsku izolaciju.
+(2) Građevina i oprema za grijanje i hlađenje unutar građevine moraju biti projektirani i izvedeni na način da, u odnosu na lokalne klimatske prilike, potrošnja energije prilikom korištenja bude optimalna – ispod propisanog nivoa, da se osigura zadovoljavajući nivo toplote unutar građevine, da se sukladno poznatim dostignućima struke osigura ušteda energije.
+
+
+1.8. Zaštita od štetnog djelovanja okoliša i na okoliš
+Članak 13.
+Građevina mora biti projektirana, izgrađena i održavana tako da se zaštiti od štetnog djelovanja okoliša i na okoliš, odnosno da se osigura željeni vijek njezinoga trajanja, kao i da štetno ne djeluje na okoliš.
+
+
+2. Odstupanje od tehničkih  svojstava građevine
+Članak 14.
+(1) U slučaju rekonstrukcije građevine, koju je kao spomenik kulturno-povijesnog značaja utvrdio mjerodavni županijski ili općinski organ za poslove kulture, može se odstupiti od nekog od tehničkih svojstava iz ovog poglavlja ukoliko takvo odstupanje ne utječe negativno na život i zdravlje ljudi.
+(2) Suglasnost za odstupanje, iz stavka 1. ovoga članka, a na zahtjev investitora daje
+mjerodavni organ za građenje uz prethodnu suglasnost mjerodavnog organa za poslove
+kulture.
+
+
+3. Dopuštena odstupanja u građenju
+
+
+Članak 15.
+Prilikom građenja građevine dopušteno odstupanje u odnosu na mjere određene glavnim projektom iznosi 3 % pojedinih dimenzija prostora i prostorija građevine (širina, visina, dužina), dok je u pogledu ukupnih pojedinih vanjskih mjera građevine dopušteno odstupanje do 0,30 metra, osim u pogledu odstupanja od obveznog građevinskog pravca i
+najmanje udaljenosti od međe.
+
+
+
+7
+4. Posebni propisi
+
+
+Članak 16.
+Kod utvrđivanja tehničkih svojstava građevine primjenjuju se tehnički propisi uz primjenu normi koji se primjenjuju u BiH i uz uvažavanje europskih normi, a u skladu sa međunarodnim načelima harmonizacije tehničkog zakonodavstva uz primjenu normativa i odredbi propisanih podzakonskim aktima.
+
+III. GRAĐEVINSKI PROIZVODI I OPREMA
+
+
+Članak 17.
+Građevinski proizvodi, materijali i oprema mogu se uporabljivati, odnosno ugrađivati samo ako je njihova kvaliteta dokazana ispravom proizvođača ili certifikatom o usklađenosti s
+utvrđenim posebnim propisima i normama.
+
+Novi proizvodi
+
+
+Članak 18.
+Građevinski proizvodi i oprema koji nisu provjereni u praksi, odnosno za koje nije donesen odgovarajući propis ili norma, mogu se upotrebljavati, odnosno ugrađivati samo na temelju potvrde ovlaštene institucije za certifikaciju da građevinski proizvod ili oprema unutar granica svoje namjene zadovoljava zahtjeve u pogledu osiguranja tehničkih svojstava bitnih
+za građevinu.
+
+IV. SUDIONICI U GRAĐENJU
+
+
+(1) Sudionici u građenju su:
+1. investitor
+2. projektant
+3. revident
+4. izvođač radova
+
+
+Članak 19.
+5. stručni nadzor ( u daljem tekstu nadzor)
+(2) Odnosi između sudionika u građenju iz stavka 1. ovoga članka određuju se
+ugovorima.
+
+
+1. Investitor
+
+
+Članak 20.
+(1) Investitor je pravna ili fizička osoba u čije ime i za čiji račun se gradi građevina i vrše drugi zahvati u prostoru u skladu sa odredbama ovog Zakona.
+(2) Projektiranje, kontrolu projekta, građenje i nadzor nad građenjem investitor mora
+povjeriti osobama registriranim za obavljanje tih djelatnosti.
+(3) Investitor je dužan osigurati stalni nadzor nad građenjem.
+(4) Investitor može biti ujedno projektant i izvođač, ali nadzor mora povjeriti drugoj pravnoj ili fizičkoj osobi koje ispunjava uvjete za nadzor prema ovom Zakonu.
+(5) Investitor je dužan početak građenja prijaviti  građevinskoj inspekciji najkasnije
+osam dana prije početka radova.
+(6) Investitor je dužan najkasnije do dana početka radova pribaviti elaborat iskolčenja građevine.
+
+
+8
+(7) U slučaju prekida radova, investitor je dužan poduzeti mjere osiguranja građevine i susjednih građevina i površina.
+(8) Ako se tijekom građenja promijeni investitor, o nastaloj promjeni novi investitor
+mora obavijestiti mjerodavni organ, u roku od osam dana od dana nastale promjene.
+(9) Fizička osoba koja je investitor individualnog stambenog objekta ili individualnog stambeno-poslovnog objekta za svoje potrebe može sama projektirati i obavljati nadzor građenja iz oblasti za koju ima visoku stručnu spremu ili višu stručnu spremu, ako je diplomirani inženjer s radnim iskustvom od pet godina ili inženjer s radnim iskustvom od
+deset godina i s položenim stručnim ispitom.
+
+2. Projektant
+
+
+Članak 21.
+(1) Projektant, prema ovom Zakonu, je pravna ili fizička osoba registrirana za
+obavljanje poslova projektiranja.
+(2) Projektiranjem građevina i drugih zahvata u prostoru može se baviti:
+a) pravna osoba, registrirana za tu djelatnost  ako pored općih uvjeta ispunjava i uvjet da u radnom odnosu ima najmanje jednog diplomiranog inženjera s položenim stručnim ispitom i najmanje pet godina radnog iskustva odgovarajuće struke, ili najmanje jednog inženjera s položenim stručnim ispitom i najmanje deset godina radnog iskustva.
+b) fizička osoba, samo u granicama svoje stručne osposobljenosti, u dijelu registrirane djelatnosti ako je  diplomirani inženjer s položenim stručnim ispitom i najmanje pet godina radnog iskustva, ili inženjer s položenim stručnim
+ispitom i najmanje deset godina radnog iskustva pod  uvjetom da je sklopila ugovor s pravnom osobom registriranom za poslove projektiranja a ne i građenja.
+(3) Pravna osoba iz stavka 2. točka a) ovog članka koja nema uposlene projektante za svaku vrstu projekta koje radi, mora osigurati angažiranje projektanata, diplomiranih
+inženjera i inženjera s položenim stručnim ispitom i odgovarajućim iskustvom, sklapanjem ugovora s pravnim ili fizičkim osobama registriranim za obavljanja djelatnosti projektiranja (svi ugovori su obvezno u prilogu temeljnog ugovora o projektiranju).
+(4) Fizička osoba iz stavka 2. točka b) ovog članka može na temelju sklopljenih ugovora s pravnim  osobama registriranim za projektiranje, obavljati poslove projektiranja samo u granicama svoje stručne osposobljenosti i u dijelu svoje registrirane djelatnosti.
+(5) Pravna osoba koja projektira, imenuje jednog ili više projektanata koji su odgovorni za ispravnost i kvalitetu projekta ili dijela projekta. Projektant je odgovoran da projekt ili dio projekta za čiju je izradu imenovan, zadovoljava uvjete iz ovoga Zakona, posebnih zakona, propisa donesenih na temelju zakona i važećih normi.
+(6) Ako u izradi glavnog, izvedbenog projekta ili projekta izvedenog stanja sudjeluje više projektanata, pravna osoba kojoj je povjerena izrada projekta, imenuje projektanta voditelja. Projektant voditelj može istodobno biti i projektant određene vrste projekta.
+(7) Projektant voditelj odgovoran je za kompletnost projektne dokumentacije i
+međusobnu usklađenost projekta, što potvrđuje svojim potpisom i odgovarajućom potvrdom.
+(8) Ako u izradi projekta sudjeluju dvije ili više pravnih ili fizičkih osoba (koje su sklopile ugovor s pravnom osobom), investitor je dužan imenovati koordinatora projekta,
+
+
+
+9
+odnosno odrediti osobu koja će imenovati tog koordinatora. Na koordinatora projekta odgovarajuće se primjenjuju odredbe iz stavka 7. ovog članka.
+(9) Pravna osoba dužna je osigurati kontrolu projekta sukladno članku 37.ovog
+Zakona.
+(10) Projektant, projektant voditelj i koordinator projekta može biti samo diplomirani inženjer s radnim iskustvom od pet godina i s položenim stručnim ispitom.
+(11) Projektant, projektant voditelj i koordinator projekta za objekte za koje nije
+predviđena kontrola projekta  može biti i inženjer s radnim iskustvom od deset godina i s položenim stručnim ispitom.
+
+3. Izvođač radova
+
+
+Članak 22.
+(1) Građenjem, odnosno izvođenjem radova na građevini, prema ovom Zakonu, može se baviti pravna ili fizička osoba registrirana za obavljanje te djelatnosti (u daljnjem tekstu: izvođač).
+(2) Građenjem građevina i drugim zahvatima u prostoru mogu se baviti pravne osobe registrirane za obavljanje te djelatnosti ako, pored općih uvjeta, ispunjavaju i uvjet da u stalnom radnom odnosu s punim radnim vremenom imaju najmanje jednog diplomiranog inženjera ili inženjera građevinske struke s najmanje 3 godine radnog iskustva i položenim stručnim ispitom.
+(3) Fizičke osobe registrirane za obavljanje djelatnosti građenja i izvođenja radova na građevini, mogu sudjelovati u građenju, samostalno ili preko pravne osobe registrirane za poslove građenja na temelju sklopljenih ugovora, samo u granicama svoje stručne osposobljenosti i u dijelu svoje registrirane djelatnosti.
+(4) Ako u građenju sudjeluju dva ili više izvođača, investitor je dužan imenovati izvođača radova odgovornog za međusobno usklađivanje radova.
+(5) Izvođač radova je dužan:
+a) graditi u skladu s građevinskom dozvolom ili lokacijskom dozvolom ili lokacijskom informacijom za objekte za koje nije potrebna građevinska dozvola,
+b) radove izvoditi tako da tehnička svojstva građevine odgovaraju zahtjevima iz
+poglavlja II. ovoga Zakona,
+c) ugraditi materijale, opremu i proizvode u skladu s poglavljem III. ovoga Zakona,
+d) osigurati dokaze o kvalitetu radova te ugrađenih proizvoda i opreme prema
+odredbama ovoga Zakona i zahtjevima iz projekta,
+e) poduzeti mjere za sigurnost građevine, radova, opreme i materijala, za sigurnost radnika , sudionika u prometu, sigurnost susjednih građevina.
+f) tijekom građenja voditi građevinski dnevnik i građevinsku knjigu.
+g)bez odgađanja obavijesti mjerodavnu instituciju, kada u tijeku građenja ili izvođenja drugih radova naiđe na objekte koji imaju obilježje prirodnog ili kulturno-povijesnog značaja i poduzme potrebne mjere zaštite lokaliteta,
+h) pisano obavijestiti investitora i mjerodavni organ koji je izdao građevinsku dozvolu  o nedostacima u tehničkoj dokumentaciji i o nepredviđenim okolnostima koje su   važne za izvođenje radova prema odobrenoj tehničkoj dokumentaciji.
+i) u slučaju prekida radova osigurati gradilište i objekt koji gradi,
+j)omogućiti građevinskoj inspekciji slobodan pristup gradilištu i dokumentaciji,
+
+
+
+10
+k) sačiniti pisano izvješće o izvedenim radovima po završetku gradnje i uvjetima za održavanje građevine.
+(6) Izvođač iz stavka 1. ovoga članka imenuje voditelja građenja, a ako izvodi samo
+pojedine radove, imenuje voditelja tih radova. Voditelj građenja, odnosno voditelj radova odgovoran je za provođenje stavka 5. ovoga članka.
+(7) Voditelj građenja i voditelj pojedinih radova može biti diplomirani inženjer s najmanje tri godine radnoga iskustva i položenim stručnim ispitom ili inženjer s najmanje pet
+godina radnoga iskustva i položenim stručnim ispitom.
+
+
+4. Nadzor nad građenjem
+
+
+Članak 23.
+(1) Nadzor nad građenjem, u ime investitora, prema ovom Zakonu, može obavljati pravna osoba  registrirana za poslove projektiranja ili građenja ili fizička osoba registrirana za poslove projektiranja ili građenja temeljem sklopljenog ugovora za obavljanje nadzora u ime pravne osobe.
+(2) Nadzor nad građenjem, u ime investitora, prema ovom Zakonu, može obavljati:
+a) pravna osoba registrirana za poslove projektiranja ili građenja
+koja ima u radnom   odnosu uposlenog najmanje jednog diplomiranog inženjera s pet godine radnog iskustva i položenim stručnim ispitom ili jednog inženjera odgovarajuće struke sa  deset godina radnog iskustva i položenim stručnim ispitom.
+b) fizička osoba registrirana za poslove projektiranja ili građenja
+temeljem  sklopljenog ugovora sa pravnom osobom ako je   diplomirani inženjer s    položenim stručnim ispitom i najmanje pet godina radnog  iskustva ili inženjer s   položenim stručnim ispitom i najmanje deset godina  radnog iskustva
+(3) Pravna osoba iz stavka 2.točka a) ovoga članka koja nema uposlene inženjere za sve vrste poslova za koje obavlja nadzor, mora osigurati angažiranje odgovarajućih inženjera, sklapanjem ugovora s fizičkim ili pravnim osobama registriranim za poslove projektiranja ili građenja.
+(4) Fizička osoba iz stavka 2. točka b) ovog članka može na temelju sklopljenih ugovora s pravnim osobama registriranim za poslove projektiranja ili građenja, obavljati poslove nadzora samo u granicama svoje stručne osposobljenosti i u dijelu svoje registrirane djelatnosti.
+(5) Ovisno o složenosti objekta, pravna osoba koja obavlja poslove nadzora nad građenjem, u ime investitora, može imenovati nadzorni tim i koordinatora. Koordinator se imenuje iz reda nadzornih inženjera i odgovoran je za usklađivanje rada tima i pojedinih faza objekta ili dijelova objekta.
+(6) Akt o imenovanju nadzornoga tima i koordinatora, pravna osoba dužna je dostaviti
+mjerodavnom organu.
+(7) U provođenju nadzora nadzorni inženjer dužan je:
+a) utvrditi usklađenost iskolčenja građevine s elaboratom o iskolčenju građevine i
+projektom
+b) provjeriti i utvrditi gradi li se u skladu s građevinskom dozvolom, lokacijskom dozvolom odnosno lokacijskom informacijom za objekte za koje nije potrebna građevinska dozvola, tehničkom  dokumentacijom i ovim zakonom
+c) provjeriti i utvrditi je li kvaliteta radova, ugrađenih proizvoda i opreme u skladu
+
+11
+sa zahtjevima projekta te je li ta kvaliteta dokazana propisanim ispitivanjima i dokumentima
+d) potvrditi urednost izvođenja radova potpisivanjem građevinskog dnevnika te
+kontrolirati građevinsku knjigu i sve eventualno promijenjene okolnosti u tehničkoj  dokumentaciji
+e) napisati završno izvješće investitoru o obavljenom nadzoru nad građenjem
+objekta
+f) biti nazočan u svim fazama uzimanja uzoraka ugrađenog materijala kao i u svim
+fazama testiranja nosivog sklopa građevine.
+(8) Akt o imenovanju nadzornog inženjera, pravna osoba dužna je dostaviti mjerodavnom građevinskom inspektoru.
+(9) Inženjer odgovarajuće struke sa  deset godina radnog iskustva i položenim stručnim ispitom može vršiti nadzor iz svoje struke za objekte za koje nije predviđena
+kontrola projekta.
+
+5. Revident
+
+
+Članak 24.
+(1) Kontrolu projekta može obavljati pravna ili fizička osoba registrirana za
+obavljanje poslove projektiranja.
+(2) Kontrolu projekta može obavljati:
+a) pravna osoba registrirana za obavljanje poslove projektiranja ako pored općih uvjeta ispunjava i uvjet da u radnom odnosu ima najmanje jednog diplomiranog inženjera s položenim stručnim ispitom i najmanje pet godina radnog iskustva.
+b) fizička osoba registrirana za obavljanje poslova projektiranja preko pravne osobe, temeljem sklopljenog ugovora, ako je  diplomirani inženjer s položenim stručnim ispitom i najmanje pet godina radnog iskustva
+(3) Pravna osoba iz stavka 2. točka a) ovog članka  koja nema uposlene diplomirane inženjere za sve dijelove projekta, mora osigurati  ugovorima  angažiranje diplomiranih inženjera koji ispunjavaju propisane uvjete, sklapanjem ugovora s fizičkim ili pravnim osobama registriranim za poslove projektiranja.
+(4) Fizička osoba iz stavka 2.točka b) ovog članka može na temelju sklopljenih ugovora s pravnim osobama registriranim za poslove projektiranja, obavljati poslove kontrole samo u granicama svoje stručne osposobljenosti i u dijelu svoje registrirane djelatnosti.
+(5) Pravna osoba iz stavka 1. dužna je imenovati odgovornog revidenta, koji je odgovoran za koordinaciju kontrole pojedinih faza ili dijelova glavnog, odnosno izvedbenog projekta.
+(6) Odgovorni revident organizira izradu završnog izvješća o kontroli ukupne projektne dokumentacije, na temelju pojedinačnih izvješća o kontroli pojedinih faza ili dijelova projekta, koji se prilažu uz završno izvješće.
+(7) Revident ne može biti osoba koja je u cijelosti ili djelomično sudjelovala u izradi projekta ili ako je taj projekt u cijelosti ili djelomično izrađen ili nostrificiran kod pravne osobe u kojoj je uposlen.
+(8) Revident je dužan  obaviti kontrolu projekta sukladno članku 37. ovoga Zakona.
+
+
+
+
+
+
+12
+6. Zabrana za određene osobe
+
+
+Članak 25.
+Stručne poslove projektiranja, kontrole projektne dokumentacije, građenja i nadzora nad građenjem za sudionike u građenju iz članka 19. ovoga Zakona ne mogu obavljati državni službenici i namještenici zaposleni u organima uprave mjerodavnim za poslove prostornog uređenja i građenja ako vode postupak ili sudjeluju u postupku izdavanja, odnosno izdaje
+građevinsku dozvolu za odnosnu građevinu.
+
+7. Stručni ispit
+
+
+Članak 26.
+Inženjeri koji obavljaju poslove projektiranja, kontrole projekata, građenja, nadzora nad građenjem i održavanja građevine,te građevinski inspektori moraju imati položen stručni ispit
+propisan posebnim zakonom.
+
+
+8. Inženjerska komora
+
+
+Članak 27.
+(1) Radi unapređenja uvjeta za obavljanje stručnih poslova u oblasti prostornog uređenja  i planiranja, projektiranja, građenja i drugih relevantnih oblasti za stanje u prostoru, radi provođenja i zaštite javnog interesa u obavljanju poslova i pružanju usluga iz tih oblasti, radi zaštite interesa svoje profesije, zadovoljavanja svojih stručnih potreba, te radi organiziranog nastupa pripadnika profesije prema državnim tijelima i organima, udruženjima, tržištu i ukupnom društvenom okruženju, na području Županije se osniva Inženjerska komora (u daljem tekstu: Komora).
+(2) Komora je pravna osoba i ima svoj Statut kojim se uređuje organizacija, način obavljanja poslova, prava i obaveze njenih članova.
+(3) Na Statut Komore suglasnost daje Ministarstvo.
+(4) Osnivači, a ujedno i članovi Komore su diplomirani inženjeri, inženjeri i tehničari arhitektonske, građevinske i drugih struka koje sudjeluju u pojedinim fazama procesa građenja građevina, koji imaju odgovarajuće stručno zvanje i koji su dobrovoljno pristupili u članstvo Komore u skladu s odredbama Statuta Komore, a koji ispunjavaju i druge propisane kriterije.
+(5) Nadzor nad zakonitošću rada Komore vrši Ministarstvo.
+
+
+9. Poslovi koje obavlja Komora
+
+
+Članak 28.
+
+
+Komora obavlja sljedeće poslove:
+a) utvrđuje profesionalna prava i dužnosti i etičke norme ponašanja članova u obavljanju poslova izrade planova, projektiranja, nadzora, revizije i izvođenja radova,
+b) organizira sudove časti za utvrđivanje povreda profesionalnih normi, c) vodi evidenciju sudionika u građenju,
+d) brine o trajnom stručnom uzdizanju svojih članova i kandidata za članove Komore, te s tim u vezi uspostavlja i unapređuje razne oblike stručne i naučne suradnje s odgovarajućim organima, institucijama i asocijacijama,
+e) analizira stanje regulative u oblasti prostornog planiranja i građenja, predlaže
+
+13
+izmjene i razvoj  regulative,
+f) organizira sistem informiranja članova i ukupne javnosti o stanju i problemima, te o mjerama koje bi trebalo poduzeti radi unapređenja prostornog uređenja i graditeljstva,
+g) daje stručne savjete iz svog djelokruga pojedincima i organizacijama,
+h) ostvaruje suradnju sa drugim inženjerskim komorama i njihovim međunarodnim
+asocijacijama,
+i) afirmira materijalne i druge interese ovlaštenih planera, projektanata i izvođača.
+
+
+10.Organizacija Komore
+
+
+Članak 29.
+(1) Organi Komore su: skupština, upravni odbor, nadzorni odbor i predsjednik.
+(2) Komora je organizirana po matičnim grupama za prostorne planere i urbaniste, projektante i izvođače radova, odnosno na pojedine sekcije (subspecijalnosti) unutar tih glavnih grupa.
+(3) Radom matične sekcije upravlja izvršni odbor grupe, odnosno sekcije.
+(4) Komora i njene matične sekcije mogu biti organizirane i po teritorijalnom načelu kao općinske komore.
+(5) Ostala pitanja bliže se određuju Statutom Komore.
+
+
+11. Financiranje Komore
+
+
+Članak 30.
+Komora stječe sredstva za rad od članarine, te od sponzorstva, donacija, poklona i
+drugih izvora u skladu sa zakonom.
+
+
+V. TEHNIČKA DOKUMENTACIJA - PROJEKTI
+
+
+Članak 31.
+Tehnička dokumentacija za građevine i zahvate u prostoru:
+a) studijsko-analitička dokumentacija –prethodne analize izvedivosti složenih građevina,
+b) projektna dokumentacija:
+1. idejni projekt,
+2.glavni projekt,
+3. izvedbeni projekt i
+4. projekt izvedenog stanja,
+c) posebna (dodatna) projektna dokumentacija:
+- projekt tehnologije i organizacije građenja,
+- projekt uklanjanja (rušenja, demontaže) građevine,
+
+
+1. Idejni projekt
+
+
+Članak 32.
+(1) Idejni projekt je skup međusobno usklađenih nacrta i dokumenata kojima se daju
+osnovna oblikovno funkcionalna i tehnička rješenja građevine te prikaz smještaja građevine u
+prostoru.
+
+14
+(2) Idejni projekt sadrži:
+- tehnički opis,
+- situacijsko rješenje,
+- sve tlocrte  građevine,
+- karakteristične presjeke,
+- sve fasade
+(3) Idejni projekt, ovisno o složenosti i tehničkoj strukturi građevine, može sadržavati i druge nacrte i priloge ako su oni značajni za utvrđivanje urbanističko-tehničkih uvjeta za područja gradnje koja nisu pokrivena odgovarajućim provedbenim planovima, kao i drugim uvjetima za izradu glavnog projekta (opis tehnološkog procesa, tehnološki nacrti, opis primjene određene tehnologije građenja, procjena troškova, preliminarna procjena utjecaja na
+okoliš i sl.)
+
+
+
+2. Glavni projekt
+
+
+Članak 33.
+(1) Glavni projekt ili projekt za dobivanje građevinske dozvole, u smislu ovoga
+Zakona, je skup međusobno usklađenih projekata kojima se daje tehničko rješenje građevine. (2) Glavni projekt, ovisno o tehničkoj strukturi građevine, može sadržavati više vrsta
+projekata:
+a) arhitektonski projekt b) građevinski projekt c) projekt instalacija
+d) projekt ugrađene opreme
+e) druge vrste projekata
+(3) Projekti iz stavka 2. ovoga članka, ovisno o vrsti građevine, sadrže:
+a) nacrte
+b) tehnički opis
+c) podatke o geotehničkim i drugim istražnim radovima koji su poslužili kao
+podloga za izradu projekta
+d) proračun konstrukcije, hidraulike, energetike, fizikalnih svojstava i dr. kojima se  dokazuje da je građevina projektirana prema odredbama poglavlja II. ovoga Zakona
+e) program kontrole i osiguranja kvaliteta
+f) tehničko rješenje sanacije okoliša gradilišta
+g) elaborat zbrinjavanja otpada, ako se radi o otpadu za koji su posebnim zakonom propisane mjere odlaganja
+h) elaborat zaštite okoliša, ako se radi o objektima za koje je potrebna okolišna
+dozvola
+i) situacijski prikaz objekta (izvod iz lokacijske dozvole )
+j) tehničke uvjete građenja
+k) izvješće o obavljenoj kontroli, ako objekt podliježe kontroli
+(4) Za gotove konstrukcije i opremu koja posjeduje certifikat o usklađenosti ili za koje je na drugi propisani način dokazano da su proizvedeni prema odredbama poglavlja II. i III.
+ovoga Zakona, u projektu nije potrebno to ponovno dokazivati.
+
+
+15
+(5) Ako je glavni projekt izrađen na stranom jeziku, mora sadržavati i prijevod na jedan od službenih jezika u Bosni i Hercegovini.
+(6) Za određene specifične građevine, Ministarstvo može propisati i dodatne obvezne
+projekte.
+
+3. Izvedbeni projekt
+
+
+Članak  34.
+(1) Izvedbeni projekt mora biti izrađen u skladu s glavnim projektom i uvjetima za građenje danim u građevinskoj dozvoli te sadržavati detaljne crteže i njihove tekstualne opise, čime se objekt potpuno definira za izvedbu.
+(2) Izvedbeni projekt obavezno se izrađuje za zgrade javne namjene i objekte za koje je predviđena kontrola projekta.
+(3) Tehnički prijem građevine i  izdavanje uporabne dozvole obavlja se na temelju
+glavnog projekta, a za zgrade javne namjene i objekte za koje je predviđena kontrola projekta i na temelju izvedbenog projekta.
+(4) Ako izvedbeni projekt nije radio projektant glavnog projekta, investitor je dužan izvedbeni projekt dostaviti projektantu glavnog projekta radi ovjere usklađenosti izvedbenog projekta s glavnim projektom i uvjetima danim u građevinskoj dozvoli.
+(5) Projektant glavnog projekta, odnosno revident dužan je napismeno izvijestiti građevinsku inspekciju da izvedbeni projekt koji mu je dostavljen na ovjeru nije urađen u skladu s uvjetima iz građevinske dozvole, odredbama ovoga Zakona i posebnim propisima
+donesenim na temelju ovoga Zakona i pravilima struke.
+
+
+4. Projekt izvedenog stanja
+
+
+Članak 35.
+(1) Projekt izvedenog stanja je skup međusobno usklađenih projekta koji se rade kada se u tijeku izvođenja radova na objektu vrše izmjene i to za one radove i dijelove objekta na kojima je došlo do izmjene u odnosu na prvobitni glavni ili izvedbeni projekt a da nisu u suprotnosti s građevinskom dozvolom.
+(2) Projekt izvedenog stanja iz stavka 1. ovog članka sadrži sve što i izvedbeni projekt uz dodatak izmjena i radova kao i dijelove objekta na kojima je došlo do izmjene u odnosu na prvobitni glavni ili izvedbeni projekt.
+(3) Projekt izvedenog stanja iz stavka 1. ovog članka se radi u istom mjerilu kao
+izvedbeni projekt.
+(4) U slučaju kada se vrši rekonstrukcija postojeće građevine, projekt izvedenog stanja koji se prilaže uz zahtjev za građevinsku dozvolu sadrži:
+- snimak postojećeg stanja (sve tlocrte, karakteristične presjeke, sve fasade, tehnički
+opis itd.)
+- glavni projekt za objekt, odnosno dio objekta na koji se rekonstrukcija odnosi.
+(5) Projekt izvedenog stanja iz stavka 4. ovog članka radi se u mjerilu kao i glavni
+projekt.
+
+5. Označavanje projekta
+
+
+Članak 36.
+(1) Projekti, odnosno njihovi dijelovi (tehnički opis, proračuni) i svaki list nacrta i dr. moraju imati naznačenu pravnu ili fizičku osobu koja ih je izradila, naziv građevine, ime i
+prezime, odnosno naziv investitora, oznaku ili broj projekta, odnosno njegovog dijela, mjerilo
+
+
+
+16
+u kojem je nacrt izrađen, datum izrade, ime i prezime te potpis projektanta i projektanta voditelja, kao i ovjeru pravne ili fizičke osobe.
+(2) Ovjerom projekta, odnosno nacrta pravna ili fizička osoba koja je izradila projekt
+potvrđuje da je projekt kompletan, njegovi dijelovi međusobno usklađeni, kao i da je usklađen s odredbama ovoga Zakona, posebnih propisa i normi donesenih na temelju zakona i pravila struke te da je izvedbeni projekt izrađen u skladu s glavnim projektom i uvjetima danim u građevinskoj dozvoli.
+(3) Projekti i njihovi dijelovi moraju biti uvezani tako da je onemogućena zamjena
+sastavnih dijelova.
+(4) Uz projekt mora biti uvezan akt o važećoj registraciji pravne ili fizičke osobe koja je izradila projekt, dokaz o položenom stručnom ispitu projektanta voditelja i projektanata pojedinih faza projekta te izvješće o reviziji projekta ako projekt podliježe reviziji.
+
+
+6. Kontrola dokumentacije
+
+
+Članak 37.
+(1) Kontrola glavnog projekta, ovisno o vrsti građevine, mora se obaviti u pogledu:
+a) mehaničke otpornosti i stabilnosti b) zaštite od buke i vibracija
+c) uštede energije i toplinske zaštite
+d) štetnog djelovanja na okoliš (u dijelu zaštite okoliša prema posebnom zakonu)
+e) zaštite od požara
+f) nesmetan pristup i kretanje u građevini g) zaštite na radu
+(2) Kontrolu glavnog projekta investitor može povjeriti samo revidentu iz članka 24.
+ovoga Zakona.
+(3) Odgovorni revident koji je obavio kontrolu projekta dužan je o tome sastaviti pisano zbirno izvješće koje će biti sastavni dio projekta.
+(4) U izvješću o obavljenoj kontroli, revident može zahtijevati od investitora:
+a) da prije početka izvođenja određenih radova obavi kontrolu dijela izvedbenog
+projekta koji se odnosi na te radove
+b) da obavi pregled izvedenih radova u određenoj fazi građenja
+(5) U slučaju iz prethodnog stavka, investitor je dužan revidentu omogućiti provedbu kontrole dijela izvedbenog projekta, odnosno pregled radova, koji revident potvrđuje upisom u građevinski dnevnik.
+(6) Ako je glavni projekt izrađen u inozemstvu, revident mora obaviti kontrolu kojom se utvrđuje da je izrađen u skladu s ovim zakonom i priznatim normama.
+(7) Kontroli projekta podliježu svi projekti za koje građevinsku dozvolu izdaje Ministarstvo i mjerodavni  organ osim individualnih stambenih objekata i individualnih stambeno-poslovnih objekata i poljoprivrednih objekata koji se koriste isključivo u funkciji obavljanja poljoprivrednih djelatnosti, razvijene bruto površine do 750 m2 i konstrukcije
+raspona do 6 m.
+
+
+7. Nostrifikacija projekta
+
+
+Članak 38.
+(1) Utvrđivanje usklađenosti glavnog i/ili izvedbenog projekta, izrađenog prema
+inozemnim propisima, s ovim zakonom, posebnim zakonima, propisima i normama
+
+17
+donesenim na temelju zakona i pravilima struke (u daljnjem tekstu: nostrifikacija) mora se
+obaviti, bez obzira na vrstu i veličinu građevine.
+(2) Nostrifikaciju projekta provodi pravna  osoba registrirana u Bosni i Hercegovini za poslove projektiranja, koja imenuje odgovornog revidenta i  revidente za svaku vrstu projekta, sukladno članku 24.ovog Zakona.
+(3) Glavni projekt i izvedbeni projekt, odnosno njihovi dijelovi moraju biti prevedeni na jedan od službenih  jezika u BiH prije nostrifikacije. Uz prijevod na jedan od službenih jezika u BiH, glavni i izvedbeni projekt mora zadržati izvorni tekst na stranom jeziku.
+(4) Pravna osoba ovlaštena za nostrifikaciju koja obavi nostrifikaciju dužna je o tome
+sastaviti pisano izvješće, ovjeriti projekt i izdati potvrdu.
+(5) U slučaju da projektu koji se nostrificira nedostaju dijelovi propisani ovim
+Zakonom, pravna osoba ovlaštena za nostrifikaciju može izraditi te dijelove projekta.
+(6) Ovjerom projekta iz stava 1. ovog člana pravna osoba registrirana za projektiranje odgovara za izvršenu nostrifikaciju projekta, odnosno usklađivanje projekta sa ovim zakonom, posebnim zakonima, tehničkim propisima donesenim na temelju zakona i sa važećim normama  za tu oblast.
+8. Čuvanje projekta
+Članak 39.
+(1) Glavni projekt, izvedbeni projekt ili projekt izvedenog stanja koji su sastavni dijelovi građevinske dozvole, zajedno s građevinskom dozvolom, (trajno) čuva mjerodavni organ.
+(2) Građevinsku dozvolu,glavni projekt, izvedbeni projekt ili projekt izvedenog stanja građevine, sa svim nacrtima, izmjenama i dopunama, dužan je čuvati investitor, odnosno pravni slijednik građevine, za sve vrijeme dok građevina postoji.
+
+
+VI. GRAĐEVINSKA DOZVOLA
+
+
+Članak 40.
+(1) Građenju nove i rekonstrukciji postojeće građevine i izvođenje drugih zahvata u prostoru može se pristupiti samo na temelju pravomoćne građevinske dozvole , osim u slučajevima iz članka 41.ovog Zakona ili propisa donesenih na temelju ovog Zakona.
+(2) Građevinska dozvola izdaje se za građenje cijele građevine, odnosno za dio građevine koja čini tehničko-tehnološku cjelinu (faze građenja složenih objekata).
+(3) U postupku izdavanja građevinske dozvole primjenjuje se Zakon o upravnom
+postupku.
+
+
+1. Građenje bez građevinske dozvole
+
+
+Članak 41.
+(1) Građevinska dozvola nije potrebna:
+a) za radove na zamjeni i / ili dopuni i popuni opreme te radove redovnog održavanja i sanacije oštećene građevine koji se, prema ovome zakonu, ne smatraju  rekonstrukcijom,
+b) za kablovske i zračne priključke na niskonaponsku i TK mrežu, kao i za vodove kojima se postojeća građevina priključuje na postojeće instalacije (vodovod, kanalizaciju, plinovod, itd.),
+c) za građenje grobnice,
+
+18
+d) za ograđivanje građevinske parcele,za uređenje okućnice za građevinu (platoi, staze, vanjsko stepenište oslonjeno cijelom  površinom na tlo, potporni zidovi visine do 0,8 m od nivoa tla),
+e) za staklenik i plastenik za smještaj bilja, tlocrtne površine (bruto) do 30 m2,
+f) za bunar za vodu ili cisternu za vodu, zapremine do 10 m3,
+g) za pomoćne građevine: individualne garaže, spremišta, drvarnice, ukupne bruto površine do 24 m2 i visine sljemena do 4 m,  namijenjenih redovitoj uporabi individualnog stambenog objekta ili individualnog stambeno-poslovnog objekta,
+a za koje je izdana građevinska dozvola,
+h) za septičku jamu, zapremine do 30 m3, koja se gradi na građevinskoj čestici građevine za koju je izdana građevinska dozvola, s prethodno određenom mikrolokacijom u odnosu na susjedne parcele,
+i) za dječje igralište,
+j) za nadstrešnicu za sklanjanje ljudi u javnom prometu,
+k) montažne objekte do 20 m2 i kioske gotove konstrukcije do 20 m2;
+l) za reklamni pano, oglasne površine do 12 m2, i vertikalnu prometnu signalizaciju
+u zemljišnom pojasu postojećeg puta,
+m) za sportske terene bez tribina, koji su cijelom svojom površinom oslonjeni na tlo  (nogometna igrališta te igrališta za tenis i slično,),
+n) za radove na stepeništima, hodnicima i sl. na promjeni pristupa građevini i unutar  građevine radi omogućavanja nesmetanog pristupa i kretanja u građevini osobama s teškoćama u kretanju    ako se ne radi o radovima iz članka 2. toč. 13.,
+14., 15., 16.  i  17. ovoga Zakona.,
+(2) Izvođenju radova iz stavka 1. ovoga članka može se pristupiti na temelju pravomoćne lokacijske dozvole  ili lokacijske informacije.
+(3) Za građevine i radove  iz stavka 1. ovoga članka u postupku izdavanja lokacijske dozvole i lokacijske informacije investitor je dužan uz zahtjev priložiti i dokaz o pravnom interesu iz članka 45. ovog Zakona.
+(4) U građenju građevina i izvođenju radova iz stavka 1. ovoga članka investitor i izvođač dužni su se pridržavati svih propisa i pravila struke koji se odnose na njihovo građenje.
+(5) Ministar može po potrebi pravilnikom utvrditi i druge jednostavne građevine i radove za koje građevinska dozvola nije potrebna, te utvrditi dokumentaciju potrebnu za gradnju tih građevina.
+(6) Radovi iz stavka 1. ovog članka podliježu tehničkom pregledu od strane općinske
+službe mjerodavne za poslove graditeljstva, na temelju čega se donosi rješenje o završenom
+objektu.
+
+2.  Posebni slučajevi građenja
+
+
+Članak 42.
+(1) U slučaju neposredne opasnosti od velikih prirodnih nepogoda ili ratnih i drugih razaranja, tijekom tih događaja ili neposredno nakon njihova prestanka, bez građevinske dozvole mogu se graditi one građevine koje služe sprečavanju djelovanja tih događaja, odnosno uklanjanju štetnih posljedica.
+(2) Građevina iz stavka 1. ovoga članka mora se ukloniti kad prestane potreba za njezino korištenje. Ako je potrebno da ta građevina ostane kao stalna, za nju se mora
+naknadno ishoditi građevinska dozvola.
+
+19
+(3) U slučaju oštećenja građevine zbog djelovanja iz stavka 1. ovoga članka, neovisno o stupnju oštećenja, građevina se može vratiti u prvobitno stanje bez prethodnoga izdavanja lokacijske dozvole.
+(4) Mjerodavni organ  obavezan je za građevine iz stavka 3. ovoga članka donijeti građevinsku dozvolu u skladu s građevinskom dozvolom na temelju kojeg je građevina izgrađena.
+(5) Ako se radi o većim oštećenjima konstruktivnih dijelova građevine, mjerodavni organ može od investitora zahtijevati da priloži tehničku dokumentaciju za sanaciju građevine i ateste o obavljenim ispitivanjima konstrukcije građevine.
+(6) Građevinskom dozvolom iz stavka 4. ovoga članka utvrdit će se i obaveza pribavljanja uporabne dozvole za saniranu građevinu.
+
+
+3. Organi mjerodavni za izdavanje građevinske dozvole
+
+
+Članak 43.
+(1) Građevinsku dozvolu izdaju Ministarstvo i općinski organ mjerodavan za poslove graditeljstva  na čijem se području građevina gradi, ako ovim Zakonom ili drugim posebnim zakonom nije određen neki drugi organ.
+(2) Ministarstvo izdaje građevinsku dozvolu za građevine i druge zahvate u prostoru za koje izdaje lokacijsku dozvolu sukladno Zakonu o prostornom uređenju Hercegbosanske županije.
+(3) U slučaju gradnje pojedinačne građevine ili rekonstrukcije građevine iz stavka (2) ovog članka Ministarstvo može prenijeti mjerodavnost izdavanja građevne dozvole mjerodavnom općinskom organu.
+
+
+4. Zahtjev za izdavanje građevinske dozvole
+Članak 44.
+(1) Zahtjev za izdavanje građevinske dozvole podnosi investitor mjerodavnom organu. (2) Zahtjevu za izdavanje građevinske dozvole prilažu se:
+- lokacijska dozvola ili lokacijska informacija.
+- dokaz pravnog interesa na predmetnoj lokaciji:
+- tri primjerka glavnog projekta, ili tri primjerka izvedbenog projekta ili tri primjerka projekta izvedenog stanja,
+- pisano izvješće o obavljenoj kontroli glavnog projekta ,
+- suglasnost, potvrde ili mišljenja mjerodavnih organa ili poduzeća o glavnom, izvedbenom ili projektu izvedenog stanja ako je to određeno posebnim zakonom,
+- izvod iz katastarskog plana, odnosno ažurnu geodetsku podlogu mjesta građenja
+- drugi prilozi određeni posebnim zakonom.
+
+
+5. Dokaz pravnog interesa
+
+
+Članak 45.
+(1) Dokazom pravnog interesa za izdavanje građevinske dozvole smatra se:
+1. izvadak iz zemljišne knjige iz kojeg je vidljivo da je investitor vlasnik ili nositelj
+prava građenja na građevinskoj čestici ili građevini na kojoj se namjerava graditi
+2. predugovor, ugovor ili ugovor sklopljen pod uvjetom, na temelju kojeg je investitor stekao pravo vlasništva ili pravo građenja
+
+20
+3. odluka nadležne vlasti na temelju koje je investitor stekao pravo vlasništva ili pravo građenja
+4. ugovor o ortaštvu sklopljen s vlasnikom nekretnine čiji je cilj zajedničko
+građenje
+5. pisana suglasnost vlasnika zemljišta, odnosno vlasnika postojeće građevine
+(2) Dokazom pravnog interesa za izdavanje građevinske dozvole u pogledu obuhvata
+zahvata u prostoru smatra se:
+1. izvadak, ugovor, odluka ili suglasnost iz stavka 1. ovog članka
+2. izvadak iz zemljišne knjige iz kojeg je vidljivo da je investitor nositelj prava služnosti
+3. predugovor, ugovor ili ugovor sklopljen pod uvjetom na temelju kojeg je
+investitor stekao ili će steći pravo služnosti, zakupa ili korištenja
+4. odluka nadležne vlasti na temelju koje je investitor stekao pravo služnosti.
+(3) Potpis vlasnika nekretnine, odnosno nositelja prava građenja na predugovoru,
+ugovoru, odnosno suglasnost iz stavka 1. i 2. ovog članka mora biti ovjerena kod notara.
+(4) Dokazom pravnog interesa za izdavanje građevinske dozvole u pogledu nekretnine na kojoj stjecanje stvarnih prava nije moguće ili se prema posebnom zakonu pravo građenja stječe koncesijom smatra se ugovor o koncesiji kojim se stječe pravo građenja.
+(5) Dokazom pravnog interesa za izdavanje građevinske dozvole u slučajevima iz stavka 1. i 2. ovog članka smatra se i odluka Vlade Hercegbosanske županije ili općinskog vijeća o utvrđivanju interesa Hercegbosanske županije ili općine ili poziv na odredbu posebnog zakona kojim je utvrđen interes Hercegbosanske županije, odnosno općine, za građenje građevine za koju je zatražena građevinska dozvola, ako je investitor podnio zahtjev za izvlaštenje.
+
+
+6. Sudjelovanje stranaka u postupku
+
+
+Članak 46.
+(1) Stranka u postupku izdavanja građevinske dozvole je:
+- podnositelj zahtjeva za izdavanje građevinske dozvole,
+- vlasnik nekretnine i nositelj drugih stvarnih prava na nekretnini za koju se izdaje
+građevinska dozvola,
+- vlasnik nekretnine i nositelj drugih stvarnih prava na nekretnini koja neposredno
+graniči s nekretninom za koju se izdaje građevinska dozvola.
+Strankom u postupku smatraju se i općina ili županija ako ispunjava neki od uvjeta iz ovog stavka.
+(2) Prije izdavanja građevinske dozvole, mjerodavni organ  dužan je strankama u postupku omogućiti uvid u glavni projekt.
+
+
+7. Postupak izdavanja građevinske dozvole i žalbeni postupak
+
+
+
+Članak 47.
+(1) Mjerodavni organ dužan je u postupku izdavanja građevinske dozvole utvrditi je li glavni projekt izrađen u skladu s uvjetima danim u lokacijskoj dozvoli ili lokacijskoj
+informaciji  te s odredbama ovoga Zakona i posebnih propisa.
+
+21
+(2) Ako su ispunjeni uvjeti propisani ovim Zakonom i posebnim propisima, mjerodavni organ iz članka 43. ovoga Zakona dužan je izdati građevinsku dozvolu u roku 30 dana od dana primitka zahtjeva.
+(3) Glavni projekt je sastavni dio građevinske dozvole, što na projektu mora biti naznačeno i ovjereno potpisom djelatnika i pečatom mjerodavnog organa  koji je tu dozvolu
+izdao.
+(4) Ako mjerodavni organ utvrdi da nisu ispunjeni propisani uvjeti za izdavanje
+građevinske dozvole, pisano će odrediti investitoru rok za ispunjenje tih uvjeta.
+(5) Ako investitor u određenom roku ne ispuni sve uvjete, mjerodavni organ rješenjem će odbiti zahtjev za izdavanje građevinske dozvole.
+(6) Na rješenje koje donosi općinska služba može se izjaviti žalba Ministarstvu u roku
+od 15 dana od dana prijema rješenja.
+(7) Rješenje koje donese Ministarstvo konačno je u upravnom postupku i protiv istog nije dopuštena žalba ali se može pokrenuti upravni spor kod mjerodavnog suda.
+Članak 48.
+(1) Građevinska dozvola sadrži:
+- podatke o investitoru po čijem zahtjevu se izdaje građevinska dozvola (naziv, odnosno ime i prezime, sa sjedištem, odnosno adresom);
+- podatke o građevini za koju se izdaje građevinska dozvola sa osnovnim podacima
+o  namjeni, gabaritu i katnosti građevine, sa oznakom lokacije (katastarske parcele);
+- naziv glavnog projekta s nazivom pravne osobe koja je izradila glavni projekt;
+- konstataciju da je glavni projekt sastavni dio građevinske dozvole;
+- period za koji građevinska dozvola važi;
+- obvezu investitora da prijavi početak izvođenja radova mjerodavnoj građevinskoj inspekciji   osam dana prije početka radova;
+- druge podatke od značaja za specifičnu lokaciju i građevinu.
+(2) Mjerodavni organ dužan je poslati primjerak rješenja građevinske dozvole bez
+glavnog projekta mjerodavnoj građevinskoj inspekciji.
+(3) Kada Ministarstvo izdaje građevinsku dozvolu, dužno je primjerak građevinske dozvole dostaviti mjerodavnoj općinskoj službi na čijem se teritoriju gradi građevina.
+(4) Glavni projekt je sastavni dio građevinske dozvole, što na projektu mora biti
+naznačeno i ovjereno potpisom ovlaštenog službenika i pečatom mjerodavnog organa.
+
+
+8. Izdavanje građevinske dozvole za dijelove građevine
+Članak 49.
+(1) Građevinska dozvola izdaje se za građenje cijele građevine.
+(2) Izuzetno od odredbe članka 40. stavka 2. ovoga Zakona, na zahtjev investitora, građevinska dozvola može se izdati i za dijelove građevine.
+(3) Prije podnošenja zahtjeva za izdavanje građevinske dozvole prema odredbi stavka
+2. ovoga članka, investitor je dužan ishoditi načelnu građevinsku dozvolu za cijelu građevinu.
+
+
+
+
+
+
+
+
+22
+9. Načelna građevinska dozvola
+
+
+Članak 50.
+(1) Načelnom građevinskom dozvolom, prema zahtjevu investitora, određuju se dijelovi građevine za koje će se donijeti građevinska dozvola.
+(2) Na temelju načelne građevinske dozvole, može se početi s pripremnim radovima, ali se ne može započeti s izvođenjem radova na građevini.
+(3) Zahtjevu za izdavanje načelne građevinske dozvole prilažu se:
+- lokacijska dozvola ili lokacijska informacija za cijelu složenu građevinu
+- tri primjerka idejnog projekta složene građevine
+- izvod iz katastarskoga plana, s ucrtanom situacijom cijele složene građevine i
+susjednih objekata
+- popis dijelova građevine za koje će se donijeti građevinska dozvola i redoslijed
+podnošenja zahtjeva
+- popis pripremnih radova koje treba izvesti
+- okolišna dozvola (ako složena građevina spada u građevine za koje je to propisano
+posebnim zakonom)
+- drugi nacrti i podaci ako su značajni za izradu glavnog projekta složene građevine
+(4) Idejni projekt sastavni je dio načelne građevinske dozvole, što na njemu mora biti naznačeno i ovjereno potpisom službenika i pečatom mjerodavnog organa.
+(5) Na postupak izdavanja načelne građevinske dozvole odgovarajuće se primjenjuju
+odredbe ovoga Zakona koje se odnose na postupak izdavanja građevinske dozvole.
+
+10. Građevinska dozvola za pripremne radove
+Članak 51.
+(1) Pripremni radovi za potrebe gradilišta izvode se na temelju načelne građevinske
+dozvole.
+(2) Izuzetno od odredbe stavka 1. ovoga članka, građevinska dozvola potrebna je za privremene građevine i pripremne radove koji mogu biti opasni za ljudske živote i zdravlje te promet i okoliš, i to:
+- za asfaltnu bazu, separaciju agregata, betonaru i sl., koji će se koristiti za građenje više građevina kroz dulji vremenski period
+- za dalekovod i transformatorsku stanicu koju je potrebno graditi radi napajanja
+gradilišta električnom energijom
+- za složenije radove koji mogu uticati na ljudske živote i zdravlje ili na stabilnost
+građevine
+(3) Građevinskom dozvolom iz stavka 2. ovoga članka moraju se odrediti uvjeti i rok u kojem se privremena građevina mora ukloniti.
+(4) Prethodni radovi istražnog karaktera (prethodne studije, istraživanja i ispitivanja terena, izrada idejnih rješenja, izrada investicijskog programa, prikupljanje podataka za projektiranje i drugi radovi koji služe za izradu tehničke dokumentacije i za donošenje odluke
+o izgradnji investicijskog objekta) izvode se na temelju lokacijske dozvole.
+
+
+
+
+
+
+
+
+
+23
+11. Građevinska dozvola za
+privremene objekte
+
+
+
+
+Članak 52.
+(1) Za postavljanje privremenih objekata iz članka 2. točka 5. ovoga Zakona, izdaje se građevinska dozvola za privremene građevine.
+(2) Građevinskom dozvolom iz stavka 1. ovoga članka mora se odrediti rok u kojem se
+privremena građevina mora ukloniti.
+(3) Rok za uklanjanje privremene građevine iz stavka 2. ovoga članka ne može biti duži od tri godine.
+
+12. Izmjene i / ili dopune građevinske dozvole
+Članak 53.
+(1) Investitor je dužan podnijeti zahtjev za izmjenu ili dopunu građevinske dozvole ako tijekom građenja namjerava na građevini učiniti bilo kakve izmjene kojima se odstupa od rješenja danih glavnim ili izvedbenim projektom na temelju kojeg je izdana građevinska dozvola ili uvjeta danih u lokacijskoj dozvoli ,odnosno lokacijskoj informaciji.
+(2) Ako se tijekom građenja promijeni investitor, novi investitor dužan je u roku od 15 dana, od mjerodavnog organa zatražiti izmjenu građevinske dozvole u vezi s promjenom
+investitora.
+
+
+13. Početak građenja
+
+
+Članak 54.
+(1) Investitor kojem je izdana građevinska dozvola  može pristupiti gradnji iz članka
+40. ovoga Zakona samo nakon dobivanja odgovarajuće klauzule o pravomoćnosti građevinske
+dozvole.
+
+
+14. Prestanak važenja građevinske dozvole
+Članak 55.
+(1) Građevinska dozvola prestaje važiti ako radovi na građevini za koju je građevinska dozvola donesena ne započnu u roku od dvije godine od dana pravomoćnosti građevinske dozvole.
+(2) Važenje građevinske dozvole može se, na zahtjev investitora, produljiti za još dvije
+godine ako se nisu promijenili uvjeti u skladu s kojima je donesena građevinska dozvola.
+
+
+15. Bespravna gradnja
+
+
+Članak 56.
+Posebnim propisom Skupština županije, odredit će postupak i uvjete pod kojim se može legalizirati dosadašnja bespravna gradnja, ako takva gradnja ne ugrožava opći javni interes, ako se uklapa u prostorno - plansku dokumentaciju i ako ne utiče negativno na uvjete zaštite okoliša, stanovništva i materijalnih dobara.
+
+
+
+
+
+
+
+
+
+
+
+24
+VII. GRADILIŠTE
+1. Prijava građenja
+
+
+
+
+Članak 57.
+Investitor je dužan građevinskoj inspekciji  najkasnije u roku od osam dana prije početka građenja ili nastavka izvođenja građevinskih radova nakon prekida dužeg od tri
+mjeseca, pisano prijaviti početak građenja, odnosno nastavak radova.
+
+
+2. Iskolčavanje
+
+
+Članak 58.
+(1) Prije početka građenja vrši se iskolčavanje građevine u skladu sa uvjetima danim u građevinskoj dozvoli i na temelju glavnog ili izvedbenog projekta.
+(2) Iskolčavanje građevine vrši organ nadležan za katastar ili pravna osoba registrirana za izvođenje tih poslova. O iskolčavanju se sačinjava elaborat, a kopije se dostavljaju investitoru, i mjerodavnoj urbanističko-građevinskoj inspekciji.
+(3) Za štetu proisteklu iz pogrešnog iskolčavanja odgovara osoba koja je izvršila
+iskolčavanje.
+
+3. Uređenje gradilišta
+
+
+Članak 59.
+(1) Gradilište mora biti osigurano i ograđeno radi sigurnosti prolaznika i sprječavanja nekontroliranog pristupa ljudi na gradilište.
+(2) Na gradilištu koje se proteže na velikim prostranstvima (željezničke pruge, ceste, dalekovodi i sl.) dijelovi gradilišta koji se ne mogu ograditi moraju biti zaštićeni određenim prometnim znakovima ili označeni na drugi način.
+(3) Uz javnoprometne površine zabranjeno je ograđivati gradilište bodljikavom žicom ili na drugi način koji bi mogao ugrožavati prolaznike. Na određenim gradskim područjima može se odrediti poseban vanjski izgled ograde.
+(4) Gradilište mora imati istaknutu, na vidnom mjestu, ploču sa svim relevantnim podacima o građevini i sudionicima u gradnji (naziv investitora, izvođača radova i projektanta, osobe koja provodi nadzor građenja, naziv i vrstu građevine koja se gradi, naziv tijela koje je izdalo akt na temelju kojeg se gradi, broj akta na temelju kojeg se gradi, datum izdavanja i pravomoćnost toga akta kao i vrijeme početka i završetka radova).
+(5) Pripremni radovi za građenje mogu se izvoditi na zemljištu koje nije vlasništvo investitora samo ako je investitor prethodno ishodio suglasnost vlasnika toga zemljišta.
+(6) Investitor ili izvođač dužni su, radi privremenog zauzimanja susjednog, odnosno
+obližnjeg zemljišta za potrebe gradilišta, postupati prema odredbama posebnih zakona.
+(7) Za privremeno zauzimanje javnoprometnih površina za potrebe gradilišta investitor ili izvođač dužan je ishoditi dozvolu mjerodavnog općinskog organa za upravu ili organa odnosno poduzeća određenog posebnim zakonom.
+(8) Izgrađene privremene građevine i postavljena oprema gradilišta moraju biti stabilni i odgovarati propisanim uvjetima zaštite od požara i eksplozije te zaštite na radu i svim
+drugim mjerama zaštite radi sprečavanja ugrožavanja života i zdravlja ljudi.
+(9) Sve privremene građevine izgrađene u okviru pripremnih radova, oprema gradilišta, neutrošeni građevinski i drugi materijal, otpad i sl. moraju biti uklonjeni, a zemljište na području gradilišta i na prilazu gradilištu dovedeno u uredno stanje prije izdavanja  uporabne dozvole.
+
+25
+4. Dokumentacija na gradilištu
+
+
+Članak 60.
+(1) Izvođač na gradilištu mora imati:
+a) rješenje o upisu u registar djelatnosti i ugovor o udruživanju izvođača prema
+posebnom zakonu,
+b) akt o postavljanju voditelja građenja, odnosno voditelja pojedinih radova c) građevinsku dozvolu i glavni projekt
+d) ovjerene izvedbene projekte
+e) izvedbene projekte, sa svim izmjenama i dopunama f) građevinski dnevnik
+g) građevinsku knjigu
+h) dokaze o sukladnosti za ugrađene građevinske proizvode, dokaze o sukladnosti prema   posebnom zakonu za ugrađenu opremu, isprave o sukladnosti određenog dijela   građevine,  bitnim zahtjevima prema posebnom zakonu i dokaze kvalitete za koje je  ovim Zakonom, posebnim propisom ili projektom određena obveza prikupljanja tijekom izvođenja građevinskih i drugih radova kao i obveza provedbe kontrolnih   postupaka za do tada izveden dio građevine i građevinske i druge radove koji su u tijeku
+i) elaborat iskolčenja građevine, j) nacrt organizacije gradilišta
+(2) Uvjete, način i obrazac vođenja građevinskog dnevnika na gradilištu propisat će
+ministar posebnim propisom.
+
+VIII. UPORABNA DOZVOLA
+
+
+Članak 61.
+(1) Izgrađena građevina smije se početi koristiti, odnosno staviti u pogon nakon što
+mjerodavni organ donese dozvolu za njezinu uporabu (u daljnjem tekstu: uporabna dozvola).
+(2) Uporabna dozvola za izgrađenu građevinu donosi se nakon obavljenog tehničkog
+pregleda.
+(3) Iznimno od stavka 1. ovoga članka građevine iz članka 41. ovoga Zakona smiju se početi koristiti nakon što mjerodavni općinski organ donese rješenje o završenom objektu.
+
+
+
+1. Zahtjev za  izdavanje uporabne dozvole
+Članak 62.
+(1) Zahtjev za izdavanje uporabne dozvole investitor podnosi mjerodavnom organu
+koji je izdao građevinsku dozvolu za građevinu.
+(2) Zahtjev iz stavka 1. ovoga članka mora sadržavati:
+- kopiju građevinske dozvole
+- podatke o sudionicima u gradnji
+- geodetski situacijski nacrt stvarnog stanja (situacija) za izgrađenu građevinu
+- pisanu izjavu izvođača o izvedenim radovima i uvjetima održavanja građevine
+- završno izvješće nadzornog inženjera o izvedbi građevine
+
+
+
+
+
+
+26
+2. Tehnički pregled
+
+
+Članak 63.
+(1) Mjerodavni organ dužan je u roku od 30 dana od dana prijema zahtjeva obaviti tehnički pregled građevine.
+(2) O mjestu, danu i satu obavljanja tehničkog pregleda građevine mjerodavni organ dužan je obavijestiti investitora. Investitor je dužan tehničkom pregledu osigurati prisutnost sudionika u građenju.
+(3) Tehnički pregled građevine obavlja povjerenstvo koje rješenjem osniva mjerodavni organ iz članka 62. stavka 1. ovoga Zakona.
+(4) Rješenje iz stavka 3. ovoga članka, mjerodavni organ obavezan je donijeti u roku
+od osam dana od dana prijema urednog zahtjeva iz članka 62. ovoga Zakona.
+(5) Mjerodavni organ imenuje predsjednika i članove povjerenstva iz stavka 3. ovoga članka i određuje organe i poduzeća koja upućuju svoga ovlaštenog predstavnika kao člana povjerenstva.
+(6) Predsjednik i članovi povjerenstva iz stavka 3. ovoga članka moraju ispunjavati uvjete da su diplomirani inženjeri s pet godina radnoga staža i položenim stručnim ispitom.
+(7) Broj članova i sastav povjerenstva za tehnički pregled građevine ovisi o vrsti i složenosti objekta, odnosno povjerenstvo mora imati po jednog stručnog člana za svaku vrstu radova koje pregleda (arhitektonske / građevinske, strojarske, elektroinstalacijske, vodovodne i kanalizacijske itd.).
+(8) Izuzetno od prethodnog stavka povjerenstvo za tehnički pregled   individualnih stambenih objekata i individualnih stambeno-poslovnih  objekata i poljoprivrednih objekata koji se koriste isključivo u funkciji obavljanja poljoprivrednih djelatnosti razvijene bruto površine do 750 m2   i konstrukcije raspona do 6 m sačinjavaju dvije osobe tehničke struke arhitektonskog ili građevinskog smjera koje ispunjavaju uvjete da su diplomirani inženjeri s pet godina radnoga staža ili da su  inženjeri s deset godina radnoga staža i položenim stručnim
+ispitom.
+(9) Za  građevine iz članka 41. ovog Zakona tehnički pregled obavlja djelatnik mjerodavnog organa tehničke struke arhitektonskog ili građevinskog smjera kojeg imenuje rukovoditelj mjerodavnog organa.
+(10) U radu povjerenstva iz stavka 3. ovoga članka ne može sudjelovati službena osoba koja je izdala rješenje u postupku  izdavanja građevinske dozvole ili osobe koje su sudjelovale u izradi tehničke dokumentacije ili u gradnji predmetne građevine.
+(11) Tehničkim pregledom građevine utvrđuje se je li građevina izgrađena u skladu s građevinskom dozvolom, tehničkim propisima i normama, kao i uvjetima za građevinu utvrđenim posebnim propisima.
+(12) Predsjednik povjerenstva, odnosno djelatnik mjerodavnog organa koji obavlja tehnički pregled, o obavljenom tehničkom pregledu građevine sastavlja zapisnik u koji se unosi i mišljenje članova povjerenstva za tehnički pregled građevine o tome može li se izgrađena građevina koristiti ili se moraju prethodno otkloniti utvrđeni nedostaci ili se ne može izdati uporabna dozvola.
+(13) Predsjednik povjerenstva za tehnički pregled građevine, odnosno djelatnik mjerodavnog organa koji obavlja tehnički pregled, dužan je u roku od osam dana od dana obavljenog tehničkog pregleda građevine zapisnik iz stavka 12. ovoga članka, koji su
+potpisali svi članovi povjerenstva, dostaviti mjerodavnom organu.
+
+
+27
+3. Dužnost investitora u postupku
+
+
+Članak 64.
+Investitor je dužan, najkasnije na dan tehničkoga pregleda građevine, osim za građevine iz članka 41. ovoga Zakona, povjerenstvu za tehnički pregled građevine dati na uvid:
+- dokumentaciju iz članka 60. ovoga Zakona
+- geodetski situacijski nacrt stvarnog stanja (situacija) za izgrađenu građevinu, kao dio geodetskog elaborata
+- dokaz o postignutom kvalitetu radova i materijala
+- zbirno izvješće revidenata o obavljenoj kontroli
+- za objekte za koje je obvezna kontrola projekta pisanu  izjavu izvođača o izvedenim radovima i uvjetima održavanja građevine
+- završno izvješće nadzornog inženjera o izvedbi građevine
+
+4. Postupak  izdavanja uporabne dozvole
+Članak 65.
+(1) Ako je zapisnikom  povjerenstva utvrđeno da je građevina izgrađena sukladno građevinskoj dozvoli i projektnoj dokumentaciji mjerodavni organ za tu građevinu izdaje uporabnu dozvolu
+(2) Zahtjev za  izdavanje uporabne dozvole odbit će se rješenjem:
+a) ako je građevina izgrađena bez građevinske dozvole
+b) ako su tijekom građenja obavljene izmjene i dopune na građevini za koje nije ishođena izmjena ili dopuna građevinske dozvole
+c) ako se u ostavljenom roku nisu otklonili nedostaci koji bitno utječu na stabilnost i sigurnost građevine
+(3) Ako su tehničkim pregledom utvrđeni nedostaci koje je potrebno otkloniti, a ti nedostaci ne utječu na tehnička svojstva bitna za građevinu prema poglavlju II. ovoga Zakona, mjerodavni organ može izdati uporabnu dozvolu i odrediti rok u kojem se moraju uočeni nedostaci otkloniti.
+(4) Ako se u roku iz stavka 3. ovoga članka ne otklone utvrđeni nedostaci, mjerodavni
+organ ukinut će uporabnu dozvolu.
+Članak 66.
+Ako se prilikom tehničkog pregleda utvrdi da se nedostaci na građevini ne mogu otkloniti ili da postoji neotklonjiva opasnost za sigurnost građevine, za ljudske živote ili zdravlje te za okoliš, promet ili susjedne objekte, predsjednik povjerenstva za tehnički pregled,odnosno općinski službenik koji  obavlja tehnički pregled, će odmah upoznati mjerodavnog građevinskog inspektora koji treba poduzeti mjere u skladu sa zakonom.
+Članak 67.
+(1) Mjerodavni organ za  izdavanje  uporabne dozvole može, na temelju mišljenja povjerenstva za tehnički pregled za građevinu koja po svom tehnološkom procesu, s obzirom na ugrađene instalacije, opremu i postrojenja, zahtijevati probni rad, izdati odobrenje za probni rad.
+(2) Odobrenje za probni rad može se donijeti samo pod uvjetom da je povjerenstvo za tehnički pregled građevine utvrdilo da je građevina izgrađena u skladu s izdanom građevinskom dozvolom i da puštanje građevine u probni rad ne ugrožava ljudske živote i zdravlje te okoliš i susjedne građevine.
+
+
+
+28
+(3) Tijekom trajanja probnoga rada građevine uspostavlja se i utvrđuje njezina potpuna tehnička ispravnost.
+(4) Probni rad građevine iz stavka 1. ovoga članka može trajati najdulje 12 mjeseci, a izuzetno, u posebno složenim tehnološkim procesima, probni rad se može produljiti za još 12
+mjeseci.
+
+5. Uporabna dozvola za dio građevine
+
+
+Članak  68.
+Uporabna dozvola može se na zahtjev investitora izdati za dio građevine prije dovršetka cijele građevine:
+a) ako je to potrebno radi nastavka i dovršenja građenja (npr. korištenje mosta za
+pristup gradilištu, trafostanice i dalekovoda za opskrbu električnom energijom i dr.)
+b) ako je u pitanju složena građevina iz članka 49.ovoga Zakona
+c) ako se određeni dio građevine može privesti svojoj namjeni prije dovršetka cijele građevine.
+Članak 69.
+(1) U postupku izdavanja uporabne dozvole primjenjuje se Zakon o upravnom postupku.
+(2) Rješenje iz čl. 65., 67. i 68. ovog Zakona koje izdaje Ministarstvo konačno je u upravnom postupku i protiv istog nije dopuštena žalba ali se može pokrenuti upravni spor kod mjerodavnog suda.
+(3) Po žalbi na prvostupanjsko rješenje iz čl. 65., 67. i 68. ovog Zakona koje je izdala mjerodavna općinska služba, u drugom stupnju rješava Ministarstvo.
+(4) Protiv rješenja izdanog na temelju članaka 65., 67. i 68. ovog Zakona, žalbu može
+izjaviti pored investitora i izvođač radova.
+
+
+6. Troškovi postupka
+
+
+Članak 70.
+(1) Troškove vršenja tehničkog pregleda snosi investitor.
+(2) Način imenovanja članova povjerenstva, obavljanje tehničkog pregleda, sadržaj pisane izjave izvođača o izvedenim radovima i uvjetima korištenja građevine, sadržaj završnog izvješća nadzornog inženjera, sadržaj zapisnika o izvršenom tehničkom pregledu, sadržaj zapisnika povjerenstva, te naknada za rad članova povjerenstva propisat će se pravilnikom kojeg donosi ministar uz suglasnost Vlade Hercegbosanske županije.
+Članak 71.
+(1) Uporabna dozvola, odnosno rješenje o završetku objekta je upravni akt koji se
+izdaje sukladno Zakonu o upravnom postupku.
+(2) Upis građevine u zemljišne knjige obavlja se sukladno odredbama posebnih
+propisa.
+
+
+knjige.
+
+
+(3) Privremene građevine iz čl. 51. i 52. ovog Zakona se ne upisuju u zemljišne
+
+Članak 72.
+Ministarstvo je dužno najmanje jednom u dvije godine objaviti javni poziv stručnim osobama da dostave dokaze o ispunjavanju uvjete za sudjelovanje u radu povjerenstva iz članka 63. stavka 6. ovoga Zakona.
+
+
+
+
+29
+IX. UPORABA I ODRŽAVANJE GRAĐEVINE
+
+
+Članak 73.
+(1) Građevina se može koristiti samo na način koji je u skladu s njezinom namjenom.
+(2) Vlasnik građevine dužan je održavati građevinu tako da se u predviđenom vremenu trajanja očuvaju tehnička svojstva bitna za građevinu iz poglavlja II. ovoga Zakona.
+(3) U slučaju oštećenja građevine zbog čega je ugrožena stabilnost građevine ili njezinog dijela te ako postoji opasnost za susjedne građevine ili zdravlje ljudi, vlasnik građevine dužan je poduzeti hitne mjere za otklanjanje opasnosti i označiti građevinu kao
+opasnu do otklanjanja oštećenja.
+Članak 74.
+(1) Investitor je dužan pribaviti građevinsku dozvolu ako namjerava rekonstruirati postojeću građevinu.
+(2) Na rekonstrukciju postojeće građevine primjenjuju se odredbe čl. 40. do  55. ovoga
+Zakona.
+(3) Izuzetno od odredbi članka 44. ovoga Zakona, zahtjevu za rekonstrukciju građevine prilažu se:
+- tri primjerka projekta izvedenog stanja
+- geodetski situacijski nacrt stvarnog stanja (situacija) za izrađenu građevinu
+- dokaz pravnog interesa za izdavanje građevinske dozvole iz članka 40. ovoga
+Zakona
+- pisano izvješće o obavljenoj kontroli glavnog projekta
+- pisano izvješće i potvrdu o obavljenoj nostrifikaciji u slučajevima iz članka 38. ovoga Zakona
+- suglasnosti, odnosno pribavljena mišljenja iz kojih proističe priroda namjeravane
+rekonstrukcije
+(4) Na projekt izvedenog stanja odnose se odredbe članaka od 35. do 39. ovoga
+Zakona.
+
+X. UKLANJANJE GRAĐEVINE
+
+
+Članak 75.
+(1) Vlasnik građevine može pristupiti uklanjanju građevine ili njezinoga dijela samo na temelju dozvole za uklanjanje građevine.
+(2) Dozvolu  za uklanjanje građevine izdaje  mjerodavni organ. (3) Zahtjevu za uklanjanje građevine prilažu se:
+- dokaz o pravu vlasništva građevine
+- projekt uklanjanja građevine
+- suglasnost mjerodavnih organa ako se tim uklanjanjem može ugroziti javni interes
+( npr. zaštita spomenika kulture, zaštita komunalnih i drugih instalacija i dr.)
+- procjena utjecaja na okoliš, u skladu s posebnim zakonom
+(4) Projekt uklanjanja građevine sadrži:
+- nacrte
+- tehnički opis uklanjanja građevine
+- proračune stabilnosti konstrukcije ili njezinih dijelova tijekom uklanjanja, odnosno
+demontaže
+(5) Odredba o uklanjanju građevine i stavka 1. ovoga članka ne odnosi se na uklanjanje građevine na temelju inspekcijskoga rješenja.
+
+
+30
+XI.  NADZOR
+
+Članak 76.
+Ministarstvo će, na zahtjev građevinskog inspektora, po službenoj dužnosti ili na zahtjev ovlaštene osobe, po pravu nadzora poništiti ili ukinuti konačan upravni akt iz ovoga Zakona, a sukladno odredbama Zakona o upravnom postupku.
+Članak 77.
+Inspekcijskim nadzorom, prema ovome Zakonu, obavlja se nadzor nad radom sudionika u građenju i održavanju građevine te nadzor kvaliteta građevinskih proizvoda u proizvodnji u pogledu primjene ovoga Zakona i propisa donesenih na temelju ovoga Zakona, ako posebnim zakonom nije drugačije određeno.
+Članak 78.
+(1) Inspekcijski nadzor, prema ovom Zakonu, obavljaju građevinski inspektori.
+(2) Na građevinama iz članka 43. stavak 2. ovoga Zakona inspekcijski nadzor provodi županijski građevinski inspektor.
+(3) Na ostalim građevinama inspekcijski nadzor provodi općinski građevinski
+inspektor.
+(4) Za županijskog i općinskoga građevinskog inspektora može biti postavljena osoba s visokom stručnom spremom građevinske ili arhitektonske struke koja ispunjava uvjete propisane posebnim propisima.
+(5) Županijski i općinski inspektori svoj identitet dokazuju službenom iskaznicom. (6) Inspektori iz stavka 1. ovoga članka mogu obavljati i inspekcijski nadzor u
+primjeni Zakona o prostornom uređenju i, u tom slučaju, istupaju u svojstvu urbanističko-
+građevinskog inspektora.
+
+
+Članak 79.
+U provođenju nadzora inspektor ima pravo i dužnost sudionicima građenja rješenjem narediti otklanjanje nepravilnosti, obustavu građenja i uklanjanje građevine, zabranu uporabe građevine i izricati inspekcijske mjere.
+
+
+
+
+1. Otklanjanje nepravilnosti
+
+
+Članak 80.
+(1) U provođenju nadzora inspektor ima pravo i dužnost sudionicima građenja rješenjem narediti da u primjerenom roku otklone nepravilnosti koje utvrdi.
+(2) U provođenju nadzora inspektor ima pravo i dužnost rješenjem narediti vlasniku
+postojeće građevine da otkloni nedostatke na građevini koji su nastali ili su uočeni tijekom njezine uporabe ako utvrdi da ti nedostaci predstavljaju opasnost za život i zdravlje ljudi, okoliš, druge građevine ili stabilnost tla na okolnom zemljištu.
+
+2. Obustava građenja
+
+
+Članak 81.
+(1) Inspektor ima pravo i dužnost rješenjem narediti obustavu daljnjeg građenja, odnosno izvođenja pojedinih radova:
+a) ako se građevina gradi, odnosno rekonstruira na temelju građevinske dozvole koja nije postala pravomoćna, odnosno koja ne sadrži klauzulu pravomoćnosti iz članka
+54. ovoga Zakona
+b) ako se građevina gradi, odnosno rekonstruira protivno građevinskoj dozvoli, te
+
+31
+odrediti  primjereni rok za usklađivanje izvedenoga stanja s odobrenim projektom
+ili crtežom građevine, odnosno ishođenje izmjene ili dopune građevinske dozvole
+c) ako je donesen zaključak kojim se dopušta obnova postupka izdavanja građevinske
+dozvole
+d) ako se građevina gradi, odnosno rekonstruira, a da u roku određenim rješenjem iz članka 80. stavka 1. ovoga Zakona nisu otklonjeni uočeni nedostaci
+e) ako utvrdi nedostatke i nepravilnosti u projektu ili izvođenju radova koji mogu
+ugroziti  tehnička svojstva bitna za građevinu, propisana poglavljem II. ovoga
+Zakona, te odrediti primjereni rok za otklanjanje tih nedostataka
+f) ako utvrdi da se radovi izvode tako da se ugrožava sigurnost susjednih građevina, stabilnost tla na okolnom zemljištu, prometne površine, komunalne i druge instalacije i dr., te narediti hitne mjere zaštite ako je to potrebno
+g) ako utvrdi da radove izvodi ili nadzire pravna ili fizička osoba koje nije registrirana, odnosno ovlaštena za izvođenje ili nadziranje te vrste radova, odnosno koja ne ispunjava posebne uvjete  propisane ovim zakonom
+(2) U slučajevima iz stavka 1. ovoga članka, građevinski inspektor će, na licu mjesta, narediti zatvaranje gradilišta posebnom oznakom.
+(3) Način zatvaranja i označavanja zatvorenog gradilišta, odnosno građevine propisuje ministar posebnim propisom.
+
+3. Način uklanjanje građevine
+
+
+Članak 82.
+(1) Inspektor ima pravo i dužnost rješenjem narediti da se građevina ili njezin dio ukloni, odnosno da se uspostavi prijašnje stanje:
+a) ako se gradi ili je izgrađena bez građevinske dozvole i za koju je pravomoćnim rješenje odbijen zahtjev za izdavanje lokacijske dozvole ili lokacijske informacije,
+b) ako se gradi protivno građevinskoj dozvoli, a u određenom roku se nije uskladilo izvedeno stanje s odobrenim projektom ili crtežom građevine, odnosno ako se nije ishodila izmjena ili dopuna građevinske dozvole,
+c) ako se tijekom građenja utvrde neotklonjivi nedostaci zbog kojih je ugrožena stabilnost građevine ili stabilnost okolnih građevina ili su na drugi način ugroženi životi ljudi ili okoliš.
+(2) Inspektor će naredit, kada je to potrebno, i hitne mjere osiguranja do izvršenja
+naloga:
+a) ako utvrdi da je, zbog dotrajalosti ili većih oštećenja, neposredno ugrožena stabilnost građevine ili njezinog dijela te ona predstavlja opasnost za susjedne građevine i ljudske živote, a ta se opasnost ne može na drugi način otkloniti, inspektor će narediti vlasniku građevine da ukloni građevinu ili njezin dio. Inspektor ujedno naređuje i hitne mjere osiguranja do izvršenja naloga  (npr. podupiranje konstrukcije, sklanjanje ljudi i sl.)
+b) ako se, u skladu s člankom 59. stavak 9. ovoga Zakona, ne uklone privremene građevine izgrađene na gradilištu u okviru pripremnih radova (barake, nadstrešnice, instalacije, skladišta,  zajedničke nastambe te druge građevine i uređaji)
+(3) U slučajevima iz stavka 1. točke a) i b) ovoga članka, inspektor će, prije donošenja rješenja, na licu mjesta narediti zatvaranje gradilišta posebnom oznakom.
+(4) Ako se građevina iz stavka 2. točka a) ovoga članka nalazi u zaštićenom području, rješenje o uklanjanju ne može se izvršiti bez suglasnosti organa uprave mjerodavnog za
+
+32
+poslove zaštite spomenika kulture. Postupak davanja suglasnosti organa uprave mjerodavnog
+za poslove zaštite spomenika kulture žuran je.
+(5) Ako u slučajevima iz st. 1. i 2. ovoga članka investitor ne postupi prema rješenju inspektora o uklanjanju građevine ili njezinoga dijela, rješenje će se izvršiti pomoću drugog osobe, na trošak investitora.
+(6) Način izvršenja rješenja određuje građevinski inspektor.
+Članak 83.
+Odredbe čl. 81. i 82. ovog Zakona odgovarajuće se primjenjuju i u slučaju kada se građevina gradi suprotno, odnosno bez lokacijske dozvole ili lokacijske informacije na temelju koje se može graditi.
+
+
+4. Zabrana uporabe građevine
+
+
+Članak 84.
+Inspektor ima pravo i dužnost rješenjem narediti zabranu uporabe građevine ili njenog dijela u slučaju:
+a)  da nije pribavljena uporabnu dozvola za građevinu ili njen dio, osim za građevine
+iz članka 41. ovog Zakona.
+b) ukoliko je uporaba građevine opasna po život i zdravlje ljudi ili životinja,
+c)  ukoliko za nju nije pribavljeno odobrenje za probni rad ili je rok za probni rad istekao, a da nije dobivena uporabna dozvola.
+
+5. Inspekcijske mjere
+
+
+Članak 85.
+(1) Inspektor, izuzetno, može zapisnikom narediti izvršenje mjera iz članka 81. stavka
+1. točka a) i e) i članka 82. stavka 1. točka c) i članka 82. stavak 2. točka a) ovoga Zakona radi otklanjanja neposredne opasnosti za život i zdravlje ljudi te za imovinu.
+(2) Izvršenje naređenih mjera počinje teći uručenjem zapisnika.
+(3) Inspektor je dužan donijeti pisano rješenje o naređenim mjerama iz stavka 2. ovoga članka u roku od tri dana od dana kada je naređeno izvršenje mjera.
+(4) U postupku inspekcijskog nadzora primjenjuje se Zakon o upravnom postupku.
+(5) O poduzimanju mjera i radnji za koje je ovim zakonom ovlašten, građevinski inspektor obvezno donosi rješenje.
+(6) Na rješenje općinskog građevinskog inspektora iz stavka 5. ovog članka mjerodavna osoba, kod koje je obavljena inspekcijski nadzor, može izjaviti žalbu županijskom građevinskom inspektoru, i to  u roku od osam dana od dana primitka rješenja.
+(7) Na rješenje županijskog građevinskog inspektora iz stavka 5. ovog članka mjerodavna osoba, kod koje je obavljena inspekcijski nadzor, može izjaviti žalbu direktoru županijske Uprave za inspekcijske poslove i to  u roku od osam dana od dana primitka rješenja.
+(8) Žalba na rješenje građevinskog inspektora ne odlaže izvršenje rješenja.
+Članak 86.
+(1) Ako u provođenju inspekcijskog nadzora građevinski inspektor utvrdi da je građevinskom odnosno uporabnom dozvolom koje su konačne u upravnom postupku povrijeđen ovaj zakon predložit će Ministarstvu da takovu dozvolu poništi odnosno ukine po
+pravu nadzora.
+
+
+
+
+
+33
+(2) Ako se u provođenju nadzora utvrdi da su  građevinskom dozvolom koja je konačna u upravnom postupka povrijeđene odredbe ovoga Zakona, Ministarstvo će takvu dozvolu poništiti po pravu nadzora.
+(3) Ako se u provođenju nadzora utvrdi da su uporabnom dozvolom koja je konačna u upravnom postupku povrijeđene odredbe ovoga Zakona, Ministarstvo će takvu dozvolu po pravu nadzora ukinuti.
+(4) Ako se u provođenju nadzora utvrdi da su inspekcijskim rješenjem koje je konačno
+u upravnom postupku povrijeđene odredbe ovog Zakona mjerodavni organ,  određen posebnim propisom, će takvo rješenje poništiti po pravu nadzora.
+(5) Rješenje o poništenju, odnosno ukidanju može se donijeti u roku godine dana od dana konačnosti građevne odnosno uporabne dozvole i inspekcijskog rješenja.
+(6) Odredbe ovog članka odnosi se na postupanje općinskog građevinskog inspektora.
+XII.  KAZNENE ODREDBE – PREKRŠAJI Članak 87.
+(1) Novčanom kaznom u iznosu od 500,00 KM do 5.000,00 KM kaznit će se za
+prekršaj pravna osoba u svojstvu investitora:
+1. ako projektiranje, građenje ili provođenje nadzora povjeri osobi koje nije registrirana za obavljanje tih djelatnosti (članak 20. stavak 2. ovoga Zakona)
+2. ako ne osigura nadzor nad građenjem (članak 20. stavak 3. ovoga Zakona)
+3. ako ne prijavi početak građenja u propisanome roku (članak 20. stavak 5. ovoga
+Zakona)
+4. ako u propisanome roku ne pribavi elaborat iskolčenja građevine. (članak 20.
+stavak 6. ovoga Zakona)
+5. ako u slučaju prekida radova ne osigura građevinu koju gradi i okoliš (članak 20.
+stavak 7.  ovoga Zakona)
+6. ako u propisanome roku ne prijavi promjenu investitora (članak 20. stavak 8. ovoga
+Zakona)
+7. ako kontrolu  projekta povjeri pravnoj osobi koja nije revident (članak 37. ovoga
+Zakona)
+8. ako pristupi građenju bez građevinske dozvole (članak 40. ovoga Zakona)
+9. ako pristupi građenju bez lokacijske dozvole (članak 41. ovoga Zakona)
+10. ako gradi protivno građevinskoj dozvoli, a nije dobio izmjenu ili dopunu građevinske dozvole (članak 53. ovoga Zakona)
+11.ako za potrebe gradilišta zauzme susjedno, odnosno obližnje zemljište bez valjane pravne osnove (članak 59. stavak 5. ovoga Zakona)
+12.ako za potrebe gradilišta zauzme javnoprometnu površinu bez dozvole
+mjerodavnog organa (članak 59. stavak 7. ovoga Zakona)
+13. ako nakon završetka građenja ne raščisti i ne uredi gradilište i neposredni okoliš
+(članak 59. stavak 9. ovoga Zakona)
+14. ako  koristi  građevinu ili njezin dio bez uporabne dozvole (članak 61. stavak
+1.ovoga  Zakona)
+15. ako koristi građevinu ili njezin dio bez uvjerenja o završenom objektu (članak 61.
+stavak 3.ovoga Zakona)
+16. ako u određenom roku ne otkloni nedostatke utvrđene tehničkim pregledom građevine  (članak 65. stavak 3. ovoga Zakona).
+(2) Za prekršaj iz stavka 1. ovoga članka kaznit će se i odgovorna osoba u pravnoj osobi novčanom kaznom u iznosu od 300,00 KM do 1.500,00 KM.
+(3) Za prekršaj iz stavka 1. ovoga članka kaznit će se fizička osoba u svojstvu
+
+34
+investitora novčanom kaznom u iznosu od 300,00 KM do 1.500,00 KM.
+Članak  88.
+(1) Novčanom kaznom u iznosu od 500,00  KM do 10.000,00 KM kaznit će se za prekršaj pravna osoba koja gradi za račun nepoznatog kupca ako nadzor ne povjeri drugoj pravnoj ili fizičkoj osobi registriranoj za obavljanje nadzora (članak 20. stavak 4. ovoga Zakona).
+(2) Novčanom kaznom u iznosu od 100,00  KM do 1.500,00 KM kaznit će se za prekršaj fizička osoba koja gradi za račun nepoznatog kupca ako nadzor ne povjeri drugoj pravnoj ili fizičkoj osobi registriranoj za obavljanje nadzora (članak 20. stavak 4. ovoga Zakona).
+(3) Za prekršaj iz stavka 1. ovoga članka kaznit će se i odgovorna osoba u pravnoj osobi novčanom kaznom u iznosu od 100,00 KM do 1000,00 KM.
+Članak 89.
+(1) Novčanom kaznom u iznosu od 500,00   KM do 5.000,00 KM kaznit će se za prekršaj pravna osoba koje provodi nadzor nad građenjem:
+1. ako nije registrirana za obavljanje poslova nadzora (članak 23. stavak 1.
+ovoga Zakona)
+2. ako imenuje nadzornog inženjera koji ne ispunjava uvjete prema odredbama ovoga
+Zakona (članak 23. stavak 3. ovoga Zakona)
+3. ako ne poduzme mjere da se radovi obavljaju u skladu s građevinskom dozvolom, odnosno projektom (članak 23. stavak 7. točka b) ovoga Zakona)
+4. ako ne poduzme mjere da kvaliteta radova, ugrađenih proizvoda i opreme bude u skladu sa zahtjevima projekta i da bude dokazan odgovarajućim ispitivanjima i dokumentima (članak 23. stavak 7. točka c)  ovoga Zakona)
+(2) Za prekršaj iz stavka 1. ovoga članka kaznit će se i odgovorna osoba u pravnoj
+osobi novčanom kaznom u iznosu od 100,00 KM do 1000,00 KM.
+(3) Za prekršaj iz stavka 1. točke 3. i 4. ovoga članka kaznit će se i nadzorni inženjer novčanom kaznom u iznosu od 100,00 KM do 1000,00 KM.
+(4) Za prekršaj iz stavka 1. ovoga članka kaznit će se fizička osoba koja obavlja nadzor novčanom kaznom u iznosu od 100,00 KM do 1.500,00 KM.
+(5) Novčanom kaznom u iznosu od 100,00 KM do 1000,00 KM kaznit će se ovlaštena osoba mjerodavnog organa ako izda građevinsku dozvolu protivno odredbama članka 43. ovoga Zakona.
+Članak 90.
+(1) Novčanom kaznom u iznosu od 500,00 KM do 2.000,00 KM kaznit će se za prekršaj pravna osoba kao vlasnik građevine:
+1. ako koristi građevinu protivno njezinoj namjeni (članak 73. stavak 1. ovoga
+Zakona)
+2. ako ne održava građevinu, njezinu konstrukciju ili opremu (članak 73. stavak 2.
+ovoga Zakona)
+3. ako pristupi uklanjanju građevine ili ukloni građevinu ili njezin dio bez dozvole  mjerodavnog organa (članak 75. stavak 1. ovoga Zakona)
+(2) Za prekršaj iz stavka 1. ovoga članka kaznit će se i odgovorna osoba vlasnika građevine novčanom kaznom u iznosu od 100,00 KM do 1000,00 KM.
+(3) Za prekršaj iz stavka 1.ovog članka kaznit će se i fizička osoba kao vlasnik građevine novčanom kaznom u iznosu od 200,00 KM do 1.500,00 KM.
+Članak 91.
+(1) Novčanom kaznom u iznosu od 500,00   KM do 5.000,00 KM kaznit će se za prekršaj pravna osoba koja projektira:
+1. ako nije registrirana za projektiranje (članak 21. stavak 2. ovoga Zakona)
+2. ako angažira projektanta, a ne sklopi ugovor(članak 21. stavak 3. ovoga Zakona)
+
+35
+3. ako imenuje projektanta, projektanta voditelja ili koordinatora projekta koji ne
+ispunjava propisane uvjete (članak 21. stavak 10. ovoga Zakona)
+4. ako izvedbeni projekt nije izrađen u skladu s glavnim projektom (članak
+34.  ovoga  Zakona)
+5. ako ne označi i ne uveže projekt i njegove dijelove (članak 36. stavak 3. ovoga
+Zakona)
+(2) Za prekršaj iz stavka 1. ovoga članka kaznit će se i odgovorna osoba u pravnoj osobi novčanom kaznom u iznosu od 100,00 KM do 1.000,00 KM.
+(3) Za prekršaj iz stavka 1. ovoga članka kaznit će se fizička osoba kao projektant novčanom kaznom u iznosu od 100,00 KM do 1.500,00 KM.
+(4) Za prekršaj iz stavka 1. točke 4.  i 5. ovoga članka kaznit će se projektant
+novčanom kaznom u iznosu od 200,00 KM do 1.000,00 KM.
+
+
+Članak 92.
+(1) Novčanom kaznom u iznosu od 500,00  KM do 5.000,00 KM kaznit će se za prekršaj izvođač kao pravna osoba:
+1. ako nije registriran za obavljanje djelatnosti (članak 22. stavak 1. ovoga Zakona)
+2. ako ne sklopi ugovor s fizičkom ili pravnom osobom (članak 22. stavak 3. ovoga
+Zakona)
+3. ako ne gradi sukladno građevinskoj dozvoli (članak 22. stavak 5. točka a)  ovoga
+Zakona)
+4. ako radove izvodi tako da tehnička svojstva građevine ne odgovaraju zahtjevima iz poglavlja  II. ovoga Zakona (članak 22. stavak 5. točka b) ovoga Zakona)
+5.  ako ne ugrađuje proizvode i opremu sukladno poglavlju III. ovoga Zakona (članak
+22. stavak  5. točka c) ovoga Zakona)
+6.  ako ne dokaže kvalitetu radova te ugrađenih proizvoda i opreme prema odredbama ovoga  Zakona (članak 22. stavak 5. točka d) ovoga Zakona)
+7. ako tijekom građenja ne poduzme mjere radi sprečavanja ugrožavanja sigurnosti okolnih  građevina, prometne površine,komunalnih i drugih instalacija te stabilnosti okolnog tla (članak 22. stavak 5. točka e) ovoga Zakona)
+8. ako imenuje voditelja građenja ili voditelja pojedinih radova koji ne ispunjava propisane uvjete (članak 22. stavak 7. ovoga Zakona)
+9. ako pristupi građenju bez građevinske dozvole (članak 40. ovoga Zakona)
+10. ako ne ogradi gradilište sukladno odredbama članka 59. st. 1., 2. i 3. ovoga Zakona
+11. ako  koristi susjedno, odnosno obližnje zemljište bez valjanog pravnog  temelja
+(članak  59. stavak 6. ovoga Zakona)
+12. ako  koristi javnoprometnu površinu za potrebe gradilišta bez odobrenja mjerodavnog organa ili poduzeća (članak 59. stavak 7. ovoga Zakona)
+13. ako ne raščisti i ne uredi gradilište i neposredni okoliš nakon završetka građenja
+(članak 59. stavak 9. ovoga Zakona)
+14. ako na gradilištu nema propisanu dokumentaciju (članak 60. stavak 1. ovoga
+Zakona)
+15. ako ne vodi građevinski dnevnik sukladno posebnim propisom (članak 60. stavak
+2. ovoga  Zakona).
+16. ako nastavi građenje na gradilištu nakon  donošenja rješenja o zatvaranju gradilišta (članak  81. ovoga Zakona)
+(2) Za prekršaj iz stavka 1. ovoga članka kaznit će se i odgovorna osoba u pravnoj osobi novčanom kaznom u iznosu od 200,00 KM do 1.000,00 KM.
+(3) Za prekršaj iz stavka 1. osim 1.,2. i 8. točke ovoga članka kaznit će se i voditelj građenja, odnosno pojedinih radova novčanom kaznom u iznosu od 200,00 KM do 1.000,00
+KM.
+
+
+36
+(4) Za prekršaj iz stavka 1. ovoga članka kaznit će se fizička osoba kao izvođač novčanom kaznom u iznosu od 100,00 KM do 1.500,00 KM.
+
+
+Članak 93.
+(1) Novčanom kaznom u iznosu od 100,00 KM do 1.000,00 KM i kaznit će se za prekršaj revident:
+1. ako prilikom kontrole projekta propusti uočiti nedostatke koji mogu znatnije uticati
+na tehnička svojstva građevine utvrđena poglavljem II. ovoga Zakona
+2. ako obavi kontrolu projekta koji je u cijelosti ili njegov pojedini dio izradila pravna
+osoba u  kojem je uposlen (članak 24. stavak 7. ovoga Zakona)
+(2) Za prekršaj iz stavka 1. ovoga članka kaznit će se i pravna osoba u kojem je revident uposlen, novčanom kaznom u iznosu od 500,00  KM do 5.000,00 KM.
+(3) Novčanom kaznom u iznosu od 500,00  KM do 5.000,00 KM kaznit će se za
+prekršaj pravna osoba ako obavi kontrolu projekta u cijelosti ili njegov pojedini dio, a ne
+sklopi  ugovor sa fizičkim ili pravnim osobama (članak 24. stavak 3. ovoga Zakona)
+(4) Novčanom kaznom u iznosu od 100,00 KM do 1.000,00 KM kaznit će se za prekršaj  fizička osoba ako obavi kontrolu projekta u cijelosti ili njegov pojedini dio, a ne sklopi ugovor sa pravnom osobom za koju je obavio kontrolu (članak 24. stavak 3. ovoga Zakona)
+(5) Za prekršaje iz stavaka 1. i 3. ovoga članka kaznit će se i odgovorna osoba u pravnoj osobi u novčanom kaznom iznosu od 100,00 KM do 1.000,00 KM.
+
+XIII. PRIJELAZNE I ZAVRŠNE ODREDBE
+
+
+Članak 94.
+Ako je upravni postupak pokrenut pred mjerodavnim organom do dana stupanja na snagu ovoga Zakona, a do toga dana nije izdano prvostupanjsko rješenje, ili je rješenje prije toga bilo poništeno i vraćeno prvostupanjskom organu na ponovni postupak, postupak će se nastaviti prema odredbama ovoga Zakona.
+Članak 95.
+(1) Pravne i fizičke osobe, sudionici u građenju, dužni su uskladiti s odredbama ovog Zakona registraciju obavljanja određenih poslova u građenju u roku od  šest mjeseci od dana donošenja ovog Zakona.
+(2) Osobama iz stavka 1. ovog članka koje ne usklade svoju registraciju u roku određenom stavkom 1. ovog članka prestaje pravo obavljanja poslova u građenju.
+Članak 96.
+(1) Ministar će u roku od šest mjeseci od dana stupanja na snagu ovog Zakona
+donijeti:
+-    Pravilnik o vršenju tehničkog pregleda,
+-    Pravilnik o načinu zatvaranja i označavanju zatvorenog gradilišta,
+-    Pravilnik o uvjetima i načinu vođenja građevinskog dnevnika
+-    Pravilnik o vrsti, sadržaju, označavanju, čuvanju te kontroli i nostrifikaciji tehničke dokumentacije.
+(2) Ministar će donijeti i druge podzakonske akte kada se ukaže potreba za njihovim
+donošenjem.
+Članak 97.
+Propis iz  članka 10. stavak 6. ovoga Zakona donijet će Vlada Hercegbosanske županije najkasnije u roku od 90 dana od dana stupanja na snagu ovoga Zakona.
+
+37
+Članak 98.
+Do stupanja na snagu propisa koji se donose na temelju ovlasti iz ovoga Zakona, u
+dijelu u kojem nisu u suprotnosti s odredbama ovoga Zakona, primjenjuju se:
+- Pravilnik o načinu zatvaranja i označavanja zatvorenog gradilišta odnosno građevine
+(„Narodne novine Hercegbosanske županije“ broj: 3/01),
+- Pravilnik o uvjetima i načinu vođenja građevinskog dnevnika („Narodne novine
+Hercegbosanske županije“ broj: 35/02),
+
+
+
+
+
+5/02),
+Članak 99.
+Danom stupanja na snagu ovoga Zakona prestaju važiti:
+- Pravilnik o kontroli projekata („Narodne novine Hercegbosanske županije“ broj:
+
+
+- Pravilnik o uvjetima i mjerilima za davanje ovlasti za kontrolu projekta  („Narodne
+novine  Hercegbosanske županije“ broj: 5/02),
+- Pravilnik o službenoj iskaznici građevinskog inspektora („Narodne novine
+Hercegbosanske županije“ broj: 2/01),
+Članak 100.
+Danom stupanja na snagu ovog Zakona prestaje važiti Zakon o građenju ("Narodne novine Hercegbosanske županije", broj 14/98).
+Članak. 101.
+Ovaj zakon stupa na snagu osmoga dana od dana objavljivanja u "Narodnim novinama
+Hercegbosanske županije".
+
+
+
+
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine Hercegbosanska županija Skupština Tomislavgrad
+Broj: 01-02-59.2/15
+Tomislavgrad, 02. Ožujak 2016.godine
+
+
+
+
+
+
+
+
+
+
+PREDSJEDNIK  SKUPŠTINE
+Robert Bagarić
+
+
+
+Zakon je objavljen u "Narodnim novinama Hercegbosanske županije" broj 3/16 od 9. svibnja
+2016.godine.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+38

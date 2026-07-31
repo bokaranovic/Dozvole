@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opština Drvar / Bosansko Grahovo — Zahtjevi</title>
+<link rel="icon" href="grb.jpg">
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:10px;max-width:820px;margin:0 auto;flex-wrap:wrap}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25));transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+  .grb:hover{transform:scale(1.07) rotate(-3deg)}
+  body.light .grb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.12))}
+  .htitle{flex:1;min-width:0}
+  .themebtn{padding:8px 12px;font-size:13px;white-space:nowrap;transition:transform .18s ease}
+  .themebtn:hover{transform:scale(1.05)}
+  .wrap{max-width:820px;margin:0 auto;padding:20px 16px}
+  .lead{font-size:14px;color:var(--muted);margin:2px 0 18px}
+  .tile{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:14px;cursor:pointer;text-decoration:none;color:inherit;
+    box-shadow:0 1px 2px rgba(0,0,0,.04);transition:border-color .2s ease, box-shadow .25s ease, transform .2s ease}
+  .tile:hover{box-shadow:0 10px 26px rgba(0,0,0,.14);border-color:var(--accent);transform:translateY(-2px)}
+  .tile.soon{opacity:.72;cursor:default}
+  .tico-img{width:64px;height:64px;flex:0 0 auto;border-radius:13px;object-fit:cover;box-shadow:0 2px 10px rgba(0,0,0,.20);background:var(--field);transition:transform .25s ease}
+  .tile:hover .tico-img{transform:scale(1.05)}
+  .tbody{flex:1;min-width:0}
+  .tbody h3{margin:0 0 4px;font-size:16px;font-weight:650}
+  .tbody p{margin:0;font-size:13px;color:var(--muted);line-height:1.45}
+  .soonbadge{display:inline-block;margin-left:8px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#fff;background:var(--warn);border-radius:20px;padding:2px 8px;vertical-align:middle}
+  .tarrow{font-size:22px;color:var(--muted)}
+  button{border:0;border-radius:10px;padding:10px 14px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  .ghost:hover{border-color:var(--accent)}
+  .secttl{font-size:12px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:700;margin:22px 0 10px}
+  .foot{font-size:12px;color:var(--muted);text-align:center;margin:22px 0}
+  #loginOverlay{position:fixed;inset:0;z-index:1000;background:var(--bg);display:flex;align-items:center;justify-content:center;padding:20px}
+  .loginCard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;max-width:380px;width:100%;box-shadow:0 14px 44px rgba(0,0,0,.28)}
+  .loginCard h2{margin:0;font-size:19px;font-weight:650}
+  .loginCard label{display:block;font-size:13px;color:var(--muted);margin:12px 0 5px;font-weight:500}
+  .loginCard input{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:11px;font-size:15px;font-family:inherit}
+  .loginCard input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .loginBtn{width:100%;margin-top:18px;background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;padding:12px;border-radius:10px;font-size:15px;font-weight:600;border:0;cursor:pointer}
+  .loginBtn:hover{filter:brightness(1.05)}
+  .loginErr{color:#ff7b72;font-size:13px;margin-top:10px;min-height:18px}
+  .logoutbtn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  body.locked{overflow:hidden}
+  @media (prefers-reduced-motion: no-preference){
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    .tile{animation:fadeUp .45s cubic-bezier(.22,.61,.36,1) both}
+    .tile:nth-of-type(2){animation-delay:.05s}
+    .tile:nth-of-type(3){animation-delay:.10s}
+    .tile:nth-of-type(4){animation-delay:.15s}
+    .tile:nth-of-type(5){animation-delay:.20s}
+    .tile:nth-of-type(6){animation-delay:.25s}
+    .tile:nth-of-type(7){animation-delay:.30s}
+  }
+</style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
+</head>
+<body class="light">
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+
+<div id="loginOverlay" style="display:flex">
+  <div class="loginCard">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+      <img src="grb.jpg" alt="grb" style="width:44px;height:45px;border-radius:6px">
+      <div>
+        <h2>Prijava</h2>
+        <p style="margin:2px 0 0;font-size:12px;color:var(--muted)">Opština Drvar / Bosansko Grahovo — interni alat</p>
+      </div>
+    </div>
+    <form id="loginForm" onsubmit="return doLogin(event)">
+      <label>Korisničko ime</label>
+      <input id="lu" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" placeholder="korisničko ime">
+      <label>Šifra</label>
+      <input id="lp" type="password" autocomplete="current-password" placeholder="šifra">
+      <button type="submit" class="loginBtn">Prijavi se</button>
+      <div class="loginErr" id="loginErr"></div>
+    </form>
+  </div>
+</div>
+<script>try{ if(localStorage.getItem('ipp-auth')==='ok'){ document.getElementById('loginOverlay').style.display='none'; } else { document.body.classList.add('locked'); } }catch(e){}</script>
+
+<header>
+  <div class="hwrap">
+    <img class="grb" src="grb.jpg" alt="grb">
+    <div class="htitle">
+      <h1>Opština Drvar / Bosansko Grahovo — Zahtjevi</h1>
+      <p>Početna · izaberi vrstu zahtjeva</p>
+    </div>
+    <button type="button" id="themeBtn" class="ghost themebtn" onclick="toggleTheme()">☀️ Svijetla</button>
+    <button type="button" class="ghost logoutbtn" onclick="logout()">🔒 Odjava</button>
+    <a class="ghost logoutbtn" href="Imovinsko-Pravni.html" style="text-decoration:none;display:inline-flex;align-items:center">🔨 Imovinsko-pravni</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="lead">Izaberi obrazac za popunjavanje. Podaci se ne šalju nigdje — sve radi lokalno u pregledniku.</p>
+
+  <div class="secttl">Urbanizam i građenje</div>
+
+  <a class="tile" href="Zahtjev-Nacelna-Lokacijska.html">
+    <img class="tico-img" data-l="slicice%20ikonice/lokacijska%20dozvola.png" data-d="slicice%20ikonice/lokacijsk_dark.png" alt="">
+    <div class="tbody">
+      <h3>Zahtjev za načelnu lokacijsku dozvolu / informaciju</h3>
+      <p>Čl. 64. st. 3–4 ZPU HBŽ — uslovi u načelu iz planova i odluke o provođenju (bez projekta). Izvoz u Word/PDF + paket za lokacijsku formu.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <a class="tile" href="IPP-Zahtjev-Lokacijska.html">
+    <img class="tico-img" data-l="slicice%20ikonice/lokacijska%20dozvola.png" data-d="slicice%20ikonice/lokacijsk_dark.png" alt="">
+    <div class="tbody">
+      <h3>Zahtjev za lokacijsku dozvolu / informaciju</h3>
+      <p>Lokacijska dozvola (čl. 62–74) i lokacijska informacija (čl. 78–83) — Drvar i Bosansko Grahovo.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <a class="tile" href="IPP-Zahtjev-Gradjevinska.html">
+    <img class="tico-img" data-l="slicice%20ikonice/gradjevinska%20dozvola.png" data-d="slicice%20ikonice/gradjevinska_dark.png" alt="">
+    <div class="tbody">
+      <h3>Zahtjev za građevinsku dozvolu</h3>
+      <p>Odobrenje za građenje (čl. 40–55 Zakona o građenju HBŽ): novogradnja, rekonstrukcija, načelna, naknadna, izmjena.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <a class="tile" href="IPP-Zahtjev-Upotrebna.html">
+    <img class="tico-img" data-l="slicice%20ikonice/upotrebna%20dozvola.png" data-d="slicice%20ikonice/upotrebna%20dark.png" alt="">
+    <div class="tbody">
+      <h3>Zahtjev za upotrebnu dozvolu</h3>
+      <p>Tehnički pregled i odobrenje za upotrebu građevine (čl. 61–66 ZoG). Prekopira podatke iz građevinske.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <a class="tile" href="Alati-Imenovanje-Komisije.html">
+    <div class="tico-img" style="display:flex;align-items:center;justify-content:center;font-size:30px" data-l="" data-d="">👥</div>
+    <div class="tbody">
+      <h3>Rješenje o imenovanju Komisije za tehnički pregled</h3>
+      <p>Sastav komisije (ZoG čl. 63, Pravilnik čl. 2–3), delegiranje predstavnika institucija (MUP K-10 i dr.), termin pregleda — generiše gotov tekst rješenja. Uvozi članove iz upotrebne forme.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <div class="secttl">Alati</div>
+
+  <a class="tile" href="Kalkulator-Tehnicki-Pregled.html">
+    <div class="tico-img" style="display:flex;align-items:center;justify-content:center;font-size:30px" data-l="" data-d="">🧮</div>
+    <div class="tbody">
+      <h3>Kalkulator troškova tehničkog pregleda</h3>
+      <p>Obračun naknade komisije po čl. 14–16 (razred po investicijskoj vrijednosti, broj dana, +20% za predsjednika, dnevnice) i provjera iznosa koje komisija predloži.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <a class="tile" href="Kalkulator-Takse-Drvar.html">
+    <div class="tico-img" style="display:flex;align-items:center;justify-content:center;font-size:30px" data-l="" data-d="">💰</div>
+    <div class="tbody">
+      <h3>Kalkulator opštinskih taksi (Drvar)</h3>
+      <p>Obračun administrativnih taksi za lokacijsku, građevinsku, upotrebnu dozvolu i imovinsko-pravne poslove (Sl. glasnik 4/2014).</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <a class="tile" href="Kalkulator-Uredjenje-Zemljista.html">
+    <div class="tico-img" style="display:flex;align-items:center;justify-content:center;font-size:30px" data-l="" data-d="">📐</div>
+    <div class="tbody">
+      <h3>Obračun naknade za uređenje građevinskog zemljišta</h3>
+      <p>Po Odluci o građevinskom zemljištu Drvar (čl. 15–27): bodovi opremanja + pripremanja × korisna površina × vrijednost boda.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <div class="secttl">Baza propisa</div>
+
+  <a class="tile" href="Baza-Odluka.html">
+    <div class="tico-img">📚</div>
+    <div class="tbody">
+      <h3>Baza odluka Opštine Drvar — pretraga</h3>
+      <p>Sve opštinske odluke iz imovinskog dijela na jednom mjestu: pretraga po jednoj riječi kroz cijeli tekst (kao Ctrl+F, ali kroz sve odluke odjednom), tačan član gdje se pojam pojavljuje, tagovi, veze između odluka te lične oznake i bilješke.</p>
+    </div>
+    <div class="tarrow">→</div>
+  </a>
+
+  <div class="secttl">Uskoro</div>
+
+  <div class="tile soon">
+    <img class="tico-img" data-l="slicice%20ikonice/legalizacija.png" data-d="slicice%20ikonice/legalizacija_dark.png" alt="">
+    <div class="tbody">
+      <h3>Rješenje o legalizaciji <span class="soonbadge">uskoro</span></h3>
+      <p>Legalizacija bespravno izgrađenih građevina (naknadna dozvola).</p>
+    </div>
+    <div class="tarrow">•</div>
+  </div>
+
+  <div class="tile soon">
+    <img class="tico-img" data-l="slicice%20ikonice/dopis.png" data-d="slicice%20ikonice/dopis_dark.png" alt="">
+    <div class="tbody">
+      <h3>Dopis <span class="soonbadge">uskoro</span></h3>
+      <p>Službeni dopis / obavijest stranci ili drugom organu.</p>
+    </div>
+    <div class="tarrow">•</div>
+  </div>
+
+  <div class="tile soon">
+    <img class="tico-img" data-l="slicice%20ikonice/zakljucak.png" data-d="slicice%20ikonice/zakljucak_dark.png" alt="">
+    <div class="tbody">
+      <h3>Zaključak <span class="soonbadge">uskoro</span></h3>
+      <p>Zaključak u upravnom postupku (poziv, prekid, spajanje i sl.).</p>
+    </div>
+    <div class="tarrow">•</div>
+  </div>
+
+  <div class="tile soon">
+    <img class="tico-img" data-l="slicice%20ikonice/dopuna%20dokumentacije.png" data-d="slicice%20ikonice/dopuna%20dokumentacije_dark.png" alt="">
+    <div class="tbody">
+      <h3>Dopuna dokumentacije <span class="soonbadge">uskoro</span></h3>
+      <p>Zaključak/poziv za dopunu nepotpunog zahtjeva.</p>
+    </div>
+    <div class="tarrow">•</div>
+  </div>
+
+  <p class="foot">Opština Drvar · Opština Bosansko Grahovo — interni alat za pripremu zahtjeva</p>
+</div>
+
+<script>
+/* ---- Prijava (lokalna zaštita pristupa) ---- */
+var AUTH_USER='IPPMajstori', AUTH_PASS='volimdobarguz';
+function isAuthed(){ try{ return localStorage.getItem('ipp-auth')==='ok'; }catch(e){ return false; } }
+function showLogin(show){
+  var ov=document.getElementById('loginOverlay'); if(!ov) return;
+  if(show){ ov.style.display='flex'; document.body.classList.add('locked');
+    setTimeout(function(){ var u=document.getElementById('lu'); if(u) u.focus(); },50); }
+  else { ov.style.display='none'; document.body.classList.remove('locked'); }
+}
+function doLogin(e){ if(e) e.preventDefault();
+  var u=(document.getElementById('lu').value||'').trim();
+  var p=(document.getElementById('lp').value||'');
+  if(u===AUTH_USER && p===AUTH_PASS){
+    try{ localStorage.setItem('ipp-auth','ok'); }catch(err){}
+    document.getElementById('loginErr').textContent='';
+    document.getElementById('lp').value='';
+    showLogin(false); if(typeof updateIcons==='function') updateIcons();
+  } else {
+    document.getElementById('loginErr').textContent='Pogrešno korisničko ime ili šifra.';
+    document.getElementById('lp').value='';
+  }
+  return false;
+}
+function logout(){ try{ localStorage.removeItem('ipp-auth'); }catch(e){} showLogin(true); }
+
+function updateIcons(){
+  const dark=!document.body.classList.contains('light');
+  document.querySelectorAll('.tico-img').forEach(function(im){
+    const src = dark ? im.getAttribute('data-d') : im.getAttribute('data-l');
+    if(src && im.src.indexOf(src)<0) im.src = src;
+  });
+}
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){}
+  syncThemeBtn(); updateIcons();
+}
+function syncThemeBtn(){const b=document.getElementById('themeBtn');
+  if(b) b.textContent = document.body.classList.contains('light') ? '🌙 Tamna' : '☀️ Svijetla';}
+document.addEventListener('DOMContentLoaded',function(){
+  try{ if(localStorage.getItem('ipp-tema')!=='dark') document.body.classList.add('light'); }catch(e){ document.body.classList.add('light'); }
+  syncThemeBtn(); updateIcons();
+  showLogin(!isAuthed());
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alat — Rješenje o imenovanju Komisije za tehnički pregled</title>
+<link rel="icon" href="grb.jpg">
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light #out{background:#f1f4f8;color:#0d141c}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:14px;max-width:820px;margin:0 auto}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+  .htitle{flex:1;min-width:0}
+  .homebtn{padding:8px 12px;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  .themebtn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  body.light .grb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.12))}
+  .wrap{max-width:820px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card h2{font-size:13px;margin:0 0 14px;color:var(--h2);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 5px;font-weight:500}
+  input,select,textarea{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:11px;font-size:15px;font-family:inherit}
+  textarea{min-height:64px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:560px){.row,.row3{grid-template-columns:1fr}}
+  .chk{display:flex;align-items:flex-start;gap:9px;margin:8px 0;font-size:14px;color:var(--ink);font-weight:400}
+  .chk input{width:auto;margin-top:3px}
+  input[type=checkbox],input[type=radio]{width:auto!important;flex:0 0 auto;transition:none!important;animation:none!important;transform:none!important}
+  .det{display:none;margin:0 0 12px 28px;padding:10px 12px;border-left:2px solid var(--accent);border-radius:0 8px 8px 0;background:rgba(76,154,255,.07)}
+  .det.show{display:block}
+  .det label{margin-top:6px}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
+  button{border:0;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .primary{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  .primary:hover{filter:brightness(1.05)}
+  .ghost:hover{border-color:var(--accent)}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  #out{white-space:pre-wrap;background:#0a1019;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:13px;display:none;margin-top:12px;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ok);color:#fff;padding:11px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;font-weight:500}
+  .toast.show{opacity:1}
+  .req{color:#ff7b72}
+  fieldset{border:0;padding:0;margin:0}
+  .itembox{border:1px solid var(--line);border-radius:9px;padding:10px;margin-bottom:8px}
+  .warnbox{margin-top:10px;padding:12px 14px;border-radius:10px;border:1px solid #d29922;background:rgba(210,153,34,.12);color:var(--ink);font-size:13px;font-weight:500;line-height:1.5}
+  input,select,textarea,button{transition:border-color .18s ease, box-shadow .18s ease, background-color .18s ease, transform .12s ease, filter .18s ease}
+  .card{transition:border-color .2s ease, box-shadow .25s ease, transform .2s ease}
+  .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12); border-color:var(--accent); transform:translateY(-2px)}
+  .primary:active,.ghost:active{transform:translateY(1px) scale(.99)}
+  .grb{transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+  .grb:hover{transform:scale(1.07) rotate(-3deg)}
+  .themebtn{transition:transform .18s ease, background-color .18s ease}
+  .themebtn:hover{transform:scale(1.05)}
+  @media (prefers-reduced-motion: no-preference){
+    html{scroll-behavior:smooth}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes detIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+    .card{animation:fadeUp .5s cubic-bezier(.22,.61,.36,1) both}
+    .det.show{animation:detIn .24s ease}
+  }
+  /* ===== PDF / A4 dokument ===== */
+  #printDoc{display:none}
+  .footer-block{margin-top:40px}
+  @media print{
+    @page{size:A4;margin:13mm 14mm}
+    header,.wrap,.toast{display:none!important}
+    body{background:#fff;color:#000}
+    #printDoc{display:block!important; padding-bottom:30px;}
+    .footer-block{
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin-top: 0;
+      background: #fff;
+    }
+  }
+</style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
+</head>
+<body class="light">
+<div id="odjavaFix" style="position:fixed;top:8px;right:10px;z-index:99999"><button type="button" onclick="try{localStorage.removeItem('ipp-auth')}catch(e){};location.replace('index.html')" style="padding:7px 12px;font-size:13px;font-weight:600;border:0;border-radius:8px;background:#c0392b;color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.28)">🔒 Odjava</button></div>
+<script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+<header>
+  <div class="hwrap">
+    <img class="grb" src="grb.jpg" alt="grb">
+    <div class="htitle">
+      <h1>Rješenje o imenovanju Komisije za tehnički pregled</h1>
+      <p>Zakon o građenju HBŽ čl. 63 · Pravilnik o tehničkom pregledu čl. 2, 3, 6</p>
+    </div>
+    <a class="ghost homebtn" href="index.html">← Početna</a>
+    <button type="button" id="themeBtn" class="ghost themebtn" onclick="toggleTheme()">☀️ Svijetla</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <form id="f">
+
+  <div class="card" style="border-color:var(--accent)">
+    <h2>0 · Uvezi iz upotrebne forme (nije obavezno)</h2>
+    <p class="hint">Naljepi paket iz <b>UPOTREBNE</b> forme i klikni <b>Uvezi</b> — prenosi investitora, lokaciju, članove Komisije i broj predmeta (dodaje podbroj <b>-1</b>), da ne prekucavaš.</p>
+    <textarea id="import_box" rows="4" placeholder="Ovdje naljepi paket iz upotrebne forme (ili JSON)…"></textarea>
+    <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+      <button type="button" class="primary" onclick="importPaket()">Uvezi u formu</button>
+      <button type="button" class="ghost" onclick="document.getElementById('import_box').value=''">Obriši polje</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>1 · Predmet</h2>
+    <label>Opština <span class="req">*</span></label>
+    <select name="opstina" onchange="onOpstina()">
+      <option>Drvar</option>
+      <option>Bosansko Grahovo</option>
+    </select>
+    <div id="broj_drvar" style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap">
+      <div style="flex:1;min-width:200px"><label>Broj predmeta (isti kao upotrebna; podbroj -1)</label>
+        <div style="display:flex;align-items:center;gap:6px">
+          <span style="white-space:nowrap;color:var(--muted)">UP:04-19-8-</span>
+          <input name="broj_redni" style="max-width:110px" placeholder="____">
+          <span id="godinaLbl" style="color:var(--muted)">/26</span>
+          <span style="color:var(--muted)">-</span>
+          <input name="broj_podbroj" style="max-width:52px" value="1">
+        </div>
+      </div>
+    </div>
+    <div id="broj_free" style="display:none"><label>Broj predmeta</label><input name="broj_slobodni" placeholder="upiši broj predmeta"></div>
+    <div class="row">
+      <div><label>Datum rješenja o imenovanju</label><input name="datum" placeholder="dd.mm.gggg."></div>
+      <div><label>Nadležni organ</label><input name="organ" readonly></div>
+    </div>
+    <div class="row">
+      <div><label>Zahtjev za upotrebnu dozvolu — broj</label><input name="zahtjev_broj" placeholder="npr. UP:04-19-8-2346/25"></div>
+      <div><label>Datum zahtjeva</label><input name="zahtjev_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Investitor</h2>
+    <label>Investitor / podnosilac <span class="req">*</span></label>
+    <input name="investitor" placeholder="ime i prezime ili naziv pravnog lica">
+    <div class="row">
+      <div><label>Adresa / sjedište</label><input name="adresa_investitora" placeholder="npr. Prvomajska 46, Drvar"></div>
+      <div><label>Mjesto</label><input name="mjesto_investitora" placeholder="npr. Drvar"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3 · Objekat i lokacija</h2>
+    <label>Opis objekta (za naslov rješenja) <span class="req">*</span></label>
+    <input name="objekat" placeholder="npr. prizemni poslovni objekat – trgovina">
+    <label>Lokacija / ulica (kako stoji u dozvoli)</label>
+    <input name="ulica" placeholder="npr. ulica Titova bb (pored kružnog toka), Drvar">
+    <div class="row3">
+      <div><label>Katastarska opština</label><select name="ko"></select></div>
+      <div><label>Broj k.č.</label><input name="kc"></div>
+      <div><label>Posjedovni list (PL)</label><input name="pl_broj"></div>
+    </div>
+    <div class="row">
+      <div><label>Građevinska dozvola — broj (osnov)</label><input name="gd_broj"></div>
+      <div><label>Datum građevinske dozvole</label><input name="gd_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4 · Sastav Komisije (čl. 63. st. 6–7)</h2>
+    <label class="chk"><input type="checkbox" name="jednostavni" onchange="onJednostavni()"> Individualni stambeni / stambeno-poslovni / poljoprivredni objekat — bruto ≤ 750 m² i raspon ≤ 6 m (čl. 63. st. 8)</label>
+    <div class="det" id="det_jednostavni">
+      <p class="hint" style="margin:0">Za ovakve objekte komisiju čine <b>dvije osobe</b> arhitektonske ili građevinske struke (dipl. ing. s 5 god. staža ILI ing. s 10 god. staža i položenim stručnim ispitom). Više struka i predstavnici institucija u pravilu nisu potrebni, osim ako to traži poseban propis.</p>
+    </div>
+    <label style="margin-top:12px">Članovi Komisije <span class="req">*</span> (predsjednik + članovi)</label>
+    <p class="hint">Za svakog: ime i prezime, struka (npr. dipl. ing. građevine) i uloga. Sa Liste stručnih osoba Ministarstva (čl. 3 Pravilnika). Ne može biti službenik koji je izdao građevinsku dozvolu ni projektant/izvođač (st. 10).</p>
+    <div id="clanovi_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addClan()">+ Dodaj člana</button>
+
+    <label style="margin-top:16px">Predstavnici institucija u Komisiji (čl. 63. st. 5)</label>
+    <p class="hint">Ako je institucija dala saglasnost/uslove (npr. <b>MUP K-10</b> — zaštita od požara, obično protivpožarac; vodovod; elektroprivreda; ceste; okoliš), organ joj šalje rješenje da <b>imenuje svog ovlaštenog predstavnika</b> u komisiju. Ako saglasnost već ima broj — upiši ga.</p>
+    <div id="inst_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addInst()">+ Dodaj instituciju</button>
+  </div>
+
+  <div class="card">
+    <h2>5 · Termin tehničkog pregleda (čl. 63. st. 1)</h2>
+    <div class="row3">
+      <div><label>Dan (u sedmici)</label><input name="tp_dan" placeholder="npr. četvrtak"></div>
+      <div><label>Datum pregleda</label><input name="tp_datum" placeholder="dd.mm.gggg."></div>
+      <div><label>Sat</label><input name="tp_sat" placeholder="npr. 10:00"></div>
+    </div>
+    <p class="hint">Rok: tehnički pregled u 30 dana od urednog zahtjeva; ovo rješenje u 8 dana (čl. 63. st. 4).</p>
+  </div>
+
+  <div class="card">
+    <h2>6 · Potpis i dostava</h2>
+    <div class="row">
+      <div><label>Obradio (referent)</label><input name="obradio"></div>
+      <div><label>Potpisuje</label><input name="nacelnik" placeholder="Opštinski načelnik"></div>
+    </div>
+    <label>Napomene za obradu</label>
+    <textarea name="napomene" placeholder="posebnosti, dodatne struke, uslovi…"></textarea>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="primary" onclick="generate()">Generiši rješenje (tekst)</button>
+    <button type="button" onclick="exportWord()" style="background:linear-gradient(180deg,#2b6bd4,#1c4fa0);color:#fff">⬇ Word (.docx)</button>
+    <button type="button" onclick="exportPDF()" style="background:linear-gradient(180deg,#c0392b,#a02a1f);color:#fff">⬇ PDF (štampaj)</button>
+    <button type="button" class="ghost" onclick="copyOut()">Kopiraj</button>
+    <button type="button" class="ghost" onclick="download()">Preuzmi .txt</button>
+    <button type="button" class="primary" onclick="exportPDF()">📄 Izvezi PDF</button>
+    <button type="button" class="primary" onclick="exportDOCX()">📄 Izvezi Word (.doc)</button>
+    <button type="reset" class="ghost">Očisti formu</button>
+  </div>
+  <pre id="out"></pre>
+  </form>
+</div>
+
+<div id="printDoc"></div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const F = () => document.getElementById('f');
+const fields = [
+  ['opstina','Opština'],['datum','Datum rješenja'],['organ','Nadležni organ'],
+  ['zahtjev_broj','Zahtjev za upotrebnu - broj'],['zahtjev_datum','Zahtjev - datum'],
+  ['investitor','Investitor'],['adresa_investitora','Adresa investitora'],['mjesto_investitora','Mjesto investitora'],
+  ['objekat','Opis objekta'],['ulica','Lokacija / ulica'],['ko','Katastarska opština'],['kc','Broj k.č.'],['pl_broj','Posjedovni list'],
+  ['gd_broj','Građevinska dozvola - broj'],['gd_datum','Građevinska dozvola - datum'],
+  ['tp_dan','Dan pregleda'],['tp_datum','Datum pregleda'],['tp_sat','Sat pregleda'],
+  ['obradio','Obradio'],['nacelnik','Potpisuje']
+];
+
+const KO = {
+  'Drvar': ['ATAŠEVAC','BASTASI I','BASTASI II','DRVAR GRAD','DRVAR SELO','KAMENICA','LJESKOVICA I','LJESKOVICA II','PODOVI','ŠIPOVLJANI','ŠTRPCI MALI','ŠTRPCI VELIKI','VIDOVO SELO','VRTOČE'],
+  'Bosansko Grahovo': ['CRNI LUG','GRAHOVO I','GRAHOVO II','MARINKOVCI','PEĆI','PEULJE','PREODAC','TIČEVO MALO','TIŠKOVAC DONJI']
+};
+const ORGAN = {
+  'Drvar': 'Opštinski načelnik — Služba za imovinsko-pravne i geodetske poslove Opštine Drvar',
+  'Bosansko Grahovo': 'Opštinski načelnik — Služba za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove Opštine Bosansko Grahovo'
+};
+const SLUZBA = {
+  'Drvar':'Služba za imovinsko-pravne i geodetske poslove Opštine Drvar',
+  'Bosansko Grahovo':'Služba za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove Opštine Bosansko Grahovo'
+};
+const SLUZBA_G = {
+  'Drvar':'Službe za imovinsko-pravne i geodetske poslove Opštine Drvar',
+  'Bosansko Grahovo':'Službe za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove Opštine Bosansko Grahovo'
+};
+const SLUZBA_D = {
+  'Drvar':'Službi za imovinsko-pravne i geodetske poslove Opštine Drvar',
+  'Bosansko Grahovo':'Službi za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove Opštine Bosansko Grahovo'
+};
+const NACELNIK = { 'Drvar':'Dušica Runić', 'Bosansko Grahovo':'' };
+const OBLASTI = ['zaštitu od požara','vodovod i kanalizaciju','elektroenergetiku','zaštitu okoliša','saobraćaj / ceste','sanitarnu zaštitu','drugo'];
+const GRB_DATA="data:image/jpeg;base64,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hpp8Y8cjhvubPGOOsaS4ut61cHMuRdPDSGlQO+Xa+s6fjOj4x6nfDEMOVwpRVama8NJTlZ3Wa2+IygaNY4fEYY5F6+jnF6KuLo89bk3IEjrhf8XQY09bP/CvluTka9px2a8z4i9h6wz8/nNVz1l2q9M+s2d3h6XHaj3vx2BxVDiZso2rd78TRQeivqTWXwJvPCsPZfp1mSM9IeJ39oTnnJ8X/wAO5uQk4oeHxOZfekX3dPWptofeEL7RUaOQB/xqaAM0seivhm/d97prtHOn0YW50R4r73QcgrJXeB/4Z9F1EWzOmeAQA/C0Re6K5nRM7j/9Yf/aAAwDAQMCEwMTAAAQ88888888888888888888888888888o88888888888888888888888888888o88888888888888888888888888888o88888888888888888888888888888o88888888888484048088888888888o888888888846cQvCMu08888888888o88888888888MnieW/A88888888888o88888888888M04wYgU88888888888o8888888peoS+GJXRW9JKDI0888888o888888VqTwm7WMdXYNxOyPb888888o8888885mVthnOPHbjrOwabh888888o888888eC+5nUIUalWSCbtquU88888o888888LDUvdziE+2ux1jMBtE88888o888884nfsAj/fI8G8Un5bztd88888o88888pBNUSi8F2fRitT+cXWQ88888o888888H+Psi80iWezE4HaQX888888o888888qQ5KW8JLoTaradkJ5088888o888888BhqqAst0mW2Kk0sZB888888o8888886jnh1iYjgA0J1NgiH888888o888888F+7XTGLXv4mZJY6/t888888o888884wRjHkIaJ7NbHeoT0wo88888o888889EfvkLEj/ANIZvzA0jhY/PPPPKPPPPPPPOHDiKzcAhMQL+rysnPPPPPKPPPPPPLC8lLo6FEZKBKOql1PPPPPPKPPPPPPDDJByd087bAexrCbPPPPPPPKPPPPPPPOKvNUP1PDHKCBa/PPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPP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";
+
+function val(n){const e=F().elements[n];return e?e.value.trim():'';}
+function godina2(){return String(new Date().getFullYear()).slice(-2);}
+function brojPredmeta(){
+  if(val('opstina')==='Drvar'){ const r=val('broj_redni')||'______'; const p=val('broj_podbroj')||'1'; return 'UP:04-19-8-'+r+'/'+godina2()+'-'+p; }
+  return val('broj_slobodni')||'______';
+}
+function onOpstina(){
+  const o=F().elements['opstina'].value;
+  const sel=F().elements['ko']; const prev=sel.value;
+  sel.innerHTML='<option value="">— izaberi k.o. —</option>';
+  (KO[o]||[]).forEach(function(k){ const op=document.createElement('option'); op.textContent=k; sel.appendChild(op); });
+  if((KO[o]||[]).indexOf(prev)>=0) sel.value=prev;
+  if(F().elements['organ']) F().elements['organ'].value=ORGAN[o]||'';
+  if(F().elements['nacelnik'] && !F().elements['nacelnik'].value) F().elements['nacelnik'].value=NACELNIK[o]||'';
+  const bd=document.getElementById('broj_drvar'), bf=document.getElementById('broj_free');
+  if(bd&&bf){ const dr=(o==='Drvar'); bd.style.display=dr?'flex':'none'; bf.style.display=dr?'none':'block'; }
+}
+function onJednostavni(){ const cb=F().elements['jednostavni']; const d=document.getElementById('det_jednostavni'); if(d) d.classList.toggle('show', cb&&cb.checked); }
+
+/* članovi Komisije */
+function addClan(ime,struka,uloga){ const wrap=document.getElementById('clanovi_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='row3'; div.style.marginBottom='8px';
+  div.innerHTML='<div><input class="cl_ime" placeholder="Ime i prezime"></div>'
+    +'<div><input class="cl_struka" placeholder="struka (npr. dipl. ing. građ.)"></div>'
+    +'<div style="display:flex;gap:6px"><select class="cl_uloga" style="flex:1"><option>član</option><option>predsjednik</option></select>'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.row3\').remove()">&times;</button></div>';
+  if(ime) div.querySelector('.cl_ime').value=ime; if(struka) div.querySelector('.cl_struka').value=struka;
+  if(uloga) div.querySelector('.cl_uloga').value=uloga; wrap.appendChild(div); }
+function clanoviData(){ const rows=document.querySelectorAll('#clanovi_list .row3'); const arr=[];
+  rows.forEach(function(r){ const g=function(c){const e=r.querySelector(c);return e?e.value.trim():'';};
+    const im=g('.cl_ime'), st=g('.cl_struka'), ul=g('.cl_uloga'); if(im||st) arr.push({ime:im, struka:st, uloga:ul||'član'}); }); return arr; }
+
+/* institucije koje delegiraju predstavnika */
+function addInst(inst){ inst=inst||{}; const wrap=document.getElementById('inst_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='itembox';
+  let opt=OBLASTI.map(function(o){return '<option>'+o+'</option>';}).join('');
+  div.innerHTML='<input class="in_naziv" placeholder="Naziv institucije (npr. MUP Kantona 10)" style="margin-bottom:6px">'
+    +'<div class="row"><div><label style="margin:0 0 4px">Oblast</label><select class="in_oblast">'+opt+'</select></div>'
+    +'<div><label style="margin:0 0 4px">Uloga predstavnika</label><input class="in_uloga" placeholder="npr. protivpožarac"></div></div>'
+    +'<div class="row" style="margin-top:6px"><div><label style="margin:0 0 4px">Saglasnost — broj (ako postoji)</label><input class="in_sag_broj" placeholder="npr. 02-02/2-606/25/UP-1"></div>'
+    +'<div><label style="margin:0 0 4px">Datum saglasnosti</label><input class="in_sag_datum" placeholder="dd.mm.gggg."></div></div>'
+    +'<button type="button" class="ghost" style="margin-top:8px;padding:6px 12px" onclick="this.closest(\'.itembox\').remove()">Ukloni</button>';
+  wrap.appendChild(div);
+  const set=function(c,v){ if(v){ const e=div.querySelector(c); if(e) e.value=v; } };
+  set('.in_naziv',inst.naziv); set('.in_uloga',inst.uloga); set('.in_sag_broj',inst.sag_broj); set('.in_sag_datum',inst.sag_datum);
+  if(inst.oblast){ const s=div.querySelector('.in_oblast'); if(s && OBLASTI.indexOf(inst.oblast)>=0) s.value=inst.oblast; }
+}
+function instData(){ const rows=document.querySelectorAll('#inst_list .itembox'); const arr=[];
+  rows.forEach(function(r){ const g=function(c){const e=r.querySelector(c);return e?e.value.trim():'';};
+    const nz=g('.in_naziv'); if(nz) arr.push({naziv:nz, oblast:g('.in_oblast'), uloga:g('.in_uloga'), sag_broj:g('.in_sag_broj'), sag_datum:g('.in_sag_datum')}); }); return arr; }
+
+/* ---------- generisanje teksta rješenja ---------- */
+function lokacijaFraza(){
+  let s=val('ulica');
+  const kc=val('kc'), ko=val('ko'), pl=val('pl_broj');
+  let kat='';
+  if(kc){ kat='k.č. '+kc; if(pl) kat+=', PL '+pl; if(ko) kat+=', k.o. '+ko; }
+  else if(ko){ kat='k.o. '+ko; }
+  if(s && kat) return s+', na zemljištu označenom kao '+kat;
+  if(s) return s;
+  if(kat) return 'na zemljištu označenom kao '+kat;
+  return '____________';
+}
+function investitorFraza(){
+  let s=val('investitor')||'____________';
+  const a=val('adresa_investitora'), m=val('mjesto_investitora');
+  if(a) s+=', '+a; if(m && (!a || a.toLowerCase().indexOf(m.toLowerCase())<0)) s+=(a?', ':', ')+m;
+  return s;
+}
+function clanLinije(){
+  const cl=clanoviData(); const inst=instData(); const lines=[];
+  // predsjednik prvi
+  const pred=cl.filter(function(c){return /predsjednik/i.test(c.uloga);});
+  const clan=cl.filter(function(c){return !/predsjednik/i.test(c.uloga);});
+  const ordered=pred.concat(clan);
+  let i=1;
+  ordered.forEach(function(c){
+    const ime=c.ime||'____________'; const st=c.struka?', '+c.struka:'';
+    const ul=/predsjednik/i.test(c.uloga)?', predsjednik komisije':', član';
+    lines.push('       '+i+'. '+ime+st+ul); i++;
+  });
+  inst.forEach(function(x){
+    let t='       '+i+'. Predstavnik '+x.naziv;
+    if(x.oblast) t+=' – za '+x.oblast;
+    if(x.uloga) t+=' ('+x.uloga+')';
+    if(x.sag_broj){ t+=', po saglasnosti broj: '+x.sag_broj+(x.sag_datum?(' od '+x.sag_datum):'')+'.'; }
+    else { t+=', kojeg će '+x.naziv+' odrediti po ovom rješenju.'; }
+    lines.push(t); i++;
+  });
+  if(!ordered.length && !inst.length) lines.push('       1. ____________________, predsjednik komisije\n       2. ____________________, član');
+  return lines.join('\n');
+}
+function terminFraza(){
+  const dan=val('tp_dan'), d=val('tp_datum'), sat=val('tp_sat');
+  let s='zakazuje se za dan ';
+  s+=(dan?dan+' ':'')+(d||'____________')+' godine';
+  s+=' sa početkom u '+(sat||'______')+' sati';
+  return s;
+}
+function poukaBlok(){
+  if(val('opstina')==='Drvar'){
+    return 'Protiv ovog Rješenja može se izjaviti žalba Ministarstvu graditeljstva, obnove, prostornog uređenja i zaštite\n'
+      +'okoliša Livno, u roku od 15 dana od dana prijema istog, putem ove Službe, pismeno ili usmeno na zapisnik, taksirana\n'
+      +'sa 15 KM administrativne takse uplaćene na depozitni račun Opštine Drvar broj: 154999-5000539591 (Intesa Sanpaolo\n'
+      +'Drvar), vrsta prihoda 722131, šifra opštine 027.';
+  }
+  return 'Protiv ovog Rješenja može se izjaviti žalba Ministarstvu graditeljstva, obnove, prostornog uređenja i zaštite\n'
+    +'okoliša Livno, u roku od 15 dana od dana prijema istog, putem ove Službe, pismeno ili usmeno na zapisnik, taksirana\n'
+    +'administrativnom taksom u skladu s važećom Odlukom o administrativnim taksama.';
+}
+
+function build(){
+  const required=['investitor','objekat'];
+  for(const r of required){ if(!val(r)){ toast('Popuni obavezna polja (*)','warn'); const e=F().elements[r]; if(e) e.focus(); return null; } }
+  if(!clanoviData().length && !instData().length){ toast('Dodaj bar članove Komisije','warn'); return null; }
+
+  const op=val('opstina'), sl=SLUZBA[op]||'', slg=SLUZBA_G[op]||sl, sld=SLUZBA_D[op]||sl, nac=val('nacelnik')||NACELNIK[op]||'____________';
+  const obj=val('objekat')||'____________';
+  const NL='\n';
+  let t='';
+  t+='RJEŠENJE O IMENOVANJU KOMISIJE ZA TEHNIČKI PREGLED — '+op.toUpperCase()+NL;
+  t+='(spremno za prepis u dopis/docx; memorandum i grb dodati u zaglavlje)'+NL+NL;
+  t+='Broj: '+brojPredmeta()+NL;
+  t+=(op==='Drvar'?'Drvar':'Bosansko Grahovo')+', '+(val('datum')||'____________')+' godine'+NL+NL;
+
+  // uvod
+  let uvod='       Opštinski načelnik, putem '+(slg||'nadležne Službe')+', na zahtjev investitora '+investitorFraza();
+  if(val('zahtjev_broj')) uvod+=' (zahtjev broj: '+val('zahtjev_broj')+(val('zahtjev_datum')?(' od '+val('zahtjev_datum')):'')+')';
+  uvod+=', u predmetu izdavanja upotrebne dozvole za '+obj+' na lokaciji '+lokacijaFraza()+', ';
+  uvod+='na osnovu člana 63. stav 3. i 5. Zakona o građenju („Narodne novine Hercegbosanske županije", broj 3/16) i članova 2. i 3. Pravilnika o tehničkom pregledu građevine („Narodne novine Hercegbosanske županije", broj 7/16 i 8/25), d o n o s i:';
+  t+=uvod+NL+NL;
+  t+='                                          R J E Š E NJ E'+NL;
+  t+='                    o imenovanju Komisije za tehnički pregled '+obj+NL+NL;
+
+  t+='  I.   Za tehnički pregled u predmetu izdavanja upotrebne dozvole za '+obj+' na lokaciji '+(val('ulica')||lokacijaFraza())+NL;
+  t+='       imenuje se Komisija u sastavu:'+NL;
+  t+=clanLinije()+NL+NL;
+
+  t+='  II.  U sastav Komisije imenuju se stručne osobe sa Liste stručnih osoba koje ispunjavaju uvjete za'+NL;
+  t+='       sudjelovanje u radu Komisije za tehnički pregled građevina, sačinjene od strane Ministarstva'+NL;
+  t+='       graditeljstva, obnove, prostornog uređenja i zaštite okoliša Livno.'+NL+NL;
+
+  t+='  III. Tehnički pregled izgrađenog objekta na lokaciji '+(val('ulica')||lokacijaFraza())+' '+terminFraza()+'.'+NL+NL;
+
+  t+='  IV.  Investitor '+(val('investitor')||'____________')+' dužan je osigurati prisustvo sudionika u građenju te Komisiji'+NL;
+  t+='       staviti na uvid svu potrebnu tehničku dokumentaciju, u skladu sa članom 6. Pravilnika.'+NL+NL;
+
+  t+='  V.   Zadatak Komisije je da izvrši tehnički pregled izgrađenog objekta, te da neposrednim uvidom,'+NL;
+  t+='       kontrolom dokumentacije i ispitivanjima utvrdi da li je objekat izgrađen u skladu sa građevinskom'+NL;
+  t+='       dozvolom'+(val('gd_broj')?(' (broj: '+val('gd_broj')+(val('gd_datum')?(' od '+val('gd_datum')):'')+')'):'')+', tehničkom dokumentacijom, te važećim tehničkim propisima i normama.'+NL+NL;
+
+  t+='  VI.  O izvršenom tehničkom pregledu vodi se Zapisnik. Svaki član Komisije dužan je dostaviti pojedinačni'+NL;
+  t+='       zapisnik predsjedniku Komisije, koji sastavlja zajednički Zapisnik i unosi mišljenje o tome da li se za'+NL;
+  t+='       predmetni objekat može izdati upotrebna dozvola.'+NL+NL;
+
+  t+='  VII. Predsjednik Komisije dužan je u roku od 8 (osam) dana od dana obavljenog tehničkog pregleda dostaviti'+NL;
+  t+='       Zapisnik, koji su potpisali svi članovi Komisije, '+(sl||'nadležnoj Službi')+', kao i prijedlog iznosa'+NL;
+  t+='       naknade za rad Komisije – Obrazac 2, prema Pravilniku o tehničkom pregledu građevine („Narodne novine'+NL;
+  t+='       Hercegbosanske županije", broj: 7/16 i 8/25).'+NL+NL;
+
+  t+='  VIII. Troškove tehničkog pregleda snosi investitor. Visina naknade za rad članova Komisije utvrdit će se'+NL;
+  t+='       posebnim Zaključkom ovog organa, na osnovu investicijske vrijednosti objekta i složenosti pregleda, a u'+NL;
+  t+='       skladu sa članovima 14. i 15. Pravilnika o tehničkom pregledu građevine.'+NL+NL;
+
+  t+='  IX.  Ovo Rješenje stupa na snagu danom donošenja, a objavit će se na oglasnoj tabli Opštine '+op+'.'+NL+NL;
+
+  t+='Pouka o pravnom lijeku:'+NL+poukaBlok()+NL+NL;
+
+  t+='obradio: '+(val('obradio')||'____________')+NL+NL;
+  t+='                                                     OPŠTINSKI NAČELNIK'+NL;
+  t+='                                                     ____________________'+NL;
+  t+='                                                       '+nac+NL+NL;
+
+  t+='Dostaviti:'+NL;
+  const cnt=clanoviData().length||3;
+  t+=' '+cnt+'x – članovima Komisije'+NL;
+  t+=' 1x – Opštinski načelnik'+NL;
+  instData().forEach(function(x){ t+=' 1x – '+x.naziv+' (radi imenovanja ovlaštenog predstavnika u Komisiju)'+NL; });
+  t+=' 1x – Investitor'+NL;
+  t+=' 1x – '+(sl||'nadležna Služba')+NL;
+  t+=' 1x – Oglasna tabla Opštine '+op+NL;
+  t+=' 1x – u spis (a/a)'+NL;
+
+  const nap=val('napomene'); if(nap){ t+=NL+'NAPOMENE ZA OBRADU:'+NL+nap+NL; }
+  t=t.replace(/\.\.(?=\s|$)/g,'.');
+
+  // JSON
+  const o={broj_predmeta:brojPredmeta()};
+  for(const [k] of fields) o[k]=val(k);
+  o.jednostavni=(F().elements['jednostavni']&&F().elements['jednostavni'].checked)?'Da':'';
+  o.clanovi_komisije=clanoviData();
+  o.institucije=instData();
+  o.napomene=nap;
+  t+=NL+'--- JSON ---'+NL+JSON.stringify(o,null,2)+NL;
+  return t;
+}
+/* ================= grb + pravi .docx + PDF ================= */
+var GRB_DOCX=GRB_DATA.replace(/^data:[^,]*,/,'');
+var _crcT=(function(){var c,t=[];for(var n=0;n<256;n++){c=n;for(var k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0;}return t;})();
+function _crc32(b){var c=0xFFFFFFFF;for(var i=0;i<b.length;i++)c=_crcT[(c^b[i])&0xFF]^(c>>>8);return (c^0xFFFFFFFF)>>>0;}
+function _b64bytes(b64){var bin=atob(b64),n=bin.length,a=new Uint8Array(n);for(var i=0;i<n;i++)a[i]=bin.charCodeAt(i);return a;}
+function _cat(arrs){var len=0;arrs.forEach(function(a){len+=a.length;});var out=new Uint8Array(len),o=0;arrs.forEach(function(a){out.set(a,o);o+=a.length;});return out;}
+function _u16(n){return new Uint8Array([n&255,(n>>8)&255]);}
+function _u32(n){return new Uint8Array([n&255,(n>>8)&255,(n>>16)&255,(n>>>24)&255]);}
+function _zip(files){var enc=new TextEncoder();var chunks=[],central=[],offset=0;files.forEach(function(f){var name=enc.encode(f.name),data=f.data,crc=_crc32(data);var local=_cat([_u32(0x04034b50),_u16(20),_u16(0),_u16(0),_u16(0),_u16(0),_u32(crc),_u32(data.length),_u32(data.length),_u16(name.length),_u16(0),name,data]);central.push(_cat([_u32(0x02014b50),_u16(20),_u16(20),_u16(0),_u16(0),_u16(0),_u16(0),_u32(crc),_u32(data.length),_u32(data.length),_u16(name.length),_u16(0),_u16(0),_u16(0),_u16(0),_u32(0),_u32(offset),name]));chunks.push(local);offset+=local.length;});var cd=_cat(central);var end=_cat([_u32(0x06054b50),_u16(0),_u16(0),_u16(files.length),_u16(files.length),_u32(cd.length),_u32(offset),_u16(0)]);return _cat(chunks.concat([cd,end]));}
+function _xesc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function _parap(o){var jc=o.align||'left',rpr='';if(o.bold)rpr+='<w:b/>';if(o.size)rpr+='<w:sz w:val="'+Math.round(o.size*2)+'"/>';var rp=rpr?'<w:rPr>'+rpr+'</w:rPr>':'';var af=(o.after!=null)?o.after:0;var ln=(o.line!=null)?o.line:240;var sp='<w:spacing'+(o.before!=null?' w:before="'+o.before+'"':'')+' w:after="'+af+'" w:line="'+ln+'" w:lineRule="auto"/>';var run=o.text?'<w:r>'+rp+'<w:t xml:space="preserve">'+_xesc(o.text)+'</w:t></w:r>':'';return '<w:p><w:pPr><w:jc w:val="'+jc+'"/>'+sp+rp+'</w:pPr>'+run+'</w:p>';}
+function _dcell(inner,w){return '<w:tc><w:tcPr><w:tcW w:w="'+w+'" w:type="dxa"/><w:tcBorders><w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/></w:tcBorders><w:vAlign w:val="center"/></w:tcPr>'+inner+'</w:tc>';}
+function _memoTbl(cyr,lat){var C=cyr.map(function(l){return _parap({text:l,align:'center',size:9,bold:true,after:0,before:0,line:240});}).join('');var L=lat.map(function(l){return _parap({text:l,align:'center',size:9,bold:true,after:0,before:0,line:240});}).join('');var IMG='<w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="904875" cy="1100931"/><wp:effectExtent l="0" t="0" r="0" b="0"/><wp:docPr id="1" name="grb"/><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name="grb"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rIdImg1"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="904875" cy="1100931"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>';var row='<w:tr>'+_dcell(C,3900)+_dcell(IMG,1838)+_dcell(L,3900)+'</w:tr>';return '<w:tbl><w:tblPr><w:tblW w:w="9638" w:type="dxa"/><w:tblBorders><w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders><w:tblLook w:val="0000"/></w:tblPr><w:tblGrid><w:gridCol w:w="3900"/><w:gridCol w:w="1838"/><w:gridCol w:w="3900"/></w:tblGrid>'+row+'</w:tbl>';}
+function _hrp(){return '<w:p><w:pPr><w:pBdr><w:bottom w:val="single" w:sz="8" w:space="1" w:color="000000"/></w:pBdr></w:pPr></w:p>';}
+function _lines2paras(txt){var out=[];txt.split('\n').forEach(function(ln){var lead=(ln.match(/^ */)||[''])[0].length;var tr=ln.trim();if(tr===''){out.push({text:'',align:'left'});return;}if(/^Broj:/.test(tr)||/^Datum:/.test(tr)||/^(Drvar|Bosansko Grahovo),/.test(tr)){out.push({text:tr,align:'left'});return;}if(/^(R J E Š E NJ E|K O N K U R S|J A V N I   P O Z I V|Z A P I S N I K)$/.test(tr)){out.push({text:tr,align:'center',bold:true,size:14});return;}if(/^o imenovanju /.test(tr)){out.push({text:tr,align:'center',bold:true});return;}if(lead>=30){out.push({text:tr,align:'right'});return;}out.push({text:tr,align:'both'});});return out;}
+var _STYLES='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="Times New Roman" w:cs="Times New Roman"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="sr-Latn-BA"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="0" w:line="240" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults></w:styles>';
+function _buildDocx(cyr,lat,paras){var body=_memoTbl(cyr,lat)+_hrp()+paras.map(_parap).join('');var sect='<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="360" w:footer="360" w:gutter="0"/></w:sectPr>';var doc='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>'+body+sect+'</w:body></w:document>';var ct='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="jpg" ContentType="image/jpeg"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>';var rl='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';var dr='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rIdImg1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image1.jpg"/><Relationship Id="rIdSty1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>';var enc=new TextEncoder();return _zip([{name:'[Content_Types].xml',data:enc.encode(ct)},{name:'_rels/.rels',data:enc.encode(rl)},{name:'word/document.xml',data:enc.encode(doc)},{name:'word/_rels/document.xml.rels',data:enc.encode(dr)},{name:'word/styles.xml',data:enc.encode(_STYLES)},{name:'word/media/image1.jpg',data:_b64bytes(GRB_DOCX)}]);}
+function memoLines(op){var g=(op==='Bosansko Grahovo')?'BOSANSKO GRAHOVO':'DRVAR',gc=(op==='Bosansko Grahovo')?'БОСАНСКО ГРАХОВО':'ДРВАР';
+  return {cyr:['БОСНА И ХЕРЦЕГОВИНА','ФЕДЕРАЦИЈА БОСНЕ И ХЕРЦЕГОВИНЕ','КАНТОН 10','ОПШТИНА '+gc,'ОПШТИНСКИ НАЧЕЛНИК'],
+          lat:['BOSNA I HERCEGOVINA','FEDERACIJA BOSNE I HERCEGOVINE','KANTON 10','OPŠTINA '+g,'OPŠTINSKI NAČELNIK']};}
+function memoHTMLpdf(op){var m=memoLines(op);function col(a){return a.map(function(x){return '<div>'+x+'</div>';}).join('');}
+  return '<table style="width:100%;border-collapse:collapse;font-size:9.5pt;font-weight:bold;text-align:center"><tr>'
+    +'<td style="width:37%;vertical-align:middle;line-height:1.3">'+col(m.cyr)+'</td>'
+    +'<td style="width:26%;text-align:center;vertical-align:middle"><img src="'+GRB_DATA+'" style="width:92px;height:auto"></td>'
+    +'<td style="width:37%;vertical-align:middle;line-height:1.3">'+col(m.lat)+'</td>'
+    +'</tr></table><hr style="border:none;border-top:1.5px solid #000;margin:8px 0 12px">';}
+function docxSourceText(){ var s=build(); if(s==null) return null; var i=s.indexOf('Broj:'); var j=s.indexOf('\n--- JSON ---'); if(i<0)i=0; if(j<0)j=s.length; return s.slice(i,j); }
+function _fname(){ return 'RJESENJE_IMENOVANJE_TP_'+(brojPredmeta()||'').replace(/[\\/:*?"<>|]/g,'-')+'_'+(val('opstina')||''); }
+function exportWord(){ var src=docxSourceText(); if(src===null) return; var m=memoLines(val('opstina'));
+  var bytes=_buildDocx(m.cyr,m.lat,_lines2paras(src));
+  var blob=new Blob([bytes],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=_fname()+'.docx'; a.click(); toast('Word (.docx) preuzet','ok'); }
+function exportPDF(){ var src=docxSourceText(); if(src===null) return;
+  var body=memoHTMLpdf(val('opstina'))+'<div style="white-space:pre-wrap">'+_xesc(src)+'</div>';
+  var w=window.open('','_blank'); if(!w){ toast('Dozvoli pop-up za PDF','warn'); return; }
+  w.document.write('<html><head><meta charset="utf-8"><title>'+_fname()+'</title><style>@page{size:A4;margin:2cm}body{font-family:"Times New Roman",serif;font-size:11pt;line-height:1.4;color:#000}</style></head><body>'+body+'</body></html>');
+  w.document.close(); w.focus(); setTimeout(function(){try{w.print();}catch(e){}},500); toast('Otvoren pregled — Sačuvaj kao PDF','ok'); }
+
+function generate(){ const t=build(); if(t===null) return;
+  const o=document.getElementById('out'); o.textContent=t; o.style.display='block'; o.scrollIntoView({behavior:'smooth',block:'start'});
+  toast('Rješenje generisano — kopiraj ili preuzmi','ok'); }
+function copyOut(){ const t=build(); if(t===null) return;
+  navigator.clipboard.writeText(t).then(function(){ toast('Kopirano','ok'); },function(){ const o=document.getElementById('out'); o.textContent=t; o.style.display='block'; toast('Kopiraj ručno iz polja','warn'); }); }
+function download(){ const t=build(); if(t===null) return;
+  const naziv=brojPredmeta().replace(/[\\/:*?"<>|]/g,'-')+'_'+(val('investitor')||'').replace(/[\\/:*?"<>|]/g,'-').slice(0,30);
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'}); const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='IMENOVANJE_KOMISIJE_'+naziv+'.txt'; a.click(); toast('Spremi u folder 03_RJESENJA','ok'); }
+
+function buildPrintDoc() {
+  const required=['investitor','objekat'];
+  for(const r of required){ if(!val(r)){ toast('Popuni obavezna polja (*)','warn'); const e=F().elements[r]; if(e) e.focus(); return false; } }
+  if(!clanoviData().length && !instData().length){ toast('Dodaj bar članove Komisije','warn'); return false; }
+
+  const op=val('opstina'), sl=SLUZBA[op]||'', nac=val('nacelnik')||NACELNIK[op]||'____________';
+  const obj=val('objekat')||'____________';
+
+  // Header logic
+  var h='<div class="pd-wrap" style="font-family:\'Times New Roman\', serif; font-size:11pt; line-height:1.2; text-align:justify; color:#000;">';
+  
+  if (op === 'Drvar') {
+    h+='<table style="width:100%; border:none; text-align:center; font-size:10pt; line-height:1.1; color:#000;">'
+      +'<tr><td style="width:40%; vertical-align:top; border:none; padding:0;">БОСНА И ХЕРЦЕГОВИНА<br>ФЕДЕРАЦИЈА БОСНЕ И ХЕРЦЕГОВИНЕ<br>КАНТОН 10<br>ОПШТИНА ДРВАР<br>ОПШТИНСКИ НАЧЕЛНИК<br>СЛУЖБА ЗА ИМОВИНСКО ПРАВНЕ И<br>ГЕОДЕТСКЕ ПОСЛОВЕ</td>'
+      +'<td style="width:20%; vertical-align:middle; text-align:center; border:none; padding:0;"><img src="'+GRB_DATA+'" style="width:78px; height:auto;" alt="grb"></td>'
+      +'<td style="width:40%; vertical-align:top; border:none; padding:0;">BOSNA I HERCEGOVINA<br>FEDERACIJA BOSNE I HERCEGOVINE<br>KANTON 10<br>OPŠTINA DRVAR<br>OPŠTINSKI NAČELNIK<br>SLUŽBA ZA IMOVINSKO PRAVNE I<br>GEODETSKE POSLOVE</td></tr></table>';
+    h+='<div style="border-bottom:2px solid #000; margin:5px 0 15px 0;"></div>';
+  } else {
+    h+='<table style="width:100%; border:none; text-align:center; font-size:10pt; line-height:1.1; color:#000;">'
+      +'<tr><td style="width:40%; vertical-align:top; border:none; padding:0;">БОСНА И ХЕРЦЕГОВИНА<br>ФЕДЕРАЦИЈА БОСНЕ И ХЕРЦЕГОВИНЕ<br>КАНТОН 10<br>ОПШТИНА БОСАНСКО ГРАХОВО<br>ОПШТИНСКИ НАЧЕЛНИК<br>СЛУЖБА ЗА ОБНОВУ, УРБАНИЗАМ...</td>'
+      +'<td style="width:20%; vertical-align:middle; text-align:center; border:none; padding:0;"><img src="'+GRB_DATA+'" style="width:78px; height:auto;" alt="grb"></td>'
+      +'<td style="width:40%; vertical-align:top; border:none; padding:0;">BOSNA I HERCEGOVINA<br>FEDERACIJA BOSNE I HERCEGOVINE<br>KANTON 10<br>OPŠTINA BOSANSKO GRAHOVO<br>OPŠTINSKI NAČELNIK<br>SLUŽBA ZA OBNOVU, URBANIZAM...</td></tr></table>';
+    h+='<div style="border-bottom:2px solid #000; margin:5px 0 15px 0;"></div>';
+  }
+
+  h+='<p style="margin:0;">Broj: '+brojPredmeta()+'<br>'+(op==='Drvar'?'Drvar':'Bosansko Grahovo')+', '+(val('datum')||'____________')+' godine</p>';
+
+  let uvod='<p style="text-indent: 30px; margin-top:20px;">Opštinski načelnik, putem '+(sl||'nadležne Službe')+', na zahtjev investitora <b>'+investitorFraza()+'</b>';
+  if(val('zahtjev_broj')) uvod+=' (zahtjev broj: '+val('zahtjev_broj')+(val('zahtjev_datum')?(' od '+val('zahtjev_datum')):'')+')';
+  uvod+=', u predmetu izdavanja upotrebne dozvole za <b>'+obj+'</b> u '+lokacijaFraza()+', ';
+  uvod+='na osnovu člana 63. stav 3. i 5. Zakona o građenju („Narodne novine Hercegbosanske županije", broj 3/16) i članova 2. i 3. Pravilnika o tehničkom pregledu građevine („Narodne novine Hercegbosanske županije", broj 7/16 i 8/25), d o n o s i:</p>';
+  
+  h+=uvod;
+  h+='<p style="text-align:center; font-weight:bold; font-size:12pt; letter-spacing: 2px; margin: 15px 0 5px 0;">R J E Š E NJ E</p>';
+  h+='<p style="text-align:center; font-weight:bold; margin: 0 0 15px 0;">o imenovanju komisije za tehnički pregled '+obj+'</p>';
+
+  h+='<table style="width:100%; font-family:\'Times New Roman\', serif; font-size:11pt; border:none; margin-bottom:10px; color:#000;">';
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; border:none;">I.</td><td style="text-align:justify; border:none;">Za tehnički pregled u predmetu izdavanja upotrebne dozvole za '+obj+' u '+(val('ulica')||lokacijaFraza())+' imenuje se Komisija u sastavu:<br><br>';
+  
+  let clanHtml = '<ol style="margin-top:0; padding-left:30px;">';
+  const cl=clanoviData(); const inst=instData(); 
+  const pred=cl.filter(function(c){return /predsjednik/i.test(c.uloga);});
+  const clan=cl.filter(function(c){return !/predsjednik/i.test(c.uloga);});
+  const ordered=pred.concat(clan);
+  ordered.forEach(function(c){
+    const ime=c.ime||'____________'; const st=c.struka?', '+c.struka:'';
+    const ul=/predsjednik/i.test(c.uloga)?', predsjednik komisije':', član';
+    clanHtml += '<li style="margin-bottom:3px;">'+ime+st+ul+'</li>';
+  });
+  inst.forEach(function(x){
+    let t='Predstavnik '+x.naziv;
+    if(x.oblast) t+=' – za '+x.oblast;
+    if(x.uloga) t+=' ('+x.uloga+')';
+    if(x.sag_broj){ t+=', po saglasnosti broj: '+x.sag_broj+(x.sag_datum?(' od '+x.sag_datum):'')+'.'; }
+    else { t+=', kojeg će '+x.naziv+' odrediti po ovom rješenju.'; }
+    clanHtml += '<li style="margin-bottom:3px;">'+t+'</li>';
+  });
+  if(!ordered.length && !inst.length) clanHtml += '<li>____________________, predsjednik komisije</li><li>____________________, član</li>';
+  clanHtml += '</ol>';
+  
+  h+=clanHtml+'</td></tr>';
+  
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">II.</td><td style="text-align:justify; padding-top:10px; border:none;">U sastav Komisije imenuju se stručne osobe sa Liste stručnih osoba koje ispunjavaju uvjete za sudjelovanje u radu Komisije za tehnički pregled građevina, sačinjene od strane Ministarstva graditeljstva, obnove, prostornog uređenja i zaštite okoliša Livno.</td></tr>';
+  
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">III.</td><td style="text-align:justify; padding-top:10px; border:none;">Tehnički pregled izgrađenog objekta na lokaciji '+(val('ulica')||lokacijaFraza())+' <b>'+terminFraza()+'</b>.</td></tr>';
+
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">IV.</td><td style="text-align:justify; padding-top:10px; border:none;">Investitor <b>'+(val('investitor')||'____________')+'</b> dužan je osigurati prisustvo sudionika u građenju te Komisiji staviti na uvid svu potrebnu tehničku dokumentaciju, u skladu sa članom 6. Pravilnika.</td></tr>';
+
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">V.</td><td style="text-align:justify; padding-top:10px; border:none;">Zadatak Komisije je da izvrši tehnički pregled <b>'+obj+'</b>, te da neposrednim uvidom, kontrolom dokumentacije i ispitivanjima utvrdi da li je objekat izgrađen u skladu sa građevinskom dozvolom'+(val('gd_broj')?(' (broj: '+val('gd_broj')+(val('gd_datum')?(' od '+val('gd_datum')):'')+')'):'')+', tehničkom dokumentacijom, te važećim tehničkim propisima i normama.</td></tr>';
+
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">VI.</td><td style="text-align:justify; padding-top:10px; border:none;">O izvršenom tehničkom pregledu vodi se Zapisnik. Svaki član Komisije dužan je dostaviti pojedinačni zapisnik predsjedniku Komisije, koji sastavlja zajednički Zapisnik i unosi mišljenje o tome da li se za predmetni objekat može izdati upotrebna dozvola.</td></tr>';
+
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">VII.</td><td style="text-align:justify; padding-top:10px; border:none;">Predsjednik Komisije dužan je u roku od 8 (osam) dana od dana obavljenog tehničkog pregleda dostaviti Zapisnik, koji su potpisali svi članovi Komisije, '+(sl||'nadležnoj Službi')+', kao i prijedlog iznosa naknade za rad Komisije – Obrazac 2, prema Pravilniku o tehničkom pregledu građevine („Narodne novine Hercegbosanske županije", broj: 7/16 i 8/25).</td></tr>';
+
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">VIII.</td><td style="text-align:justify; padding-top:10px; border:none;">Troškove tehničkog pregleda snosi investitor. Visina naknade za rad članova Komisije utvrdit će se posebnim Zaključkom ovog organa, na osnovu investicijske vrijednosti objekta i složenosti pregleda, a u skladu sa članovima 14. i 15. Pravilnika o tehničkom pregledu građevine.</td></tr>';
+
+  h+='<tr><td style="width:30px; vertical-align:top; text-align:right; padding-right:10px; padding-top:10px; border:none;">IX.</td><td style="text-align:justify; padding-top:10px; border:none;">Ovo Rješenje stupa na snagu danom donošenja, a objavit će se na oglasnoj tabli Opštine '+op+'.</td></tr>';
+  h+='</table>';
+
+  h+='<p style="font-weight:bold; margin-top:20px; margin-bottom:5px;">Pouka o pravnom lijeku:</p>';
+  h+='<p style="text-align:justify; margin-top:0;">'+poukaBlok()+'</p>';
+  
+  h+='<table style="width:100%; border:none; margin-top:30px; font-family:\'Times New Roman\', serif; font-size:11pt; color:#000;"><tr>';
+  
+  h+='<td style="width:50%; vertical-align:top; font-size:10pt; border:none;">';
+  h+='obradio: '+(val('obradio')||'____________')+'<br><br>';
+  h+='Dostaviti:<br>';
+  const cnt=clanoviData().length||3;
+  h+=cnt+'x – članovima Komisije<br>';
+  h+='1x – Opštinski načelnik<br>';
+  instData().forEach(function(x){ h+='1x – '+x.naziv+'<br>'; });
+  h+='1x – Investitor<br>';
+  h+='1x – '+(sl||'nadležna Služba')+'<br>';
+  h+='1x – Oglasna tabla Opštine '+op+'<br>';
+  h+='1x – u spis (a/a)';
+  h+='</td>';
+
+  h+='<td style="width:50%; vertical-align:top; text-align:center; border:none;">';
+  h+='OPŠTINSKI NAČELNIK<br><br>____________________<br>'+nac;
+  h+='</td>';
+  
+  h+='</tr></table>';
+
+  if (op === 'Drvar') {
+    h+='<div class="footer-block" style="border-top:1px solid #000; text-align:center; font-size:8pt; padding:4px 0; font-style:italic; color:#000;">Titova 1, 80260 Drvar, Tel/fax:+38734819001, www.opstinadrvar.net, opcina.drvar@tel.net.ba, JIB: 4281088340004, ŽR: 154999-5000539591</div>';
+  } else {
+    h+='<div class="footer-block" style="border-top:1px solid #000; text-align:center; font-size:8pt; padding:4px 0; font-style:italic; color:#000;">Bosansko Grahovo</div>';
+  }
+
+  h+='</div>';
+
+  document.getElementById('printDoc').innerHTML = h;
+  return true;
+}
+
+function exportPDF() {
+  if(!buildPrintDoc()) return;
+  setTimeout(function(){ window.print(); }, 60);
+}
+
+function exportDOCX() {
+  if(!buildPrintDoc()) return;
+  var html = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Rjesenje</title><style>body { font-family: 'Times New Roman', serif; font-size: 11pt; } @page WordSection1 { size: 21.0cm 29.7cm; margin: 2.0cm 2.0cm 2.0cm 2.0cm; } div.WordSection1 { page: WordSection1; }</style></head><body><div class='WordSection1'>" + document.getElementById('printDoc').innerHTML + "</div></body></html>";
+  var blob = new Blob(['\ufeff', html], { type: 'application/msword' });
+  var url = URL.createObjectURL(blob);
+  var link = document.createElement('a');
+  link.href = url;
+  
+  const naziv=brojPredmeta().replace(/[\\/:*?"<>|]/g,'-')+'_'+(val('investitor')||'').replace(/[\\/:*?"<>|]/g,'-').slice(0,30);
+  link.download = 'IMENOVANJE_KOMISIJE_' + naziv + '.doc';
+  
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  toast('Word dokument preuzet','ok');
+}
+
+let tT;
+function toast(m,type){const el=document.getElementById('toast');el.textContent=m;
+  el.style.background = type==='warn' ? '#d29922' : '#2ea043'; el.classList.add('show');
+  clearTimeout(tT);tT=setTimeout(function(){el.classList.remove('show');},2600);}
+
+/* uvoz iz upotrebne forme */
+function setEl(name,value){ const e=F().elements[name]; if(!e) return; if(value===undefined||value===null) return; e.value=value; }
+function importPaket(){
+  const raw=(document.getElementById('import_box').value||'').trim();
+  if(!raw){ toast('Naljepi paket u polje','warn'); return; }
+  let obj=null; const ji=raw.indexOf('--- JSON ---'); const jsonStr=ji>=0?raw.slice(ji+12):raw;
+  const a=jsonStr.indexOf('{'), b=jsonStr.lastIndexOf('}');
+  if(a>=0&&b>a){ try{ obj=JSON.parse(jsonStr.slice(a,b+1)); }catch(e){ obj=null; } }
+  if(!obj){ toast('Ne mogu pročitati paket (treba JSON format)','warn'); return; }
+
+  if(obj.opstina){ setEl('opstina', obj.opstina); onOpstina(); }
+  
+  const isSelf = (obj.objekat !== undefined);
+  
+  if (isSelf) {
+    fields.forEach(function(f){ setEl(f[0], obj[f[0]]); });
+    setEl('broj_redni', obj.broj_redni);
+    setEl('broj_podbroj', obj.broj_podbroj);
+    setEl('broj_slobodni', obj.broj_slobodni);
+    if(obj.ko){ const s=F().elements['ko']; if(s){ let ok=false; for(const o2 of s.options){ if(o2.value===obj.ko){ok=true;break;} } if(!ok){ const op=document.createElement('option'); op.textContent=obj.ko; s.appendChild(op);} s.value=obj.ko; } }
+    if(F().elements['jednostavni']) { F().elements['jednostavni'].checked = !!obj.jednostavni; onJednostavni(); }
+  } else {
+    // broj predmeta iz upotrebne -> podbroj -1
+    const bp=obj.broj_predmeta||'';
+    const m=bp.match(/UP:04-19-8-(.+?)\/(\d{2})/);
+    if(obj.opstina==='Drvar' && m){ setEl('broj_redni', m[1].trim()); if(F().elements['broj_podbroj']) F().elements['broj_podbroj'].value='1'; }
+    else if(bp){ setEl('broj_slobodni', bp); }
+    if(bp){ setEl('zahtjev_broj', bp.replace(/-\d+$/,'')); }
+    if(obj.datum) setEl('zahtjev_datum', obj.datum);
+    if(obj.investitor) setEl('investitor', obj.investitor);
+    if(obj.adresa_investitora) setEl('adresa_investitora', obj.adresa_investitora);
+    if(obj.vrsta_gradjevine) setEl('objekat', obj.vrsta_gradjevine);
+    if(obj.mjesto) setEl('ulica', obj.mjesto);
+    if(obj.kc) setEl('kc', obj.kc);
+    if(obj.pl_broj) setEl('pl_broj', obj.pl_broj);
+    if(obj.ko){ const s=F().elements['ko']; if(s){ let ok=false; for(const o2 of s.options){ if(o2.value===obj.ko){ok=true;break;} } if(!ok){ const op=document.createElement('option'); op.textContent=obj.ko; s.appendChild(op);} s.value=obj.ko; } }
+    if(obj.gd_broj) setEl('gd_broj', obj.gd_broj);
+    if(obj.gd_datum) setEl('gd_datum', obj.gd_datum);
+    if(obj.komisija_imen_datum) setEl('datum', obj.komisija_imen_datum);
+    if(obj.tp_datum) setEl('tp_datum', obj.tp_datum);
+    if(obj.tp_sat) setEl('tp_sat', obj.tp_sat);
+  }
+
+  if(Array.isArray(obj.clanovi_komisije) && obj.clanovi_komisije.length){ const w=document.getElementById('clanovi_list'); if(w) w.innerHTML=''; obj.clanovi_komisije.forEach(function(c){ addClan(c.ime, c.struka, c.uloga); }); }
+  if(Array.isArray(obj.institucije) && obj.institucije.length){ const w=document.getElementById('inst_list'); if(w) w.innerHTML=''; obj.institucije.forEach(function(x){ addInst(x); }); }
+  toast(isSelf ? 'Uvezeno iz prethodno sačuvanog rješenja' : 'Uvezeno iz upotrebne — provjeri sastav Komisije i termin','ok'); window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleTheme(){ document.body.classList.toggle('light');
+  try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){} syncThemeBtn(); }
+function syncThemeBtn(){const b=document.getElementById('themeBtn');
+  if(b) b.textContent = document.body.classList.contains('light') ? '🌙 Tamna' : '☀️ Svijetla';}
+
+document.addEventListener('DOMContentLoaded',function(){
+  const n=new Date();
+  const dd=String(n.getDate()).padStart(2,'0'), mm=String(n.getMonth()+1).padStart(2,'0'), yyyy=n.getFullYear();
+  if(F().elements['datum']) F().elements['datum'].value=dd+'.'+mm+'.'+yyyy+'.';
+  const gl=document.getElementById('godinaLbl'); if(gl) gl.textContent='/'+godina2();
+  try{ if(localStorage.getItem('ipp-tema')!=='dark') document.body.classList.add('light'); }catch(e){ document.body.classList.add('light'); }
+  syncThemeBtn();
+  onOpstina();
+  if(document.getElementById('clanovi_list')){ addClan('','','predsjednik'); addClan(); }
+});
+</script>
+</body>
+</html>

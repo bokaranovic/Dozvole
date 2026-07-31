@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="sr-Latn-BA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radni plan — 20 garaža na opštinskoj parceli (Drvar)</title>
+<style>
+:root{
+  --bg:#f4f6f9; --card:#fff; --ink:#12233a; --muted:#5c7089; --line:#dbe3ec;
+  --accent:#1b4f8a; --accent2:#2a6fb8; --ok:#0f7a4a; --warn:#a8630b; --bad:#a41f27;
+  --chip:#eef3f9; --rad:12px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:15px/1.62 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:22px 18px 90px}
+header.top{display:flex;gap:16px;align-items:center;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--rad);padding:16px 18px;margin-bottom:16px}
+header.top img{width:62px;height:auto;flex:none}
+header.top h1{margin:0 0 3px;font-size:19px;letter-spacing:.01em}
+header.top p{margin:0;color:var(--muted);font-size:13px}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+button{font:inherit;font-weight:650;cursor:pointer;border-radius:9px;padding:8px 13px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button:hover{border-color:var(--accent2)}
+button.pri{background:var(--accent);border-color:var(--accent);color:#fff}
+.prog{flex:1;min-width:180px;height:9px;background:var(--chip);border-radius:99px;overflow:hidden;
+  border:1px solid var(--line)}
+.prog i{display:block;height:100%;width:0;background:var(--ok);transition:width .25s}
+.pct{font-size:13px;color:var(--muted);font-weight:650;min-width:104px}
+section.faza{background:var(--card);border:1px solid var(--line);border-radius:var(--rad);
+  padding:0;margin:0 0 16px;overflow:hidden}
+section.faza>h2{margin:0;padding:13px 18px;font-size:15px;background:var(--accent);color:#fff;
+  display:flex;gap:10px;align-items:center}
+section.faza>h2 .n{background:rgba(255,255,255,.2);border-radius:7px;padding:1px 9px;font-size:12.5px}
+section.faza>h2 .rok{margin-left:auto;font-weight:600;font-size:12.5px;opacity:.92}
+section.faza.a>h2{background:var(--ok)}
+section.faza.b1>h2{background:var(--warn)}
+section.faza.b2>h2{background:#5b4a86}
+section.faza.info>h2{background:#334a63}
+.uvod{padding:13px 18px 2px;color:var(--muted);font-size:13.5px;border-bottom:1px solid var(--line);
+  margin-bottom:6px}
+.uvod b{color:var(--ink)}
+.korak{display:flex;gap:12px;padding:11px 18px;border-bottom:1px solid var(--line);align-items:flex-start}
+.korak:last-child{border-bottom:0}
+.korak input{margin:4px 0 0;width:17px;height:17px;flex:none;accent-color:var(--ok);cursor:pointer}
+.korak .t{flex:1;min-width:0}
+.korak .nas{font-weight:650}
+.korak.done .nas{text-decoration:line-through;color:var(--muted)}
+.korak .op{color:var(--muted);font-size:13.5px;margin-top:2px}
+.lay{margin-top:7px;padding:9px 12px;background:#f0f6fc;border:1px solid #d5e4f2;
+  border-radius:9px;font-size:13.5px;line-height:1.6;color:#22405f}
+.lay b:first-child{color:var(--accent);font-weight:750}
+body.strucno .lay{display:none}
+body.laik .op{display:none}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+body.laik .meta{display:none}
+.tag{font-size:11.5px;font-weight:650;padding:2px 8px;border-radius:99px;
+  background:var(--chip);color:var(--accent);border:1px solid var(--line)}
+.tag.z{background:#fdf3e3;color:var(--warn);border-color:#f0dcbb}
+.tag.k{background:#e9f5ee;color:var(--ok);border-color:#c9e6d5}
+.tag.d{background:#fdecec;color:var(--bad);border-color:#f3cfd1}
+.nota{margin:12px 18px 16px;padding:11px 13px;border-left:3px solid var(--warn);
+  background:#fdf9f1;border-radius:0 8px 8px 0;font-size:13.5px}
+.nota.stop{border-left-color:var(--bad);background:#fdf2f2}
+.nota.ok{border-left-color:var(--ok);background:#f2f9f5}
+.nota>b:first-child{display:block;margin-bottom:3px;font-size:14px}
+.grana{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 16px}
+@media(max-width:860px){.grana{grid-template-columns:1fr}}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{text-align:left;padding:8px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--chip);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+textarea{width:calc(100% - 36px);margin:10px 18px 16px;min-height:64px;padding:9px 11px;
+  border:1px solid var(--line);border-radius:9px;font:inherit;font-size:13.5px;resize:vertical;background:#fcfdfe}
+.foot{color:var(--muted);font-size:12.5px;text-align:center;margin-top:22px;line-height:1.7}
+@media print{
+  body{background:#fff}
+  .bar,textarea{display:none}
+  .lay{background:#f4f8fc !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section.faza{break-inside:avoid;border-color:#999}
+  section.faza>h2{background:#12233a !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .korak input{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QAsRXhpZgAATU0AKgAAAAgAAQE7AAIAAAAJAAAAGgAAAABWYWxlcmlqYQAA/+0AqlBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAACOHAJnABQ3dXB2eU5jc0Zpb0stV0FUenBQbxwCUAAIVmFsZXJpamEcAigAYkZCTUQwYTAwMGE3YzAyMDAwMDIzMGMwMDAwYzcxNTAwMDA3YTFhMDAwMGRmMWMwMDAwZDAyMzAwMDAyYzMyMDAwMGRlMzQwMDAwMjIzOTAwMDA2NjNiMDAwMDk4NGUwMDAwAP/bAIQABQYGCwgLCwsLCw0LCwsNDg4NDQ4ODw0ODg4NDxAQEBEREBAQEA8TEhMPEBETFBQTERMWFhYTFhUVFhkWGRYWEgEFBQUKBwoICQkICwgKCAsKCgkJCgoMCQoJCgkMDQsKCwsKCw0MCwsICwsMDAwNDQwMDQoLCg0MDQ0MExQTExOc/8IAEQgB2AHSAwEiAAIRAQMRAf/EAPMAAQACAwEBAQAAAAAAAAAAAAAGBwIEBQMBCAEBAAIDAQAAAAAAAAAAAAAAAAMEAQIFBhAAAgIBAwIGAwEAAwEAAAAAAgMAAQQFERIQExQgISIyQBUxUDAjQoCQEQABAwIEBAQGAQQDAAAAAAABAAIDBBESITFBEBMiUQUwYXEUIDJAQpGBUmJwoRXB4RIAAQMCAwUGBAMFCQAAAAAAAQACESExEBJRICJBcfADMkBhgZEwUKHhI7HRE0JSYsEzU3KAgpCSovETAQACAQIDCAMBAQEBAQEAAAEAESExQVFhcRCBkaGxwdHwQOHxIDBQcICQ/9oADAMBAAIRAxEAAAG5QAAAAAAAAAAAAAAAAAAAAAAAAAAAAKauWmi5QAAAAAAAAAAAAAAAAAAAAAAAAAAAAKauWmi5QAAAAAAAAAAAAAAAAAAAAAAAAAAAAKauWmi5QAAAAAAAAAAAAAAAAAAAAAAAAAAAAKauWmi5QAAAAAAAAAAAGvqnScXE7jhYEgcP6dtzNo2QAAAAAAAAAAAKauWmi5QAAAAAAAAAAcCJ6XOGWl8y6Xvobhv/ADw92MdL08Wctby8SRyqvffC4gAAAAAAAAAAKauWmi5QAAAAAAAAAAQHgTeEZdfLLfY1faS7uMwzGY+JFvKbaRCvvS0s443R58oZmYwAAAAAAAAAAU1ctNFygAAAAAAAAAA0q7tDVIH2N/5kx9/PDbx9RoeXtkcvlSVlDp5s7uH0AAAAAAAAAACmrlpouUAAAAAAGOUD1MV7H8eDUmI7MmFS27nd55xCK55yuu+tzrc3YaHTp47UL6lKxKvmK/V8uV4aXPtTBxezdr4Qn3c+zLfeP927XRSW07NTt/0oa22ve+V3vZkm4zOAAAAAApq5aaLlAAAAAA+fYc01qqsD3j5UH0JB3sV5HLfLOTu8CJ9ji8boZ+vj9ryyHnZ6c+ueeP2DaT5Rj3vQemeHpQmyfPOfXw6mltwbfdvT9Jo5HC5e7fP/ADp0ZZxtOHG7a5OWZ7LRKW79UM7gAAAAKauWmi5QAAAAAfOP2ILiGr+7GehFyPnh0OHmK7pFQdz568U18fvD7eeXzLXb2xxy3xnnh4abbedd/LM1m+nN6dWD01dv1218s8vmjF9x2SGN9CmO7xdb25shxyN3g/dJJf8A1oNOZewGZQAAAAFNXLTRcoAAAAAIlHLDo/Tnc7LdnetGsvR0cQ6E5htsYuxX0+feJ6nPPDJn0asHklkcJ1PW108s8fTe36T6vfHSre+VS2XT5fS+fUcOPj7YZxHK/t6p+35fw+dbl70s8bJgSabyGqb02v7g36AAAAACmrlpouUAAAAAHnXk6rrWpHpDzenpUjm7HPBWvLfh8vdqvPuHhw+vucCO8Kzc2fPHOfo554ZJM88M233z9PM888MEdjzb8/d+Dm3JhzuhVo97mdSF9zkxrm8n3zxZtHZNxM2JPYFV2Vtc3BtbAAAAAU1ctNFygAAAAGJHKbmMSj4/Qk/J52nS4Ngxa8Mdjm7vQ58nNrms7LrDldrVyxys9XLPDPG2efn6Nss9/wBttOXhn56y+eGeGdcfP082vvelEXrW5Um5nT3+pw6mgv6FpGPoy+Ntjbj8S56WmO/OtVjlJ1wZAAAAU1ctNFygAAAAY5GKS4V8UdFz7FgvasvHXo6z4Jy88G0Y3CO7rnr1nZ1Y832WrljlZ6u376tyyU6ayueBsdje7e3NyaQ8pLOYexU65qXY0ccsI7vpdlJ3jX5XGk1acjo+NturHV2xrz6UVnjuxbu8m7s8fpfSXpAAAAAKauWmi5QAAAAAedOXNXMVyH2VTktj39N3m9OXzET6m1u6NatLMrPm+z1cscrPVylcUzzpf+FXyufgdb3rnPE076EWjmYtqDevnB3cMM/PEud20leUHLiPMkejf8V0tf05kiwau68Ui9TKLjryxZIvolpgAAAAKauWmi5QAAAAAedI3BUGlHgSeMWNrTjWzxeUkkOfH9YpZTWdl1pQ9brZY5WeplN4ROY4bY8IHC6vPtbHc0UUu5lRyxJD45Kota6vnjljvvneFHXhBzIN68nxvePletEOpLp24xYdeIZLdNIXDvc6A2vgAAAAKauWmi5QAAAAAInLK3xBW0iju7HwpFwbCryL3mO119zS1qV5Y0Cpw8rLHKz1Ms8PY+Z7X0m3jCfsUX3z9POS154enm1xwyxa+tzVLccHMr/Xk+vbk4UhjljSVIZH/bXk8Hcctr+wJO8GZwAAAAFNXLTRcoAAAAAPnO6TGKur+8qa048jksR72L0d4WPrpDLYl2/Tm9+uMi16DYlUVl29fr97m7s/I2o71vjMP8Jhy47vI4HU5GlvUwyw0sS6xeboVvPQ2Sx7z6PBs6Ndnh7yxewoZcmaGz1DfrhnYAAAABTVy00XKAAAAABxuz8a0Txb0rSPkackgm9jXx8Ovysa2VwId0qnR1orZ0Tg9VwM/P0n6Xp1eTlnFgSanPSSncfMrHyzrKoh98o7mMw8LIr0dnyhMfm8rlsavYt82URbU0s7efc2LPzn27GOUnYBsAAAAApq5aaLlAAAAAAfPoxyMaFK3fUulHUlMi7yWlujIpFjER51pQzndaBxSy/sF+rPSfc+a5FM5F6ZljXlNuxiOt51L9uCl5+231pufTunbcZ6fJ1IzdEbztXFv1LcSLZyN74+H1hmAAAAAKauWmi5QAAAAMchAc9mrOd2LD5sEzjm7/poc6OX9C+nG7HY88jUmNYH1JPysba3E9PCtJpfNzvVpY16yz7rmM7XVj+2vZ6MT9bEfU48i7FmOMSfJth8+67FXR3R3+P6Tp9aFc7fS0vGvrF3in2ydLhhkAAAApq5aaLlAAAAAB507cuvpZ/NXey5XN9F46PnhJLcVl/ne0Z+BOMa14ukdtcyoNGOxbPNq3WxPY0Vj3niawVd/SSyms/QtzpUvs5hvPq0Bt7Q3/nSXZ3rWnENGDyZhWzpfa/oJVzdfqRa9O8NbodLzwSVAAAAAFNXLTRcoAAAAAAIxS/6Nr2r0IN6aHHodzvaXMw3k2Mev35oI5sdvS3g8eVOOPnTiyXX8844uXO7Ws218+7O0OjrdLoYzE9WSemJYdnP+Drvy9yPZQWJT8jGzpr1LJ1rCu8T1FzmgAAAAAKauWmi5QAAAAAAARCjv03+dK3c5uGeFfryTsRLxzTkMU7fvE0NCX9ZFXX21dzeKnV0fdtaWyuLUxtU/wBsjlaSxfpfdPG8nivhpySYZY5LWVhV7fcvPk/0uecAAAAAAAU1ctNFygAAAAAAA+VZafhDPQ/tb23T6FX92wvstSKdnprNfDL63jDIAB8+jV5MgabwPiWsr2KK07558FqqLnw3LNMLNYAAAAAABTVy00XKAAAAAAAAAAAAAAAAAAAAAAAAAAAABTVy00XKAAAAAAAAAAAAAAAAAAAAAAAAAAAABTVy00XKAAAAAAAAAAAAAAAAAAAAAAAAAAAABTVy00XKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXKpoXLTQf/2gAIAQEAAQUC/wDhXbBqXkBLyxqeLnipWXvPFTxYyskZTBv+hkZlKjMsrh5F3O4V9BlSpcv987nfvdeXdTHzqP8AnZY7NIOUtZVK3g+soYIzhNpYze5QXcAeMXXI/wCbqQe5YyquHXoKRnYCdgKoVDddkJahgDLq4YzADdn83UA3APSAyoVwZtDr0TXtuoUq/UzqHe800P5zg5DtxiqnZG5SIIXytJQU3Ucuxrsy0jUbW0uYq+AfzjUJTwdTsnU99QbKi71zvXG2R1752TueC3gIEf5RHQw9Sqyrpd7Qsi+QHyro1u0At+pltAb69LvaFkkRiW/S4rURu6vf+DqjCXMfVt5l5lKF2QTZpKtz6ZL9+iG8Lq945vGWW8SyVcu4w9+iWdMp3KJXxglxlXv01RXFiMs1TFy6cORq200thM+9q47hGssummY/bCZT9utRTuNGe/VLd40+u0ZkXsoOqz26aqjmEU2w6aQOwfczWsTPygnQ6ctkylCJYYoqCVXLj08evLaBtdTfos/c0/WuhXtC22WzlOU3gjvBrai2mYlMxU0RFpgrn5QF1hOY77j2BGehYj7qMq9xHleJjjjjzrZrOd+fabeS1yq2677Sj9M3Gp4lXG1775r7OK9xJMfuasr2n7phgVFm5XdId5TCuXWyfObaCPzrOIzSCKcJ/wCF1urvnUPeYGV2iywLkvcZpS/b9rNyDRD1QWDKvpYbQfS6zjbXmfmUENhM6gywvG1Ci8xS88l9OO/Syu+gaoCxw8k3/acvuDkY9qLHLiTlpFd/tmSTKUkmWvGpKvIbRCPzbPz4+eSonIFvlfid5ZhYxeVYVX7XjpteQVESEW0lLpY/Zu9pnZy7iGhu3GJwjhnd1a0TEsDHI+HV+bQQ2Ef+IMsLxdSopXr1T8cztCJUt8vEZVpQaQca98DLVN/tNVTKyNL2itNMryDtKuZTfeaPftyPhGNEKfmWf+uNnkqIyRbUT8dYv032ndKKO8hTdPYN4+lWUUvt19nNy6SJMI7TmGuMvmq95gIpw42JSJkfCZBXZf7KKxIb9EfHKw+/eegUVvAKlqdmmyA813iZVOH7FzUMTjATZxOnlDexdIffJf6mR8I75+bGV3DyU9s/MH7D4o+MdVcXZHqOQbI7AOoSrGafil9m5qDSYYHYRWVbk5GIa4lxLmDqHejtVAIzVCZKjvn0Wuzs0kHXTEzUU8h6CoijU2vqH7/6K1XhE6mtl52odmObbLxsY2RuV2UsOzvTn2s/svWJU/hywHDsn3BnJ7bFb7zFRZTaO+fQC43jNpoHigUysHtzGHYDrek4ncJeIAwypYtZ3L6B+x/WWqxKo27u8BPcY72hntG6RQWSUguvs3W8z6SN4J7GrIFQ5Oo92Yz07G7exzj2qO+fXT8ntlV7xg8qxj9Hs4ikeNTUcnl5A/f/AEPPLZbqq8k0bYuoCuPdTKzj5HgLSd1W329QxVBKK4rF71s0tgxOl3szSmVE4faqN+XkxsltQ8lo0hzO5k5BmVNbVPzGS/IH7H9ZGDZxemMuP0wqpemsOMxrTdlveBhrL7d3tM9/eOaeXA3aq2yHVmXTM5pzF9xRvy66fg92LXQTJcKx01fpm1SzEqKnY4smbi9m+ofsf1k3YsXqLRhawdUjVmctRvdk07I7R/ayFWwc3FpMGXQEt+CYRY3uYWEx7LlG/Lrh6j2hPWI7INs06/8Ai1a/+NGaaYOr1M7M7/kH9j8ckrsxGyh1e6MI2TiHbKph4nfiAsB+1m4YHUxMntTIc1cXlGF5Bc4nM7dDfKn/AD82mZlLmpZdNvzL+RHwDIyqZWOfCMy7O8d7G1l5PdlfvCwRX9zVcnokdyzzFYG43WWTaqT4ds22mXWx9aq7lIOWoq/xxR5MId6cGOqDkdygyCVeBYsWweNzSsrevt3jhc1AwDph41vrCFa15GXTYsb5XV1M4OoXVWGaAwNSCBkLOHirOM0yFgMngWT8fcbVV10te5Hvsde7GyxVM1K2DlovH6YBKZBxVj93LYtdOZ3Lxs1gTgVy64xTbC6YbLcHMbra4A72pCYCEzwS7nhjCeIMJepDUPU94ZtbGLsOuGjtA3JYq2ssyGuU2IZk5xsiWUF4trOvuZLiCn007mJkAq8nJF1GG1Dtv3VMXMxHkqLyjCK1ODlrKWS7hvSEdqG8K9+mn4nK94xqqAttwC5jZIqrLatlzHti7xn9yvuZOJTpkaaa5xuKQZTIxLVBCyn6gv2g+6sjF28+/kw8G2Wd9oW5vOb7yxupj4ZtpiiGbXEacxkxsTtTb75KGPyCIsK7JjAvFs8I5h6eRE9HbuOw6KGog84KJkxtMoZVbSg5zLwSWS8Q4C/F3lndHj5N0QoD+E34r04zvFwRRCGiolHi2jLBsIaKnYlj1LFApen1Px9z8eUHTYvAAYI8egr3lVtH5QKlLPLsAoaytPF0ZiEklXuPkq9/slkGgvykvVrhascLPecVy5Ve/V2AJzuZCIvUVlCStsPEIZwuvJUqoKrnERjNQWE773xOniPkzqoz7jVQNSbUHVGStTKXlMbFjxr7GpLvj35b4G5ythhPmGzmvyMxVshaZtNspU/I7RZKdPDDPDDGWtUvUxnLKbK00iisNa/Ky9qN98xPlDGU65T7mlrsvtXW81HB7djW93tUNnKXc0TI3HpvCcNQs5dQtUGFqpQ9RMpfyrOZUvObPWyXnmEHVig6qMHUFFBeBTfrqr+0reUUBnKOr1wMK32AUNfaMKOszH8Oxu/Ta5gEaWFqULPZcPJKE8ZeTUvJuW8p3SnO5yucrnO53SnfuVkysioLRgPKoGcyoOp3NUcTy430Vd1aVXkGhNKH7mo43eWsrCd0Z3wl5VS8opbCucClYJxeDfcDEWd4qqJmcilmz0mcqhPTq3ashczGQNS0AasvHBcfi9uOxyVONymFUrJKVlVPEBO6ENm80nE7Y/eydK53k4pIvrg372F3EbUxHiubuX/MtdKFm2QjJbYqXlGEwm8nKGknjM9mVfdTVUa0VzvUN7XsYK1ARq+oBZ2nR6qCO1ff1PH7i+uAvkSOIwm0kRLjZ5jDm5zgc7RTs3Ozc7JTgdT31O6XE8qyAskDXeXXdyx2Z10fH5F/BKt6yV8D6Kda4KyueGu5WONQceDgsuVpZytJn4mp+JGXpNS9JuFprKhYh1LRUvHl45VL38mmq7av4Wop9/hquDiVF4sHAO4OmjAxgGbf5EoShYAXD0yHhHULFnhaicb1XWw/wiCinglwccB+mSxKeDCAoQ/9Yf/aAAgBAxEBPwH/ADuagB2E6qerEeWpVM8vGI/wmNxJ8QIy1CDbmydFlwZFlmnNsVFFYXO6ezCqiQxjEP5UFUJPdCoaXYR573YRdTM5zsTDdcnE6xco2hoAGiiGSuha5twwDFwNsr8JNM1K0OBBXJLXWBUDOS7E82THYhfzpnWaTa6hzdcG3dPYA4nFkqSYSZAWAQFuAFla6+Ed9SIsiL8CqyUM6SMjdNZcg4slMOq5N+yiN2jK3nVbnszH0lRw4mucDhsmgZ5qgY6/ZqHCOIvUVOG+/CanD/dSQlnHxBj8WeYTha2akhwhri691SPc/M6Dzqout0hRNOB+IZIODQbNz/apXXa0oKKmvqmtA+Rzbqal3CIsqt1g4rE14Fxn+lM0hjcIuFSl1sxbzqt7ybLwindJfHp/cq6KNgDRE3PcKNtrAKlGaHHmjFg3tfiVVjMKVuK4KoYIntLTC023K8Wp3R2DdP7VSSPBtr50nh8shLmdapXyU7bPGZGa+Kex5vcjsoqmSR4Co9UFVVDobG12qDxBr8tCnVJ5uP1sp/EGx5alU1S6YnKzRwrVJUyRvIOeaFW97wAbC+irJH1DehuYCioZWEOf0f8AfnUUwjddxsF4jMyTqjcCeybzC/Nqgjkxj8VR6oKWMSNLTunUbmOyI/YXwJx6+qbRue7UfsKCERNDR/PCt2U7JOYfyzR5jXZM/wBLw6VkfVI5rT2uq2USO6XXHnVuK2Wm6oh1HP8A9TnSC+t1RUs0jwSDYbnRUmqCqMWHp1UdG5xu7JNuZbfwjRvjPTmor4Ri14VmoVbTzRvcQHWOd017zbVVws/VURdbPTY+dUEBpuLpji1wIyVBZ7Opo91jAZmy7e4VOeooK65je6bTNx8xHjVHqF1iBbYMOHuVXhrG9LB7p7i51zmoLYRbziLqsZY/V/CpKg8sta4myi8VliLhfp7FUlRjs5NN1U4fyDj7KTl9nNUcr2/RJf3Taic7BQl1+p4J7BONlWVIZdyl8XllIF+nayrKg8sNc4i6o47m9x7IC3nEX3VTSuGf1KCoczINyVRCQ7EBkc1ReIgdLslS1Gl1qjG12rbqTw1jtOlN8OtrIUyJsen7VVU2uB/KrPEQelouqeIl2IjIZqoqTJkWqmpnE3+lD7Crjc6wYFSxFjbO3QoGh2JRS7KOoLfUJtYN18WzunVrVLUl3oFJIvgGk4r/AMKqiLmgN2VJG4XDx9hBA2Zt7Zr4ID8U2nGzU8WJHZXV015G653oueFzfROeTurolBCns1txdfCNP4hTQNhaXFo9Ec/NpqgwuvtuEHiTCQcii6yqqYl5IGqbQuKb4cm+HjshSAbL4VvYI0oOwRoG9k7w73CdQu2KgpXYxcZBNeicFzsquqMx9BoPPo6nBdrtNkxjXAEG4KEY7KSXCbYe3+1zXnF6ISmxz1tZXLsI3FwnAhpHonHtpl+0HkWN9zkmzG4GqjmxG1lywjEBuquqDhhaff7HwqXVnbhJFiJu63ZAtZfe+qM7G9ka5o3X/INQr2oVLD2XQfRRRBpBB24eIy4GW3d9lBNyzdHxL3T61x9E6Vx/L5hI4aFNrHD1TfEVUVHN/wABf//aAAgBAhEBPwH/ADvdEoKaTAFDUkON9CnPDRdMqruV1LU2cLKOQOF1U1NzZp0UE3MHqigVf7A58alxLs+EmIAA6cBK7Aioi6xsioCQ4WWo4aeeeLnZFOdck8HvLuGF2GyITJC3Tg02KY67RfccR5x4u0KPBkZcmsDeD4w5PjLeATPpb7cLIeceL/pKtdMh7/r5nwbj9K1lH9DfYcW+cU42UQvupPpKp9T8lvkqNlF9LfYKUeqaboec7JEY0Mk85FQau4Mbi906IhBnSmx3T2YeE+yjdk32Ts0AGJufnSC4UZPB+hUGruANlz27lc8WXObsU518+E+yj0HCQqMWHnOQV1I7Iqn34SXtkmQnUofUnROByTL2F+E+yidkFfg3zjwf7pw1zUOp42XLF7/JNqE0aZ7JmuvAeeeBbdEct/BiF0QNwi1qdbYcLcxya2ysh9gRxqYcWYUUn4nhdCUrm+iLrqSTYKnhw5niB9i5YVZT0xGYTZSNUJguYO6MwTprqCmLszkFZYU37CR8rCbZhGeTdc1798kOFlJA121kaPsV8G5Cj7lR0zW7XKshwe57XE3yTZnnQprpXEDbfzntxKVuYBQFk2oa0ZuRrW7Zr4tx0YubIewXWfyXV/WusfkubIOxQq3DViFa3fJGoaRk5EJrOrJMZh8+ojxaBGmHcpsDRsgwLCrcAgrLCixGFp2Xww7qnhLPsZxoeHMDUZxtmsbjowrBIfxXKk9Fy5OwRLx+C5/fJcwO34RC5+ymjxi17L4R/wDXkmUTRr1JsTW6N+YsB1CdRtPoV8G4aPUEPLvc3v8A4C//2gAIAQECBj8C/wBiu4V1xVlb6q31VlZXVx8wi5UkwFRXV9q+FCoN/lxVFb4NlVD5cDrhqu4F3Cv3h6I1Psrn2X73su65EZFphyHy6dMRzxPJDF2JPy4hQUVZXKIzFd8rvlTmKudivy+oVDCvKsicq7hXcKjKu6tFUqg+VVQYypOxPBT8CuxTYyv3T8iaWoB/upFzZVKnTGBh5fBg4ZQvPYnVUKnS6hlfNOc7xwwE8MJN3YQNiPgxxU4xhmF24GOIwPjczatWXtG0WZrqK6kmT5qmEk7F9nXYDlbZqpDoKusz3UWXs2261WY0b4wsKIRaOKMqFJNVPBT4KVINVHFUQaeCAQYOA8YHi4UoO4BUEQpQBcfdD/D/AE+BJUNoFBqFT4BUB7vcqZlVEgok8VKzm58XmFWotc2+yFlaKRtwKlVOMgqHUO3kcNmqDWg061U2b4otPFEFDRZiKlUUFQAjrFdmpUNoNuDUKh2f5lBEIiBXDMKwjFuCgIAeKqoDQ46reag5pooosrm5zr1KlgAR2IFSqn4MgqH0OuzL2gqGDKeuSiE4uo1brVEBh8XBW6VWgWVuv6K+DkcKqBQfF1Cpi3C5WU6q0qXGFHiv5lJKoVMTAVlD2RHFGOKOB+OIQ5YCTQKGtmeOBMQrwFIK8+Piszu0691u1UuoAoFAV3A70QpGBwPPbARG2OaHLEyJhUYGqDYKWiQVWizt7Tr38VWgFlITtR9lqFRZXUKgSeuagCJwdzxgKoxzLNpjQKuI5qmihzVFQsoqVKpQJmpCkqLg+KOYI5bJzOJTeSOipgTFBg7niDogVZSLJvJFeSspUnEc0OSmKHCqGiKY3i0LfNFujxZDRVDdlODj3Sv7MEdeSJygOU5R7LLAwdz2INjgQsv8NNjINgc1TRZSwdeiq0IHLJjgoyQNegmhpmUd2IW9fxheblUohLqkKlUS9Ugol8ZuAwPPZgby7iJAvcKIiOC7ii2yOaHJZmX4hVogW1WiMOqApdVDtB4w6DCfI/kjBgKDHXqu8jOmB57GZ1lACMou/iKb2ioqheR2BzQ5IwYV5UADr1W9UKeGH8p8XlBhQHSevNVTSzhf1WYDM08QogqtFTA7GUhbrevZbxTV6/qqGiq3r2QpEbA5oclVUEqIUxlbqU49pxth34PXmoJnxZcaHAgiQ5ZR3TUL7BZlGVSnbeVyhthtjmp8l3fVZtFYLIe6KlAAQBgHXPjP2Y9cBzTCLtsrLI9oPXNWh233V3T8FqgrV2nQWXs2Qqj3TjxddEYZDwt4yS0eyytYJ1jA5pyiyLoEtR3UIVUDjWq/sx16K0K4Vgt0qyst4wqGcS7RFGUBl43TXAVcfzQyzlOGVzBKkNA8bLhKkDKEAE/s7F1cJCkohRhoqunD/wBW473W8z2XdPXqt1uFcfM4ZjxVExlyyvXsi0rebmClg8butzFS8YSRJWdhh4QOqrZQ0xGGYeuzQreCuuGENpjnNuGBDjdGLLNoi/tDvOWZuEtCqIPjbkKm8FZWhSDmHGOCo0n0wsqqW2+HLqNVBZWj1wqCFM5R+aqFZfwhXJ+QTlCNYCANQUf7t30UjeB0W+IavLCRQqo290KX1x3RLVmIgBCn4bfqiBQBCaglTl+RHkq7vspuVBUs3madQqGuigqltihV1dVK1VNipropfu9npqoFlNihxqhy8cR3gu517LufX7KgA9fsqO9kC55J2JbuO1CqP2jeuarunzoqEei1VtupV8x0FVuNyDU9BZnnO7z2D+YVO0Mev6rvAqw913R7/ZRMTogPE5gLKysvJaBUomnZq1fhvLVweOvJfishbuO9RR2bC5Uhg68l+J2hPXoqN2SU46lf0Utxzn08Xmb3Th5DEs02KkK/5qglUb17r936/qs0xyXeXeWYmVQN9j+qq3r3VWlX+hVHDYOpx81zX8qgeLgryQxDoMcVRv1+y0VX/wDZXlWVsLq5V1dXKvhZWV1R5/5K8qrfr9kIacoCtiGhBo8adRZQ5fZfYKgwvgLCVkcYTmgnM1b1m3W73TZdlDBvCq3BzQBCPZubeYPou2DhOSfpKPaAZYKblneTayXcEM3FSr4VC+wX2C3VmN3ePJabqDsu1af0TC4xlKZFmpzMtDNV2zri35rQtK7PKea5rM4xRHtHOtMLt+0/i+6a5vC490ztD+51/VO7V3+ldmT1ddmGiSU2Lxvc9iApJUafIJ4t2J0Ce1zxvp/ZRm6KkK6jej1XHZ4qKwss0QZFAmstlP6pmU7kR+adWROxnPD5FCcMTHFUVThutXdjmrhVcu8rrvK4wq1WWnPCuwPP5HZcVxW61VoqknrkqN+HULRUKtKq2FdCBKHyOolWXdHg6hWVB/mw/9oACAEBAwE/If8A+Fesl3kFxdJmKijp5v1Ol9dJ918Sv9/qbSiJ4OuJpjd5/wChinRgvQhU0B3v1hwruIqmVNJl8expgl6ZYj/EaF7cPpMs+Nmv3F9Py/8AnZrvANaobmKzSoXWzmsJlJrZzJqb1E9UytzKCcf/ADqODfEsMYnHnVHwbHFn8gQEeg/E5PfIoDGLq+YdW95uPWV8XemwTqPxKMCzd/k5folQ23KR5nmf+dVcSN15nGQ0y2TKA4QtM1ekLSN/VgcOwGvuehBbzYyjw/vh/wCdxuRqDVFJAUPGEgtg8PiPxcB1OPSIK1PvCD0UfeUS28m5uhwlELbHE+JskEY4+8N4MscgUuXx/wDP0UedFxLLeb3JtR5Ib9+/9ROukrfnyn8F+J/JfiVw9Tjs9Jlgp3/qb9PNAat+9ZobfGi//HvtAtUQOblXt97pei9ewzboTGnDaEQ7dAMrc+2nHOAsHsMq6E4Im0r32XprWKcS933ugixs7b/OuNSPzLwwuil/uCqEfRFvKlnt999i1Lu1CJzkAWShzjqZ6e6XEolyaynyotRXs+sp26pcvbeALOzlY332/ER2OD9JksGBpG3Ff6grLbPf85EVo/PZW1oA8CecSsrM+HZzNv8A4OyzwiPsFJUp1JXLuBG04D4puu7tv20ex6m/Qv8Ac1hxTpaypYuL+a3dZqYx5dZvRa1/SGDt/wB1iEMdI8eQXrAMrJoxN4V+8OwYwCnCoPYuYRpzmj7Aim6uN+QmVoCMZRnVgxgGKjsl91Rg0vvmXmvvKBaH95esyArc/wBRVr2Dj5e/5iLOU04+0ppFM1lVwd0JVRtlANWVA21bI63ouM/gh2lB2HZxQ3QhCbBpK9HaWCbQc+CaYwxkp+9ZaLAamPW2cMDSU1K0wdYUTnQ+43/MRwC6mtfSFyNsIuFyvAl3QODfymainSLoyzCn3lA5OxcGEIdhdod8uupXn2muvOf7AbQweUGH+azyfWaMDl80SbJO7Awe4ax5Mo1jQ7SxRpjiybr1/LSMhqfT3jAMNq+ZhWtIoUKESJrKuKxwRmBUUXHDvh2EJU07HBy7oEqYMpV9YxUEZUqVKgsac7QVtnE+kcrwl9BdQKhAKpCrNlxGKnKLhlGnP8odgIGGLx0huS9x3QTSDFa+8plovEOAY3z8wApVgpuyeMv/AAQtU/tBAh2sTsoxr7rMvso7AKtGnnF1ChdxqVG/Wbjpco3bVeu3IiMKC0OFw8TW/SaIR+UZtAcWXHSJ8MHh1x4eUu9EqvrNFHfHEAa4fEc+UoLnkfbtuetJ/Y7bMCHaRjElmQyp2gyw+UQLETlKjNLv9ZZd0C2JHD/Pyi5L9Iidmz1JuuddfKeOzjPfRAOTP5Tu+ngp6VMt7tv9zRjcfpLXILL5RvWO+cZtlwcGeR9pcsSqftk/4MYxiROl5eJbnnhGaX3eYrn8y7EaZu+dLS6VvuIuCjZ+koujC36QRKocfynVIowR5nM3kOD9IZ7oeqRLd4R1QaND536R29Ti/hPI+0ZY7o/5P8MY9rHdU2RHpPSaH3eBdDgd/WGE7jzw4VBm0KitTnjZ8TX+QP6whn8IadNr8oibt6CfMejJrM0615H9T9IFBC7Lp/DCYhc0+12eR9o/8C4BWX0ucKMV4RjH/Hk0XgvSaHf69lxGpaS/mWPAPA+CF1XrSoZnFD7XPf8Ax5RiArcPeoPyFRGNWwB6xS2kgO7Qvf8AKNi5TD9IjdLOIPqMzApL5fe6IIKdKgzFYfdYMZ1/wG8ibMSuyq33ecwjX4MezUBiQa3t8mmQOox8IuuU6n9IQyHjXywcG07j70l6APIP1GnQ5XpHAaUO4PmKFtYKF6oOn8g3+Tl6AlBXo7/SAZy+6nhyjL3B6RsGk2RBOqpUXVV69jzDtQDVTUQ0XNXlt/6cwjnB6SvPCM2xdZQ6o+wAjLvdvknrD4b0iqzae6YJUsWqpoCxl8SVrlaeaQi7R15cuULFHJ/GGPG/KII6Os12HNaHhK0C15dsdIaEsovNbVDVAGi1cFYQaNZ8iYUPKnxMNMeAHoRYzr/kMkaPd9uDkZICm5BVuXkx7Qmb5EESXNY4NaeX7j2+TTIHJ290Yna40+sEVZelHxKyC6EHoR2xbZVwPa3ZNs+0peuS+OehDYul0c84Ao0/LHt2aW6+MM24MFuot1q898bqp5fyWIp2LYjpOr8S82DUf1Geff4JilHDESqw7oxMqvBxgFLoOEvl/KOtcfCJdY9vk08u9JpK8x+5oYPO/ibALJn4jWSvF/jCGm0eO2I/fCBtbNrdfHl+WQV0MzVWej07Mz0E8FKggWjPzK2J45jUKHKXSrbMf8cTkjppn1gWERCZppxgY+Ue5V94sjenwfiX5WMLTjZi+Hf48mnl3pL8lj0JgcXP+kyMuNMCFhddcecshsOzFrsvKDf5SLJ6v1JT2fU+qGk2bzCWYcZQFZmhkALz2uLou6MQo25wyrd4cbdnn/8AA5mGj9Jj8xYVtHlbUJo2CAD60jcjgVlLe6xhCj64f48unlHpGlKmFRcAuEsV9JmCDKCHnRKN669dtJYtabTK0O30MGXpv9X8vBEF3n5qOrU4JE98IHwbDhzuc5ooeP8ACXijmEteTXeYRvBXU/2ItRswA15PL99j/kWPJAJaA9JTsUjNzvZ3fuWQDhg+Igw5AAxwwc4fCB8/mZAWhdYGKoa2/wA/Mx+64fuBW0I61h6xyhq8BBdZPAfmd9mxVdlp9PebBpLXnn1/xogsRumrQpO1j/ip8/ZhVGKlFY8B9estQU+8YzRa2D8xxoI8FZa1mdLp7OIXiZ/f5j6mu6PiDJ3IFeXvCZ1A1XryuKi4RaLlITq04v0jMm7xVxChmek9tgFOE0nyI3H27p6etQHzgJ8LX7guKXcMBLA8/wCkfrrOxn1zp+5oGWmo2pu83KAPFbOnSBRpAlbj5gwVEurM1/YwMoNZoz5RgWG4B+avEuFFvpBpfA+3MKkWqo+Jd0BU225cpcR1IX1jl/ZhlTv9J0QiMtmuwCFOacTOv8i9Ae9+Y6QrmPynJvD+GO/uf0QD2SG9xX7iu/TEQrV2a4lKY1H7U0oVeH6RwGdVRUGpZc0jc7hIpAAbUfEKv2O6BSGnU9fzc6E+8SKG+J8xxLlw05QRwReHhz4zKIzUONmJxFoG/iodjiEIq0npBNvvD6zhvqM1Z800yu4fiJg9UV25Ysahw81/2NIEJQ4zenfOtWJSRRfz9Zdg2i9PB48ZWVF1PpLuHn8/txMyWon5o2o5L6WTJdwM+8rwu+jEcLmcErA7TL1MGsDiLsaP1RaDXaM6r3EP8kVxjGMBFRTprNzjYSlVu8+JZcWecgMQcoHHsjzd1zBuLuiI1zEf1AOt53XhbMPzkuZK8CaLBwFHpNsII8JWhdvPz53d5ofZP8EDNJx3xy+YvlJXYKeqkGEOxix6rJQULhn9QjQUTSVjePbU0qYGoyvLMe0DeqrmHTPHeKw4gEC8cEQ3fHzmKBnMANPzRv8Awqp1tFSwLxt6+0wy+K18EcBYxdndXt0/qEaG5WPnNdAzM5xpKHWbdXT+TcP3u7ESW6vlNWFc6+CFgKgRtWCGKIB3AZXwhQKGwbOevtARUNI5VfrylpVQOps9YOTs/wALUDI/IczHS3AtJ6y5q/GCaPyR69oY0DvezHmLaW0dcsqDx7EuPXdwelTSuW5d14Rh3yvmqZy5xQ+k0TDlHUI7mEIdhHaN2qGaR1QmKDxE9Fxw159fp6ozY42XqsCu3MqVYJpnevmHdibRHqQ/rN0v1y7GS5Ueo+VTkIH5OEy6vvjH7rPsWaxA4pQ8zdjPA850MPT/ABU0y65PSpqVuFqedziPNSHFeej5IVdGcv1gH1g1ohmUdCvWbRzGvqmY5CYPKNGL4tvqsCtP8cnCUi4XHfDONd9kcPEIHhOCJwZPrb8ogjoxmK08JTEQ+AcWIrexurV2d5+u1Bv2GuP+74Qer9d02Adc+kYlPBC2C3wedwINkVG4Pg6QSqEGwXp+4VoPvfOGevwdiALo9vRCHiQmiVL2+ZBLHNLi4Gr3wFgD8twVjH53SJFBqNy7Znjggn7SkaT9eUVqeL5m+9abJeNRGyI3qKb/ABZ/UZzHjOc8Z/eYcRAeDE/qK1902VPKe6Z8z3Mv1zNsvSFGDmNbeRENV4QuWCmppGCX0gAhRwr80SBvKXhPgMPuIhx+nObx9PSM0o8H2m4ooWjXGIE0abX4YoXiWJv5QB0Ft0wLxeHCVgXm6B7oSRpvg/srngWjrHuhVjg/blYCJkYBTYMVVtq4RUuumX2eEu4qKtzrzeE4ZA+KnHlNLqB4i65c5jzRZKTVXGbihtae4J9j8wTj9OcZFatXQmJ9J7q/f5yRa01VOMHf/FNKGxifzu4N3FOfh4SqeAvuZhh87x76eUrRnRk01ygQMEWaZ4vOV2iFU1ljTqtveYqeRtD/AGwM3ZW18Y2guyH93vF08qP6f7NE3V1256iLj1OvdzXtDkJt+vCZHBb005cJjaOwNsL87/wQ1mUvc/pAIaCv/AugaieEe112NNOzhpp8Y8cjhvubPGOOsaS4ut61cHMuRdPDSGlQO+Xa+s6fjOj4x6nfDEMOVwpRVama8NJTlZ3Wa2+IygaNY4fEYY5F6+jnF6KuLo89bk3IEjrhf8XQY09bP/CvluTka9px2a8z4i9h6wz8/nNVz1l2q9M+s2d3h6XHaj3vx2BxVDiZso2rd78TRQeivqTWXwJvPCsPZfp1mSM9IeJ39oTnnJ8X/wAO5uQk4oeHxOZfekX3dPWptofeEL7RUaOQB/xqaAM0seivhm/d97prtHOn0YW50R4r73QcgrJXeB/4Z9F1EWzOmeAQA/C0Re6K5nRM7j/9Yf/aAAwDAQMCEwMTAAAQ88888888888888888888888888888o88888888888888888888888888888o88888888888888888888888888888o88888888888888888888888888888o88888888888484048088888888888o888888888846cQvCMu08888888888o88888888888MnieW/A88888888888o88888888888M04wYgU88888888888o8888888peoS+GJXRW9JKDI0888888o888888VqTwm7WMdXYNxOyPb888888o8888885mVthnOPHbjrOwabh888888o888888eC+5nUIUalWSCbtquU88888o888888LDUvdziE+2ux1jMBtE88888o888884nfsAj/fI8G8Un5bztd88888o88888pBNUSi8F2fRitT+cXWQ88888o888888H+Psi80iWezE4HaQX888888o888888qQ5KW8JLoTaradkJ5088888o888888BhqqAst0mW2Kk0sZB888888o8888886jnh1iYjgA0J1NgiH888888o888888F+7XTGLXv4mZJY6/t888888o888884wRjHkIaJ7NbHeoT0wo88888o888889EfvkLEj/ANIZvzA0jhY/PPPPKPPPPPPPOHDiKzcAhMQL+rysnPPPPPKPPPPPPLC8lLo6FEZKBKOql1PPPPPPKPPPPPPDDJByd087bAexrCbPPPPPPPKPPPPPPPOKvNUP1PDHKCBa/PPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKMMMMMMMMMMMMMMMMMMMMMMMMMMMMMIP/aAAgBAxMBPxD/AO72aryTDPi6x/htw5RVW0N1rzI1AzBKmpKzW8CxqY9TAQLdkucoUCwcJhtAXXxASW/97RGDWYx8QtJBU4rVUjEYYgArfeYZlqDLrHtBtRdaRzAKhTMIl+8wb5InzMYsMF2sEBo6f9mKwbct4S1ZtOUyIW13ZtEG/GVAOw9G8EgMzBhnhGVJTNx2CxsxFVDSxy/sISiddyBnsinKX3AmDl/2zheBK0mWVqvgxAVWacI805M8+kwrsQoMcZWrmAls1XFGsmOMY574BaFaeGd4Ypm6zNh0V4zYysDj/wBrMBHW4rF7KwrPEybJgqrqFaDLNd4YbQVCBGGUSxlXoxsEqYOFL10igpy0aTiDmS0YrHG1Y8v+1BWGwRYC8Wk5DWDx8EfWAyUCSx3/AI4lsvUr3jGCEYIKJYr6x0Brk2GtdJxLTsbjqQf+jAFaZw0kwA0i61UQatOXPMJeBS6NCCqa0HYoEprxGL2FtLmstMHIxNCNWhtHQPiG4w3g1RmMcIyag8ogBhhiJtrAcO+Gw2znLxf9ly+U0PWE0eOKLNGXmmnRhLlC5fiCqa0HY0QPJzhgVTjBvwu5doVQ8lmM7zi4ctnvMgFauL2G0XTTKRkGDtV7zQQ001dWGWRi4G++WxC4tg8uX/Z4VW5L2MwaOaO16HxAH8zfoz0mD7GQHLxqX4pd5u5qFy36S4KmyXc4YhguNjRoF1S30ieo4x8zZOTvO6YnLiL/AO2A5wmYnePGY5eL/uYBw00a25w8GB07CDVhdVfEmEa8Nr49hjAQyAmLJINNU4ZSx3VXvaLMq8kbr0UY51/2HUXBspyJ6y5AOmd9pl7TTY0ciFTEursTrVysMwHQCp7kHE+Lp6SiweCryWeo+PmMt3QjrKFxxLxphfGpXMWoFLzRZLSDZnwhZFxZmHoK/wCzBCixCtjd3muzgNZeu9RngzCOGifEJAsOjCuiGUHUEQtr5TdE4WnvDcO9l8YQ0BqhiK+/25eqLyZ1A8JpVNuMENQaMKALb/3czeN1qIXu2nCUarTdbQGliuzx+4n0jCaWsw5AzBljckbxi54NLhGg6X8yq/7EPVow1hvnOH99Su0HOpbm6oI0lN/KaZc4Msa+GfT6R4Y1ShylDQvrLILQ4zEjA25Q0rdxDgHo1284rLx/6mA5eBBMIX95kAUaTFyz6M1BDznGV7qgfksCqnrP5E+OKjvgs4T3FwGg9cfMBqxfJrNd82qgpcAt+JwD/a/7iEZU8nGIlgHFGRVi/raaFjK6NM48pTVNObnE5hEu+5ajezWreIDnYO+7NS/FgPaQz3VS83Id0G+crScuMv2gVqAmgM6vwbRniOnYiwDWy8TXnkGaMDvJszwnM8mJxZ4TjLN6msGnWjZXGWQ9CbsJYhyV3a/hNX6MxYs+E0P3TVV4xb/zrKd7Ku2MeRPOOy9D/wCBf//aAAgBAhMBPxD/AOQn+K/KI/5fyBl/4uX+I5VKeyLrrt1l6b8mOG4lzeBwStXtF2QgId8fDDUw+Q1I6zBZq/7rXYVNCLtAaGsM4iaOTMGp8hcVyq6UznlCjzn3iwwWVZKqBqYZ/wC2iXPOUcojMN2y6lJexAvBrKvEqIYSWHEVFtvjFJHMsOoGHhF/Aa7PLs1MqbBic8ezqE6ZCLJPKPw3c8iyyoLleZctCPal4dJdEtUlT7Dh+CfZMhynkWDLw7HsvV7djBgk/Y2lHYT/AOz3wex+HvbBwuoyGs0EXlIG617Xwp+CpvgCaSZmHRe2WxJcUA8IYF5lRQXLPafJnZficM/7vR2MZymrs9Yi2zfvjce6XDy/4h4/kQUf+/RCa48EzHR8b8uypbg/5N4envPBFTP8AJ2cdn8Y8n9dltkOs6LHbPSc1OIHXs2O3tB0zihv/u9jcPCeop3Dp2XNGG1zHknYOtMfitiPY0PwOTsU3jLnPSYnKJ1xPuuB5xsDF+LHT3xmGn4QBU2L4TUUOkF+ZHYRL7Gq9Yn3cz7Y+YuMP3rMl1jLdOkEZcrlNyesxILZHCGAP+oimLtELAxMEsc5p7LkR1sc3Ef6icTwkrjThX6wmPYKaOz5xNQrjUvMDjhle7cqddf+67jjN90Ln7BK2DS5Tx7er/APcOxHMeMtL7uP4NPMxBlLY11ZxqD1Yhth3zkQjvd81Vd0w3dR2x3bn8LCLDNy7h5CbtfN9poAd0r/ADp690zZfGI7q6xbLf8A8Cf/2gAIAQEDAT8Q/wD4VXPMIL1SaIe4feG5Qb1XtA14edYrtKM2EjxvBeMwieX6Jq3gvUk+vl3wb0/89D2kXxyPkxZyQfA9ZSKY3f4gFuTh8FxrY7/3HfCOL5g6+P7h8zu/M5j4vzFgYOc0HxHwWH2HQfKDsVqNfXfCea33ed+X/ms4ZqxfGD9C6/fmOLXpT7yoNDj/AGBej9YQVofeEMbVp+7RHS/vdKo24+8JW2MfvIjbQ6H9j6s2OEE6Hhek455Cj/zcIagwAWVy/p6w+gOA/bOCMqN5UkbvwkPuH0lsLkAzU5h80TdC6zP9NWV20RqIlBX2Lzn18Y3gcn8l4Z0/dWYIw3ePZf8AzqQ1s8maIpy+kTwdY1lq9eVB0jNR4HxPLQx6fBImzw/UAcIRGkDiz73RhRrm8/GUtZT1H/nGNLonOo3Xxn2oOAxrf0d09D7ABEI5i9kRYYpyQMqXMi4kB2PlEW10HPAi4c3n9JVQFj0RanZgDOZkGLvEnE0/864HnvoNXH1c9YDRFzPkx6D0yrk1hbftZYukvlzwDNHQwrMHQN9cSUeN2BPceU8ZIniq5Zp/41NO1uctViAgU6pnqsLkgvrv59jBqDMz4srRkv7vHp127FgLE5zFP7SpUJ3faVFX4LPjLCzfscugV7oVXnxhy9+cIxrucPWXFyBiDQ0m1sdbg8JMic+y/wA9jFj05yZlRQUzxlOLYMvVty3IvcTs0PV84e1JnmICBqiNpdXOfOuzQHmfbhhLHRgODlfdHSzCanzSieUM2zfPpAN0vW9X3EAW4Jaayo1uxA2I8PKKO5BhLEvx7B2A5A7mKXoUdGMAGw4eN+rBjhsU+++WqCrhrp1/NuGWwNtQHkksgc4b+lTLgLOlZb9Y2tABKQpXPj2V7s6sOnLvlrq2wj2ZhAc2nkx+u7x4wXhGLMTJGA31hipntfvjOZH0OTStTzi8SmG389ZlrteCU849Iw6ljl5QYPwVgLf0Wg05+cMYEWRwhTTWOuOOvvf+aKJhKbHU7bpkg66K9KuHDeoDlpoalH3ecqG4eSMGuRAqFSmJbbH0+iGOxqCi9P7FfheMtyefYOeVpXMODXrflNPVY000OnpB2K3wTXo/Wc15y+Dif1lHCC0JE9Qya/EQG0+8DaGKttb0gz75Xeoh4Xpdb1M/1G1HNi/iAXV1FJyuHDxfWV67tn8wKdfpYyNnq4xnh2jw7pvXHUt05Ti4I6+Ex/Vxp+iYeBtBjaoRG2A8SKTT0QQWWusdGDFyh0iWltv0lbTNx8YesBL+IlQBj274rw++Men3xjCsofPrGhMGXhU0k9hQXfvwRxd0jp4wWUPYzEGUZubPzA3v6QzC81VOa01fc/MvVoHgF6wpY4rr7zUuVlGqkawkgjO21BALFNFI+oyrJ6janFTkhEvKEcmLsKDFoQ4i45bsSiEd0Vi8Sln10nTfLLPO5XF+33wilRIJEJzE9dATZOABCfVAivu+c5f8LZmi+pLtrCi2MkuKYfHWP62TKtC3eh+WWhsgsz8oyc4WKXVcMWBLNyC6JZr9uU+kWcyWiWeENyio5GwpFqzl3YBKcJSAi0v7iWnctIeftLTuTb2IUowspG23hSTgZTcPr5Q8RseHOB59livGOKujbn4O/Ka4uCjfPrjwNTjlMiwC3kfo7MYMbMZ0zHhfxK5IF1SGT8YbrHXjx/KDyxDo1jiYY1UKvhODTGkHq1jaavSZ4ab6w5cUezCw+1OWEhauGuBNQXseNes9wkKw+3GBhCE0AdXyFlzvJeb+uk3XsEOzv8IydBbs6Unow6Zeg+YOnZU3jFCVRpVeM6azjeFyPE+nnGgBMQqThN+EBsFZD2194xwhwWfVQDpjQeZyiSS1cOKEHR+vcekPyUgVqgB36QzRk5axxjxXlWI4XtuHBFAOardP3rE80ZMMbQO5rQoGuIHGeYeqVnWDzlTK195ywp5Yo8I6DhbR3XUqghD/AAiYWEuCh36S+JrAGxuPWDFjdWeqdjpZ9jmh0DVcU40s1yvqKgvVV6hb8pjRW7vNhdAXd8SaQ6LUnXCSIB3Mnx+V9oAGS84rHcue3pASvEjtHkoqhvCzLdUG27dWZQ0fSeceqGUQVh4td8ZbemWPN84F51YQhCBCCD/ABncVkZuz+wNzZ6+55wT1PqlNnXRA0d+E4zLZvNDFt9ANK3ZmLLTw8E90Cnom9CBK+aw/JEWMZmnS8VpfGM5UvkesS5M5Dyh734A21+kUcHK1xpFiks09RjFKeKYq+EPOPVBVzK0IHSBCEDsECBBD2GMEwBi8Y0oqrC8z1R6JclBe8cXCV3w0MK9xNY8ufvdMYM4Ne5w90Cw9YOQo6tH0fMgdQOKU9/y/khRBprXh5kubG9S0OrGdzqeAuKt2lrvGLJ07AvV4R5qDQd5kbOFSq8vR2eceqbu+eZQhCEIExLfMNCY56Stnp2B2GMZ9Rxm6fVzi+ri7ElmklqOmrpMS5KJQ8dbDFF9/GIhvm1Dkh6eZPFTBZgur20hvRbbWv5FghdGkAGKgfL1hNPAfa8phVDA+VGujly47xPdeE+ipa1AhVjHSNbiCHsHyjg+oPOGqrRnvnmEIQTXfS9/JiyP6JhrCUj619vCVw5s8a7A5jtRKkwLovnyNyMZ9RxJwQrbj4/SB61GDjChK1FQeTeUbLfcKMdePFFytmiehDtazaxhyHlD2tIxinvFiEX9MHlDpscT4cIqDxPyX4lldw8/SJ1tA+j0Sy7dUwNRLsnwTfiRtxm7ieEUufvvDCLFsZ9duEdWYIBCY2wMVFABzrX6gqEXw/jHS284exx4TERb+WHoB+tpuQ14cO/0h1CistfBE2RNer65xj2NPJbvx1D6bjUbE8ZlPgM8ItnulqArIUDuEW5rYeAwQwuv1zNpWQD3n09IfkimIUHcZzeUAjC4j6g3N9H7ibjBFtNHdONZTeZVNxWg7JDU/YU+ibajrlN1BXlszzDtJwjTLhX4ZgywThDZETUv7mXczqb1eCWoviQzALlxv6wAWuDjyhstKLwXs4dgxn1HGLjVCcXn9JZgLp4u3Mmp5ynXm9I0MbEDBrZN7mE3N6E14P2Mb9QKAfRhZ/dF2cMgMAAMBt+UlzImFail8Muavpp65mbZ+wCgoZs23xlcG3YMms+iJ6ZnTHRg15cnGPXs4dhFK3ki9cojjWK2SR9eMuyArjf0y52xFek4OP3iqq1479hjPqeMzxRanx1LcOHBG8Y4vklVmPNbQ08Uro7lvtCpCmR3p4Evjq4L8qig3QAeog/KVqhU8jL5R62U7ml6Q5TEbVO+VKLygNjFMM4ft4S0E4Gj3jWIXHjG5nn0O0GruKcxgaAoDxnXMxtcH6UkEYB2f9OCADb4gNGwG4slbM61rhps8doxjPqePZk6KLYjRqhtf2hVBd5fCi804V4Urn/unpFHDKap3osz6wwJkfykIaYCtd3qR2wehVb56sHWLeDzgAmg60IHK51kRF3QZOKV9vBCPnUWGAwpCM1PP4QhAGwI17vWaap+iqes5Jp6BNdlB8IBOqak4CceDTv8ASOyDktAuyV62uHk4xjGfc8YnmyZLg0YTYj+6FheVsqAja1+lxrnZKIDXFsF61W5jOcJ7kGgG9luu3sJynZ1Z9N/y19Wsuw4cjhKUKwcQ/wBEs5ceM4A7KbDkQqcr6GUdF13pxrfjNpzPfcYYaH1zlO5+0hBgzRhLirfpx5y5Yy2KW3WGKLGMey4+yaOkwCRjS784a3Jsphj9exzco6t1fof0wSjAHgFgV3ukznTHk/Mt1FuYLohNw7oL8ti8I07aOR1LroRyHFR7yA9kyoelY5JRTWr6XAOyE6F+ZghCeWYXMyL3TTx3RZkTqQY9oxjHBLyfBI3uOifcQHosQvJcjDnj4I4GWdg7k7ii5DwJhBuBuZ3H74wL/E5CU2fmM/BlF87TFEFmBCub96znxCCS0codB6kF1bW06cs1W4pk15TGoasddI+M0y8f3CEMUziq/J9IaHXXNdHiv1mPyO77/iWzUiZ17x9/KaPT0f3D3wM4kM/qGH6a/S+sYpeOgQxuw3rhhrdeOsXuVqX55nSoJqpNTjoW1GhARSXADWo1XeYQ3Us+nXT7zSYUm8gfzXLzT6B3xxZ2Bn672IPGYe/pjgPWtsPqR9RDdTCnp2HfmDylPtxhnwEF2rcOpn1JqiN4OwgpxfxmNs275j1qmANfwKDItHPnhErzPWbwhEeidYMyucFPSoMpFmsxlKoWsWt80IG/JwmSudhxk0BRgA0rkeU0HoH3MKAwc5eoJYjSbHbWDg7ut+XumH/YUaX1r+bwHkGh9OMLoeeHzxbvvtPAuRlrNLUanOdwKyXLCXfrG3kRQ1rwduUzgjEHz4kA7398Iq0Z2HTWLtF1qi5om7T2fOaPBanyvKFaeT4JDs6Bsm5xCMRjkz6+0sHZv2R7X1MZozFbNBMDtRbwDinGG94eBvyjGwDVODazcbSgqzEqFu1ElSczaddHrDQI9SYoZHyQXRWQPn1/MqZltbQ8HqS3B4ivk90boPMXtCNRwHxmH7vAWccR5mQDzpgKzYm2kQAv9cop4Q6s48PaPLhoGnh8RbOsGEIMU0VvF+Yooo+RGRb73rhzghsjR78DMX5oD2R3JuOX3ZnTOSmIV1uYrZbfqBy3OhHjHKEuFn2jQfAR7r98G3UBlscQQGgD84dRcroEFijcEHodyKI57XkMWcSaanOBdjou0+sOqkocleKoolW7tymeHMuvNKXzPAjFNXBo+j5QYjsHYOEUW32+fKMUzktUgUcaKOH6Jac/EjZkfUrNU3XrLtlS705F8JVAhoUJyC517jQqpn+rJoGtQrB0n1lIZQA5FfmLBFjZ/h1ixQcWowa2vlLQpZ3AY2pICQaJyYHajSXfk4vNB9G2xPgjgIGUnurPR8CcCVEtCx1itrfHH3R3ra+E4ZfD5jtT5QV5L9GUaK4l6QGpjgRnaaaYVoqM0nYFF8jF6Y5huso8Id6UOjQmJh1eKfM+ZL/Fvf0IUwdXlL7RFuhDLLOP5BonE9Zr7BrVeh+s+QUesZR9Ki+yIdIfATgzpmIhNBfYApLOcvW2x1c/nhyLDxo9Y1934QTo5XmPWWXhGfViddaD2i5R8vvhLRTTk93xEc94QnBtyPOY/K8os2/VHL/2eVi4iPQHGNjmd4IAADAGAPTsWZyrRHwCo1kwGqr8I9Yej8HuizzqQDXhh+ZDO11r4oB+SqmVryx7Rr3kS4P0eEeILXk84rJzvr9YtWKnV359ZmO8T1p/hDhyQRtrss80dMBALpzPRC136CXdQbb8mKaI7/lNifH5TDocVfeJcAnuUmpdDZ6uYFBewyLiARQANj/AvbrFZmLgiW6zZ3c6umvtECVWqFnrNdPAfE/gIvWF1KM4+TD8kUrCnox7iC6ZJfLnOYstLw+FS4HQ7Em2J0O0agDvJoK779LZxe5fNJ6x1esKnQNguE3tkoNmEGYImN9YhKzsr5KhyrV9az1Pah89PpFZk+AJKyO+vWppQ9EZfYYx7J26saqfSP0ZtH8xgU3KwZ4DX02gFUsH5Z+joiXrLdV5nVak02S8DHwsNC3cwM7fC4p5c4uz4rwY1BXkL5kXuN0PKOKH1rmE1n04M0gOufYnsBifabzi0h/eofv0BgC+ZZr0Aa+CntNTjv8AgReg+nrxKDzB5EcD+T3I87Hs2jqUsZHzCaOO9ANmEtwvDwmkFCy1buh8DNQs865w/MEBiyMeHJY7gDyHjUBrUdHy5Tb0dfkqWWL09SNeTpj0qZ5JC3WNXWb7LVDUlYdEowEk6YkZbk5XOX5GYchqHm15kZqr3TdjCpil5C3WCVG0R4SqXo1ux7yNiimZHBFIl+0GYrz0QAaCGMsDVDAwqoX3CB4DDTC659bmxH6MF+c3B3N+omu16zbKoAuo++8xcSBziA/NsxswyNjoce71g8eQVT68YxjBNF1m3pL5b+s9zNBpqNF8oXhnq3/tHGmIL0ricEdQYsxQ9DnMuI1VTopj9xKu7idX7ZYfpZnXgTLyOLWxM2ODChzqXnmC0467mErD6QW/glUhQa01rDwki9XVDudDAgHYQDLxn3BFGl1RXymJcA6BX/gHZhKrNbOPCCsRIw90MK4OGvfHtlMuARRyNpiD1VG7RZIjkwvLWUvc1zNwqU4JgR+chKBtPYAAaG4VPAieNLavrD16ycncnyZNRjcbwwdekeMCBiGRVSxXGHYTRYqsfRh/8IAljD3xqCtHolxjOOv/ABPrEy4oTpaN32E4tcyekbxqfdn3oOiPK9X1lvhL9iX6h6QfxT5F9YLPWBj7TlyZtU5keM27fOvtPhq9IwDXjf8AUK7xiDsZQNXE03RPkXk/+Ey0as39xNp1D7It57mv2iatX6bEqr9UL5n0lcr8L+R5zQQ8ZogEr/g2hFdUl2ovH7oanelX7IU28wHkMvZLpDzuWMDy+0mjiGc790wDVJ97/wDw60bkPqMS0OlB6Tc5xWfS4ZQAcAlfgJc8UJHxFvIKD0nixgPkH/6w/9k=" alt="Grb Opštine Drvar">
+  <div>
+    <h1>Radni plan — 20 garaža na opštinskoj parceli</h1>
+    <p>Opština Drvar · Služba za imovinsko-pravne i geodetske poslove · predmet: zahtjevi za korištenje zemljišta ispod postojećih garaža</p>
+  </div>
+</header>
+<div class="bar">
+  <button class="pri" onclick="window.print()">🖨 Štampaj / PDF</button>
+  <button onclick="izvoz()">⤓ Izvezi stanje (.txt)</button>
+  <button onclick="ocisti()">↺ Očisti kvačice</button>
+  <button id="bviz" onclick="viz()">👁 Prikaz: oba</button>
+  <div class="prog"><i id="pbar"></i></div>
+  <span class="pct" id="ppct">0 / 0 koraka</span>
+</div>
+<section class="faza info">
+  <h2><span class="n">Zašto</span> Šta je zapravo problem <span class="rok">pročitati prije svega</span></h2>
+  <div class="uvod">
+    Na jednoj katastarskoj čestici u vlasništvu Opštine Drvar 1/1 stoji stambena zgrada i uz nju
+    <b>20 garaža starih oko 50 godina</b>. Korisnicima su rješenjima o povratu iz 2006. vraćeni stanovi i garaže,
+    ali <b>ne i zemljište</b>. Dva korisnika sada traže da sruše staru i podignu novu, betonsku garažu.
+    Tri su sporne stvari: <b>(1)</b> smije li nova garaža biti trajna, <b>(2)</b> smije li se ugovor zaključiti
+    bez licitacije, <b>(3)</b> da li je uopšte Opština danas vlasnik tog zemljišta.
+  </div>
+  <div class="nota stop"><b>Dok Faza 0 nije gotova, ne potpisuje se nijedan ugovor.</b>
+    ZSP čl. 363 st. 6 na raspolaganje protivno tom članu veže <b>ništavost</b>, a javno pravobraniteljstvo
+    po ZoJP HBŽ čl. 19 može tužiti za utvrđenje ništavosti. Rizik nosi akt, a akt priprema Služba.</div>
+</section>
+
+<section class="faza">
+  <h2><span class="n">Faza 0</span> Utvrđivanje činjenica <span class="rok">2–4 sedmice · ništa se ne potpisuje</span></h2>
+  <div class="uvod">Cilj faze je jedno jedino pitanje: <b>čije je zemljište ispod garaža danas?</b>
+  Od odgovora zavisi ide li se granom A ili granom B.</div>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.1 · Identifikacija predmetne i susjednih parcela</span>
+    <div class="op">Zahtjev Službi za imovinsko-pravne i geodetske poslove: identifikovati k.č. na kojoj su zgrada i garaže,
+      utvrditi granice i izraditi grafički prilog sa ucrtanim zgradom i svih 20 garaža.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Pošalješ geometru zahtjev da izađe i nacrta gdje je tačno zgrada, gdje je svaka od 20 garaža, koja je to parcela i s kim se graniči. Do sada svi o ovome pričaju napamet. Bez crteža ne znaš ni o čemu razgovaraš.</div>
+    <div class="meta"><span class="tag">obrazac: IPP-Zahtjev-Identifikacija.html</span><span class="tag">UP:04-____</span><span class="tag k">potpisuje načelnik</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.2 · Posjedovni list, kopija katastarskog plana i stanje zemljišne knjige</span>
+    <div class="op">Uz posjedovni list obavezno pribaviti <b>ZK izvadak</b> ili <b>uvjerenje suda da zemljišna knjiga
+      za tu k.o. nije uspostavljena</b>. Provjeriti i je li Opština upisana kao <b>vlasnik</b> ili samo kao
+      <b>titular državne svojine</b> — to nije isto, a ZSP čl. 363 govori o vlasništvu.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Postoje dva registra i nisu isto. <b>Katastar</b> (posjedovni list) kaže ko zemlju drži i koristi. <b>Zemljišna knjiga</b>, narodski gruntovnica, kaže ko je vlasnik. U Drvaru gruntovnica za mnoge katastarske opštine nikad nije uspostavljena. Zašto je to važno: pravo građenja se mora <b>upisati u gruntovnicu</b> da bi uopšte postojalo — nema gruntovnice, nema prava građenja, i cijela varijanta B-2 pada dok se ona ne uspostavi. Zato ovo provjeravaš prvog dana, ne zadnjeg. I pogledaj piše li „vlasnik: Opština“ ili „državna svojina, titular: Opština“ — u drugom slučaju Opština nije vlasnik, nego samo drži tuđe.</div>
+    <div class="meta"><span class="tag">ZSP čl. 306 st. 1</span><span class="tag">Pravilnik 17/14 čl. 5 t. a)</span><span class="tag d">prekidač za granu B-2</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.3 · Rješenja o povratu iz 2006. — pribaviti i pročitati izreku</span>
+    <div class="op">Za svakog podnosioca: šta je tačno vraćeno — na stanu stanarsko pravo ili vlasništvo, na garaži
+      vlasništvo ili samo korištenje; po kojem zakonu; ko je donio; je li garaža opisana kao
+      <b>poseban dio zgrade</b> ili kao <b>samostalan objekat</b>. Ovo je jedini dokument na koji se poziva
+      prijedlog o neposrednoj pogodbi, pa mora biti u spisu i pročitan doslovno.</div>
+    <div class="lay"><b>Prostim jezikom.</b> To je papir na koji se pravnik poziva, a niko ga nije pročitao do kraja. Moraš vidjeti šta tačno stoji u izreci: je li čovjeku vraćeno <b>vlasništvo</b> nad garažom ili samo <b>pravo da je koristi</b>, i je li garaža opisana kao dio zgrade (kao podrum ili ostava uz stan) ili kao poseban objekat u dvorištu. Od te jedne rečenice zavisi sve dalje.</div>
+    <div class="meta"><span class="tag">ZSP čl. 81 st. 2 i 3</span><span class="tag">ZSP čl. 349</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.4 · Status legalnosti garaža</span>
+    <div class="op">Uvjerenje Službe za urbanizam: postoji li dozvola iz vremena gradnje, jesu li garaže naknadno
+      legalizovane, vode li se u katastru kao <b>zgrade</b>. Od ovoga zavisi jesu li „zgrada" u smislu ZSP čl. 346 —
+      a to je uslov za cijelu granu A.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Garaža stoji 50 godina — je li ikad imala dozvolu? Vodi li se u katastru kao zgrada? Ako jeste legalna zgrada, čovjek po zakonu iz 2013. možda već ima i zemlju ispod nje. Ako je divlja gradnja, nema ništa i ide ili legalizacija ili sve iz početka.</div>
+    <div class="meta"><span class="tag">ZSP čl. 346 st. 1</span><span class="tag z">bez ovoga grana A pada</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.5 · Provjera revizije po Zakonu o građevinskom zemljištu FBiH (25/03)</span>
+    <div class="op">ZSP čl. 346 st. 3: pravno jedinstvo zemljišta i zgrade <b>ne uspostavlja se</b> prije okončanja
+      postupka revizije. Pribaviti uvjerenje ili sačiniti službenu zabilješku o stanju za tu parcelu.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Poslije rata je postojao postupak provjere kome je i kako dodijeljeno građevinsko zemljište u socijalizmu — zove se revizija. Zakon kaže da se zemlja i zgrada ne smiju spojiti u jednu nekretninu dok ta provjera za tu parcelu nije završena. Znači: provjeriš je li završena. Ako nije, grana A čeka.</div>
+    <div class="meta"><span class="tag">ZSP čl. 346 st. 3</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.6 · Zabrana raspolaganja državnom imovinom</span>
+    <div class="op">Službena zabilješka o provjeri po Zakonu o privremenoj zabrani raspolaganja državnom imovinom
+      (BiH i FBiH). Bez nje revizija ima gotov nalaz.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Postoji zakon koji je zamrznuo raspolaganje državnom imovinom dok se ne raščisti ko je šta naslijedio iza bivše države. Ako parcela potpada pod tu zabranu, ne smije se ni prodati ni dati u zakup. Napraviš kratku zabilješku da si provjerio — revizoru je to obično prvo pitanje.</div>
+    <div class="meta"><span class="tag">službena zabilješka u spis</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.7 · Izvod iz važećeg planskog dokumenta + status novog urbanističkog plana</span>
+    <div class="op">Za tu lokaciju: koja je namjena po planu iz 1988., je li zemljište privedeno konačnoj namjeni,
+      predviđa li plan garaže. Uz to: je li lokacija u obuhvatu novog UP-a i u kojoj je fazi izrade.
+      Stari planovi važe <b>samo do donošenja dokumenata po ZPU 12/14</b> (čl. 111 st. 2).</div>
+    <div class="lay"><b>Prostim jezikom.</b> Pitaš urbanizam: šta po planu treba biti na tom mjestu? Ako plan tu predviđa zelenu površinu ili nešto treće, trajna garaža ne može dobiti dozvolu jer bi bila protiv plana. I pitaš dokle je stigao novi urbanistički plan — o tome zavisi cijela grana B-2.</div>
+    <div class="meta"><span class="tag">ZPU čl. 111 st. 2</span><span class="tag">ZPU čl. 87 st. 1</span><span class="tag">traži se od urbanizma</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.8 · Zabilješka o zatečenom stanju na terenu</span>
+    <div class="op">Izlazak na lice mjesta: broj garaža, ko ih koristi, dimenzije, materijal, stanje, prilaz.
+      Fotodokumentacija. Bez ovoga se kasnije ne može dokazati šta je zatečeno.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Odeš na lice mjesta, izbrojiš garaže, izmjeriš ih, slikaš i zapišeš ko koju koristi. Za pet godina niko se neće sjećati kako je izgledalo, a spis mora imati dokaz šta je zatečeno.</div>
+    <div class="meta"><span class="tag">zapisnik + foto</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.9 · Zahtjev za mišljenje javnog pravobraniteljstva — tri pitanja</span>
+    <div class="op"><b>1.</b> Je li na toj k.č. nastupilo pravno jedinstvo nekretnine po ZSP čl. 345–347 i u kojem obimu?
+      <b>2.</b> Može li se zemljište dati u zakup neposrednom pogodbom pozivom na rješenje o povratu iz 2006?
+      <b>3.</b> Ako ne, koji je pravilan instrument — zakup po Odluci 6/11, prodaja ili pravo građenja?</div>
+    <div class="lay"><b>Prostim jezikom.</b> Pravobraniteljstvo je „advokat opštine“. Zakon kaže da se njihovo mišljenje <b>mora</b> tražiti prije potpisivanja ugovora o zakupu — to nije stvar izbora. Iskoristi to: postavi im baš ona pitanja oko kojih se ti i pravnik ne slažete. Onda ne odlučuješ ti protiv njega, nego treći, i niko ne gubi obraz.</div>
+    <div class="meta"><span class="tag">ZoJP HBŽ čl. 18 st. 2</span><span class="tag k">obavezno prije potpisa</span><span class="tag">rok 15–30 dana</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">0.10 · Pisana obavijest podnosiocima</span>
+    <div class="op">Da je postupak u toku, šta se utvrđuje, koje dokumente trebaju dostaviti, i — izričito — da
+      <b>rješenje o povratu ne daje pravo prvenstva</b> niti pravo na dodjelu bez konkursa. Bolje im to reći
+      sada nego poslije licitacije.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Napiši im pismeno šta se dešava, šta trebaju dostaviti i koliko će trajati. I izričito: rješenje o povratu im <b>ne daje prednost</b> i ne daje pravo da bez konkursa dobiju zemlju. Bolje da to čuju sada nego onog dana kad izgube na licitaciji.</div>
+    <div class="meta"><span class="tag">dopis, 2 primjerka</span></div>
+  </span></label>
+
+  <div class="nota"><b>Odluka na kraju Faze 0</b>
+    Ako iz 0.3, 0.4 i 0.5 proizlazi da su garaže legalne zgrade u vlasništvu podnosilaca i da zemljište služi
+    redovnoj upotrebi zgrade → <b>grana A</b>. Ako ne → <b>grana B</b>.</div>
+  <textarea placeholder="Bilješke uz Fazu 0 — brojevi akata, datumi, ko je šta dostavio…"></textarea>
+</section>
+
+<div class="grana">
+<section class="faza a">
+  <h2><span class="n">Grana A</span> Zemljište pripada zgradi</h2>
+  <div class="uvod">Ako su garaže legalne zgrade, zemljište se <b>po sili zakona</b> već pretvorilo u vlasništvo
+    vlasnika zgrade. Upis Opštine 1/1 je tada samo nesređena evidencija. <b>Ovo je najčistiji ishod</b> — nema
+    ni licitacije ni ugovora, jer Opština nema šta davati.</div>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">A.1 · Postupak utvrđivanja zemljišta za redovnu upotrebu zgrade</span>
+    <div class="op">Vodi ga <b>tvoja služba</b>, uz prethodno mišljenje organa za urbanizam. Stranke: etažni
+      vlasnici i Opština. Rezultat je rješenje kojim se utvrđuje površina.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Zakon iz 2013. uveo je pravilo da zgrada i zemlja ispod nje moraju biti <b>jedna stvar, jednog vlasnika</b>. Ranije je bilo obrnuto: zgrada tvoja, zemlja društvena. Taj zakon je rekao — ko ima zgradu, dobio je i zemlju ispod nje plus onoliko okolo koliko treba za normalno korištenje. To se desilo <b>samo od sebe</b>, danom stupanja zakona na snagu, bez ičijeg rješenja. Ono što u katastru i dalje piše „Opština 1/1“ samo je neažurirana evidencija, kao stara adresa u ličnoj karti. Tvoj posao je da rješenjem utvrdiš koliko tačno zemlje ide uz zgradu.</div>
+    <div class="meta"><span class="tag k">ZSP čl. 346 st. 2 — nadležna je Služba za imovinsko-pravne poslove</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">A.2 · Uspostava pravnog jedinstva i upis</span>
+    <div class="op">Upis u zemljišnu knjigu, odnosno u knjigu položenih ugovora ako ZK nije uspostavljena.
+      Etažno vlasništvo se neodvojivo veže sa suvlasničkim dijelom cijele nekretnine.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Kad se utvrdi površina, to se upiše u gruntovnicu ili u knjigu položenih ugovora. Tek tada papiri odgovaraju stvarnosti.</div>
+    <div class="meta"><span class="tag">ZSP čl. 345–347</span><span class="tag">ZSP čl. 349</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">A.3 · Nova garaža se rješava između suvlasnika, ne sa Opštinom</span>
+    <div class="op">Podnosiocu tada treba saglasnost suvlasnika, pa lokacijski akt i građevinska dozvola — a Opština
+      u tome nastupa <b>samo kao urbanistički i građevinski organ</b>, ne kao vlasnik. Za rušenje stare garaže
+      i dalje treba dozvola za uklanjanje.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Od tog trenutka garaža više nije opštinska stvar. Ko hoće novu, treba mu saglasnost komšija-suvlasnika, pa lokacijski akt i dozvola. Opština se javlja samo kao organ koji izdaje dozvolu, ne kao gazda zemlje. <b>Ovo je najbolji ishod za sve</b>: nema licitacije, nema zakupnine, nema rizika od ništavosti, a ljudi dobiju ono što traže.</div>
+    <div class="meta"><span class="tag">ZoG čl. 75 st. 1</span><span class="tag">ZoG čl. 45 st. 1 t. 1</span></div>
+  </span></label>
+  <textarea placeholder="Bilješke uz granu A…"></textarea>
+</section>
+
+<section class="faza b1">
+  <h2><span class="n">Grana B-1</span> Opštinsko je · privremeni objekat, odmah</h2>
+  <div class="uvod">Kratki put, <b>2–4 mjeseca</b>. Daje montažno-demontažnu garažu na rok do 3 godine.
+    <b>Ne daje betonsku i ne daje vlasništvo.</b> Ide preko licitacije — drugog puta nema.</div>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.1 · Program korištenja građevinskog zemljišta</span>
+    <div class="op">Donosi Opštinsko vijeće. Ako se ne stigne, postupak provodi Komisija koju imenuje načelnik —
+      ali to se mora <b>izričito navesti</b> u rješenju o imenovanju, u zapisniku i u ugovoru.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Spisak lokacija na kojima Opština dozvoljava privremene objekte. Vaša odluka iz 2011. traži takav spisak, a on nikad nije donesen. Ista odluka ima i prelazno rješenje — da postupak vodi Komisija koju imenuje načelnik — ali se to mora <b>izričito napisati</b> u rješenju, u zapisniku i u ugovoru, a ne prećutati.</div>
+    <div class="meta"><span class="tag">Odluka 6/11 čl. 3 st. 1 i st. 3</span><span class="tag">Statut čl. 42</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.2 · Odluka Vijeća o načinu i uslovima raspolaganja</span>
+    <div class="op">Za ovaj konkretan predmet, na prijedlog načelnika.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Vijeće za ovaj konkretan predmet kaže: „ovo zemljište dajemo, pod ovim uslovima“. Bez toga načelnik nema pokriće da išta stavi na licitaciju.</div>
+    <div class="meta"><span class="tag">Pravilnik 17/14 čl. 3 t. c)</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.3 · Načelna lokacijska dozvola — pribavlja je Opština</span>
+    <div class="op">„…pribavlja se načelna lokacijska dozvola <b>prije njegova dodjeljivanja ili stavljanja na
+      licitaciju</b>." Pribavlja je Opština kao vlasnik, ne podnosilac. Njome se utvrđuju gabariti koji se
+      poslije doslovno prepisuju u ugovor.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Opština sama sebi pribavi papir koji kaže šta se tu smije graditi i koliko veliko — i to <b>prije</b> nego objavi oglas. Logika je prosta: ljudi koji dolaze na licitaciju moraju unaprijed znati šta uzimaju. Poslije se ti gabariti doslovno prepišu u ugovor.</div>
+    <div class="meta"><span class="tag d">ZPU čl. 64 st. 3 — PRIJE licitacije</span><span class="tag">važi 2 godine, ZPU čl. 77</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.4 · Početna cijena zakupnine</span>
+    <div class="op">Po <b>Pravilniku o visini zakupnine</b> („Sl. glasnik Opštine Drvar" 1/12), ne po „odluci
+      načelnika" — načelnik odluke kao opšte akte ne donosi. Uz to zabilješka ili nalaz vještaka o tržišnosti.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Cijena se ne izmišlja. Uzima se iz opštinskog pravilnika i mora odgovarati tržištu — simbolična cijena je klasičan nalaz revizije. Usput, taj akt se zove <b>pravilnik</b>, ne „odluka načelnika“ — načelnik odluke kao opšte akte uopšte ne donosi.</div>
+    <div class="meta"><span class="tag">ZSP čl. 363 st. 1 i 2</span><span class="tag z">Odluka 6/11 čl. 8 je nomotehnički pogrešna</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.5 · Rješenje o imenovanju Komisije + izjave o sukobu interesa</span>
+    <div class="lay"><b>Prostim jezikom.</b> Tri člana iz službi, sa zamjenicima, i izjave da niko od njih nije u sukobu interesa.</div>
+    <div class="meta"><span class="tag">Odluka 6/11 čl. 4</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.6 · Oglas, objavljen najmanje 15 dana ranije</span>
+    <div class="op">Sadržaj po čl. 12. <b>Rok zakupa u oglasu mora biti identičan roku u ugovoru</b> — najčešća greška.
+      Oglas i na oglasnoj tabli zgrade na čijem se području zemljište nalazi.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Oglas ide u medije najmanje 15 dana ranije, i na oglasnu tablu te zgrade. Pazi na jednu sitnicu koja obara postupke: <b>rok zakupa u oglasu mora biti isti kao rok u ugovoru</b>.</div>
+    <div class="meta"><span class="tag">Odluka 6/11 čl. 10, 11, 12</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.7 · Licitacija</span>
+    <div class="op">Najmanje <b>tri učesnika</b> u prvom nadmetanju, dva u ponovljenom. Kod pismenih ponuda —
+      najmanje dvije. Tek ako padne i ponovljena licitacija, otvara se neposredna pogodba.</div>
+    <div class="lay"><b>Prostim jezikom.</b> U prvom krugu moraju doći najmanje tri učesnika. Ako ne dođu, licitacija se ponavlja i tada su dovoljna dva. Tek ako padne i ponovljena, smije se ići na direktan dogovor. To je jedini zakonit put do „bez licitacije“ — i do njega se stiže poslije dva neuspjeha, ne odmah.</div>
+    <div class="meta"><span class="tag">Odluka 6/11 čl. 14, 25</span><span class="tag z">čl. 21 — pogodba tek nakon 2 neuspjeha</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.8 · Odluka o izboru + protek roka za prigovor</span>
+    <div class="lay"><b>Prostim jezikom.</b> Komisija objavi ko je dao najbolju ponudu, ljudi imaju rok da se žale, pa se čeka da taj rok prođe.</div>
+    <div class="meta"><span class="tag">Odluka 6/11 čl. 18–20, 27</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.9 · Mišljenje pravobraniteljstva, pa ugovor</span>
+    <div class="op">Ugovor po obrascu od 26 članova: trajanje vezano za odobrenje, zabrana produženja aneksom,
+      saglasnost vlasnika po ZoG čl. 45 st. 1 t. 5, sredstvo obezbjeđenja za uklanjanje, apsolutna zabrana trajne
+      gradnje. Potpis <b>ovjeren kod notara</b>, 6 primjeraka, dostava pravobraniteljstvu u 15 dana.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Prvo mišljenje pravobraniteljstva, pa tek onda ugovor. U ugovoru moraju biti: rok vezan za dozvolu, zabrana produžavanja aneksom, saglasnost Opštine kao vlasnika (bez nje čovjek ne može do dozvole), sredstvo obezbjeđenja za rušenje i apsolutna zabrana trajne gradnje. Potpis se ovjerava kod notara, ide 6 primjeraka, a jedan se u roku od 15 dana šalje pravobraniteljstvu.</div>
+    <div class="meta"><span class="tag">ZoJP čl. 18 st. 2 i čl. 19</span><span class="tag">ZoG čl. 45 st. 3</span><span class="tag">obrazac u UGOVORI/ZAKUP/</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B1.10 · Dozvola za uklanjanje stare garaže i dozvola za novu</span>
+    <div class="op">Rušenje samo po dozvoli za uklanjanje. Za novu: do 20 m² bez građevinske dozvole ali uz
+      lokacijski akt, dokaz pravnog interesa i tehnički pregled; preko 20 m² građevinska dozvola za privremene
+      građevine, rok uklanjanja <b>najviše 3 godine</b>.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Stara garaža se ne smije srušiti bez dozvole za uklanjanje. Za novu: do 20 m² ne treba građevinska dozvola, ali treba lokacijski akt, dokaz pravnog interesa i tehnički pregled na kraju. Preko 20 m² treba građevinska dozvola za privremene građevine, sa rokom uklanjanja od najviše tri godine.</div>
+    <div class="meta"><span class="tag">ZoG čl. 75</span><span class="tag">ZoG čl. 41 st. 1 t. k)</span><span class="tag">ZoG čl. 52</span></div>
+  </span></label>
+
+  <div class="nota stop"><b>Dvije stvari reci podnosiocima unaprijed, u pisanoj formi</b>
+    Objekat mora biti stvarno montažno-demontažan — ako izliju beton, inspektor naređuje uklanjanje o njihovom
+    trošku (ZPU čl. 83 st. 4), a ugovor je prividan po ZOO čl. 66. I: <b>postojeći korisnici nemaju pravo
+    prvenstva na licitaciji</b> i mogu izgubiti lokaciju od trećeg lica.</div>
+  <textarea placeholder="Bilješke uz granu B-1…"></textarea>
+</section>
+</div>
+
+<section class="faza b2">
+  <h2><span class="n">Grana B-2</span> Opštinsko je · trajna garaža i vlasništvo — pravo građenja <span class="rok">1–3 godine</span></h2>
+  <div class="uvod">Ovo je jedini put koji ljudima daje ono što stvarno hoće: <b>trajan objekat i vlasništvo nad njim</b>,
+    uz mjesečnu naknadu Opštini. Ali traži tri stvari kojih danas nema — plan, zemljišnu knjigu i odluku Vijeća.
+    I <b>ne oslobađa od javnog konkursa</b>.</div>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.1 · Garaže se izričito planiraju novim urbanističkim planom</span>
+    <div class="op">U novi UP i u <b>odluku o provođenju plana</b> unijeti garaže na toj lokaciji, sa brojem, gabaritima
+      i uslovima. Time lokacija ulazi u <b>režim građenja drugog stupnja</b> — uslovi za odobravanje građenja se
+      donose na temelju urbanističkog plana i odluke o provođenju, bez regulacionog plana. Stari planovi važe samo
+      do donošenja dokumenata po ZPU 12/14.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Ovo je srce cijele varijante. Ako novi urbanistički plan i odluka o njegovom provođenju <b>izričito predvide garaže</b> na toj lokaciji, sve dalje ide glatko i ovo se pitanje više nikad ne otvara. Bez toga se stalno improvizuje.</div>
+    <div class="meta"><span class="tag k">ZPU čl. 8 t. b) — režim drugog stupnja</span><span class="tag">ZPU čl. 111 st. 2</span><span class="tag">ZPU čl. 17 t. d)</span><span class="tag z">najvrednija stavka cijelog plana</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.2 · Uspostava zemljišne knjige za k.o.</span>
+    <div class="op">Pravo građenja se stiče <b>dvostrukim upisom u zemljišnu knjigu</b> — kao teret na zemljištu i kao
+      posebno zemljišnoknjižno tijelo u novoosnovanom ulošku. Za 20 garaža to je 20 novih uložaka.
+      Bez zemljišne knjige ova grana stoji na papiru i ne može se provesti.</div>
+    <div class="lay"><b>Prostim jezikom.</b> „Pravo građenja“ znači: zemlja ostaje opštinska, ali ti dobiješ pravo da na njoj imaš <b>svoju</b> zgradu — i ta zgrada je tvoja, možeš je prodati i ostaviti u nasljedstvo. Kvaka je što se to mora upisati u gruntovnicu, i to <b>dva puta</b>: kao teret na opštinskoj parceli i kao nova, zasebna nekretnina. Za 20 garaža to je 20 novih uložaka. Ako gruntovnica ne postoji, ovo se fizički ne može upisati — a neupisano pravo građenja ne postoji.</div>
+    <div class="meta"><span class="tag d">ZSP čl. 306 st. 1 — bez ZK nema prava građenja</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.3 · Odluka Vijeća o uslovima i postupku zasnivanja prava građenja</span>
+    <div class="op">Postojeća opštinska odluka pokriva <b>samo vjetroagregate i solarne elektrane</b> — na garaže se
+      ne odnosi. Treba opšta odluka; ta postojeća služi kao predložak.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Vijeće mora donijeti pravila po kojima se to daje. Ona vaša postojeća odluka o pravu građenja pisana je samo za vjetroelektrane i solarne panele i na garaže se ne odnosi, ali odlično posluži kao predložak.</div>
+    <div class="meta"><span class="tag">Vijeće, na prijedlog načelnika</span><span class="tag">Statut čl. 42 i 126</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.4 · Plan parcelacije / oblikovanje građevinskih čestica</span>
+    <div class="op">Svaka garaža mora dobiti svoju građevinsku česticu da bi se pravo građenja moglo upisati.
+      Lokacijski akt se izdaje za cijelu građevinsku parcelu namijenjenu za tu građevinu.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Da bi svaka garaža mogla dobiti svoj list u gruntovnici, mora prvo dobiti svoju parcelicu. To radi plan parcelacije.</div>
+    <div class="meta"><span class="tag">ZPU čl. 16 t. c)</span><span class="tag">ZPU čl. 87 st. 1</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.5 · Javni konkurs za zasnivanje prava građenja</span>
+    <div class="op">„Ova se odredba <b>izričito odnosi i na raspolaganje zasnivanjem prava građenja</b>." Dakle ni ovdje
+      nema neposredne pogodbe — osim pet izuzetaka iz st. 3, među kojima je jedini iole primjenjiv
+      <b>oblikovanje građevinske čestice</b>, i to samo ako se stvarno o tome radi.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Ovo je ono što ni ti ni pravnik niste imali u vidu: zakon <b>izričito</b> kaže da se pravilo o javnom konkursu odnosi i na pravo građenja. Znači prelazak sa zakupa na pravo građenja ne rješava spor sa pravnikom — samo ga premješta. I ovdje ide oglas i licitacija.</div>
+    <div class="meta"><span class="tag d">ZSP čl. 363 st. 1, druga rečenica</span><span class="tag">ZSP čl. 363 st. 3 t. 5</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.6 · Naknada — procjena i ugovaranje</span>
+    <div class="op">Nosilac prava građenja plaća vlasniku <b>mjesečnu naknadu u visini prosječne zakupnine</b> za takvo
+      zemljište, ako nije drugačije određeno. Početna cijena se formira na osnovu mišljenja sudskog vještaka.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Sudski vještak procijeni koliko takvo zemljište vrijedi, i to postane osnov za mjesečnu naknadu koju čovjek plaća Opštini — otprilike u visini prosječne zakupnine.</div>
+    <div class="meta"><span class="tag">ZSP čl. 299 st. 2</span><span class="tag">ZSP čl. 363 st. 2</span></div>
+  </span></label>
+
+  <label class="korak"><input type="checkbox"><span class="t">
+    <span class="nas">B2.7 · Mišljenje pravobraniteljstva, ugovor o pravu građenja, upis</span>
+    <div class="op">Ugovor notarski obrađen, pa dvostruki upis. Nosilac prava građenja je vlasnik zgrade, a u pogledu
+      zemljišta ima ovlasti i dužnosti plodouživaoca — svaka suprotna odredba je ništava.</div>
+    <div class="lay"><b>Prostim jezikom.</b> Mišljenje pravobraniteljstva, ugovor kod notara, pa upis. Nosilac prava građenja je vlasnik garaže, a prema zemljištu ima prava i obaveze kao onaj ko je koristi — svaka odredba koja bi to htjela promijeniti je ništava.</div>
+    <div class="meta"><span class="tag">ZSP čl. 299 st. 1</span><span class="tag">ZSP čl. 306</span><span class="tag">ZoJP čl. 18 st. 2</span></div>
+  </span></label>
+
+  <div class="nota"><b>Iskrena procjena rokova</b>
+    Donošenje UP-a i uspostava zemljišne knjige nisu stvar mjeseci. Ako dvojica podnosilaca ne mogu čekati,
+    jedini zakonit most do tada je grana B-1 — privremena montažna garaža na tri godine, sa jasno napisanim
+    ograničenjima. To im treba i ponuditi kao izbor, u pisanoj formi.</div>
+  <textarea placeholder="Bilješke uz granu B-2…"></textarea>
+</section>
+
+<section class="faza info">
+  <h2><span class="n">Akta</span> Šta se sve piše i ko potpisuje</h2>
+  <table>
+    <tr><th>Akt</th><th>Ko donosi / potpisuje</th><th>Kada</th></tr>
+    <tr><td>Zahtjev za identifikaciju parcela</td><td>Opštinski načelnik</td><td>Faza 0, odmah</td></tr>
+    <tr><td>Službena zabilješka o pravnom pitanju</td><td>Referent, u spis</td><td>Faza 0, odmah</td></tr>
+    <tr><td>Zahtjev za mišljenje pravobraniteljstvu</td><td>Opštinski načelnik</td><td>Faza 0</td></tr>
+    <tr><td>Zahtjev urbanizmu (izvod iz plana + mišljenje po ZSP čl. 346 st. 2)</td><td>Služba IPP</td><td>Faza 0</td></tr>
+    <tr><td>Obavijest podnosiocima</td><td>Služba IPP</td><td>Faza 0</td></tr>
+    <tr><td>Zabilješka o zatečenom stanju i zabrani raspolaganja</td><td>Referent, u spis</td><td>Faza 0</td></tr>
+    <tr><td>Rješenje o utvrđivanju zemljišta za redovnu upotrebu zgrade</td><td>Služba IPP</td><td>grana A</td></tr>
+    <tr><td>Program korištenja građevinskog zemljišta</td><td>Opštinsko vijeće</td><td>grana B-1</td></tr>
+    <tr><td>Odluka o načinu i uslovima raspolaganja</td><td>Opštinsko vijeće</td><td>grana B-1</td></tr>
+    <tr><td>Rješenje o imenovanju Komisije</td><td>Opštinski načelnik</td><td>grana B-1</td></tr>
+    <tr><td>Oglas, zapisnik, odluka o izboru</td><td>Komisija / načelnik</td><td>grana B-1</td></tr>
+    <tr><td>Ugovor o zakupu (26 članova)</td><td>Načelnik, potpis ovjeren kod notara</td><td>grana B-1</td></tr>
+    <tr><td>Odluka o uslovima i postupku zasnivanja prava građenja</td><td>Opštinsko vijeće</td><td>grana B-2</td></tr>
+    <tr><td>Ugovor o pravu građenja</td><td>Načelnik, notarska obrada</td><td>grana B-2</td></tr>
+  </table>
+</section>
+
+<section class="faza info">
+  <h2><span class="n">Odgovor</span> Šta reći pravniku, u jednoj rečenici</h2>
+  <div class="uvod">
+    <b>„Na koji član se pozivaš?"</b> — ZSP čl. 363 st. 3 nabraja pet izuzetaka od javnog konkursa i nijedan nije
+    rješenje o povratu, a i ti se izuzeci odnose na prodaju i pravo građenja, ne na zakup. Odluka 6/11 čl. 21
+    dopušta neposrednu pogodbu tek nakon dvije neuspjele licitacije. Pošto je mišljenje pravobraniteljstva ionako
+    obavezno prije potpisa (ZoJP čl. 18 st. 2), pitanje se postavlja njima — i time se spor rješava bez sukoba,
+    a spis ostaje čist.
+  </div>
+</section>
+
+<div class="foot">
+  Radni dokument Službe za imovinsko-pravne i geodetske poslove Opštine Drvar.<br>
+  Pravni osnov citiran iz: Zakon o stvarnim pravima (FBiH 66/13, 100/13, 32/19) · Zakon o prostornom uređenju HBŽ (12/14) ·
+  Zakon o građenju HBŽ (3/16) · Zakon o javnom pravobraniteljstvu HBŽ · Odluka Opštine Drvar 6/11, 1/13, 21/25 ·
+  Pravilnik FBiH 17/14 · Statut Opštine Drvar.<br>
+  Ovo nije pravno mišljenje — konačan stav daje javno pravobraniteljstvo.
+</div>
+</div>
+<script>
+const KLJUC='ipp-plan-garaze-v1';
+const kutije=[...document.querySelectorAll('.korak input')];
+const polja=[...document.querySelectorAll('textarea')];
+function osvjezi(){
+  let n=0;
+  kutije.forEach(function(k){ k.closest('.korak').classList.toggle('done',k.checked); if(k.checked) n++; });
+  document.getElementById('pbar').style.width=(kutije.length? 100*n/kutije.length : 0)+'%';
+  document.getElementById('ppct').textContent=n+' / '+kutije.length+' koraka';
+}
+function snimi(){
+  try{ localStorage.setItem(KLJUC, JSON.stringify({k:kutije.map(x=>x.checked), t:polja.map(x=>x.value)})); }catch(e){}
+}
+function ucitaj(){
+  try{
+    const o=JSON.parse(localStorage.getItem(KLJUC)||'null');
+    if(o){ (o.k||[]).forEach((v,i)=>{ if(kutije[i]) kutije[i].checked=v; });
+           (o.t||[]).forEach((v,i)=>{ if(polja[i]) polja[i].value=v; }); }
+  }catch(e){}
+  osvjezi();
+}
+kutije.forEach(k=>k.addEventListener('change',()=>{osvjezi();snimi();}));
+polja.forEach(p=>p.addEventListener('input',snimi));
+function ocisti(){
+  if(!confirm('Skinuti sve kvačice? Bilješke ostaju.')) return;
+  kutije.forEach(k=>k.checked=false); osvjezi(); snimi();
+}
+function izvoz(){
+  let t='RADNI PLAN — 20 GARAŽA NA OPŠTINSKOJ PARCELI (Drvar)\n';
+  t+='stanje na dan: '+new Date().toLocaleDateString('bs-BA')+'\n'+'='.repeat(64)+'\n\n';
+  document.querySelectorAll('section.faza').forEach(function(s){
+    const h=s.querySelector('h2'); if(!h) return;
+    const koraci=s.querySelectorAll('.korak');
+    if(!koraci.length && !s.querySelector('textarea')) return;
+    t+=h.textContent.replace(/\s+/g,' ').trim()+'\n'+'-'.repeat(64)+'\n';
+    koraci.forEach(function(k){
+      t+=(k.querySelector('input').checked?'[x] ':'[ ] ')+k.querySelector('.nas').textContent.trim()+'\n';
+    });
+    const ta=s.querySelector('textarea');
+    if(ta && ta.value.trim()) t+='\nBILJEŠKE: '+ta.value.trim()+'\n';
+    t+='\n';
+  });
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([t],{type:'text/plain;charset=utf-8'}));
+  a.download='PLAN-garaze-stanje.txt'; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+}
+/* Prikaz: oba / samo prostim jezikom / samo pravnički */
+const VIZ=['oba','laik','strucno'];
+const VIZ_TXT={oba:'👁 Prikaz: oba',laik:'👁 Prikaz: prostim jezikom',strucno:'👁 Prikaz: pravnički'};
+let vidx=0;
+try{ const v=localStorage.getItem(KLJUC+'-viz'); if(v && VIZ.indexOf(v)>=0) vidx=VIZ.indexOf(v); }catch(e){}
+function primijeniViz(){
+  const v=VIZ[vidx];
+  document.body.classList.toggle('laik', v==='laik');
+  document.body.classList.toggle('strucno', v==='strucno');
+  document.getElementById('bviz').textContent=VIZ_TXT[v];
+  try{ localStorage.setItem(KLJUC+'-viz', v); }catch(e){}
+}
+function viz(){ vidx=(vidx+1)%VIZ.length; primijeniViz(); }
+primijeniViz();
+ucitaj();
+</script>
+</body>
+</html>

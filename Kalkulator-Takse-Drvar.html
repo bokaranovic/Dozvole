@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator administrativnih taksi — Drvar</title>
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922; --err:#f85149;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light #out{background:#f1f4f8;color:#0d141c}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;
+    font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:14px;max-width:860px;margin:0 auto}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+  .htitle{flex:1;min-width:0}
+  .themebtn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  body.light .grb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.12))}
+  .wrap{max-width:860px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card h2{font-size:13px;margin:0 0 14px;color:var(--h2);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 5px;font-weight:500}
+  input,select,textarea{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:11px;font-size:15px;font-family:inherit}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:560px){.row,.row3{grid-template-columns:1fr}}
+  .chk{display:flex;align-items:flex-start;gap:9px;margin:8px 0;font-size:14px;color:var(--ink);font-weight:400}
+  .chk input{width:auto;margin-top:3px}
+  input[type=checkbox]{width:auto!important;flex:0 0 auto}
+  .homebtn{padding:8px 12px;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  .det{display:none;margin:6px 0 4px;padding:10px 12px;border-left:2px solid var(--accent);border-radius:0 8px 8px 0;background:rgba(76,154,255,.07)}
+  .det.show{display:block}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
+  button{border:0;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .primary{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  .primary:hover{filter:brightness(1.05)}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  .ghost:hover{border-color:var(--accent)}
+  .badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:700;letter-spacing:.3px;background:rgba(46,160,67,.16);color:#3fb950;border:1px solid #2ea043}
+  .big{font-size:26px;font-weight:800;margin:6px 0 2px;color:var(--ink)}
+  .slovima{font-size:13px;color:var(--muted);font-style:italic}
+  #out{white-space:pre-wrap;background:#0a1019;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:13px;display:none;margin-top:12px;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ok);color:#fff;padding:11px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;font-weight:500}
+  .toast.show{opacity:1}
+  details{margin-top:6px;font-size:13px;color:var(--muted)}
+  details summary{cursor:pointer;color:var(--h2);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+  details p{margin:8px 0}
+  input,select,button{transition:border-color .18s ease, box-shadow .18s ease, background-color .18s ease, transform .12s ease, filter .18s ease}
+  .card{transition:border-color .2s ease, box-shadow .25s ease, transform .2s ease}
+  .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12); border-color:var(--accent); transform:translateY(-2px)}
+  .primary:active,.ghost:active{transform:translateY(1px) scale(.99)}
+  @media print{
+    header,.actions,.themebtn,.homebtn,.noprint{display:none!important}
+    body{background:#fff;color:#000}
+    .card{box-shadow:none;border:1px solid #999;break-inside:avoid;transform:none}
+  }
+</style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
+</head>
+<body class="light">
+<div id="odjavaFix" style="position:fixed;top:8px;right:10px;z-index:99999"><button type="button" onclick="try{localStorage.removeItem('ipp-auth')}catch(e){};location.replace('index.html')" style="padding:7px 12px;font-size:13px;font-weight:600;border:0;border-radius:8px;background:#c0392b;color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.28)">🔒 Odjava</button></div>
+<script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+<header>
+  <div class="hwrap">
+    <img class="grb" src="grb.jpg" alt="Grb" onerror="this.style.display='none'">
+    <div class="htitle">
+      <h1>Kalkulator administrativnih taksi</h1>
+      <p>Odluka o opštinskim administrativnim taksama Drvar (Sl. glasnik 4/2014)</p>
+    </div>
+    <a class="ghost homebtn" href="index.html">← Početna</a>
+    <button type="button" class="ghost themebtn" id="themeBtn" onclick="toggleTheme()">🌙 Tamna</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>1 · Odabir predmeta / vrste akta</h2>
+    <label>Oblast (Tarifni broj)</label>
+    <select id="oblast" onchange="renderOptions(); calc()">
+      <option value="9">Lokacijska dozvola / informacija (Tarifni broj 9)</option>
+      <option value="10">Građevinska dozvola (Tarifni broj 10)</option>
+      <option value="11">Upotrebna dozvola (Tarifni broj 11)</option>
+      <option value="ip">Imovinsko-pravni poslovi (Tarifni brojevi 12–17)</option>
+      <option value="leg">Rješenje o legalizaciji (Sl. glasnik 1/2025)</option>
+    </select>
+  </div>
+
+  <div class="card" id="card_vrsta">
+    <h2>2 · Podaci o zahvatu</h2>
+    <label>Vrsta objekta / zahvata</label>
+    <select id="vrsta" onchange="renderSub(); calc()"></select>
+
+    <div id="sub_wrap" style="display:none; margin-top:14px">
+      <label id="sub_label">Kvadratura / Kategorija</label>
+      <select id="sub" onchange="calc()"></select>
+    </div>
+    
+    <div id="modifiers" style="margin-top:14px; display:none;">
+      <label class="chk" id="mod_50_wrap"><input type="checkbox" id="mod_50" onchange="calc()"> Načelna dozvola, rekonstrukcija, dogradnja ili nadziđivanje (plaća se 50% takse)</label>
+      <label class="chk" id="mod_prod_wrap"><input type="checkbox" id="mod_prod" onchange="calc()"> Produženje važnosti dozvole ili izmjena rješenja u pogledu imena (fiksno 10,00 KM)</label>
+      <label class="chk" id="mod_nak_wrap"><input type="checkbox" id="mod_nak" onchange="calc()"> Naknadna dozvola - legalizacija (uvećanje 20% na redovnu taksu)</label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>3 · Obračun takse</h2>
+    <div style="margin-top:8px">
+      <div class="hint">Tarifni broj i iznos za odabrani zahvat:</div>
+      <div class="badge" id="tarifaBadge">Tarifni broj —</div>
+      <div class="big" id="ukupnoBig">0,00 KM</div>
+      <div class="slovima" id="ukupnoSlovima"></div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="primary" onclick="generate()">Kopiraj u zahtjev (tekst)</button>
+  </div>
+
+  <pre id="out"></pre>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// Data from Sl. Glasnik 4/2014
+const DATA = {
+  '9': {
+    name: 'Lokacijska dozvola',
+    items: [
+      { id:'ind_st', label:'Individualne stambene objekte', sub:[{lbl:'do 100 m²',val:30},{lbl:'od 101 do 200 m²',val:50},{lbl:'preko 200 m²',val:80}] },
+      { id:'ind_st_po', label:'Individualne stambeno-poslovne objekte i izmjenu namjene', sub:[{lbl:'do 100 m²',val:50},{lbl:'od 101 do 200 m²',val:80},{lbl:'preko 200 m²',val:100}] },
+      { id:'kol', label:'Kolektivne stambene i stambeno-poslovne objekte', sub:[{lbl:'do 100 m²',val:100},{lbl:'od 101 do 500 m²',val:150},{lbl:'od 501 do 1000 m²',val:200},{lbl:'preko 1000 m²',val:250}] },
+      { id:'pos', label:'Poslovne i javne objekte', sub:[{lbl:'do 100 m²',val:100},{lbl:'od 101 do 500 m²',val:200},{lbl:'preko 500 m²',val:300}] },
+      { id:'mont', label:'Montažne objekte privremenog karaktera, ljetne bašte, panoe', sub:[{lbl:'Pri prvom podnošenju',val:50},{lbl:'Produženje lokacijske dozvole',val:10}] },
+      { id:'pomocni', label:'Pomoćne objekte (garaže, šupe, ljetne kuhinje i sl.)', val:25 },
+      { id:'gosp', label:'Gospodarske objekte (štale, spremišta, poljoprivredne zgrade)', sub:[{lbl:'do 100 m²',val:30},{lbl:'od 101 do 500 m²',val:60},{lbl:'preko 500 m²',val:100}] },
+      { id:'parc', label:'Parcelaciju zemljišta, prijedlog cijepanja', sub:[{lbl:'do 1000 m²',val:100},{lbl:'od 1001 do 5000 m²',val:200},{lbl:'od 5001 do 10000 m²',val:300},{lbl:'preko 10000 m²',val:400}] },
+      { id:'izvod', label:'Izradu izvoda iz prostorno planske dokumentacije', val:10 },
+      { id:'infra', label:'Infrastrukturne objekte (elektro, vodovod, kanalizacija, mreže, trafo)', val:250 },
+      { id:'vjerski', label:'Vjerske objekte', val:100 },
+      { id:'drugo', label:'Druge vrste objekata (zahvati koji se ne mogu svrstati ni u jednu tačku)', val:60 }
+    ],
+    modifiers: true,
+    hasNaknadna: true
+  },
+  '10': {
+    name: 'Građevinska dozvola',
+    items: [
+      { id:'ind_st', label:'Individualne stambene objekte', sub:[{lbl:'do 100 m²',val:30},{lbl:'od 101 do 200 m²',val:50},{lbl:'preko 200 m²',val:80}] },
+      { id:'ind_st_po', label:'Individualne stambeno-poslovne objekte i izmjenu namjene', sub:[{lbl:'do 100 m²',val:50},{lbl:'od 101 do 200 m²',val:80},{lbl:'preko 200 m²',val:100}] },
+      { id:'kol', label:'Kolektivne stambene i stambeno-poslovne objekte', sub:[{lbl:'do 100 m²',val:100},{lbl:'od 101 do 500 m²',val:150},{lbl:'od 501 do 1000 m²',val:200},{lbl:'preko 1000 m²',val:250}] },
+      { id:'pos', label:'Poslovne i javne objekte', sub:[{lbl:'do 100 m²',val:100},{lbl:'od 101 do 500 m²',val:200},{lbl:'preko 500 m²',val:300}] },
+      { id:'mont', label:'Montažne objekte privremenog karaktera, ljetne bašte, panoe', val:50 },
+      { id:'pomocni', label:'Pomoćne objekte (garaže, šupe, ljetne kuhinje i sl.)', val:25 },
+      { id:'gosp', label:'Gospodarske objekte (štale, spremišta, poljoprivredne zgrade)', sub:[{lbl:'do 100 m²',val:30},{lbl:'od 101 do 500 m²',val:60},{lbl:'preko 500 m²',val:100}] },
+      { id:'vjerski', label:'Vjerske objekte', val:100 },
+      { id:'infra', label:'Infrastrukturne objekte (elektro, vodovod, kanalizacija, mreže, trafo)', val:350 },
+      { id:'drugo', label:'Druge vrste objekata (zahvati koji se ne mogu svrstati ni u jednu tačku)', val:60 }
+    ],
+    modifiers: true,
+    hasNaknadna: true
+  },
+  '11': {
+    name: 'Upotrebna dozvola',
+    items: [
+      { id:'zgrade', label:'Zgrade (individualne, kolektivne, javne, pomoćne)', sub:[{lbl:'do 100 m²',val:50},{lbl:'od 101 do 250 m²',val:80},{lbl:'od 251 do 500 m²',val:120},{lbl:'od 501 do 700 m²',val:150},{lbl:'preko 700 m²',val:200}] },
+      { id:'ostali', label:'Svi ostali objekti (infrastruktura, benzinske pumpe, cjevovodi, nasipi itd.)', val:200 }
+    ],
+    modifiers: false,
+    hasNaknadna: false
+  },
+  'ip': {
+    name: 'Imovinsko-pravni poslovi',
+    items: [
+      { id:'12', label:'Tarifni broj 12: Podnošenje zahtjeva iz oblasti imovinsko-pravnih poslova', val:15 },
+      { id:'13', label:'Tarifni broj 13: Određivanje zemljišta za redovnu upotrebu', val:15 },
+      { id:'14f', label:'Tarifni broj 14: Troškovi postupka za određivanje zemljišta (fizička lica)', val:100 },
+      { id:'14p', label:'Tarifni broj 14: Troškovi postupka za određivanje zemljišta (pravna lica)', val:100 },
+      { id:'15', label:'Tarifni broj 15: Ostvarivanje prvenstvenog prava korištenja zemljišta', val:100 },
+      { id:'16', label:'Tarifni broj 16: Utvrđivanje prava vlasništva u postupku privatizacije', val:100 },
+      { id:'17e', label:'Tarifni broj 17: Eksproprijacija zemljišta (zahtjev)', val:50 },
+      { id:'17t', label:'Tarifni broj 17: Eksproprijacija zemljišta (troškovi postupka)', val:200 }
+    ],
+    modifiers: false,
+    hasNaknadna: false
+  },
+  'leg': {
+    name: 'Rješenje o legalizaciji (Sl. glasnik 1/2025)',
+    items: [
+      { id:'leg_1', label:'Rješenje koje mijenja lokacijsku, građevinsku i upotrebnu dozvolu', val:200 }
+    ],
+    modifiers: false,
+    hasNaknadna: false
+  }
+};
+
+function dom(id){ return document.getElementById(id); }
+function fmt(n){ return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' KM'; }
+
+function renderOptions() {
+  const o = dom('oblast').value;
+  const vsel = dom('vrsta');
+  vsel.innerHTML = '';
+  if(!DATA[o]) return;
+  DATA[o].items.forEach((item, idx) => {
+    let opt = document.createElement('option');
+    opt.value = idx;
+    opt.textContent = item.label;
+    vsel.appendChild(opt);
+  });
+  dom('modifiers').style.display = (DATA[o].modifiers || DATA[o].hasNaknadna) ? 'block' : 'none';
+  if(dom('mod_50_wrap')) dom('mod_50_wrap').style.display = DATA[o].modifiers ? 'flex' : 'none';
+  if(dom('mod_prod_wrap')) dom('mod_prod_wrap').style.display = DATA[o].modifiers ? 'flex' : 'none';
+  if(dom('mod_nak_wrap')) dom('mod_nak_wrap').style.display = DATA[o].hasNaknadna ? 'flex' : 'none';
+  
+  if(!DATA[o].modifiers){ dom('mod_50').checked=false; dom('mod_prod').checked=false; }
+  if(!DATA[o].hasNaknadna){ dom('mod_nak').checked=false; }
+  renderSub();
+}
+
+function renderSub() {
+  const o = dom('oblast').value;
+  const vidx = dom('vrsta').value;
+  const swrap = dom('sub_wrap');
+  const sub = dom('sub');
+  sub.innerHTML = '';
+  
+  if(DATA[o] && DATA[o].items[vidx] && DATA[o].items[vidx].sub) {
+    DATA[o].items[vidx].sub.forEach((sitem, sidx) => {
+      let opt = document.createElement('option');
+      opt.value = sidx;
+      opt.textContent = sitem.lbl;
+      sub.appendChild(opt);
+    });
+    swrap.style.display = 'block';
+  } else {
+    swrap.style.display = 'none';
+  }
+}
+
+let RESULT = { tb:'', iznos:0, vrsta:'', stavka:'', modifiers:[] };
+
+function calc() {
+  const o = dom('oblast').value;
+  const vidx = dom('vrsta').value;
+  const sidx = dom('sub').value;
+  
+  if(!DATA[o] || !DATA[o].items[vidx]) return;
+  
+  const item = DATA[o].items[vidx];
+  let baseVal = 0;
+  let stavkaTekst = item.label;
+  
+  if(item.sub && item.sub[sidx]) {
+    baseVal = item.sub[sidx].val;
+    stavkaTekst += ' (' + item.sub[sidx].lbl + ')';
+  } else {
+    baseVal = item.val;
+  }
+  
+  let tb = '';
+  if(o === 'ip') {
+    tb = item.id.replace(/[a-z]/g,''); // e.g. "14f" -> "14"
+  } else {
+    tb = o;
+  }
+  
+  let finalVal = baseVal;
+  let mods = [];
+  
+  if(DATA[o].modifiers) {
+    if(dom('mod_prod').checked) {
+      finalVal = 10;
+      mods.push('Produženje važnosti dozvole / izmjena imena (fiksno 10 KM)');
+    } else if(dom('mod_50').checked) {
+      finalVal = baseVal * 0.5;
+      mods.push('Umanjenje 50% za načelnu dozvolu, rekonstrukciju ili dogradnju');
+    }
+  }
+  
+  if(DATA[o].hasNaknadna && dom('mod_nak').checked) {
+    finalVal = finalVal * 1.2;
+    mods.push('Uvećanje 20% za naknadnu dozvolu u postupku legalizacije (Sl. glasnik 1/2025)');
+  }
+  
+  dom('tarifaBadge').textContent = tb ? ('Tarifni broj ' + tb) : 'Administrativna taksa';
+  dom('ukupnoBig').textContent = fmt(finalVal);
+  dom('ukupnoSlovima').textContent = 'slovima: ' + slovima(finalVal);
+  
+  RESULT = {
+    tb: tb,
+    iznos: finalVal,
+    vrsta: DATA[o].name,
+    stavka: stavkaTekst,
+    modifiers: mods
+  };
+}
+
+/* ---- broj u riječi (KM) ---- */
+function brojURijeci(n){
+  n=parseInt(n,10); if(isNaN(n)) return ''; if(n===0) return 'nula';
+  const jed=['','jedan','dva','tri','četiri','pet','šest','sedam','osam','devet'];
+  const des11=['deset','jedanaest','dvanaest','trinaest','četrnaest','petnaest','šesnaest','sedamnaest','osamnaest','devetnaest'];
+  const des=['','','dvadeset','trideset','četrdeset','pedeset','šezdeset','sedamdeset','osamdeset','devedeset'];
+  const fem=function(d){ return d===2?'dvije':jed[d]; };
+  function stotine(h){ if(h===0) return ''; if(h===1) return 'stotinu'; if(h>=2&&h<=4) return fem(h)+'stotine'; return jed[h]+'stotina'; }
+  function dvocifra(d){ if(d<10) return jed[d]; if(d<20) return des11[d-10]; const t=Math.floor(d/10),u=d%10; return des[t]+(u?'i'+jed[u]:''); }
+  function ispod1000(x){ const h=Math.floor(x/100), r=x%100; let s=stotine(h); if(r>0){ s+=dvocifra(r); } return s; }
+  let out=''; const hilj=Math.floor(n/1000), ost=n%1000;
+  if(hilj>0){ if(hilj===1) out='hiljadu'; else if(hilj>=2&&hilj<=4){ out=(hilj===2?'dvije':ispod1000(hilj))+'hiljade'; } else out=ispod1000(hilj)+'hiljada'; }
+  if(ost>0) out+=ispod1000(ost); return out;
+}
+function slovima(num){
+  const cijeli=Math.floor(num); const para=Math.round((num-cijeli)*100);
+  let t=brojURijeci(cijeli)+' konvertibilne marke'; if(para>0) t+=' i '+(para<10?'0':'')+para+'/100'; return t;
+}
+
+function build(){
+  if(!RESULT || RESULT.iznos <= 0) return null;
+  let t = '';
+  t += 'ADMINISTRATIVNA TAKSA:\n';
+  if(RESULT.tb && RESULT.tb !== 'leg') t += '  - Tarifni broj (Odluka): ' + RESULT.tb + '\n';
+  else t += '  - Odluka: Sl. glasnik Opštine Drvar br. 1/2025\n';
+  t += '  - Predmet: ' + RESULT.vrsta + ' - ' + RESULT.stavka + '\n';
+  RESULT.modifiers.forEach(m => {
+    t += '  - Napomena: ' + m + '\n';
+  });
+  t += '  - Iznos: ' + fmt(RESULT.iznos) + '\n';
+  t += '  - Količina: 1\n';
+  t += '  - Način uplate: Banka (virman)\n';
+  t += '  (Račun 154999-5000539591, Vrsta prihoda 722131, Šifra 027)\n';
+  return t;
+}
+
+function generate(){
+  const t=build(); if(!t) return;
+  navigator.clipboard.writeText(t).then(function(){
+    toast('Kopirano! Možeš zalijepiti u tekst zahtjeva','ok');
+  },function(){ 
+    const o=dom('out'); o.textContent=t; o.style.display='block'; toast('Kopiraj ručno iz polja','warn'); 
+  });
+}
+
+let tT;
+function toast(m,type){const el=dom('toast');el.textContent=m; el.style.background = type==='warn' ? '#d29922' : '#2ea043'; el.classList.add('show'); clearTimeout(tT);tT=setTimeout(function(){el.classList.remove('show');},2400);}
+function toggleTheme(){ document.body.classList.toggle('light'); try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){} syncThemeBtn(); }
+function syncThemeBtn(){const b=dom('themeBtn'); if(b) b.textContent = document.body.classList.contains('light') ? '🌙 Tamna' : '☀️ Svijetla';}
+
+document.addEventListener('DOMContentLoaded',function(){
+  try{ if(localStorage.getItem('ipp-tema')!=='dark') document.body.classList.add('light'); }catch(e){ document.body.classList.add('light'); }
+  syncThemeBtn();
+  renderOptions();
+  calc();
+  try{ const g=document.querySelector('img.grb'); if(g&&g.getAttribute('src')){ let lk=document.querySelector('link[rel="icon"]'); if(!lk){ lk=document.createElement('link'); lk.rel='icon'; document.head.appendChild(lk);} lk.href=g.getAttribute('src'); } }catch(e){}
+});
+</script>
+</body>
+</html>

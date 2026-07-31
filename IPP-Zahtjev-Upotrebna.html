@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPP — Zahtjev za upotrebnu dozvolu</title>
+<link rel="icon" href="grb.jpg">
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light #out{background:#f1f4f8;color:#0d141c}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:14px;max-width:820px;margin:0 auto}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+  .htitle{flex:1;min-width:0}
+  .homebtn{padding:8px 12px;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  .themebtn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  body.light .grb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.12))}
+  .wrap{max-width:820px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card h2{font-size:13px;margin:0 0 14px;color:var(--h2);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 5px;font-weight:500}
+  input,select,textarea{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:11px;font-size:15px;font-family:inherit}
+  textarea{min-height:64px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:560px){.row,.row3{grid-template-columns:1fr}}
+  .lwrap{display:flex;gap:7px;align-items:center}
+  .lwrap>input{flex:1}
+  .later{display:flex;align-items:center;gap:3px;font-size:11px;color:var(--muted);white-space:nowrap;cursor:pointer;font-weight:400;margin:0}
+  .later input{width:auto;margin:0}
+  .chk{display:flex;align-items:flex-start;gap:9px;margin:8px 0;font-size:14px;color:var(--ink);font-weight:400}
+  .chk input{width:auto;margin-top:3px}
+  input[type=checkbox],input[type=radio]{width:auto!important;flex:0 0 auto;transition:none!important;animation:none!important;transform:none!important}
+  .det{display:none;margin:0 0 12px 28px;padding:10px 12px;border-left:2px solid var(--accent);border-radius:0 8px 8px 0;background:rgba(76,154,255,.07)}
+  .det.show{display:block}
+  .det label{margin-top:6px}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
+  button{border:0;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .primary{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  .primary:hover{filter:brightness(1.05)}
+  .ghost:hover{border-color:var(--accent)}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  #out{white-space:pre-wrap;background:#0a1019;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:13px;display:none;margin-top:12px;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ok);color:#fff;padding:11px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;font-weight:500}
+  .toast.show{opacity:1}
+  .req{color:#ff7b72}
+  fieldset{border:0;padding:0;margin:0}
+  .warnbox{display:none;margin-top:10px;padding:12px 14px;border-radius:10px;border:1px solid #d29922;background:rgba(210,153,34,.12);color:var(--ink);font-size:14px;font-weight:500;line-height:1.5}
+  .warnbox.show{display:block}
+  input,select,textarea,button{transition:border-color .18s ease, box-shadow .18s ease, background-color .18s ease, transform .12s ease, filter .18s ease}
+  .card{transition:border-color .2s ease, box-shadow .25s ease, transform .2s ease}
+  .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12); border-color:var(--accent); transform:translateY(-2px)}
+  .primary:active,.ghost:active{transform:translateY(1px) scale(.99)}
+  .grb{transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+  .grb:hover{transform:scale(1.07) rotate(-3deg)}
+  .chk{transition:color .15s ease}
+  .chk:hover{color:var(--accent)}
+  .themebtn{transition:transform .18s ease, background-color .18s ease}
+  .themebtn:hover{transform:scale(1.05)}
+  @media (prefers-reduced-motion: no-preference){
+    html{scroll-behavior:smooth}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes detIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+    .card{animation:fadeUp .5s cubic-bezier(.22,.61,.36,1) both}
+    .det.show{animation:detIn .24s ease}
+  }
+</style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
+</head>
+<body class="light">
+<div id="odjavaFix" style="position:fixed;top:8px;right:10px;z-index:99999"><button type="button" onclick="try{localStorage.removeItem('ipp-auth')}catch(e){};location.replace('index.html')" style="padding:7px 12px;font-size:13px;font-weight:600;border:0;border-radius:8px;background:#c0392b;color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.28)">🔒 Odjava</button></div>
+<script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+<header>
+  <div class="hwrap">
+    <img class="grb" src="grb.jpg" alt="grb">
+    <div class="htitle">
+      <h1>Zahtjev za upotrebnu dozvolu</h1>
+      <p>Tehnički pregled i odobrenje za upotrebu — Zakon o građenju HBŽ (čl. 61–66)</p>
+    </div>
+    <a class="ghost homebtn" href="index.html">← Početna</a>
+    <button type="button" id="themeBtn" class="ghost themebtn" onclick="toggleTheme()">☀️ Svijetla</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <form id="f">
+
+  <div class="card" style="border-color:var(--accent)">
+    <h2>0 · Uvezi popunjeni paket</h2>
+    <p class="hint">Naljepi paket iz <b>GRAĐEVINSKE</b> forme (ili raniji upotrebni paket) i klikni <b>Uvezi</b> — automatski prenosi investitora, parcelu, podatke o objektu i upisuje <b>građevinsku dozvolu kao osnov</b> (čl. 62), da ne prekucavaš. Prepoznaje i JSON dio.</p>
+    <textarea id="import_box" rows="4" placeholder="Ovdje naljepi paket iz građevinske forme (ili JSON)…"></textarea>
+    <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+      <button type="button" class="primary" onclick="importPaket()">Uvezi u formu</button>
+      <button type="button" class="ghost" onclick="document.getElementById('import_box').value=''">Obriši polje</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>1 · Podaci o predmetu</h2>
+    <label>Opština <span class="req">*</span></label>
+    <select name="opstina" onchange="onOpstina()">
+      <option>Drvar</option>
+      <option>Bosansko Grahovo</option>
+    </select>
+    <div id="broj_drvar" class="row" style="display:flex;gap:10px;align-items:flex-end">
+      <div style="flex:1"><label>Broj predmeta (upiši samo redni broj)</label>
+        <div style="display:flex;align-items:center;gap:6px">
+          <span style="white-space:nowrap;color:var(--muted)">UP:04-19-8-</span>
+          <input name="broj_redni" style="max-width:120px" placeholder="____">
+          <span id="godinaLbl" style="color:var(--muted)">/26</span>
+        </div>
+      </div>
+    </div>
+    <div id="broj_free" style="display:none"><label>Broj predmeta</label><input name="broj_slobodni" placeholder="upiši broj predmeta"></div>
+    <div class="row">
+      <div><label>Datum zahtjeva</label><input name="datum" placeholder="dd.mm.gggg."></div>
+      <div><label>Nadležni organ (izdao građ. dozvolu)</label><input name="organ" readonly></div>
+    </div>
+    <label>Vrsta akta</label>
+    <select name="vrsta_dozvole" onchange="onVrsta()">
+      <option>Upotrebna dozvola</option>
+      <option>Naknadna upotrebna dozvola (legalizacija)</option>
+      <option>Odobrenje za probni rad</option>
+      <option>Rješenje o završenom objektu (čl. 41 — jednostavne građevine)</option>
+    </select>
+    <label>Nadležnost za izdavanje</label>
+    <select name="nadleznost" onchange="onNadleznost()">
+      <option>Opštinska služba</option>
+      <option>Ministarstvo (Livno)</option>
+    </select>
+    <p class="hint" id="nadl_hint"></p>
+    <div class="det" id="det_naknadna">
+      <label>Naknadna građevinska dozvola (legalizacija) — broj</label><input name="nak_gd_broj">
+      <div class="row">
+        <div><label>Datum</label><input name="nak_gd_datum" placeholder="dd.mm.gggg."></div>
+        <div><label>Osnov</label><input name="nak_osnov" placeholder="Zakon o legalizaciji HBŽ 11/23, čl. 20"></div>
+      </div>
+    </div>
+    <div class="det" id="det_probni">
+      <label>Odobrenje za probni rad (čl. 66) — uslovi / rok probnog rada</label>
+      <input name="probni_uslovi" placeholder="npr. probni rad 90 dana, uz mjere...">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>2 · Investitor</h2>
+    <label>Investitor / podnosilac <span class="req">*</span></label>
+    <input name="investitor" placeholder="ime i prezime ili naziv pravnog lica">
+    <div class="row">
+      <div><label>Adresa / sjedište</label><input name="adresa_investitora"></div>
+      <div><label>Zastupnik / punomoćnik</label><input name="zastupnik" oninput="onZastupnik()"></div>
+    </div>
+    <div class="det" id="det_punomoc">
+      <label style="font-weight:600;color:var(--ink)">Punomoć (kad postupa punomoćnik)</label>
+      <div class="row3">
+        <div><label>Punomoć — broj</label><input name="punomoc_broj"></div>
+        <div><label>Ko je izdao</label><input name="punomoc_izdao"></div>
+        <div><label>Datum</label><input name="punomoc_datum" placeholder="dd.mm.gggg."></div>
+      </div>
+    </div>
+    <label>Kontakt (nije obavezno)</label><input name="kontakt">
+  </div>
+
+  <div class="card">
+    <h2>3 · Lokacija</h2>
+    <div class="row">
+      <div><label>Katastarska opština <span class="req">*</span></label><select name="ko"></select></div>
+      <div><label>Broj k.č. <span class="req">*</span></label><input name="kc"></div>
+    </div>
+    <div class="row">
+      <div><label>Posjedovni list (PL) broj</label><input name="pl_broj"></div>
+      <div><label>Površina parcele (m²)</label><input name="povrsina_parcele" inputmode="decimal"></div>
+    </div>
+    <label>Nosioci prava (vlasnici) i udjeli</label>
+    <div id="vlasnici_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addVlasnik()">+ Dodaj vlasnika</button>
+    <label>Naselje / ulica / mjesto</label><input name="mjesto">
+  </div>
+
+  <div class="card">
+    <h2>4 · Osnov — građevinska dozvola (čl. 62)</h2>
+    <p class="hint">Uz zahtjev za upotrebnu dozvolu obavezno se prilaže kopija građevinske dozvole. Podaci se prenose iz građevinskog paketa.</p>
+    <div class="row3">
+      <div><label>Građevinska dozvola — broj</label><input name="gd_broj"></div>
+      <div><label>Datum</label><input name="gd_datum" placeholder="dd.mm.gggg."></div>
+      <div><label>Izdao</label><input name="gd_izdao" placeholder="npr. Služba za IP i GP"></div>
+    </div>
+    <label>Da li je građevina izgrađena u skladu s građevinskom dozvolom? (čl. 65)</label>
+    <select name="uskladjenost"><option>Da</option><option>Uz odstupanja — potrebna izmjena dozvole</option><option>Ne</option></select>
+    <p class="hint">Ako je građeno bez dozvole ili uz izmjene bez izmjene dozvole — zahtjev se odbija (čl. 65. st. 2), osim u postupku legalizacije.</p>
+  </div>
+
+  <div class="card">
+    <h2>5 · Građevina</h2>
+    <label>Vrsta i opis građevine <span class="req">*</span></label>
+    <input name="vrsta_gradjevine" placeholder="npr. poslovni objekat — trgovina">
+    <div class="row">
+      <div><label>Namjena</label>
+        <select name="namjena"><option value="">—</option><option>Stambeni</option><option>Poslovni</option><option>Stambeno-poslovni</option><option>Gospodarski/poljoprivredni</option><option>Proizvodni</option><option>Infrastrukturni</option><option>Javni</option></select>
+      </div>
+      <div><label>Vrsta zahvata</label>
+        <select name="zahvat"><option>Novogradnja</option><option>Rekonstrukcija</option><option>Dogradnja</option><option>Nadogradnja</option><option>Promjena namjene građevine</option></select>
+      </div>
+    </div>
+    <div class="row3">
+      <div><label>Tlocrt — dužina (m)</label><input name="duzina" inputmode="decimal"></div>
+      <div><label>Tlocrt — širina (m)</label><input name="sirina" inputmode="decimal"></div>
+      <div><label>Nepravilan oblik / dvije dim.</label><input name="dim_dodatno"></div>
+    </div>
+    <div class="row3">
+      <div><label>Bruto površina (m²)</label><input name="bruto" inputmode="decimal"></div>
+      <div><label>Neto površina (m²)</label><input name="neto" inputmode="decimal"></div>
+      <div><label>Spratnost</label><input name="katnost" placeholder="P, P+1"></div>
+    </div>
+    <div class="row3">
+      <div><label>Visina objekta (m)</label><div class="lwrap"><input name="visina" inputmode="decimal"><label class="later"><input type="checkbox" data-t="visina" onchange="laterField(this)">kasnije</label></div></div>
+      <div><label>Visina vijenca (m)</label><div class="lwrap"><input name="visina_vijenca" inputmode="decimal"><label class="later"><input type="checkbox" data-t="visina_vijenca" onchange="laterField(this)">kasnije</label></div></div>
+      <div><label>Visina sljemena (m)</label><div class="lwrap"><input name="visina_sljemena" inputmode="decimal"><label class="later"><input type="checkbox" data-t="visina_sljemena" onchange="laterField(this)">kasnije</label></div></div>
+    </div>
+    <div class="row">
+      <div><label>Broj stambenih jedinica</label><input name="br_stamb" inputmode="numeric"></div>
+      <div><label>Broj poslovnih jedinica</label><input name="br_posl" inputmode="numeric"></div>
+    </div>
+    <label style="margin-top:10px">Više objekata na parceli (ako se pregleda 2+ objekta)</label>
+    <div id="objekti_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addObjekat()">+ Dodaj objekat</button>
+  </div>
+
+  <div class="card">
+    <h2>6 · Sudionici u gradnji (čl. 62)</h2>
+    <p class="hint">Podatke o sudionicima obavezno navesti uz zahtjev.</p>
+    <div class="row"><div><label>Projektant (biro)</label><input name="projektant"></div><div><label>Odgovorni projektant</label><input name="projektant_odg"></div></div>
+    <div class="row"><div><label>Izvođač radova</label><input name="izvodjac"></div><div><label>Odgovorni voditelj radova</label><input name="izvodjac_odg"></div></div>
+    <div class="row"><div><label>Nadzorni inženjer (firma)</label><input name="nadzor"></div><div><label>Odgovorni nadzorni inženjer</label><input name="nadzor_odg"></div></div>
+    <label>Revident (kontrola projekta, ako je bila)</label><input name="revident">
+  </div>
+
+  <div class="card">
+    <h2>7 · Dokumentacija za tehnički pregled (čl. 62 i 64)</h2>
+    <label style="font-weight:600;color:var(--ink)">Geodetski situacijski nacrt stvarnog stanja (izvedena građevina)</label>
+    <div class="row3">
+      <div><label>Broj</label><input name="geo_broj"></div>
+      <div><label>Izradio</label><input name="geo_izradio"></div>
+      <div><label>Datum</label><input name="geo_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <p class="hint" style="margin-top:10px">Označi šta je priloženo; podaci se dijelom prekopiraju odozgo.</p>
+    <fieldset id="prilozi_box"></fieldset>
+  </div>
+
+  <div class="card">
+    <h2>8 · Tehnički pregled (čl. 63–65)</h2>
+    <p class="hint">Tehnički pregled obavlja povjerenstvo (za jednostavne objekte i legalizaciju — djelatnik organa). Rok za pregled: 30 dana od urednog zahtjeva.</p>
+    <div class="row">
+      <div><label>Rješenje o imenovanju Komisije — broj</label><input name="komisija_imen_broj"></div>
+      <div><label>Datum imenovanja</label><input name="komisija_imen_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <label>Članovi Komisije za tehnički pregled (predsjednik + članovi)</label>
+    <p class="hint">Za svakog: ime i prezime, struka (npr. dipl. ing. elektrotehnike) i uloga. Ovim se popunjava i <b>Rješenje o imenovanju Komisije</b>.</p>
+    <div id="clanovi_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addClan()">+ Dodaj člana</button>
+    <div class="row3">
+      <div><label>Datum tehničkog pregleda (očevid)</label><input name="tp_datum" placeholder="dd.mm.gggg."></div>
+      <div><label>Sat pregleda</label><input name="tp_sat" placeholder="npr. 10:00"></div>
+      <div><label>Zapisnik o teh. pregledu — broj</label><input name="tp_zapisnik_broj"></div>
+    </div>
+    <label>Mišljenje povjerenstva</label>
+    <select name="tp_misljenje" onchange="onMisljenje()">
+      <option>Građevina se može koristiti (nema nedostataka)</option>
+      <option>Može se koristiti uz otklanjanje nedostataka u roku (čl. 65. st. 3)</option>
+      <option>Ne može se izdati — bitni nedostaci / bez dozvole (čl. 65. st. 2)</option>
+    </select>
+    <div class="det" id="det_nedostaci">
+      <label>Nedostaci i rok za otklanjanje (čl. 7 Pravilnika)</label>
+      <input name="tp_rok_nedostaci" placeholder="npr. otkloniti u roku od 30 dana: ...">
+      <div class="row">
+        <div><label>Kontrolni pregled — datum (drugi izlazak)</label><input name="tp_kontrolni_datum" placeholder="dd.mm.gggg."></div>
+        <div><label>Dopuna zapisnika / završno mišljenje — broj</label><input name="tp_dopuna_broj"></div>
+      </div>
+    </div>
+    <label class="chk" style="margin-top:10px"><input type="checkbox" name="probni_da" onchange="onProbni()"> Potreban probni rad prije upotrebe (tehnološki objekti — čl. 66)</label>
+    <div class="det" id="det_probni2">
+      <label>Uslovi probnog rada</label><input name="probni_uslovi2" placeholder="npr. probni rad 90 dana uz mjere...">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>9 · Troškovi rada Komisije (Zaključak — Pravilnik o teh. pregledu, čl. 14–16)</h2>
+    <p class="hint">Prije upotrebne dozvole rukovoditelj donosi <b>Zaključak o troškovima rada Komisije</b>; investitor ih uplaćuje na žiro-račun. Naknada po danu ovisi o investicijskoj vrijednosti: do 100.000 KM → 70 KM/dan; 100.000–300.000 → 100 KM/dan; preko 300.000 → 150 KM/dan (predsjedniku +20%).</p>
+    <div class="row">
+      <div><label>Investicijska vrijednost građevine (KM)</label><input name="investicijska_vrijednost" placeholder="npr. 120.000,00"></div>
+      <div><label>Broj dana teh. pregleda (Obrazac 1)</label><input name="tp_broj_dana" inputmode="numeric"></div>
+    </div>
+    <div class="row">
+      <div><label>Troškovnik Službe za finansije — broj</label><input name="troskovnik_broj"></div>
+      <div><label>Datum troškovnika</label><input name="troskovnik_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <div class="row">
+      <div><label>Zaključak o troškovima — broj</label><input name="zakljucak_troskovi_broj"></div>
+      <div><label>Datum zaključka</label><input name="zakljucak_troskovi_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <div class="row">
+      <div><label>Iznos troškova Komisije (KM)</label><input name="troskovi_iznos" placeholder="npr. 1177,58"></div>
+      <div><label>&nbsp;</label><button type="button" class="ghost" onclick="iznosSlovima('troskovi_iznos','troskovi_slovima')">Ispiši slovima ↓</button></div>
+    </div>
+    <label>Iznos slovima (možeš urediti)</label>
+    <input name="troskovi_slovima" placeholder="npr. hiljadustotinusedamdesetsedam konvertibilne marke i 58/100">
+    <label>Dokaz o uplati troškova — datum / nalog</label><input name="troskovi_uplata" placeholder="npr. 18.02.2026., nalog 741110">
+  </div>
+
+  <div class="card">
+    <h2>10 · Administrativna taksa</h2>
+    <p class="hint">Tarifni broj i iznos utvrđuje se prema <b>Odluci o administrativnim taksama</b> — popuniti ručno.</p>
+    <div class="row3">
+      <div><label>Tarifni broj (prema Odluci)</label><input name="taksa_tarifa" placeholder="npr. 5"></div>
+      <div><label>Iznos takse (KM)</label><input name="taksa_iznos" inputmode="decimal" placeholder="npr. 50,00"></div>
+      <div><label>Količina</label><input name="taksa_kolicina" inputmode="numeric" placeholder="npr. 1"></div>
+    </div>
+    <label>Način uplate</label>
+    <select name="taksa_nacin" onchange="onTaksaNacin()">
+      <option value="">— izaberi —</option>
+      <option>Blagajna (gotovina)</option>
+      <option>Banka (virman)</option>
+    </select>
+    <div class="det" id="det_taksa_banka">
+      <label>Broj uplatnice / nalog (banka)</label>
+      <input name="taksa_uplatnica" placeholder="broj uplatnice / referenca plaćanja">
+      <p class="hint">Popuniti ako je uplata preko banke (virman).</p>
+    </div>
+    <div class="det" id="det_taksa_blagajna">
+      <label>Broj kvita (blagajna)</label>
+      <input name="taksa_kvit" placeholder="broj kvita / naloga blagajne">
+    </div>
+    <label>Datum uplate</label>
+    <input name="taksa_datum" placeholder="dd.mm.gggg.">
+    <p class="hint">Pouka o pravnom lijeku: račun <b>154999-5000539591</b>, vrsta prihoda <b>722131</b>, šifra <b>027</b>.</p>
+  </div>
+
+  <div class="card">
+    <h2>11 · Napomene za obradu</h2>
+    <textarea name="napomene" placeholder="specifičnosti, posebni uslovi…"></textarea>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="primary" onclick="generate()">Generiši paket podataka</button>
+    <button type="button" class="ghost" onclick="copyOut()">Kopiraj sve</button>
+    <button type="button" class="ghost" onclick="download()">Preuzmi .txt</button>
+    <button type="reset" class="ghost">Očisti formu</button>
+  </div>
+  <pre id="out"></pre>
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const F = () => document.getElementById('f');
+const fields = [
+  ['opstina','Opština'],
+  ['datum','Datum zahtjeva'],['organ','Nadležni organ'],['vrsta_dozvole','Vrsta akta'],['nadleznost','Nadležnost za izdavanje'],
+  ['nak_gd_broj','Naknadna građ. dozvola - broj'],['nak_gd_datum','Naknadna građ. dozvola - datum'],['nak_osnov','Osnov legalizacije'],
+  ['investitor','Investitor / podnosilac'],['adresa_investitora','Adresa / sjedište'],['zastupnik','Zastupnik/punomoćnik'],['punomoc_broj','Punomoć - broj'],['punomoc_izdao','Punomoć - izdao'],['punomoc_datum','Punomoć - datum'],['kontakt','Kontakt'],
+  ['ko','Katastarska opština'],['kc','Broj k.č.'],['pl_broj','Posjedovni list broj'],['povrsina_parcele','Površina parcele (m²)'],['mjesto','Naselje/ulica/mjesto'],
+  ['gd_broj','Građevinska dozvola - broj'],['gd_datum','Građevinska dozvola - datum'],['gd_izdao','Građevinska dozvola - izdao'],['uskladjenost','Usklađeno s dozvolom'],
+  ['vrsta_gradjevine','Vrsta i opis građevine'],['namjena','Namjena'],['zahvat','Vrsta zahvata'],
+  ['duzina','Tlocrt dužina (m)'],['sirina','Tlocrt širina (m)'],['dim_dodatno','Dodatne dimenzije/oblik'],
+  ['bruto','Bruto površina (m²)'],['neto','Neto površina (m²)'],['katnost','Spratnost'],
+  ['visina','Visina (m)'],['visina_vijenca','Visina vijenca (m)'],['visina_sljemena','Visina sljemena (m)'],
+  ['br_stamb','Broj stambenih jedinica'],['br_posl','Broj poslovnih jedinica'],
+  ['projektant','Projektant (biro)'],['projektant_odg','Odgovorni projektant'],['izvodjac','Izvođač radova'],['izvodjac_odg','Odgovorni voditelj radova'],['nadzor','Nadzorni inženjer (firma)'],['nadzor_odg','Odgovorni nadzorni inženjer'],['revident','Revident'],
+  ['geo_broj','Geodetski nacrt - broj'],['geo_izradio','Geodetski nacrt - izradio'],['geo_datum','Geodetski nacrt - datum'],
+  ['komisija_imen_broj','Rješenje o imenovanju Komisije - broj'],['komisija_imen_datum','Datum imenovanja Komisije'],
+  ['tp_datum','Datum tehničkog pregleda'],['tp_sat','Sat pregleda'],['tp_zapisnik_broj','Zapisnik o teh. pregledu - broj'],['tp_misljenje','Mišljenje povjerenstva'],['tp_rok_nedostaci','Nedostaci / rok'],['tp_kontrolni_datum','Kontrolni pregled - datum'],['tp_dopuna_broj','Dopuna zapisnika - broj'],
+  ['probni_uslovi','Probni rad - uslovi (akt)'],['probni_uslovi2','Probni rad - uslovi'],
+  ['investicijska_vrijednost','Investicijska vrijednost (KM)'],['tp_broj_dana','Broj dana teh. pregleda'],['troskovnik_broj','Troškovnik - broj'],['troskovnik_datum','Troškovnik - datum'],['zakljucak_troskovi_broj','Zaključak o troškovima - broj'],['zakljucak_troskovi_datum','Zaključak o troškovima - datum'],['troskovi_iznos','Troškovi Komisije - iznos (KM)'],['troskovi_slovima','Troškovi Komisije - slovima'],['troskovi_uplata','Troškovi - dokaz o uplati'],
+  ['taksa_tarifa','Taksa - tarifni broj'],['taksa_iznos','Administrativna taksa (KM)'],['taksa_kolicina','Taksa - količina'],['taksa_nacin','Taksa - način uplate'],['taksa_uplatnica','Taksa - uplatnica/broj (banka)'],['taksa_kvit','Taksa - broj kvita (blagajna)'],['taksa_datum','Taksa - datum uplate']
+];
+const priloziMap = [
+  {k:'p_gd', label:'Kopija građevinske dozvole', det:[['pgd_broj','Broj'],['pgd_datum','Datum'],['pgd_izdao','Izdao']]},
+  {k:'p_geo', label:'Geodetski situacijski nacrt stvarnog stanja', det:[['pgeo_broj','Broj'],['pgeo_izradio','Izradio'],['pgeo_datum','Datum']]},
+  {k:'p_izjava', label:'Pisana izjava izvođača o izvedenim radovima i održavanju', det:[['pizj_broj','Broj'],['pizj_datum','Datum']]},
+  {k:'p_zavrsno', label:'Završno izvješće nadzornog inženjera', det:[['pzav_broj','Broj'],['pzav_izradio','Izradio'],['pzav_datum','Datum']]},
+  {k:'p_kvalitet', label:'Dokaz o kvalitetu radova i materijala (atesti)', det:[['pkv_opis','Opis / broj']]},
+  {k:'p_revident', label:'Zbirno izvješće revidenata (za objekte s kontrolom)', det:[['prev_broj','Broj'],['prev_datum','Datum']]},
+  {k:'p_obrazac1', label:'Obrazac 1 (Komisija — složenost/broj dana)', det:[['pob1_datum','Datum']]},
+  {k:'p_obrazac2', label:'Obrazac 2 (Komisija — visina naknade)', det:[['pob2_datum','Datum']]},
+  {k:'p_troskovi', label:'Dokaz o uplati troškova rada Komisije', det:[['ptr_iznos','Iznos (KM)'],['ptr_datum','Datum']]},
+  {k:'p_kat', label:'Preslika kat. plana s ucrtanom građevinom (legalizacija)', det:[['pkat_broj','Broj'],['pkat_datum','Datum']]},
+  {k:'p_taksa', label:'Dokaz o uplati administrativne takse', det:[['ptak_iznos','Iznos (KM)'],['ptak_nalog','Nalog/broj']]}
+];
+
+const KO = {
+  'Drvar': ['ATAŠEVAC','BASTASI I','BASTASI II','DRVAR GRAD','DRVAR SELO','KAMENICA','LJESKOVICA I','LJESKOVICA II','PODOVI','ŠIPOVLJANI','ŠTRPCI MALI','ŠTRPCI VELIKI','VIDOVO SELO','VRTOČE'],
+  'Bosansko Grahovo': ['CRNI LUG','GRAHOVO I','GRAHOVO II','MARINKOVCI','PEĆI','PEULJE','PREODAC','TIČEVO MALO','TIŠKOVAC DONJI']
+};
+const ORGAN = {
+  'Drvar': 'Opština Drvar — Služba za imovinsko-pravne i geodetske poslove',
+  'Bosansko Grahovo': 'Opština Bosansko Grahovo — Služba za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove'
+};
+function val(n){const e=F().elements[n];return e?e.value.trim():'';}
+function godina2(){return String(new Date().getFullYear()).slice(-2);}
+function brojPredmeta(){
+  if(val('opstina')==='Drvar'){ const r = val('broj_redni') || '______'; return 'UP:04-19-8-'+r+'/'+godina2(); }
+  return val('broj_slobodni') || '______';
+}
+function onOpstina(){
+  const o = F().elements['opstina'].value;
+  const sel = F().elements['ko']; const prev = sel.value;
+  sel.innerHTML = '<option value="">— izaberi k.o. —</option>';
+  (KO[o]||[]).forEach(function(k){ const op=document.createElement('option'); op.textContent=k; sel.appendChild(op); });
+  if((KO[o]||[]).indexOf(prev)>=0) sel.value=prev;
+  if(F().elements['organ']) F().elements['organ'].value = ORGAN[o] || '';
+  const bd=document.getElementById('broj_drvar'), bf=document.getElementById('broj_free');
+  if(bd&&bf){ const dr=(o==='Drvar'); bd.style.display=dr?'flex':'none'; bf.style.display=dr?'none':'block'; }
+}
+function onNadleznost(){ const h=document.getElementById('nadl_hint');
+  if(h) h.textContent = (val('nadleznost')==='Ministarstvo (Livno)')
+    ? 'Upotrebnu dozvolu izdaje organ koji je izdao građevinsku dozvolu (Ministarstvo).'
+    : 'Upotrebnu dozvolu izdaje opštinski organ koji je izdao građevinsku dozvolu.'; }
+function onVrsta(){
+  const v=val('vrsta_dozvole');
+  const show=function(id,cond){ const d=document.getElementById(id); if(d) d.classList.toggle('show',cond); };
+  show('det_naknadna', v==='Naknadna upotrebna dozvola (legalizacija)');
+  show('det_probni', v==='Odobrenje za probni rad');
+}
+function onZastupnik(){ const d=document.getElementById('det_punomoc'); if(d) d.classList.toggle('show', !!val('zastupnik')); }
+function onMisljenje(){ const d=document.getElementById('det_nedostaci'); if(d) d.classList.toggle('show', /otklanjanje/i.test(val('tp_misljenje'))); }
+function onProbni(){ const cb=F().elements['probni_da']; const d=document.getElementById('det_probni2'); if(d) d.classList.toggle('show', cb&&cb.checked); }
+
+/* later */
+function laterField(cb){ const name=cb.dataset.t; const el=F().elements[name]; if(!el) return;
+  if(cb.checked){ el.dataset.prev=el.value; el.value='______'; el.disabled=true; el.style.opacity=.55; }
+  else { el.disabled=false; el.style.opacity=1; el.value=el.dataset.prev||''; } }
+
+/* vlasnici */
+function addVlasnik(ime,udio){ const wrap=document.getElementById('vlasnici_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='row'; div.style.marginBottom='8px';
+  div.innerHTML='<div><input class="vl_ime" placeholder="Ime / naziv vlasnika"></div>'
+    +'<div style="display:flex;gap:6px"><input class="vl_udio" placeholder="udio (npr. 1/1)" style="flex:1">'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.row\').remove()">&times;</button></div>';
+  if(ime) div.querySelector('.vl_ime').value=ime; if(udio) div.querySelector('.vl_udio').value=udio; wrap.appendChild(div); }
+function vlasniciData(){ const rows=document.querySelectorAll('#vlasnici_list .row'); const arr=[];
+  rows.forEach(function(r){ const a=r.querySelector('.vl_ime'), b=r.querySelector('.vl_udio');
+    const im=(a?a.value:'').trim(), ud=(b?b.value:'').trim(); if(im||ud) arr.push({ime:im, udio:ud}); }); return arr; }
+
+/* članovi Komisije za tehnički pregled */
+function addClan(ime,struka,uloga){ const wrap=document.getElementById('clanovi_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='row3'; div.style.marginBottom='8px';
+  div.innerHTML='<div><input class="cl_ime" placeholder="Ime i prezime"></div>'
+    +'<div><input class="cl_struka" placeholder="struka (npr. dipl. ing. građ.)"></div>'
+    +'<div style="display:flex;gap:6px"><select class="cl_uloga" style="flex:1"><option>član</option><option>predsjednik</option></select>'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.row3\').remove()">&times;</button></div>';
+  if(ime) div.querySelector('.cl_ime').value=ime; if(struka) div.querySelector('.cl_struka').value=struka;
+  if(uloga) div.querySelector('.cl_uloga').value=uloga; wrap.appendChild(div); }
+function clanoviData(){ const rows=document.querySelectorAll('#clanovi_list .row3'); const arr=[];
+  rows.forEach(function(r){ const g=function(c){const e=r.querySelector(c);return e?e.value.trim():'';};
+    const im=g('.cl_ime'), st=g('.cl_struka'), ul=g('.cl_uloga'); if(im||st) arr.push({ime:im, struka:st, uloga:ul||'član'}); }); return arr; }
+
+/* dodatni objekti */
+function addObjekat(o){ o=o||{}; const wrap=document.getElementById('objekti_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.style.cssText='border:1px solid var(--line);border-radius:9px;padding:10px;margin-bottom:8px';
+  div.innerHTML='<input class="ob_opis" placeholder="Opis objekta" style="margin-bottom:6px">'
+    +'<div class="row3"><input class="ob_duz" placeholder="dužina (m)"><input class="ob_sir" placeholder="širina (m)"><input class="ob_bruto" placeholder="bruto (m²)"></div>'
+    +'<div class="row3" style="margin-top:6px"><input class="ob_kat" placeholder="spratnost"><input class="ob_vij" placeholder="vijenac (m)"><input class="ob_slj" placeholder="sljeme (m)"></div>'
+    +'<button type="button" class="ghost" style="margin-top:6px;padding:6px 12px" onclick="this.closest(\'div\').remove()">Ukloni</button>';
+  wrap.appendChild(div);
+  const set=function(c,v){ if(v){ const e=div.querySelector(c); if(e) e.value=v; } };
+  set('.ob_opis',o.opis); set('.ob_duz',o.duzina); set('.ob_sir',o.sirina); set('.ob_bruto',o.bruto); set('.ob_kat',o.katnost); set('.ob_vij',o.vijenac); set('.ob_slj',o.sljeme); }
+function objektiData(){ const rows=document.querySelectorAll('#objekti_list > div'); const arr=[];
+  rows.forEach(function(r){ const g=function(c){const e=r.querySelector(c);return e?e.value.trim():'';};
+    const o={opis:g('.ob_opis'),duzina:g('.ob_duz'),sirina:g('.ob_sir'),bruto:g('.ob_bruto'),katnost:g('.ob_kat'),vijenac:g('.ob_vij'),sljeme:g('.ob_slj')};
+    if(o.opis||o.duzina||o.sirina||o.bruto||o.katnost||o.vijenac||o.sljeme) arr.push(o); }); return arr; }
+
+/* prilozi -> auto prekopiraj odozgo */
+const prilogFrom = {
+  p_gd:{pgd_broj:'gd_broj', pgd_datum:'gd_datum', pgd_izdao:'gd_izdao'},
+  p_geo:{pgeo_broj:'geo_broj', pgeo_izradio:'geo_izradio', pgeo_datum:'geo_datum'},
+  p_troskovi:{ptr_iznos:'troskovi_iznos'},
+  p_taksa:{ptak_iznos:'taksa_iznos'}
+};
+function prefillPrilog(pk){ const map=prilogFrom[pk]; if(!map) return;
+  for(const dst in map){ const src=map[dst]; const de=F().elements[dst], se=F().elements[src];
+    if(de && se && !de.value && se.value) de.value=se.value; } }
+
+/* broj u riječi (KM) */
+function brojURijeci(n){
+  n=parseInt(n,10); if(isNaN(n)) return ''; if(n===0) return 'nula';
+  const jed=['','jedan','dva','tri','četiri','pet','šest','sedam','osam','devet'];
+  const des11=['deset','jedanaest','dvanaest','trinaest','četrnaest','petnaest','šesnaest','sedamnaest','osamnaest','devetnaest'];
+  const des=['','','dvadeset','trideset','četrdeset','pedeset','šezdeset','sedamdeset','osamdeset','devedeset'];
+  const fem=function(d){ return d===2?'dvije':jed[d]; };
+  function stotine(h){ if(h===0) return ''; if(h===1) return 'stotinu'; if(h>=2&&h<=4) return fem(h)+'stotine'; return jed[h]+'stotina'; }
+  function dvocifra(d){ if(d<10) return jed[d]; if(d<20) return des11[d-10]; const t=Math.floor(d/10),u=d%10; return des[t]+(u? 'i'+jed[u]:''); }
+  function ispod1000(x){ const h=Math.floor(x/100), r=x%100; let s=stotine(h); if(r>0){ s+=dvocifra(r); } return s; }
+  let out=''; const hilj=Math.floor(n/1000), ost=n%1000;
+  if(hilj>0){ if(hilj===1) out='hiljadu'; else if(hilj>=2&&hilj<=4){ out=(hilj===2?'dvije':ispod1000(hilj))+'hiljade'; } else out=ispod1000(hilj)+'hiljada'; }
+  if(ost>0) out+=ispod1000(ost); return out;
+}
+function iznosSlovima(src,dst){
+  src=src||'troskovi_iznos'; dst=dst||'troskovi_slovima';
+  let raw=(val(src)||'').replace(/\s|KM|km/g,'').replace(/\./g,'').replace(',','.');
+  const num=parseFloat(raw); if(isNaN(num)){ toast('Upiši iznos brojčano (npr. 1177,58)','warn'); return; }
+  const cijeli=Math.floor(num); const para=Math.round((num-cijeli)*100);
+  let txt=brojURijeci(cijeli)+' konvertibilne marke'; if(para>0) txt+=' i '+(para<10?'0':'')+para+'/100';
+  if(F().elements[dst]) F().elements[dst].value=txt; toast('Upisano slovima','ok');
+}
+
+/* build */
+function pad(s){ s=s||''; while(s.length<40) s+=' '; return s; }
+function build(){
+  const required=['investitor','ko','kc','vrsta_gradjevine'];
+  for(const r of required){ if(!val(r)){ toast('Popuni obavezna polja (*)','warn'); const e=F().elements[r]; if(e) e.focus(); return null; } }
+  let t='================================================\n';
+  t+='  ZAHTJEV ZA UPOTREBNU DOZVOLU - OPSTINA '+(val('opstina')||'').toUpperCase()+'\n';
+  t+='  (paket za obradu u Coworku - agenti: pravnik > pisar > revizor)\n';
+  t+='================================================\n\n';
+  t+=pad('Broj predmeta')+': '+brojPredmeta()+'\n';
+  for(const [k,label] of fields){ const v=val(k); if(v) t+=pad(label)+': '+v+'\n'; }
+  if(F().elements['probni_da'] && F().elements['probni_da'].checked) t+=pad('Potreban probni rad')+': Da\n';
+  const vl=vlasniciData();
+  if(vl.length){ t+='\nNOSIOCI PRAVA (VLASNICI):\n'; vl.forEach(function(v){ t+='  - '+(v.ime||'?')+' | udio: '+(v.udio||'-')+'\n'; }); }
+  const cl=clanoviData();
+  if(cl.length){ t+='\nKOMISIJA ZA TEHNICKI PREGLED (za Rjesenje o imenovanju):\n'; cl.forEach(function(c){ t+='  - '+(c.ime||'?')+', '+(c.struka||'-')+' — '+(c.uloga||'clan')+'\n'; }); }
+  const ob=objektiData();
+  if(ob.length){ t+='\nDODATNI OBJEKTI NA PARCELI:\n'; ob.forEach(function(o){ t+='  - '+(o.opis||'objekat')+': '+(o.duzina||'?')+' x '+(o.sirina||'?')+' m, bruto '+(o.bruto||'-')+' m2, spratnost '+(o.katnost||'-')+', vijenac '+(o.vijenac||'-')+', sljeme '+(o.sljeme||'-')+'\n'; }); }
+
+  t+='\nPRILOZENA DOKUMENTACIJA:\n'; let any=false;
+  for(const p of priloziMap){ if(F().elements[p.k] && F().elements[p.k].checked){ t+='  [x] '+p.label+'\n'; any=true;
+    if(p.det) for(const d of p.det){ const v=val(d[0]); if(v) t+='        - '+d[1]+': '+v+'\n'; } } }
+  if(!any) t+='  (nista oznaceno)\n';
+
+  const nap=val('napomene'); if(nap){ t+='\nNAPOMENE:\n'+nap+'\n'; }
+  t+='\n--- kraj zahtjeva ---\n';
+
+  const obj={broj_predmeta:brojPredmeta()};
+  for(const [k] of fields) obj[k]=val(k);
+  obj.probni_da=(F().elements['probni_da']&&F().elements['probni_da'].checked)?'Da':'';
+  obj.vlasnici=vlasniciData();
+  obj.clanovi_komisije=clanoviData();
+  obj.dodatni_objekti=objektiData();
+  obj.prilozi=[];
+  for(const p of priloziMap){ if(F().elements[p.k] && F().elements[p.k].checked){ const e={stavka:p.label};
+    if(p.det) for(const d of p.det){ e[d[0]]=val(d[0]); } obj.prilozi.push(e); } }
+  obj.napomene=nap;
+  t+='\n--- JSON ---\n'+JSON.stringify(obj,null,2)+'\n';
+  return t;
+}
+function generate(){ const t=build(); if(t===null) return;
+  const o=document.getElementById('out'); o.textContent=t; o.style.display='block'; o.scrollIntoView({behavior:'smooth',block:'start'});
+  toast('Paket generisan - kopiraj ili preuzmi','ok'); }
+function copyOut(){ const t=build(); if(t===null) return;
+  navigator.clipboard.writeText(t).then(function(){ toast('Kopirano','ok'); },function(){ const o=document.getElementById('out'); o.textContent=t; o.style.display='block'; toast('Kopiraj ručno iz polja','warn'); }); }
+function download(){ const t=build(); if(t===null) return;
+  const naziv=brojPredmeta().replace(/[\\/:*?"<>|]/g,'-')+'_'+(val('investitor')||'').replace(/[\\/:*?"<>|]/g,'-').slice(0,30);
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'}); const a=document.createElement('a');
+  a.href=URL.createObjectURL(blob); a.download='ZAHTJEV_UPOTREBNA_'+naziv+'.txt'; a.click(); toast('Spremi u folder 01_ZAHTJEVI','ok'); }
+
+let tT;
+function toast(m,type){const el=document.getElementById('toast');el.textContent=m;
+  el.style.background = type==='warn' ? '#d29922' : '#2ea043'; el.classList.add('show');
+  clearTimeout(tT);tT=setTimeout(function(){el.classList.remove('show');},2600);}
+
+function wireDetails(){
+  for(const p of priloziMap){ const cb=F().elements[p.k]; const det=document.getElementById('det_'+p.k); const pk=p.k;
+    if(cb && det){ const upd=function(){ det.classList.toggle('show', cb.checked); if(cb.checked) prefillPrilog(pk); }; cb.addEventListener('change',upd); upd(); } }
+}
+function buildPrilozi(){
+  const box=document.getElementById('prilozi_box'); if(!box) return;
+  priloziMap.forEach(function(p){
+    const lab=document.createElement('label'); lab.className='chk';
+    lab.innerHTML='<input type="checkbox" name="'+p.k+'">'+p.label; box.appendChild(lab);
+    const det=document.createElement('div'); det.className='det'; det.id='det_'+p.k;
+    if(p.det){ p.det.forEach(function(d){ det.innerHTML+='<label>'+d[1]+'</label><input name="'+d[0]+'">'; }); }
+    box.appendChild(det);
+  });
+}
+
+/* uvoz paketa (uklj. cross-import iz gradjevinske) */
+function setEl(name,value){ const e=F().elements[name]; if(!e) return; if(value===undefined||value===null) return; e.value=value; }
+function setBrojPredmeta(bp){ if(!bp||bp==='______') return;
+  const m=bp.match(/UP:04-19-8-(.+)\/\d{2}/);
+  if(F().elements['opstina'] && F().elements['opstina'].value==='Drvar' && m){ setEl('broj_redni', m[1].trim()); }
+  else { setEl('broj_slobodni', bp); } }
+function parseTextPaket(raw){ const map={}; for(const [k,label] of fields){ map[label.trim()]=k; }
+  const o={}; let found=false;
+  raw.split('\n').forEach(function(line){ const mm=line.match(/^\s*([^:]+?)\s*:\s*(.+?)\s*$/); if(!mm) return;
+    const lab=mm[1].trim(), v=mm[2].trim();
+    if(lab==='Broj predmeta'){ o.broj_predmeta=v; found=true; return; }
+    if(lab==='Opština'){ o.opstina=v; found=true; }
+    if(map[lab]!==undefined){ o[map[lab]]=v; found=true; } });
+  return found?o:null; }
+function importPaket(){
+  const raw=(document.getElementById('import_box').value||'').trim();
+  if(!raw){ toast('Naljepi paket u polje','warn'); return; }
+  let obj=null; const ji=raw.indexOf('--- JSON ---'); const jsonStr = ji>=0 ? raw.slice(ji+12) : raw;
+  const a=jsonStr.indexOf('{'), b=jsonStr.lastIndexOf('}');
+  if(a>=0 && b>a){ try{ obj=JSON.parse(jsonStr.slice(a,b+1)); }catch(e){ obj=null; } }
+  if(!obj){ obj=parseTextPaket(raw); }
+  if(!obj){ toast('Ne mogu pročitati paket','warn'); return; }
+
+  const isGrad = ('gp_broj' in obj) || ('gp_projektant' in obj) ||
+    (obj.vrsta_dozvole && /gra[đd]evinsk/i.test(obj.vrsta_dozvole) && !/upotreb/i.test(obj.vrsta_dozvole));
+  if(obj.opstina){ setEl('opstina', obj.opstina); onOpstina(); }
+  if(isGrad){
+    // GRAĐEVINSKA -> upotrebna: građevinska dozvola je OSNOV (čl. 62)
+    if(obj.broj_predmeta) setEl('gd_broj', obj.broj_predmeta);
+    if(obj.datum) setEl('gd_datum', obj.datum);
+    if(obj.organ) setEl('gd_izdao', obj.organ);
+    if(obj.gp_projektant) setEl('projektant', obj.gp_projektant);
+    if(obj.rev_revident) setEl('revident', obj.rev_revident);
+    const skip={datum:1,vrsta_dozvole:1,nadleznost:1,organ:1,zahvat:0};
+    for(const [k] of fields){ if(skip[k]) continue; if(k in obj && obj[k]!=='' && obj[k]!=null) setEl(k, obj[k]); }
+    toast('Uvezeno iz građevinske — dopuni tehnički pregled i sudionike','ok');
+  } else {
+    if(obj.vrsta_dozvole){ setEl('vrsta_dozvole', obj.vrsta_dozvole); onVrsta(); }
+    if(obj.broj_predmeta){ setBrojPredmeta(obj.broj_predmeta); }
+    for(const [k] of fields){ if(k in obj && obj[k]!=='' && obj[k]!=null) setEl(k, obj[k]); }
+  }
+  if(obj.probni_da==='Da'){ const c=F().elements['probni_da']; if(c) c.checked=true; }
+  if(Array.isArray(obj.prilozi)){ obj.prilozi.forEach(function(pr){
+    const entry=priloziMap.find(function(p){return p.label===pr.stavka;}); if(!entry) return;
+    const cb=F().elements[entry.k]; if(cb){ cb.checked=true; cb.dispatchEvent(new Event('change')); }
+    Object.keys(pr).forEach(function(key){ if(key==='stavka') return; setEl(key, pr[key]); }); }); }
+  if(Array.isArray(obj.vlasnici) && obj.vlasnici.length){ const w=document.getElementById('vlasnici_list'); if(w) w.innerHTML=''; obj.vlasnici.forEach(function(v){ addVlasnik(v.ime, v.udio); }); }
+  if(Array.isArray(obj.clanovi_komisije) && obj.clanovi_komisije.length){ const w=document.getElementById('clanovi_list'); if(w) w.innerHTML=''; obj.clanovi_komisije.forEach(function(c){ addClan(c.ime, c.struka, c.uloga); }); }
+  if(Array.isArray(obj.dodatni_objekti)){ const w=document.getElementById('objekti_list'); if(w) w.innerHTML=''; obj.dodatni_objekti.forEach(function(o){ addObjekat(o); }); }
+  ['onNadleznost','onZastupnik','onMisljenje','onProbni','onVrsta'].forEach(function(fn){ try{ if(typeof window[fn]==='function') window[fn](); }catch(e){} });
+  toast('Paket uvezen — nastavi dopunjavati','ok'); window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function toggleTheme(){ document.body.classList.toggle('light');
+  try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){} syncThemeBtn(); }
+function syncThemeBtn(){const b=document.getElementById('themeBtn');
+  if(b) b.textContent = document.body.classList.contains('light') ? '🌙 Tamna' : '☀️ Svijetla';}
+
+document.addEventListener('DOMContentLoaded',function(){
+  const n=new Date();
+  const dd=String(n.getDate()).padStart(2,'0'), mm=String(n.getMonth()+1).padStart(2,'0'), yyyy=n.getFullYear();
+  if(F().elements['datum']) F().elements['datum'].value=dd+'.'+mm+'.'+yyyy+'.';
+  const gl=document.getElementById('godinaLbl'); if(gl) gl.textContent='/'+godina2();
+  try{ if(localStorage.getItem('ipp-tema')!=='dark') document.body.classList.add('light'); }catch(e){ document.body.classList.add('light'); }
+  syncThemeBtn();
+  buildPrilozi();
+  wireDetails();
+  onOpstina();
+  onVrsta();
+  onNadleznost();
+  onZastupnik();
+  onMisljenje();
+  onProbni();
+  if(document.getElementById('vlasnici_list')) addVlasnik();
+  if(document.getElementById('clanovi_list')){ addClan('','','predsjednik'); addClan(); addClan(); }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPP — Zahtjev za lokacijsku dozvolu/informaciju</title>
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light #out{background:#f1f4f8;color:#0d141c}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;
+    font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:14px;max-width:820px;margin:0 auto}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+  .htitle{flex:1;min-width:0}
+  .themebtn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  body.light .grb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.12))}
+  .wrap{max-width:820px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card h2{font-size:13px;margin:0 0 14px;color:var(--h2);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 5px;font-weight:500}
+  input,select,textarea{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:11px;font-size:15px;font-family:inherit}
+  textarea{min-height:64px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:560px){.row,.row3{grid-template-columns:1fr}}
+  .lwrap{display:flex;gap:7px;align-items:center}
+  .lwrap>input{flex:1}
+  .later{display:flex;align-items:center;gap:3px;font-size:11px;color:var(--muted);white-space:nowrap;cursor:pointer;font-weight:400;margin:0}
+  .later input{width:auto;margin:0}
+  .chk{display:flex;align-items:flex-start;gap:9px;margin:8px 0;font-size:14px;color:var(--ink);font-weight:400}
+  .chk input{width:auto;margin-top:3px}
+  input[type=checkbox],input[type=radio]{width:auto!important;flex:0 0 auto;transition:none!important;animation:none!important;transform:none!important}
+  .homebtn{padding:8px 12px;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  .warnbox{display:none;margin-top:10px;padding:12px 14px;border-radius:10px;border:1px solid #d29922;background:rgba(210,153,34,.12);color:var(--ink);font-size:13px;font-weight:500;line-height:1.5}
+  .warnbox.show{display:block}
+  .det{display:none;margin:0 0 12px 28px;padding:10px 12px;border-left:2px solid var(--accent);border-radius:0 8px 8px 0;background:rgba(76,154,255,.07)}
+  .det.show{display:block}
+  .det label{margin-top:6px}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
+  button{border:0;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .primary{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  .primary:hover{filter:brightness(1.05)}
+  .ghost:hover{border-color:var(--accent)}
+  .card{transition:border-color .15s}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  #out{white-space:pre-wrap;background:#0a1019;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:13px;display:none;margin-top:12px;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ok);color:#fff;padding:11px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;font-weight:500}
+  .toast.show{opacity:1}
+  .req{color:#ff7b72}
+  fieldset{border:0;padding:0;margin:0}
+  /* ---- animacije i hover (silky) ---- */
+  input,select,textarea,button{transition:border-color .18s ease, box-shadow .18s ease, background-color .18s ease, transform .12s ease, filter .18s ease}
+  .card{transition:border-color .2s ease, box-shadow .25s ease, transform .2s ease}
+  .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.12); border-color:var(--accent); transform:translateY(-2px)}
+  .primary:active,.ghost:active{transform:translateY(1px) scale(.99)}
+  .grb{transition:transform .3s cubic-bezier(.22,.61,.36,1)}
+  .grb:hover{transform:scale(1.07) rotate(-3deg)}
+  .chk{transition:color .15s ease}
+  .chk:hover{color:var(--accent)}
+  .themebtn{transition:transform .18s ease, background-color .18s ease}
+  .themebtn:hover{transform:scale(1.05)}
+  @media (prefers-reduced-motion: no-preference){
+    html{scroll-behavior:smooth}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes detIn{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes popIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+    .card{animation:fadeUp .5s cubic-bezier(.22,.61,.36,1) both}
+    .card:nth-of-type(2){animation-delay:.05s}
+    .card:nth-of-type(3){animation-delay:.1s}
+    .card:nth-of-type(4){animation-delay:.15s}
+    .card:nth-of-type(5){animation-delay:.2s}
+    .card:nth-of-type(6){animation-delay:.25s}
+    .card:nth-of-type(7){animation-delay:.3s}
+    .det.show{animation:detIn .24s ease}
+    #out{animation:popIn .28s ease}
+    .toast.show{animation:popIn .25s ease}
+  }
+</style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
+</head>
+<body class="light">
+<div id="odjavaFix" style="position:fixed;top:8px;right:10px;z-index:99999"><button type="button" onclick="try{localStorage.removeItem('ipp-auth')}catch(e){};location.replace('index.html')" style="padding:7px 12px;font-size:13px;font-weight:600;border:0;border-radius:8px;background:#c0392b;color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.28)">🔒 Odjava</button></div>
+<script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+<header>
+  <div class="hwrap">
+    <img class="grb" src="data:image/jpeg;base64,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hpp8Y8cjhvubPGOOsaS4ut61cHMuRdPDSGlQO+Xa+s6fjOj4x6nfDEMOVwpRVama8NJTlZ3Wa2+IygaNY4fEYY5F6+jnF6KuLo89bk3IEjrhf8XQY09bP/CvluTka9px2a8z4i9h6wz8/nNVz1l2q9M+s2d3h6XHaj3vx2BxVDiZso2rd78TRQeivqTWXwJvPCsPZfp1mSM9IeJ39oTnnJ8X/wAO5uQk4oeHxOZfekX3dPWptofeEL7RUaOQB/xqaAM0seivhm/d97prtHOn0YW50R4r73QcgrJXeB/4Z9F1EWzOmeAQA/C0Re6K5nRM7j/9Yf/aAAwDAQMCEwMTAAAQ88888888888888888888888888888o88888888888888888888888888888o88888888888888888888888888888o88888888888888888888888888888o88888888888484048088888888888o888888888846cQvCMu08888888888o88888888888MnieW/A88888888888o88888888888M04wYgU88888888888o8888888peoS+GJXRW9JKDI0888888o888888VqTwm7WMdXYNxOyPb888888o8888885mVthnOPHbjrOwabh888888o888888eC+5nUIUalWSCbtquU88888o888888LDUvdziE+2ux1jMBtE88888o888884nfsAj/fI8G8Un5bztd88888o88888pBNUSi8F2fRitT+cXWQ88888o888888H+Psi80iWezE4HaQX888888o888888qQ5KW8JLoTaradkJ5088888o888888BhqqAst0mW2Kk0sZB888888o8888886jnh1iYjgA0J1NgiH888888o888888F+7XTGLXv4mZJY6/t888888o888884wRjHkIaJ7NbHeoT0wo88888o888889EfvkLEj/ANIZvzA0jhY/PPPPKPPPPPPPOHDiKzcAhMQL+rysnPPPPPKPPPPPPLC8lLo6FEZKBKOql1PPPPPPKPPPPPPDDJByd087bAexrCbPPPPPPPKPPPPPPPOKvNUP1PDHKCBa/PPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPP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" alt="Grb Opštine Drvar">
+    <div class="htitle">
+      <h1>Zahtjev za lokacijsku dozvolu / informaciju</h1>
+      <p>Opština Drvar &middot; Bosansko Grahovo &nbsp;•&nbsp; offline obrazac &nbsp;•&nbsp; podaci ostaju u pregledaču</p>
+    </div>
+    <a class="ghost homebtn" href="index.html">← Početna</a>
+    <button type="button" id="themeBtn" class="ghost themebtn" onclick="toggleTheme()">☀️ Svijetla</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <form id="f">
+
+  <div class="card" style="border-color:var(--accent)">
+    <h2>0 · Uvezi popunjeni paket</h2>
+    <p class="hint">Ako ti je neko poslao već popunjen paket (tekst iz „Generiši paket" ili .txt datoteku), naljepi ga ovdje i klikni <b>Uvezi</b> — forma će se automatski popuniti pa nastavljaš dopunjavati. Prepoznaje i JSON dio.</p>
+    <textarea id="import_box" rows="4" placeholder="Ovdje naljepi cijeli paket (ili samo JSON dio)…"></textarea>
+    <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+      <button type="button" class="primary" onclick="importPaket()">Uvezi u formu</button>
+      <button type="button" class="ghost" onclick="document.getElementById('import_box').value=''">Obriši polje</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>1 · Podaci o predmetu</h2>
+    <label>Opština <span class="req">*</span></label>
+    <select name="opstina" required onchange="onOpstina()">
+      <option>Drvar</option>
+      <option>Bosansko Grahovo</option>
+    </select>
+    <div class="row" style="margin-top:11px">
+      <div><label>Broj predmeta</label>
+        <div id="broj_drvar" style="display:flex;align-items:center;gap:6px">
+          <span style="white-space:nowrap;color:var(--muted);font-family:ui-monospace,monospace">UP:04-19-3-</span>
+          <input name="broj_redni" inputmode="numeric" placeholder="redni br." style="flex:1">
+          <span id="godinaLbl" style="color:var(--muted);font-family:ui-monospace,monospace">/26</span>
+        </div>
+        <input id="broj_free" name="broj_slobodni" placeholder="upiši broj predmeta" style="display:none">
+      </div>
+      <div><label>Datum zahtjeva</label><input type="text" name="datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <label>Nadležni organ (izdavalac)</label>
+    <input name="organ" value="Opština Drvar — Služba za imovinsko-pravne i geodetske poslove">
+    <label>Vrsta akta</label>
+    <select name="vrsta_dozvole" onchange="onVrsta()">
+      <option>Lokacijska dozvola</option>
+      <option>Lokacijska informacija</option>
+      <option>Načelna lokacijska dozvola</option>
+      <option>Načelna lokacijska informacija</option>
+      <option>Naknadna lokacijska dozvola</option>
+      <option>Naknadna lokacijska informacija</option>
+      <option>Izmjena/dopuna lokacijske dozvole</option>
+      <option>Izmjena/dopuna lokacijske informacije</option>
+      <option>Lokacijska dozvola za privremenu građevinu</option>
+    </select>
+    <p class="hint">Lokacijska informacija = skraćeni postupak, na osnovu detaljnog plana (čl. 78). Lokacijska dozvola = upravni akt po opštem postupku.</p>
+    <div class="warnbox" id="nacelna_hint"></div>
+    <div class="det" id="det_raniji">
+      <label>Osnovni akt koji se mijenja / dopunjava / produžava</label>
+      <div class="row">
+        <div><label>Broj ranijeg akta</label><input name="raniji_broj"></div>
+        <div><label>Datum</label><input name="raniji_datum" placeholder="dd.mm.gggg."></div>
+      </div>
+      <label>Šta se mijenja / dopunjava (kratko)</label><input name="raniji_napomena">
+    </div>
+    <label>Režim građenja</label>
+    <select name="rezim" onchange="onRezim()">
+      <option value="">— izaberi —</option>
+      <option>Režim građenja I. stepena</option>
+      <option>Režim građenja II. stepena</option>
+      <option>Režim građenja III. stepena</option>
+      <option>Zabrana građenja</option>
+    </select>
+    <div class="det" id="det_rezim">
+      <label>Osnov za odobravanje građenja (prema režimu)</label>
+      <select name="rezim_osnov"><option value="">— izaberi —</option></select>
+      <p class="hint" id="rezim_hint"></p>
+    </div>
+    <div class="det" id="det_parcelacija">
+      <label class="chk" style="margin-bottom:6px"><input type="checkbox" name="parc_skip" onchange="onParcSkip()"> Plan parcelacije NIJE potreban — vlastita parcela s jasnim granicama (paziti da objekat ne bude preblizu ivici parcele)</label>
+      <div id="parc_polja">
+        <label>Plan parcelacije (za III. stepen, osim ako je gore označeno da nije potreban)</label>
+        <input name="parc_naziv" placeholder="Naziv plana parcelacije">
+        <div class="row">
+          <div><label>Odluka o usvajanju (broj)</label><input name="parc_odluka"></div>
+          <div><label>Datum odluke</label><input name="parc_datum" placeholder="dd.mm.gggg."></div>
+        </div>
+      </div>
+    </div>
+    <label>Nadležnost — automatska provjera</label>
+    <p class="hint">Označi SAMO ako nešto od navedenog važi za ovaj predmet (Uredba čl. 2–4). Ako ništa ne važi, nadležna je opština.</p>
+    <div style="border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-top:4px">
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Regionalna (županijska) cesta i pripadajući objekti/uređaji</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Odašiljači elektroničkih komunikacijskih mreža</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Elektrana instalirane snage 5–50 MW</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Dalekovod 35–110 kV (s trafostanicom/rasklopištem)</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Regionalni cjevovod (nafta/plin/derivati)</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Regionalni vodoopskrbni / kanalizacijski sistem</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Zaštitne/regulacijske vodne građevine za 2+ opštine</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Objekti vlasti / javnih ustanova HBŽ</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Pogon/postrojenje s obaveznom okolišnom dozvolom</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Zahvat se prostire na 2+ opštine/grada</label>
+      <label class="chk"><input type="checkbox" class="minq" onchange="evalNadleznost()"> Eksploatacija mineralnih sirovina 5–25 ha</label>
+    </div>
+    <div id="nadl_verdikt" style="font-weight:700;font-size:14px;margin-top:8px"></div>
+    <input type="hidden" name="nadleznost" value="Opštinska služba">
+  </div>
+
+  <div class="card">
+    <h2>2 · Podnosilac / Investitor</h2>
+    <label>Ime i prezime / Naziv pravnog lica <span class="req">*</span></label>
+    <input name="investitor" required>
+    <div class="row">
+      <div><label>Adresa / sjedište</label><input name="adresa_investitora"></div>
+      <div><label>Kontakt (telefon / e-mail)</label><input name="kontakt"></div>
+    </div>
+    <label>Zastupnik / punomoćnik (ako postoji)</label>
+    <input name="zastupnik" placeholder="ime i prezime zastupnika / punomoćnika">
+  </div>
+
+  <div class="card">
+    <h2>3 · Lokacija i zemljište</h2>
+    <div class="row3">
+      <div><label>Katastarska opština (k.o.) <span class="req">*</span></label>
+        <select name="ko" required>
+          <option value="">— izaberi k.o. —</option>
+        </select></div>
+      <div><label>Broj/evi k.č. <span class="req">*</span></label><input name="kc" required placeholder="npr. 1234/5, 1234/6"></div>
+      <div><label>Posjedovni list (PL) broj</label><input name="pl_broj"></div>
+    </div>
+    <div class="row">
+      <div><label>Površina parcele (m²)</label><input name="povrsina_parcele" inputmode="decimal"></div>
+      <div><label>Naselje / ulica / mjesto</label><input name="mjesto"></div>
+    </div>
+    <label style="margin-top:6px">Dodatne parcele / posjedovni listovi</label>
+    <p class="hint">Za više k.č., više PL-ova ili infrastrukturu koja prolazi kroz <b>više katastarskih opština</b> — dodaj red za svaku: k.o., k.č., PL i površinu.</p>
+    <div id="parcele_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addParcela()">+ Dodaj parcelu / PL</button>
+    <label>Namjena / kultura parcele</label>
+    <select name="kultura" onchange="onKultura()">
+      <option value="">— izaberi —</option>
+      <option>Građevinsko zemljište</option>
+      <option>Poljoprivredno zemljište</option>
+      <option>Vodno zemljište</option>
+      <option>Šumsko zemljište</option>
+      <option>Zgrada</option>
+      <option>Dvorište</option>
+      <option>Groblje</option>
+      <option>Kuća</option>
+      <option>Livada</option>
+      <option>Njiva</option>
+      <option>Put</option>
+      <option>Stadion</option>
+      <option>Spomenik kulture</option>
+    </select>
+    <div class="det" id="det_poljo">
+      <label>Vrsta poljoprivrednog zemljišta</label>
+      <select name="poljo_vrsta">
+        <option value="">— izaberi —</option>
+        <option>Livada</option>
+        <option>Oranica (njiva)</option>
+      </select>
+    </div>
+    <div class="det" id="det_klasa">
+      <label>Klasa zemljišta</label>
+      <select name="klasa">
+        <option value="">— izaberi klasu —</option>
+        <option>I klasa</option><option>II klasa</option><option>III klasa</option><option>IV klasa</option>
+        <option>V klasa</option><option>VI klasa</option><option>VII klasa</option><option>VIII klasa</option>
+      </select>
+    </div>
+    <div class="det" id="det_put">
+      <label>Kategorija puta</label>
+      <select name="put_vrsta">
+        <option value="">— izaberi —</option>
+        <option>Autoput</option>
+        <option>Magistralni put</option>
+        <option>Regionalni put</option>
+        <option>Lokalni put</option>
+        <option>Nekategorisani put</option>
+      </select>
+    </div>
+    <div class="row">
+      <div><label>Uređenost građevinskog zemljišta</label>
+        <select name="uredjenost"><option value="">—</option><option>Uređeno</option><option>Neuređeno</option></select></div>
+      <div><label>Troškovi uređenja (ako neuređeno)</label><input name="troskovi_uredjenja"></div>
+    </div>
+    <label>Planski dokument koji važi za područje</label>
+    <input name="planski_dokument" list="planovi" placeholder="izaberi ili upiši">
+    <datalist id="planovi">
+      <option>Prostorni plan Kantona 10 (Hercegbosanske županije)</option>
+      <option>Prostorni plan opštine Drvar (1984)</option>
+      <option>Urbanistički plan Drvara 1981–2001</option>
+      <option>Regulacioni plan Centar</option>
+      <option>Regulacioni plan Drenjičko Vrelo</option>
+      <option>Regulacioni plan Pejića Luke-Golubić</option>
+    </datalist>
+    <div class="det" id="det_komisija">
+      <label>Stručna ocjena povjerenstva (čl. 62. st. 3) — kad nema planskog dokumenta (Bosansko Grahovo)</label>
+      <div class="row">
+        <div><label>Rješenje o imenovanju komisije — broj</label><input name="komisija_imen_broj"></div>
+        <div><label>Mišljenje komisije — broj</label><input name="komisija_mis_broj"></div>
+      </div>
+      <label>Datum mišljenja</label><input name="komisija_mis_datum" placeholder="dd.mm.gggg.">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4 · Građevina / zahvat</h2>
+    <label>Vrsta i opis građevine <span class="req">*</span></label>
+    <input name="vrsta_gradjevine" required placeholder="npr. individualna stambena građevina">
+    <div class="row">
+      <div><label>Vrsta zahvata</label>
+        <select name="zahvat" onchange="onZahvat()">
+          <option>Novogradnja</option>
+          <option>Dogradnja (do 50% tlocrta)</option>
+          <option>Nadogradnja (etaža/potkrovlje)</option>
+          <option>Rekonstrukcija</option>
+          <option>Sanacija</option>
+          <option>Promjena namjene</option>
+          <option>Konzerviranje</option>
+          <option>Uklanjanje</option>
+          <option>Privremena građevina</option>
+        </select></div>
+      <div><label>Namjena</label><input name="namjena" placeholder="npr. stambena, poslovna, privredna"></div>
+    </div>
+    <div class="det" id="det_legalnost">
+      <label style="font-weight:600;color:var(--ink)">Dokaz legalnosti postojećeg objekta</label>
+      <p class="hint">Za zahvate na postojećem objektu (rekonstrukcija, sanacija, dogradnja, nadogradnja, promjena namjene, konzerviranje, uklanjanje) treba dokaz da je objekat legalan. Za naknadnu (legalizaciju) — objekat je bespravan, pa se prilaže dokaz iz postupka legalizacije.</p>
+      <select name="leg_vrsta">
+        <option>Građevinska dozvola</option>
+        <option>Upotrebna dozvola</option>
+        <option>Rješenje o naknadnoj (legalizacijskoj) dozvoli</option>
+        <option>Potvrda da je objekat legalan (izdaje Služba)</option>
+        <option>Potvrda da je građevinska dozvola uništena / nedostupna</option>
+        <option>U postupku legalizacije (objekat bespravan)</option>
+      </select>
+      <div class="row3">
+        <div><label>Broj</label><input name="leg_broj"></div>
+        <div><label>Datum</label><input name="leg_datum" placeholder="dd.mm.gggg."></div>
+        <div><label>Izdao</label><input name="leg_izdao"></div>
+      </div>
+    </div>
+    <div class="row3">
+      <div><label>Tlocrt — dužina (m)</label><input name="duzina" inputmode="decimal"></div>
+      <div><label>Tlocrt — širina (m)</label><input name="sirina" inputmode="decimal"></div>
+      <div><label>Bruto površina (m²) — ukupno</label><input name="bruto" inputmode="decimal"></div>
+    </div>
+
+    <label style="margin-top:6px">Sastav objekta — površine po dijelovima</label>
+    <p class="hint">Npr. zidani dio, dio pod nadstrešnicom, bazen, terasa, garaža… Dodaj stavku za svaki dio. Kvačica „kasnije" ostavlja praznu liniju umjesto broja (popuni se naknadno).</p>
+    <datalist id="sastav_opcije"><option value="Zidani dio"></option><option value="Dio pod nadstrešnicom"></option><option value="Bazen"></option><option value="Terasa"></option><option value="Garaža"></option><option value="Podrum"></option><option value="Otvoreni dio"></option></datalist>
+    <div id="sastav_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addSastav()">+ Dodaj dio objekta</button>
+    <div class="row3">
+      <div><label>Spratnost</label><input name="katnost" placeholder="P, P+1, P+1+Pk"></div>
+      <div><label>Visina objekta (m)</label><div class="lwrap"><input name="visina" inputmode="decimal"><label class="later"><input type="checkbox" data-t="visina" onchange="laterField(this)">kasnije</label></div></div>
+      <div><label>Broj parking mjesta</label><div class="lwrap"><input name="parking" inputmode="numeric"><label class="later"><input type="checkbox" data-t="parking" onchange="laterField(this)">kasnije</label></div></div>
+    </div>
+    <div id="koef_wrap" style="display:none">
+      <label>Koeficijent izgrađenosti parcele (čl. 81 tačka c — za lokacijsku informaciju)</label>
+      <input name="koef_izgradenosti" placeholder="npr. 0,30 / 30%">
+      <p class="hint">Obavezan UT uslov za lokacijsku <b>informaciju</b> (čl. 81. t. c). Odnos tlocrtne površine objekta i površine parcele.</p>
+    </div>
+    <div class="row">
+      <div><label>Udaljenost od granice susj. parcele (m)</label><div class="lwrap"><input name="udaljenost_granica" inputmode="decimal"><label class="later"><input type="checkbox" data-t="udaljenost_granica" onchange="laterField(this)">kasnije</label></div></div>
+      <div><label>Udaljenost od susjednog objekta (m)</label><div class="lwrap"><input name="udaljenost_objekt" inputmode="decimal"><label class="later"><input type="checkbox" data-t="udaljenost_objekt" onchange="laterField(this)">kasnije</label></div></div>
+    </div>
+    <label>Priključci (kratko)</label>
+    <input name="prikljucci" placeholder="npr. javni vodovod, NN mreža, pristup s opštinskog puta">
+    <label>Pomoćni objekti (ako ih ima)</label>
+    <input name="pomocni" placeholder="npr. garaža, drvarnica, nadstrešnica">
+    <label>Naziv projekta</label>
+    <input name="naziv_projekta" placeholder="naziv glavnog/izvedbenog projekta (ako postoji)">
+    <div class="row3">
+      <div><label>Firma / biro (izradio)</label><input name="proj_firma" placeholder='npr. "Roco-commerce" d.o.o. Livno'></div>
+      <div><label>Broj projekta</label><input name="proj_broj"></div>
+      <div><label>Datum izrade projekta</label><input name="proj_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <label>Naziv idejnog projekta</label>
+    <input name="naziv_idejnog" placeholder="naziv idejnog projekta / idejnog rješenja">
+    <div class="det" id="det_privremena">
+      <label>Privremena građevina — rok i uklanjanje (čl. 74/83)</label>
+      <div class="row">
+        <div><label>Rok korištenja (godina, max 3)</label><input name="priv_rok" inputmode="numeric"></div>
+        <div><label>Rok / datum uklanjanja</label><input name="priv_uklanjanje" placeholder="dd.mm.gggg."></div>
+      </div>
+    </div>
+    <label>Opis tehnologije rada (za proizvodne objekte — čl. 80e)</label>
+    <textarea name="tehnologija" placeholder="popuniti samo za proizvodne objekte"></textarea>
+    <div class="row">
+      <div><label>Vrsta krova</label>
+        <select name="krov" onchange="onKrov()"><option value="">—</option><option>Dvovodni</option><option>Ravni</option><option value="__drugo">Drugo (upiši)</option></select>
+      </div>
+      <div id="krov_drugo_w" style="display:none"><label>Krov — upiši</label><div class="lwrap"><input name="krov_drugo" placeholder="npr. četverovodni, jednovodni"><label class="later"><input type="checkbox" data-t="krov_drugo" onchange="laterField(this)">kasnije</label></div></div>
+    </div>
+    <div class="row">
+      <div><label>Visina vijenca (m)</label><div class="lwrap"><input name="visina_vijenca" inputmode="decimal"><label class="later"><input type="checkbox" data-t="visina_vijenca" onchange="laterField(this)">kasnije</label></div></div>
+      <div><label>Visina sljemena (m)</label><div class="lwrap"><input name="visina_sljemena" inputmode="decimal"><label class="later"><input type="checkbox" data-t="visina_sljemena" onchange="laterField(this)">kasnije</label></div></div>
+    </div>
+    <div class="row">
+      <div><label>Broj stambenih jedinica</label><input name="br_stamb" inputmode="numeric"></div>
+      <div><label>Broj poslovnih jedinica</label><input name="br_posl" inputmode="numeric"></div>
+    </div>
+  </div>
+
+  <div class="card" id="akt_card">
+    <h2>Traženi prilozi za izabrani akt (automatski)</h2>
+    <p class="hint">Lista se sama prilagođava prema izabranoj <b>vrsti akta</b> (sekcija 1) i <b>vrsti zahvata</b> (sekcija 4). Ispod, u sekciji 5, označi šta je priloženo — relevantna polja (npr. statička stabilnost) se pojavljuju automatski.</p>
+    <div id="akt_guide"></div>
+    <label style="margin-top:10px">Broj grafičkog priloga UT uslova (čl. 68. st. 6)</label>
+    <input name="graficki_prilog_br" placeholder="broj grafičkog priloga — popunjava se">
+    <p class="hint">Sastavni dio rješenja (i dozvole i informacije). U dispozitivu se navodi: „grafički prilog urbanističko-tehničkih uslova, broj ______".</p>
+  </div>
+
+  <div class="card">
+    <h2>5 · Projekti, saglasnosti i dozvole</h2>
+    <label>Da li je potrebna okolinska dozvola?</label>
+    <select name="okolisna" onchange="onOkolisna()"><option>Ne</option><option>Da</option><option>Treba provjeriti</option></select>
+    <p class="hint">Okolinska dozvola je obavezna za pogone/postrojenja iz Uredbe (vidi propise u folderu) i zahvate sa znatnim uticajem na okoliš.</p>
+    <p class="hint" style="margin-top:14px">Označi šta je priloženo; kad označiš, otvoriće se polja za podatke (čl. 65. ZPU HBŽ):</p>
+    <fieldset>
+      <label class="chk"><input type="checkbox" name="p_kat">Izvod iz katastarskog plana (kopija plana)</label>
+      <div class="det" id="det_p_kat">
+        <div class="row">
+          <div><label>Upravni broj</label><input name="kat_broj"></div>
+          <div><label>Datum</label><input name="kat_datum" placeholder="dd.mm.gggg."></div>
+        </div>
+        <label>Izdao</label><input name="kat_izdao" placeholder="npr. RGU / PJ katastar">
+      </div>
+      <label class="chk"><input type="checkbox" name="p_sit">Situacioni snimak terena / grafički prikaz</label>
+      <div class="det" id="det_p_sit">
+        <div class="row">
+          <div><label>Upravni broj</label><input name="sit_broj"></div>
+          <div><label>Datum</label><input name="sit_datum" placeholder="dd.mm.gggg."></div>
+        </div>
+        <label>Izradio / izdao</label><input name="sit_izdao" placeholder="npr. geodetska organizacija / RGU">
+      </div>
+
+      <label class="chk"><input type="checkbox" name="p_vlas">Dokaz pravnog interesa (vlasništvo / pravo građenja)</label>
+      <div class="det" id="det_p_vlas">
+        <label>Osnov</label>
+        <select name="pi_osnov" onchange="onPIOsnov()">
+          <option value="vlastito">Vlastito zemljište/građevina — investitor je jedini vlasnik (1/1)</option>
+          <option value="drugi">Suvlasništvo ili nije (u cijelosti) investitorovo — potrebna saglasnost suvlasnika / ugovor o ortaštvu</option>
+        </select>
+        <p class="hint">Ako investitor <b>nije jedini vlasnik</b> (npr. ima udio 1/3, ostalo su suvlasnici), izaberi drugu opciju — otvoriće se izbor <b>ugovor o ortaštvu</b> ili <b>pisana saglasnost suvlasnika</b> (čl. 45).</p>
+        <div id="pi_vlastito">
+          <label>Vrsta dokaza</label>
+          <select name="pi_vlastito_vrsta">
+            <option>Posjedovni list</option>
+            <option>ZK izvadak (izvod iz zemljišne knjige)</option>
+          </select>
+          <div class="row">
+            <div><label>Broj</label><input name="pi_v_broj"></div>
+            <div><label>Datum</label><input name="pi_v_datum" placeholder="dd.mm.gggg."></div>
+          </div>
+          <label>Izdao</label><input name="pi_v_izdao" placeholder="npr. RGU / sud / opština">
+        </div>
+        <div id="pi_drugi" style="display:none">
+          <label>Vrsta dokaza pravnog interesa (čl. 45)</label>
+          <select name="pi_vrsta">
+            <option value="">— izaberi —</option>
+            <option>ZK izvadak — vlasništvo / pravo građenja</option>
+            <option>Predugovor/ugovor (sticanje vlasništva ili prava građenja)</option>
+            <option>Odluka nadležne vlasti (sticanje vlasništva/prava građenja)</option>
+            <option>Ugovor o ortaštvu sa suvlasnicima (zajedničko građenje) — čl. 45. t. 4</option>
+            <option>Pisana saglasnost suvlasnika zemljišta — čl. 45. t. 5</option>
+            <option>Pisana saglasnost vlasnika zemljišta/građevine — čl. 45. t. 5</option>
+            <option>ZK izvadak — pravo služnosti</option>
+            <option>Predugovor/ugovor o služnosti, zakupu ili korištenju</option>
+            <option>Odluka nadležne vlasti o pravu služnosti</option>
+            <option>Ugovor o koncesiji (sticanje prava građenja)</option>
+            <option>Odluka Vlade HBŽ / opštinskog vijeća o javnom interesu (uz zahtjev za eksproprijaciju)</option>
+          </select>
+          <div class="row">
+            <div><label>Broj / oznaka dokumenta</label><input name="pi_broj"></div>
+            <div><label>Datum</label><input name="pi_datum" placeholder="dd.mm.gggg."></div>
+          </div>
+          <label>Ugovorne strane / izdavalac</label><input name="pi_strane" placeholder="npr. vlasnik X i investitor Y / nadležni organ">
+          <label class="chk" style="margin-top:8px"><input type="checkbox" name="pi_notar">Potpisi ovjereni kod notara (obavezno za ugovore i saglasnosti)</label>
+          <div class="row">
+            <div><label>Broj ovjere (OV)</label><input name="pi_notar_broj"></div>
+            <div><label>Datum ovjere</label><input name="pi_notar_datum" placeholder="dd.mm.gggg."></div>
+          </div>
+          <label>Napomena</label><textarea name="pi_napomena"></textarea>
+        </div>
+      </div>
+
+      <label class="chk"><input type="checkbox" name="p_idejni">Idejni projekat</label>
+      <div class="det" id="det_p_idejni">
+        <label>Naziv idejnog projekta</label><input name="idejni_naziv" placeholder="npr. Idejni projekat stambenog objekta">
+        <div class="row">
+          <div><label>Datum projekta</label><input name="idejni_datum" placeholder="dd.mm.gggg."></div>
+          <div><label>Izradio (projektant / biro)</label><input name="idejni_projektant"></div>
+        </div>
+      </div>
+
+      <div id="wrap_p_glavni_statika" style="display:none">
+      <label class="chk"><input type="checkbox" name="p_glavni_statika">Glavni projekat sa statičkim proračunom</label>
+      <div class="det" id="det_p_glavni_statika">
+        <div class="row"><div><label>Broj projekta</label><input name="gstat_broj"></div><div><label>Datum</label><input name="gstat_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Projektant / biro (statičar)</label><input name="gstat_projektant" placeholder="ovlašteni inženjer građevine / biro">
+      </div>
+      </div>
+
+      <div id="wrap_p_statika" style="display:none">
+      <label class="chk"><input type="checkbox" name="p_statika">Dokaz o statičkoj stabilnosti (atest / izjava ovlaštenog inženjera)</label>
+      <div class="det" id="det_p_statika">
+        <div class="row"><div><label>Broj</label><input name="stat_broj"></div><div><label>Datum</label><input name="stat_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Izdao / ovlašteni inženjer</label><input name="stat_izdao" placeholder="ime i ovlaštenje ovlaštenog inženjera građevine">
+      </div>
+      </div>
+
+      <div id="wrap_p_geo_izvedeno" style="display:none">
+      <label class="chk"><input type="checkbox" name="p_geo_izvedeno">Geodetski snimak izvedenog stanja (za legalizaciju)</label>
+      <div class="det" id="det_p_geo_izvedeno">
+        <div class="row"><div><label>Broj</label><input name="geoiz_broj"></div><div><label>Datum</label><input name="geoiz_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Izradio (geodetska organizacija)</label><input name="geoiz_izradio">
+      </div>
+      </div>
+
+      <div id="wrap_p_proj_uklanjanje" style="display:none">
+      <label class="chk"><input type="checkbox" name="p_proj_uklanjanje">Projekat uklanjanja (rušenja)</label>
+      <div class="det" id="det_p_proj_uklanjanje">
+        <div class="row"><div><label>Broj</label><input name="ukl_broj"></div><div><label>Datum</label><input name="ukl_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Projektant</label><input name="ukl_projektant">
+      </div>
+      </div>
+
+      <label class="chk"><input type="checkbox" name="p_komunalna">Komunalna saglasnost (voda i kanalizacija)</label>
+      <div class="det" id="det_p_komunalna">
+        <label>Voda i kanalizacija</label>
+        <select name="kom_mode" onchange="komMode()">
+          <option value="spojeno">Spojeno — jedna saglasnost (voda + kanalizacija)</option>
+          <option value="razdvojeno">Razdvojeno — posebne saglasnosti</option>
+        </select>
+        <div id="kom_spojeno">
+          <div class="row">
+            <div><label>Broj saglasnosti</label><input name="kom_broj"></div>
+            <div><label>Datum</label><input name="kom_datum" placeholder="dd.mm.gggg."></div>
+          </div>
+          <label>Izdao</label><input name="kom_izdao" placeholder="npr. JKP / komunalno preduzeće">
+          <label>Uslovi iz saglasnosti</label><textarea name="kom_uslovi"></textarea>
+        </div>
+        <div id="kom_razdvojeno" style="display:none">
+          <p class="hint" style="margin-top:10px;font-weight:600">Voda:</p>
+          <div class="row">
+            <div><label>Broj</label><input name="voda_broj"></div>
+            <div><label>Datum</label><input name="voda_datum" placeholder="dd.mm.gggg."></div>
+          </div>
+          <label>Izdao</label><input name="voda_izdao">
+          <label>Uslovi iz saglasnosti (voda)</label><textarea name="voda_uslovi"></textarea>
+          <p class="hint" style="margin-top:12px;font-weight:600">Kanalizacija:</p>
+          <div class="row">
+            <div><label>Broj</label><input name="kanal_broj"></div>
+            <div><label>Datum</label><input name="kanal_datum" placeholder="dd.mm.gggg."></div>
+          </div>
+          <label>Izdao</label><input name="kanal_izdao">
+          <label>Uslovi iz saglasnosti (kanalizacija)</label><textarea name="kanal_uslovi"></textarea>
+        </div>
+      </div>
+
+      <label class="chk"><input type="checkbox" name="p_saobracaj">Saobraćajna saglasnost</label>
+      <div class="det" id="det_p_saobracaj">
+        <div class="row">
+          <div><label>Broj saglasnosti</label><input name="saob_broj"></div>
+          <div><label>Datum</label><input name="saob_datum" placeholder="dd.mm.gggg."></div>
+        </div>
+        <label>Izdao (nadležno za kategoriju puta)</label>
+        <input name="saob_izdao" list="putne_institucije" placeholder="izaberi ili upiši">
+        <datalist id="putne_institucije">
+          <option value="JP Autoceste FBiH"></option>
+          <option value="JP Ceste FBiH"></option>
+          <option value="Kantonalna direkcija za ceste"></option>
+          <option value="Služba za imovinsko-pravne i geodetske poslove (lokalni i nekategorisani putevi)"></option>
+        </datalist>
+        <label>Uslovi iz saglasnosti</label><textarea name="saob_uslovi"></textarea>
+      </div>
+
+      <label class="chk"><input type="checkbox" name="p_elektro">Prethodna elektroenergetska saglasnost</label>
+      <div class="det" id="det_p_elektro">
+        <div class="row">
+          <div><label>Broj saglasnosti</label><input name="elektro_broj"></div>
+          <div><label>Datum</label><input name="elektro_datum" placeholder="dd.mm.gggg."></div>
+        </div>
+        <label>Izdao</label><input name="elektro_izdao" placeholder="npr. EP HZHB / Elektroprivreda">
+        <label>Uslovi iz saglasnosti</label><textarea name="elektro_uslovi"></textarea>
+      </div>
+
+      <label class="chk"><input type="checkbox" name="p_poljo">Poljoprivredna saglasnost</label>
+      <div class="det" id="det_p_poljo">
+        <div class="row"><div><label>Broj</label><input name="poljo_broj"></div><div><label>Datum</label><input name="poljo_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Izdao</label><input name="poljo_izdao"><label>Uslovi</label><textarea name="poljo_uslovi"></textarea>
+      </div>
+      <label class="chk"><input type="checkbox" name="p_vodna">Vodoprivredna (vodna) saglasnost</label>
+      <div class="det" id="det_p_vodna">
+        <div class="row"><div><label>Broj</label><input name="vodna_broj"></div><div><label>Datum</label><input name="vodna_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Izdao</label><input name="vodna_izdao"><label>Uslovi</label><textarea name="vodna_uslovi"></textarea>
+      </div>
+      <label class="chk"><input type="checkbox" name="p_telekom">Telekomunikacijska saglasnost</label>
+      <div class="det" id="det_p_telekom">
+        <div class="row"><div><label>Broj</label><input name="telekom_broj"></div><div><label>Datum</label><input name="telekom_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Izdao</label><input name="telekom_izdao"><label>Uslovi</label><textarea name="telekom_uslovi"></textarea>
+      </div>
+      <label class="chk"><input type="checkbox" name="p_geo">Nalaz o geološkom ispitivanju tla (gdje plan traži — čl. 68e)</label>
+      <div class="det" id="det_p_geo">
+        <div class="row"><div><label>Broj</label><input name="geo_broj"></div><div><label>Datum</label><input name="geo_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Izradio</label><input name="geo_izradio">
+      </div>
+      <label class="chk"><input type="checkbox" name="p_vjerski">Vjerski objekat — pismeno odobrenje vjerske institucije (čl. 65. st. 3)</label>
+      <div class="det" id="det_p_vjerski">
+        <div class="row"><div><label>Broj odobrenja</label><input name="vjerski_broj"></div><div><label>Datum</label><input name="vjerski_datum" placeholder="dd.mm.gggg."></div></div>
+        <label>Institucija</label><input name="vjerski_institucija">
+      </div>
+      <div id="okol_block">
+      <label class="chk"><input type="checkbox" name="p_okol">Okolinska dozvola</label>
+      <div class="det" id="det_p_okol">
+        <div class="row">
+          <div><label>Broj saglasnosti/dozvole</label><input name="okol_broj"></div>
+          <div><label>Datum</label><input name="okol_datum" placeholder="dd.mm.gggg."></div>
+        </div>
+        <label>Izdao</label><input name="okol_izdao" placeholder="npr. nadležno ministarstvo / organ">
+      </div>
+      </div>
+      <label style="margin-top:12px;font-weight:600;color:var(--ink)">Ostale saglasnosti / uslovi</label>
+      <p class="hint">Dodaj po potrebi: naziv, broj, ko je izdao, datum.</p>
+      <div id="sugl_list"></div>
+      <button type="button" class="ghost" style="margin-top:8px" onclick="addSugl()">+ Dodaj saglasnost</button>
+    </fieldset>
+  </div>
+
+  <div class="card">
+    <h2>5a · Zaštita od požara — posebni uvjeti (čl. 19)</h2>
+    <p class="hint">Po <b>čl. 19. Zakona o zaštiti od požara HBŽ</b> (NN HBŽ 1/26, 3/26) posebne uvjete zaštite od požara u postupku lokacijske dozvole / uvjeta uređenja prostora utvrđuje MUP i izdaje <b>načelnu suglasnost</b>. U praksi MUP za požarnu saglasnost traži <b>glavni projekat</b>, pa se ona najčešće pribavlja tek u fazi <b>građevinske dozvole</b> (čl. 23) — u tom slučaju izaberi opciju „Prebacuje se na građevinsku fazu". Neke građevine su pravilnikom izuzete (čl. 19. st. 2).</p>
+    <label>Status požarnih uslova</label>
+    <select name="pozar_status" onchange="onPozar()">
+      <option value="">— izaberi —</option>
+      <option>Građevina izuzeta — posebni uvjeti nisu potrebni (pravilnik čl. 19. st. 2)</option>
+      <option>Pribavljeni posebni uvjeti / načelna suglasnost MUP-a</option>
+      <option>Prebacuje se na građevinsku fazu (MUP traži glavni projekat — čl. 23)</option>
+      <option>Treba provjeriti / zatraženo, u toku</option>
+    </select>
+    <div class="det" id="det_pozar">
+      <div class="row">
+        <div><label>Broj (načelne suglasnosti / posebnih uvjeta)</label><input name="pozar_broj"></div>
+        <div><label>Datum</label><input name="pozar_datum" placeholder="dd.mm.gggg."></div>
+      </div>
+      <label>Izdao</label><input name="pozar_izdao" list="pozar_izdao_opcije" placeholder="npr. MUP HBŽ — Uprava/inspektorat za zaštitu od požara">
+      <datalist id="pozar_izdao_opcije">
+        <option value="MUP Hercegbosanske županije — Uprava za zaštitu od požara"></option>
+        <option value="MUP Kantona 10 — inspektorat za zaštitu od požara"></option>
+      </datalist>
+      <label>Posebni uvjeti zaštite od požara (sadržaj)</label><textarea name="pozar_uslovi" placeholder="npr. sigurnosne udaljenosti, pristup za vatrogasna vozila, izvor vode za gašenje…"></textarea>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>6 · Stranke, uvid i izjašnjenje (čl. 86 ZPU; čl. 141/147 ZUP)</h2>
+    <p class="hint">Podnosilac, vlasnici/nositelji stvarnih prava na predmetnoj parceli i na susjednim parcelama. Za svaku stranku: ime i prezime ili naziv pravnog lica + broj k.č.</p>
+    <div id="stranke_list"></div>
+    <button type="button" class="ghost" style="margin-top:8px" onclick="addStranka()">+ Dodaj stranku</button>
+
+    <label style="margin-top:16px;font-weight:600;color:var(--ink)">Izlazak na teren (očevid)</label>
+    <div class="row">
+      <div><label>Termin izlaska na teren</label><input name="teren_termin" placeholder="dd.mm.gggg."></div>
+      <div><label>Broj zapisnika sa terena</label><input name="teren_zapisnik"></div>
+    </div>
+
+    <label style="margin-top:16px;font-weight:600;color:var(--ink)">Uvid, prigovori i usmena rasprava</label>
+    <div class="row">
+      <div><label>Poziv strankama na uvid — broj</label><input name="poziv_uvid_broj"></div>
+      <div><label>Datum poziva</label><input name="poziv_uvid_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <label>Datum(i) izvršenog uvida</label>
+    <input name="uvid_datum" placeholder="npr. 12.06.2026. (više datuma odvojiti zarezom)">
+    <label>Da li je bilo prigovora?</label>
+    <select name="prigovori" onchange="onPrigovori()"><option>Ne</option><option>Da</option></select>
+    <div class="det" id="det_prigovori">
+      <label>Sadržaj prigovora (ko se izjasnio, šta osporava, k.č.)</label>
+      <textarea name="prigovori_tekst"></textarea>
+    </div>
+    <label>Da li je održana usmena rasprava?</label>
+    <select name="usmena" onchange="onUsmena()"><option>Ne</option><option>Da</option></select>
+    <div class="det" id="det_usmena">
+      <div class="row">
+        <div><label>Poziv na usmenu raspravu — broj</label><input name="usmena_poziv"></div>
+        <div><label>Datum održavanja</label><input name="usmena_datum" placeholder="dd.mm.gggg."></div>
+      </div>
+      <label>Kratak sadržaj / zaključci sa rasprave</label>
+      <textarea name="usmena_sadrzaj"></textarea>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>7 · Naknada za uređenje gradskog građevinskog zemljišta</h2>
+    <p class="hint">Po troškovniku (čl. 93 ZPU). Iznos upiši brojčano — dugme „Ispiši slovima" sam formira tekst u obliku: 253,00KM (slovima: dvijestotinepedesetitri konvertibilne marke).</p>
+    <div class="row">
+      <div><label>Troškovnik — broj</label><input name="troskovnik_broj"></div>
+      <div><label>Datum izrade troškovnika</label><input name="troskovnik_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <div class="row">
+      <div><label>Iznos naknade (KM)</label><input name="naknada_iznos" placeholder="npr. 253,00" oninput="onIznos()"></div>
+      <div><label>&nbsp;</label><button type="button" class="ghost" onclick="iznosSlovima()">Ispiši slovima ↓</button></div>
+    </div>
+    <label>Iznos slovima (možeš urediti)</label>
+    <input name="naknada_slovima" placeholder="npr. dvijestotinepedesetitri konvertibilne marke">
+  </div>
+
+  <div class="card">
+    <h2>7a · Administrativna taksa</h2>
+    <p class="hint">Naplaćuje se za <b>lokacijsku dozvolu</b> (opštinski organi su oslobođeni za lokacijsku <b>informaciju</b>). Tarifni broj i iznos utvrđuje se prema <b>Odluci o administrativnim taksama</b> — popuniti ručno.</p>
+    <div class="row3">
+      <div><label>Tarifni broj (prema Odluci)</label><input name="taksa_tarifa" placeholder="npr. 5"></div>
+      <div><label>Iznos takse (KM)</label><input name="taksa_iznos" inputmode="decimal" placeholder="npr. 360,00"></div>
+      <div><label>Količina</label><input name="taksa_kolicina" inputmode="numeric" placeholder="npr. 1"></div>
+    </div>
+    <label>Način uplate</label>
+    <select name="taksa_nacin" onchange="onTaksaNacin()">
+      <option value="">— izaberi —</option>
+      <option>Blagajna (gotovina)</option>
+      <option>Banka (virman)</option>
+    </select>
+    <div class="det" id="det_taksa_banka">
+      <label>Broj uplatnice / nalog (banka)</label>
+      <input name="taksa_uplatnica" placeholder="broj uplatnice / referenca plaćanja">
+      <p class="hint">Popuniti ako je uplata preko banke (virman).</p>
+    </div>
+    <div class="det" id="det_taksa_blagajna">
+      <label>Broj kvita (blagajna)</label>
+      <input name="taksa_kvit" placeholder="broj kvita / naloga blagajne">
+    </div>
+    <label>Datum uplate</label>
+    <input name="taksa_datum" placeholder="dd.mm.gggg.">
+    <p class="hint">Pouka o pravnom lijeku navodi račun <b>154999-5000539591</b>, vrsta prihoda <b>722131</b>, šifra <b>027</b> (žalba, 15 KM).</p>
+  </div>
+
+  <div class="card">
+    <h2>8 · Napomene za obradu</h2>
+    <label>Slobodan tekst — sve što želiš da se uzme u obzir</label>
+    <textarea name="napomene" placeholder="npr. specifičnosti lokacije, posebni uslovi, ranija rješenja..."></textarea>
+  </div>
+
+  <div class="actions">
+    <button type="button" class="primary" onclick="generate()">Generiši paket podataka</button>
+    <button type="button" class="ghost" onclick="copyOut()">Kopiraj sve</button>
+    <button type="button" class="ghost" onclick="download()">Preuzmi .txt</button>
+    <button type="button" class="ghost" onclick="copyOut()" title="Kopiraj paket pa ga naljepi u građevinsku formu (Uvezi)">⬆ Izvezi za građevinsku</button>
+    <button type="reset" class="ghost">Očisti formu</button>
+  </div>
+
+  <pre id="out"></pre>
+  </form>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const F = () => document.getElementById('f');
+const fields = [
+  ['opstina','Opština'],
+  ['datum','Datum zahtjeva'],['organ','Nadležni organ'],['vrsta_dozvole','Vrsta akta'],['nadleznost','Nadležnost za izdavanje'],['raniji_broj','Osnovni akt - broj'],['raniji_datum','Osnovni akt - datum'],['raniji_napomena','Šta se mijenja'],['rezim','Režim građenja'],['rezim_osnov','Osnov za odobravanje građenja'],['parc_naziv','Plan parcelacije (naziv)'],['parc_odluka','Plan parcelacije - odluka br.'],['parc_datum','Plan parcelacije - datum'],
+  ['investitor','Investitor / podnosilac'],['adresa_investitora','Adresa / sjedište'],['kontakt','Kontakt'],['zastupnik','Zastupnik/punomoćnik'],
+  ['ko','Katastarska opština'],['kc','Broj k.č.'],['pl_broj','Posjedovni list broj'],['povrsina_parcele','Površina parcele (m²)'],['mjesto','Naselje/ulica/mjesto'],
+  ['kultura','Namjena/kultura parcele'],['poljo_vrsta','Vrsta poljoprivrednog zemljišta'],['klasa','Klasa zemljišta'],['put_vrsta','Kategorija puta'],
+  ['uredjenost','Uređenost zemljišta'],['troskovi_uredjenja','Troškovi uređenja'],['planski_dokument','Planski dokument'],['komisija_imen_broj','Komisija - rješenje o imenovanju br.'],['komisija_mis_broj','Komisija - mišljenje br.'],['komisija_mis_datum','Komisija - datum mišljenja'],
+  ['vrsta_gradjevine','Vrsta i opis građevine'],['zahvat','Vrsta zahvata'],['namjena','Namjena'],['leg_vrsta','Dokaz legalnosti - vrsta'],['leg_broj','Dokaz legalnosti - broj'],['leg_datum','Dokaz legalnosti - datum'],['leg_izdao','Dokaz legalnosti - izdao'],
+  ['duzina','Tlocrt dužina (m)'],['sirina','Tlocrt širina (m)'],['bruto','Bruto površina (m²)'],
+  ['katnost','Spratnost'],['visina','Visina (m)'],['parking','Parking mjesta'],
+  ['udaljenost_granica','Udaljenost od granice parcele (m)'],['udaljenost_objekt','Udaljenost od susj. objekta (m)'],
+  ['prikljucci','Priključci'],['pomocni','Pomoćni objekti'],
+  ['naziv_projekta','Naziv projekta'],['proj_firma','Projekat - firma/biro (izradio)'],['proj_broj','Projekat - broj'],['proj_datum','Projekat - datum izrade'],['naziv_idejnog','Naziv idejnog projekta'],['priv_rok','Privremena - rok (god)'],['priv_uklanjanje','Privremena - uklanjanje'],['tehnologija','Opis tehnologije'],['visina_vijenca','Visina vijenca (m)'],['visina_sljemena','Visina sljemena (m)'],['br_stamb','Broj stambenih jedinica'],['br_posl','Broj poslovnih jedinica'],
+  ['okolisna','Okolinska dozvola'],
+  ['pozar_status','Zaštita od požara — status (čl. 19)'],['pozar_broj','Požarni uslovi — broj (načelna suglasnost MUP-a)'],['pozar_izdao','Požarni uslovi — izdao'],['pozar_datum','Požarni uslovi — datum'],['pozar_uslovi','Požarni uslovi — sadržaj'],
+  ['teren_termin','Termin izlaska na teren'],['teren_zapisnik','Broj zapisnika sa terena'],
+  ['poziv_uvid_broj','Poziv na uvid - broj'],['poziv_uvid_datum','Poziv na uvid - datum'],['uvid_datum','Datum izvršenog uvida'],
+  ['prigovori','Prigovori (Da/Ne)'],['prigovori_tekst','Sadržaj prigovora'],
+  ['usmena','Usmena rasprava (Da/Ne)'],['usmena_poziv','Usmena - poziv broj'],['usmena_datum','Usmena - datum'],['usmena_sadrzaj','Usmena - sadržaj'],
+  ['troskovnik_broj','Naknada - troškovnik broj'],['troskovnik_datum','Naknada - datum izrade troškovnika'],['naknada_iznos','Naknada za uređenje - iznos (KM)'],['naknada_slovima','Naknada za uređenje - slovima'],
+  ['graficki_prilog_br','Grafički prilog UT uslova - broj (čl.68 st.6)'],['koef_izgradenosti','Koeficijent izgrađenosti (čl.81 t.c)'],
+  ['taksa_tarifa','Taksa - tarifni broj'],['taksa_iznos','Taksa - iznos (KM)'],['taksa_kolicina','Taksa - količina'],['taksa_nacin','Taksa - način uplate'],['taksa_uplatnica','Taksa - uplatnica/broj (banka)'],['taksa_kvit','Taksa - broj kvita (blagajna)'],['taksa_datum','Taksa - datum uplate']
+];
+const priloziMap = [
+  {k:'p_kat', label:'Izvod iz katastarskog plana (kopija plana)',
+    det:[['kat_broj','Upravni broj'],['kat_izdao','Izdao'],['kat_datum','Datum']]},
+  {k:'p_sit', label:'Situacioni snimak / grafički prikaz',
+    det:[['sit_broj','Upravni broj'],['sit_izdao','Izradio/izdao'],['sit_datum','Datum']]},
+  {k:'p_vlas', label:'Dokaz pravnog interesa (vlasništvo / pravo građenja)'},
+  {k:'p_idejni', label:'Idejni projekat',
+    det:[['idejni_naziv','Naziv idejnog projekta'],['idejni_datum','Datum projekta'],['idejni_projektant','Izradio (projektant/biro)']]},
+  {k:'p_glavni_statika', label:'Glavni projekat sa statičkim proračunom',
+    det:[['gstat_broj','Broj projekta'],['gstat_projektant','Projektant/statičar'],['gstat_datum','Datum']]},
+  {k:'p_statika', label:'Dokaz o statičkoj stabilnosti (atest/izjava ovl. inženjera)',
+    det:[['stat_broj','Broj'],['stat_izdao','Izdao/ovl. inženjer'],['stat_datum','Datum']]},
+  {k:'p_geo_izvedeno', label:'Geodetski snimak izvedenog stanja',
+    det:[['geoiz_broj','Broj'],['geoiz_izradio','Izradio'],['geoiz_datum','Datum']]},
+  {k:'p_proj_uklanjanje', label:'Projekat uklanjanja (rušenja)',
+    det:[['ukl_broj','Broj'],['ukl_projektant','Projektant'],['ukl_datum','Datum']]},
+  {k:'p_komunalna', label:'Komunalna saglasnost (voda i kanalizacija)'},
+  {k:'p_saobracaj', label:'Saobraćajna saglasnost',
+    det:[['saob_broj','Broj'],['saob_izdao','Izdao'],['saob_datum','Datum'],['saob_uslovi','Uslovi iz saglasnosti']]},
+  {k:'p_elektro', label:'Prethodna elektroenergetska saglasnost',
+    det:[['elektro_broj','Broj'],['elektro_izdao','Izdao'],['elektro_datum','Datum'],['elektro_uslovi','Uslovi iz saglasnosti']]},
+  {k:'p_poljo', label:'Poljoprivredna saglasnost', det:[['poljo_broj','Broj'],['poljo_izdao','Izdao'],['poljo_datum','Datum'],['poljo_uslovi','Uslovi']]},
+  {k:'p_vodna', label:'Vodoprivredna saglasnost', det:[['vodna_broj','Broj'],['vodna_izdao','Izdao'],['vodna_datum','Datum'],['vodna_uslovi','Uslovi']]},
+  {k:'p_telekom', label:'Telekomunikacijska saglasnost', det:[['telekom_broj','Broj'],['telekom_izdao','Izdao'],['telekom_datum','Datum'],['telekom_uslovi','Uslovi']]},
+  {k:'p_geo', label:'Nalaz o geološkom ispitivanju tla', det:[['geo_broj','Broj'],['geo_izradio','Izradio'],['geo_datum','Datum']]},
+  {k:'p_vjerski', label:'Odobrenje vjerske institucije', det:[['vjerski_broj','Broj'],['vjerski_institucija','Institucija'],['vjerski_datum','Datum']]},
+  {k:'p_okol', label:'Okolinska dozvola',
+    det:[['okol_broj','Broj'],['okol_izdao','Izdao'],['okol_datum','Datum']]}
+];
+
+const KO = {
+  'Drvar': ['ATAŠEVAC','BASTASI I','BASTASI II','DRVAR GRAD','DRVAR SELO','KAMENICA','LJESKOVICA I','LJESKOVICA II','PODOVI','ŠIPOVLJANI','ŠTRPCI MALI','ŠTRPCI VELIKI','VIDOVO SELO','VRTOČE'],
+  'Bosansko Grahovo': ['CRNI LUG','GRAHOVO I','GRAHOVO II','MARINKOVCI','PEĆI','PEULJE','PREODAC','TIČEVO MALO','TIŠKOVAC DONJI']
+};
+const ORGAN = {
+  'Drvar': 'Opština Drvar — Služba za imovinsko-pravne i geodetske poslove',
+  'Bosansko Grahovo': 'Opština Bosansko Grahovo — Služba za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove'
+};
+function onOpstina(){
+  const o = F().elements['opstina'].value;
+  const sel = F().elements['ko']; const prev = sel.value;
+  sel.innerHTML = '<option value="">— izaberi k.o. —</option>';
+  (KO[o]||[]).forEach(function(k){ const op=document.createElement('option'); op.textContent=k; sel.appendChild(op); });
+  if((KO[o]||[]).indexOf(prev)>=0) sel.value=prev;
+  if(F().elements['organ']) F().elements['organ'].value = ORGAN[o] || F().elements['organ'].value;
+  const bd=document.getElementById('broj_drvar'), bf=document.getElementById('broj_free');
+  if(bd&&bf){ const dr=(o==='Drvar'); bd.style.display=dr?'flex':'none'; bf.style.display=dr?'none':'block'; }
+  const dk=document.getElementById('det_komisija'); const grahovo=(o==='Bosansko Grahovo');
+  if(dk) dk.classList.toggle('show', grahovo);
+  if(!grahovo){ ['komisija_imen_broj','komisija_mis_broj','komisija_mis_datum'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; }); }
+  if(typeof koOptions==='function'){ document.querySelectorAll('#parcele_list .pc_ko').forEach(function(s){ const pv=s.value; s.innerHTML=koOptions(pv); }); }
+}
+
+function val(n){const e=F().elements[n];return e?e.value.trim():'';}
+function godina2(){return String(new Date().getFullYear()).slice(-2);}
+function brojPredmeta(){
+  if(val('opstina')==='Drvar'){ const r = val('broj_redni') || '______'; return 'UP:04-19-3-'+r+'/'+godina2(); }
+  return val('broj_slobodni') || '______';
+}
+function pad(s){ while(s.length<38) s+=' '; return s; }
+
+function onKultura(){
+  const k = val('kultura');
+  const klasaKulture = ['Livada','Njiva','Šumsko zemljište','Poljoprivredno zemljište'];
+  const dk=document.getElementById('det_klasa'), dp=document.getElementById('det_put'), dpo=document.getElementById('det_poljo');
+  const showK = klasaKulture.indexOf(k)>=0, showP = (k==='Put'), showPo = (k==='Poljoprivredno zemljište');
+  if(dk) dk.classList.toggle('show', showK);
+  if(dp) dp.classList.toggle('show', showP);
+  if(dpo) dpo.classList.toggle('show', showPo);
+  if(!showK && F().elements['klasa']) F().elements['klasa'].value='';
+  if(!showP && F().elements['put_vrsta']) F().elements['put_vrsta'].value='';
+  if(!showPo && F().elements['poljo_vrsta']) F().elements['poljo_vrsta'].value='';
+}
+const REZIM_OSNOV = {
+  'Režim građenja I. stepena': ['Zoning plan','Regulacioni plan','Urbanistički projekat (na temelju regulacionog plana)','Urbanistički projekat (na temelju projektnog programa, bez regulacionog plana) — manja rekonstrukcija/sanacija/manji obim'],
+  'Režim građenja II. stepena': ['Urbanistički plan + odluka o provođenju','Zoning plan + odluka o provođenju'],
+  'Režim građenja III. stepena': ['Prostorni plan + odluka o provođenju + plan parcelacije'],
+  'Zabrana građenja': ['Zabrana izgradnje (dozvoljeno samo tekuće održavanje)','Dogradnja radi osnovnih higijenskih uslova','Konzerviranje građevine','Izuzetno: nove neophodne javne građevine/instalacije (na temelju odluke o režimu zabrane)']
+};
+const REZIM_HINT = {
+  'Režim građenja I. stepena':'Čl. 8a — detaljni planski dokument (zoning/regulacioni plan ili urbanistički projekat).',
+  'Režim građenja II. stepena':'Čl. 8b — urbanistički plan (ili zoning plan) + odluka o provođenju.',
+  'Režim građenja III. stepena':'Čl. 8c — prostorni plan + odluka o provođenju + plan parcelacije.',
+  'Zabrana građenja':'Čl. 8d — nije dopuštena izgradnja; izuzeci uz odluku o režimu zabrane.'
+};
+function onRezim(){
+  const r = val('rezim');
+  const d=document.getElementById('det_rezim'); const sel=F().elements['rezim_osnov']; const h=document.getElementById('rezim_hint');
+  const opts = REZIM_OSNOV[r]||[];
+  if(d) d.classList.toggle('show', opts.length>0);
+  if(sel){ const prev=sel.value; sel.innerHTML='<option value="">— izaberi —</option>';
+    opts.forEach(function(o){ const op=document.createElement('option'); op.textContent=o; sel.appendChild(op); });
+    if(opts.indexOf(prev)>=0) sel.value=prev; }
+  if(h) h.textContent = REZIM_HINT[r]||'';
+  const dp=document.getElementById('det_parcelacija'); const treba3=(r==='Režim građenja III. stepena');
+  if(dp) dp.classList.toggle('show', treba3);
+  if(!treba3){ ['parc_naziv','parc_odluka','parc_datum'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; });
+    const cb=F().elements['parc_skip']; if(cb) cb.checked=false; }
+  onParcSkip();
+}
+function onParcSkip(){
+  const cb=F().elements['parc_skip']; const w=document.getElementById('parc_polja');
+  const skip=(cb&&cb.checked);
+  if(w) w.style.display = skip ? 'none' : 'block';
+  if(skip){ ['parc_naziv','parc_odluka','parc_datum'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; }); }
+}
+function komMode(){
+  const m = val('kom_mode');
+  const s=document.getElementById('kom_spojeno'), r=document.getElementById('kom_razdvojeno');
+  if(s) s.style.display = (m==='razdvojeno') ? 'none' : 'block';
+  if(r) r.style.display = (m==='razdvojeno') ? 'block' : 'none';
+}
+function komunalnaLines(){
+  let s=''; const line=function(n,l,ind){ const v=val(n); if(v) s+=ind+l+': '+v+'\n'; };
+  if(val('kom_mode')==='razdvojeno'){
+    s+='        Voda:\n';
+    line('voda_broj','Broj','          '); line('voda_izdao','Izdao','          ');
+    line('voda_datum','Datum','          '); line('voda_uslovi','Uslovi','          ');
+    s+='        Kanalizacija:\n';
+    line('kanal_broj','Broj','          '); line('kanal_izdao','Izdao','          ');
+    line('kanal_datum','Datum','          '); line('kanal_uslovi','Uslovi','          ');
+  } else {
+    line('kom_broj','Broj','        - '); line('kom_izdao','Izdao','        - ');
+    line('kom_datum','Datum','        - '); line('kom_uslovi','Uslovi','        - ');
+  }
+  return s;
+}
+function komunalnaObj(){
+  const m = val('kom_mode')||'spojeno';
+  if(m==='razdvojeno') return { mode:'razdvojeno',
+    voda:{broj:val('voda_broj'),izdao:val('voda_izdao'),datum:val('voda_datum'),uslovi:val('voda_uslovi')},
+    kanalizacija:{broj:val('kanal_broj'),izdao:val('kanal_izdao'),datum:val('kanal_datum'),uslovi:val('kanal_uslovi')} };
+  return { mode:'spojeno', broj:val('kom_broj'), izdao:val('kom_izdao'), datum:val('kom_datum'), uslovi:val('kom_uslovi') };
+}
+
+function onPIOsnov(){
+  const m=val('pi_osnov');
+  const v=document.getElementById('pi_vlastito'), d=document.getElementById('pi_drugi');
+  if(v) v.style.display=(m==='drugi')?'none':'block';
+  if(d) d.style.display=(m==='drugi')?'block':'none';
+}
+function piLines(){
+  let s=''; const L=function(n,l){const x=val(n); if(x) s+='        - '+l+': '+x+'\n';};
+  if(val('pi_osnov')==='drugi'){
+    L('pi_vrsta','Vrsta (čl.45)'); L('pi_broj','Broj/oznaka'); L('pi_datum','Datum'); L('pi_strane','Strane/izdavalac');
+    s+='        - Notarska ovjera: '+(F().elements['pi_notar'].checked?'DA':'NE')+'\n';
+    L('pi_notar_broj','Broj ovjere'); L('pi_notar_datum','Datum ovjere'); L('pi_napomena','Napomena');
+  } else {
+    L('pi_vlastito_vrsta','Vrsta'); L('pi_v_broj','Broj'); L('pi_v_datum','Datum'); L('pi_v_izdao','Izdao');
+  }
+  return s;
+}
+function piObj(){
+  if(val('pi_osnov')==='drugi') return { osnov:'drugi', vrsta:val('pi_vrsta'), broj:val('pi_broj'), datum:val('pi_datum'),
+    strane:val('pi_strane'), notar_ovjereno:F().elements['pi_notar'].checked, notar_broj:val('pi_notar_broj'),
+    notar_datum:val('pi_notar_datum'), napomena:val('pi_napomena') };
+  return { osnov:'vlastito', vrsta:val('pi_vlastito_vrsta'), broj:val('pi_v_broj'), datum:val('pi_v_datum'), izdao:val('pi_v_izdao') };
+}
+let strankaIdx=0;
+function addStranka(ime, kc){
+  strankaIdx++;
+  const wrap=document.getElementById('stranke_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='row'; div.style.marginBottom='8px';
+  div.innerHTML='<div><input class="st_ime" placeholder="Ime i prezime / naziv pravnog lica"></div>'
+    +'<div style="display:flex;gap:6px"><input class="st_kc" placeholder="k.č." style="flex:1">'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.row\').remove()">&times;</button></div>';
+  if(ime) div.querySelector('.st_ime').value=ime;
+  if(kc) div.querySelector('.st_kc').value=kc;
+  wrap.appendChild(div);
+}
+function strankeData(){
+  const rows=document.querySelectorAll('#stranke_list .row'); const arr=[];
+  rows.forEach(function(r){ const a=r.querySelector('.st_ime'), b=r.querySelector('.st_kc');
+    const im=(a?a.value:'').trim(), kk=(b?b.value:'').trim(); if(im||kk) arr.push({ime:im, kc:kk}); });
+  return arr;
+}
+
+/* ---- "popuniti kasnije": kvačica koja polje pretvori u praznu liniju ______ ---- */
+function laterField(cb){
+  const name=cb.dataset.t; const el=F().elements[name]; if(!el) return;
+  if(cb.checked){ el.dataset.prev=el.value; el.value='______'; el.disabled=true; el.style.opacity=.55; }
+  else { el.disabled=false; el.style.opacity=1; el.value=el.dataset.prev||''; }
+}
+function laterRow(cb){
+  const row=cb.closest('.row'); const el=row?row.querySelector('.sa_pov'):null; if(!el) return;
+  if(cb.checked){ el.dataset.prev=el.value; el.value='______'; el.disabled=true; el.style.opacity=.55; }
+  else { el.disabled=false; el.style.opacity=1; el.value=el.dataset.prev||''; }
+}
+
+/* ---- Sastav objekta (povrsine po dijelovima) ---- */
+function addSastav(dio,pov){
+  const wrap=document.getElementById('sastav_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='row'; div.style.marginBottom='8px';
+  div.innerHTML='<div><input class="sa_naziv" list="sastav_opcije" placeholder="Dio objekta (npr. zidani dio, pod nadstrešnicom, bazen)"></div>'
+    +'<div class="lwrap"><input class="sa_pov" inputmode="decimal" placeholder="Površina (m²)">'
+    +'<label class="later"><input type="checkbox" class="sa_later" onchange="laterRow(this)">kasnije</label>'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.row\').remove()">&times;</button></div>';
+  if(dio) div.querySelector('.sa_naziv').value=dio;
+  if(pov) div.querySelector('.sa_pov').value=pov;
+  wrap.appendChild(div);
+}
+function sastavData(){
+  const rows=document.querySelectorAll('#sastav_list .row'); const arr=[];
+  rows.forEach(function(r){ const a=r.querySelector('.sa_naziv'), b=r.querySelector('.sa_pov');
+    const nm=(a?a.value:'').trim(), pv=(b?b.value:'').trim(); if(nm||pv) arr.push({dio:nm, povrsina:pv}); });
+  return arr;
+}
+
+/* ---- Krov ---- */
+function onKrov(){ const w=document.getElementById('krov_drugo_w'); if(w) w.style.display=(val('krov')==='__drugo')?'block':'none'; }
+function krovVal(){ const v=val('krov'); if(v==='__drugo') return (val('krov_drugo')||'').trim(); return v; }
+function onOkolisna(){
+  const v=val('okolisna'); const blk=document.getElementById('okol_block');
+  const treba=(v==='Da'||v==='Treba provjeriti');
+  if(blk) blk.style.display = treba ? 'block' : 'none';
+  if(!treba){ const cb=F().elements['p_okol']; if(cb){ cb.checked=false; const d=document.getElementById('det_p_okol'); if(d) d.classList.remove('show'); } }
+}
+function onPozar(){
+  const d=document.getElementById('det_pozar');
+  const show=(val('pozar_status')==='Pribavljeni posebni uvjeti / načelna suglasnost MUP-a');
+  if(d) d.classList.toggle('show', show);
+  if(!show){ ['pozar_broj','pozar_datum','pozar_izdao','pozar_uslovi'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; }); }
+}
+/* ---- automatska adaptacija priloga po vrsti akta / zahvata ---- */
+function setWrap(id, show){
+  var w=document.getElementById('wrap_'+id); if(!w) return;
+  w.style.display = show ? 'block' : 'none';
+  if(!show){ var cb=F().elements[id]; if(cb && cb.checked){ cb.checked=false; var d=document.getElementById('det_'+id); if(d) d.classList.remove('show'); } }
+}
+function updateAkt(){
+  var v=val('vrsta_dozvole'), z=val('zahvat');
+  var nacelna=/Načelna/.test(v), naknadna=/Naknadna/.test(v), izmjena=/Izmjena/.test(v), privremena=/privremenu/i.test(v), informacija=/informacija/i.test(v);
+  var postojeci=/Rekonstrukcija|Sanacija|Dogradnja|Nadogradnja|Promjena namjene|Konzerviranje|Uklanjanje/.test(z);
+  var konstrukcija=/Rekonstrukcija|Dogradnja|Nadogradnja/.test(z);
+  var uklanjanje=/Uklanjanje/.test(z), sanacija=/Sanacija/.test(z), novogradnja=/Novogradnja/.test(z), promjena=/Promjena namjene/.test(z);
+  /* prikaži relevantna polja */
+  setWrap('p_glavni_statika', !nacelna && (konstrukcija||naknadna||sanacija));
+  setWrap('p_statika', !nacelna && (naknadna||konstrukcija));
+  setWrap('p_geo_izvedeno', naknadna);
+  setWrap('p_proj_uklanjanje', uklanjanje);
+  /* lista traženih priloga */
+  var req=[], opt=[];
+  if(nacelna){
+    req.push('Dokaz pravnog interesa (čl. 45)');
+    req.push('Izvod iz katastarskog plana i situacioni snimak');
+    req.push('Podaci o parceli, namjeni i planskom dokumentu');
+    opt.push('Načelna faza (čl. 64. st. 3–4): detaljne saglasnosti i projekti se NE traže sada — utvrđuju se kod prave lokacijske/građevinske dozvole.');
+  } else {
+    req.push('Dokaz pravnog interesa (čl. 45)');
+    req.push('Izvod iz katastarskog plana (kopija plana)');
+    req.push('Situacioni snimak terena / grafički prikaz');
+    if(novogradnja) req.push('Idejni projekat');
+    if(konstrukcija) req.push('Glavni projekat sa statičkim proračunom (zahvat dira konstrukciju)');
+    if(sanacija) req.push('Projekat sanacije / glavni projekat (statički proračun ako se dira konstrukcija)');
+    if(naknadna){
+      req.push('Dokaz o statičkoj stabilnosti — glavni projekat izvedenog stanja + statički proračun, ili atest/izjava ovlaštenog inženjera');
+      req.push('Geodetski snimak izvedenog stanja');
+      req.push('Dokaz iz postupka legalizacije (objekat je bespravan)');
+    }
+    if(postojeci && !naknadna) req.push('Dokaz legalnosti postojećeg objekta (građevinska/upotrebna dozvola ili potvrda)');
+    if(uklanjanje) req.push('Projekat uklanjanja (rušenja)');
+    if(promjena) req.push('Dokaz o ispunjenosti uslova za novu namjenu');
+    if(privremena) req.push('Rok korištenja (najviše 3 godine) i način/rok uklanjanja (čl. 74/83)');
+    if(izmjena) req.push('Osnovni akt koji se mijenja / dopunjava');
+    if(informacija) opt.push('Lokacijska informacija = skraćeni postupak na osnovu detaljnog plana (čl. 78).');
+    opt.push('Saglasnosti (komunalna, saobraćajna, elektroenergetska, vodna, telekom…) — prema uslovima lokacije i plana. Okolinska ako je propisana.');
+  }
+  var h='<p style="font-weight:600;margin:2px 0 6px">Za izabrani akt obično se prilaže:</p><ul style="margin:0 0 2px 18px;padding:0">';
+  req.forEach(function(x){ h+='<li style="margin:3px 0">'+x+'</li>'; });
+  h+='</ul>';
+  if(opt.length){ h+='<p class="hint" style="margin-top:8px">'+opt.join('<br>')+'</p>'; }
+  var g=document.getElementById('akt_guide'); if(g) g.innerHTML=h;
+}
+function addSugl(){
+  const wrap=document.getElementById('sugl_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.style.cssText='border:1px solid var(--line);border-radius:9px;padding:10px;margin-bottom:8px';
+  div.innerHTML='<input class="sg_naziv" placeholder="Naziv saglasnosti/uslova" style="margin-bottom:6px">'
+    +'<div class="row3"><input class="sg_broj" placeholder="Broj"><input class="sg_izdao" placeholder="Izdao"><input class="sg_datum" placeholder="Datum dd.mm.gggg."></div>'
+    +'<button type="button" class="ghost" style="margin-top:6px;padding:6px 12px" onclick="this.closest(\'div\').remove()">Ukloni</button>';
+  wrap.appendChild(div);
+}
+function suglData(){
+  const rows=document.querySelectorAll('#sugl_list > div'); const arr=[];
+  rows.forEach(function(r){
+    const g=function(c){const e=r.querySelector(c); return e?e.value.trim():'';};
+    const naziv=g('.sg_naziv'), broj=g('.sg_broj'), izdao=g('.sg_izdao'), datum=g('.sg_datum');
+    if(naziv||broj||izdao||datum) arr.push({naziv:naziv,broj:broj,izdao:izdao,datum:datum});
+  });
+  return arr;
+}
+function onNadleznost(){
+  const d=document.getElementById('det_nadleznost');
+  if(d) d.classList.toggle('show', isMinistarstvo());
+}
+function isMinistarstvo(){ return (val('nadleznost')||'').indexOf('Ministarstvo')===0; }
+function evalNadleznost(){
+  const qs=document.querySelectorAll('.minq'); let n=0; qs.forEach(function(c){ if(c.checked) n++; });
+  const hid=F().elements['nadleznost']; const v=document.getElementById('nadl_verdikt');
+  if(n>0){ if(hid) hid.value='Ministarstvo HBŽ (od značaja za Županiju)';
+    if(v){ v.textContent='⚠ NADLEŽNO: MINISTARSTVO HBŽ (Livno) — opština NE izdaje. Klik na „Generiši" daje uputstvo.'; v.style.color='#d29922'; } }
+  else { if(hid) hid.value='Opštinska služba';
+    if(v){ v.textContent='✓ Nadležno: OPŠTINSKA SLUŽBA (redovan postupak).'; v.style.color='#2ea043'; } }
+}
+function showMin(){
+  const o=document.getElementById('out');
+  o.textContent='NAPOMENA - NADLEZNOST MINISTARSTVA HBZ\n\n'
+    +'Ovaj objekat/zahvat spada u nadleznost Ministarstva graditeljstva, obnove, prostornog uredjenja i zastite okolisa HBZ (Livno).\n'
+    +'Lokacijsku dozvolu izdaje MINISTARSTVO (clan 66. stav 2. ZPU HBZ i Uredba o gradjevinama od znacaja za Zupaniju), a NE opstinska sluzba.\n\n'
+    +'STA TREBA URADITI:\n'
+    +'1. Zahtjev za lokacijsku dozvolu podnosi se Ministarstvu (Livno), ne opstini.\n'
+    +'2. Uz zahtjev: dokaz pravnog interesa (cl. 45), izvod iz kat. plana, situacioni snimak, idejni projekat, okolisna dozvola gdje je propisana (cl. 65).\n'
+    +'3. Opstinska sluzba, na trazenje, daje MISLJENJE s ovjerenim grafickim izvodom iz planskog dokumenta (cl. 67).\n'
+    +'4. Paket podataka za opstinsko rjesenje se NE generise za ovaj predmet.\n';
+  o.style.display='block'; o.scrollIntoView({behavior:'smooth',block:'start'});
+  toast('Nadleznost Ministarstva - paket se ne generise','warn');
+}
+function onPrigovori(){ const d=document.getElementById('det_prigovori'); const da=(val('prigovori')==='Da');
+  if(d) d.classList.toggle('show', da); if(!da && F().elements['prigovori_tekst']) F().elements['prigovori_tekst'].value=''; }
+function onUsmena(){ const d=document.getElementById('det_usmena'); const da=(val('usmena')==='Da');
+  if(d) d.classList.toggle('show', da);
+  if(!da){ ['usmena_poziv','usmena_datum','usmena_sadrzaj'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; }); } }
+function onTaksaNacin(){
+  const m=val('taksa_nacin'); const banka=(m==='Banka (virman)'), blag=(m==='Blagajna (gotovina)');
+  const db=document.getElementById('det_taksa_banka'), dl=document.getElementById('det_taksa_blagajna');
+  if(db) db.classList.toggle('show', banka);
+  if(dl) dl.classList.toggle('show', blag);
+  if(!banka && F().elements['taksa_uplatnica']) F().elements['taksa_uplatnica'].value='';
+  if(!blag && F().elements['taksa_kvit']) F().elements['taksa_kvit'].value='';
+}
+
+/* ---- Konverzija iznosa u riječi (KM, spojeni oblik kao "dvijestotinepedesetitri") ---- */
+function brojURijeci(n){
+  n=parseInt(n,10); if(isNaN(n)) return '';
+  if(n===0) return 'nula';
+  const jed=['','jedan','dva','tri','četiri','pet','šest','sedam','osam','devet'];
+  const des11=['deset','jedanaest','dvanaest','trinaest','četrnaest','petnaest','šesnaest','sedamnaest','osamnaest','devetnaest'];
+  const des=['','','dvadeset','trideset','četrdeset','pedeset','šezdeset','sedamdeset','osamdeset','devedeset'];
+  const fem=function(d){ return d===2?'dvije':jed[d]; };
+  function stotine(h){ if(h===0) return ''; if(h===1) return 'stotinu'; if(h>=2&&h<=4) return fem(h)+'stotine'; return jed[h]+'stotina'; }
+  function dvocifra(d){ if(d<10) return jed[d]; if(d<20) return des11[d-10]; const t=Math.floor(d/10),u=d%10; return des[t]+(u? 'i'+jed[u]:''); }
+  function ispod1000(x){ const h=Math.floor(x/100), r=x%100; let s=stotine(h); if(r>0){ s+= (h>0? '':'') + dvocifra(r); } return s; }
+  let out='';
+  const hilj=Math.floor(n/1000), ost=n%1000;
+  if(hilj>0){
+    if(hilj===1) out='hiljadu';
+    else if(hilj>=2&&hilj<=4){ out=(hilj===2?'dvije':ispod1000(hilj))+'hiljade'; }
+    else out=ispod1000(hilj)+'hiljada';
+  }
+  if(ost>0) out+=ispod1000(ost);
+  return out;
+}
+function onIznos(){ /* placeholder za buduće formatiranje na unos */ }
+function iznosSlovima(){
+  let raw=(val('naknada_iznos')||'').replace(/\s|KM|km/g,'').replace(/\./g,'').replace(',','.');
+  const num=parseFloat(raw);
+  if(isNaN(num)){ toast('Upiši iznos brojčano (npr. 253,00)'); return; }
+  const cijeli=Math.floor(num); const para=Math.round((num-cijeli)*100);
+  let txt=brojURijeci(cijeli)+' konvertibilne marke';
+  if(para>0) txt+=' i '+(para<10?'0':'')+para+'/100';
+  if(F().elements['naknada_slovima']) F().elements['naknada_slovima'].value=txt;
+  toast('Upisano slovima');
+}
+function onVrsta(){ const d=document.getElementById('det_raniji'); const v=val('vrsta_dozvole');
+  const da=(/Naknadna|Izmjena\/dopuna/.test(v));
+  if(d) d.classList.toggle('show', da);
+  if(!da){ ['raniji_broj','raniji_datum','raniji_napomena'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; }); }
+  const nh=document.getElementById('nacelna_hint'); const nac=/Načelna/.test(v);
+  if(nh){ nh.classList.toggle('show', nac);
+    nh.innerHTML = nac ? '⚑ <b>Načelna lokacijska</b> (čl. 64. st. 3–4): daju se samo <b>temeljni uslovi u načelu</b>, prije dodjele/licitacije zemljišta. Detaljne dimenzije, UT uslovi i saglasnosti NE moraju se sada definisati — utvrđuju se u postupku ishođenja prave lokacijske/građevinske dozvole. Popuni samo osnovno (parcela, namjena, plan).' : ''; }
+  /* koeficijent izgrađenosti — samo za lokacijsku informaciju (čl. 81 t. c) */
+  const kw=document.getElementById('koef_wrap');
+  if(kw){ const info=/informacija/i.test(v); kw.style.display=info?'block':'none'; if(!info && F().elements['koef_izgradenosti']) F().elements['koef_izgradenosti'].value=''; }
+  onLegalnost(); updateAkt(); }
+function onZahvat(){ const d=document.getElementById('det_privremena'); const da=(val('zahvat')==='Privremena građevina');
+  if(d) d.classList.toggle('show', da);
+  if(!da){ ['priv_rok','priv_uklanjanje'].forEach(function(n){ if(F().elements[n]) F().elements[n].value=''; }); }
+  onLegalnost(); updateAkt(); }
+function onLegalnost(){ const d=document.getElementById('det_legalnost'); if(!d) return;
+  const postojeci=/Rekonstrukcija|Sanacija|Dogradnja|Nadogradnja|Promjena namjene|Konzerviranje|Uklanjanje/.test(val('zahvat'));
+  const naknadna=/Naknadna/.test(val('vrsta_dozvole'));
+  d.classList.toggle('show', postojeci || naknadna); }
+
+/* dodatne parcele / PL (više k.č./k.o.) */
+function koOptions(sel){ const o=(F().elements['opstina']?F().elements['opstina'].value:''); let h='<option value="">— k.o. —</option>';
+  (KO[o]||[]).forEach(function(k){ h+='<option'+(k===sel?' selected':'')+'>'+k+'</option>'; }); return h; }
+function addParcela(pk){ pk=pk||{}; const wrap=document.getElementById('parcele_list'); if(!wrap) return;
+  const div=document.createElement('div'); div.className='row'; div.style.marginBottom='8px';
+  div.innerHTML='<div style="display:flex;gap:6px"><select class="pc_ko" style="flex:1">'+koOptions(pk.ko||'')+'</select>'
+    +'<input class="pc_kc" placeholder="k.č." style="flex:1"></div>'
+    +'<div style="display:flex;gap:6px"><input class="pc_pl" placeholder="PL broj" style="flex:1"><input class="pc_pov" placeholder="površina m²" style="flex:1">'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.row\').remove()">&times;</button></div>';
+  if(pk.kc) div.querySelector('.pc_kc').value=pk.kc; if(pk.pl) div.querySelector('.pc_pl').value=pk.pl; if(pk.povrsina) div.querySelector('.pc_pov').value=pk.povrsina;
+  wrap.appendChild(div); }
+function parceleData(){ const rows=document.querySelectorAll('#parcele_list .row'); const arr=[];
+  rows.forEach(function(r){ const g=function(c){const e=r.querySelector(c);return e?e.value.trim():'';};
+    const ko=g('.pc_ko'), kc=g('.pc_kc'), pl=g('.pc_pl'), pov=g('.pc_pov'); if(ko||kc||pl) arr.push({ko:ko,kc:kc,pl:pl,povrsina:pov}); }); return arr; }
+function build(){
+  const required = ['investitor','ko','kc','vrsta_gradjevine'];
+  for(const r of required){ if(!val(r)){ toast('Popuni obavezna polja (*)','warn'); F().elements[r].focus(); return null; } }
+
+  let t = '================================================\n';
+  t += '  ZAHTJEV ZA LOKACIJSKU DOZVOLU/INFORMACIJU - OPSTINA '+(val('opstina')||'').toUpperCase()+'\n';
+  t += '  (paket za obradu u Coworku - agenti: pravnik > pisar > revizor)\n';
+  t += '================================================\n\n';
+  t += pad('Broj predmeta')+': '+brojPredmeta()+'\n';
+  const legEl=document.getElementById('det_legalnost'); const legShown=!!(legEl && legEl.classList.contains('show'));
+  for(const [k,label] of fields){ if(k.indexOf('leg_')===0 && !legShown) continue; const v=val(k); if(v) t += pad(label)+': '+v+'\n'; }
+  if(krovVal()) t += pad('Vrsta krova')+': '+krovVal()+'\n';
+  if(F().elements['parc_skip'] && F().elements['parc_skip'].checked) t += pad('Plan parcelacije')+': nije potreban (vlastita parcela, jasne granice — paziti na odstojanje od ivice)\n';
+  const prc = parceleData();
+  if(prc.length){ t += '\nDODATNE PARCELE / POSJEDOVNI LISTOVI:\n'; prc.forEach(function(x){ t += '  - k.o. '+(x.ko||'?')+', k.c. '+(x.kc||'?')+', PL '+(x.pl||'-')+', povrsina '+(x.povrsina||'-')+' m2\n'; }); }
+  const sst = sastavData();
+  if(sst.length){ t += '\nSASTAV OBJEKTA (povrsine po dijelovima):\n'; sst.forEach(function(s){ t += '  - '+(s.dio||'?')+': '+(s.povrsina||'______')+' m2\n'; }); }
+
+  t += '\nPRILOZENA DOKUMENTACIJA:\n';
+  let any=false;
+  for(const p of priloziMap){
+    if(F().elements[p.k].checked){
+      t += '  [x] '+p.label+'\n'; any=true;
+      if(p.k==='p_komunalna'){ t += komunalnaLines(); }
+      else if(p.k==='p_vlas'){ t += piLines(); }
+      else if(p.det) for(const d of p.det){ const v=val(d[0]); if(v) t += '        - '+d[1]+': '+v+'\n'; }
+    }
+  }
+  if(!any) t += '  (nista oznaceno)\n';
+  const sg = suglData();
+  if(sg.length){ t += '\nOSTALE SAGLASNOSTI/USLOVI:\n'; sg.forEach(function(s){ t += '  - '+(s.naziv||'?')+' | br: '+(s.broj||'-')+' | izdao: '+(s.izdao||'-')+' | datum: '+(s.datum||'-')+'\n'; }); }
+
+  const nap = val('napomene');
+  if(nap){ t += '\nNAPOMENE:\n'+nap+'\n'; }
+  const stk = strankeData();
+  if(stk.length){ t += '\nSTRANKE U POSTUPKU (cl.46):\n'; stk.forEach(function(s){ t += '  - '+(s.ime||'?')+' - k.c. '+(s.kc||'?')+'\n'; }); }
+
+  /* administrativna taksa */
+  if(val('taksa_iznos')||val('taksa_tarifa')){
+    t += '\nADMINISTRATIVNA TAKSA:\n';
+    if(val('taksa_tarifa')) t += '  - Tarifni broj (Odluka): '+val('taksa_tarifa')+'\n';
+    if(val('taksa_iznos')) t += '  - Iznos: '+val('taksa_iznos')+' KM\n';
+    if(val('taksa_kolicina')) t += '  - Količina: '+val('taksa_kolicina')+'\n';
+    if(val('taksa_nacin')) t += '  - Način uplate: '+val('taksa_nacin')+'\n';
+    if(val('taksa_nacin')==='Banka (virman)' && val('taksa_uplatnica')) t += '  - Uplatnica/broj (banka): '+val('taksa_uplatnica')+'\n';
+    if(val('taksa_nacin')==='Blagajna (gotovina)' && val('taksa_kvit')) t += '  - Broj kvita (blagajna): '+val('taksa_kvit')+'\n';
+    if(val('taksa_datum')) t += '  - Datum uplate: '+val('taksa_datum')+'\n';
+  }
+  t += '\n--- kraj zahtjeva ---\n';
+
+  const obj={broj_predmeta:brojPredmeta()};
+  for(const [k] of fields) obj[k]=(k.indexOf('leg_')===0 && !legShown)?'':val(k);
+  obj.parcele = parceleData();
+  obj.prilozi = [];
+  for(const p of priloziMap){
+    if(F().elements[p.k].checked){
+      const e={stavka:p.label};
+      if(p.k==='p_komunalna'){ Object.assign(e, komunalnaObj()); }
+      else if(p.k==='p_vlas'){ Object.assign(e, piObj()); }
+      else if(p.det) for(const d of p.det){ e[d[0]]=val(d[0]); }
+      obj.prilozi.push(e);
+    }
+  }
+  obj.krov = krovVal();
+  obj.sastav_objekta = sastavData();
+  obj.napomene = nap;
+  obj.stranke = strankeData();
+  obj.ostale_saglasnosti = suglData();
+  t += '\n--- JSON ---\n'+JSON.stringify(obj,null,2)+'\n';
+  return t;
+}
+
+function generate(){
+  if(isMinistarstvo()){ showMin(); return; }
+  const t=build(); if(t===null) return;
+  const o=document.getElementById('out'); o.textContent=t; o.style.display='block';
+  o.scrollIntoView({behavior:'smooth',block:'start'});
+  toast('Paket generisan - kopiraj ili preuzmi','ok');
+}
+function copyOut(){
+  if(isMinistarstvo()){ showMin(); return; }
+  const t=document.getElementById('out').textContent || build(); if(!t) return;
+  navigator.clipboard.writeText(t).then(function(){toast('Kopirano! Zalijepi u Cowork','ok');})
+   .catch(function(){var r=document.createRange();r.selectNode(document.getElementById('out'));
+     getSelection().removeAllRanges();getSelection().addRange(r);document.execCommand('copy');toast('Kopirano','ok');});
+}
+function download(){
+  if(isMinistarstvo()){ showMin(); return; }
+  const t=document.getElementById('out').textContent || build(); if(!t) return;
+  const naziv = brojPredmeta().replace(/[\\/:*?"<>|]/g,'-')+'_'+(val('investitor')||'').replace(/[\\/:*?"<>|]/g,'-').slice(0,30);
+  const blob=new Blob([t],{type:'text/plain;charset=utf-8'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ZAHTJEV_'+naziv+'.txt';a.click();
+  toast('Spremi u folder 01_ZAHTJEVI','ok');
+}
+let tT;
+function toast(m,type){const el=document.getElementById('toast');el.textContent=m;
+  el.style.background = type==='warn' ? '#d29922' : '#2ea043';
+  el.classList.add('show');clearTimeout(tT);tT=setTimeout(function(){el.classList.remove('show');},2600);}
+
+function wireDetails(){
+  for(const p of priloziMap){
+    const cb=F().elements[p.k]; const det=document.getElementById('det_'+p.k);
+    if(cb && det){ const upd=function(){ det.classList.toggle('show', cb.checked); }; cb.addEventListener('change',upd); upd(); }
+  }
+}
+
+/* ================= UVOZ POPUNJENOG PAKETA ================= */
+function setEl(name,value){ const e=F().elements[name]; if(!e) return; if(value===undefined||value===null) return; e.value=value; }
+function setBrojPredmeta(bp){
+  if(!bp||bp==='______') return;
+  const m=bp.match(/UP:04-19-3-(.+)\/\d{2}/);
+  if(F().elements['opstina'] && F().elements['opstina'].value==='Drvar' && m){ setEl('broj_redni', m[1].trim()); }
+  else { setEl('broj_slobodni', bp); }
+}
+function parseTextPaket(raw){
+  const map={}; for(const [k,label] of fields){ map[label.trim()]=k; }
+  const o={}; let found=false;
+  raw.split('\n').forEach(function(line){
+    const mm=line.match(/^\s*([^:]+?)\s*:\s*(.+?)\s*$/); if(!mm) return;
+    const lab=mm[1].trim(), v=mm[2].trim();
+    if(lab==='Broj predmeta'){ o.broj_predmeta=v; found=true; return; }
+    if(lab==='Opština'){ o.opstina=v; found=true; }
+    if(map[lab]!==undefined){ o[map[lab]]=v; found=true; }
+  });
+  return found?o:null;
+}
+function importPaket(){
+  const raw=(document.getElementById('import_box').value||'').trim();
+  if(!raw){ toast('Naljepi paket u polje','warn'); return; }
+  let obj=null;
+  const ji=raw.indexOf('--- JSON ---');
+  const jsonStr = ji>=0 ? raw.slice(ji+12) : raw;
+  const a=jsonStr.indexOf('{'), b=jsonStr.lastIndexOf('}');
+  if(a>=0 && b>a){ try{ obj=JSON.parse(jsonStr.slice(a,b+1)); }catch(e){ obj=null; } }
+  if(!obj){ obj=parseTextPaket(raw); }
+  if(!obj){ toast('Ne mogu pročitati paket','warn'); return; }
+
+  if(obj.opstina){ setEl('opstina', obj.opstina); onOpstina(); }
+  if(obj.rezim){ setEl('rezim', obj.rezim); onRezim(); }
+  if(obj.broj_predmeta){ setBrojPredmeta(obj.broj_predmeta); }
+  for(const [k] of fields){ if(k in obj && obj[k]!=='' && obj[k]!=null) setEl(k, obj[k]); }
+  if(obj.krov){ if(obj.krov==='Dvovodni'||obj.krov==='Ravni'){ setEl('krov',obj.krov); } else { setEl('krov','__drugo'); setEl('krov_drugo',obj.krov); } }
+  if(/Plan parcelacije\s*:?\s*nije potreban/i.test(raw)){ const cb=F().elements['parc_skip']; if(cb) cb.checked=true; }
+
+  if(Array.isArray(obj.prilozi)){
+    obj.prilozi.forEach(function(pr){
+      const entry=priloziMap.find(function(p){return p.label===pr.stavka;}); if(!entry) return;
+      const cb=F().elements[entry.k]; if(cb){ cb.checked=true; cb.dispatchEvent(new Event('change')); }
+      Object.keys(pr).forEach(function(key){
+        if(key==='stavka') return;
+        let target=key;
+        if(entry.k==='p_vlas'){
+          /* grananje po osnovu: vlastito ima druga polja nego "drugi" osnov */
+          if(pr.osnov==='drugi'){ const mp={vrsta:'pi_vrsta',broj:'pi_broj',datum:'pi_datum'}; target=mp[key]||key; }
+          else { const mp={vrsta:'pi_vlastito_vrsta',broj:'pi_v_broj',datum:'pi_v_datum'}; target=mp[key]||key; }
+        }
+        if(entry.k==='p_komunalna'){ const mp={mode:'kom_mode',broj:'kom_broj',izdao:'kom_izdao',datum:'kom_datum',uslovi:'kom_uslovi'}; target=mp[key]||key; }
+        setEl(target, pr[key]);
+      });
+    });
+  }
+  if(Array.isArray(obj.stranke)){ const w=document.getElementById('stranke_list'); if(w) w.innerHTML=''; obj.stranke.forEach(function(s){ addStranka(s.ime, s.kc); }); }
+  if(Array.isArray(obj.sastav_objekta)){ const w=document.getElementById('sastav_list'); if(w) w.innerHTML=''; obj.sastav_objekta.forEach(function(s){ addSastav(s.dio, s.povrsina); }); }
+  if(Array.isArray(obj.parcele)){ const w=document.getElementById('parcele_list'); if(w) w.innerHTML=''; obj.parcele.forEach(function(x){ addParcela(x); }); }
+  if(Array.isArray(obj.ostale_saglasnosti)){ const w=document.getElementById('sugl_list'); if(w) w.innerHTML='';
+    obj.ostale_saglasnosti.forEach(function(s){ addSugl(); const rows=document.querySelectorAll('#sugl_list > div'); const r=rows[rows.length-1];
+      if(r){ const set=function(c,v){const e=r.querySelector(c); if(e&&v)e.value=v;}; set('.sg_naziv',s.naziv); set('.sg_broj',s.broj); set('.sg_izdao',s.izdao); set('.sg_datum',s.datum); } }); }
+
+  ['onKultura','onPIOsnov','komMode','onOkolisna','onPozar','onPrigovori','onUsmena','onTaksaNacin','onVrsta','onZahvat','onKrov','onParcSkip','updateAkt'].forEach(function(fn){ try{ if(typeof window[fn]==='function') window[fn](); }catch(e){} });
+  evalNadleznost();
+  toast('Paket uvezen — nastavi dopunjavati','ok');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){}
+  syncThemeBtn();
+}
+function syncThemeBtn(){const b=document.getElementById('themeBtn');
+  if(b) b.textContent = document.body.classList.contains('light') ? '🌙 Tamna' : '☀️ Svijetla';}
+
+document.addEventListener('DOMContentLoaded',function(){
+  const n=new Date();
+  const dd=String(n.getDate()).padStart(2,'0'), mm=String(n.getMonth()+1).padStart(2,'0'), yyyy=n.getFullYear();
+  if(F().elements['datum']) F().elements['datum'].value=dd+'.'+mm+'.'+yyyy+'.';
+  const gl=document.getElementById('godinaLbl'); if(gl) gl.textContent='/'+godina2();
+  try{ if(localStorage.getItem('ipp-tema')!=='dark') document.body.classList.add('light'); }catch(e){ document.body.classList.add('light'); }
+  syncThemeBtn();
+  wireDetails();
+  onOpstina();
+  komMode();
+  onTaksaNacin();
+  onKultura();
+  onRezim();
+  onPIOsnov();
+  if(document.getElementById('stranke_list')) addStranka();
+  onOkolisna();
+  onPozar();
+  onPrigovori();
+  onUsmena();
+  onVrsta();
+  onZahvat();
+  onKrov();
+  evalNadleznost();
+  // favicon = grb opštine (iz zaglavlja)
+  try{ const g=document.querySelector('img.grb');
+    if(g&&g.src){ let lk=document.querySelector('link[rel="icon"]');
+      if(!lk){ lk=document.createElement('link'); lk.rel='icon'; document.head.appendChild(lk); }
+      lk.href=g.src; } }catch(e){}
+});
+</script>
+</body>
+</html>
