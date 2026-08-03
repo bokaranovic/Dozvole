@@ -130,7 +130,11 @@
   .card h2 .cl{float:right;font-size:10px;font-weight:600;color:var(--muted);text-transform:none;letter-spacing:0;padding-top:2px}
   .cl{font-size:11px;color:var(--muted);font-weight:500}
   #n_paket{font-family:ui-monospace,Consolas,monospace;font-size:12px;min-height:70px}
-  #n_zbir td:first-child{text-align:left}
+  #n_zbir td:first-child,#n_dijeloviTbl td:first-child{text-align:left}
+  .kzrow .n_kz_nam{display:none}
+  .kzrow.mj{grid-template-columns:1fr 82px 1.2fr 1.05fr auto}
+  .kzrow.mj .n_kz_nam{display:block}
+  @media(max-width:560px){.kzrow.mj{grid-template-columns:1fr 1fr}.kzrow.mj .n_kz_nam{display:block}}
 </style>
 <style id="ipp-mobile-fix">
 /* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
@@ -237,6 +241,10 @@
     </div>
     <label>Naziv građevine / opis zahvata</label>
     <input id="n_objekat" placeholder="npr. stambeni objekat P+1, poslovni prostor, asfaltna baza…">
+    <label>Služba koja donosi akt o naknadi <span class="cl">čl. 54 st. 1</span></label>
+    <input id="n_sluzba" value="Služba za imovinsko-pravne i geodetske poslove">
+    <p class="hint">Akt o naknadi donosi <b>opštinska služba nadležna za uređenje građevinskog zemljišta</b> (čl. 54 st. 1). Upiši njen tačan naziv — ide u zaglavlje dokumenta.</p>
+    <label class="chk"><input type="checkbox" id="n_opstina_inv" onchange="nCalc()"><span>Investitor je <b>Opština Drvar</b> — naknada se utvrđuje i evidentira po opštim odredbama, a izmiruje <b>internim knjiženjem</b> u okviru budžeta (čl. 43 st. 4)</span></label>
   </div>
 
   <div class="card">
@@ -300,8 +308,12 @@
     <div class="det" id="n_d_dogradnja">
       <label>Korisna površina koja se dograđuje / nadziđuje (m²)</label>
       <input id="n_dograd_pov" inputmode="decimal" value="0" oninput="nCalc()">
-      <label class="chk"><input type="checkbox" id="n_dograd_prip" onchange="nCalc()"><span>Radovima se <b>povećava broj stambenih ili poslovnih jedinica</b>, ili se nova površina koristi za privrednu djelatnost (čl. 58 st. 5 — pripremanje se obračunava u punom iznosu)</span></label>
-      <p class="hint">Inače se bodovi za pripremanje ne obračunavaju ako su radovi pripremanja za tu česticu ranije izvedeni ili plaćeni (čl. 58 st. 4). Površina koja je postojala prije radova <b>nikada</b> ne ulazi u obračun.</p>
+      <label>Bodovi za pripremanje <span class="cl">čl. 58 st. 4–5</span></label>
+      <select id="n_dograd_prip" onchange="nCalc()">
+        <option value="puno">Obračunavaju se u punom iznosu — na dograđenu površinu</option>
+        <option value="nula">Ne obračunavaju se — radovi pripremanja za ovu česticu su ranije izvedeni ili plaćeni (utvrđeno uvidom u evidencije Službe)</option>
+      </select>
+      <p class="hint">Bodovi za pripremanje <b>ne obračunavaju se samo ako</b> su radovi pripremanja za tu građevinsku česticu ranije izvedeni ili plaćeni, a to se utvrđuje uvidom u evidencije Službe (čl. 58 st. 4). Ako se radovima povećava broj stambenih ili poslovnih jedinica, ili se nova površina koristi za privrednu djelatnost, pripremanje se obračunava u punom iznosu bez obzira na raniju izvedenost (čl. 58 st. 5). Površina koja je postojala prije radova <b>nikada</b> ne ulazi u obračun.</p>
     </div>
 
     <div class="det" id="n_d_rekonstrukcija">
@@ -324,21 +336,21 @@
     </div>
 
     <div class="det" id="n_d_etapa">
-      <label>Korisna površina ove etape (m²) — unesi je u dijelu 3</label>
+      <p class="hint" style="margin-top:0">Korisnu površinu <b>ove etape</b> unesi u dijelu 3.</p>
+      <label>Ukupna planirana korisna površina cijele građevine (m²) <span class="cl">čl. 57 st. 3</span></label>
+      <input id="n_etapa_uk" inputmode="decimal" value="0" oninput="nCalc()">
+      <p class="hint">Mjere podrške iz poglavlja X primjenjuju se na svaku etapu pojedinačno, ali <b>prema ukupnoj planiranoj korisnoj površini</b> građevine — granica od 120 m² odnosno 50 m² se ne umnožava brojem etapa (čl. 57 st. 3, čl. 63 st. 9 i 12). Ostavi 0 ako građevina nije etapna.</p>
       <label class="chk"><input type="checkbox" id="n_etapa_sve" onchange="nCalc()"><span>Investitor plaća naknade za <b>cjelokupnu</b> planiranu površinu odmah, kod prve etape (čl. 57 st. 4)</span></label>
+      <label class="chk"><input type="checkbox" id="n_etapa_zamrz" onchange="nCalc()"><span>Etapna izgradnja obuhvaćena <b>jedinstvenim lokacijskim aktom</b> — investitor traži da se zona, vrijednost boda i građevinska cijena iz prve etape primijene i na naredne (čl. 57 st. 5)</span></label>
       <p class="hint">Zona, vrijednost boda i osnovica za rentu uzimaju se prema danu urednog zahtjeva za svaku etapu (čl. 57 st. 2). Kod plaćanja unaprijed vrijedi rok od pet godina za okončanje svih etapa; po isteku se vrši novi obračun uz uračunavanje plaćenog, i to samo ako je novi veći (čl. 57 st. 4).</p>
     </div>
 
     <div class="det" id="n_d_legalizacija">
-      <label>Način uračunavanja ranije plaćenih iznosa <span class="cl">čl. 38</span></label>
-      <select id="n_leg_mod" onchange="nLeg();nCalc()">
-        <option value="nema">Nema ranijih uplata</option>
-        <option value="iznos">Poznat je ranije plaćen iznos (čl. 38 st. 3) — uračunava se u KM</option>
-        <option value="povrsina">Poznata je površina za koju je naknada u cijelosti plaćena (čl. 38 st. 5) — priznaje se u m²</option>
-      </select>
-      <div id="n_leg_iznos_w" style="display:none"><label>Ranije plaćen iznos, valorizovan (KM)</label><input id="n_leg_iznos" inputmode="decimal" value="0" oninput="nCalc()"></div>
-      <div id="n_leg_pov_w" style="display:none"><label>Korisna površina za koju je naknada ranije plaćena (m²)</label><input id="n_leg_pov" inputmode="decimal" value="0" oninput="nCalc()"></div>
-      <p class="hint">Uračunavaju se uplate po osnovu naknade za uređenje, rente, naknade za dodijeljeno zemljište i ranije privremene legalizacije (čl. 38 st. 1). Dokaz je uplatnica, izvod ili računovodstvena potvrda — <b>rješenje ili ugovor nisu dokaz o plaćanju</b> (čl. 38 st. 6). Ne uračunavaju se kazne, naknada za promjenu namjene poljoprivrednog zemljišta, takse, komunalna naknada, zakupnina i donacije (čl. 38 st. 11). Uračunati iznos ne može biti veći od naknade; višak se prebija sa budućim obavezama u roku od pet godina (čl. 38 st. 9). Renta se plaća i u postupku legalizacije (čl. 69 st. 4).</p>
+      <p class="hint" style="margin-top:0">Naknade se obračunavaju po opštim odredbama, prema zoni, vrijednosti boda i osnovici na dan urednog zahtjeva za legalizaciju, i <b>ne uvećavaju se</b> zato što je građevina izgrađena bez odobrenja (čl. 37 st. 2 i 3). Korisna površina utvrđuje se prema <b>stvarno izvedenom stanju</b>, po projektu izvedenog stanja ili nalazu vještaka (čl. 37 st. 4).</p>
+      <p class="hint"><b>Ranije plaćene iznose</b> upiši u dijelu 6a niže — uračunavaju se po čl. 38.</p>
+      <label>Naknada po propisu o legalizaciji koja po svojoj prirodi obuhvata uređenje ili pogodnosti (KM) <span class="cl">čl. 39 st. 2</span></label>
+      <input id="n_leg39" inputmode="decimal" value="0" oninput="nCalc()">
+      <p class="hint">Ista činjenična osnova ne može biti dvaput obračunata. Ako naknada propisana propisom o legalizaciji po svojoj prirodi obuhvata troškove uređenja zemljišta ili pogodnosti, po ovoj Odluci se obračunava <b>samo razlika</b> (čl. 39 st. 2). O postojanju preklapanja Služba se izjašnjava <b>obrazloženom službenom zabilješkom prije donošenja akta</b> (st. 3). Ostavi 0 ako preklapanja nema.</p>
     </div>
 
     <div class="det" id="n_d_namjena">
@@ -351,6 +363,8 @@
         </div>
         <div><label>Korisna površina koja mijenja namjenu (m²) — unesi u dijelu 3</label></div>
       </div>
+      <label class="chk"><input type="checkbox" id="n_pn_renta" onchange="nCalc()"><span>Za <b>raniju</b> namjenu renta nije bila utvrđena (npr. ostalo građevinsko zemljište, a nova namjena potpada pod čl. 71 st. 4) — renta se sada utvrđuje u punom iznosu</span></label>
+      <p class="hint">Ako je renta za raniju namjenu već bila utvrđena, razlike nema jer stopa iz čl. 71 ne zavisi od namjene, pa se renta ne obračunava ponovo.</p>
       <p class="hint">Plaća se <b>pozitivna razlika</b> između naknade po novoj i po ranijoj namjeni (čl. 56 st. 1), po zoni i vrijednosti boda na dan zahtjeva (st. 2). Ako je nova namjena jeftinija — nema ni povrata ni umanjenja (st. 3). Faktička promjena bez odobrenja utvrđena zapisnikom vodi naplati pune razlike po službenoj dužnosti (st. 5).</p>
     </div>
 
@@ -370,6 +384,8 @@
 
     <div id="n_m_detaljno" style="margin-top:12px">
       <p class="hint" style="margin-top:0">Klikni na polje koeficijenta pa se otvori tabela iz čl. 52. <button type="button" class="ghost mini" onclick="nKoefPanel(true)">📖 Tabela koeficijenata</button></p>
+      <label class="chk"><input type="checkbox" id="n_mjesovita" onchange="nMjes();nCalc()"><span><b>Građevina mješovite namjene</b> — svaki prostor ima svoju namjenu, pa se naknada računa zasebno po dijelovima (čl. 50 st. 2)</span></label>
+      <p class="hint" id="n_mjesHint" style="display:none">Za svaki prostor izaberi namjenu. Prostor označen kao <b>zajednički dio</b> (stubište, hodnik, kotlovnica) raspoređuje se na pojedine namjene srazmjerno njihovoj korisnoj površini (čl. 50 st. 3). Namjena i površina svakog dijela utvrđuju se prema glavnom projektu odnosno prema odobrenju za građenje.</p>
       <div id="n_kz_list"></div>
       <button type="button" class="ghost mini" onclick="nAddKZ('',null,1.0)">+ Dodaj prostor</button>
     </div>
@@ -435,7 +451,35 @@
     <p class="hint">Vrijednost boda utvrđuje Opštinsko vijeće do 31. decembra za narednu godinu; ako je ne utvrdi, primjenjuje se vrijednost iz prethodne godine (čl. 49).</p>
     <label>Priznato ulaganje investitora u komunalnu infrastrukturu (KM) <span class="cl">čl. 61</span></label>
     <input id="n_ulaganje" inputmode="decimal" value="0" oninput="nCalc()">
-    <p class="hint">Priznaje se samo ulaganje po usvojenom planskom dokumentu, uređeno ugovorom sa Opštinom i javnim preduzećem; izgrađeni objekti postaju vlasništvo Opštine. Priznato ulaganje <b>ne može biti veće od naknade</b> i ne isplaćuje se u novcu (čl. 61).</p>
+    <p class="hint">Priznaje se samo ulaganje po usvojenom planskom dokumentu, uređeno ugovorom sa Opštinom i nadležnim javnim preduzećem; izgrađeni objekti postaju vlasništvo Opštine. Vrijednost se utvrđuje po <b>okončanoj situaciji ovjerenoj od nadzornog organa</b> i jediničnim cijenama iz Programa uređenja; priznaje se <b>niži</b> od dokumentovanog troška i tržišne vrijednosti (čl. 61 st. 5 i 6). Ne priznaju se vodovi i saobraćajnice unutar kompleksa investitora koji služe isključivo njegovoj građevini (st. 7). Priznato ulaganje <b>ne može biti veće od naknade</b>, a razlika preko toga se ne isplaćuje niti daje pravo na zadržavanje infrastrukture (st. 4 i 8).</p>
+  </div>
+
+  <div class="card">
+    <h2>6a · Ranije plaćeni iznosi koji se uračunavaju <span class="cl">čl. 38, čl. 54 st. 4</span></h2>
+    <select id="n_leg_mod" onchange="nLeg();nCalc()">
+      <option value="nema">Nema ranijih uplata za ovu građevinu</option>
+      <option value="iznos">Poznat je ranije plaćen iznos (čl. 38 st. 3) — uračunava se u KM</option>
+      <option value="povrsina">Poznata je površina za koju je naknada u cijelosti plaćena (čl. 38 st. 5) — priznaje se u m²</option>
+    </select>
+    <div id="n_leg_iznos_w" style="display:none">
+      <div class="row">
+        <div><label>Ranije plaćen iznos — nominalno, kako je uplaćen</label><input id="n_leg_iznos" inputmode="decimal" value="0" oninput="nCalc()"></div>
+        <div><label>Datum ili godina uplate</label><input id="n_leg_datum" placeholder="npr. 12.06.1997." oninput="nCalc()"></div>
+      </div>
+      <div class="row">
+        <div><label>Koeficijent valorizacije <span class="cl">čl. 38 st. 3</span></label><input id="n_leg_ind" inputmode="decimal" value="1,00" oninput="nCalc()"></div>
+        <div><label>Valorizovan iznos koji se uračunava</label><input id="n_leg_valout" readonly></div>
+      </div>
+      <p class="hint">Koeficijent se dobija tako što se indeks cijena građevinskih radova <b>na dan obračuna</b> podijeli indeksom <b>na dan uplate</b> — indekse objavljuje nadležni zavod za statistiku. Ako uplata nije starija od tekuće godine, ostavi 1,00.<br>
+      Ako je uplata izvršena u <b>njemačkoj marci</b>, upiši isti broj — KM i DEM se izjednačavaju 1:1 (čl. 38 st. 4). Raniju valutu prvo preračunaj u njemačku marku po zvaničnom paritetu na dan uplate.<br>
+      Dokaz je uplatnica, izvod ili računovodstvena potvrda — <b>rješenje ili ugovor nisu dokaz o plaćanju</b> (čl. 38 st. 6). Ne uračunavaju se kazne, naknada za promjenu namjene poljoprivrednog zemljišta, takse, komunalna naknada, zakupnina ni donacije (st. 11).</p>
+    </div>
+    <div id="n_leg_pov_w" style="display:none">
+      <label>Korisna površina za koju je naknada ranije plaćena (m²)</label>
+      <input id="n_leg_pov" inputmode="decimal" value="0" oninput="nCalc()">
+      <p class="hint">Ovaj način ima <b>prednost</b> nad valorizacijom po indeksu i primjenjuje se i kada Opština ne raspolaže propisima i tarifama iz vremena uplate (čl. 38 st. 5).</p>
+    </div>
+    <p class="hint">Uračunavanje vrijedi i kada <b>lokacijski akt istekne</b> pa se u ponovnom postupku radi novi obračun: ranije plaćeni iznos se u cijelosti uračunava, a ako je novi obračun manji — razlika se <b>ne vraća</b> (čl. 54 st. 4). Isto i kod etapne izgradnje po čl. 57 st. 4. Uračunavanje nije oslobađanje od plaćanja (čl. 38 st. 2), pa naknada ostaje utvrđena u punom iznosu.</p>
   </div>
 
   <div class="card">
@@ -443,7 +487,8 @@
     <label>Prosječna konačna građevinska cijena m² korisne stambene površine (KM) <span class="cl">čl. 70</span></label>
     <input id="n_cijena" inputmode="decimal" value="0" placeholder="npr. 850,00" oninput="nCalc()">
     <p class="hint">Utvrđuje je Opštinsko vijeće do 31. marta tekuće godine za prethodnu godinu, a valorizuje se tromjesečno po indeksu cijena građevinskih radova (čl. 70 st. 2 i 4).</p>
-    <label class="chk"><input type="checkbox" id="n_renta_izuz" onchange="nCalc()"><span>Ostalo građevinsko zemljište koje <b>objektivno ispunjava uslove opremljenosti</b> iz čl. 65 ZGZ FBiH — renta po stopi za III zonu gradskog (čl. 71 st. 4)</span></label>
+    <label class="chk"><input type="checkbox" id="n_renta_izuz" onchange="nCalc()"><span>Građevina <b>iz čl. 7 st. 6</b> na ostalom građevinskom zemljištu, a lokacija <b>objektivno ispunjava uslove opremljenosti</b> iz čl. 65 ZGZ FBiH — renta po stopi za III zonu gradskog (čl. 71 st. 4)</span></label>
+    <p class="hint">Građevine iz čl. 7 st. 6 su: poslovna, trgovačka, ugostiteljska ili proizvodna građevina <b>korisne površine veće od 200 m²</b>, te benzinska ili plinska stanica, zdravstvena ustanova i slična građevina koja se gradi radi obavljanja privredne djelatnosti — bez obzira na površinu. Za porodičnu kuću na ostalom zemljištu ovo se <b>ne primjenjuje</b>. Opremljenost se utvrđuje zapisnikom o uviđaju i podacima javnih preduzeća, koji su sastavni dio akta o naknadi.</p>
     <div class="kpi" style="margin-top:12px">
       <div class="kpibox"><div class="k">Stopa rente</div><div class="v" id="n_rentaStopa">—</div></div>
       <div class="kpibox"><div class="k">Osnovica × površina</div><div class="v" id="n_rentaOsn" style="font-size:15px">—</div></div>
@@ -466,7 +511,13 @@
       <option value="g">g) 50% — dogradnja ili nadziđivanje vlastitog stambenog objekta (do 50 m²)</option>
       <option value="65">čl. 65 — pojedinačni zahtjev zbog nesrazmjernog tereta (najviše 50% i najviše 3.000 KM)</option>
     </select>
+    <div id="n_subv_f" style="display:none">
+      <label>Obim ranije građevine — korisna površina koja se obnavlja (m²) <span class="cl">čl. 63 st. 3 f)</span></label>
+      <input id="n_subv_f_pov" inputmode="decimal" value="0" oninput="nCalc()">
+      <p class="hint">Subvencija od 100% priznaje se samo <b>u obimu ranije građevine</b>. Površina nove građevine preko toga plaća se redovno. Za radove pristupačnosti osobama sa invaliditetom upiši površinu na koju se ti radovi odnose, ili ostavi 0 ako se subvencioniše cijeli zahvat.</p>
+    </div>
     <p class="hint" id="n_subvNapomena"></p>
+    <p class="hint">U postupku <b>legalizacije</b> mjere podrške iz čl. 63. se ne mogu ostvariti, osim osnova pod f); subvencija po čl. 65. samo pod dodatnim uslovima iz čl. 37 st. 7.</p>
     <div class="kpi" style="margin-top:12px">
       <div class="kpibox"><div class="k">Osnovica subvencije</div><div class="v" id="n_subvOsn" style="font-size:15px">0,00 KM</div></div>
       <div class="kpibox"><div class="k">Subvencija</div><div class="v" id="n_subvOut">0,00 KM</div></div>
@@ -483,16 +534,22 @@
       <div class="kpibox"><div class="k">Vrijednost boda</div><div class="v" id="n_vbOut">0,00</div></div>
     </div>
     <p class="hint" id="n_formulaOut" style="font-size:13px"></p>
+    <div id="n_dijeloviWrap" style="display:none">
+      <div class="podnaslov">Obračun po dijelovima građevine <span class="cl">čl. 50 st. 2–3</span></div>
+      <table id="n_dijeloviTbl"><thead><tr><th>Namjena dijela</th><th>Korisna površina</th><th>Bodovi</th><th>Iznos</th></tr></thead><tbody></tbody></table>
+    </div>
     <table id="n_zbir">
       <tbody>
         <tr><td>Naknada za uređenje građevinskog zemljišta</td><td id="n_r_uredjenje">0,00 KM</td></tr>
+        <tr id="n_r_stara_row" style="display:none"><td>− naknada obračunata za raniju namjenu (čl. 56 st. 1)</td><td id="n_r_stara">0,00 KM</td></tr>
+        <tr id="n_r_umanj_row" style="display:none"><td>− umanjenje za raniju porušenu građevinu (čl. 58 st. 6)</td><td id="n_r_umanj">0,00 KM</td></tr>
         <tr id="n_r_ulaganje_row" style="display:none"><td>− priznato ulaganje investitora (čl. 61)</td><td id="n_r_ulaganje">0,00 KM</td></tr>
-        <tr id="n_r_umanj_row" style="display:none"><td>− umanjenje za raniju građevinu (čl. 58 st. 6)</td><td id="n_r_umanj">0,00 KM</td></tr>
-        <tr id="n_r_leg_row" style="display:none"><td>− uračunat ranije plaćen iznos (čl. 38)</td><td id="n_r_leg">0,00 KM</td></tr>
+        <tr id="n_r_cl39_row" style="display:none"><td>− već obuhvaćeno naknadom po propisu o legalizaciji (čl. 39 st. 2)</td><td id="n_r_cl39">0,00 KM</td></tr>
         <tr><td>Naknada za pogodnosti — renta (čl. 69–71)</td><td id="n_r_renta">0,00 KM</td></tr>
         <tr class="total"><td>UKUPNO UTVRĐENO</td><td id="n_r_ukupno">0,00 KM</td></tr>
-        <tr id="n_r_subv_row" style="display:none"><td>− subvencija iz budžeta Opštine</td><td id="n_r_subv">0,00 KM</td></tr>
-        <tr class="total" id="n_r_placa_row" style="display:none"><td>PLAĆA STRANKA</td><td id="n_r_placa">0,00 KM</td></tr>
+        <tr id="n_r_leg_row" style="display:none"><td>− uračunat ranije plaćen iznos (čl. 38, čl. 54 st. 4)</td><td id="n_r_leg">0,00 KM</td></tr>
+        <tr id="n_r_subv_row" style="display:none"><td>− subvencija iz budžeta Opštine (čl. 63–65)</td><td id="n_r_subv">0,00 KM</td></tr>
+        <tr class="total" id="n_r_placa_row" style="display:none"><td>ZA PLAĆANJE</td><td id="n_r_placa">0,00 KM</td></tr>
       </tbody>
     </table>
     <div class="big" id="n_iznosOut">0,00 KM</div>
@@ -504,10 +561,10 @@
     <h2>10 · Plaćanje na rate <span class="cl">čl. 62</span></h2>
     <label class="chk"><input type="checkbox" id="n_rate_on" onchange="nCalc()"> Stranka traži plaćanje na rate</label>
     <div class="row" id="n_rate_w" style="display:none;margin-top:8px">
-      <div><label>Broj rata (najviše <span id="n_rate_max">—</span>)</label><input id="n_rate_br" inputmode="numeric" value="1" oninput="nCalc()"></div>
+      <div><label>Broj rata (najviše <span id="n_rate_max">—</span>)</label><input id="n_rate_br" inputmode="numeric" value="1" oninput="nCalc()" onchange="nRateFix()" onblur="nRateFix()"></div>
       <div><label>Mjesečna rata</label><input id="n_rate_izn" readonly></div>
     </div>
-    <p class="hint" id="n_rateNapomena">Do 1.000,00 KM — jednokratno; od 1.000 do 3.000 KM — najviše 6 rata; od 3.000 do 8.000 KM — najviše 12 rata; preko 8.000 KM — najviše 24 rate. Rate su jednake i <b>bez kamate</b>.</p>
+    <p class="hint" id="n_rateNapomena"></p>
     <div id="n_ratePlan"></div>
   </div>
 
@@ -880,7 +937,7 @@ var N_KOEF = [
   {v:0.9,  t:'0,9 — stambeni 2,2–2,6 m; poslovni/skladišni/uredski/servisni/trgovački/ugostiteljski/javni do 2,6 m'},
   {v:0.75, t:'0,75 — stambeni do 2,2 m; proizvodni do 2,6 m; spremište, ostava, garaža, galerija, lođa'},
   {v:0.5,  t:'0,5 — natkriveni prostor (balkon, terasa, parking); montažni objekti, kiosci, kontejneri'},
-  {v:0.3,  t:'0,3 — otvoreni poslovni i manipulativni prostori, stovarišta, servisi'},
+  {v:0.3,  t:'0,3 — benzinske stanice, otvoreni poslovni i manipulativni prostori, stovarišta, skladišta, servisi i uslužne namjene'},
   {v:0.1,  t:'0,1 — saobraćajne i manipulativne površine, reklame, sportski tereni'}
 ];
 var N_KOEF_FULL = [
@@ -921,11 +978,37 @@ var N_ZONE = ['I','II','III'];
 
 /* ---------------------------------------------------------------- pomoćno */
 function nEl(id){ return document.getElementById(id); }
-function nNum(id){ var e=nEl(id); if(!e) return 0;
-  var v=(e.value||'').toString().replace(/\s|KM|km|m²|m2/g,'').replace(/\.(?=\d{3}(\D|$))/g,'').replace(',','.');
-  var n=parseFloat(v); return isNaN(n)?0:n; }
-function nFmt(n){ return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' KM'; }
-function nFmtN(n){ return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function nNum(id){ var e=nEl(id); if(!e) return 0; var v=nBroj(e.value); return (v>0)?v:0; }
+function nNumSirovo(id){ var e=nEl(id); if(!e) return 0; return nBroj(e.value); }
+/* Cita broj bez obzira pise li se decimalni dio zarezom ili tackom, i bez obzira
+   ima li tacaka kao razdvajaca hiljada. Pravilo: zadnji zarez ili tacka koja NIJE
+   razdvajac hiljada je decimalni znak. */
+function nBroj(txt){
+  var v=(txt==null?'':txt).toString().replace(/\s|KM|km|m²|m2|%/g,'');
+  if(!v) return 0;
+  var neg=/^-/.test(v); v=v.replace(/[^\d.,]/g,'');
+  var zz=v.lastIndexOf(','), tt=v.lastIndexOf('.'), n;
+  if(zz>=0 && tt>=0){
+    /* i zarez i tacka: zadnji od njih je decimalni znak, drugi razdvaja hiljade */
+    var dec=Math.max(zz,tt);
+    n=parseFloat(v.slice(0,dec).replace(/[.,]/g,'')+'.'+v.slice(dec+1).replace(/[.,]/g,''));
+  } else if(zz>=0){
+    /* samo zarez — uvijek decimalni znak */
+    n=parseFloat(v.slice(0,zz).replace(/,/g,'')+'.'+v.slice(zz+1).replace(/,/g,''));
+  } else if(tt>=0){
+    var tacaka=(v.match(/\./g)||[]).length;
+    var cijeli=v.slice(0,tt), ostatak=v.slice(tt+1);
+    /* tacka je razdvajac hiljada ako ih ima vise, ili ako iza nje stoje tacno tri
+       cifre a cijeli dio nije nula ("2.000" = 2000, ali "0.100" = 0,10) */
+    if(tacaka>1 || (/^\d{3}$/.test(ostatak) && /^\d+$/.test(cijeli) && parseInt(cijeli,10)!==0))
+      n=parseFloat(v.replace(/\./g,''));
+    else n=parseFloat(v);
+  } else n=parseFloat(v);
+  if(!isFinite(n)) return 0;
+  return neg?-n:n;
+}
+function nFmt(n){ if(!isFinite(n)) return '— nije broj —'; return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' KM'; }
+function nFmtN(n){ if(!isFinite(n)) return '—'; return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2}); }
 function nVal(id){ var e=nEl(id); return e?e.value.trim():''; }
 
 /* kolona bodovne tabele po namjeni; poljoprivredna = proizvodna umanjena za 70% */
@@ -964,12 +1047,25 @@ document.addEventListener('keydown',function(e){ if(e.key==='Escape') nKoefPanel
 
 function nKoefOptions(sel){ var h=''; N_KOEF.forEach(function(k){
   h+='<option value="'+k.v+'"'+(sel!=null&&Math.abs(k.v-sel)<1e-9?' selected':'')+'>'+k.t+'</option>'; }); return h; }
-function nAddKZ(opis,pov,koef){
+function nNamOptions(sel){
+  var o=[['stambena','Stambeni dio'],['poslovna','Poslovni dio'],['proizvodna','Proizvodni dio'],
+         ['poljoprivredna','Poljoprivredni dio'],['zajednicki','Zajednički dio (raspoređuje se)']];
+  var h=''; o.forEach(function(x){ h+='<option value="'+x[0]+'"'+(sel===x[0]?' selected':'')+'>'+x[1]+'</option>'; });
+  return h; }
+function nMjes(){
+  var on=nEl('n_mjesovita').checked;
+  nEl('n_kz_list').classList.toggle('mj', on);
+  nEl('n_mjesHint').style.display = on?'block':'none';
+  document.querySelectorAll('#n_kz_list .kzrow').forEach(function(r){ r.classList.toggle('mj', on); });
+}
+function nAddKZ(opis,pov,koef,nam){
   var wrap=nEl('n_kz_list'); if(!wrap) return;
-  var div=document.createElement('div'); div.className='kzrow';
+  var mj=nEl('n_mjesovita') && nEl('n_mjesovita').checked;
+  var div=document.createElement('div'); div.className='kzrow'+(mj?' mj':'');
   div.innerHTML='<input class="n_kz_opis" placeholder="Prostor (npr. stan, kancelarija, garaža)">'
     +'<input class="n_kz_pov" inputmode="decimal" placeholder="m²" oninput="nCalc()">'
     +'<select class="n_kz_koef" onchange="nCalc()">'+nKoefOptions(koef!=null?koef:1.0)+'</select>'
+    +'<select class="n_kz_nam" onchange="nCalc()">'+nNamOptions(nam||'stambena')+'</select>'
     +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.kzrow\').remove();nCalc()">&times;</button>';
   wrap.appendChild(div);
   if(opis) div.querySelector('.n_kz_opis').value=opis;
@@ -979,9 +1075,10 @@ function nAddKZ(opis,pov,koef){
 function nKzData(){ var arr=[];
   document.querySelectorAll('#n_kz_list .kzrow').forEach(function(r){
     var opis=r.querySelector('.n_kz_opis').value.trim();
-    var pov=parseFloat((r.querySelector('.n_kz_pov').value||'').replace(',','.'))||0;
+    var pov=nBroj(r.querySelector('.n_kz_pov').value);
     var koef=parseFloat(r.querySelector('.n_kz_koef').value)||0;
-    if(pov>0) arr.push({opis:opis,pov:pov,koef:koef,rezultat:pov*koef});
+    var ns=r.querySelector('.n_kz_nam');
+    if(pov>0) arr.push({opis:opis,pov:pov,koef:koef,rezultat:pov*koef,nam:ns?ns.value:'stambena'});
   });
   return arr; }
 
@@ -1008,7 +1105,7 @@ function nZahvat(){
 function nLeg(){ var m=nEl('n_leg_mod').value;
   nEl('n_leg_iznos_w').style.display = m==='iznos'?'block':'none';
   nEl('n_leg_pov_w').style.display   = m==='povrsina'?'block':'none'; }
-function nSubv(){ /* napomena se ispisuje u nCalc */ }
+function nSubv(){ nEl('n_subv_f').style.display = (nEl('n_subv').value==='f')?'block':'none'; }
 
 /* ---- opremanje: UI i bodovi ---- */
 function nBuildOprem(){
@@ -1020,13 +1117,13 @@ function nBuildOprem(){
     box.appendChild(div);
   });
 }
-function nBodoviOpremanja(nam){
+function nBodoviOpremanja(nam, tiho){
   var kol=nKol(nPripNam(nam)), f=nFaktorNam(nam), uk=0, det=[];
   var ul=nEl('n_ulica').value, up=Math.round(N_ULICA[ul][kol]*f*100)/100;
   if(ul!=='nema'){ uk+=up; det.push({naziv:'Ulica – put: '+N_ULICA[ul].t, b:up}); }
   N_OPREM.forEach(function(o){
     var b=Math.round(o[kol]*f*100)/100;
-    var pe=nEl('n_pts_'+o.id); if(pe) pe.textContent=nFmtN(b)+' b';
+    if(!tiho){ var pe=nEl('n_pts_'+o.id); if(pe) pe.textContent=nFmtN(b)+' b'; }
     var cb=nEl('n_op_'+o.id);
     if(cb&&cb.checked){ uk+=b; det.push({naziv:o.label, b:b}); }
   });
@@ -1076,7 +1173,7 @@ function nCalc(){
     pripPrimjena=0;
     pripNap='Kod privremenih građevina bodovi za pripremanje se <b>ne obračunavaju</b> jer se zemljište ne privodi konačnoj namjeni (čl. 45 st. 1).';
   } else if(zahvat==='dogradnja'){
-    if(!nEl('n_dograd_prip').checked){ pripPrimjena=0;
+    if(nEl('n_dograd_prip').value==='nula'){ pripPrimjena=0;
       pripNap='Bodovi za pripremanje se ne obračunavaju jer su radovi pripremanja za tu česticu ranije izvedeni ili plaćeni (čl. 58 st. 4).'; }
     else pripNap='Bodovi za pripremanje obračunavaju se u punom iznosu, ali <b>isključivo na dograđenu površinu</b> (čl. 58 st. 5).';
   } else if(zahvat==='linijska'){
@@ -1098,62 +1195,125 @@ function nCalc(){
 
   var bodovi=Math.round((op.uk+pripPrimjena)*100)/100;
 
+  /* stopa rente po čl. 69–71, potrebna i kod umanjenja iz čl. 58 st. 6 */
+  function stopaRente(){
+    if(zahvat==='linijska') return 0;
+    if(vrsta==='gradsko') return N_RENTA[um.zona];
+    if(nEl('n_renta_izuz').checked) return N_RENTA['III'];
+    return 0;
+  }
+  /* pravila koja umanjuju pripremanje, primjenjiva na bilo koju namjenu */
+  function pripZa(n){
+    if(zahvat==='privremena' || zahvat==='linijska') return 0;
+    if(zahvat==='dogradnja' && nEl('n_dograd_prip').value==='nula') return 0;
+    return nBodoviPripremanja(n, vrsta, um.zonaIdx);
+  }
+
   /* naknada za uređenje */
   var uredjenje=bodovi*obracunska*vb;
 
+  /* čl. 50 st. 2–3 — mješovita namjena: zaseban obračun po dijelovima */
+  var mjes = nEl('n_mjesovita').checked && nEl('n_pmode').value==='detaljno' && korisna>0 && zahvat!=='linijska';
+  var dijelovi=null;
+  if(mjes){
+    var g={}, zaj=0;
+    nKzData().forEach(function(x){
+      if(x.nam==='zajednicki'){ zaj+=x.rezultat; return; }
+      g[x.nam]=(g[x.nam]||0)+x.rezultat;
+    });
+    var suma=0, kk; for(kk in g) suma+=g[kk];
+    if(suma>0 && zaj>0){ for(kk in g) g[kk]+=zaj*g[kk]/suma; suma+=zaj; }
+    else if(suma<=0 && zaj>0){ g[nam]=zaj; suma=zaj; }
+    if(suma>0){
+      var f=obracunska/korisna, uk=0;
+      dijelovi=[];
+      for(kk in g){
+        var pv=g[kk]*f, oo=nBodoviOpremanja(kk,true), pp=pripZa(kk);
+        var bb=Math.round((oo.uk+pp)*100)/100, iz=bb*pv*vb;
+        dijelovi.push({nam:kk, pov:pv, oprem:oo.uk, prip:pp, bod:bb, iznos:iz});
+        uk+=iz;
+      }
+      dijelovi.sort(function(a,b){ return b.pov-a.pov; });
+      uredjenje=uk;
+    } else mjes=false;
+  }
+
   /* čl. 58 st. 6 — umanjenje za raniju porušenu građevinu */
-  var umanjZamjena=0;
+  var umanjZamjena=0, umanjZamjenaRenta=0, zPov=0;
   if(zahvat==='zamjena'){
-    var zNam=nEl('n_zam_nam').value, zPov=nNum('n_zam_pov');
-    var zOp=0, zKol=nKol(nPripNam(zNam)), zF=nFaktorNam(zNam);
-    var ul=nEl('n_ulica').value;
-    if(ul!=='nema') zOp+=N_ULICA[ul][zKol]*zF;
-    N_OPREM.forEach(function(o){ var cb=nEl('n_op_'+o.id); if(cb&&cb.checked) zOp+=o[zKol]*zF; });
-    var zPrip=nBodoviPripremanja(zNam, vrsta, um.zonaIdx);
-    umanjZamjena=(zOp+zPrip)*zPov*vb;
-    if(umanjZamjena>uredjenje) umanjZamjena=uredjenje;   /* čl. 58 st. 7 */
+    var zNam=nEl('n_zam_nam').value; zPov=nNum('n_zam_pov');
+    var zBod=Math.round((nBodoviOpremanja(zNam,true).uk + pripZa(zNam))*100)/100;
+    umanjZamjena=zBod*zPov*vb;                     /* naknada za uređenje ranije građevine */
+    umanjZamjenaRenta=stopaRente()/100*nNum('n_cijena')*zPov;   /* i njena renta — čl. 58 st. 6 */
   }
 
   /* čl. 56 — promjena namjene: plaća se samo pozitivna razlika */
+  var uredjenjeBruto=uredjenje;      /* iznos prije svih odbitaka — ide u dokument */
+  var staraNamjena=0;
   if(zahvat==='namjena'){
     var sNam=nEl('n_pn_stara').value;
-    var sKol=nKol(nPripNam(sNam)), sF=nFaktorNam(sNam), sOp=0;
-    var ul2=nEl('n_ulica').value;
-    if(ul2!=='nema') sOp+=N_ULICA[ul2][sKol]*sF;
-    N_OPREM.forEach(function(o){ var cb=nEl('n_op_'+o.id); if(cb&&cb.checked) sOp+=o[sKol]*sF; });
-    var sPrip=nBodoviPripremanja(sNam, vrsta, um.zonaIdx);
-    var stara=(sOp+sPrip)*obracunska*vb;
-    uredjenje=Math.max(0, uredjenje-stara);              /* čl. 56 st. 3 — nema povrata */
+    var sBod=Math.round((nBodoviOpremanja(sNam,true).uk + pripZa(sNam))*100)/100;
+    staraNamjena=sBod*obracunska*vb;
+    uredjenje=Math.max(0, uredjenje-staraNamjena);       /* čl. 56 st. 1 i 3 */
   }
-
-  var uredjenjeBruto=uredjenje;
+  if(umanjZamjena>uredjenje) umanjZamjena=uredjenje;    /* čl. 58 st. 7 */
   uredjenje-=umanjZamjena;
+  if(uredjenje<0) uredjenje=0;
 
-  /* čl. 61 — priznato ulaganje, ne veće od naknade */
+  /* čl. 61 — priznato ulaganje se priznaje kod naknade za uređenje, ne veće od nje */
   var ulaganje=Math.min(nNum('n_ulaganje'), Math.max(0,uredjenje));
   uredjenje-=ulaganje;
-
-  /* čl. 38 — uračunavanje ranije plaćenog iznosa u legalizaciji */
-  var legIznos=0;
-  if(zahvat==='legalizacija' && nEl('n_leg_mod').value==='iznos'){
-    legIznos=Math.min(nNum('n_leg_iznos'), Math.max(0,uredjenje));
-    uredjenje-=legIznos;
-  }
   if(uredjenje<0) uredjenje=0;
 
   /* ---- renta, čl. 69–71 ---- */
-  var cijena=nNum('n_cijena'), stopa=0, rentaNap='';
-  if(zahvat==='linijska'){ stopa=0; rentaNap='ne obračunava se — nema osnovice (čl. 44)'; }
-  else if(vrsta==='gradsko'){ stopa=N_RENTA[um.zona]; rentaNap=um.zona+' zona gradskog građevinskog zemljišta'; }
-  else if(nEl('n_renta_izuz').checked){ stopa=N_RENTA['III']; rentaNap='ostalo zemljište koje ispunjava uslove opremljenosti — stopa za III zonu gradskog (čl. 71 st. 4)'; }
-  else { stopa=0; rentaNap='na ostalom građevinskom zemljištu renta se ne utvrđuje (čl. 69 st. 6)'; }
-  var renta=stopa/100*cijena*obracunska;
+  var cijena=nNum('n_cijena'), stopa=stopaRente(), rentaNap='';
+  if(zahvat==='linijska') rentaNap='ne obračunava se — nema osnovice (čl. 44)';
+  else if(vrsta==='gradsko') rentaNap=um.zona+' zona gradskog građevinskog zemljišta';
+  else if(nEl('n_renta_izuz').checked) rentaNap='ostalo zemljište koje ispunjava uslove opremljenosti — stopa za III zonu gradskog (čl. 71 st. 4)';
+  else rentaNap='na ostalom građevinskom zemljištu renta se ne utvrđuje (čl. 69 st. 6)';
+  var rentaPuna=stopa/100*cijena*obracunska;
+  var renta=rentaPuna, rentaStara=0;
+  /* čl. 56: stopa rente ne zavisi od namjene, pa razlike po pravilu nema — osim ako
+     ranija namjena rentu uopšte nije imala (ostalo zemljište, čl. 71 st. 4) */
+  if(zahvat==='namjena'){
+    if(nEl('n_pn_renta').checked){ rentaStara=0; rentaNap='ranija namjena nije imala utvrđenu rentu — utvrđuje se u punom iznosu (čl. 56 st. 1, čl. 71 st. 4)'; }
+    else { rentaStara=rentaPuna; renta=0; rentaNap='renta za raniju namjenu je već bila utvrđena; stopa ne zavisi od namjene, pa razlike nema (čl. 56 st. 1, čl. 71)'; }
+  }
+  /* čl. 58 st. 6: umanjenje obuhvata i rentu ranije građevine */
+  if(umanjZamjenaRenta>renta) umanjZamjenaRenta=renta;
+  renta-=umanjZamjenaRenta;
+
+  /* čl. 39 st. 2 — ono što je već obuhvaćeno naknadom po propisu o legalizaciji */
+  var cl39=0;
+  if(zahvat==='legalizacija'){
+    cl39=Math.min(nNum('n_leg39'), uredjenje+renta);
+    var c39u=Math.min(cl39, uredjenje); uredjenje-=c39u;
+    var c39r=cl39-c39u; renta-=c39r;
+  }
+  if(uredjenje<0) uredjenje=0;
+  if(renta<0) renta=0;
+
+  /* UKUPNO UTVRĐENO — čl. 38 st. 2 i čl. 63 st. 2: naknada se utvrđuje u punom iznosu,
+     pa se tek onda uračunavaju ranije uplate i odobrava subvencija */
+  var utvrdjeno=uredjenje+renta;
 
   nEl('n_rentaStopa').textContent = stopa?(stopa+' %'):'—';
   nEl('n_rentaOsn').textContent   = stopa?(nFmtN(cijena)+' × '+nFmtN(obracunska)+' m²'):'—';
   nEl('n_rentaOut').textContent   = nFmt(renta);
 
-  var ukupno=uredjenje+renta;
+  /* ---- čl. 38 / čl. 54 st. 4 — uračunavanje ranije plaćenog, prvo u uređenje pa u rentu ---- */
+  var legIznos=0, legNom=0, legInd=1, legVal=0, legNaUredjenje=0, legNaRentu=0;
+  if(nEl('n_leg_mod').value==='iznos'){
+    legNom=nNum('n_leg_iznos');
+    legInd=nNum('n_leg_ind'); if(!(legInd>0)) legInd=1;
+    legVal=legNom*legInd;
+    nEl('n_leg_valout').value=nFmt(legVal);
+    legNaUredjenje=Math.min(legVal, uredjenje);
+    legNaRentu=Math.min(legVal-legNaUredjenje, renta);
+    legIznos=legNaUredjenje+legNaRentu;
+  } else nEl('n_leg_valout').value='';
+
+  var ukupno=Math.max(0, utvrdjeno-legIznos);
 
   /* ---- subvencija, čl. 63–65 ---- */
   var sv=nEl('n_subv').value, proc=0, limit=0, svNap='';
@@ -1163,40 +1323,93 @@ function nCalc(){
   else if(sv==='d30'){ proc=30; svNap='Uslov: zaposliti najmanje <b>tri</b> radnika sa prebivalištem u opštini Drvar u roku od dvije godine i održati tri godine. Raskidni uslov, obavezna bankarska garancija ili hipoteka, godišnja provjera (čl. 63 st. 5 i 10).'; }
   else if(sv==='d50'){ proc=50; svNap='Uslov: zaposliti najmanje <b>deset</b> radnika sa prebivalištem u opštini Drvar i održati tri godine. Raskidni uslov, obavezna bankarska garancija ili hipoteka (čl. 63 st. 5 i 10).'; }
   else if(sv==='e'){ proc=50; svNap='Gradnja u III zoni ostalog građevinskog zemljišta, radi ravnomjernog razvoja područja Opštine (čl. 63 st. 3 tačka e).'; }
-  else if(sv==='f'){ proc=100; svNap='Obnova građevine oštećene ili uništene u elementarnoj nepogodi ili požaru, u obimu ranije građevine — uz utvrđenje nadležnog organa da nije bilo namjere ni krajnje nepažnje; i radovi kojima se obezbjeđuje pristupačnost osobama sa invaliditetom (čl. 63 st. 3 tačka f).'; }
-  else if(sv==='g'){ proc=50; limit=50; svNap='Dogradnja ili nadziđivanje vlastitog stambenog objekta radi rješavanja stambenog pitanja porodice, bez povećanja broja stambenih jedinica i bez privredne djelatnosti. Granica od 50 m² računa se kumulativno, može se ostvariti samo jednom (čl. 63 st. 11).'; }
+  else if(sv==='f'){ proc=100; svNap='Obnova građevine oštećene ili uništene u elementarnoj nepogodi ili požaru — <b>u obimu ranije građevine</b>, uz utvrđenje nadležnog organa da nije bilo namjere ni krajnje nepažnje; i radovi kojima se obezbjeđuje pristupačnost osobama sa invaliditetom (čl. 63 st. 3 tačka f).'; }
+  else if(sv==='g'){ proc=50; limit=50; svNap='Dogradnja ili nadziđivanje vlastitog stambenog objekta radi rješavanja stambenog pitanja porodice, bez povećanja broja stambenih jedinica i bez privredne djelatnosti. Granica od 50 m² računa se kumulativno, može se ostvariti samo jednom (čl. 63 st. 11). Uslov „prvog stambenog objekta" se ovdje ne primjenjuje (st. 6).'; }
   else if(sv==='65'){ proc=50; svNap='Pojedinačni zahtjev zbog nesrazmjernog tereta: prihod po članu domaćinstva ispod 50% prosječne neto plate u FBiH, ili naknada veća od godišnjih prihoda domaćinstva. Odlučuje Opštinsko vijeće, najviše 50% i najviše 3.000,00 KM, samo fizičkom licu i samo za prvi stambeni objekat (čl. 65).'; }
 
-  var svOsn=ukupno, svIznos=0;
+  /* čl. 37 st. 6–7 — u legalizaciji samo osnov f), a čl. 65 uz dodatne uslove */
+  var svBlokirana='';
+  if(zahvat==='legalizacija' && proc>0 && sv!=='f' && sv!=='65'){
+    svBlokirana='U postupku legalizacije mjere podrške iz čl. 63. se ne mogu ostvariti, osim osnova pod f). Izabrani osnov se zato ne primjenjuje (čl. 37 st. 6). Uračunavanje ranije plaćenih iznosa po čl. 38. i plaćanje na rate po čl. 62. ostaju.';
+    proc=0; limit=0;
+  }
+  if(zahvat==='legalizacija' && sv==='65')
+    svNap+=' <b>U legalizaciji</b> se ova subvencija može odobriti samo fizičkom licu, samo za stambeni objekat u kojem to lice stanuje i koji mu je jedini, i samo ako je građevina izgrađena prije stupanja ove Odluke na snagu (čl. 37 st. 7).';
+
+  /* osnovica subvencije: puna utvrđena naknada, ograničena na dio površine do granice.
+     Kod mješovite namjene granica se mjeri na STAMBENOM dijelu (čl. 63 st. 9 uz čl. 50 st. 2),
+     a kod etapne izgradnje prema UKUPNOJ planiranoj površini (čl. 57 st. 3). */
+  var svOsn=0, svIznos=0, svPovrOsn=obracunska, svIznosOsn=utvrdjeno, svMjera='obračunska površina';
   if(proc>0){
-    if(limit>0 && obracunska>0){ svOsn=ukupno*Math.min(obracunska,limit)/obracunska; }
+    if(limit>0){
+      var dioSt=null;
+      if(dijelovi && dijelovi.length){
+        dioSt=dijelovi.filter(function(d){ return d.nam==='stambena'; })[0];
+        if(dioSt){
+          svPovrOsn=dioSt.pov;
+          /* naknada koja otpada na stambeni dio: uređenje srazmjerno njegovom iznosu,
+             renta srazmjerno njegovoj površini (čl. 63 st. 1 i 9 uz čl. 50 st. 2) */
+          var udioU = uredjenjeBruto>0 ? dioSt.iznos/uredjenjeBruto : 0;
+          var udioR = obracunska>0 ? dioSt.pov/obracunska : 0;
+          svIznosOsn = uredjenje*udioU + renta*udioR;
+          svMjera='stambeni dio građevine';
+        }
+        else { svPovrOsn=0; svIznosOsn=0; svMjera='u građevini nema stambenog dijela'; }
+      }
+      var mjerena=svPovrOsn;
+      var ukPlan=nNum('n_etapa_uk');
+      if(zahvat==='etapa' && ukPlan>0){ mjerena=ukPlan; svMjera='ukupna planirana površina građevine (čl. 57 st. 3)'; }
+      svOsn = mjerena>0 ? svIznosOsn*Math.min(mjerena,limit)/mjerena : 0;
+    } else if(sv==='f'){
+      var fPov=nNum('n_subv_f_pov');
+      svOsn = (fPov>0 && obracunska>0) ? utvrdjeno*Math.min(fPov,obracunska)/obracunska : utvrdjeno;
+      if(fPov>0) svMjera='obim ranije građevine '+nFmtN(Math.min(fPov,obracunska))+' m²';
+    } else svOsn=utvrdjeno;
     svIznos=svOsn*proc/100;
     if(sv==='65' && svIznos>3000) svIznos=3000;          /* čl. 65 st. 4 */
-    if(svIznos>ukupno) svIznos=ukupno;
+    if(svIznos>ukupno) svIznos=ukupno;                   /* ne preko onoga što je ostalo za platiti */
   }
-  var placa=ukupno-svIznos;
+  var placa=Math.max(0, ukupno-svIznos);
 
-  nEl('n_subvNapomena').innerHTML=svNap;
-  nEl('n_subvOsn').textContent=nFmt(svOsn>0&&proc>0?svOsn:0);
+  nEl('n_subvNapomena').innerHTML=svNap+(svBlokirana?('<br><b style="color:var(--warn)">'+svBlokirana+'</b>'):'');
+  nEl('n_subvOsn').textContent=nFmt(proc>0?svOsn:0);
   nEl('n_subvOut').textContent=nFmt(svIznos);
   nEl('n_placaOut').textContent=nFmt(placa);
 
+
   /* ---- rezultat ---- */
-  nEl('n_bodOut').textContent=nFmtN(bodovi);
+  nEl('n_bodOut').textContent = dijelovi ? 'po dijelovima' : nFmtN(bodovi);
   nEl('n_povrOut').textContent=nFmtN(obracunska)+' m²';
   nEl('n_vbOut').textContent=nFmtN(vb);
-  nEl('n_formulaOut').innerHTML='<b>Naknada za uređenje</b> = ('+nFmtN(op.uk)+' bodova opremanja + '+nFmtN(pripPrimjena)
-    +' bodova pripremanja) × '+nFmtN(obracunska)+' m² × '+nFmtN(vb)+' KM = <b>'+nFmt(uredjenjeBruto)+'</b>'
-    +(stopa?('<br><b>Renta</b> = '+stopa+'% × '+nFmtN(cijena)+' KM/m² × '+nFmtN(obracunska)+' m² = <b>'+nFmt(renta)+'</b>'):'');
+  nEl('n_formulaOut').innerHTML=(dijelovi
+    ? '<b>Naknada za uređenje</b> obračunata je zasebno za svaki dio građevine po njegovoj namjeni, pa su iznosi sabrani (čl. 50 st. 2) = <b>'+nFmt(uredjenjeBruto)+'</b>'
+    : '<b>Naknada za uređenje</b> = ('+nFmtN(op.uk)+' bodova opremanja + '+nFmtN(pripPrimjena)
+      +' bodova pripremanja) × '+nFmtN(obracunska)+' m² × '+nFmtN(vb)+' KM = <b>'+nFmt(uredjenjeBruto)+'</b>')
+    +(stopa&&rentaPuna>0?('<br><b>Renta</b> = '+stopa+'% × '+nFmtN(cijena)+' KM/m² × '+nFmtN(obracunska)+' m² = <b>'+nFmt(rentaPuna)+'</b>'):'');
 
+  var dw=nEl('n_dijeloviWrap');
+  if(dijelovi && dijelovi.length){
+    var tb=nEl('n_dijeloviTbl').querySelector('tbody'), th='', ukp=0, uki=0;
+    dijelovi.forEach(function(d){ ukp+=d.pov; uki+=d.iznos;
+      th+='<tr><td>'+N_NAMJENA_NAZIV[d.nam]+'</td><td>'+nFmtN(d.pov)+' m²</td><td>'+nFmtN(d.oprem)+' + '+nFmtN(d.prip)+' = '+nFmtN(d.bod)+'</td><td>'+nFmt(d.iznos)+'</td></tr>'; });
+    th+='<tr class="total"><td>Ukupno</td><td>'+nFmtN(ukp)+' m²</td><td></td><td>'+nFmt(uki)+'</td></tr>';
+    tb.innerHTML=th; dw.style.display='block';
+  } else dw.style.display='none';
+
+  function red(id, prikazi, txt){ var e=nEl(id+'_row'); if(e) e.style.display=prikazi?'':'none';
+    var v=nEl(id); if(v) v.textContent=txt; }
   nEl('n_r_uredjenje').textContent=nFmt(uredjenjeBruto);
-  nEl('n_r_ulaganje_row').style.display=ulaganje>0?'':'none';   nEl('n_r_ulaganje').textContent='− '+nFmt(ulaganje);
-  nEl('n_r_umanj_row').style.display=umanjZamjena>0?'':'none';  nEl('n_r_umanj').textContent='− '+nFmt(umanjZamjena);
-  nEl('n_r_leg_row').style.display=legIznos>0?'':'none';        nEl('n_r_leg').textContent='− '+nFmt(legIznos);
+  red('n_r_stara',    staraNamjena>0,   '− '+nFmt(staraNamjena));
+  red('n_r_umanj',    umanjZamjena>0,   '− '+nFmt(umanjZamjena));
+  red('n_r_ulaganje', ulaganje>0,       '− '+nFmt(ulaganje));
+  red('n_r_cl39',     cl39>0,           '− '+nFmt(cl39));
   nEl('n_r_renta').textContent=nFmt(renta);
-  nEl('n_r_ukupno').textContent=nFmt(ukupno);
-  nEl('n_r_subv_row').style.display=svIznos>0?'':'none';        nEl('n_r_subv').textContent='− '+nFmt(svIznos);
-  nEl('n_r_placa_row').style.display=svIznos>0?'':'none';       nEl('n_r_placa').textContent=nFmt(placa);
+  nEl('n_r_ukupno').textContent=nFmt(utvrdjeno);
+  red('n_r_leg',      legIznos>0,       '− '+nFmt(legIznos));
+  red('n_r_subv',     svIznos>0,        '− '+nFmt(svIznos));
+  var imaOdbitaka = (legIznos>0 || svIznos>0);
+  red('n_r_placa',    imaOdbitaka,      nFmt(placa));
+  var opstinaInv=nEl('n_opstina_inv').checked;
   nEl('n_iznosOut').textContent=nFmt(placa);
   nEl('n_slovimaOut').textContent=placa>0?('slovima: '+slovima(placa)):'';
 
@@ -1204,11 +1417,20 @@ function nCalc(){
   var up=[];
   if(vb<=0) up.push('Nije upisana <b>vrijednost boda</b> — bez nje obračun nije moguć (čl. 49).');
   if(stopa>0 && cijena<=0) up.push('Nije upisana <b>prosječna konačna građevinska cijena</b> — renta se ne može obračunati (čl. 70).');
+  if(nBroj(nEl('n_vboda').value)<0 || nBroj(nEl('n_ulaganje').value)<0 || nBroj(nEl('n_cijena').value)<0)
+    up.push('Negativan broj je upisan u jedno od polja — negativne vrijednosti se <b>ne uzimaju u obzir</b> (računa se kao 0). Provjeri unos.');
+  if(vb>0 && uredjenjeBruto>0)
+    up.push('Naknada obuhvata <b>stvarne troškove</b> pripremanja i opremanja predviđene planskim dokumentom i <b>ne može se utvrditi u iznosu većem od tih troškova</b> (čl. 43 st. 3). Vrijednost boda mora biti obrazložena podacima o stvarnim troškovima uređenja iz prethodne godine (čl. 49 st. 3).');
   if(zahvat==='privremena') up.push('Renta se obračunava i za privremene građevine; to se uzima u obzir pri utvrđivanju zakupnine posebnom odlukom (čl. 45 st. 5). Naknada se plaća <b>nezavisno od zakupnine</b> (st. 3).');
   if(zahvat==='privremena' && nEl('n_pogon_teski').checked) up.push('Obavezno se obračunavaju bodovi za put, u ugovor o zakupu ide obaveza vraćanja puta u stanje iz zapisnika, a prije predaje u posjed traži se <b>bezuslovna bankarska garancija</b> za sanaciju puta sa rokom šest mjeseci dužim od zakupa (čl. 45 st. 6–8).');
+  if(zahvat==='privremena' && nEl('n_pogon_teski').checked && nEl('n_ulica').value==='nema')
+    up.push('Za postrojenje iz čl. 45 st. 6 <b>obavezno se obračunavaju bodovi za put</b>, a u dijelu 4 je izabrano „nema izgrađenog puta". Ako postrojenje koristi pristupni put — izaberi vrstu puta.');
   if(zahvat==='linijska') up.push('Umjesto ovih naknada pokreni postupak <b>naknade za korištenje javnih površina i prava služnosti</b>. Lokacijski akt se ne može izdati dok te naknade ne budu utvrđene, a odobrenje za građenje dok ugovor ne bude zaključen i naknade plaćene (čl. 44 st. 6–7).');
-  if(nEl('n_pmode').value==='bruto') up.push('Obračun je <b>privremen</b> — po dostavljanju glavnog projekta odnosno po tehničkom pregledu vrši se konačan obračun i naplaćuje pozitivna razlika u roku od 30 dana (čl. 55 st. 2).');
-  if(um.stepeni>0) up.push('Umanjenje zone po čl. 46 primijenjeno je za '+um.stepeni+' stepen'+(um.stepeni>1?'a':'')+' — ispunjenost uslova mora se utvrditi <b>zabilješkom Službe</b> na osnovu izlaska na lice mjesta i podataka javnih preduzeća (čl. 46 st. 5).');
+  if(nEl('n_pmode').value==='bruto') up.push('Obračun je <b>privremen</b> — po dostavljanju glavnog projekta odnosno po tehničkom pregledu vrši se konačan obračun i naplaćuje pozitivna razlika u roku od 30 dana (čl. 55 st. 2). Ako konačan obračun bude <b>manji</b>, više plaćeno se vraća ili se, po izboru investitora, uračunava u buduću obavezu (čl. 55 st. 6). Konačan obračun se vrši i po službenoj dužnosti (st. 3 i 7).');
+  if(um.stepeni>0){
+    up.push('Umanjenje zone po čl. 46 primijenjeno je za '+um.stepeni+' stepen'+(um.stepeni>1?'a':'')+' — ispunjenost uslova mora se utvrditi <b>zabilješkom Službe</b> na osnovu izlaska na lice mjesta i podataka javnih preduzeća (čl. 46 st. 5).');
+    up.push('Umanjenje po čl. 46 se <b>ne primjenjuje</b> ako je zona te lokacije iz istog razloga već spuštena odlukom o utvrđivanju zona (čl. 9 st. 4). Provjeri odluku o zonama prije donošenja akta.');
+  }
   if(nEl('n_bezputa').checked && nEl('n_ulica').value!=='nema')
     up.push('U dijelu 1 stoji da čestica <b>nema izgrađen kolski pristupni put</b>, a u dijelu 4 je izabran put („'+N_ULICA[nEl('n_ulica').value].t+'"). Provjeri — ta dva podatka se ne slažu.');
   if(nEl('n_bezinst').checked){
@@ -1218,50 +1440,100 @@ function nCalc(){
   if((zahvat==='rekonstrukcija'||zahvat==='dogradnja') && obracunska<=0)
     up.push('Korisna površina se radovima ne povećava — naknade se <b>ne obračunavaju</b>, osim ako se mijenja namjena, kada se primjenjuje čl. 56 (čl. 58 st. 2).');
   if(zahvat==='etapa' && nEl('n_etapa_sve').checked)
-    up.push('Plaćanjem za cjelokupnu planiranu površinu kod prve etape naredne etape se ne obračunavaju ponovo, <b>pod uslovom da sve etape budu okončane u roku od pet godina</b> od pravosnažnosti odobrenja za prvu etapu (čl. 57 st. 4).');
+    up.push('Plaćanjem za cjelokupnu planiranu površinu kod prve etape naredne etape se ne obračunavaju ponovo, <b>pod uslovom da sve etape budu okončane u roku od pet godina</b> od pravosnažnosti odobrenja za prvu etapu. Po isteku roka radi se novi obračun uz uračunavanje plaćenog, i to samo ako je novi veći (čl. 57 st. 4).');
+  if(zahvat==='etapa' && nEl('n_etapa_zamrz').checked)
+    up.push('Na zahtjev investitora, kod jedinstvenog lokacijskog akta, zona, vrijednost boda i prosječna konačna građevinska cijena iz prve etape primjenjuju se i na naredne etape za koje je uredan zahtjev podnesen <b>u roku od tri godine</b> od konačnosti akta o naknadi za prvu etapu, uz poštovanje dinamike iz odobrenja za građenje; tromjesečna valorizacija se u tom periodu ne primjenjuje (čl. 57 st. 5).');
+  if(zahvat==='etapa' && nNum('n_etapa_uk')<=0 && limit>0)
+    up.push('Kod etapne izgradnje granica od '+limit+' m² za subvenciju mjeri se prema <b>ukupnoj planiranoj korisnoj površini</b> građevine, a ona nije upisana u dijelu 2 (čl. 57 st. 3). Bez toga se granica mjeri po površini ove etape, pa subvencija može ispasti veća nego što odluka dopušta.');
+  if(zahvat==='legalizacija'){
+    up.push('Prije donošenja akta Služba se <b>obrazloženom službenom zabilješkom</b> izjašnjava o tome obuhvata li naknada propisana propisom o legalizaciji po svojoj prirodi i troškove uređenja ili pogodnosti — ista činjenična osnova ne može biti dvaput obračunata (čl. 39).');
+    up.push('Prije odlučivanja provjeri <b>vlastite evidencije i evidencije službe za finansije</b> o ranijim uplatama i o tome sačini službenu zabilješku; teret dokazivanja ranije uplate je na podnosiocu (čl. 38 st. 8).');
+  }
+  if(legVal>legIznos+0.005) up.push('Valorizovani ranije plaćeni iznos ('+nFmt(legVal)+') veći je od utvrđenih naknada. Uračunava se samo do njihove visine; <b>višak od '+nFmt(legVal-legIznos)+' ne isplaćuje se u novcu</b>, nego se rješenjem evidentira i prebija sa budućim obavezama istog obveznika prema Opštini u roku od pet godina (čl. 38 st. 9).');
+  if(legNom>0 && Math.abs(legInd-1)<1e-9) up.push('Koeficijent valorizacije je 1,00 — ako je uplata iz ranijih godina, po čl. 38 st. 3 iznos treba valorizovati indeksom cijena građevinskih radova od dana uplate do dana obračuna.');
+  if(ulaganje>0){
+    up.push('Priznaje se <b>niži</b> od dokumentovanog troška i tržišne vrijednosti radova; ako kumulativna vrijednost za istu česticu prelazi 10.000,00 KM, obavezna je i <b>procjena sudskog vještaka</b> koju plaća investitor (čl. 61 st. 5 i 6). Ne priznaju se vodovi i saobraćajnice unutar kompleksa investitora (st. 7).');
+    up.push('Preuzimanje infrastrukture traži <b>garantni rok od najmanje dvije godine</b> i bankarsku garanciju od 10% vrijednosti radova, a za radove na javnim površinama i garanciju od najmanje 50% predračunske vrijednosti (čl. 61 st. 9 i 11).');
+  }
+  if(sv==='e' && !(vrsta==='ostalo' && zonaOrig==='III'))
+    up.push('Izabran je osnov subvencije e) — 50% za gradnju u <b>III zoni ostalog</b> građevinskog zemljišta, a u dijelu 1 je postavljeno '+(vrsta==='gradsko'?'gradsko':'ostalo')+' zemljište, '+zonaOrig+' zona. Provjeri.');
+  if((sv==='a'||sv==='b'||sv==='c'||sv==='65') && nam!=='stambena' && !(dijelovi&&dijelovi.length))
+    up.push('Izabrani osnov subvencije vezan je za <b>stambeni objekat</b>, a namjena građevine je „'+N_NAMJENA_NAZIV[nam].toLowerCase()+'". Provjeri (čl. 63 st. 3 i st. 6, čl. 65 st. 6).');
+  if((sv==='d30'||sv==='d50') && (nam==='stambena'||nam==='poljoprivredna'))
+    up.push('Osnov d) vezan je za <b>proizvodni ili poslovni</b> objekat, a namjena građevine je „'+N_NAMJENA_NAZIV[nam].toLowerCase()+'". Provjeri (čl. 63 st. 3 tačka d).');
+  if(sv==='g' && zahvat!=='dogradnja')
+    up.push('Osnov g) vezan je za <b>dogradnju ili nadziđivanje</b> vlastitog stambenog objekta, a u dijelu 2 je izabrano „'+nEl('n_zahvat').options[nEl('n_zahvat').selectedIndex].text.split(' —')[0]+'". Provjeri (čl. 63 st. 3 tačka g).');
+  if(sv==='f' && nNum('n_subv_f_pov')<=0)
+    up.push('Osnov f) priznaje 100% samo <b>u obimu ranije građevine</b>. Površina ranije građevine nije upisana, pa je subvencionisan cijeli zahvat — provjeri i upiši je (čl. 63 st. 3 tačka f).');
+  if(svIznos>0){
+    up.push('Naknada se u aktu utvrđuje u <b>punom iznosu</b> od '+nFmt(utvrdjeno)+'; subvencija se izvršava internim nalogom za poravnanje, a ne umanjenjem obaveze (čl. 63 st. 2 i 8). Uz to ide zabrana otuđenja pet godina, uz obavezu povrata valorizovanog iznosa (čl. 64 st. 5–6).');
+    up.push('Zahtjev za subvenciju podnosi se <b>najkasnije do donošenja akta o naknadi</b>. Ako sredstva planirana u budžetu budu iscrpljena, zahtjevi se rješavaju po redoslijedu podnošenja (čl. 63 st. 7, čl. 64).');
+  }
+  if(utvrdjeno>10000) up.push('Utvrđena naknada prelazi 10.000,00 KM — ako se traži plaćanje na rate, kao sredstvo obezbjeđenja prihvata se <b>samo neopoziva bankarska garancija ili hipoteka</b> u omjeru 1,5:1 (čl. 62 st. 3). Prag se mjeri po <b>ukupno utvrđenoj</b> naknadi, prije uračunavanja i subvencije, i na kumulativni iznos za istu građevinu (čl. 62 st. 9). Gdje zemljišna knjiga nije uspostavljena, a geodetska služba ne provodi zabilježbu u katastarskom operatu, ostaje bankarska garancija (čl. 68 st. 5, čl. 77).');
+  if(nam==='poljoprivredna') up.push('Bodovi su umanjeni za 70%. Ako se u objektu prerađuju <b>pretežno otkupljeni</b> proizvodi, obavlja trgovina ili druga privredna djelatnost, objekat se boduje kao proizvodni odnosno poslovni — bez umanjenja (čl. 47 st. 3).');
+  if(opstinaInv) up.push('Investitor je Opština Drvar — naknada se <b>utvrđuje i evidentira</b> po opštim odredbama, a izmiruje <b>internim knjiženjem</b> u okviru budžeta Opštine; plaćanje na rate se ne primjenjuje (čl. 43 st. 4).');
   if(um.stepeni>0 && vrsta==='gradsko' && um.zona==='III')
     up.push('Umanjenje je zaustavljeno na III zoni. Nacrt u čl. 46 st. 2 kao donju granicu pominje „III zonu ostalog građevinskog zemljišta"; ovaj alat spušta zonu <b>unutar iste kategorije zemljišta</b> (gradsko ostaje gradsko), jer bi prelazak gradskog u ostalo ugasio i rentu. Vrijedi to izričito napisati u odluci.');
-  if(sv!=='nema') up.push('Naknada se u aktu utvrđuje u <b>punom iznosu</b>; subvencija se izvršava internim nalogom za poravnanje, a ne umanjenjem obaveze (čl. 63 st. 2 i 8). Uz to ide zabrana otuđenja pet godina (čl. 64 st. 5).');
-  if(placa>10000) up.push('Iznos prelazi 10.000,00 KM — ako se traži plaćanje na rate, kao sredstvo obezbjeđenja prihvata se <b>samo neopoziva bankarska garancija ili hipoteka</b> u omjeru 1,5:1. Pošto za k.o. na području opštine Drvar zemljišna knjiga nije uspostavljena, hipoteka po pravilu nije moguća, pa ostaje <b>bankarska garancija</b> (čl. 62 st. 3, čl. 77).');
   nEl('n_upozorenja').innerHTML = up.length ? ('<div class="warnnote"><b>Pazi:</b><ul style="margin:6px 0 0;padding-left:18px">'+up.map(function(x){return '<li style="margin-bottom:4px">'+x+'</li>';}).join('')+'</ul></div>') : '';
 
   /* ---- rate, čl. 62 ---- */
-  var maxRata = placa<=1000 ? 1 : (placa<=3000 ? 6 : (placa<=8000 ? 12 : 24));
+  var pragOsn = utvrdjeno;                                  /* čl. 62 st. 2, 3 i 9 */
+  var maxRata = pragOsn<=1000 ? 1 : (pragOsn<=3000 ? 6 : (pragOsn<=8000 ? 12 : 24));
+  var trebaGarancija = pragOsn>10000;
   nEl('n_rate_max').textContent = maxRata===1 ? '1 (jednokratno)' : maxRata;
-  var rateOn=nEl('n_rate_on').checked;
+  var rateOn=nEl('n_rate_on').checked && !opstinaInv;
   nEl('n_rate_w').style.display = rateOn?'grid':'none';
   var brRata=1, rata=placa;
   if(rateOn){
     brRata=parseInt(nEl('n_rate_br').value,10)||1;
     if(brRata<1) brRata=1;
     if(brRata>maxRata) brRata=maxRata;
-    nEl('n_rate_br').value=brRata;
     rata=placa/brRata;
     nEl('n_rate_izn').value=nFmt(rata);
-    var pl='<table><thead><tr><th>Rata</th><th>Iznos</th></tr></thead><tbody>';
-    var zbir=0;
-    for(var i=1;i<=brRata;i++){
-      var r = (i===brRata) ? (placa-zbir) : Math.round(rata*100)/100;
-      zbir+=r; pl+='<tr><td>'+i+'. rata</td><td>'+nFmt(r)+'</td></tr>';
-    }
-    pl+='<tr class="total"><td>Ukupno</td><td>'+nFmt(placa)+'</td></tr></tbody></table>';
-    if(maxRata===1) pl='<div class="warnnote">Iznos do 1.000,00 KM plaća se <b>jednokratno</b> (čl. 62 st. 2).</div>';
+    var pl='', zbir=0;
+    if(maxRata===1) pl='<div class="warnnote">Utvrđena naknada je do 1.000,00 KM, pa se plaća <b>jednokratno</b> (čl. 62 st. 2).</div>';
     else {
-      var obez = placa>10000
-        ? 'Sredstvo obezbjeđenja: <b>neopoziva bankarska garancija</b> (hipoteka nije moguća bez uspostavljene zemljišne knjige) — čl. 62 st. 3 i čl. 77.'
-        : 'Sredstvo obezbjeđenja po čl. 68; ako to nije bankarska garancija ni hipoteka, sporazum mora sadržati <b>notarski obrađenu izjavu</b> dužnika da sporazum ima snagu izvršne isprave (čl. 62 st. 7), a posljednja rata dospijeva najkasnije do zahtjeva za upotrebnu dozvolu (st. 4).';
-      pl+='<p class="hint">'+obez+' Docnja duža od 60 dana — <b>cijeli preostali iznos dospijeva odjednom</b> (st. 5). Isto važi i danom zaključenja ugovora o otuđenju građevine ili čestice trećem licu (st. 8). Ako je otplata duža od dvanaest mjeseci, a godišnji rast cijena građevinskih radova pređe 5%, preostale rate se usklađuju tim indeksom jednom godišnje (st. 6).</p>';
+      pl='<table><thead><tr><th>Rata</th><th>Iznos</th></tr></thead><tbody>';
+      for(var i=1;i<=brRata;i++){
+        var r = (i===brRata) ? (placa-zbir) : Math.round(rata*100)/100;
+        zbir+=r; pl+='<tr><td>'+i+'. rata</td><td>'+nFmt(r)+'</td></tr>';
+      }
+      pl+='<tr class="total"><td>Ukupno</td><td>'+nFmt(placa)+'</td></tr></tbody></table>';
+      var obez = trebaGarancija
+        ? 'Utvrđena naknada prelazi 10.000,00 KM, pa se kao sredstvo obezbjeđenja može prihvatiti <b>isključivo neopoziva bankarska garancija ili hipoteka</b> u omjeru najmanje 1,5:1 (čl. 62 st. 3). Ako za katastarsku opštinu zemljišna knjiga nije uspostavljena, a geodetska služba ne provodi zabilježbu u katastarskom operatu, jedino prihvatljivo sredstvo je <b>bankarska garancija</b> (čl. 68 st. 5).'
+        : (placa<=2000
+            ? 'Za obavezu do 2.000,00 KM sredstvo obezbjeđenja <b>nije obavezno</b> (čl. 68 st. 3).'
+            : 'Sredstvo obezbjeđenja po čl. 68 — bjanko mjenica, notarski obrađena izjava, bankarska garancija ili saglasnost za upis založnog prava; vrstu predlaže obveznik, prihvata je načelnik (st. 1 i 2), a mora važiti najmanje 90 dana duže od posljednje rate (st. 4). Ako to nije bankarska garancija ni hipoteka, sporazum obavezno sadrži <b>notarski obrađenu izjavu</b> sa snagom izvršne isprave (čl. 62 st. 7), a posljednja rata dospijeva najkasnije do zahtjeva za upotrebnu dozvolu (st. 4).');
+      pl+='<p class="hint">'+obez+' Docnja duža od 60 dana — <b>cijeli preostali iznos dospijeva odjednom</b> (st. 5). Isto važi i danom zaključenja ugovora o otuđenju građevine ili čestice trećem licu, o čemu obveznik obavještava Službu 15 dana ranije (st. 8 i 10). Ako je otplata duža od dvanaest mjeseci, a godišnji rast cijena građevinskih radova pređe 5%, preostale rate se usklađuju tim indeksom jednom godišnje (st. 6).</p>';
     }
     nEl('n_ratePlan').innerHTML=pl;
   } else nEl('n_ratePlan').innerHTML='';
+  nEl('n_rateNapomena').innerHTML = opstinaInv
+    ? 'Investitor je Opština — obaveza se izmiruje internim knjiženjem, pa plaćanje na rate nije primjenjivo (čl. 43 st. 4).'
+    : ('Pragovi se mjere po <b>ukupno utvrđenoj naknadi</b> (ovdje '+nFmt(pragOsn)+'), prije uračunavanja i subvencije: '
+      +'do 1.000,00 KM — jednokratno; od 1.000,00 do 3.000,00 KM — najviše 6 rata; od 3.000,00 do 8.000,00 KM — najviše 12 rata; preko 8.000,00 KM — najviše 24 rate (čl. 62 st. 2). '
+      +'Rate su jednake i <b>bez kamate</b>, a iznos rate računa se od onoga što stranka stvarno plaća.');
 
   N_LAST={vrsta:vrsta, zonaOrig:zonaOrig, zona:um.zona, umStepeni:um.stepeni, nam:nam, zahvat:zahvat,
     korisna:korisna, obracunska:obracunska, osnov:osnov, op:op, prip:pripPrimjena, pripPuni:prip,
-    bodovi:bodovi, vb:vb, uredjenjeBruto:uredjenjeBruto, umanjZamjena:umanjZamjena, ulaganje:ulaganje,
-    legIznos:legIznos, uredjenje:uredjenje, stopa:stopa, cijena:cijena, renta:renta, rentaNap:rentaNap,
-    ukupno:ukupno, subv:sv, subvProc:proc, subvLimit:limit, subvOsn:svOsn, subvIznos:svIznos, svNap:svNap,
-    placa:placa, maxRata:maxRata, rateOn:rateOn, brRata:brRata, upoz:up};
+    bodovi:bodovi, vb:vb, uredjenjeBruto:uredjenjeBruto, staraNamjena:staraNamjena,
+    umanjZamjena:umanjZamjena, umanjZamjenaRenta:umanjZamjenaRenta, zPov:zPov,
+    ulaganje:ulaganje, cl39:cl39, uredjenje:uredjenje,
+    stopa:stopa, cijena:cijena, rentaPuna:rentaPuna, renta:renta, rentaNap:rentaNap,
+    utvrdjeno:utvrdjeno, legIznos:legIznos, legNom:legNom, legInd:legInd, legVal:legVal,
+    legNaUredjenje:legNaUredjenje, legNaRentu:legNaRentu, ukupno:ukupno,
+    subv:sv, subvProc:proc, subvLimit:limit, subvOsn:svOsn, subvIznos:svIznos, svNap:svNap, svMjera:svMjera,
+    dijelovi:dijelovi, placa:placa, pragOsn:pragOsn, trebaGarancija:trebaGarancija,
+    opstinaInv:opstinaInv, maxRata:maxRata, rateOn:rateOn, brRata:brRata, upoz:up};
   return N_LAST;
+}
+
+function nRateFix(){
+  var e=nEl('n_rate_br'); if(!e) return;
+  var v=parseInt(e.value,10); if(!(v>=1)) v=1;
+  var mx=(N_LAST&&N_LAST.maxRata)||1;
+  if(v>mx) v=mx;
+  e.value=v; nCalc();
 }
 
 /* ======================= dokument (PDF i Word) ======================= */
@@ -1307,16 +1579,17 @@ function nDokHTML(zaWord){
   h+='<tr><td>Obračunska zona</td><td><b>'+L.zona+' zona</b></td></tr>';
   h+='<tr><td>Namjena građevine</td><td>'+namN+'</td></tr>';
   h+='<tr><td>Vrsta zahvata</td><td>'+ZAHVAT_NAZIV[L.zahvat]+'</td></tr>';
-  h+='<tr><td>Pravni osnov</td><td>Odluka o građevinskom zemljištu Opštine Drvar, čl. 40–71</td></tr>';
+  h+='<tr><td>Pravni osnov</td><td>Odluka o građevinskom zemljištu Opštine Drvar, čl. 40–71'+(L.zahvat==='legalizacija'?' i čl. 37–39':'')+'</td></tr>';
   h+='</tbody></table>';
 
-  h+=SEC('1. Opremanje komunalnom infrastrukturom (čl. 47)');
+  var mjesovito = !!(L.dijelovi && L.dijelovi.length);
+  h+=SEC('1. Opremanje komunalnom infrastrukturom (čl. 47)'+(mjesovito?' — po namjenama, vidi tačku 4':''));
   h+='<table class="pd"><thead><tr><th>Komunalna infrastruktura</th><th class="n">Bodovi</th></tr></thead><tbody>';
   if(L.op.det.length) L.op.det.forEach(function(x){ h+='<tr><td>'+esc(x.naziv)+'</td><td class="n">'+nFmtN(x.b)+'</td></tr>'; });
   else h+='<tr><td>(ništa označeno)</td><td class="n">0,00</td></tr>';
   h+='<tr><td><b>Ukupno opremanje</b></td><td class="n"><b>'+nFmtN(L.op.uk)+'</b></td></tr></tbody></table>';
 
-  h+=SEC('2. Pripremanje građevinskog zemljišta (čl. 48)');
+  h+=SEC('2. Pripremanje građevinskog zemljišta (čl. 48)'+(mjesovito?' — po namjenama, vidi tačku 4':''));
   h+='<table class="pd"><tbody><tr><td style="width:72%">'+vrstaN+', '+namN.toLowerCase()+' namjena, '+L.zona+' zona'
     +(L.nam==='poljoprivredna'?' (proizvodni red umanjen za 70%)':'')+'</td><td class="n"><b>'+nFmtN(L.prip)+'</b></td></tr>';
   if(L.prip===0 && L.pripPuni>0) h+='<tr><td>Napomena</td><td class="n">bodovi pripremanja se ne obračunavaju</td></tr>';
@@ -1326,10 +1599,14 @@ function nDokHTML(zaWord){
   var mode=nEl('n_pmode').value;
   if(mode==='detaljno'){
     var kz=nKzData();
-    h+='<table class="pd"><thead><tr><th>Prostor</th><th class="n">Površina (m²)</th><th class="n">Koef.</th><th class="n">Korisna (m²)</th></tr></thead><tbody>';
-    if(kz.length) kz.forEach(function(x){ h+='<tr><td>'+esc(x.opis||'-')+'</td><td class="n">'+nFmtN(x.pov)+'</td><td class="n">'+nFmtN(x.koef)+'</td><td class="n">'+nFmtN(x.rezultat)+'</td></tr>'; });
-    else h+='<tr><td>-</td><td class="n">0,00</td><td class="n">-</td><td class="n">0,00</td></tr>';
-    h+='<tr><td colspan="3"><b>Ukupna korisna površina</b></td><td class="n"><b>'+nFmtN(L.korisna)+'</b></td></tr></tbody></table>';
+    var mj=!!(L.dijelovi && L.dijelovi.length);
+    h+='<table class="pd"><thead><tr><th>Prostor</th>'+(mj?'<th>Namjena</th>':'')+'<th class="n">Površina (m²)</th><th class="n">Koef.</th><th class="n">Korisna (m²)</th></tr></thead><tbody>';
+    if(kz.length) kz.forEach(function(x){ h+='<tr><td>'+esc(x.opis||'-')+'</td>'
+      +(mj?('<td>'+(x.nam==='zajednicki'?'zajednički dio':N_NAMJENA_NAZIV[x.nam])+'</td>'):'')
+      +'<td class="n">'+nFmtN(x.pov)+'</td><td class="n">'+nFmtN(x.koef)+'</td><td class="n">'+nFmtN(x.rezultat)+'</td></tr>'; });
+    else h+='<tr><td>-</td>'+(mj?'<td>-</td>':'')+'<td class="n">0,00</td><td class="n">-</td><td class="n">0,00</td></tr>';
+    h+='<tr><td colspan="'+(mj?4:3)+'"><b>Ukupna korisna površina</b></td><td class="n"><b>'+nFmtN(L.korisna)+'</b></td></tr></tbody></table>';
+    if(mj) h+='<table class="pd"><tbody><tr><td>Zajednički dijelovi raspoređeni su na pojedine namjene srazmjerno njihovoj korisnoj površini (čl. 50 st. 3).</td></tr></tbody></table>';
   } else if(mode==='bruto'){
     h+='<table class="pd"><tbody><tr><td>Bruto gabarit × broj etaža × 0,8 (čl. 51 st. 2)</td><td class="n">'
       +nFmtN(nNum('n_bruto'))+' × '+nFmtN(nNum('n_etaza'))+' × 0,8 = <b>'+nFmtN(L.korisna)+' m²</b></td></tr>'
@@ -1347,14 +1624,23 @@ function nDokHTML(zaWord){
     h+='<table class="pd"><tbody><tr><td style="width:60%">Osnovica za obračun</td><td class="n"><b>'+nFmtN(L.obracunska)+' m²</b> — '+esc(L.osnov)+'</td></tr></tbody></table>';
 
   h+=SEC('4. Obračun naknade za uređenje (čl. 50)');
-  h+='<table class="pd"><tbody>';
-  h+='<tr><td style="width:60%">Ukupno bodova (opremanje + pripremanje)</td><td class="n">'+nFmtN(L.op.uk)+' + '+nFmtN(L.prip)+' = <b>'+nFmtN(L.bodovi)+'</b></td></tr>';
-  h+='<tr><td>Obračunska površina</td><td class="n">'+nFmtN(L.obracunska)+' m²</td></tr>';
-  h+='<tr><td>Vrijednost boda (čl. 49)</td><td class="n">'+nFmtN(L.vb)+' KM</td></tr>';
-  h+='<tr><td>Naknada = '+nFmtN(L.bodovi)+' × '+nFmtN(L.obracunska)+' m² × '+nFmtN(L.vb)+'</td><td class="n"><b>'+nFmt(L.uredjenjeBruto)+'</b></td></tr>';
-  if(L.umanjZamjena>0) h+='<tr><td>Umanjenje za raniju porušenu građevinu (čl. 58 st. 6)</td><td class="n">− '+nFmt(L.umanjZamjena)+'</td></tr>';
+  if(L.dijelovi && L.dijelovi.length){
+    h+='<table class="pd"><thead><tr><th>Namjena dijela građevine</th><th class="n">Korisna površina</th><th class="n">Bodovi</th><th class="n">Iznos</th></tr></thead><tbody>';
+    L.dijelovi.forEach(function(d){
+      h+='<tr><td>'+N_NAMJENA_NAZIV[d.nam]+'</td><td class="n">'+nFmtN(d.pov)+' m²</td><td class="n">'+nFmtN(d.oprem)+' + '+nFmtN(d.prip)+' = '+nFmtN(d.bod)+'</td><td class="n">'+nFmt(d.iznos)+'</td></tr>'; });
+    h+='<tr><td colspan="3"><b>Ukupno (čl. 50 st. 2)</b></td><td class="n"><b>'+nFmt(L.uredjenjeBruto)+'</b></td></tr></tbody></table>';
+    h+='<table class="pd"><tbody><tr><td>Vrijednost boda (čl. 49)</td><td class="n">'+nFmtN(L.vb)+' KM</td></tr>';
+  } else {
+    h+='<table class="pd"><tbody>';
+    h+='<tr><td style="width:60%">Ukupno bodova (opremanje + pripremanje)</td><td class="n">'+nFmtN(L.op.uk)+' + '+nFmtN(L.prip)+' = <b>'+nFmtN(L.bodovi)+'</b></td></tr>';
+    h+='<tr><td>Obračunska površina</td><td class="n">'+nFmtN(L.obracunska)+' m²</td></tr>';
+    h+='<tr><td>Vrijednost boda (čl. 49)</td><td class="n">'+nFmtN(L.vb)+' KM</td></tr>';
+    h+='<tr><td>Naknada = '+nFmtN(L.bodovi)+' × '+nFmtN(L.obracunska)+' m² × '+nFmtN(L.vb)+'</td><td class="n"><b>'+nFmt(L.uredjenjeBruto)+'</b></td></tr>';
+  }
+  if(L.staraNamjena>0) h+='<tr><td>Naknada obračunata za raniju namjenu (čl. 56 st. 1)</td><td class="n">− '+nFmt(L.staraNamjena)+'</td></tr>';
+  if(L.umanjZamjena>0) h+='<tr><td>Umanjenje za raniju porušenu građevinu ('+nFmtN(L.zPov)+' m², čl. 58 st. 6)</td><td class="n">− '+nFmt(L.umanjZamjena)+'</td></tr>';
   if(L.ulaganje>0)     h+='<tr><td>Priznato ulaganje investitora (čl. 61)</td><td class="n">− '+nFmt(L.ulaganje)+'</td></tr>';
-  if(L.legIznos>0)     h+='<tr><td>Uračunat ranije plaćen iznos (čl. 38)</td><td class="n">− '+nFmt(L.legIznos)+'</td></tr>';
+  if(L.cl39>0)         h+='<tr><td>Već obuhvaćeno naknadom po propisu o legalizaciji (čl. 39 st. 2)</td><td class="n">− '+nFmt(L.cl39)+'</td></tr>';
   h+='<tr><td><b>Naknada za uređenje</b></td><td class="n"><b>'+nFmt(L.uredjenje)+'</b></td></tr>';
   h+='</tbody></table>';
 
@@ -1364,7 +1650,11 @@ function nDokHTML(zaWord){
     h+='<tr><td style="width:60%">Osnov</td><td class="n">'+esc(L.rentaNap)+'</td></tr>';
     h+='<tr><td>Prosječna konačna građevinska cijena m² (čl. 70)</td><td class="n">'+nFmtN(L.cijena)+' KM</td></tr>';
     h+='<tr><td>Stopa po zoni (čl. 71)</td><td class="n">'+L.stopa+' %</td></tr>';
-    h+='<tr><td>Renta = '+L.stopa+'% × '+nFmtN(L.cijena)+' × '+nFmtN(L.obracunska)+' m²</td><td class="n"><b>'+nFmt(L.renta)+'</b></td></tr>';
+    h+='<tr><td>Renta = '+L.stopa+'% × '+nFmtN(L.cijena)+' × '+nFmtN(L.obracunska)+' m²</td><td class="n">'+nFmt(L.rentaPuna)+'</td></tr>';
+    if(L.zahvat==='namjena' && L.rentaPuna>0 && L.renta===0)
+      h+='<tr><td>Renta je za raniju namjenu već bila utvrđena, a stopa ne zavisi od namjene — razlike nema (čl. 56 st. 1)</td><td class="n">− '+nFmt(L.rentaPuna)+'</td></tr>';
+    if(L.umanjZamjenaRenta>0) h+='<tr><td>Umanjenje za rentu ranije porušene građevine ('+nFmtN(L.zPov)+' m², čl. 58 st. 6)</td><td class="n">− '+nFmt(L.umanjZamjenaRenta)+'</td></tr>';
+    h+='<tr><td><b>Naknada za pogodnosti</b></td><td class="n"><b>'+nFmt(L.renta)+'</b></td></tr>';
   } else {
     h+='<tr><td style="width:60%">Renta se ne utvrđuje</td><td class="n">'+esc(L.rentaNap)+'</td></tr>';
   }
@@ -1374,30 +1664,39 @@ function nDokHTML(zaWord){
   h+='<table class="pd"><tbody>';
   h+='<tr><td style="width:60%">Naknada za uređenje građevinskog zemljišta</td><td class="n">'+nFmt(L.uredjenje)+'</td></tr>';
   h+='<tr><td>Naknada za pogodnosti (renta)</td><td class="n">'+nFmt(L.renta)+'</td></tr>';
-  h+='<tr><td><b>UKUPNO UTVRĐENO</b></td><td class="n"><b>'+nFmt(L.ukupno)+'</b></td></tr>';
+  h+='<tr><td><b>UKUPNO UTVRĐENO</b></td><td class="n"><b>'+nFmt(L.utvrdjeno)+'</b></td></tr>';
+  if(L.legIznos>0){
+    h+='<tr><td>Uračunat ranije plaćen iznos (čl. 38'+(L.zahvat!=='legalizacija'?', čl. 54 st. 4':'')+')</td><td class="n">− '+nFmt(L.legIznos)+'</td></tr>';
+    h+='<tr><td>Preostalo za plaćanje</td><td class="n">'+nFmt(L.ukupno)+'</td></tr>';
+  }
   if(L.subvIznos>0){
     h+='<tr><td>Subvencija iz budžeta Opštine (čl. 63'+(L.subv==='65'?'–65':'')+'), '+L.subvProc+'%'
-      +(L.subvLimit?(' na prvih '+L.subvLimit+' m²'):'')+'</td><td class="n">− '+nFmt(L.subvIznos)+'</td></tr>';
-    h+='<tr><td><b>PLAĆA STRANKA</b></td><td class="n"><b>'+nFmt(L.placa)+'</b></td></tr>';
+      +(L.subvLimit?(' na prvih '+L.subvLimit+' m² — '+esc(L.svMjera)):'')+'</td><td class="n">− '+nFmt(L.subvIznos)+'</td></tr>';
   }
+  h+='<tr><td><b>'+(L.opstinaInv?'IZMIRUJE SE INTERNIM KNJIŽENJEM':'ZA PLAĆANJE')+'</b></td><td class="n"><b>'+nFmt(L.placa)+'</b></td></tr>';
   h+='</tbody></table>';
   if(L.subvIznos>0)
-    h+='<table class="pd"><tbody><tr><td>Naknada se utvrđuje i evidentira u punom iznosu od '+nFmt(L.ukupno)
-      +'; odobreni iznos subvencije Opština uplaćuje u korist budžeta za račun korisnika, internim nalogom za poravnanje (čl. 63 st. 2 i 8).</td></tr></tbody></table>';
+    h+='<table class="pd"><tbody><tr><td>Naknada se utvrđuje i evidentira u punom iznosu od '+nFmt(L.utvrdjeno)
+      +'; odobreni iznos subvencije Opština uplaćuje u korist budžeta za račun korisnika, internim nalogom za poravnanje (čl. 63 st. 2 i 8). Uračunavanje ranije plaćenih iznosa nije oslobađanje od plaćanja (čl. 38 st. 2).</td></tr></tbody></table>';
+  if(L.opstinaInv)
+    h+='<table class="pd"><tbody><tr><td>Investitor je Opština Drvar — naknada se utvrđuje i evidentira po opštim odredbama ove Odluke, a izmiruje internim knjiženjem u okviru budžeta Opštine (čl. 43 st. 4).</td></tr></tbody></table>';
 
   if(L.rateOn && L.brRata>1){
     h+=SEC('7. Plaćanje na rate (čl. 62)');
     h+='<table class="pd"><tbody>';
     h+='<tr><td style="width:60%">Broj rata (najviše '+L.maxRata+')</td><td class="n">'+L.brRata+'</td></tr>';
     h+='<tr><td>Mjesečna rata, bez kamate</td><td class="n"><b>'+nFmt(L.placa/L.brRata)+'</b></td></tr>';
-    h+='<tr><td>Sredstvo obezbjeđenja</td><td class="n">'+(L.placa>10000?'neopoziva bankarska garancija (čl. 62 st. 3)':'po čl. 68, uz notarski obrađenu izjavu (čl. 62 st. 7)')+'</td></tr>';
+    h+='<tr><td>Sredstvo obezbjeđenja</td><td class="n">'+(L.trebaGarancija
+        ? 'neopoziva bankarska garancija ili hipoteka 1,5:1 (čl. 62 st. 3)'
+        : (L.pragOsn<=2000 ? 'nije obavezno — obaveza do 2.000,00 KM (čl. 68 st. 3)' : 'po čl. 68, uz notarski obrađenu izjavu (čl. 62 st. 7)'))+'</td></tr>';
     h+='<tr><td colspan="2">Docnja duža od 60 dana ili otuđenje građevine — cjelokupan preostali iznos dospijeva odjednom (čl. 62 st. 5 i 8).</td></tr>';
     h+='</tbody></table>';
   }
 
-  h+='<p class="pd-total">Za plaćanje: '+nFmt(L.placa)+'</p>';
-  h+='<p style="font-style:italic;font-size:11pt;text-align:right;margin:2px 0 0">slovima: '+slovima(L.placa)+'</p>';
+  h+='<p class="pd-total">'+(L.opstinaInv?'Interno knjiženje: ':'Za plaćanje: ')+nFmt(L.placa)+'</p>';
+  if(L.placa>0) h+='<p style="font-style:italic;font-size:11pt;text-align:right;margin:2px 0 0">slovima: '+slovima(L.placa)+'</p>';
 
+  h+='<table class="pd"><tbody><tr><td>Ovo je <b>obračun</b>. Iznos naknade za svaki pojedinačan slučaj utvrđuje se aktom opštinske službe nadležne za uređenje građevinskog zemljišta, u roku od 30 dana (čl. 54 st. 1 i 7). Protiv tog akta može se izjaviti žalba drugostepenom organu u roku od 15 dana od prijema, a nezadovoljna stranka može pokrenuti upravni spor (čl. 54 st. 8).</td></tr></tbody></table>';
   if(zaWord){
     h+='<table style="width:100%;margin-top:40px"><tr>'
       +'<td style="width:50%;border:none;text-align:center">Obračun izvršio:<br><br>_______________________</td>'
@@ -1447,21 +1746,31 @@ function nTekst(){
   else t+='  (nista oznaceno)\n';
   t+='  Ukupno opremanje: '+nFmtN(L.op.uk)+'\n';
   t+='Bodovi pripremanja (cl. 48): '+nFmtN(L.prip)+'\n';
+  if(L.dijelovi && L.dijelovi.length){
+    t+='Mjesovita namjena — obracun po dijelovima (cl. 50 st. 2):\n';
+    L.dijelovi.forEach(function(d){ t+='  - '+N_NAMJENA_NAZIV[d.nam]+': '+nFmtN(d.pov)+' m2 x '+nFmtN(d.bod)+' bodova = '+nFmt(d.iznos)+'\n'; });
+  }
   t+='UKUPNO BODOVA: '+nFmtN(L.bodovi)+'\n';
   t+='Vrijednost boda: '+nFmtN(L.vb)+' KM\n';
   t+='------------------------------------------------------------\n';
-  t+='Naknada za uredjenje: '+nFmtN(L.bodovi)+' x '+nFmtN(L.obracunska)+' x '+nFmtN(L.vb)+' = '+nFmt(L.uredjenjeBruto)+'\n';
+  t+= (L.dijelovi && L.dijelovi.length)
+      ? ('Naknada za uredjenje (zbir po dijelovima, cl. 50 st. 2): '+nFmt(L.uredjenjeBruto)+'\n')
+      : ('Naknada za uredjenje: '+nFmtN(L.bodovi)+' x '+nFmtN(L.obracunska)+' x '+nFmtN(L.vb)+' = '+nFmt(L.uredjenjeBruto)+'\n');
+  if(L.staraNamjena>0) t+='  - naknada za raniju namjenu (cl.56): -'+nFmt(L.staraNamjena)+'\n';
   if(L.umanjZamjena>0) t+='  - umanjenje za raniju gradjevinu (cl.58 st.6): -'+nFmt(L.umanjZamjena)+'\n';
+  if(L.umanjZamjenaRenta>0) t+='  - umanjenje rente za raniju gradjevinu (cl.58 st.6): -'+nFmt(L.umanjZamjenaRenta)+'\n';
   if(L.ulaganje>0)     t+='  - priznato ulaganje (cl.61): -'+nFmt(L.ulaganje)+'\n';
-  if(L.legIznos>0)     t+='  - uracunat raniji iznos (cl.38): -'+nFmt(L.legIznos)+'\n';
+  if(L.legIznos>0){
+    t+='  - raniji iznos nominalno: '+nFmt(L.legNom)+(Math.abs(L.legInd-1)>0.0001?(' x koeficijent '+nFmtN(L.legInd)+' = '+nFmt(L.legNom*L.legInd)):'')+'\n';
+    t+='  - uracunato (cl.38): -'+nFmt(L.legIznos)+'\n';
+  }
   t+='  = Naknada za uredjenje: '+nFmt(L.uredjenje)+'\n';
   t+='Renta (cl. 69-71): '+(L.stopa?(L.stopa+'% x '+nFmtN(L.cijena)+' x '+nFmtN(L.obracunska)+' = '+nFmt(L.renta)):'ne utvrdjuje se — '+L.rentaNap)+'\n';
   t+='------------------------------------------------------------\n';
-  t+='UKUPNO UTVRDJENO: '+nFmt(L.ukupno)+'\n';
-  if(L.subvIznos>0){
-    t+='Subvencija ('+L.subvProc+'%'+(L.subvLimit?(' na prvih '+L.subvLimit+' m2'):'')+'): -'+nFmt(L.subvIznos)+'\n';
-    t+='PLACA STRANKA: '+nFmt(L.placa)+'\n';
-  }
+  t+='UKUPNO UTVRDJENO: '+nFmt(L.utvrdjeno)+'\n';
+  if(L.legIznos>0) t+='Uracunat ranije placen iznos (cl.38): -'+nFmt(L.legIznos)+' -> preostalo '+nFmt(L.ukupno)+'\n';
+  if(L.subvIznos>0) t+='Subvencija ('+L.subvProc+'%'+(L.subvLimit?(' na prvih '+L.subvLimit+' m2'):'')+'): -'+nFmt(L.subvIznos)+'\n';
+  t+=(L.opstinaInv?'IZMIRUJE SE INTERNIM KNJIZENJEM: ':'ZA PLACANJE: ')+nFmt(L.placa)+'\n';
   t+='slovima: '+slovima(L.placa)+'\n';
   if(L.rateOn && L.brRata>1) t+='Rate (cl. 62): '+L.brRata+' x '+nFmt(L.placa/L.brRata)+'  (najvise '+L.maxRata+' rata)\n';
   return t;
@@ -1476,11 +1785,15 @@ function nDownloadTxt(){ var t=nTekst(); if(t===null) return;
 
 /* ======================= sačuvaj / uvezi podatke ======================= */
 function nPolja(){ return Array.prototype.slice.call(document.querySelectorAll('.wrap input, .wrap select'))
-  .filter(function(e){ return e.id && e.id.indexOf('n_')===0 && e.id!=='n_paket'; }); }
+  .filter(function(e){ return e.id && e.id.indexOf('n_')===0 && e.id!=='n_paket' && !e.readOnly; }); }
 function nPaketGen(){
   var d={_v:1, _prostori:[]};
   nPolja().forEach(function(e){ d[e.id] = (e.type==='checkbox') ? e.checked : e.value; });
-  nKzData().forEach(function(x){ d._prostori.push([x.opis,x.pov,x.koef]); });
+  document.querySelectorAll('#n_kz_list .kzrow').forEach(function(r){
+    var ns=r.querySelector('.n_kz_nam');
+    d._prostori.push([r.querySelector('.n_kz_opis').value, r.querySelector('.n_kz_pov').value,
+                      parseFloat(r.querySelector('.n_kz_koef').value)||1, ns?ns.value:'stambena']);
+  });
   nEl('n_paket').value=JSON.stringify(d);
   toast('Podaci sačuvani u polje — kopiraj ih i sačuvaj','ok');
 }
@@ -1488,11 +1801,21 @@ function nPaketImport(){
   var raw=(nEl('n_paket').value||'').trim();
   if(!raw){ toast('Polje je prazno','warn'); return; }
   var d; try{ d=JSON.parse(raw); }catch(e){ toast('Ovo nije ispravan paket','warn'); return; }
+  var lose=[];
+  nPolja().forEach(function(e){
+    if(!d.hasOwnProperty(e.id)) return;
+    if(e.tagName==='SELECT'){
+      var ok=false; for(var i=0;i<e.options.length;i++) if(e.options[i].value===d[e.id]) ok=true;
+      if(!ok){ lose.push(e.id); return; }
+    }
+  });
+  if(lose.length){ toast('Paket ne odgovara ovom obrascu ('+lose.join(', ')+') — ništa nije promijenjeno','warn'); return; }
   nEl('n_kz_list').innerHTML='';
   nPolja().forEach(function(e){ if(d.hasOwnProperty(e.id)){ if(e.type==='checkbox') e.checked=!!d[e.id]; else e.value=d[e.id]; } });
-  (d._prostori||[]).forEach(function(p){ nAddKZ(p[0],p[1],p[2]); });
+  nMjes();
+  (d._prostori||[]).forEach(function(p){ nAddKZ(p[0],p[1],p[2],p[3]); });
   if(!(d._prostori||[]).length) nAddKZ('',null,1.0);
-  nPmode(); nZahvat(); nLeg();
+  nPmode(); nZahvat(); nLeg(); nMjes(); nSubv();
   nCalc();
   toast('Podaci uvezeni','ok');
 }
@@ -1505,7 +1828,7 @@ document.addEventListener('DOMContentLoaded',function(){
   try{ var n=new Date(), dd=String(n.getDate()).padStart(2,'0'), mm=String(n.getMonth()+1).padStart(2,'0');
        var pe=nEl('n_datum'); if(pe&&!pe.value) pe.value=dd+'.'+mm+'.'+n.getFullYear()+'.'; }catch(e){}
   nBuildOprem();
-  nPmode(); nZahvat(); nLeg();
+  nPmode(); nZahvat(); nLeg(); nMjes(); nSubv();
   nAddKZ('', null, 1.0);
   ['n_op_struja','n_op_voda'].forEach(function(id){ var c=nEl(id); if(c) c.checked=true; });
   nCalc();
