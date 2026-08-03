@@ -251,7 +251,7 @@
     <button type="button" class="ghost" style="margin-top:8px" onclick="addClan()">+ Dodaj člana</button>
     <p class="hint">Kod polja „Ime i prezime" ponuđena je lista čestih članova — izborom imena automatski se popuni struka (gdje je poznata).</p>
     <datalist id="dlClanovi">
-      <option value="Marko Marković"></option>
+      <option value="Nebojša Šiljegović"></option>
       <option value="Boban Karanović"></option>
       <option value="Miloš Bauk"></option>
       <option value="Miladin Bajić"></option>
@@ -476,7 +476,7 @@ _psSync();}
 try{window.addEventListener('load',function(){setTimeout(function(){try{initPanelHover();}catch(e){}},80);});}catch(e){}
 
 /* prebuilt članovi */
-const PRESET_CLANOVI=[{ime:'Marko Marković',funk:'diplomirani pravnik'},{ime:'Boban Karanović',funk:'dipl. ing. arhitekture'},{ime:'Miloš Bauk',funk:''},{ime:'Miladin Bajić',funk:''},{ime:'Aleksa Radujko',funk:''},{ime:'Andreja Bosnić',funk:''},{ime:'Nina Grubor',funk:''}];
+const PRESET_CLANOVI=[{ime:'Nebojša Šiljegović',funk:'diplomirani pravnik'},{ime:'Boban Karanović',funk:'dipl. ing. arhitekture'},{ime:'Miloš Bauk',funk:''},{ime:'Miladin Bajić',funk:''},{ime:'Aleksa Radujko',funk:''},{ime:'Andreja Bosnić',funk:''},{ime:'Nina Grubor',funk:''}];
 function prefillClan(inp){ var p=PRESET_CLANOVI.find(function(x){return x.ime===inp.value.trim();}); if(!p) return;
   var row=inp.closest('.itembox'); if(!row) return; var fk=row.querySelector('.cl_funk'); if(fk && !fk.value.trim() && p.funk) fk.value=p.funk; }
 
