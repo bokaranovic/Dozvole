@@ -1,0 +1,2245 @@
+UVOD
+SLUŽBENI GLASNIK
+
+OPŠTINE DRVAR
+
+20.09.202101-124 / 21GODINA XIVBROJ 12DRVAR, 20.09.2021. godineOPŠTINSKI NAČELNIK107Na osnovu člana 77. i člana 78. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19 i 99/19), Zakona o računovodstvu i reviziji u FBiH ("Službene novine Federacije BiH", broj: 15/21) i Zakona o Trezoru u Federaciji BiH („Službene novine Federacije BiH“, broj: 26/16) i tačkom 1. stav 3. Računovodstvenih politika za federalne budžetske korisnike i Trezor („Službene novine Federacije BiH“, broj: 58/16), člana 49. Statuta Opštine Drvar ("Službeni glasnik opštine Drvar" broj 4/12 i na prijedlog Službe za privredu, finansije i inspekcijske poslove, Opštinski načelnik donosi
+
+RAČUNOVODSTVENE POLITIKE ZA JEDINSTVENI ORGAN UPRAVE OPŠTINU DRVAR
+
+DIO PRVI – OPŠTE ODREDBEČlan 1.(Predmet i primjena Računovodstvenih politika)Računovodstvene politike za jedinstveni organ uprave Opštinu Drvar (u daljem tekstu: Računovodstvene politike), donose se u cilju ispunjenja uslova za osiguranje provođenja jedinstvenih računovodstvenih procedura, koje ne smiju odstupiti od zakona i drugih propisa i ovih Računovodstvenih politika.
+
+Član 2.(Zakonska regulativa)Zakonska i druga regulativa za donošenje i izvršenje budžeta i računovodstvenih postupaka sa javnim prihodima i rashodima je:
+
+a) Zakon o budžetima u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“,
+
+broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19 i 99/19),
+
+b) Zakon o računovodstvu i reviziji u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 83/09),
+
+d) Zakon o državnoj službi u Federaciji Bosne i Hercegovine („Službene novine Federacije Bosne i Hercegovine“, broj: 29/03, 23/04, 39/04, 54/04, 67/05, 8/06 i 4/12),
+
+e) Zakon o namještenicima u organima državne službe u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 49/05),
+
+f) Uredba o računovodstvu budžeta u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 34/14),
+
+g) Pravilnik o knjigovodstvu budžeta u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 60/14)
+
+h) Zakon o pripadnosti javnih prihoda u Federaciji BiH („Službene novine Federacije BiH“, broj: 22/06, 43/08, 22/09, 35/14 i 94/15),
+
+i) Važeći Pravilnik o načinu uplate javnih prihoda budžeta i vanbudžetskih fondova na teritoriji Federacije BiH,
+
+j) Uputstvo o izvršavanju budžeta sa Jedinstvenog računa Trezora („Službene novine Federacije BiH“, broj: 34/16),
+
+POGLAVLJE I.POSLOVNE KNJIGEČlan 3.(Poslovne knjige)(1) Pravilnikom o knjigovodstvu budžeta u Federaciji Bosne i Hercegovine (u daljem tekstu: Pravilnik o knjigovodstvu) regulirano je da su poslovne knjige:
+
+a) Glavna knjiga (knjiga prihoda i primitaka, rashoda i izdataka, knjiga imovine, obaveza, potraživanja i izvora vlasništva) i
+
+b) pomoćne knjige.
+
+(2) Poslovne knjige su jednoobrazne evidencije o stanju i promjenama na imovini, obavezama, kapitalu, prihodima i rashodima pravnih lica.
+
+(3) Poslovne knjige vode se za poslovnu godinu i predstavljaju osnov za izradu godišnjih i polugodišnjih finansijskih izvještaja.
+
+(4) Poslovne knjige vode se u skladu sa načelima sistema dvojnog knjigovodstva, uvažavajući načela urednosti, ažurnosti, dokumentovanosti i vjerodostojnosti.
+
+(5) Poslovne knjige mogu se voditi na slobodnim listovima, povezane ili prenijeti na neki od elektronskih medija tako da se po potrebi mogu odštampati ili prikazati na ekranu.
+
+(6) Poslovanje sa javnim sredstvima podrazumijeva jednu Glavnu knjigu, koja se vodi isključivo u Službi za privredu, finansije i inspekcijske poslove.
+
+Član 4.
+
+(Glavna knjiga)
+
+(1) Glavna knjiga je sistemska knjigovodstvena evidencija finansijskih transakcija i poslovnih događaja na nivou budžetskih klasifikacija: organizacijske, ekonomske, funkcionalne i fondovske.
+
+(2) Glavnu knjigu čine konta koja predstavljaju pozicije sredstava, izvora sredstava, prihoda i primitaka, rashoda i izdataka.
+
+(3) Glavna knjiga vodi se u Službi za privredu, finansije i inspekcijske poslove
+
+(4) U Glavnu knjigu podaci se unose vrijednosno, za razliku od pomoćnih knjiga, gdje se unose i podaci po jedinici mjere, količini i vrsti.
+
+Član 5.
+
+(Pomoćne knjige)
+
+(1) Pomoćne knjige propisane Pravilnikom o knjigovodstvu su:
+
+a) knjiga ulaznih faktura (KUF),
+
+b) knjiga izlaznih faktura (KIF),
+
+c) knjiga (Popis) stalnih sredstava,
+
+d) knjiga blagajne,
+
+e) registar plata.
+
+(2) Osim navedenih pomoćnih knjiga koje su obavezne, mogu se voditi i druge pomoćne knjige čiji oblik i sadržaj određuje sam korisnik.
+
+POGLAVLJE II.
+
+KNJIGOVODSTVENE ISPRAVE
+
+Član 6.
+
+(Knjigovodstvene isprave)
+
+(1) Knjigovodstvena isprava je pisani dokaz ili memorisani elektronski zapis o nastalom poslovnom događaju, koja je potpisana od strane lica koje je ovlašteno za sastavljanje i kontrolu knjigovodstvene isprave, a služi kao osnov za knjiženje u poslovnim knjigama.
+
+(2) Knjigovodstvenom ispravom smatra se i isprava primljena telefaksom, kopija originalne isprave ili isprava na elektronskom zapisu ako je na ispravi navedeno mjesto čuvanja originalne isprave, odnosno razlog upotrebe kopije i ako je potpisana od lica ovlaštenog za zastupanje pravnog lica ili lica na koje je preneseno ovlaštenje.
+
+(3) Knjigovodstvena isprava sastavljena kao elektronski zapis može, umjesto potpisa ovlaštenog lica koje zastupa pravno lice ili lice na koje je preneseno ovlaštenje, sadržavati ime i prezime ili drugu prepoznatljivu oznaku lica ovlaštenog za izdavanje knjigovodstvene isprave ili mora biti potpisana u skladu sa Zakonom o elektronskom potpisu („Službeni glasnik BiH“, broj: 91/06).
+
+(4) Sadržaj knjigovodstvene isprave mora tačno i vjerodostojno prikazivati vrstu, obim i karakter poslovne promjene.
+
+(5) Vjerodostojnom ispravom se smatra knjigovodstvena isprava na osnovu koje treće lice koje nije učestvovalo u poslovnom događaju može sigurno i bez ikakvih sumnji utvrditi prirodu i obim poslovnog događaja i da je ovjerena od strane rukovodioca budžetskog korisnika ili lica koje on pismeno ovlasti, a čime se ne umanjuje odgovornost rukovodioca za stvaranje obaveza, kao ni za pravilno i zakonito evidentiranje poslovnih promjena.
+
+(6) Urednost podrazumijeva da knjigovodstvene isprave moraju biti napisane uredno, čitko i jasno i da nema precrtavanja i dodavanja podataka, te da sadrže sve potrebne podatke za knjiženje određene transakcije.
+
+Član 7.
+
+(Ispravke knjigovodstvenih isprava)
+
+(1) Ispravke u knjigovodstvenim ispravama u tekstu ili brojevima ne smiju se obavljati na način da dovedu u sumnju vjerodostojnost knjigovodstvene isprave.
+
+(2) Ispravku precrtavanjem može vršiti ono lice koje je izdalo knjigovodstvenu ispravu i koje će ispravku istovremeno izvršiti na svim primjercima izdane knjigovodstvene isprave, što potvrđuje svojim potpisom, pečatom, uz stavljanje datuma ispravke.
+
+(3) Izuzetak čine knjigovodstvene isprave o novčanim poslovnim događajima koje se ne smiju ispravljati, nego se poništavaju i izdaju nove.
+
+(4) Knjigovodstvene isprave mogu biti eksterne i interne prirode i sastavljaju se u potrebnom broju primjeraka.
+
+Član 8.
+
+(Kontrola i knjiženje knjigovodstvene isprave)
+
+(1) Knjigovodstvena isprava prije knjiženja mora biti prekontrolisana i kompletirana.
+
+(2) Ovlaštena lica koja sastavljaju i vrše prijem i kontrolu knjigovodstvenih isprava, dužna su potpisanu ispravu i drugu dokumentaciju u vezi sa nastalom poslovnom promjenom dostaviti knjigovodstvu odmah po izradi, odnosno prijemu, a najkasnije u roku od tri dana od dana kada je poslovna promjena nastala, odnosno u roku od tri dana od datuma prijema.
+
+(3) Uredno likvidirana i ispravna knjigovodstvena isprava, iz knjigovodstva prosljeđuje se na ovjeru Opštinskom načelniku ili licu koje on pismeno ovlasti.
+
+(4) Knjigovodstvena isprava ovjerena od strane Opštinskog načelnika ili lica koje on pismeno ovlasti dostavlja se u knjigovodstvo, gdje se elektronskim putem, sačinjava nalog za knjiženje, a zatim se proknjiži u glavnu knjigu.
+
+(5) Prijem eksterne i interne knjigovodstvene isprave u računovodstvo evidentira se kroz Knjigu primljenih dokumenata.
+
+POGLAVLJE III.
+
+ARHIVIRANJE I ČUVANJE POSLOVNIH KNJIGA I KNJIGOVODSTVENIH ISPRAVA
+
+Član 9.
+
+(Čuvanje poslovnih knjiga i knjigovodstvenih isprava)
+
+(1) Poslovne knjige i knjigovodstvene isprave evidentiraju se i čuvaju u skladu sa Uredbom o računovodstvu budžeta u Federaciji BiH.
+
+(2) Knjigovodstvena isprava se čuva u izvornom materijalnom obliku, u elektronskom zapisu ili na mikrofilmu, a predstavljaju dokaznu osnovu poslovnih knjiga.
+
+Član 10.
+
+(Rokovi za čuvanje)
+
+(1) Trajno se čuvaju:
+
+1. a) platne liste ili analitičke evidencije o plaćama u vezi sa plaćanjem doprinosa,
+2. b) kupoprodajni ugovori po kojima je izvršeno sticanje nekretnina,
+3. c) godišnji računovodstveni obračuni,
+4. d) finansijski izvještaji,
+5. e) konsolidovani finansijski izvještaji,
+6. f) izvještaji o izvršenoj reviziji i
+7. g) svi interni akti od uticaja na finansijsko poslovanje.
+
+(2) Deset (10) godina se čuvaju:
+
+1. a) knjigovodstvene isprave na osnovu kojih su podaci uneseni u glavnu knjigu,
+2. b) godišnji izvještaji o poslovanju koji se čuvaju u originalnom obliku nakon isteka poslovne godine i
+3. c) glavna knjiga.
+
+(3) Šest (6) godina se čuvaju:
+
+1. a) knjigovodstvene isprave na osnovu kojih su podaci uneseni u pomoćne knjige i
+
+1. b) pomoćne knjige,
+
+(4) Pet (5) godina se čuvaju isprave platnog prometa putem ovlaštenih finansijskih institucija.
+
+(6) Rok za čuvanje knjigovodstvenih isprava i poslovnih knjiga počinje teći zadnjeg dana poslovne godine na koju se odnose poslovne knjige i u koje su podaci iz isprava uneseni.
+
+(7) Podaci o poslovnim događajima koji se unose i evidentiraju elektronski, moraju se presnimiti i čuvati u obliku magnetne trake, diskova, disketa i dr. Ovi podaci čuvaju se u izvornom obliku, a obaveza je čuvati i programsku dokumentaciju (npr. softver, lozinka) onoliko dugo koliko je propisano za čuvanje knjigovodstvenih dokumenata.
+
+(8) Glavna knjiga se mora nakon zaključivanja na kraju poslovne godine zaštititi na način da u istoj nije moguća izmjena pojedinih ili svih njenih dijelova ili listova i da je istu moguće u svakom trenutku izlistati na papir i mora se potpisati elektronskim potpisom u skladu sa Zakonom o elektronskom potpisu ili se mora izlistati na papir i uvezati na način da nije moguća izmjena pojedinih ili svih njenih dijelova ili listova.
+
+POGLAVLJE IV.
+
+USKLAÐIVANJE POSLOVNIH KNJIGA I INVENTURA
+
+Član 11.
+
+(Usklađivanje poslovnih knjiga)
+
+(1) Na osnovu Pravilnika o knjigovodstvu, potrebno je na kraju godine, izvršiti usklađivanje podataka iz pomoćnih knjiga sa podacima u Glavnoj knjizi.
+
+(2) Prije popisa (inventure) i prije sastavljanja godišnjeg obračuna vrši se obavezno usaglašavanje potraživanja i obaveza na dan 31.12. svake godine.
+
+(3) Za potraživanja po stanju na dan 31.12. dužniku se dostavlja konfirmacija – izvod otvorenih stavki (Obrazac IOS) na usaglašavanje, na koju je dužnik dužan odgovoriti u roku od 8 dana od dana prijema.
+
+Član 12.
+
+(Popis – inventura)
+
+(1) Opštinski načelnik je dužan donijeti akt kojim će propisati organizaciju i tehniku popisa (određivanje komisija, način i rokove popisa, kao i način usklađivanja knjigovodstvenog stanja sa stvarnim stanjem).
+
+(2) Popis - inventura se vrši obavezno jednom godišnje, sa stanjem na dan 31.12., a može se propisati obaveza popisa u kraćim rokovima ili
+
+donijeti odluka o vanrednom popisu određenih bilansnih pozicija.
+
+(3) Redovnim popisom se obuhvata popis stalnih sredstava u obliku stvari, prava i razgraničenja, novčanih sredstava, plemenitih metala, potraživanja, zaliha i razgraničenja, kratkoročnih i dugoročnih obaveza i kapitala.
+
+(4) Pored redovnog popisa budžetski korisnici vrše popis i usklađivanje knjigovodstvenog sa stvarnim stanjem i prilikom primopredaje dužnosti, statutarnih promjena i u drugim slučajevima.
+
+(5) Budžetski korisnik dužan je izvršiti popis tuđih sredstava i to posebno za svako pravno lice kojem ta imovina pripada i dostaviti im po jedan primjerak popisnih lista.
+
+(6) Popisna komisija je dužna dostaviti izvještaj o izvršenom popisu rukovodiocu budžetskog korisnika na razmatranje i odlučivanje, najkasnije 15 dana od dana isteka poslovne - fiskalne godine.
+
+(7) Po izvršenom usklađivanju poslovnih knjiga i završenom popisu budžetski korisnik je obavezan izvršiti usklađivanje knjigovodstvenog stanja sa stvarnim stanjem.
+
+(8) Usklađivanje se vrši tako što se na osnovu izvještaja i prijedloga komisije za popis donose odgovarajuće odluke. Odluke se donose za likvidiranje i knjiženje eventualno utvrđenih manjkova, viškova, visinu otpisa nenaplativih i zastarjelih potraživanja, rashodovanje sredstava i opreme.
+
+(9) Opštinski načelnik je ovlašten za donošenje navedenih odluka, kao i utvrđivanje eventualne odgovornosti odgornih lica.
+
+(10) Prema odredbi člana 46. Zakona o budžetima u Federaciji Bosne i Hercegovine, Opštinski načelnik, uz obrazloženi prijedlog potrošačke jedinice i popisne komisije, može donijeti odluku o otpisu nenaplativih potraživanja.
+
+POGLAVLJE V.
+
+PROCJENJIVANJE BILANSNIH POZICIJA
+
+Član 13.
+
+(Procjenjivanje bilansnih pozicija)
+
+Prema odredbama Uredbe o računovodstvu budžeta u Federaciji Bosne i Hercegovine (u daljem tekstu: Uredba o računovodstvu) i Pravilnika o
+
+knjigovodstvu budžeta u F BiH, pod procjenjivanjem bilansnih pozicija podrazumijeva se utvrđivanje vrijednosti pojedinačnih bilansnih pozicija: sredstava, obaveza, izvora i dr.
+
+Član 14.
+
+(Bilansna pozicija - stalna sredstva)
+
+(1) Knjiženje i obračun stalne i privremene materijalne imovine vrši se po nabavnoj vrijednosti, što podrazumijeva njihovu fakturnu vrijednost uvećanu za sve troškove i izdatke koji su vezani za tu nabavku do mjesta odredišta korištenja sredstva.
+
+(2) Pravilnikom o knjigovodstvu pod stalnim sredstvom smatra se svako pojedinačno sredstvo koje u cijelosti ostaje u istom obliku duže od jedne godine.
+
+(3) Stalna sredstva čija je pojedinačna nabavna vrijednost u trenutku nabavke niža od 250,00 KM, i čiji je vijek upotrebe kraći od godinu dana, otpisuje se jednokratno.
+
+Član 15.
+
+(Amortizacija stalnih sredstava)
+
+(1) Ispravka vrijednosti stalnih sredstava, bilo da su u obliku stvari ili materijalnih prava, vrši se linearnom metodom indirektno na teret izvora sredstava. Obračun amortizacije vrši se primjenom minimalnih amortizacijskih stopa iz Nomenklature sredstava za amortizaciju („Službene novine Federacije BiH“, broj: 2/95), a osnovica za obračun amortizacije je nabavna vrijednost, odnosno revalorizovana vrijednost ili fer procijenjena vrijednost.
+
+(2) Amortizaciji ne podliježu:
+
+- a) zemljište i šume kao prirodna bogatstva,
+- b) sredstva u pripremi sve do aktiviranja ili početka upotrebe,
+- c) avansi za nabavku sredstava,
+- d) sredstva koja su u skladu sa zakonom proglašena spomenicima kulture i istorijskim spomenicima (osim ako se koriste za obavljanje djelatnosti na osnovu koje se stiču prihodi),
+- e) muzejske vrijednosti i umjetnička djela,
+- f) javni putevi po osnovu kojih se stiču prihodi,
+
+g) donji sloj kod željezničkih i drugih pruga, puteva, aerodroma, ulica, trgova, parkova i drugih izgrađenih javnih površina, kao i h) tuneli, mostovi.
+
+(3) Stalna imovina u obliku udjela, dugoročnih zajmova i vrijednosnih papira koji kotiraju na berzi iskazuju se po principu nabavne ili niže cijene.
+
+(4) Amortizacija se počinje obračunavati prvog dana narednog mjeseca od stavljanja sredstva u upotrebu, a završava se posljednjim mjesecom u kojem se izvrši potpuni otpis, kao i prilikom rashodovanja, prodaje ili na neki način otuđenjem sredstava.
+
+(5) Jednom otpisano sredstvo se ne može ponovo procjenjivati i stavljati u upotrebu, mada se i dalje može koristiti.
+
+Član 16.
+
+(Bilansna pozicija - Novčana sredstava, potraživanja i obaveze)
+
+(1) Domaći novac u blagajni i na računima iskazuje se u nominalnom iznosu, a strani novac po srednjem kursu Centralne banke Bosne i Hercegovine na dan bilansa.
+
+(2) Ekvivalent gotovine (mjenice, takse, porezne markice i druge vrijednosnice) iskazuju se po nominalnoj vrijednosti na dan bilansa.
+
+(3) Bilansne pozicije potraživanja i obaveze priznaju se prema iznosima iz kupoprodajnih ugovora ili druge na zakonu zasnovane dokumentacije (drugi ugovori, fakture i sl.), te iz potraživanja i obaveza koji proističu iz zakonskih i drugih osnova.
+
+POGLAVLJE VI.
+
+KNJIGOVODSTVENO EVIDENTIRANJE IMOVINE, ZALIHA, POTRAŽIVANJA, OBAVEZA, PRIHODA I RASHODA Član 17.
+
+(Obaveza unosa podataka za knjiženje)
+
+(1) Služba za privredu, finansije i inspekcijske poslove je obavezna da se prilikom unosa podataka za knjiženje pridržava računovodstvenih načela. Svi podaci moraju biti tačni, pouzdani, sveobuhvatni i uneseni blagovremeno po pojedinačnom iskazivanju pozicija, u skladu sa Uredbom o računovodstvu i Pravilnikom o knjigovodstvu.
+
+(2) Unos podataka i knjiženje vrši se u pomoćnim knjigama i u modul Glavne knjige,
+
+(3) U Glavnoj knjizi unose se podaci o promjenama na stalnim sredstvima i izvorima sredstava, o tekućim i kapitalnim rashodima i izdacima kao i prihodima i primicima, podaci o potraživanjima po osnovu prodaje robe i usluga drugima i druga potraživanja, promjene po osnovu zaliha, obaveze i potraživanja po osnovu internih transakcija i potraživanja za akontacije za službeni put.
+
+Član 18.
+
+(Priznavanje prihoda i primitaka, rashoda i izdataka)
+
+(1) Priznavanje prihoda i primitaka, rashoda i izdataka, sadržanih u Glavnoj knjizi provodi se prema računovodstvenim načelima modifikovanog nastanka događaja (modifed accrual basis).
+
+(2) U skladu sa članom 58. Zakona o budžetima u Federaciji Bosne i Hercegovine načelo modifikovanog nastanka događaja znači da će se sve prispjele obaveze do 31. januara, koje se odnose na obaveze, odnosno troškove nastale u prethodnoj godini, knjižiti pod 31.12. prethodne godine.
+
+(3) Prihodi koji su evidentirani u izvodu banke pod 31.12. smatraju se prihodima te fiskalne godine u skladu sa članom 76. Zakona o budžetima, prema kojem se prihodi priznaju kad su mjerljivi i raspoloživi.
+
+Član 19.
+
+(Sistem Glavne knjige)
+
+(1) Sistem Glavne knjige osigurava evidenciju svih poslovnih događaja u skladu sa kontnim planom i na nivou propisanih klasifikacija (organizacijska, funkcionalna, ekonomska i fondovska / izvori sredstava), kao i izradu finansijskih izvještaja. Sve ove klasifikacije su sastavni dio Pravilnika o knjigovodstvu.
+
+DIO DRUGI - PRIMJENA KONTNOG PLANA
+
+Član 20.
+
+(Struktura Kontnog plana)
+
+(1) U cilju jedinstvenog evidentiranja sredstava, izvora, rashoda i izdataka, prihoda i primitaka, potraživanja, zaliha i obaveza, budžetski korisnik je dužan da primjenjuje Kontni plan.
+
+(2) Kontni plan se sastoji od 10 klasa (od 0 do 9).
+
+(3) Klasa 0 služi za evidentiranje transakcija po osnovu promjena i stanja stalnih sredstava.
+
+(4) U klasi 1 evidentiraju se promjene u novčanim sredstvima, kratkoročna potraživanja i razgraničenja.
+
+(5) Na kontima klase 2 knjiže se zalihe materijala i proizvoda, sitan inventar na zalihi i u upotrebi.
+
+(6) Klasa 3 služi za evidentiranje kratkoročnih obaveza i razgraničenja (do godinu dana).
+
+(7) U klasi 4 evidentiraju se dugoročne obaveze.
+
+(8) U klasi 5 evidentiraju se izvori stalnih sredstava.
+
+(9) Klasa 6 služi za evidentiranje rashoda koji se planiraju godišnjim i operativnim budžetima.
+
+(10) Na klasi 7 evidentiraju se svi prihodi.
+
+(11) Klasa 8 služi za evidentiranje kapitalnih primitaka i izdataka. Pozicije primitaka i izdataka planiraju se u budžetima i njihov saldo se na kraju godine zatvara preko konta 591111, zajedno sa kontima klase 6 i 7.
+
+(12) Klasa 9 služi za evidentiranje poslovnih događaja koji nemaju neposrednog uticaja na sredstva i izvore sredstava, već samo otvaraju mogućnost za takve uticaje u budućnosti.
+
+POGLAVLJE I.
+
+KLASA 0 - STALNA SREDSTVA
+
+Član 21.
+
+(Stalna sredstva)
+
+Stalna sredstva mogu biti u obliku stvari, prava i razgraničenja.
+
+Član 22.
+
+(Struktura glavne kategorije 01 - Stalna sredstva)
+
+(1) 011100 – Zemljište, šume i višegodišnji zasadi. Ova imovina je izuzeta iz obaveze obračunavanja amortizacije zbog njene trajnosti koja se ne može vremenski ograničiti, te je stopa amortizacije prema Nomenklaturi sredstava za amortizaciju 0 (nula) %.
+
+(2) 011200 – Građevine. U grupi stalnih sredstava značajno mjesto pripada građevinama (građevinskim objektima) iz razloga njihove vrijednosti i dugotrajnosti. U ovu grupu stalnih materijalnih sredstava svrstavaju se zgrade, stanovi i ostali objekti.
+
+- a) Kancelarijska oprema,
+- b) Prijevozna oprema,
+- c) Oprema za obrazovanje i kulturu,
+- d) Elektronska i fotografska oprema,
+- e) Medicinska i laboratorijska oprema,
+- f) Mašine, uređaji i alati,
+- g) Fiksna oprema,
+- h) Specijalna oprema i
+
+(i) Ugostiteljska oprema.
+
+(4) 011400 - Ostala stalna sredstva. U ovu grupu svrstane su robne rezerve, životinje i biljke.
+
+(5) 011500 – Stalna sredstva u obliku prava (nematerijalna stalna sredstva).
+
+- a) Materijalna prava,
+- b) Osnivačka ulaganja i
+- c) Ostala stalna sredstva u obliku prava.
+
+(6) 011600 – Sredstva u pripremi.
+
+- a) Građevine u izgradnji,
+- b) Oprema u pripremi,
+
+(7) 011700 – Sredstva van upotrebe.
+
+- a) Sredstva privremeno van upotrebe,
+- b) Oprema van upotrebe i
+
+c) Sredstva trajno van upotrebe.
+
+(8) 011900 – Ispravka vrijednosti stalnih sredstava
+
+- a) Ostali građevinski objekti i drugi objekti,
+- b) Oprema i
+- c) Stalna sredstva u obliku prava.
+
+Član 23.
+
+(Struktura glavne kategorije 02 - Dugoročni plasmani)
+
+(1) 021100 – Pozajmljivanje i učešće u zemlji.
+
+b) Pozajmljivanje pojedincima i neprofitnim organizacijama,
+
+c) Pozajmljivanje javnim preduzećima,
+
+d) Učešće u akcijama javnih preduzeća,
+
+e) Učešće u akcijama privatnih preduzeća i zajedničkih ulaganja i
+
+f) Ostala domaća pozajmljivanja.
+
+(2) 021200 – Pozajmljivanje u inostranstvo,
+
+(3) 022100 – Dugoročni depoziti,
+
+(4) 023100 – Uložena sredstva u banke i druge finansijske organizacije,
+
+(5) 024100 – Ostali dugoročni plasmani,
+
+(6) 029100 – Ispravka vrijednosti dugoročnih plasmana,
+
+a) Ispravka vrijednosti dugoročnih pozajmljivanja i učešća u akcijama,
+
+b) Ispravka vrijednosti dugoročnih depozita i
+
+c) Ispravka vrijednosti uloženih sredstava u banke i druge finansijske organizacije.
+
+Član 24.
+
+(Struktura glavne kategorije 03 - Vrijednosni papiri)
+
+(1) 031100 – Akcije,
+
+(2) 031200 – Obveznice,
+
+(3) 031300 – Ostali vrijednosni papiri,
+
+(4) 031900 – Ispravka vrijednosti.
+
+Član 25.
+
+(Struktura glavne kategorije 09 – Dugoročna razgraničenja)
+
+(1) 091100 – Razgraničeni prihodi,
+
+(2) 092100 – Razgraničeni rashodi,
+
+Član 26.(Nabavka stalnih sredstava)(1) Nabavka stalnih sredstava može se vršiti: kupovinom, rekonstrukcijom, adaptacijom, vlastitom izgradnjom i putem donacija.
+
+(2) Kada se planira nabavka stalnih sredstava, u budžetu mora biti planiran odgovarajući iznos izdataka na glavnoj kategoriji 820000 – Kapitalni izdaci, iz razloga što će nabavka proizvesti obaveze koje se moraju izmiriti u novčanom obliku.
+
+(3) Odluku o nabavci ili ulaganju u stalna sredstva donosi Opštinski načelnik.
+
+(4) Za rashodovanje stalnih sredstava na prijedlog popisne komisije odluku donosi Opštinski načelnik.
+
+(5) Odluku o prodaji, zamjeni, stalnih sredstava donosi, na prijedlog Opštinskog načelnika, Opštinsko vijeće.
+
+(6) Nabavka stalnog sredstva obavezno se vrši u skladu sa Zakonom o javnim nabavkama Bosne i Hercegovine, a u okviru budžetom utvrđenog plana nabavke stalnih sredstava.
+
+(7) Evidentiranje stanja i promjena stalnih sredstava vrši se i u pomoćnoj knjizi i Glavnoj knjizi.
+
+Član 27.(Nabavka stalnih sredstava, kad su sredstva planirana u budžetu)(1) Opštinski načelnik, na osnovu odluke i provedenih procedura iz Zakona o javnim nabavkama Bosne i Hercegovine, potpisuje dobavljaču narudžbenicu.
+
+(2) Nakon izvršene kontrole i ovjeravanja iste (kako je utvrđeno članom 8. ove Računovodstvene politike), knjiženje fakture vrši se, tako što se zadužuje odgovarajući analitički konto (zavisno od vrste nabavljenog stalnog sredstva) iz glavne kategorije 820000 - Kapitalni izdaci, a odobrava odgovarajući analitički konto iz glavne kategorije 310000 – Kratkoročne tekuće obaveze.
+
+(3) Na osnovu podataka iz fakture, Služba za privredu, finansije i inspekcijske poslove, dužna je odmah po prijemu fakture nakon izvršene kontrole, izvršiti knjiženje nabavke stalnog sredstva u modulu Glavne knjige, tako što će zadužiti odgovarajući analitički konto iz glavne grupe 011600 - Stalna
+
+sredstva u pripremi, a odobriti konto 511111 - Izvori stalnih sredstava.
+
+(4) Nakon evidentiranja svih rashoda i izdataka vezanih za tu nabavku, stalno sredstvo se stavlja u upotrebu zaduženjem odgovarajućeg analitičkog konta klase 0, a odobrenjem glavne grupe 011600 - Stalna sredstva u pripremi.
+
+(5) Stalna sredstva u obliku stvari i prava nabavljena iz donacija knjiže se u Modulu Glavne knjige, zaduženjem odgovarajućeg analitičkog konta iz klase 0 – Stalna sredstva i odobrenjem konta 511111- Izvori stalnih sredstava.
+
+(6) Evidentiranje doniranih stalnih sredstava vrši se na osnovu primljene dokumentacije od donatora ili procijenjene fer vrijednosti, u skladu sa Pravilnikom o knjigovodstvu.
+
+Član 28.(Knjiženje stalnih materijalnih sredstava u pripremi i izgradnji)(1) U skladu s Pravilnikom o knjigovodstvu budžeta u F BiH, na kontima glavne grupe 011600 - Sredstava u pripremi, evidentiraju se investicije u toku, odnosno ulaganja u nabavku stalnih sredstava, kao i dati avansi za nabavku ili izgradnju stalnih sredstava.
+
+(2) Kad se radi o sredstvima u izgradnji, izvođač radova, u skladu sa ugovorom i dinamikom izgradnje ispostavlja kupcu privremene situacije za izvršeni dio radova. Po završetku izgradnje, ispostavlja se konačna situacija na ukupnu vrijednost radova. Na konačnoj situaciji unosi se obračun za izvršene radove za koje su bile ispostavljene prethodne privremene situacije, i koliko radova ostaje za obračun po konačnoj situaciji.
+
+(3) Privremene situacije i konačna situacija zamjenjuju u knjigovodstvenom smislu fakturu kao dokument za knjiženje.
+
+(4) Izdatke nastale po ovom osnovu knjiži se na teret odgovarajućeg analitičkog konta iz glavne kategorije 820000 - Kapitalni izdaci, u korist konta glavne kategorije 310000 - Kratkoročne tekuće obaveze. Istovremeno, za vrijednost izgrađenog objekta po situaciji (privremena ili konačna) u modulu Glavne knjige zadužuje se odgovarajući analitički konto iz glavne grupe 011600 – Sredstva u pripremi, a odobrava konto 511111 – Izvori stalnih sredstava.
+
+(5) Ukoliko je za ulaganja u nabavku stalnih sredstava ili za njihovu izgradnju dat avans (što mora biti regulisano ugovorom o izgradnji), tada se knjiženje vrši tako što se odobrava konto 391293 - Obaveze za avans, a zadužuje konto 131112 - Avansi.
+
+(6) Po izvršenom plaćanju avansa zadužuje se konto 391293 - Obaveze za avans, a odobrava konto 111111 - Žiroračun.
+
+(7) Po prijemu privremene situacije koja zamjenjuje fakturu, unosi se situacija kao standardna faktura, gdje se u obavezama odobrava konto iz glavne kategorije 310000 - Kratkoročne tekuće obaveze, a zadužuje odgovarajući konto iz glavne kategorije 820000 - Kapitalni izdaci.
+
+(8) Sve privremene situacije, pa i konačna, unose se u sistem kao standardne fakture.
+
+(9) Ukoliko je prethodno izvršeno avansno plaćanje po privremenoj situaciji, onda se softverski zatvara konto 131112 - Avansi i evidentira smanjenje obaveza prema dobavljaču, knjiženjem na dugovnu stranu konta iz glavne kategorije 310000 - Kratkoročne tekuće obaveze, za iznos datog avansa.
+
+(10) Za plaćene avanse, ako se nisu primile fakture - situacije i nisu teretili rashode i izdatke do kraja fiskalne godine, dužni su u budžetu za narednu fiskalnu godinu planirati sredstva za ove namjene na određenim kontima.
+
+(11) Na kontima glavne grupe 011600 - Sredstva u pripremi knjiže se i svi drugi troškovi i izdaci koji nastanu i vezani su za tu nabavku, odnosno izgradnju do momenta završetka izgradnje i stavljanja sredstva u upotrebu.
+
+(12) Kad je sredstvo izgrađeno, odnosno nabavljeno i dovedeno do stepena potpune završenosti, saldo na ovom kontu se zatvara sa odgovarajućim kontom iz klase 0 - Stalna sredstva u upotrebi, po vrstama stalnih sredstava (oprema, zgrade itd).
+
+Član 29.
+
+(Rekonstrukcija i adaptacija)
+
+(1) Pojam rekonstrukcije ili adaptacije predstavlja investiciju u stalna sredstva kojima se povećava predviđeni vijek trajanja, vrši povećanje kapaciteta ili drugo.
+
+(2) Sa stanovišta knjigovodstva rekonstrukcijom i adaptacijom povećava se vrijednost stalnog sredstva i produžava vijek trajanja.
+
+(3) Knjiženja su u ovom slučaju ista kao kod izgradnje objekata i nabavke stalnog sredstva.
+
+Član 30.
+
+(Stalna sredstva van upotrebe)
+
+(1) Stalna sredstva koja se privremeno ili trajno ne koriste i koja se privremeno ili trajno nalaze van funkcije evidentiraju se na kontima glavne grupe 011700 - Sredstva van upotrebe.
+
+(2) Prilikom isknjižavanja, odnosno prijenosa vrijednosti stalnih sredstava stavljenih van upotrebe, treba voditi računa da se na ovu grupu konta prenosi nabavna vrijednost stalnog sredstva, a ispravka vrijednosti tog stalnog sredstva ostaje na onim kontima ispravke vrijednosti na kojima je i do tada evidentirana.
+
+Član 31.
+
+(Prodaja stalnih sredstava)
+
+(1) Stalna sredstva se mogu prodati samo na osnovu odluke koju donosi Opštinsko vijeće a na prijedlog Opštinskog načelnika.
+
+(2) Prodaja stalnog sredstva evidentira se, na osnovu fakture ispostavljene kupcu, kao potraživanja od kupca.
+
+(3) Faktura se knjiži zaduženjem konta 131111 - Potraživanje od kupaca, a odobrenjem konta 511121 - Primici od prodaje stalnih sredstava.
+
+(4) Nakon toga se vrši isknjižavanje stalnog sredstva tako što se zadužuje konto iz glavne grupe 011900 - Ispravka vrijednosti stalnih sredstava, za iznos otpisane vrijednosti i konto 511111 - Izvori stalnih sredstava, za iznos neotpisane - sadašnje vrijednosti, a odobrava odgovarajući konto iz potkategorije 011000 - Stalna sredstva, za iznos nabavne vrijednosti.
+
+(5) Uplata od prodaje stalnih sredstava vrši se na transakcijski račun Opštine Drvar, a knjiži se na teret konta 111111 - Transakcijski račun, a u korist odgovarajućeg konta iz glavne grupe 811100 - Primici od prodaje stalnih sredstava, nakon čega se zatvara potraživanje, knjiženjem na teret konta 511121 - Primici od prodaje stalnih sredstava, u korist konta 131111 - Potraživanja od kupaca.
+
+(6) Eventualni troškovi vezani za prodaju stalnog sredstva evidentiraju se na teret konta 613991 - Ostale nespomenute usluge i dadžbine, a u korist
+
+konta iz glavne kategorije 310000 - Kratkoročne tekuće obaveze.
+
+Član 32.
+
+(Rashodovanje stalnih sredstava)
+
+(1) Stalna sredstva se mogu rashodovati samo na osnovu pismene odluke koju donosi Opštinski načelnik, u skladu sa odredbama „Pravilnika o kriterijima razvrstavanja sredstva u stalna sredstva, o kriterijima za rashodovanje, otpis, knjiženje viškova i manjkova stalnih sredstava i otpis potraživanja“.
+
+(2) Rashodovanje se vrši u skladu sa članom 114. Zakona o organizaciji organa uprave u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 35/05) kojim je regulisano da se pokretna stvar ili oprema može rashodovati, ako je usljed dotrajalosti ili drugih uzroka postala neupotrebljiva, a ne može se popraviti.
+
+(3) Prilikom rashodovanja stalnog sredstva potrebno je izvršiti preknjižavanje tog sredstva iz potkategorije 011000 – Stalna sredstva na odgovarajući konto glavne grupe 011700 – Sredstva van upotrebe, za nabavnu vrijednost.
+
+(4) Opštinski načelnik, donosi rješenje o imenovanju Komisije za rashodovanje stalnog sredstva, čiji je zadatak da predloži način rashodovanja tog sredstva (uništenje, prodaja otpada, poklon), nakon čega na prijedlog Komisije za rashodovanje stalnog sredstva, donosi odgovarajuću odluku (o uništenju, prodaji otpada, poklonu).
+
+(5) Nakon što se izvrši uništenje (prodaja otpada ili poklanjanje), Komisija sačinjava zapisnik i jedan primjerak dostavlja računovodstvu, kao dokument na osnovu kojeg se vrši isknjižavanje stalnog sredstva iz knjigovodstva.
+
+(6) Isknjižavanje stalnog sredstva iz knjigovodstva vrši se zaduživanjem odgovarajućeg konta glavne grupe 0119 – Ispravka vrijednosti stalnih sredstava, za otpisanu vrijednost i odobravanjem konto glavne grupe 011700 – Sredstva van upotrebe, za nabavnu vrijednost i konto 5111111 – Izvori stalnih sredstava, za iznos neotpisane – sadašnje vrijednosti
+
+(7) Eventualni troškovi vezani za rashodovanje stalnog sredstva evidentiraju se na teret konta 613991 – Ostale nespomenute usluge i dadžbine, a u korist 310000 - Kratkoročne tekuće obaveze.
+
+(8) Ukoliko Komisija za rashodovanje utvrdi i predloži da se rashodovano sredstvo može prodati
+
+kao otpad i nakon provedenih procedura za prodaju, a na osnovu ispostavljene fakture kupcu za prodati otpad, knjiži se potraživanje na teret konta 1311111 – Potraživanje od kupaca, a u korist konta 391191 – Razgraničeni ostali prihodi. Prihodi ostvareni prodajom otpada uplaćuju se na transakcijski račun Opštine Drvar, sa oznakom vrste prihoda 722791 - Ostale neplanirane uplate, nakon čega se zatvara potraživanje i to knjiženjem na teret konta 391191 – razgraničeni ostali prihodi, u korist 1311111 – Potraživanja od kupaca.
+
+Član 33.
+
+(Evidentiranje štete na stalnim sredstvima i izmirenje iste)
+
+(1) Stalna sredstva koja imaju veliku vrijednost mogu se osigurati kod osiguravajućih društava i u svom budžetu planirati određeni iznos sredstava na rashodovnoj strani, kao trošak za ove namjene.
+
+(2) Nastala štetu na stalnom sredstvu se prijavljuje osiguravajućem društvu kod kojeg je stalno sredstvo osigurano.
+
+(3) Na osnovu utvrđene visine nastale štete, od strane osiguravajućeg društva, Opštinski načelnik donosi Odluku o knjiženju promjena na stalnim sredstvima.
+
+(4) Na osnovu odluke, vrši se knjiženje, tako što se zadužuje odgovarajući analitički konto u klasi 0, sa predznakom minus (-), a odobrava konto 5111111 – Izvori stalnih sredstava, sa predznakom minus (-) za iznos po odluci.
+
+(5) Može se dogovoriti sa osiguravajućim društvom da se naknada štete izvrši na način da:
+
+a) osiguravajuće društvo plati fakturu za saniranje nastale štete, ili
+
+b) osiguravajuće društvo uplati procijenjeni iznos štete na račun budžetskog korisnika, a korisnik sanira štetu.
+
+(6) U slučaju da korisnik sam sanira štetu, dužan je postupiti u skladu sa Zakonom o javnim nabavkama Bosne i Hercegovine.
+
+Član 34.
+
+(Osiguravajuće društvo plaća fakturu za saniranje štete)
+
+(1) Nakon što se izvrši saniranje štete i pribavi dokaz o plaćanju potrebno je izvršiti komisijski prijem i sastaviti zapisnik o saniranju štete.
+
+(2) Zapisnik je dokument za knjiženje sanirane štete, tako što će budžetski korisnik za procijenjeni iznos štete zadužiti odgovarajući analitički konto iz klase 0, a odobriti konto 511111- Izvori stalnih sredstava.
+
+Član 35.
+
+(Budžetski korisnik organizira saniranje štete, a procijenjeni iznos štete odgovara visini fakture dobavljača koji vrši sanaciju)
+
+(1) Za izvršenu sanaciju dobavljač budžetskom korisniku ispostavlja fakturu, pri čemu se odobrava konto iz glavne kategorije 310000 - Kratkoročne tekuće obaveze, a zadužuje konto 131331 - Potraživanja za štete od osiguravajućih društava.
+
+(2) Po izvršenoj uplati za nastalu štetu od strane osiguravajućeg društva, vrši se knjiženje zaduženje konta 111111 - Transakcijskog računa, a odobrenje konta 131331 - Potraživanja za štete od osiguravajućih društava.
+
+(3) Završetkom sanacije štete budžetski korisnik unosi nalog kojim zadužuje odgovarajući analitički konto klase 0, a odobrava konto 511111 - Izvori stalnih sredstava, za iznos fakture.
+
+Član 36.
+
+(Budžetski korisnik organizuje saniranje štete, a procijenjeni iznos štete manji je od visine fakture dobavljača koji vrši sanaciju)
+
+(1) Budžetski korisnik po prijemu fakture za sanaciju od dobavljača vrši slijedeće knjiženje: odobrava konto iz glavne kategorije 310000 - Kratkoročne tekuće obaveze za iznos fakture, a zadužuje konto 131331 - Potraživanja za štete od osiguravajućih društava, za procijenjeni iznos štete po zapisniku, i za razliku zadužuje odgovarajući konto glavne grupe 613700 - Izdaci za tekuće održavanje.
+
+(2) Prijem novčanih sredstava za nastalu štetu knjiži se na način opisan u stavu 2. člana 35. ovih Računovodstvenih politika.
+
+(3) Budžetski korisnik unosi nalog kojim zadužuje odgovarajući analitički konto klase 0, a odobrava konto 511111 - Izvori stalnih sredstava, za iznos doznačenih sredstava po zapisniku.
+
+Član 37.
+
+(Budžetski korisnik organizira saniranje štete, a procijenjeni iznos štete veći je od visine fakture dobavljača koji vrši sanaciju)
+
+(1) Budžetski korisnik po prijemu fakture za sanaciju od dobavljača vrši slijedeće knjiženje: odobrava konto iz glavne kategorije 310000 - Kratkoročne tekuće obaveze za iznos fakture i odobrava konto 191111 - Nefakturisani ili nenaplaćeni prihodi za iznos razlike, a zadužuje konto 131331 - Potraživanja za štete od osiguravajućih društava za iznos procijenjene štete.
+
+(2) Budžetski korisnik unosi nalog kojim zadužuje odgovarajući analitički konto klase 0, a odobrava konto 511111 - Izvori stalnih sredstava za iznos procijenjene štete po zapisniku.
+
+(3) Po prijemu novčanih sredstava se zadužuje konto 111111 - Transakcijski račun, a odobrava konto 131331 - Potraživanja za štete od osiguravajućih društava. Istovremeno, za razliku između doznačenih sredstava i fakture dobavljača, zadužuje se konto 191111 - Nefakturisani ili nenaplaćeni prihodi, a odobrenjem konta 722791 - Ostale neplanirane uplate.
+
+Član 38.
+
+(Revalorizacija stalnih sredstva)
+
+(1) Revalorizacija se vrši u skladu sa Uredbom o računovodstvu i Pravilnikom o knjigovodstvu.
+
+(2) Knjigovodstveni iznos materijalnih sredstava obavezno se koriguje ako je inflacija na godišnjem nivou mjerena rastom cijena viša od 10%.
+
+(3) Revalorizacija se vrši primjenom kumulativnog iznosa rasta cijena proizvođača industrijskih proizvoda, koje objavljuje Federalni zavod za statistiku.
+
+(4) Sredstva u pripremi se ne revaloriziraju.
+
+(5) Efekti revalorizacije povećavaju izvore stalnih sredstava za razliku između rezultata revalorizacije nabavne vrijednosti i rezultata revalorizacije otpisane vrijednosti.
+
+(6) Revalorizacija se knjiži tako što se povećava vrijednost stalnih sredstava i njihova ispravka za iznos revalorizacije, a efekti revalorizacije se evidentiraju na potražnoj strani konta 511111 - Izvori stalnih sredstava.
+
+Član 39.(Amortizacija stalnih sredstva)Amortizacija stalnih sredstava u skladu sa članom 15. Računovodstvenih politika, knjiži se odobravanjem analitičkih konta glavne grupe 011900 - Ispravka vrijednosti, na teret konta 511111 - Izvori stalnih sredstava.
+
+Član 40.(Dugoročni plasmani)(1) Dugoročni plasmani po kojima se kreditiraju bilo pravna, bilo fizička lica odnose se na posebne ugovore, u kojima se ugovara visina kredita, visina kamate, dinamika otplate i iznosi pojedinačnih anuiteta.
+
+(2) Pod dugoročnim plasmanima se smatraju ulaganja novčanih sredstava na rok duži od 12 mjeseci i prema klasifikaciji iz kontnog plana obuhvataju:
+
+- a) 021000 - Pozajmljivanja i učešća u akcijama,
+- b) 022000 - Dugoročni depoziti,
+- c) 023000 - Uložena sredstva u banke i druge finansijske organizacije,
+- d) 024000 - Ostali dugoročni plasmani,
+- e) 029000 - Ispravka vrijednosti dugoročnih plasmana.
+
+(3) Dugoročni plasmani se moraju planirati u budžetu na odgovarajućoj poziciji grupe konta 820000 - Kapitalni izdaci.
+
+Član 41.(Davanje dugoročne pozajmice i njeno vraćanje)(1) Na osnovu ugovora o davanju dugoročnih zajmova vrši se unos knjiženjem na teret odgovarajućeg analitičkog konta iz potkategorije 822000 - Izdaci za finansijsku imovinu, a u korist odgovarajućeg analitičkog konta iz glavne kategorije 310000 - Kratkoročne tekuće obaveze.
+
+(2) Po izvršenom plaćanju zatvara se obaveza knjiženjem na teret odgovarajućeg analitičkog konta iz glavne kategorije 310000 - Kratkoročne tekuće obaveze, a u korist konta 111111 - Transakcijski račun. (3) Istovremeno sa ovom transakcijom u Glavnoj knjizi trezora se knjiži pozajmica tako što se
+
+zadužuje odgovarajući analitički konto iz glavne kategorije 020000 - Dugoročni plasmani, a odobrava konto 521111 - Ostali izvori sredstava.
+
+(4) Za prispjeli anuitet (anuitete) u fiskalnoj godini, vrši se knjiženje potraživanja po anuitetu (anuitetima), zaduženjem konta 131113 - Potraživanja za prispjele anuitete po datim dugoročnim zajmovima, za iznos anuiteta, a odobrenjem odgovarajućeg analitičkog konta iz potkategorije 020000 - Dugoročni plasmani, za iznos rate i odobrenjem konta 191114 - Razgraničene kamate, za iznos kamate.
+
+(5) Po izvršenoj uplati anuiteta na transakcijski račun u Trezoru se, na osnovu izvoda banke, zadužuje konto 111111 - Transakcijski račun, a odobrava odgovarajući analitički konto iz potkategorije 813000 - Primici od finansijske imovine, za iznos rate i analitički konto iz glavne grupe 721300 - Kamate primljene od pozajmica i učešća u kapitalu, za iznos kamate.
+
+(6) Zatvaranje potraživanja za prispjeli anuitet, vrši se u Glavnoj knjizi odobrenjem konta 131113 - Potraživanja za prispjele anuitete, za iznos anuiteta, a zaduženjem analitičkog konta 191114 - Razgraničene kamate, za iznos kamate i zaduženjem analitičkog konta 521111 - Ostali izvori sredstava, za iznos rate.
+
+Član 42.(Vrijednosni papiri)(1) U grupu dugoročnih ulaganja svrstavaju se i vrijednosni papiri pribavljeni u cilju ostvarenja prihoda u periodu dužem od jedne godine.
+
+(2) Ulaganja u akcije evidentiraju se po kupovnom kursu, odnosno po trošku kupovine.
+
+(3) Sredstva za ove namjene moraju biti planirana u budžetu na odgovarajućoj poziciji glavne kategorije 820000- Kapitalni izdaci.
+
+(4) Prema kontnom planu za budžetske korisnike u okviru glavne grupe konta 03 - Vrijednosni papiri evidentiraju se:
+
+- a) 031111 - Akcijee,
+- b) 031211 - Obveznice,
+- c) 031311 - Ostali vrijednosni papiri,
+- d) 031911 - Ispravka vrijednosti vrijednosnih papira.
+
+(5) Trošak ulaganja utvrđuje se u iznosu isplaćenih izdataka za svako konkretno ulaganje, uključujući brokerske provizije, honorare, bankarske provizije i druge naknade i troškove u vezi sa ulaganjem.
+
+(6) Kada je ulaganje stečeno u zamjenu za drugu vrstu sredstva, trošak ulaganja se utvrđuje u visini fer vrijednosti ulaganja, odnosno nabavljene imovine.
+
+(7) Od troška ulaganja odbiti će se dio primljene kamate od ulaganja koja je obračunata prije nabavke ulaganja, kao i dio primljene dividende na akcije objavljene prije perioda sticanja dobiti.
+
+(8) U slučaju pada vrijednosti dugoročnog ulaganja na dan bilansiranja i kada se pad vrijednosti, ne smatra privremenim, vrijednost ulaganja se smanjuje za iznos tog pada vrijednosti.
+
+(9) Kupovina i prodaja vrijednosnih papira vrši se po odluci Opštinskog načelnika.
+
+Član 43.
+
+(Kupovina akcija po nominalnoj vrijednosti)
+
+(1) Na osnovu odluke, Opštinskog načelnika o ulaganju u kupovinu akcija po nominalnoj vrijednosti, u Službi za privredu, finansije i inspekcijske poslove knjiži se zaduživanje odgovarajućeg analitičkog konta iz glavne grupe 822400 – Izdaci za kupovinu akcija javih preduzeća ili 822500 – Izdaci za kupovinu akcija privatnih preduzeća i učešće u zajedničkim ulaganjima, a odobrava odgovarajući analitički konto iz glavne kategorije 320000 - Obaveze po osnovu vrijednosnih papira.
+
+(2) Nakon izvršenog plaćanja te obaveze, a na osnovu izvoda iz banke, obaveza se zatvara knjiženjem na teret konta iz glavne kategorije 320000 - Obaveze po osnovu vrijednosnih papira, a u korist konta 111111 - Transakcijski račun.
+
+(3) Istovremeno sa ovom transakcijom u Glavnoj knjizi evidentira se ulaganje u akcije, zaduženjem konta 031111 -Akcije, a odobrenjem konta 521111 – Ostali izvori sredstava.
+
+Član 44.
+
+(Prodaja akcija po kupovnoj cijeni)
+
+(1) Knjiženje prodaje vrši se u Glavnoj knjizi tako što se za iznos prodatih akcija zaduži konto 131391 – Ostala potraživanja, a odobri konto 391191 – Razgraničeni ostali prihodi.
+
+(2) Istovremeno se u Glavnoj knjizi vrši knjiženje, zaduženjem konta 521111 – Ostali izvori sredstava, a odobrenjem konta 031111 - Akcije.
+
+(3) Kupac uplatu vrši na depozitni račun. Nakon izvršene uplate, zadužuje 111111 –Transakcijski račun, a odobrava odgovarajući analitički konto iz potkategorije 813400 – Povrat od učešća u dionicama javnih preduzeća ili 813500 –Povrat od učešća u dionicama privatnih preduzeća i u zajedničkim ulaganjima.
+
+(4) Istovremeno se u Glavnoj knjizi zatvara potraživanje, knjiženjem na teret konta 391191 – Razgraničeni ostali prihodi, u korist konta 131391– Ostala potraživanja.
+
+Član 45.
+
+(Prodaja akcija po cijeni nižoj od kupovne - diskont)
+
+(1) Akcije ne bi trebalo prodavati po cijeni nižoj od kupovne, osim u izuzetnim slučajevima, kao što je na primjer nedostatak gotovine za hitno izmirenje tekućih obaveza i sl.
+
+(2) Knjiženje prodatih akcija po cijeni manjoj od kupovne vrijednosti vrši se tako što se u Glavnoj knjizi zadužuje konto 131391 – Ostala potraživanja, za iznos koji će biti naplaćen, a odobrava konto 391191 – Razgraničeni ostali prihodi.
+
+(3) Istovremeno, zadužuje se konto 521111 – Ostali izvori sredstava za iznos kupovne vrijednosti prodatih akcija, a odobrava se konto 031111 – Akcije, za isti iznos.
+
+(4) Uplaćeni iznos za prodate akcije evidentira se zaduženjem konta 111111- Transakcijski račun, a odobrenjem odgovarajućeg analitičkog konta iz glavne grupe 813400 – Povrat od učešća u akcijama javnih preduzeća ili 813500 – Povrat od učešća u akcijama privatnih preduzeća i u zajedničkim ulaganjima.
+
+(5) Po izvršenoj uplati u Glavnoj knjizi zatvara se potraživanje zaduženjem konta 391191 – Razgraničeni ostali prihodi, a odobrenjem konta 131391–Ostala potraživanja.
+
+Član 46.
+
+(Prodaja akcija po cijeni većoj od kupovne ako je kupovna vrijednost jednaka nominalnoj)
+
+(1) Evidentiranje potraživanja za akcije prodate po većoj cijeni, većoj od kupovne vrijednosti, vrši se tako što se u Glavnoj knjizi zadužuje konto 131391 – Ostala potraživanja, za iznos koji će biti naplaćen, a odobrava konto 391191 - Razgraničeni ostali prihodi.
+
+(2) Istovremeno se vrši knjiženje na teret 5211111 – Ostali izvori sredstava, u korist 031111 – Akcije, za kupovnu vrijednost dionica.
+
+(3) Po izvršenoj uplati zadužuje se konto 1111111 – Transakcijski račun za uplaćeni iznos, a odobrava odgovarajući analitički konto iz glavne grupe 813400-Povrat od učešća uakcijama javnih preduzeća ili 813500 – Povrat od učešća u akcijama privatnih preduzeća i u zajedničkim ulaganjima za kupovnu vrijednost prodatih akcija i odobrava odgovarajući konto iz podgrupe 721440 – Naknade primljene iz učešća u kapitalu javnih preduzeća ili 721450 – Naknade primljene od učešća u kapitalu privatnih preduzeća i zajedničkih ulaganja, za razliku između kupovne i prodajne cijene prodatih akcija.
+
+(4) Nakon toga se u Glavnoj knjizi zatvara potraživanje knjiženjem na teret konta 391191 – Razgraničeni ostali prihodi, u korist konta 131391 – Ostala potraživanja.
+
+Član 47.
+
+(Nabavka i realizacija obveznica)
+
+(1) Obveznice se evidentiraju po nominalnoj vrijednosti, a eventualna razlika između manje plaćenog iznosa nominalne vrijednosti knjiži se preko konta 031911 – Ispravka vrijednosti obveznica. Ovaj konto se odobrava za dio kupovne cijene koji vjerovatno neće biti naplaćen.
+
+(2) Kamate i slični prilivi proizašli iz ulaganja smatraju se prihodom jer predstavljaju zaradu od ulaganja.
+
+Član 48.
+
+(Dugoročna razgraničenja)
+
+(1) Prema Pravilniku o knjigovodstvu na kontima glavne kategorije 090000 – Dugoročna razgraničenja evidentiraju se razgraničeni prihodi i rashodi, na rok duži od godine.
+
+(2) Na grupi konta 0921- Razgraničeni rashodi i 0931 - Ostala dugoročna razgraničenja evidentiraju se kamate po dugoročnim kreditima.
+
+(3) Prilikom evidentiranja razgraničenja u poslovnim knjigama treba imati u vidu odredbe Pravilnika o knjigovodstvu, prema kojoj se i dugoročna i kratkoročna razgraničenja mogu bilansirati na kraju godine, samo pod uslovom da je razgraničenje u skladu sa budžetskim planom.
+
+POGLAVLJE II.
+
+KLASA 1 – GOTOVINA, KRATKOROČNA POTRAŽIVANJA I RAZGRANIČENJA
+
+Član 49.
+
+(Novčana sredstva, kratkoročna potraživanja i razgraničenja)
+
+U skladu sa odredbama Pravilnika o knjigovodstvu u klasi 1 evidentiraju se promjene i stanja na novčanim sredstvima, kratkoročna potraživanja i razgraničenja.
+
+Član 50.
+
+(Novčana sredstva)
+
+(1) Na kontima glavne kategorije 110000 - Novčana sredstva i plemeniti metali vode se efektivni i žiralni novac, valute i devize kao i plemeniti metali u skladu sa nazivima konta.
+
+(2) Na kontima glavne grupe 111100 – Depozitni, transakcijski i prelazni računi vode se žiralna sredstva. U ovoj grupi evidentiraju se i sredstva, za koja je kroz poravnanje utvrđeno da su pogrešno uplaćena ili isplaćena, kao i račun za poravnanje internih transakcija preko kojeg se zatvaraju interna potraživanja i interne obaveze između budžetskih korisnika istog nivoa vlasti.
+
+Član 51.
+
+(Blagajna)
+
+(1) U glavnoj grupi 111300 – Blagajna, vode se gotovinska sredstva koja služe budžetskom korisniku za plaćanje u gotovini.
+
+(2) Za potrebe blagajne, vrši se podizanje gotovine čekom.
+
+(3) Visina blagajničkog maksimuma utvrđuje se Odlukom o visini blagajničkog maksimuma, a na kraju dana u blagajni može biti maksimalno gotovine do iznosa odobrenog blagajničkim maksimuma.
+
+Član 52.(Ostala novčana i deponovana sredstva)(1) U glavnoj grupi 111800 – Knjiže se ostala novčana i deponovana sredstva.
+
+Član 53.(Vrijednosni papiri)(1) U glavnoj kategoriji 120000 – Vrijednosni papiri, knjiže se vrijednosni papiri koji su po svojoj prirodi kratkoročni (mjenica i ček), kao i oni dugoročni papiri koje budžetski korisnik nema namjeru držati duže od godine dana.
+
+(2) Pravilnikom o knjigovodstvu utvrđeno je da se kratkoročni vrijednosni papiri vode po kupovnom kursu, a obveznice po nominalnoj vrijednosti, a odstupanje od nominalne vrijednosti evidentira se preko konta glavne grupe 121900 – Ispravka vrijednosti.
+
+Član 54.(Kratkoročna potraživanja)(1) U okviru glavne kategorije 130000 – Kratkoročna potraživanja evidentiraju se potraživanja sa rokom dospijeća do 12 mjeseci od: pravnih lica, fizičkih lica i ostala potraživanja. U okviru ove grupe evidentira se i ispravka vrijednosti potraživanja.
+
+(2) Kako je obaveza praćenja naplate potraživanja pri potrošačkoj jedinici u okviru budžetskog korisnika, u čijoj su nadležnosti izdavanje rješenja za naknade po osnovu opštinskih propisa, ugovori o zakupu i drugo, ista je dužna redovno i svakodnevno pratiti dospjelost svakog potraživanja.
+
+(3) Po isteku ugovorenog roka za naplatu svakog pojedinačnog potraživanja, koji ne može biti duži od šest mjeseci, nadležna potrošačka jedinica je dužna preduzeti sve zakonom propisane radnje za naplatu istog, a u Glavnoj knjizi potrebno je izvršiti preknjiženje tog potraživanja na sumnjiva i sporna potraživanja zaduženjem konta 131351 - Sumnjiva i sporna potraživanja, a odobrenjem konta u okviru glavne kategorije 130000 – Kratkoročna potraživanja.
+
+(4) Prilikom popisa potraživanja, koje se obavezno vrši na kraju godine sa stanjem na dan 31.12, popisna komisija daje prijedlog o otpisu sumnjivog i spornog potraživanja. Otpisivanje potraživanja se ne može izvršiti bez odobrenja Opštinskog načelnika.
+
+(5) Prilikom podnošenja zahtjeva za davanje saglasnosti za otpis potraživanja potrebno je priložiti odgovarajuću dokumentaciju kojom se potvrđuje da su preduzete sve zakonom predviđene mjere za naplatu potraživanja, kao i prijedlog odluke Komisije o otpisu potraživanja, uz obrazloženje. Ukoliko je dužnik brisan iz sudskog registra, treba priložiti sudske dokumente koji to potvrđuju.
+
+Član 55.(Kratkoročni plasmani)(1) U glavnoj kategoriji 140000 – Kratkoročni plasmani, vode se kratkoročni plasmani koji se sastoje od kredita datih pravnim i fizičkim licima, radnicima, ostali kratkoročni krediti, kao i sumnjiva i sporna potraživanja po istima, ostali kratkoročni plasmani i njihova ispravka vrijednosti.
+
+(2) Obavezno je u budžetu planirati iznos sredstava koja će se plasirati na kontina glavne kategorije 820000 – Kapitalni izdaci.
+
+(3) Plasiranje sredstava mora se zasnivati na ugovoru u kojem će se precizirati iznos kredita, uslovi korištenja kredita i rok otplate.
+
+Član 56.(Knjiženje kratkoročnog kredita i plasmana)(1) Knjiženje datog kredita ili plasmana vrši se tako što se za visinu odobrenog kredita ili plasmana po ugovoru zaduži odgovarajući analitički konto iz potkategorije 822000 – Izdaci za finansijsku imovinu, a odobrava konto 311191 - Ostale obaveze.
+
+(2) Po izvršenoj isplati kredita, odnosno prijenosu sredstava na račun primaoca zatvara se obaveza knjiženjem na teret konta 311191 – Ostale obaveze, u korist konta 111111- Transakcijski račun.
+
+(3) Istovremeno se u Glavnoj knjizi evidentira dati kredit ili plasman zaduženjem odgovarajućeg analitičkog konta iz potkategorije 141000 – Kratkoročni plasmani za ukupan iznos glavnice, a odobrava konto 511122 - Raspored viška prihoda, za isti iznos.
+
+Član 57.(Knjiženje uplata anuiteta kod vraćanja kredita i plasmana)(1) Za ukupan iznos primljenog anuiteta zadužuje se transakcijski račun, a odobrava odgovarajući
+
+analitički konto iz potkategorije 813000 – Primici od finansijske imovine, za iznos rate i odgovarajući analitički konto iz glavne grupe 721300 – Kamate i dividende primljene od pozajmica i učešća u kapitalu, za iznos kamate.
+
+(2) Istovremeno se vrši knjiženje smanjenja potraživanja putem Glavne knjige tako što se zadužuje konto 511122 – Raspored viška prihoda, za iznos rate, a odobrava odgovarajući konto iz potkategorije 141000 – Kratkoročni plasmani za isti iznos.
+
+Član 58.
+
+(Finansijski i obračunski odnosi)
+
+(1) Na kontima glavne kategorije 160000 – Finansijski i obračunski odnosi sa drugim povezanim jedinicama evidentiraju se potraživanja iz finansijskih i obračunskih odnosa sa drugim povezanim budžetskim jedinicama.
+
+(2) Na kontima ove glavne kategorije evidentiraju se obračunski odnosi sa povezanim budžetskim jedinicama koji su proistekli iz internih poslovnih odnosa.
+
+(3) Vrijednosno i po vrstama, stanja iskazana na kontima glavne kategorije 160000 - Finansijski i obračunski odnosi sa drugim povezanim jedinicama, kod budžetskog korisnika kao potraživanja, moraju da odgovaraju sa stanjem iskazanim na kontima glavne kategorije 360000 - Finansijski i obračunski odnosi sa drugim povezanim jedinicama, kod druge budžetske jedinice kao obaveza.
+
+Član 59.
+
+(Kratkoročna razgraničenja)
+
+(1) Na kontima kratkoročnih razgraničenja evidentiraju se:
+
+a) unaprijed obračunati, a nenaplaćeni prihodi,
+
+b) unaprijed plaćeni rashodi.
+
+(2) Knjiženja na kratkoročnim razgraničenjima vrše se kad se obaveza stvori i plati u jednom obračunskom periodu, a troškovi će nastati i evidentirati se u periodu do 12 mjeseci
+
+(3) Primjer: ako je budžetski korisnik sklopio ugovor o zakupu poslovnog prostora na godinu dana i u cijelosti izmirio ugovoreni iznos, u toku obračunskog perioda knjiženje se vrši na slijedeći način:
+
+a) za iznos koji će evidentirati kao trošak do kraja obračunskog perioda tereti se konto 613611 – Unajmljivanja prostora ili zgrada, a za razliku između tog iznosa i ukupne obaveze koja se odnosi na troškove narednog perioda tereti konto 191219 – Ostali razgraničeni rashodi, dok se za ukupan iznos obaveze po ugovoru odobrava konto iz potkategorije 311000 – Kratkoročne tekuće obaveze.
+
+b) Plaćanje obaveza se vrši u ukupnom iznosu, te se knjiženje vrši zatvaranjem obaveza, odnosno zaduživanjem konta iz potkategorije 311000 – Kratkoročne tekuće obaveze i odobrenjem konta 111111 - Transakcijski račun.
+
+c) U narednom obračunskom periodu u skladu sa dinamikom evidentiranja troška, knjiženje se vrši u Glavnoj knjizi, zaduženjem konta 613611 – Unajmljivanje prostora ili zgrada, a odobrenjem konta 191219 - Ostali razgraničeni rashodi.
+
+POGLAVLJE III.
+
+KLASA 2 – ZALIHE
+
+Član 60.
+
+(Zalihe)
+
+(1) U klasi 2 – Zalihe, evidentiraju se zalihe materijala i robe, sitni inventar na zalihi i sitni inventar u upotrebi.
+
+(2) Materijal i sitan inventar evidentira se samo unatar klase 2, u cilju kontrole nad njihovom upotrebom, obzirom da se kod nabavke troškovi evidentiraju neposredno na rashode.
+
+(3) Nabavka materijala i sitnog inventara, knjiži se tako što se po prijemu fakture od dobavljača, za ukupan iznos fakture zaduži odgovarajući troškovni konto, a odobri konto iz potkategorije 311000 – Kratkoročne tekuće obaveze, takođe se evidentira u klasi 2 tako što se tereti konto zaliha 211100 – Zalihe materijala, odnosno 221100 – Sitni inventar na zalihama, u korist konta 2119000 – Ispravka vrijednosti materijala i robe, odnosno 221900 – Ispravka vrijednosti sitnog inventara.
+
+KLASA 3 – KRATKOROČNE OBAVEZE I
+RAZGRANIČENJAČlan 61.(Kratkoročne obaveze)(1) Kratkoročne obaveze su obaveze sa rokom dospijeća kraćim od jedne godine.
+
+(2) Prema Zakonu o budžetima u Federaciji Bosne i Hercegovine, budžetski korisnik je samostalan u stvaranju obaveza do visine sredstava planiranih budžetom, a odgovornost za stvaranje obaveza je na rukovodiocu budžetskog korisnika.
+
+(3) Kratkoročne obaveze obuhvataju slijedeće kategorije konta:
+
+a) 310000 – Kratkoročne tekuće obaveze,
+
+b) 320000 – Obaveze po osnovu vrijednosnih papira,
+
+c) 330000 – Kratkoročni krediti i zajmovi,
+
+d) 340000 – Obaveze prema radnicima,
+
+e) 360000 – Finansijski i obračunski odnosi sa drugim povezanim jedinicama i
+
+f) 390000 – Kratkoročna razgraničenja.
+
+Član 62.(Kratkoročne tekuće obaveze)(1) Na kontima potkategorije 311000 – Kratkoročne tekuće obaveze, evidentiraju se kratkoročne obaveze iz tekućeg poslovanja prema strukturi Kontnog plana.
+
+(2) U kratkoročne tekuće obaveze spadaju:
+
+a) 311100 – Kratkoročne obaveze prema pravnim licima,
+
+b) 311200 – Kratkoročne obaveze prema fizičkim licima,
+
+c) 311300 – Obaveze za korištenje stalne budžetske rezerve i
+
+d) 311900 – Ostale kratkoročne obaveze.
+
+Član 63.(Obaveze po osnovu vrijednosnih papira)(1) U potkategoriji 321000 – Obaveze po osnovu vrijednosnih papira evidentiraju se obaveze na osnovu vrijednosnih papira prema nazivima pojedinih konta sa rokom kraćim od jedne godine.
+
+(2) U ovoj potkategoriji evidentiraju se obaveze po izdatim čekovima, mjenicama, obveznicama i ostalim vrijednosnim papirima, a prema Analitičkom kontnom planu.
+
+Član 64.(Kratkoročni krediti i zajmovi)(1) U potkategoriji 331000 – Kratkoročni krediti i zajmovi evidentiraju se primljeni finansijski i robni krediti sa rokom vraćanja do jedne godine, kao i dospjele obaveze po anuitetima dugoročnih kredita.
+
+(2) Krediti iz inostranstva u inostranoj valuti vode se u KM i bilansiraju se po srednjem kursu Centralne banke Bosne i Hercegovine.
+
+(3) Za primljeni zajam u devizama daje se instrukcija banci o konvertovanju deviza u KM.
+
+Član 65.(Knjiženje kratkoročnih kredita)(1) Knjiženje primljenog kredita vrši se tako što se, u modulu Glavne knjige, za ukupan iznos tog kredita zaduži depozitni račun, a odobri odgovarajući analitički konto iz glavne kategorije 810000 – Kapitalni primici.
+
+(2) Istovremeno se po tom osnovu evidentira obaveza za primljeni kredit tako što se za iznos tog kredita zaduži odgovarajući analitički konto iz podgrupe 511120 – Izvori novčanih sredstava, a odobri odgovarajući analitički konto iz potkategorije 331000 - Kratkoročni krediti i zajmovi.
+
+(3) Uplatiocu kredita se daje instrukcija o uplatnom računu na koji će se izvršiti uplata.
+
+(4) Po dospijeću obaveze za plaćanje (bilo da se radi o plaćanju anuiteta ili ukupnog duga) vrši se knjiženje anuiteta koji se knjiži tako što se za iznos rate zaduži odgovarajući analitički konto iz glavne kategorije 820000 – Kapitalni izdaci, za iznos kamate, zaduži odgovarajući analitički konto iz potkategorije 616000 – Izdaci za kamate, a za
+
+ukupan iznos anuiteta odobri analitičko konto iz glavne kategorije 310000 - Kratkoročne tekuće obaveze.
+
+(5) Plaćanjem te obaveze dobivanja izvoda od banke zatvara se konto iz glavne kategorije 310000 - Kratkoročne tekuće obaveze.
+
+(6) Nakon toga se putem Glavne knjige vrši knjiženje smanjenja obaveza po kreditu tako što se za plaćeni iznos rate zaduži odgovarajući analitički konto iz potkategorije 331000 - Kratkoročni krediti i zajmovi, a odobri odgovarajući konto iz podgrupe 511120 - Izvori novčanih sredstava.
+
+(7) Za iznos otplate primljenog kredita, u budžetu Opštine Drvar mora se planirati iznos na odgovarajućim pozicijama glavne kategorije 820000 - Kapitalni izdaci.
+
+(8) Ukoliko je kredit primljen u devizama, mogu se pojaviti negativne ili pozitivne kursne razlike.
+
+(9) U tom slučaju, obavezno je na osnovu kursne liste, po srednjem kursu Centralne banke Bosne i Hercegovine izvršiti obračun kursnih razlika i za utvrđene negativne kursne razlike, u Glavnoj knjizi zadužiti odgovarajući analitički konto iz podgrupe 511120 - Izvori novčanih sredstava, a odobriti odgovarajući analitički konto iz potkategorije 331000 - Kratkoročni krediti i zajmovi u Glavnoj knjizi, prije plaćanja.
+
+(10) Unos obaveze za plaćanje anuiteta vrši se odobrenjem konta glavne kategorije 310000 - Kratkoročne tekuće obaveze, za iznos anuiteta i kursne razlike, a zaduženjem odgovarajućeg konta iz glavne kategorije 820000 - Kapitalni izdaci za iznos glavnice, odgovarajućeg konta glavne potkategorije 616000 - Izdaci za kamate za iznos kamata i konto 613831 - Izdaci za negativne kursne razlike, za iznos kursne razlike.
+
+(11) Po izvršenom plaćanju, a na osnovu izvoda banke zatvara se konto glavne kategorije 310000 - Kratkoročne tekuće obaveze.
+
+(12) Nakon toga se putem Glavne knjige vrši knjiženje smanjenja obaveza po kreditu tako što se za plaćeni iznos rate i kursne razlike zaduži odgovarajući analitički konto iz potkategorije 331000 - Kratkoročni krediti i zajmovi, a odobri odgovarajući konto iz podgrupe 511120 - Izvori novčanih sredstava.
+
+(13) Kod pozitivnih kursnih razlika, prije unosa obaveze za plaćanje anuiteta, u Glavnoj knjizi se
+
+zadužuje odgovarajući analitički konto iz potkategorije 331000 - Kratkoročni krediti i zajmovi, a odobrava konto 191211 - Razgraničene kursne razlike.
+
+(14) Na kraju godine, prije zaključnih knjiženja, ispostavlja se nalog za knjiženje kojim se vrši prijenos salda konta 191211 - Razgraničene kursne razlike na odgovarajući konto iz podgrupe 511120 - Izvori novčanih sredstava.
+
+Član 66.
+
+(Obaveze prema radnicima)
+
+(1) Obaveze prema radnicima su po svojoj prirodi kratkoročne.
+
+(2) Pod ovim obavezama se podrazumijevaju obaveze po osnovu plata i naknada plata kao i sve obaveze prema radnicima koje nemaju karakter plata.
+
+Član 67.
+
+(Finansijski i obračunski odnosi sa drugim povezanim jedinicama)
+
+(1) Konta u ovoj kategoriji uvijek moraju odgovarati kontima na kojima je evidentirano potraživanje iz internih poslovnih odnosa.
+
+(2) Budući da se obaveze i potraživanja po istom osnovu knjiže kod dva budžetska korisnika, korisnici budžeta su obavezni da interne fakture knjiže i međusobno usklađuju u roku od osam dana od dana ispostavljanja, odnosno prijema fakture.
+
+Član 68.
+
+(Kratkoročna razgraničenja)
+
+(1) Na kontima glavne kategorije 390000 - Kratkoročna razgraničenja, vode se unaprijed naplaćeni prihodi po svim osnovama i obračunati neplaćeni, odnosno nedospjeli rashodi po svim osnovama ako se razgraničavaju na rok do godine dana.
+
+(2) Kratkoročna razgraničenja se sastoje iz slijedećih glavnih grupa:
+
+(a) 391100 - Razgraničeni prihodi i
+
+(b) 391200 - Razgraničeni rashodi,
+
+(c) 991300 - Ostala razgraničenja.
+
+3) Neutrošena sredstva na kraju godine (namjenska sredstva i sredstva primljena po osnovu donacija), a prije izrade završnog obračuna, preknjižavaju se na vremenska razgraničenja. Knjiženje se vrši u modulu glavne knjige odobrenjem odgovarajućeg analitičkog konta glavne grupe 391100 – Razgraničeni prihodi, uz obavezan unos fonda (izvora sredstava) i odobrenjem odgovarajućeg konta klase 7, sa predznakom (-). Razgraničeni prihodi se u narednoj fiskalnoj godini preknjižavaju sa konta vremenskih razgraničenja na odgovarajući konto klase 7.
+
+POGLAVLJE V.
+
+KLASA 4 – DUGOROČNE OBAVEZE I RAZGRANIČENJA
+
+Član 69.
+
+(Dugoročne obaveze)
+
+(1) Na kontima klase 4 evidentiraju se obaveze koje dospijevaju u roku dužem od jedne godine.
+
+(2) U skladu sa Pravilnikom o knjigovodstvu, kao dugoročne obaveze knjigovodstveno se iskazuju i one obaveze čiji je rok kraći od jedne godine, a izvorno su formirane sa ugovorenim rokom dužim od godine.
+
+(3) Kratkoročne obaveze po ugovoru o reprogramiranju duga mogu se pretvoriti u dugoročne. U tom slučaju, na osnovu takvog ugovora, obavezno je prethodno isknjižiti dug sa konta klase 3 i evidentirati ga na odgovarajućim kontima klase 4.
+
+(4) U okviru klase 4 vode se:
+
+a) 410000 – Dugoročni krediti i zajmovi,
+
+b) 420000 – Ostale dugoročne obaveze i
+
+c) 490000 – Dugoročna razgraničenja.
+
+(5) Za dospjele rate kredita u fiskalnoj godini potrebno je u budžetu planirati odgovarajući iznos sredstava na kontima glavne kategorije 820000 - Kapitalni izdaci i odgovarajući iznos za obračunate kamate na odgovarajućoj poziciji troškova.
+
+(6) Kod kredita dobivenih u devizama potrebno je na određenoj troškovnoj poziciji u budžetu planirati i odgovarajući iznos sredstava za eventualne kursne razlike.
+
+(7) Trezor sačinjava amortizacioni plan, koji obavezno sadrži podatke o kreditoru, ukupnom iznosu duga, eventualnom grace periodu, iznosu rate i kamata.
+
+Član 70.
+
+(Knjiženje dugoročnih kredita)
+
+(1) Primljeni dugoročni kredit knjiži se, na osnovu izvoda banke, zaduženjem depozitnog računa, a odobrenjem odgovarajućeg analitičkog konta iz glavne kategorije 810000 - Kapitalni primici.
+
+(2) Istovremeno se u Glavnoj knjizi zadužuje odgovarajući analitički konto iz podgrupe 511120 – Izvori novčanih sredstava, za iznos glavnice kredita i analitički konto iz glavne grupe 0921 – Razgraničeni rashodi, za obračunate kamate, a odobrava odgovarajući analitički konto iz glavne kategorije 410000 – Dugoročni krediti i zajmovi u iznosu primljenog kredita i obračunatih kamata po kreditu.
+
+(3) Ukoliko umjesto novčanih sredstava, Kreditor vrši plaćanje direktno dobavljaču za ispostavljene fakture za nabavku stalnih sredstava, provodi se knjiženje u Glavnoj knjizi, zaduživanjem odgovarajućeg analitičkog konta glavne grupe 511120 - Izvori novčanih sredstava i 0921-Ragraničeni rashodi, za iznos obračunate kamate, a odobrava odgovarajući analitički konto iz glavne kategorije 410000 – Dugoročni krediti i zajmovi u iznosu primljenog kredita i obračunatih kamata.
+
+Član 71.
+
+(Knjiženje otplate anuiteta po dugoročnom kreditu)
+
+(1) Na osnovu podataka iz amortizacionog plana, Služba koja prati dugoročni kredit i o istom vodi pomoćnu knjigu, sastavlja nalog za plaćanje anuiteta, kojim se zadužuje odgovarajući analitički konto iz glavne kategorije 820000 – Kapitalni izdaci, za iznos rate i zadužuje odgovarajući analitički konto iz potkategorije 616000 - Izdaci za kamate, za iznos kamate, a odobrava odgovarajući konto iz potkategorije 331000 - Kratkoročni krediti i zajmovi.
+
+(2) Plaćanje anuiteta se vrši i knjiži se na teret odgovarajućeg konta iz potkategorije 331000 - Kratkoročni krediti i zajmovi, a u korist konta 111111 - Transakcijski račun.
+
+(3) Nakon izvršenog plaćanja, u Glavnoj knjizi se evidentira otplata glavnice, tako što se zaduži odgovarajući analitički konto iz glavne kategorije
+
+410000 - Dugoročni kredit i zajmovi, za iznos plaćene glavnice i kamate, a odobrava odgovarajući analitički konto iz podgrupe 511120 – Izvori novčanih sredstava, za iznos plaćene glavnice i analitički konto glavne grupe 0921 - Razgraničeni rashodi, za iznos plaćene kamate.
+
+Član 72.
+
+(Dugoročna razgraničenja)
+
+(1) Polazeći od obaveze primjene modificiranog akrualnog načela, prihodi se priznaju kad su mjerljivi i raspoloživi, a rashodi se knjiže u periodu na koji se odnose, odnosno, dugoročno se razgraničavaju plaćeni troškovi koji se odnose na period duži od jedne godine.
+
+(2) Rezervisanja po osnovu rizika i obaveza mogu se vršiti samo ako je to i budžetom predviđeno.
+
+POGLAVLJE VI.
+
+KLASA 5 – IZVORI STALNIH SREDSTAVA
+
+Član 73.
+
+(Izvori stalnih sredstava)
+
+(1) Prema Pravilniku o knjigovodstvu, pod izvorima stalnih sredstava podrazumijevaju se izvori koji budžetskom korisniku stoje na raspolaganju neograničeno (neodređeno) vrijeme, odnosno koji nemaju unaprijed utvrđen rok dospijeća.
+
+(2) Prema klasifikaciji iz kontnog plana osnovni izvori stalnih sredstava budžeta i budžetskih korisnika prema njihovom porijeklu mogu biti:
+
+a) 510000 – Izvori stalnih sredstava, koji predstavljaju sredstva Opštine Drvar, stavljena na trajno raspolaganje i
+
+b) 520000 – Ostali izvori sredstava, ulozi i drugi.
+
+Član 74.
+
+(Izvori stalnih sredstava)
+
+(1) U okviru glavne kategorije 510000 – Izvori stalnih sredstava evidentiraju se:
+
+a) izvori stalnih sredstava (konto 5111111), kao njihova povećanja po osnovu izgradnje, rekonstrukcije, kupovine ili sticanja na drugi način, odnosno smanjenja po osnovu njihovog
+
+otpisa (ispravke vrijednosti), rashodovanja, prodaje ili drugih otuđenja,
+
+b) izvori novčanih sredstava (konto 511121 do 511129), u vidu primitaka od prodaje stalnih sredstava, rasporeda viška prihoda, primljenih transfera i donacija za kapitalne namjene iz svih izvora, uzetih zajmova i kredita za kapitalne namjene i ostali primici za kapitalne izdatke) i
+
+c) izvori ostalih sredstava (konto 5111311).
+
+(2) Pravilnik predviđa da se u glavnoj grupi 510000 – Izvori stalnih sredstava vode i analitička konta novčanog i naturalnog dijela stalnih sredstava.
+
+Član 75.
+
+(Ostali izvori sredstava)
+
+(1) Na kontu 5211111 – Ostali izvori sredstava evidentiraju se stalni izvori po osnovu trajnih uloga drugih lica, organizacija i subjekata, u sredstvima svih oblika.
+
+(2) Pored navedenih stalnih izvora na klasi 5 evidentiraju se i:
+
+a) izvori sredstava rezervi (glavna kategorija 530000), kao posebna kategorija izvora koja se formira ili putem obaveznih izdvajanja po zakonu (zakonske rezerve) ili slobodno, na način i u iznosima utvrđenim internim aktima.
+
+b) neraspoređeni višak prihoda, odnosno rashoda (konto 5911111).
+
+(3) Knjiženja u okviru klase 5 sadržana su i objašnjena u okviru onih primjera koji su navedeni za kapitalne primitke i izdatke (izgradnja, nabavka, otpis, rashodovanje i prodaja stalnih sredstava, donacije i zaduživanja za kapitalne izdatke, dugoročni plasmani i drugo), kao i kod primjera utvrđivanja, evidentiranja i raspoređivanja razlike prihoda i rashoda.
+
+POGLAVLJE VII.
+
+KLASA 6 – RASHODI
+
+Član 76.
+
+(Rashodi)
+
+(1) Na osnovu Zakona o budžetu i Uredbe o računovodstvu, rashodi se priznaju i
+
+računovodstveno evidentiraju u momentu stvaranja, tj. u periodu na koji se odnose, bez obzira kada će obaveze po tim rashodima biti izmirene.
+
+(2) Obaveza budžetskih korisnika je da se prilikom stvaranja obaveza, odnosno rashoda, pridržavaju odobrenog operativnog budžeta.
+
+(3) Sve prispjele fakture-računi do 31. januara tekuće godine koje se odnose na obaveze nastale u prethodnoj godini, knjiže se pod 31.12. prethodne godine, odnosno kao trošak prethodne godine.
+
+(4) Prema analitičkom kontnom planu za budžet i budžetske korisnike, rashodi su razvrstani u slijedeće dvije glavne kategorije:
+
+- a) 610000 – Tekući rashodi,
+- b) 680000 – Doznake nižim potrošačkim jedinicama i
+- c) 690000- Raspored rashoda.
+
+Član 77.
+
+(Tekući rashodi)
+
+(1) Prema vrstama i potkategorijama Kontnog plana tekući rashodi obuhvataju:
+
+- a) 611000 – Plate i naknade troškova zaposlenih,
+- b) 612000 – Doprinosi poslodavca i ostali doprinosi,
+- c) 613000 – Izdaci za materijal, sitni inventar i usluge,
+- d) 614000 – Tekući transferi i drugi tekući rashodi,
+- e) 615000 – Kapitalni transferi,
+- f) 616000 – Izdaci za kamate,
+
+(2) Kako se iz naziva navedenih konta vidi, u glavnu kategoriju konta 610000 – Tekući rashodi spadaju oni rashodi koji su nužni za poslovanje i funkcioniranje budžetskih korisnika.
+
+Član 78.
+
+(Centralizovani obračun plata i naknada plaća i doprinosi poslodavca i ostali doprinosi)
+
+(1) Na odgovarajućim analitičkim kontima glavne grupe 611100 - Bruto plate i naknade, 612100 - Naknade troškova zaposlenih i 612100- Doprinosi poslodavca planiraju se sredstva za isplatu plata i naknada plaća.
+
+(2) Na nivou Opštine Drvar, obračun i isplata plata je centralizovana.
+
+(3) Centralizovani obračun plate predstavlja pomoćnu knjigu u okviru informacionog sistema.
+
+(4) Ukoliko bi Opština Drvar imala budžetske korisnike, oni bi u pomoćnim operativnim centrima unosili podatke u svoju pomoćnu knjigu kroz poseban informacioni sistem za obračun i obradu plata.
+
+(5) U Službi za privredu, finansije i inspekcijske poslove se vrši obračun i priprema za isplatu plata i naknada, uplatu poreza i doprinosa i drugih vrsta plaćanja vezanih za plate i naknade. Takođe se vrši unos podataka svih vrsta odbitaka zaposlenika potrošačkih jedinica i budućih budžetskih korisnika.
+
+(6) Za isplatu neto plata i naknada plata, bankama se prenosi ukupan iznos za ukupan broj zaposlenih koji u toj banci imaju otvorene tekuće račune.
+
+(7) Istovremeno se bankama dostavljaju spiskovi u pisanoj i u elektronskoj formi, sa svim podacima o pojedinačnim platama, naknadama plata i dodatnim primanjima.
+
+Član 79.
+
+(Naknade za bolovanje preko 42 dana)
+
+(1) Prilikom obračuna i isplate plata i naknada plata, kao i bolovanja preko 42 dana tereti se konto 611100 - Bruto plate i naknade plata.
+
+(2) Imajući u vidu obavezu kantonalnog Zavoda zdravstvenog osiguranja za refundiranjem bolovanja preko 42 dana, isplaćene naknade po osnovu bolovanja preko 42 dana ne predstavljaju rashode budžetskog korisnika, zato što će se ti izdaci budžetskom korisniku refundirati.
+
+(3) Po izvršenoj isplati plata se podnosi pismeni zahtjev kantonalnom Zavodu zdravstvenog osiguranja za refundiranje naknada za bolovanje preko 42 dana.
+
+(4) U navedenom zahtjevu treba naznačiti napomenu:
+
+a) refundacije naknada za bolovanje preko 42 dana iz prethodnih godina, uplata se vrši na depozitni račun, vrsta prihoda 722761 – Uplaćene refundacije bolovanja iz ranijih godina, sa obaveznom naznakom perioda na koji se odnosi,
+
+b) refundacije naknada za bolovanje preko 42 dana iz tekućeg perioda, uplata se vrši na depozitni račun.
+
+(5) Na osnovu odobrenog i ovjerenog zahtjeva od strane Zavoda za zdravstveno osiguranje, koja pristignu u tekućoj godini i odnosi se na tekuću godinu, putem modula Glavne knjige, knjiži se potraživanje za bolovanje od Zavoda zdravstvenog osiguranja, tako što zaduži odgovarajući analitički konto 131343 – Potraživanje za bolovanje preko 42 dana od Zavoda za zdravstveno osiguranje i zaduži konto 611113 - Naknade za bolovanja preko 42 dana, sa predznakom minus (-).
+
+(6) Ako odobreni i ovjereni zahtjevi od strane Zavoda za zdravstveno osiguranje pristignu u tekućoj godini, a odnose se na potraživanja iz prethodne godine, knjiže se tako što se zaduži odgovarajući konto 131343 – Potraživanje za bolovanje preko 42 dana od Zavoda za zdravstveno osiguranje, a odobri konto 391112 – Naplaćeni prihodi za potraživanja za preko 42 dana od Zavoda za zdravstveno osiguranje.
+
+(7) Uplata Zavoda zdravstvenog osiguranja u tekućoj godini za refundacije bolovanja preko 42 dana za tekući period, vrši se na depozitni račun, s tim da se po dobijanju izvoda iz banke kojim se potvrđuje ta transakcija vrši zatvaranje potraživanja.
+
+(8) Uplata Zavoda zdravstvenog osiguranja u tekućoj godini za refundacije bolovanja preko 42 dana iz prethodnih godina, vrši se na depozitni račun, vrsta prihoda 722761 – Uplaćene refundacije bolovanja iz ranijih godina, sa obaveznom naznakom perioda na koji se odnosi, s tim da se po izvršenoj uplati vrši zatvaranje potraživanja tako što se zaduži konto 391112 – Naplaćeni prihodi za potraživanja za preko 42 dana od Zavoda za zdravstveno osiguranje, a odobri konto 131343 – Potraživanje za bolovanje preko 42 dana od Zavoda za zdravstveno osiguranje.
+
+Član 80.
+
+(Obračun naknada iz radnog odnosa i po osnovu radnog odnosa)
+
+(1) Obračun naknada iz radnog odnosa i po osnovu radnog odnosa vrši se u skladu sa posebnim propisima o radu, kolektivnim ugovorima i pojedinačnim ugovorima o radu, ali i u skladu s aktima organa uprave. Navedenim propisima utvrđena su, ne samo prava na naknade i isplate po raznim osnovama, nego i ograničenja u pogledu visine tih naknada.
+
+(2) Prilikom obračuna i isplate raznih naknada obavezno je primjenjivati i propise o oporezivanju tzv. propisi o oporezivanju dodatnih ličnih primanja. Porezni tretman tih isplata utvrđen je Zakonom o porezu na dohodak.
+
+Član 81.
+
+(Izdaci za materijal, sitni inventar i usluge)
+
+(1) Na kontu potkategorije 613000 – Izdaci za materijal i usluge, knjiže se izdaci za materijal i usluge i to:
+
+- a) 613100 - Putni troškovi,
+- b) 613200 - Izdaci za energiju,
+- c) 613300 - Izdaci za komunikaciju i komunalne usluge,
+- d) 613400 - Nabavka materijala i sitnog inventara,
+- e) 613500 - Izdaci za usluge prijevoza i goriva
+- f) 613600 - Unajmljivanje imovine, opreme i nematerijalne imovine,
+- g) 613700 - Izdaci za tekuće održavanje,
+- h) 613800 - Izdaci osiguranja, bankarskih usluga i usluga platnog prometa,
+- i) 613900 – Ugovorene i druge posebne usluge.
+
+(2) Kako je Analitički kontni plan sastavni dio Pravilnika o knjigovodstvu, to je budžetski korisnik obavezan pridržavati se odredaba koje nalažu posebno evidentiranje navedenih rashoda.
+
+Član 82.
+
+(Knjiženje troškova službenog puta)
+
+(1) Svi troškovi vezani za službena putovanja, kako u zemlji tako i u inostranstvu, evidentiraju se na odgovarajućim analitičkim kontima iz glavne grupe 613100 – Putni troškovi.
+
+(2) Troškovi službenih putovanja obuhvaćaju:
+
+- a) troškove prijevoza na službenom putovanju (javnim prijevoznim sredstvima ili ličnim automobilom),
+- b) troškove smještaja na službenom putovanju i
+- c) troškove dnevnica za vrijeme službenog putovanja.
+
+(3) Postupak odobravanja službenih putovanja, isplata akontacija i obračun putnih troškova utvrđuje se važećom Uredbom o naknadama troškova za službena putovanja kao i drugim propisima kojima se određuje visina dnevnica, kategorija smještaja, vrsta prijevoza i dr, te aktom kojeg donosi i putnim nalozima koje potpisuje odgovorna osoba budžetskog korisnika.
+
+(4) Za korištenje ličnog automobila u službene svrhe rukovodilac budžetskog korisnika mora dati odobrenje na osnovu kojeg, zaposlenik ima pravo na troškove puta u visini propisanog procenta koji se primjenjuje na cijenu goriva i broj pređenih kilometara. Ti troškovi knjiže se kao putni troškovi u okviru navedene grupe konta.
+
+(5) Troškovi goriva, bez obzira što se pravdaju računom, ne priznaju se kao troškovi službenog puta, pošto je u okviru propisanog procenta za naknadu uračunat i ovaj trošak.
+
+(6) Korištenje službenog vozila za vrijeme službenog puta ne proizvodi troškove službenog puta, a eventualni troškovi za gorivo u ovom slučaju nisu trošak službenog puta već se isti knjiže na odgovarajući analitički konto iz glavne grupe 613500 – Izdaci za usluge prijevoza i goriva.
+
+Član 83.(Materijalni troškovi i ugovorene i druge posebne usluge)Na glavnim grupama konta od 613200 - Izdaci za energiju do 613900 - Ugovorene i druge posebne usluge, evidentiraju se i knjiže svi materijalni troškovi po principu modifikovanog nastanka događaja.
+
+Član 84.(Tekući transferi i drugi tekući rashodi)(1) Tekući transferi i drugi tekući rashodi obuhvataju slijedeće potkategorije konta:
+
+- a) 614100 - Tekući transferi drugim nivoima vlasti,
+- b) 614200 - Tekući transferi pojedincima,
+- c) 614300 - Tekući transferi neprofitnim organizacijama,
+- d) 614400 - Subvencije javnim preduzećima,
+- e) 614500 - Subvencije privatnim preduzećima i preduzetnicima,
+- f) 614600 - Subvencije finansijskim institucijama,
+- g) 614700 - Tekući transferi u inostranstvo,
+- h) 614800 - Drugi tekući rashodi
+
+(2) Pod tekućim transferima podrazumijevaju se sva izvršena nepovratna davanja za tekuće svrhe, odnosno ona nepovratna davanja koja nisu data u svrhu nabavke kapitalne imovine.
+
+(3) Kategorija konta 614000 je u analitičkom kontnom planu razrađena prema primaocima kojima se daju transferi za tekuće svrhe.
+
+(4) Tekući transferi podrazumijevaju i sve isplate i nepovratna davanja opšte prirode drugim nivoima vlasti, za koje svrha nije unaprijed određena, pa čak i onda ako se ta sredstva kod primaoca djelimično koriste za finansiranje nabavke stalnih sredstava (kapitalne imovine).
+
+(5) To znači da se kod davaoca transfera kao tekući transferi iskazuju i svi oni transferi čija namjena nije unaprijed definisana, a da je pravo korisnika takvih transfera da sami određuju namjene u koje će ih iskoristiti.
+
+(6) Izdaci za tekuće transfere se planiraju u budžetu po određenim namjenama, a definišu se Odlukom o izvršenju budžeta za odgovarajuću fiskalnu godinu.
+
+(7) Izvršavanje transfera se vrši u skladu sa aktima (programom, odlukom, ...) nadležne potrošačke jedinice i odlukom rukovodioca.
+
+(8) Specifično je izvršavanje po osnovu potkategorije konta 614800 – Drugi tekući rashodi, sa kojih se vrše povrati više uplaćenih prihoda iz prethodnih godina po osnovu rješenja o povratu izdatih od nadležnih organa, kao i po osnovu redovnih presuda i sudskih izvršnih rješenja.
+
+(9) Pod subvencijama se podrazumijevaju sva izvršena nepovratna davanja iz budžeta, javnim ili
+
+privatnim preduzećima, preduzetnicima, finansijskim institucijama ili posebnim tržišnim proizvođačima (obrtnik, i drugi proizvođači ili davaoci usluga, na tržištu).
+
+(10) Subvencije se koriste pod različitim nazivom i to regresi, kompenzacije, premije, nadomjesci, povrati i dr. Njihova najčešća namjena je: smanjivanje cijene za konačnog korisnika, stimulisanje proizvodnje - podsticanje proizvodnje, zaštita standarda stanovništva i dr.
+
+Član 85.
+
+(Kapitalni transferi)
+
+(1) Pod kapitalnim transferima se podrazumijevaju sva izvršena nepovratna davanja u svrhu nabavke kapitalne (dugotrajne, stalne) imovine i kapitalnih ulaganja koja predstavljaju stalno sredstvo nekog drugog pravnog lica.
+
+(2) Kod kapitalnih transfera se podrazumijeva da je kapitalna namjena datog transfera unaprijed poznata (utvrđena, planirana), odnosno da je unaprijed poznato da će sredstva transfera kod primaoca biti korištena isključivo za kapitalne namjene.
+
+(3) Nepovratna davanja čija svrha nije unaprijed definisana i poznata, smatraju se tekućim, a ne kapitalnim transferima.
+
+(4) Kategorija konta 615000 u analitičkom kontnom planu razrađena je prema primaocima kojima se daju kapitalni transferi:
+
+a) 615100 – Kapitalni transferi drugim nivoima vlasti,
+
+b) 615200 – Kapitalni transferi pojedincima,
+
+c) 615300 – Kapitalni transferi neprofitnim organizacijama,
+
+d) 615400 – Kapitalni transferi javnim preduzećima,
+
+e) 615500 - Kapitalni transferi privatnim preduzećima i preduzetnicima,
+
+f) 615600 - Kapitalni transferi finansijskim institucijama i
+
+g) 615700 - Kapitalni transferi u inostranstvu.
+
+(5) Kapitalni transferi se planiraju u budžetu prema primaocima kapitalnih transfera. Realizacija
+
+kapitalnih transfera se vrši u skladu sa aktima nadležne potrošačke jedinice, odlukom rukovodioca.
+
+Član 86.
+
+(Rashodi od internih transakcija)
+
+(1) U okviru ove potkategorije knjiže se rashodi nastali iz internih poslovnih odnosa između korisnika budžeta istog nivoa vlasti, a obaveza iz internih transakcija se evidentira na kontu 361319 – Obaveze prema internim dobavljačima.
+
+Član 87.
+
+(Raspored rashoda)
+
+(1) Konta glavne kategorije 690000 - Raspored rashoda služe isključivo za zaključna knjiženja kod izrade godišnjeg obračuna.
+
+(2) Preko ovih konta vrši se zatvaranje rashoda na kraju godine i njihov raspored.
+
+(3) Na kraju fiskalne godine se vrši zatvaranje salda na ovim računima, njihovim prijenosom na konto 591111 – Neraspoređeni višak prihoda i rashoda.
+
+POGLAVLJE VIII.
+
+KLASA 7 – PRIHODI
+
+Član 88.
+
+(Prihodi)
+
+(1) U skladu sa odredbama Zakona o budžetu, Uredbe o računovodstvu i Pravilnika o knjigovodstvu prihodi se priznaju u računovodstvenom razdoblju u kojem su mjerljivi i raspoloživi.
+
+(2) Odredbe Uredbe o računovodstvu i Pravilnika o knjigovodstvu kod evidentiranja prihoda obavezuju na primjenu principa modificiranog akrualnog sistema, po kojem se prihodi priznaju u onom obračunskom periodu u kojem su mjerljivi i raspoloživi.
+
+(3) Prihodi su mjerljivi ako ih je moguće iskazati vrijednosno, a raspoloživi su kad su naplaćeni unutar obračunskog perioda.
+
+(4) Samo naplaćeni prihodi za tekuću fiskalnu godinu jesu prihodi te godine. To znači da se
+
+naplaćeni prihodi sa 31.12. tekuće godine i evidentirani kao takvi mogu koristiti za izmirenje obaveza nastalih do 31.12. tekuće godine, koje se evidentiraju do 31. januara naredne godine sa datumom Glavne knjige 31.12.
+
+(6) Višak prihoda nakon izmirenja prenesenih obaveza iz prethodne godine se planira u budžetu za određene namjene, a definišu se Odlukom o izvršenju budžeta za tekuću godinu.
+
+(7) Prema Zakonu o budžetima u Federaciji Bosne i Hercegovine prihodi budžeta su:
+
+a) porezni prihodi,
+
+b) neporezni prihodi
+
+- prihodi od preduzetništva i imovine,
+
+- prihodi od taksi i naknada,
+
+- novčanih kazni,
+
+- prihodi od pružanja javnih usluga, prihodi od vlastitih djelatnosti budžetskog korisnika i vlastiti prihodi,
+
+- primljeni transferi i donacije i
+
+- ostali prihodi.
+
+Član 89.
+
+(Struktura prihoda)
+
+Prema kontnom planu prihodi se razvrstavaju u slijedeće osnovne kategorije:
+
+a) 710000 – Prihodi od poreza koji se razvrstavaju na potkategorije:
+
+- 711000 - Porezi na dobit pojedinaca i preduzeća,
+
+- 712000 - Doprinosi za socijalnu zaštitu,
+
+- 713000 - Porezi na platu i radnu snagu (zaostale uplate poreza),
+
+- 714000 - Porez na imovinu,
+
+- 715000 - Domaći porezi na dobra i usluge (zaostale obaveze na osnovu poreza na promet dobara i usluga),
+
+- 716000 - Porez na dohodak,
+
+- 717000 - Prihod od indirektnih poreza i
+
+- 719000 - Ostali porezi.
+
+b) 720000 - Neporezni prihodi koji se razvrstavaju na potkategorije:
+
+- 721000 - Prihodi od poduzetničkih aktivnosti i imovine i prihodi od pozitivnih kursnih razlika,
+
+- 722000 - Naknade i takse i prihodi od pružanja javnih usluga,
+
+- 723000 - Novčane kazne (neporezne prirode).
+
+c) 730000 - Tekući transferi (transferi i donacije) koje se razvrstavaju na potkategorije:
+
+- 731000 - Primljeni tekući transferi od inostranih vlada i međunarodnih organizacija,
+
+- 732000 - Primljeni tekući transferi od ostalih nivoa vlasti i -
+
+- 733000 - Donacije.
+
+d) 740000 – Kapitalni transferi:
+
+- 741000 - Primljeni kapitalni transferi od inostranih vlada i međunarodnih organizacija,
+
+- 742000 - Primljeni kapitalni transferi od ostalih nivoa vlasti i
+
+- 743000 – Primljeni kapitalni transferi od nevladinih izvora.
+
+e) 770000 - Prihodi po osnovu zaostalih obaveza.
+
+f) 780000 - Prihodi iz budžeta i prihodi od internih transakcija:
+
+- 781000 – Prihodi od budžeta za tekuće izdatke i
+
+- 789000 – Prihodi od internih transakcija.
+
+g) 790000 – Raspored prihoda.
+
+h) 791000 – Raspored prihoda.
+
+Član 90.
+
+(Prihodi od poreza)
+
+(1) Zakonom o pripadnosti javnih prihoda propisana je pripadnost prihoda pojedinim nivoima vlasti u nadležnosti Federaciji Bosne i Hercegovine.
+
+(2) Ova kategorija konta ima vrlo široku lepezu prihoda jer su u okviru ovih konta obuhvaćeni prihodi na svim nivoima vlasti u Federaciji BiH. Razlog tome je i činjenica da je Pravilnikom o knjigovodstvu za sve budžetske korisnike na svim nivoima vlasti u Federaciji BiH propisan jedinstven kontni plan.
+
+(3) Zakonom o Trezoru propisano je da se Jedinstveni račun Trezora vodi u okviru Ministarstva finansija (Službe za upravu ekonomskih poslova i poduzetništvo, Odsjek za budžet i finansije). Sve uplate po osnovu javnih prihoda se vrše na depozitni račun Općine Zavidovići.
+
+Član 91.
+
+(Neporezni prihodi)
+
+(1) Za razliku od prihoda od poreza, koji su po prirodi izvorni prihodi, neporezni prihodi čine znatno manju stavku prihoda u budžetu, što ne znači da se time umanjuje njihov značaj.
+
+(2) Ova vrsta prihoda je izrazito raznovrsna tako da je u kontnom planu propisan čitav niz prihoda po ovom osnovu.
+
+(3) Vlastiti prihodi budžetskih korisnika knjiže se po korisniku na analitičkom kontu 722631 – Vlastiti prihodi.
+
+Član 92.
+
+(Tekući transferi - transferi i donacije)
+
+(1) Tekuće transferi (transferi i donacije) su primljene nepovratne novčane pomoći, kako za tekuće potrebe, tako i za finansiranje raznih projekata i programa.
+
+(2) Donacije su najčešće u novčanom obliku, ali se mogu pojaviti i u obliku opreme, materijala, tehničke pomoći i dr. U zavisnosti od vrste donacija razlikuje se i njihovo knjigovodstveno evidentiranje.
+
+(3) Tekući transferi (transferi i donacije) knjiže se za budžetskog korisnika na odgovarajućem analitičkom kontu glavne kategorije 730000 – Tekući transferi (transferi i donacije).
+
+(4) Prema odredbama Pravilnika o knjigovodstvu primljene nenovčane donacije knjiže se izvan strukture prihoda, odnosno evidentiraju se u korist klase 5 – Izvori sredstava, a na teret klase 0 – Stalna sredstva, s tim da se vrijednost koja će biti knjigovodstveno evidentirana utvrđuje na osnovu
+
+procjene komisije koju odredi ovlašteni predstavnik budžeta.
+
+Član 93.
+
+(Kapitalni transferi)
+
+Kapitalni transferi (740000) su primljene nepovratne novčane pomoći, za finansiranje raznih kapitalnih ulaganja u projekte i programe.
+
+Član 94.
+
+(Prihodi iz internih transakcija)
+
+Pravilnikom o knjigovodstvu propisano je da se u ovoj glavnoj kategoriji evidentiraju prihodi od internih transakcija proistekli iz internih poslovnih odnosa na odgovarajućem analitičkom kontu 789111 – Prihodi od internih transakcija.
+
+Član 95.
+
+(Raspored prihoda)
+
+(1) Konta glavne kategorije 790000 – Raspored prihoda, služi isključivo za zaključna knjiženja kod izrade godišnjih obračuna, jer se preko tih konta vrši zatvaranje prihoda na kraju godine i njihov raspored.
+
+(2) Na kraju fiskalne godine se vrši zatvaranje salda na ovim računima njihovim prijenosom na račun 591111 – Neraspoređeni višak prihoda i rashoda.
+
+POGLAVLJE IX.
+
+KLASA 8. KAPITALNI PRIMICI I IZDACI
+
+Član 96.
+
+(Struktura kapitalnih primitaka i izdataka)
+
+(1) U klasi 8 evidentiraju se novčani primici i izdaci koji se evidentiraju u okviru dvije glavne kategorije:
+
+a) 810000 – Kapitalni primici,
+
+b) 820000 – Kapitalni izdaci.
+
+(2) U okviru glavne kategorije 810000 – Kapitalni primici evidentiraju se primici koji se odnose na primljene otplate datih zajmova, povrate udjela u kapitalu, primljene iznose iz dugoročnih i kratkoročnih zajmova, primitke za kapitalna ulaganja i primitke po osnovu prodaje stalnih sredstava.
+
+(3) U okviru glavne kategorije 820000 – Kapitalni izdaci, evidentiraju se isplaćeni iznosi za investicije, nabavku stalnih sredstava, pozajmljivanje, učešće u kapitalu i otplate dugova.
+
+(4) Kapitalni izdaci i kapitalni primici se planiraju u budžetu i imaju budžetsku kontrolu prilikom unosa transakcija.
+
+(5) Konta klase 8 se u zaključnim knjiženjima na kraju godine zatvaraju preko konta 591111 – Neraspoređeni višak prihoda i rashoda.
+
+POGLAVLJE X.
+
+KLASA 9 – VANBILANSNA EVIDENCIJA
+
+Član 97.
+
+(Vanbilansne evidencije)
+
+(1) Na kontima klase 9 evidentiraju se poslovni događaji koji nemaju direktnog uticaja na sredstva i izvore sredstava, već samo otvaraju mogućnost za takve uticaje u budućnosti (davanje garancija, davanje avala, tuđa sredstva, uslovna potraživanja i obaveze i dr.).
+
+(2) Knjiženje se vrši tako što se na kontima glavne kategorije 910000 – Vanbilansna evidencija – Uslovna potraživanja tereti odgovarajući analitički konto, a istovremeno se odobri odgovarajući analitički konto iz glavne kategorije 950000 – Vanbilansna evidencija - Uslovne obaveze i obrnuto.
+
+(3) Navedena konta se zatvaraju kada prestane uslovno potraživanje, odnosno uslovna obaveza.
+
+(4) Sva knjiženja na kontima klase 9 vrše se putem modula Glavne knjige.
+
+DIO TREĆI - ZAVRŠNE ODREDBE
+
+Član 98.
+
+(Kaznene odredbe)
+
+Za nepridržavanje računovodstvenih politika, primjenjivati će se kaznene odredbe Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18 i 11/19) i Zakona o računovodstvu i reviziji u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH“, broj: 15/21).
+
+Član 99.
+
+(Stupanje na snagu i objavljivanje)
+
+Ove Računovodstvene politike stupaju na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opština Drvar
+Opštinski načelnik
+
+OPŠTINSKI NAČELNIK
+Dušica Runić, s.r.
+
+Broj: 02-04-2879/21
+Drvar, 10.09.2021. godine
+
+108
+
+Na osnovu člana 77. Zakona o budžetima u Federaciji BiH („Službene novine Federacije BiH“ broj 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16 i 5/18, 11/19 i 99/19), člana 2. Zakona o trezoru u Federaciji BiH („Službene novine Federacije BiH“ broj 26/16), člana 2. Pravilnika o knjigovodstvu budžeta u Federaciji BiH („Službene novine Federacije BiH“ broj 60/14), člana 3. Zakona o računovodstvu i reviziji u Federaciji BiH („Službene novine Federacije BiH“ broj 15/21) i člana 49. Statuta opštine Drvar („Službeni glasnik opštine Drvar“, broj: 2/12, 4/12 i 5/12), na prijedlog Službe za privredu, finansije i inspekcijske poslove, Opštinski načelnik do nosi
+
+PRAVILNIK o računovodstvu budžeta u Opštini Drvar
+
+I OPŠTE ODREDBE
+
+Član 1.
+
+Pravilnikom o računovodstvu budžeta u Opštini Drvar (u daljem tekstu Pravilnik) uređuje se sastavljanje, kontrola i dostavljanje knjigovodstvenih dokumenata, vođenje poslovnih knjiga, sastavljanje i podnošenje knjigovodstvenih iskaza i izvještaja o stanju sredstava i obaveza prema izvorima sredstava, prihoda i primitaka, rashoda i izdataka, procjenjivanje budžetskih pozicija, popis imovine obaveza i potraživanja i čuvanje računovodstvenih dokumenata i knjiga Budžeta.
+
+Član 2.Računovodstvene evidencije iz člana 1. ovog Pravilnika, vode se u skladu s Uredbom o računovodstvu budžeta u Federaciji BiH, Pravilnikom o knjigovodstvu budžeta u Federaciji BiH, Kodeksom računovodstvenih načela i Računovodstvenim standardima, kao i ovim Pravilnikom.
+
+Član 3.(1) Cilj računovodstva budžeta i finansijskog izvještavanja je pružanje pouzdanih informacija koje su relevantne za donošenje odluka za potrebe planiranja i kontrole izvršavanja budžeta.
+
+(2) Svrha eksternog finansijskog izvještavanja je da se javno iskažu rezultati finansijskih operacija i stanje finansijskih stavki budžeta i budžetskih korisnika.
+
+(3) Svrha internog finansijskog izvještavanja je da se pruži tačna i blagovremena računovodstvena i komparativna budžetska informacija za potrebe upravljanja, kontrole i izvršavanja Budžeta.
+
+(4) Računovodstvo budžeta omogućava efikasno upravljanje javnim sredstvima u skladu s odredbama Zakona.
+
+Član 4.Računovodstvo budžeta, propisano ovim Pravilnikom, zasniva se na računovodstvenim načelima, tačnosti, istinitosti, pouzdanosti, sveobuhvatnosti, blagovremenosti i pojedinačnom iskazivanju poslovnih događaja.
+
+Član 5.Budžetski korisnici su obavezni u knjigovodstvu budžeta osigurati podatke pojedinačno po vrstama prihoda i primitaka, rashoda i izdataka, kao i o stanju imovine, obaveza i izvora vlasništva.
+
+Član 6.Budžetski korisnici vode knjigovodstvo Budžeta po načelu dvojnog knjigovodstva, a prema rasporedu konta iz propisanog analitičkog kontnog plana za budžet i budžetske korisnike.
+
+Član 7.Poslovne knjige budžeta su: dnevnik, glavna knjiga (knjiga prihoda i primitaka, rashoda i izdataka, knjiga imovine, obaveza, potraživanja i izvora vlasništva), te pomoćne knjige.
+
+Obavezne pomoćne knjige su: knjiga ulaznih računa, knjiga izlaznih računa, knjiga skladišta, knjiga (popis) inventara, knjiga (popis) kapitalne imovine, knjige duga, knjiga blagajne, registar plata i knjiga izvoda transakcijskih računa.
+
+Član 8.(1) Poslovne knjige se vode za fiskalnu godinu i otvaraju se na početku fiskalne godine ili danom osnivanja nekog budžetskog korisnika.
+
+(2) Početna stanja stalnih konta u glavnoj knjizi na početku fiskalne godine jesu zaključna stanja na kraju prethodne fiskalne godine.
+
+Član 9.(1) Budžetski korisnici na kraju fiskalne godine, poslovne knjige usklađuju, zaključuju i povezuju, a glavnu knjigu potpisuje ovlašteni predstavnik budžetskog korisnika ili lice koje on ovlasti.
+
+(2) Potpisom se potvrđuje tačnost i usklađenost sa zakonskim odredbama.
+
+(3) Ako se knjigovodstveni podaci obrađuju elektronskim putem, glavna knjiga se mora, nakon zaključivanja na kraju poslovne godine, zaštititi na način da u istoj nije moguća izmjena pojedinih ili svih njenih dijelova ili listova, i da je istu moguće u svakom trenutku odštampati na papir, a mora se odštampati na papir i uvezati na način da nije moguća izmjena iste, s tim da je mora potpisati i ovjeriti ovlašteni predstavnik budžetskog korisnika ili lice koje on ovlasti.
+
+Član 10.(1) Dnevnik predstavlja hronološku evidenciju poslovnih događaja.
+
+(2) Izlistavanje dnevnika glavne knjige se vrši prema potrebi i na zahtjev kontrolnog organa.
+
+(3) U dnevniku se knjiže svi poslovni događaji koji su predmet bilansne i vanbilansne evidencije.
+
+(1) Glavnu knjigu čine konta koja predstavljaju pozicije sredstava i izvore sredstava, prihoda, rashoda i vanbilansne evidencije.
+
+(2) Konta imaju dva dijela: konta bilansne evidencije i konta vanbilansne evidencije.
+
+(3) Za pojedine pozicije se vode osnovna i korektivna konta.
+
+Član 12.Predmet knjigovodstvene obrade podataka u glavnoj knjizi su poslovni događaji u vezi s poslovanjem, a koji imaju obilježja:
+
+- poslovni događaj se stvarno dogodio i kao takav pripada prošlosti poslovanja,
+
+- efekat poslovnog događaja može se izraziti u novčanim iznosima,
+
+- promjena nastala poslovnim događajem utiče na pozicije sredstava, obavezu prema izvorima sredstava, imovine, učinaka, prihoda, rashoda, troškove i rezultate poslovanja i
+
+- pojava poslovnog događaja može se dokazati vjerodostojnim dokumentom.
+
+Član 13.(1) Predmet obrade podataka u vanbilansnoj evidenciji glavne knjige su i poslovni događaji koji u trenutku nastanka nemaju direktan uticaj na pozicije bilansa stanja, ali su značajne sa stanovišta ocjene upotrebljavane tuđe imovine, budućih potencijalnih obaveza, kontrole poslovnih procesa i informisanja.
+
+(2) Poslovni događaji obuhvaćeni vanbilansnom evidencijom ne mogu imati, u času nastanka, obilježja bilansnih stavki koje bi uticale na pozicije sredstava, obaveza prema izvorima sredstava i prihoda, učinaka, rashoda, troškova i poslovnog rezultata.
+
+Član 14.(1) Glavna knjiga vođena uz pomoć računara mora biti tako organizovana da se može izvršiti kontrola knjiženja, kao i da, prema ukazanoj potrebi, omogući uvid u sva konta putem slike na ekranu ili otiska na papiru.
+
+(2) Izlistavanje glavne knjige se vrši prema potrebi, a obavezno izlistavanje se vrši nakon izrade godišnjeg obračuna poslovanja.
+
+Knjigovodstvena obrada knjigovodstvenih dokumenata se vrši putem naloga za knjiženje, kontnog plana za budžetske korisnike, te standardne budžetske klasifikacije (organizacijska, funkcionalna i fondovska).
+
+III KNJIGOVODSTVENE ISPRAVEČlan 16.(1) Unos podataka u poslovne knjige se zasniva na vjerodostojnim i urednim knjigovodstvenim ispravama.
+
+(2) Isprava je pisani dokaz o nastaloj finansijskoj promjeni, odnosno transakciji.
+
+(3) Knjigovodstvena isprava služi kao osnov za unošenje podataka u poslovne knjige.
+
+(4) Budžetski korisnici su odgovorni za sastavljanje knjigovodstvenih isprava, a ovlašteno lice na ispravi garantuje da je isprava istinita i realno prikazuje poslovnu promjenu ili transakciju.
+
+Član 17.(1) Knjigovodstvena isprava se sastavlja za događaj koji je nastao u obavljanju poslova iz nadležnosti.
+
+(2) Knjigovodstvene isprave mogu biti eksterne i interne prirode i sastavljaju se u potrebnom broju primjeraka.
+
+(3) Eksterne knjigovodstvene isprave su one koje su nastale iz poslovnih odnosa sa trećim licima koja su ih sačinila (fakture, izvodi, i dr.).
+
+(4) Interne knjigovodstvene isprave su one koje se ispostavljaju unutar Općine i služe za dokazivanje promjena na sredstvima i obavezama (obračun plaća i naknada, obračun amortizacije i sl.).
+
+(5) Budžetski korisnici su odgovorni za sastavljanje knjigovodstvenih isprava, a ovlašteno lice potpisom na ispravi garantuje da je isprava istinita i realno prikazuje poslovnu promjenu ili transakciju.
+
+Član 18.(1) Pravilnikom o sistematizaciji ili drugim aktom, određuju se lica ovlaštena i odgovorna za sastavljanje i izdavanje knjigovodstvenog dokumenta.
+
+(2) Ovlaštena lica potpisuju dokument, čime potvrđuju da je dokument realan prikaz nastalog poslovnog događaja, te da se kao takav može upotrijebiti u knjigovodstvenoj obradi podataka.
+
+IV ISPOSTAVLJANJE, PRIJEM I LIKVIDACIJA INTERNE I EKSTERNE KNJIGOVODSTVENE DOKUMENTACIJE
+
+Član 19.
+
+(1) Nosilac aktivnosti vezanih za prijem, obradu, kretanje i likvidaciju finansijskoknjigovodstvene dokumentacije je Služba za privredu, finansije i inspekcijske poslove.
+
+(2) Budžetski korisnici su dužni da sve dnevno primljene eksterne finansijske dokumente, krajem radnog vremena, prijemnom knjigom, dostave Službi za privredu, finansije i inspekcijske poslove.
+
+(3) Sve službe, koje u okviru svoje nadležnosti izdaju rješenja kojima nastaje obaveza pravnih ili fizičkih lica za uplatu javnih prihoda na transakcijski račun Opštine Drvar, a koje obveznik plaća nakon preuzimanja rješenja, bilo jednokratno ili u ratama, odmah po pravosnažnosti rješenja, ista dostavljaju Službi za privredu, finansije i inspekcijske poslove, radi knjiženja potraživanja u glavnoj knjizi ili evidentiranje u vanbilansnu evidenciju.
+
+Član 20.
+
+(1) Svi ulazni dokumenti prije predaje na knjigovodstvenu obradu moraju biti prethodno predmetom kontrole ovlaštenih radnika.
+
+(2) Lica odgovorna za poslove računovodstva vrše računsku i formalnu kontrolu dokumenata, kao što su: - da li je faktura rezultat ugovorene, odnosno naručene robe i usluge od strane odgovornog lica,
+
+- da li je uz ulaznu fakturu priložen ulaz robe, te zapisnik o kvalitativnom i kvantitativnom prijemu robe,
+
+- da li je prilikom prijema robe utvrđena manja količina robe ili bilo kakva manjkavost robe, odnosno materijalnog sredstva,
+
+- da li je ulazna faktura o izvođenju radova i usluga u skladu s ugovorom, odnosno ranije ispostavljenom situacijom,
+
+- da li su ulazni i izlazni dokumenti, kao i prilozi ovim dokumentima, potpisani od strane ovlaštenih lica
+
+zaduženih za praćenje realizacije ugovorenih isporuka, radova ili usluga.
+
+(3) Ako dokument dolazi od drugih pravnih, odnosno fizičkih lica, taj dokument mora imati potpis i žig, a ako je dostavljen u elektronskoj formi, mora imati faksimil potpisa ovlaštenog lica, odnosno žig pravnog lica.
+
+Član 21.
+
+(1) Zabranjeno je bilo kakvo ispravljanje i prepravljanje dokumenta, kao i bilo kakvo dopisivanje ili dodavanje brojeva ili drugih oznaka.
+
+(2) Eventualne ispravke se vrše primjenom metode precrtavanja prvobitnog teksta, odnosno sume, tako da oni ostaju čitljivi.
+
+(3) Ispravku vrši lice koje je izdalo dokument, a samu ispravku na originalu i kopijama ovjerava svojim potpisom, uz stavljanje datuma kada je izvršena popravka dokumenta.
+
+Član 22.
+
+Ažurnost, u smislu ovog Pravilnika, postoji ako se u zakonskom roku mogu predati finansijski izvještaji i ako računovodstvo pruža podatke neophodne za izradu zakonom propisanih izvještaja koji se dostavljaju Opštinskom načelniku, Opštinskom vijeću ili drugim institucijama i drugim nivoima vlasti, a u skladu s propisima koji regulišu oblast izvještavanja.
+
+Član 23.
+
+(1) Vjerodostojnim knjigovodstvenim dokumentom se smatra i podatak dostavljen telekomunikacijskim putem ili automatskom obradom računara.
+
+(2) Pošiljalac, odnosno unosilac u računar, odgovoran je za vjerodostojnost knjigovodstvenog dokumenta upućenog na naprijed navedeni način.
+
+Član 24.
+
+Pod internim dokumentima se smatraju i nalozi, zapisnici i razni knjigovodstveni obračuni, obračun plata, razni predračuni - kalkulacije, planovi, statistički izvještaji i drugi interni dokumenti.
+
+V ČUVANJE DOKUMENATA I POSLOVNIH KNJIGAČlan 25.(1) Knjigovodstveni dokumenti uredno se odlažu u fascikle i registratore u toku fiskalne godine, a kompletiraju se nakon završetka godišnjeg obračuna. Po završetku fiskalne godine, računovodstvene knjige se poravnavaju, zaključuju i dokumenti se uvezuju, a glavnu knjigu po uvezivanju i pečaćenju, potpisuje ovlašteno lice. Potpisom se potvrđuje tačnost i usklađenost sa zakonskim odredbama.
+
+(2) Dokumenti i godišnji obračuni se čuvaju u originalu. Knjigovodstvene isprave se čuvaju u izvornom materijalnom obliku ili u elektronskom zapisu.
+
+(3) Trajno se čuvaju platne liste ili analitičke evidencije o platama u vezi s plaćanjem doprinosa, kupoprodajni ugovori po kojima je izvršeno sticanje nekretnina, godišnji računovodstveni obračuni, konsolidovani finansijski izvještaji, izvještaji o izvršenoj reviziji i svi interni akti od uticaja na finansijsko poslovanje.
+
+(4) Knjigovodstvene isprave, na osnovu kojih su podaci uneseni u dnevnik i glavnu knjigu, čuvaju se 10 (deset) godina.
+
+(5) Knjigovodstvene isprave, na osnovu kojih su podaci uneseni u pomoćne knjige, čuvaju se 10 (deset) godina.
+
+(6) Godišnji izvještaj o poslovanju se čuva u originalnom obliku trajno nakon isteka poslovne godine.
+
+(7) Pomoćni obračuni, prodajni i kontrolni blokovi i sl. čuvaju se 2 (dvije) godine.
+
+(8) Rok za čuvanje knjigovodstvenih isprava i poslovnih knjiga počinje teći zadnjeg dana poslovne godine na koju se odnose poslovne knjige i u koje su podaci iz isprava uneseni.
+
+VI PRIZNAVANJE PRIHODA I RASHODAČlan 26.(1) Priznavanje prihoda i primitaka, rashoda i izdataka sadržanih u glavnoj knjizi Budžeta, provodi
+
+se prema računovodstvenom principu modifikovanog nastanka događaja (modified accrual basis).
+
+(2) Računovodstveni princip modifikovanog nastanka događaja (modified accrual basis) iz stava I. ovog člana, znači da se prihodi i primici priznaju u računovodstvenom periodu u kojem su mjerljivi i raspoloživi.
+
+(3) Računovodstveni princip modifikovanog nastanka događaja (modified accrual basis) iz stava I. ovog člana, znači da se rashodi i izdaci priznaju u obračunskom periodu u kojem je obaveza za plaćanje i nastala.
+
+VII PROCJENJIVANJE BILANSNIH POZICIJAČlan 27.(1) Pod procjenom vrijednosti bilansnih pozicija, podrazumijeva se utvrđivanje vrijednosti pojedinačnih pozicija bilansa.
+
+(2) Stalna i privremena materijalna imovina se obračunava i knjiži po nabavnoj vrijednosti.
+
+(3) Nabavnu vrijednost imovine čini kupovna cijena uvećana za uvozne carine, porez na dodanu vrijednost, izdatke za prevoz i sve druge izdatke koji se direktno mogu dodati nabavnoj cijeni.
+
+(4) Budžetski korisnici obavljaju ispravku vrijednosti stalne imovine, u obliku stvari, indirektnom metodom na teret izvora sredstava.
+
+(5) Otpis stalne imovine iz stava 3. ovog člana, provodi se linearnom metodom otpisa, primjenom minimalnih amortizacionih stopa iz nomenklature sredstava za amortizaciju.
+
+(6) Osnovica za otpis stalne imovine u obliku stvari je nabavna, odnosno revalorizovana vrijednost imovine i fer procijenjena vrijednost.
+
+(7) Stalna imovina u obliku osnivačkih uloga, dugoročnih zajmova i vrijednosnih papira koji kotiraju, iskazuje se po principu nabavne ili niže cijene.
+
+(8) Pod stalnom imovinom se smatra imovina (sredstvo) čiji je vijek trajanja duži od jedne godine. Stalna imovina, čija je pojedinačna nabavna vrijednost u trenutku nabavke niža od 1.000,00 KM otpisuje se jednokratno.
+
+(9) Domaći novac u blagajni i na računima, iskazuje se u nominalnom iznosu, a strani novac po kursu Centralne banke Bosne i Hercegovine, na dan bilanse.
+
+(10) Bilansne pozicije potraživanja i obaveza priznaju se prema iznosima iz ugovora.
+
+(11) Ispravka vrijednosti stalne imovine (amortizacija) u obliku stvari, materijalnih prava i slično, vrši se indirektnom metodom na teret izvora sredstava.
+
+(12) Otpis stalne imovine, odnosno obračun amortizacije, vrši se linearnom metodom, uz primjenu propisanih godišnjih stopa.
+
+VII POPIS IMOVINE, OBAVEZA I POTRAŽIVANJA
+
+Član 28.
+
+(1) Budžetski korisnici najmanje jednom godišnje usklađuju stanje sredstava i njihovih izvora iskazanih u knjigovodstvu sa stvarnim stanjem utvrđenim popisom (inventurom). Prije popisa, budžetski korisnici su dužni izvršiti usklađivanje podataka iz pomoćnih knjiga sa podacima iz glavne knjige.
+
+(2) Popisom se utvrđuje stvarno stanje stvari, prava, potraživanja i obaveza budžeta i budžetskih korisnika, obavezno sa stanjem na dan 31. decembra tekuće godine, prilikom statusnih promjena i prilikom primopredaje dužnosti lica zaduženih za materijalnu imovinu.
+
+(3) Budžetski korisnici, kod kojih se nalaze tuđa sredstva, dužni su izvršiti popis istih i to posebno za svako pravno lice kojem ta imovina pripada i dostaviti im po jedan primjerak popisnih lista.
+
+(4) Prije sastavljanja godišnjih finansijskih izvještaja, vrši se obavezno usaglašavanje potraživanja i obaveza po stanju na dan 31.12.
+
+(5) Za potraživanja po stanju na dan 31.12., dužniku se dostavlja konfirmacija - izvod otvorenih stavki, na usaglašavanje. Na konfirmaciju-izvod otvorenih stavki, dužnik je dužan odgovoriti pošiljaocu u roku od 8 (osam) dana od dana prijema.
+
+Član 29.
+
+(1) Organizacija i tehnika vršenja popisa, kao i usaglašavanje stanja, uređuje se Pravilnikom o popisu i Uputstvom o vršenju popisa.
+
+(2) Popis potraživanja i finansijskih ulaganja vrši komisija na kraju godine, pri čemu posebno utvrđuje opravdanost i realnost iskazanog, nenaplaćenog potraživanja i predlaže eventualni otpis potraživanja s obrazloženjem. Komisija, također, kontroliše da li su sva potraživanja i ulaganja usaglašena sa dužnicima.
+
+(3) Na kraju godine, popisna komisija vrši popis svih obaveza Opštine i daje svoje mišljenje o istom.
+
+(4) Komisija obavezno kontroliše da li su obaveze u većim iznosima usaglašene sa povjeriocima.
+
+(5) Popis zaliha se vrši tako što se izvrši popis roba i materijala na zalihama. Komisija vrši usaglašavanje knjigovodstvenog sa stvarnim stanjem i iskazuje u popisnim listama eventualne manjkove i viškove.
+
+(6) Komisija daje mišljenje i prijedlog mjera za utvrđeni manjak i prijedlog za otpis sredstava, potraživanja i obaveza.
+
+IX PRELAZNE I ZAVRŠNE ODREDBE
+
+Član 30.
+
+Tumačenje ovog Pravilnika daje Opštinski načelnik, a njegove izmjene i dopune vrše se na način na koji je i donesen.
+
+Član 31.
+
+Ovaj Pravilnik stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar”.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opština Drvar
+Opštinski načelnik
+
+OPŠTINSKI NAČELNIK
+Dušica Runić, s.r.
+
+Broj: 02-04-2905/21
+Drvar, 10.09.2021. godine
+
+109
+
+Na osnovu člana 86. stav 2. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH”, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18 i 11/19), člana 12. stav 3. Zakona o finansijskom upravljanju i kontroli u javnom sektoru u Federaciji Bosne i Hercegovine („Službene novine Federacije BiH”, broj: 38/16), člana 12. stav 1. Zakona o trezoru u Federaciji Bosne i Hercegovine („Službene
+
+novine Federacije BiH^\*, broj: 26/16) i tačke II Smjernica za uspostavljanje i jačanje interne kontrole kod budžetskih korisnika („Službene novine Federacije BiH^\*, broj: 19/05) i člana 49. Statuta Opštine Drvar („Službeni glasnik Opštine Drvar“: broj: 2/12, 4/12 i 5/12) načelnik Opštine Drvar, donosi
+
+PRAVILNIK O INTERNIM KONTROLAMA I INTERNIM KONTROLNIM POSTUPCIMA
+
+I OSNOVNE ODREDBE
+
+Član 1. (Predmet)
+
+Ovim Pravilnikom uređuje se način i postupak organizovanja sistema interne kontrole i internih kontrolnih postupaka u Opštini Drvar, definišu upravljački, administrativno-kontrolni i računovodstveno-interni kontrolni postupci, te postupci procjene rizika, informisanja, komunikacije i nadgledanja.
+
+Član 2. (Pojam interne kontrole)
+
+Interna kontrola podrazumjeva organizaciju, politike i procedure koje se koriste da bi se osiguralo izvršavanje poslova koji su zakonom i drugim propisima stavljeni u nadležnost pojedinim budžetskim korisnicima, da su resursi korišteni pri izvršavanju poslova iz nadležnosti budžetskog korisnika u skladu sa postavljenim ciljevima, da su programi i planovi za izvršavanje poslova zaštićeni od gubitaka, prevare i lošeg upravljanja, da su na raspolaganju pouzdane i blagovremene informacije koje se koriste pri izvještavanju, podršci i donošenju odluka, kao i otkrivanje grešaka ili prevare.
+
+II ČIJI, SVRHA I ZADACI INTERNE KONTROLE
+
+Član 3. (Cilj interne kontrole)
+
+Cilj interne kontrole je da se osigura:
+
+1. efektivno i efikasno korištenje radnog potencijala svakog zaposlenika u cilju ispunjavanja strateških ciljeva i planova rada Opštine,
+2. zaštita resursa od gubitaka, zloupotrebe, prevare i lošeg upravljanja i drugim nepravilnostima,
+3. prikupljanje i održavanje pouzdanih i blagovremenih informacija i podataka, te objavljivanje istih u redovnim izvještavanjima,
+
+1. smanjenje rizika i nepravilnosti u radu Opštine,
+2. otkrivanje grešaka ili prevara.
+
+Član 4. (Zadatak interne kontrole)
+
+Osnovni zadatak interne kontrole je spriječavanje nastajanja i/ili utvrđivanja nepravilnosti i grešaka u radu i poslovanju, te davanje prijedloga za njihovo otklanjanje.
+
+Član 5. (Funkcije interne kontrole)
+
+Sistem interne kontrole treba obuhvatiti psecifične procedure poslovanja u Opštini kao što su:
+
+1. kontrole u računovodstvu,
+2. odvajanje nadležnosti u finansijskom izvještavanju,
+3. nabavka roba, usluga i radova,
+4. poslovanje, izvršavanje poslova i zadataka u Opštini,
+5. signiranje, odlaganje radne dokumentacije, distribucija ulazne i izlazne dokumentacije,
+6. evidentiranje u glavnu knjigu,
+7. zaštita IT sistema,
+8. rukovanje gotovim novcem,
+9. korištenje službenih vozila, reprezentacije, mobilnih i fiksnih telefona i dr.
+
+III VRSTE INTERNE KONTROLE
+
+Član 6. (Vrtse interne kontrole)
+
+Vrste interne kontrole su:
+
+1. upravljačka,
+2. administrativna,
+3. računovodstvena.
+
+Član 7. (Upravljačka interna kontrola)
+
+Opštinski načelnik rukovodi radom Opštine i ima prava i obaveze utvrđene zakonom i drugim propisima.
+
+Upravljačka interna kontrola obuhvata pisane procedure vezane za upravljanje, odnosno upravljačke kontrolne postupke kojim se propisuju:
+
+1. pravila i metode za donošenje odluka vezanih za finansijsku i operativnu politiku, način sazivanja, organizovanja i vođenja sastanaka,
+
+b) uspostavljanje komunikacionog sistema koji treba osigurati da svi zaposleni daju svoj doprinos u poslovnim politikama i procedurama,
+
+c) raspored zadataka i ovlaštenja pojedinaca,
+
+d) metode identifikacije rizika i upravljanje njima,
+
+e) metodologija za ocjenjivanje uspješnosti u ostvarivanju radnih zadataka (organizacionih jedinica i pojedinaca).
+
+Član 8. (Administrativne interne kontrole)
+
+Administrativna interna kontrola u Opštini obuhvata pisane procedure vezane za administraciju, odnosno administrativne kontrolne postupke, kojima se propisuje:
+
+a) donošenje odluka i naredbi na osnovu kojih zaposleni obavljaju poslove i radne zadatke za koje su ovlašteni,
+
+b) prijem, razvrstavanje, donošenje, ovjeravanje i distribucija dokumentacije i pismena nadležnim organima i strankama,
+
+c) izrada, čuvanje i upotreba pečata,
+
+d) organizacija poslova u organizacionim jednicama i njihova koordinacija,
+
+e) arhiviranje predmeta i akata, te pristup i korištenje istih,
+
+f) fizička kontrola i pristup nad imovinom i dokumentacijom,
+
+g) nadgledanje, kontrolisanje i ocjena rada zaposlenih,
+
+h) ostali administrativni poslovi Opštine.
+
+Član 9. (Procedure administrativne interne kontrole)
+
+Procedure koje regulišu administrativne kontrolne postupke su:
+
+1. a) Statut Opštine Drvar,
+2. b) Pravilnik o unutrašnjoj organizaciji i sistematizaciji radnih mjesta Jedinstvenog organa upravljanja Opštine Drvar,
+3. c) Pravilnik o radnim odnosima, platama, ličnim primanjima koja nemaju karakter plate i drugim materijalnim primanjima državnih službenika i namještenika Jedinstvenog organa uprave Opštine Drvar,
+4. d) Odluka o utvrđivanju platnih razreda i koeficijenata za plate funkcionera državnih službenika i namještenika u organu uprave Opštine Drvar,
+5. e) Odluka o organizovanju i djelokrugu rada Jedinstvenog organa upravljanja Opštine Drvar,
+6. f) Rješenje o određivanju klasifikacionih oznaka, skupina i podskupina predmeta i akata u kancelarijskom poslovanju,
+7. g) Odluka o pečatu Opštine Drvar i
+
+h) Lista kategorija registraturne građe sa rokovima čuvanja.
+
+Član 10. (Kontrola pošte)
+
+1. 1) Administrativna interna kontrola obuhvata kontrolu postupka prijema, razvrstavanja, donošenja, ovjeravanja i distribuciju dokumentacije i pismena službama Opštine, nadležnim organima i strankama.
+
+Član 11. (Kontrola pečata)
+
+1. 1) Administrativna interna kontrola obuhvata kontrolu postupka i postupanja sa pečatima Opštne Drvar.
+2. 2) Odluka o pečatu Opštine Drvar propisuje oblik i sadržaj pečata, izradu, čuvanje, upotrebu kao i kaznene odredbe za nepridržavanje odredbi Odluke o pečatu Opštine Drvar.
+
+Član 12. (Kontrola arhiviranja)
+
+1. 1) Administrativna interna kontrola obuhvata kontrolu postupka arhiviranja predmeta i akata, te pristup i korištenje arhiviranih spisa.
+2. 2) Interni akti koji regulišu kontrolu arhiviranja su:
+ 1. a) Rješenje o određivanju klasifikacionih oznaka, skupina i podskupina predmeta i akata u kancelarijskom poslovanju,
+ 2. b) Lista kategorija registraturne građe sa rokovima čuvanja.
+
+Član 13. (Računovodstvena interna kontrola)
+
+1. 1) Računovodstveni interni kontrolni postupci uključuju procedure davanja ovlaštenja i odobrenja za finansijske transakcije, uporebu propisanih i opšteprihvaćenih politika i procedura za računovodstvo, razdvajanje zadataka vezanih za vođenje evidencija.
+2. 2) Primjenom finansijsko-računovodstvenih internih postupaka posebno se osigurava da se računovodstvene transakcije obavljaju u skladu sa zakonom i drugim propisima, da se transakcije knjiže isključivo na osnovu vjerodostojne dokumentacije u pomoćnoj i glavnoj knjizi i da izvještaji o izvršenju budžeta sadrže potpune, pouzdane, ažurne i precizne informacije o ishodima finansijskih operacija i finansijskoj situaciji.
+
+Član 14.
+(Procedure računovodstvene interne kontrole)
+
+Procedure koje regulišu računovodstvene interne kontrole Opštine Drvar su:
+
+1. a) Pravilnik o računovodstvu budžeta Opštine Drvar
+2. b) Pravilnik o blagajničkom poslovanju,
+3. c) Pravilnik o kriterijima razvrstavanja sredstava u stalna sredstva, o kriterijima za rashodovanje, otpis, knjiženje viškova i manjkova stalnih sredstava i otpis potraživanja,
+4. d) Računovodstvene politike za jedinstveni organ uprave Opštinu Drvar i
+5. e) Pravilnik o postupku direktnog sporazuma.
+
+IV POSTUPCI PROCJENE RIZIKA,
+INFORMISANJA, KOMUNICIRANJA I
+NADGLEDANJA
+
+Član 15.
+(Procjena rizika)
+
+1) Efikasan sistem interne kontrole zahtjeva prepoznavanje i kontinuiranu procjenu i ocjenjivanje poslovnih rizika koji mogu onemogućiti postizanje ciljeva.
+
+2) Sve kontrolne radnje u sistemu interne kontrole Opštine svrstane su u slijedeće vrste interne kontrole:
+
+1. a) preventivna kontrola koja preventivno umanjuje nivo rizka za pojavu nezakonitosti, prevare, otuđenja i lošeg upravljanja resursima,
+2. b) razotkrivajuća kontrola kojom se otkrivaju već nastale nezakonitosti, prevare, otuđenja i slučajevi lošeg upravljanja resursima i
+3. c) korektivna kontrola kojom se utvrđuje tačnost, autentičnost i pravilnost realizacije plana korektivnih mjera za otklanjanje nepravilnosti utvrđenih u toku pregleda i interne kontrole.
+
+Član 16.
+(Interna preventivna kontrola)
+
+Interna preventivna kontrola provodi se na jedan od slijedećih načina:
+
+1. a) ličnim uvidom u svakodnevnom radu, rukovođenju i upravljanju od strane svih zaposlenika,
+2. b) povremenim uvidom u stanje, čuvanje, održavanje, raspolaganje i korištenje resursa,
+3. c) organizovanjem i obavaljanjem prethodnog i naknadnog pregleda dokumenata o raspolaganju resursima kao i neposrednim, te svakodnevnim nadzorom procesa rada i
+4. d) povremenim analizama kvalitetnog i kvantitativnog stanja resursa, analizom izvještaja, izvršavanja planova, programa i na drugi pogodan način.
+
+Član 17.
+(Rizici)
+
+1) Rukovodioci službi kontinuirano razmatraju događaje koji mogu ugroziti ostvarenje utvrđenih strateških ciljeva. Strateški ciljevi odnose se na period u skladu sa Strategijom razvoja Opštine Drvar.
+
+2) Primjenom postupaka procjene rizika nastoji se utvrditi sklonost određene funkcije ili aktivnosti na vanjske uticaje, greške, nepravilnosti i neovlaštenu upotrebu. Ova procjena se koristi kako bi se utvrdilo koliko je vjerovatno da će doći do neželjenih dešavanja i koliko su ozbiljne posljedice takvih dešavanja.
+
+3) Rizici u poslovanju Opštine Drvar svrstavaju se u tri osnovna nivoa i to:
+
+1. a) visoki,
+2. b) srednji,
+3. c) niski.
+
+Član 18.
+(Informisanje)
+
+1) Informisanje zaposlenih provodi se kroz postupke kojima se omogućava obavještavanje (usmeno ili pismeno) o donesenim zakonima, odlukama, pravilnicima, naredbama, uputstvima, instrukcijama i dr. s ciljem postizanja zakonitosti, efikasnosti, efektivnosti, ažurnosti rada svakog zaposlenika.
+
+2) Postupci informisanja su:
+
+a) Interni postupci informisanja su svi postupci informisanja koji se koriste kod primjene upravljačkih, administrativnih i računovodstvenih procedura Opštine Drvar, u okviru kojih zaposleni, preko svojih neposrednih rukovodilaca, obavještavaju Opštinskog načelnika o svom radu ili mu, na njegov zahtjev daju druga obavještenja od značaja za rad Opštine Drvar u skladu sa zakonskim propisima.
+
+b) Eksterni postupci informisanja koji se odnose na sve korisnike finansijskih izvještaja, podataka i dokumenata proisteklih iz administrativnih i računovodstvenih internih procedura, trećih strana objavljuju se preko internet stranice Opštine, službenog glasnika, štampanih letaka, plakata i sl.
+
+Član 19.
+(Komunikacija)
+
+1) Postupci komunikacije uređuje se Pravilnikom o unutrašnjoj organizaciji i sistematizaciji radnih mjesta Jedinstvenog organa upravljanja Opštine Drvar kroz opis poslova i djelokruga rada kao i drugim pisanim procedurama kojim treba osigurati najkraći i najefikas
+
+2) Procedure za postupke komunikacije:a) Pravilnik o unutrašnjoj organizaciji i sistematizaciji radnih mjesta Jedinstvenog organa upravljanja Opštine Drvar
+
+Član 20.
+(Nadgledanje)
+
+1. 1) Nadgledanje zaposlenih je dio svakodnevnih aktivnosti rukovodstva koje obuhvata redovno izvještavanje od strane neposredno nadređenih.
+2. 2) Postupak nadgledanja i provođenja internih kontrolnih postupaka, te provođenje odredbi ovog pravilnika vrši Opštinski načelnik, rukovodioci stručnih službi i pomoćnici Opštinskog načelnika.
+3. 3) Opštinski načelnik može formirati komisiju za obavljanje poslova nadgledanja.
+4. 4) Opštinski načelnik ima pravo i obavezu, da preko lica iz st.1 i st.3.ovog člana, nadgleda zakonitost i provođenje pisanih internih kontrolnih postupaka i procedura, a u cilju onemogućavanja činjenja nezakonitih radnji i transakcija.
+
+V PRIJELAZNE I ZAVRŠNE ODREDBEČlan 21.
+(Rok za donošenje procedura)
+
+Procedure za upravljačke, administrativne i računovodstvene kontrolne postupke, postupke procjene rizika, informisanja i nadgledanja koje nisu donesene do dana stupanja na snagu ovog Pravilnika, donijeti će se u roku od 1 (jedne) godine od dana stupanja na snagu istog.
+
+Član 22.
+(Stupanje na snagu)
+
+Ovaj Pravilnik stupa na snagu osmog dana od dana objavljivanja u "Službenom glasniku Opštine Drvar".
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opština Drvar
+Opštinski načelnik
+
+OPŠTINSKI NAČELNIK
+Dušica Runić, s.r.
+
+Broj: 02-04-2932/21
+Drvar, 10.09.2021. godine
+
+110Na osnovu Uredbe o uslovima i načinu plaćanja gotovim novcem ("Službene novine FBIH", broj 72/15 i 82/15), a u vezi sa Smjernicama za uspostavu i jačanje interne kontrole kod budžetskih korisnika („Službene novine FBIH“, broj 19/05) i člana 49. Statuta Opštine Drvar ("Službeni glasnik
+
+opštine Drvar" broj 4/12 i 5/12), na prijedlog Službe za privredu, finansije i inspekcijske poslove, Opštinski načelnik donosi
+
+PRAVILNIKo blagajničkom poslovanjuČlan 1.(Opšte odredbe)(1) Ovim Pravilnikom se uređuje organizacija blagajničkog poslovanja, poslovne knjige i dokumentacija u blagajničkom poslovanju, kontrola blagajničkog poslovanja, kao i način uplate i isplate gotovine.
+
+(2) Sve gotovinske uplate i isplate vršiće se preko blagajne Opštine Drvar.
+
+(3) Blagajničko poslovanje se vrši za potrebe opštinskih službi za upravu, stručnih i drugih službi i opštinskog pravobranilaštva.
+
+Član 2.(Evidentiranje blagajničkog poslovanja)(1) U okviru Službe za privredu, finansije i inspekcijske poslove se vodi blagajna u KM (dalje u tekstu: KM - blagajna).
+
+(2) Promet gotovinskih novčanih sredstava se evidentira u KM - blagajni.
+
+(3) Blagajničko poslovanje se evidentira preko:
+
+- naloga za naplatu,
+
+- naloga za isplatu i
+
+- blagajničkog izvještaja.
+
+(4) Blagajnik može voditi i pomoćne evidencije.
+
+(5) Blagajničko poslovanje se može evidentirati ručno ili elektronski.
+
+(6) Blagajnički izvještaj, nalog naplate i nalog isplate moraju imati zakonom utvrđenu formu.
+
+(7) Sve uplate i isplate se evidentiraju u Blagajničkom izvještaju i u Glavnoj knjizi.
+
+(8)
+
+Član 3.(Odgovornost za blagajničko poslovanje)
+
+1. (1) Blagajnik je odgovoran za naplate, isplate i stanje gotovine u blagajni.
+2. (2) Gotovinska novčana sredstva se drže u kasi blagajne kojom rukuje blagajnik.
+3. (3) Blagajnik je odgovoran za blagovremeno i zakonito postupanje s gotovim novcem uz obezbjeđenje validne dokumentacije koja potvrđuje nastanak gotovinske poslovne transakcije.
+4. (4) Kontrolu blagajničkog poslovanja vrši Pomoćnik načelnika za privredu, finansije i inspekcijske poslove.
+
+Član 4.(Isplate fizičkim licima)
+
+1. (1) Isplate fizičkim licima koje su oporezive porezom na dohodak ne mogu se vršiti u gotovom novcu iz blagajne.
+2. (2) Pod fizičkim licem, u smislu ovog člana se ne podrazumijeva samostalna djelatnost.
+
+Član 5.(Vrste transakcija putem blagajne)
+
+1. (1) Putem blagajne vrše se sljedeće transakcije:
+ - - isplate akontacija putnih troškova i dnevnica za službeno putovanje u zemlji i inostranstvu,
+ - - povrat akontacija putnih troškova i dnevnica za službeno putovanje u zemlji i inostranstvu,
+ - - isplata po obračunu putnih naloga,
+ - - plaćanje dobara i usluga poslovnom subjektu, ako njegov pojedinačni iznos ne prelazi 200,00 KM,
+ - - isplate po drugim osnovama za namjene propisane u skladu sa članom 3. Uredbe o uslovima i načinu plaćanja gotovim novcem („Službene novine FBiH”, broj: 72/15 i 82/15).
+
+Član 6.(Dokumentacija za vršenje naplate i isplate)
+
+1. (1) Naplate i isplate putem blagajne mogu se vršiti samo na osnovu prethodno izdatog ovjerenog dokumenta (ček, račun, nalog za službeni put ili drugi relevantan dokument).
+
+(2) Uz nalog za službeno putovanje moraju biti priloženi dokumenti kojima se dokazuje osnov za isplatu.
+
+(3) Ako je vrijednost usluge na dokumentu izražena u stranoj valuti, za obračun te vrijednosti u domaćoj valuti koristi se dokaz o zamjeni valute, ili se primjenjuje važeći srednji kurs Centralne banke Bosne i Hercegovine na dan polaska na službeno putovanje.
+
+(4) Isplate akontacija i drugih vidova isplata koje ne prati poseban dokument mogu se vršiti kada tu isplatu, svojim potpisom na samom nalogu za isplatu, odobri ili naredi Opštinski načelnik ili lice koje on ovlasti.
+
+(5) Nalog za isplatu / naplatu u blagajni mora biti potpisan od strane svih nadležnih lica (popunjavanje svih elemenata – dijelova naloga).
+
+(6) Blagajnički izvještaj sa pripadajućom dokumentacijom o isplati i naplati u blagajni mora biti potpisan od strane blagajnika i Pomoćnika načelnika za privredu, finansije i inspekcijske poslove.
+
+Član 7.(Dopisivanje i ispravke dokumentacije)
+
+1. (1) Svaki dokument u vezi sa gotovinskom isplatom i naplatom mora biti numerisan i popunjen tako da isključuje mogućnost naknadnog dopisivanja.
+2. (2) Dokumenti iz člana 6. ovog Pravilnika predstavljaju pisane isprave kojima se dokazuje nastanak poslovnog događaja.
+3. (3) Zabranjeno je bilo kakvo ispravljanje i prepravljanje na dokumentu, kao i dopisivanje brojeva ili drugih oznaka.
+4. (4) Blagajnički i drugi dokumenti koji dokazuju novčane transakcije (poslovne događaje) ne smiju se prepravljati. Ovi dokumenti se poništavaju (storniraju), a sastavljaju se novi dokumenti uz obavezu čuvanja prethodnih.
+
+Član 8.(Kontrola dokumentacije)
+
+1. (1) Prije unosa podataka, ovlašteno lice vrši kontrolu primljene dokumentacije, utvrđenog iznosa za isplatu, povrata akontacije ili druge isplate ili uplate u situacijama kada ne postoji mogućnost da se transakcija izvrši na drugi način.
+
+(2) Pisano ovlaštenje iz stava (1) ovog člana donosi Opštinski načelnik.
+
+Član 9.
+
+(Zaključivanje blagajne)
+
+(1) Sve promjene u stanju blagajne evidentiraju se hronološki u Blagajničkom izvještaju, koji se formira automatski u aplikativnom sistemu blagajne.
+
+(2) Svakodnevno, odnosno nastankom poslovnog događaja, na kraju radnog dana, blagajnik izlistava Blagajnički izvještaj, koji se automatski knjiži u Glavnoj knjizi.
+
+(3)
+
+Član 10.
+
+(Blagajnički maksimum)
+
+(1) Blagajničkim maksimumom se obezbjeđuje minimum likvidnosti na nivou dnevnih transakcija blagajne.
+
+(2) Visina sredstava koja se drže u KM - blagajni je unaprijed ograničena i regulisana Odlukom o visini blagajničkog maksimuma, koju donosi Opštinski načelnik za fiskalnu godinu, a u skladu sa Uredbom o uslovima i načinu plaćanja gotovim novcem („Službene novine FBiH“, broj: 48/15 i 82/15).
+
+(3) Odluka iz stava (2) ovog člana se dostavlja poslovnoj banci, kod koje je otvoren račun s kojeg se podiže gotovina.
+
+Član 11.
+
+(Ovlaštena lica)
+
+Odlukom iz člana 10. stav (2) imenuju se lica koja mogu raspolagati gotovinom.
+
+Član 12.
+
+(Završne odredbe)
+
+(1) Služba za oštu upravu i društvene djelatnosti je dužna obezbjediti pratnju blagajniku prilikom odlaska u banku radi podizanja ili pologa gotovog novca.
+
+(2) Gramatička terminologija korištenja muškog roda u ovom Pravilniku podrazumijeva uključivanje oba roda.
+
+(3) Tumačenje ovog Pravilnika daje Opštinski načelnik, a njegove izmjene i dopune vrše se na način na koji je i donesen.
+
+(4) Ovaj Pravilnik stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opština Drvar
+Opštinski načelnik
+
+OPŠTINSKI NAČELNIK
+Dušica Runić, s.r.
+
+Broj: 02-04-2878/21
+Drvar, 10.09.2021. godine
+
+111
+
+Na osnovu člana 72. i 73. Zakona o budžetima u Federaciji BiH („Službene novine Federacije BiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19 i 99/19), člana 26. I 27. Zakona o računovodstvu i reviziji u FBiH 8 "Službene novine FBiH" broj 15/21) i člana 49. Statuta Opštine Drvar („Službeni glasnik Opštine Drvar“, broj: 2/12, 4/12 i 5/12), Opštinski načelnik, donosi
+
+PRAVILNIK
+o kriterijima razvrstavanja sredstava u stalna sredstva, o kriterijima za rashodovanje, otpis, knjiženje viškova i manjkova stalnih sredstava i otpis potraživanja
+I OSNOVNE ODREDBE
+
+Član 1.
+
+(Predmet)
+
+Ovim Pravilnikom utvrđuju se jedinstveni kriteriji za razvrstavanje sredstava u stalna sredstva, rashodovanje, otpis, knjiženje viškova i manjkova stalnih sredstava, kao i otpis potraživanja radi realnog i fer procjenjivanja bilansnih pozicija u jedinstvenom organu uprave Opštine Drvar.
+
+II KRITERIJI RAZVRSTAVANJA SREDSTAVA U STALNO SREDSTVO
+
+Član 2.
+
+(Kriteriji razvrstavanja)
+
+Razvrstavanje sredstava u stalna sredstva, vrši se uzimajući u obzir slijedeće:
+
+- - Vijek upotrebe stalnog sredstva duži od godine dana,
+- - Vrijednost stalnog sredstva veća od 250,00 KM,
+- - Razvrstavanje sredstava u stalna sredstva, vrši se takođe, kada određena vrsta stalnog sredstva, ima vijek upotrebe duži od godine dana, kada ta vrsta stalnog sredstva može imati i veću i manju vrijednost od 250,00 KM, i ako je ta vrsta sredstva ranije svrstana u stalna sredstva.
+
+III RASHODOVANJE
+
+Član 3.
+
+(Pojam rashodovanja)
+
+Pod rashodovanjem se podrazumjeva prestanak upotrebne vrijednosti stalnih sredstava, te njihovo materijalno i fizičko isknjižavanje (u pomoćnim knjigama i u glavnoj knjizi), a uzrok tome može biti: fizičko oštećenje ili tehnička neispravnost.
+
+Član 4.
+
+(Prijedlog donošenja odluke za rashodovanje)
+
+Za rashodovanje stalnog sredstva zbog fizičkog oštećenja i tehničke neispravnosti, prijedlog za rashodovanje daje popisna komisija.
+
+Za rashodovanje stalnog sredstva zbog tehničke neispravnosti, prijedlog daje popisna komisija uz pribavljenu dokumentaciju o mišljenju ovlaštenog servisa ili stručnog lica, da se tehnička neispravnost ne može otkloniti ili uz obrazloženje, da bi nabavka novog stalnog sredstva bila ekonomičnija od popravke istog ili uz obrazloženje, da je stalno sredstvo tehnički zastarjelo i da ne može adekvatno podržavati sve procese rada u jedinstvenom organu uprave.
+
+Rashodovanje stalnog sredstva se može izvršiti samo na osnovu Odluke koju donosi Opštinski načelnik.
+
+Član 5.
+
+(Vrijeme rashodovanja stalnih sredstava i sitnog inventara)
+
+Rashodovanje po bilo kom osnovu, vrši se nakon usvajanja Elaborata Centralne popisne komisije za redovan godišnji popis ili vanredan popis, a na osnovu Odluke koju donosi Općinski načelnik.
+
+Član 6.
+
+(Knjiženje rashodovanih stalnih sredstava i knjiženje otpisa i rashodovanja sitnog inventara)
+
+Rashodovana stalna sredstva se knjiže zaduživanjem konta stalna sredstva van upotrebe, a odobravanjem analitičkih konta stalnih sredstva, za nabavnu vrijednost rashodovanih stalnih sredstava.
+
+Potpuno isknjižavanje rashodovanih stalnih sredstava vrši se nakon usvajanja Izvještaja Komisije za postupanje sa rashodovanim sredstvima, o načinu rashodovanja istih (uništenje, prodaja, ili donacija), zaduživanjem odgovarajućeg konta ispravke vrijednosti i izvori sredstava, a odobravanjem konta stalna sredstva trajno van upotrebe.
+
+Izuzetno, od prethodnog stava isknjižavanje privatizovanih stanova vrši se na osnovu relevantne dokumentacije i Odluke Opštinskog načelnika u skladu s propisima.
+
+Otpis sitnog inventara vrši se stoprocentnom metodom - zaduženjem konta sitnog inventara a odobrenjem konta ispravke vrijednosti.
+
+Rashodovanje sitnog inventara se knjiži zaduživanjem konta ispravke vrijednosti sitnog inventara, a odobravanjem konta sitnog inventara.
+
+IV AMORTIZACIJA (KNJIGOVODSTVENI OTPIS) STALNIH SREDSTAVA
+
+Član 7.
+
+(Obračun amortizacije)
+
+Obračun amortizacije vrši se primjenom minimalnih stopa iz Nomenklature stalnih sredstava za amortizaciju („Službene novine F BiH“ broj: 2/95).
+
+Primjenjuje se linearna metoda otpisa indirektno, tako što se terete izvori sredstva.
+
+Obračun i knjiženje amortizacije vrši se na kraju godine ili prilikom statusne promjene.
+
+Osnovica za obračun amortizacije je nabavna vrijednost, odnosno revalorizovana vrijednost imovine ili fer procijenjena vrijednost.
+
+V VIŠAK I MANJAK
+
+Član 8.
+
+(Razlozi nastanka viška stalnih sredstava, i knjiženje viška)
+
+U slučaju viška stalnih sredstava, popisna komisija je dužna:
+
+- - Ispitati i tačno utvrditi razlog i način nastanka viška stalnog sredstva,
+- - Provjeriti da se slučajno ne radi o tuđem sredstvu,
+- - Provjeriti da li je sredstvo nabavljeno ili dobiveno iz donacije, a nije izvršeno knjiženje na osnovu relevantne dokumentacije (faktura poklon i sl.),
+- - Provjeriti da li se radi o sredstvu koje je u ranijim godinama rashodovano i isknjiženo, a nije uništeno ili na drugi način odstranjeno,
+- - Procijeniti vrijednost viška stalnog sredstva u skladu sa računovodsatvenim propisima.
+
+Višak stalnih sredstava knjiži se zaduživanjem odgovarajućeg konta stalnih sredstava, a odobravanjem izvora sredstava.
+
+Odluku o tome, na prijedlog popisne komisije, donosi Opštinski načelnik.
+
+Član 9.
+
+(Manjak stalnih sredstava i knjiženje manjkova)
+
+Popisna komisija je dužna utvrditi razloge nastanka manjka stalnih sredstava i zapisnikom dokumentovati uzroke manjka.
+
+Odluku o tome, na prijedlog popisne komisije donosi Opštinski načelnik.
+
+Manjak stalnih sredstava, knjiži se zaduženjem odgovarajućeg konta ispravke vrijednosti i izvora sredstava, a odobravanjem konta stalnih sredstava.
+
+Član 10.
+
+(Vrijeme knjiženja viškova i manjkova stalnih sredstava i sitnog inventara)
+
+Viškovi i manjkovi stalnih sredstava knjiže se se nakon usvajanja Elaborata Centralne popisne komisije za redovan godišnji popis ili vanredan popis, a na osnovu Odluke koju donosi Opštinski načelnik.
+
+VI OTPIS POTRAŽIVANJA
+
+Član 11.
+
+(Praćenje, otpis i knjiženje otpisa potraživanja)
+
+Opštinske službe, u čijoj nadležnosti su izdavanje rješenja po osnovu naknada po opštinskim propisima su dužne redovno pratiti dospjelost svakog potraživanja po osnovu naknada po opštinskim propisima i preduzimati sve potrebne radnje za realizaciju naplate.
+
+Potrebno je blagovremeno vršiti preknjižavanja potraživanja na sumnjiva i sporna potraživanja.
+
+Otpis potraživanja se vrši zbog nemogućnosti naplate.
+
+Odluku o otpisu potraživanja donosi Opštinski načelnik, na prijedlog popisne komisije, uz priložene kopije opomena, tužbi ili drugog dokaza da je predmetno potraživanje nenaplativo.
+
+Knjiženje otpisa potraživanja, vrši se nakon usvajanja Elaborata Centralne popisne komisije, od strane Opštinskog načelnika na dan redovnog godišnjeg popisa, ili na dan vanrednog popisa, ili nakon usvajanja izvještaja popisne komisije koja je formirana samo za vanredan popis potraživanja, od strane Opštinskog načelnika, zatvaranjem potraživanja i razgraničenih prihoda za iznos otpisa.
+
+(Stupanje na snagu)Ovaj Pravilnik stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar”.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opština Drvar
+Opštinski načelnik
+
+OPŠTINSKI NAČELNIK
+Dušica Runić, s.r.
+
+Broj: 02-04-2880/21
+Drvar, 10.09.2021. godine
+
+
+112Na osnovu člana 49. Statuta Opštine Drvar – Prečišćeni tekst („Službeni glasnik Opštine Drvar”, broj: 2/15), Opštinski načelnik putem Službe za privredu, finansije i inspekcijske poslove Opštine Drvar donosi:
+
+R J E Š E N J E
+o imenovanju komisijeIU Komisiju za provođenje za dodjelu ribolovne zone korisniku za obavljanje sportsko-rekreacijskog ribolova imenuju se:
+
+1. 1. Dragan Praštalo – predsjednik komisije
+2. 2. Nemanja Tomić – član
+3. 3. Biljana Zorić – član.
+
+IIZadaci Komisije iz tačke I ovog rješenja definisani su na osnovu raspisanog konkursa za dodjelu ribolovne zone korisniku za obavljanje sportsko-rekreacionog ribolova broj: 03-20-2639/21 od 25.08.2021. godine.
+
+IIIOvo Rješenje stupa na snagu danom donošenja i objaviće se u „Službenom glasniku Opštine Drvar” i na Oglasnoj tabli.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opština Drvar
+Opštinski načelnik
+
+OPŠTINSKI NAČELNIK
+Dušica Runić, s.r.
+
+Broj: 03-20-2639-1/21
+Drvar, 07.09.2021. godine
+
+
+S A D R Ž A Js t r a n aOPŠTINSKI NAČELNIK
+
+107 | Računovodstvene politike za Jedinstveni organ uprave opštinu Drvar | 1
+108 | Pravilnik o računovodstvu budžeta u Opštini Drvar | 27
+109 | Pravilnik o internim kontrolama i internim kontrolnim postupcima | 32
+110 | Pravilnik o blagajničkom poslovanju | 36
+111 | Pravilnik o kriterijima razvrstavanja sredstava u stalna sredstva, o kriterijima za rashodovanje, otpis, knjiženje viškova i manjkova stalnih sredstava i otpis potraživanja | 38
+112 | Rješenje o imenovanju komisije (za dodjelu ribolovne zone korisniku za obavljanje sportsko-rekreacijskog ribolova) | 41
+
+IZDAVAČ: Stručna služba Opštinskog vijeća Drvar, Titova br. 1, telefon: 034/820-163, izlazi u skladu sa potrebama. Odgovorni urednik: sekretar Opštinskog vijeća. Pretplata se utvrđuje godišnje i iznosi 100,00 KM, a uplata se vrši unaprijed na žiro-račun Opštine Drvar, broj: 1549995000539591, kod INTESA SANPAOLO BANKE DRVAR, sa naznakom: Pretplata na „Službeni glasnik Opštine Drvar“, šifra Opštine: 027, vrsta prihoda: 722631

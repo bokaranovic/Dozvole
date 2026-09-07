@@ -1,0 +1,1266 @@
+title: "СЛУЖБЕНИ ГЛАСНИК 9 - 25"
+source: "СЛУЖБЕНИ ГЛАСНИК 9 - 25.pdf"
+pages: 32
+ocr: PaddleOCR-VL-1.6
+generated: 2026-08-07 08:36
+
+!
+
+SLUŻBENI GLASNIK
+
+FEDERACIJA BOSNE I HERCEGOVINE
+
+OPŠTINE DRVAR
+
+KANTON 10
+
+OPŠTINA DRVAR
+
+DRVAR
+
+
+Primijeno: 26.05.2025
+Org. jed. | Broj | Priloga | Vrijedno
+WC-B | 133 | 25
+
+
+GODINAXVIII | BROJ 9 | DRVAR, 22.05.2025. godine
+
+
+AKTI OPŠTINSKOG VIJEĆA
+
+99.
+
+Na osnovu člana 13. Zakona o principima lokalne samouprave u Federacji BiH ("Službene novine FBiH", broj: 49/06 i 51/09) i člana 42. stav 2. alineja 18., a u vezi sa članom 49. stav 1. alineja 4. Statuta Opštine Drvar – Prečišćeni tekst ("Službeni glasnik Opštine Drvar", broj: 2/15), Opštinsko vijéeć Drvar na 6.redocnjoj sjednici održanj dana 20.05.2025. godine, dono s i:
+
+O D L U K U O USVAJANJU IZVJEŠTAJA O IZVRŠENJU BUDŽETA OPŠTINE DRVAR ZA PERIOD 01.01.-31.03.2025. GODINE
+
+Član 1.
+
+Opštinsko vijéeć Opštine Drvar usvaja Izvještaj o izvršenju budžeta za period od 01.01.-31.03.2025. godine.
+
+I OPŠTI DIO
+
+Član 2.
+
+Sastavni dio ove Odluke je Izvršenje budžeta Opštine Drvar za period 01.01.31.03.2025.godine.
+
+Član 3.
+
+Ova Odluka stupa na snagu osmog dan od dana objavljivanja u "Službenom glasniku Opštine Drvar", a biće objavljena i na oglasnoj tabli.
+
+Broj: 01-02-2077/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+PRILOG
+
+
+O P I S | Budžet za 2025. godinu | Izvršenje budžeta za period 01.01.-31.03.2025. | Index
+1 | 2 | 3 | 4 | 5
+A | UKUPNI PRIHODI | 5.079.500,00 | 1.075.437,45 | 21,17
+71 | POREZNI PRIHODI | 1.726.000,00 | 451.639,10 | 26,17
+72 | NEPOREZNI PRIHODI | 1.323.100,00 | 356.238,66 | 26,92
+73 | TEKUČI GRANTOVI | 1.930.000,00 | 267.559,69 | 13,86
+77 | PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+81 | KAPITALNI PRIMICI | 100.000,00 | 0,00 | 0,00
+B | UKUPNI RASHODI | 5.079.500,00 | 1.027.589,43 | 20,23
+61 | TEKUČI RASHODI | 4.228.000,00 | 1.004.801,74 | 23,77
+82 | KAPITALNI IZDACI | 851.500,00 | 22.787,69 | 2,68
+
+
+PRIHODI I PRIMICI
+
+
+Ekonom kod | PRIHODI-A | Budžet za 2025. godinu | Izvršenje budžeta za period 01.01.-31.03.2025 | Index
+1 | 2 | 3 | 4 | 5
+71 | I- POREZNI PRIHODI | 1.726.000,00 | 451.639,10 | 26,17
+711000 | Porezi na dobit pojedinaca i produzeća - zaostale uplate | 500,00 | 0,00 | 0,00
+711115 | Porez na prihod od imovine i imovinskih prava | 500,00 | 0,00 | 0,00
+713000 | Porezi na plate i radnu snagu - zaostale uplate | 1.000,00 | 14,67 | 1,47
+713111 | Porez na platju i druga lična primanja | 1.000,00 | 14,67 | 1,47
+714000 | Porezi na imovinu | 33.000,00 | 21.028,93 | 63,72
+714111 | Porez na imovinu od fizičkih lica | 8.000,00 | 1.800,54 | 22,51
+714112 | Porez na imovinu od pravnih lica | 1.500,00 | 325,63 | 21,71
+714113 | Porez na imovinu za motorna vozila | 500,00 | 25,00 | 5,00
+714121 | Porez na nasljedstvo i darove | 8.000,00 | 9.716,28 | 121,45
+714131 | Porez na promet nekretnina | 15.000,00 | 9.161,48 | 61,08
+715000 | Domaći porezi na dobra i usluge - zaostale uplate | 500,00 | 0,00 | 0,00
+716000 | Prihodi od poreza na dohodak | 320.000,00 | 114.553,42 | 35,80
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 270.000,00 | 93.493,83 | 34,63
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 2.000,00 | 498,53 | 24,93
+716113 | Porez na dohodak fizičkih lica od imovine i imovinskih prava | 1.000,00 | 101,32 | 10,13
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 22.000,00 | 6.952,50 | 31,60
+716116 | Porez na doh.od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 15.000,00 | 6.575,16 | 43,83
+716117 | Porez na dohodak po konačnom obračunu | 10.000,00 | 6.932,08 | 69,32
+717000 | Prihodi od indirektnih poreza | 1.350.000,00 | 310.346,34 | 22,99
+717131 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 95.000,00 | 23.187,28 | 24,41
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 1.255.000,00 | 287.159,06 | 22,88
+719000 | Ostali porezi | 21.000,00 | 5.695,74 | 27,12
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 500,00 | 3,50 | 0,70
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 500,00 | 23,80 | 4,76
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 20.000,00 | 5.668,44 | 28,34
+72 | II- NEPOREZNI PRIHODI | 1.323.100,00 | 356.238,66 | 26,92
+721000 | Prihodi od preduzetničke aktivnosti i imovine | 113.100,00 | 34.590,98 | 30,58
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 1.000,00 | 314,20 | 31,42
+721121 | Prihodi od iznajmljivanja zemljišta | 80.000,00 | 29.086,46 | 36,36
+721122 | Prihodi od iznajmlji. poslovnih prostora i ostale materijalne imovine | 30.000,00 | 5.187,82 | 17,29
+721227 | Prihodi od zakupa - koriščenja sportsko-privrednih lovišta | 1.600,00 | 2,50 | 0,16
+721239 | Ostali prihodi od imovine | 500,00 | 0,00 | 0,00
+722000 | Naknade, takse i prihodi od pružanja javnih usluga | 1.184.000,00 | 313.044,81 | 26,44
+722130 | Opšтинske administrative takse | 60.000,00 | 17.628,10 | 29,38
+722321 | Opštinske komunalne takse | 120.000,00 | 50,00 | 0,04
+722322 | Opštinske komunalne naknade za istaknutu firmu | 135.000,00 | 79.276,81 | 58,72
+722433 | Naknade za uređenje građevinskog zemljišta | 1.000,00 | 0,00 | 0,00
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 1.000,00 | 0,00 | 0,00
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za poseb.namjene | 80.000,00 | 16.554,60 | 20,69
+722454 | Naknada za koriščenje državnih šuma | 700.000,00 | 181.128,23 | 25,88
+722461 | Naknada za zauzimanje javnih površina | 5.000,00 | 6,25 | 0,13
+722475 | Naknada u postupku promjene namjene šumskog zemljišta (kričenje šuma) | 500,00 | 0,00 | 0,00
+722515 | Naknada za korištenje podataka premjera i katastra | 2.000,00 | 576,30 | 28,82
+722531 | Naknade za upotrebu puteva za vozila pravnih lica | 16.000,00 | 2.911,77 | 18,20
+722532 | Naknada za upotrebu puteva za vozila građana | 35.000,00 | 7.427,50 | 21,22
+722581 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos NP za isplatu | 25.000,00 | 7.209,89 | 28,84
+722582 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos prih.podrug.osnovam. | 500,00 | 238,07 | 47,61
+722583 | Naknada za vatro,jedin.iz premije osig.imovine od požara i pr.sila | 1.000,00 | 5,48 | 0,55
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatro,jedin. | 1.000,00 | 31,81 | 3,18
+722760 | Uplaćene refundacije iz ranijih godina | 500,00 | 0,00 | 0,00
+722790 | Ostale neplanirane uplate | 500,00 | 0,00 | 0,00
+723000 | Novčane kazne | 26.000,00 | 8.602,87 | 33,09
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500,00 | 0,00 | 0,00
+723131 | Novčane kazne po opštinskim propisima | 500,00 | 0,00 | 0,00
+723139 | Ostali prihodi | 25.000,00 | 8.602,87 | 34,41
+73 | III- TEKUĆI GRANTOVI | 1.930.000,00 | 267.559,69 | 13,86
+731 | Tekući grantovi iz inostranstva\nvlada i međunarodnih organizacija | 100.000,00 | 0,00 | 0,00
+731111 | Primljeni tekući grantovi od\ninostranih vlada i međunarodnih organizacija | 100.000,00 | 0,00 | 0,00
+732 | Tekući grantovi od ostalih nivoavlasti | 1.830.000,00 | 267.559,69 | 14,62
+732111 | Primljeni tekući grantovi od Države | 30.000,00 | 27.954,02 | 93,18
+732112 | Primljeni tekući grantovi od Federacije | 450.000,00 | 174.513,18 | 38,78
+732113 | Primljeni tekući grantovi od Republike Srpske | 1.000.000,00 | 2.992,42 | 0,30
+732114 | Primljeni tekući grantovi od kantona | 300.000,00 | 62.100,07 | 20,70
+732116 | Primljeni tekući grantovi od opština | 50.000,00 | 0,00 | 0,00
+733 | Donacije | 0,00 | 0,00 | #DIV/0!
+733112 | Donacije od pravnih lica | 0,00 | 0,00 | #DIV/0!
+77 | IV- PRIHODI PO OSNOVU\nZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+777 | Prihodi po osnovu zaostalih obaveza | 400,00 | 0,00 | 0,00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 400,00 | 0,00 | 0,00
+81 | V- KAPITALNI PRIMICI | 100.000,00 | 0,00 | 0,00
+811111 | Primici od prodaje zemljišta | 100.000,00 | 0,00 | 0,00
+A | UKUPNO PRIHODI\n(I+II+III+IV+V+VI) | 5.079.500,00 | 1.075.437,45 | 21,17
+
+
+RASHODI I IZDACI
+
+
+61 | I- TEKUĆI RASHODI | 4.228.000,00 | 1.004.801,74 | 23,77
+611000 | Plate i naknade troškova\nzaposlenih | 1.973.000,00 | 480.208,18 | 24,34
+611100 | Bruto plate zaposlenih | 1.700.000,00 | 433.269,05 | 25,49
+611200 | Naknade troškova zaposlenih | 273.000,00 | 46.939,13 | 17,19
+611211 | Naknade za prijevoz s posla i na posao | 15.000,00 | 3.879,00 | 25,86
+611221 | Naknada za topli obrok tokom rada | 150.000,00 | 43.060,13 | 28,71
+611224 | Regres za godišnji odmor | 45.000,00 | 0,00 | 0,00
+611225 | Otpremnine zbog odlaska u penziju | 38.000,00 | 0,00 | 0,00
+611227 | Pomoć u slučaju smrti, invalidnosti, bolesti | 25.000,00 | 0,00 | 0,00
+612000 | Doprinosi poslodavca i ostali doprinosi | 170.000,00 | 45.347,99 | 26,68
+612100 | Doprinosi poslodavca | 170.000,00 | 45.347,99 | 26,68
+613000 | Izdaci za materijal, sitan inventar i usluge | 625.000,00 | 104.884,85 | 16,78
+613100 | Putni troškovi | 13.000,00 | 3.804,70 | 29,27
+613200 | Izdaci za energiju i grijanje | 140.000,00 | 26.637,45 | 19,03
+613300 | Izdaci za komunikaciju i komunalne usluge | 42.000,00 | 6.962,64 | 16,58
+613400 | Nabavka materijala i sitnog inventara | 22.500,00 | 5.510,11 | 24,49
+613500 | Izdaci za usluge gorivo i registraciju | 61.000,00 | 3.856,00 | 6,32
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 9.400,00 | 0,00 | 0,00
+613700 | Izdaci za tekuće održavanje | 38.000,00 | 8.456,87 | 22,25
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6.000,00 | 781,80 | 13,03
+613900 | Ugovorene usluge | 293.100,00 | 48.875,28 | 16,68
+614000 | Tekući transferi i drugi tekući rashodi | 1.460.000,00 | 374.360,72 | 25,64
+614100 | Tekući transferi drugim nivoima vlasti | 160.000,00 | 85.080,79 | 53,18
+614200 | Tekući transferi pojedincima | 385.000,00 | 98.687,17 | 25,63
+614300 | Tekući transfer neprofitnim organizacijama | 509.000,00 | 138.751,87 | 27,26
+614400 | Transferi javnim produzećima | 390.000,00 | 39.840,89 | 10,22
+614800 | Drugi tekući rashodi | 16.000,00 | 12.000,00 | 75,00
+82 | II- KAPITALNI IZDACI | 851.500,00 | 22.787,69 | 2,68
+821 | Izdaci za nabavku stalnih sredstava | 851.500,00 | 22.787,69 | 2,68
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada | 31.000,00 | 0,00 | 0,00
+821200 | Nabavka građevina | 220.500,00 | 222,74 | 0,10
+821300 | Nabavka opreme | 130.000,00 | 1.662,90 | 1,28
+821500 | Nabava stalnih sredstava u obliku prava | 50.000,00 | 20.902,05 | 41,80
+821600 | Rekonstrukcija i investiciono održavanje | 420.000,00 | 0,00 | 0,00
+B | UKUPNO RASHODI (I + II) | 5.079.500,00 | 1.027.589,43 | 20,23
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 47.848,02
+
+
+Ⅱ POSEBNI DIO
+
+
+Ekonomskich kod | RASHODI | Budżet za 2025. godinu | Izvršenje budžeta za period 01.01.- 31.03.2025. | Index
+KABINET OPŠTINSKOG NAČELNIKA
+611100 | Bruto plate i naknade | 190.000,00 | 47.330,76 | 24,91
+611200 | Naknade troškova zaposlenih | 32.000,00 | 4.361,00 | 13,63
+612100 | Dopriniosì poslodavca | 19.000,00 | 4.953,87 | 26,07
+Ukupno | 241.000,00 | 56.645,63 | 23,50
+OPŠTINSKO VIJEĆE
+611100 | Bruto plate i naknade | 145.000,00 | 38.304,42 | 26,42
+611200 | Naknade troškova zaposlenih | 27.000,00 | 3.239,28 | 12,00
+612100 | Dopriniosì poslodavca | 14.000,00 | 4.009,26 | 28,64
+Ukupno | 186.000,00 | 45.552,96 | 24,49
+SLUŽBA ZA PRIVREDU, FINANSIJE I INSPEKCIJSKE POSLOVE
+611100 | Bruto plate i naknade | 330.000,00 | 78.140,49 | 23,68
+611200 | Naknade troškova zaposlenih | 35.000,00 | 7.784,33 | 22,24
+612100 | Dopriniosì poslodavca | 32.000,00 | 8.178,52 | 25,56
+Ukupno | 397.000,00 | 94.103,34 | 23,70
+SLUŻBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE
+611100 | Bruto plate i naknade | 265.000,00 | 81.705,41 | 30,83
+611200 | Naknade troškova zaposlenih | 30.000 | 8.114,80 | 27,05
+612100 | Doprinosi poslodavca | 26.000,00 | 8.551,77 | 32,89
+Ukupno | 321.000,00 | 98.371,98 | 30,65
+SLUŻBA ZA OPSTU UPRAVU I DRUŠTVENE DJELATNOSTI
+611100 | Bruto plate i naknade | 470.000,00 | 120.384,90 | 25,61
+611200 | Naknade troškova zaposlenih | 100.000,00 | 15.963,67 | 15,96
+612100 | Doprinosi poslodavca | 48.000,00 | 12.599,98 | 26,25
+Ukupno | 618.000,00 | 148.948,55 | 24,10
+SLUŻBA ZA CIVILNU ZAŠTITU
+611100 | Bruto plate i naknade | 155.000,00 | 29.894,25 | 19,29
+611200 | Naknade troškova zaposlenih | 32.000,00 | 3.641,28 | 11,38
+612100 | Doprinosi poslodavca | 16.000,00 | 3.128,80 | 19,56
+Ukupno | 203.000,00 | 36.664,33 | 18,06
+SEKTOR ZA LOKALNI RAZVOJ I INVESTICIJE
+611100 | Bruto plate i naknade | 145.000,00 | 37.508,82 | 25,87
+611200 | Naknade troškova zaposlenih | 17.000,00 | 3.834,77 | 22,56
+612100 | Doprinosi poslodavca | 15.000,00 | 3.925,79 | 26,17
+Ukupno | 177.000,00 | 45.269,38 | 25,58
+
+
+611 | UKUPNO | 1.973.000,00 | 480.208,18 | 24,34
+612 | UKUPNO | 170.000,00 | 45.347,99 | 26,68
+611-612 | UKUPNO | 2.143.000,00 | 525.556,17 | 24,52
+613000 | Izdaci za materijal, sitan inventar i usluge | 625.000,00 | 104.884,85 | 16,78
+613110 | Putni troškovi u zemlji | 5.000,00 | 3.804,70 | 76,09
+613120 | Putni troškovi u inostranstvo | 8.000,00 | 0,00 | 0,00
+613211 | Izdaci za električnu energiju | 100.000,00 | 19.271,48 | 19,27
+613215 | Drvo/pelet | 40.000,00 | 7.365,97 | 18,41
+613310 | Izdaci za komunikaciji | 35.000,00 | 6.210,84 | 17,75
+613320 | Izdaci za komunikacije | 7.000,00 | 751,80 | 10,74
+613411 | Izdaci za obrasce | 6.000,00 | 0,00 | 0,00
+613416 | Izdaci za kancelarijski materijal | 10.000,00 | 4.671,22 | 46,71
+613417 | Izdaci za sitan inventar | 1.500,00 | 333,14 | 22,21
+613418 | Ostali izdaci | 5.000,00 | 505,75 | 10,12
+613510 | Gorivo za prijevoz | 50.000,00 | 3.856,00 | 7,71
+613520 | Prijevozne usluge | 5.000,00 | 0,00 | 0,00
+613523 | Registracija vozila | 6.000,00 | 0,00 | 0,00
+613611 | Unajmljivanje imovine | 400,00 | 0,00 | 0,00
+613621 | Unajmljivanje opreme | 9.000,00 | 0,00 | 0,00
+613710 | Materijal za popravke i održavanje | 3.000,00 | 2.880,44 | 96,01
+613720 | Usluge popravaka i održavanja | 35.000,00 | 5.576,43 | 15,93
+613810 | Izdaci osiguranja | 1.000,00 | 616,65 | 61,67
+613820 | Usluge bankarskog i platnog prometa | 5.000,00 | 165,15 | 3,30
+613911 | Usluge medija | 7.000,00 | 1.357,65 | 19,40
+613912 | Usluge štampanja | 1.000,00 | 715,00 | 71,50
+613914 | Usluge reprezentacija | 20.000,00 | 5.368,38 | 26,84
+613915 | Ostale stručne usluge | 2.000,00 | 101,79 | 5,09
+613916 | Usluge objavljivanja tendera i oglasa | 6.000,00 | 1.912,54 | 31,88
+613923 | Usluge za specijalizaciju i školovanje | 1.000,00 | 300,00 | 30,00
+613930 | Stručne usluge | 10.000,00 | 1.825,00 | 18,25
+613932 | Budžetska rezerva | 40.000,00 | 4.770,00 | 11,93
+613960 | Zatezne kamate i troškovi spora | 600,00 | 0,00 | 0,00
+613974 | Izdaci za rad komisija | 25.000,00 | 5.040,00 | 20,16
+613975 | Izdaci za naknade opštinskim odbornicima | 60.000,00 | 15.300,00 | 25,50
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 40.000,00 | 8.053,67 | 20,13
+613980 | Izdaci za poreze i dopr.na dohodak od druge samos.djelat i povrem.sam.rada | 15.000,00 | 3.497,25 | 23,32
+613990 | Ostale nespomenute usluge i dadžbine | 5.500,00 | 634,00 | 11,53
+613991 | Izdaci za deminiranje na području opštine Drvar | 60.000,00 | 0,00 | 0,00
+614000 | Tekući transferi i drugi tekuići rashodi | 1.460.000,00 | 374.360,72 | 25,64
+614100 | Tekući transferi drugim nivoima vlasti | 160.000,00 | 85.080,79 | 53,18
+614117 | Tekući transferi mjesnim zajednicama | 20.000,00 | 1.292,33 | 6,46
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 120.000,00 | 81.164,42 | 67,64
+614124 | Transfer za izbore | 10.000,00 | 2.624,04 | 26,24
+614170 | Tekući transferi zdravstvu | 10.000,00 | 0,00 | 0,00
+614200 | Tekući transferi pojedincima | 385.000,00 | 98.687,17 | 25,63
+614220 | Transferi pojedincima po osnovi materijalno-sociijalne sigurn. nezaposl. osoba | 60.000,00 | 11.444,17 | 19,07
+614234 | Isplata stipendija | 30.000,00 | 0,00 | 0,00
+614235 | Jednokratne novčane pomoći | 14.000,00 | 2.340,00 | 16,71
+614239 | Ostali transferi pojedincima | 20.000,00 | 18.176,60 | 90,88
+614241 | Transfer za posebne namjene-elementarne nepogode | 50.000,00 | 22.243,32 | 44,49
+614243 | Transfer za prevoz učenika | 45.000,00 | 9.479,68 | 21,07
+614244 | Transferi za podsticaj poljoprivredne proizvodnje | 50.000,00 | 7.400,00 | 14,80
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1.000,00 | 0,00 | 0,00
+614253 | Pogrebni troškovi | 5.000,00 | 1.636,00 | 32,72
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 110.000,00 | 25.967,40 | 23,61
+614300 | Tekući transfer neprofitnim organizacijama | 509.000,00 | 138.751,87 | 27,26
+614311 | Transfer za Crveni krst | 24.000,00 | 8.500,00 | 35,42
+614311 | Transfer za kulturu | 15.000,00 | 5.412,30 | 36,08
+614311 | Transfer za sport | 30.000,00 | 2.000,00 | 6,67
+614311 | Transfer za obrazovanje | 60.000,00 | 18.645,49 | 31,08
+614311 | Transfer za projekte mladih | 15.000,00 | 0,00 | 0,00
+614311 | Transfer za turizam | 30.000,00 | 12.200,65 | 40,67
+614311 | Transfer za JU Dječiji vrtić Majka hrabrost | 210.000,00 | 76.142,50 | 36,26
+614311 | Transfer za JU Centar za kulturu i sport- Muzej | 60.000,00 | 11.338,93 | 18,90
+614311 | Transfer za Centar za socijalni rad | 40.000,00 | 1.000,00 | 2,50
+614311 | Transfer za Starački dom- Projektna dokumentacija | 5.000,00 | 0,00 | 0,00
+614311 | Transfer udruženjima građana | 10.000,00 | 3.512,00 | 35,12
+614319 | Tekući transferi vjerskim zajednicama | 10.000,00 | 0,00 | 0,00
+614400 | Transferi javnim preduzećima | 390.000,00 | 39.840,89 | 10,22
+614411 | Transfer za Radio Drvar | 70.000,00 | 20.409,31 | 29,16
+614411 | Transfer za JP Komunalac Drvar | | 1.431,58 | #DIV/0!
+Usluge zajedničke komunalne potrošnje | 110.000,00 | 18.000,00 | 16,36
+Subvencija za odvoz pitke vode | 0,00 | 0,00 | #DIV/0!
+Subvencija za JP Komunalac | 210.000,00 | 0,00 | 0,00
+614800 | Drugi tekući rashodi | 16.000,00 | 12.000,00 | 75,00
+614811 | Povrat više ili pogrešno uplaćenih sredstava | 1.000,00 | 0,00 | 0,00
+614817 | Izvršenje sudskih presuda i rješenja o izvršenju | 15.000,00 | 12.000,00 | 80,00
+82 | KAPITALNI IZDACI | 851.500,00 | 22.787,69 | 2,68
+821 | Izdaci za nabavku stalnih sredstava | 851.500,00 | 22.787,69 | 2,68
+821111 | Nabavka zemljišta- eksproprijacija | 31.000,00 | 0,00 | 0,00
+821211 | Zgrada CEB II | 52.000,00 | 0,00 | 0,00
+821211 | Pijaca- | 160.000,00 | 0,00 | 0,00
+821211 | Readmisija | 8.500,00 | 222,74 | 2,62
+821310 | Kancelarijska oprema | 30.000,00 | 1.662,90 | 5,54
+821321 | Motorna vozila | 100.000,00 | 0,00 | 0,00
+821521 | Studije izvodljivosti, projektne pripreme i projektovanje | 50.000,00 | 20.902,05 | 41,80
+821612 | Rekonstrukcija ulica | 100.000,00 | 0,00 | 0,00
+821614 | Rekonstrukcija zgrada- krovovi | 30.000,00 | 0,00 | 0,00
+821618 | Rekonstrukcija objekata vezanih za vodovod, kanalizaciju i čvrsti otpad | 150.000,00 | 0,00 | 0,00
+821619 | Ostale rekonstrukcije i poboljšanja | 120.000,00 | 0,00 | 0,00
+821629 | Adresni registar- table sa nazivima ulica i kućnim brojevima | 20.000,00 | 0,00 | 0,00
+823 | Izdaci za otplat u dugova | 0 | 0
+823511 | Garancije date JP Komunalac | 0 | 0
+B | UKUPNO RASHODI | 5.079.500,00 | 1.027.589,43 | 20,23
+RAZLIKA (DOBITAK- GUBITAK) | 0,00 | 47.848,02
+
+
+Broj: 02-04-92-5/25
+
+Datum: 15.03.2025.godine
+
+OPŠTINSKI NAČELNIK
+
+Dušica Runić, s.r.
+
+100.
+
+Na osnovu člana 35. stav 3. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09) i člana 42. Statuta Opštine Drvar - Prečišćeni tekst (“Službeni glasnik Opštine Drvar” broj: 2/15), Opštinsko vijeće Drvar, na 6. redovnoj sjednici održanoj dana 20.05.2025.godine, d o n o s i:
+
+ODLUKU
+
+ODEUKE o izmjeni i dopuni Odluke o stavljanju u promet devastiranih postrojenja-kotlova u Osnovnoj školii „Drvar“
+
+Član 1.
+
+U Odluci o stavljanju u promet devastiranih postrojenja – kotlova u Osnovnoj školu „Drvar“ („Službeni glasnik Opštine Drvar“, broj: 8/22) u članu 1. iza stava 1. dodaje se stav 2. koji glasi:
+
+„(2) Početna cijena devastiranih postrojenja – dva kotla iz stava 1. ovog člana je 1000,00KM“.
+
+Član 2.
+
+Ova Odluka stupa na snagu danom donošenja, a objaviće se u "Službenom glasniku Opštine Drvar" i na Oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-1717-1/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+101.
+
+Na osnovu člana 5. i 6. Zakona o komunalnim djelatnostima („Narodne novine Hercegbosanske županije“, broj: 2/06, 4/06 i 13/17), člana 18. i člana 42. Statuta opštine Drvar – Prečišjeni tekst („Službeni glasnik opštine Drvar, broj: 2/15), Opštinsko vijée Drvar na 6. redovnoj sjednici održanoj dana 20.05.2025.godine, d o n o s i
+
+ODLUKU
+
+o davanju saglasnosti načelniku Opštine
+
+Drvar za postupanje u slučaju privremene
+
+obustave rada JP „Komunalac“ d.o.o. Drvar
+
+Član 1.
+
+Daje se saglasnost načelniku Opštine Drvar da, u slučaju nemogućnosti obavljanja redovnih djelatnosti od strane Javnog komunalnog preduzeća „Komunalac“ d.o.o. Drvar, bez obzira na uzrok privremene obustave rada (bilo da se radi o poslovnim, tehničkim, upravljačkim, pravnim ili drugim razlozima), preduzme sve neophodne mjere i radnje u cilju zaštite javnog zdravlja i očuvanja osnovnih komunalnih funkcija.
+
+Član 2.
+
+Ova saglasnost obuhvata ovlaščenje načelniku da u slučaju iz člana 1. organizuje alternativne načine izvršavanja komunalnih usluga, uključujući, ali ne ograničavajući se na:
+
+organizaciju i nadzor odvoza komunalnog otpada,
+
+obezbjeđenje higijensko-tehničkin uslova za snabdijevanje pitkom vodom,
+
+- dezinfekciju javnih površina i objekata,
+
+- druge hitne i neodločne mjere radi očuvanja javne higijene i zaštite zdravlja građana.
+
+Član 3.
+
+Načelnik je dužan obavijestiti Opštinsko vijeće o svim preduzetim radnjama u skladu sa ovom odlukom.
+
+Član 4.
+
+Ova Odluka stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1810-1/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+102.
+
+Na osnovu člana 2.12. stav (5) Izbornog zakona Bosne i Hercegovine (“Službeni glasnik BiH”, broj: 23/01, 7/02, 9/02, 20/02, 25/02, 4/04, 20/04, 25/05, 52/05, 65/05, 77/05, 11/06, 24/06, 32/07, 33/08, 37/08, 32/10, 18/13, 7/14, 31/16, 41/20, 38/22, 51/22, 67/22, 24/24 i 24/24 - ispravka), člana 10. stav (11) i člana 11. stav (1) Uputstva o utvrđivanju kvalifikacija, broju, imenovanju, obuci i razrešenju članova izborne komisije osnovne izborne jedinice u Bosni i Hercegovini (“Službeni glasnik u BiH”, broj: 31/24 i 85/24), člana 42. Statuta Opštine Drvar - Prečišeni tekst (“Službeni glasnik Opštine Drvar”, broj: 2/15), Opštinsko vijeće Drvar na 6.ređvojov sjednici održanoj dana 20.05.2025. godine, d.o.n o s i:
+
+ODLUKU
+
+Član 2.
+
+o imenovanju člana Opštinske izborne komisije Drvar
+
+Član 3.
+
+Član 1.
+
+Za člana Opštinske izborne komisije Drvar imenuje se Ivana Kovačević.
+
+Mandat člana Opštinske izborne komisije Drvar traje 7 (sedam) godina i teče od dana davanja saglasnosti na ovu Odluku od strane Centralne izborne komisije BiH.
+
+Ova Odluka stupa na snagu danom donošenja, a primjenjivaće se od dana dobijanja saglasnosti Centralne izborne komisije BiH i biće objavljena u "Službenom glasniku Opštine Drvar" i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-265-8/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+103.
+
+Na osnovu člana 363. Stav 1 i 2. Zakona o stvarnim pravima („Sl. Novine FBiH“ broj: 66/13 i 100/13), člana 13. stav 2. alineja.5 i člana 35. Zakona o principima lokalne samouprave u Federaciji Bosne i Hercegovine („Sl. Novine FBiH“ broj; 49/06 i 51/09), člana 3. stav 1. tačka c Pravilnika o postupku javnog konkursa za raspolaganje nekretninama u vlasništvu Federacije Bosne i Hercegovine, kantona općine i gradova („Sl. Novine FBiH“ broj: 17/14) i člana 42. stav 2. alineja 5. Statuta Opštine Drvar - Prečiščen tekst („Službeni glasnik opštine Drvar, broj: 2/15), Opštinsko vijéece Drvar, na 6. redovnoj sjednici održanoj dana 20.05.2025. godine, dono s i:
+
+ODLUKU o načinu i uslovima raspolaganja nekretninama u vlasništvu/svojini opštine Drvar
+
+Član 1.
+
+Nacīn raspolaganja nekretninom
+
+Dopušta se raspolaganje nekretninama u svojini opštine Drvar na sledeći način: Pod uslovima na način regulisan ovom Odlukom, sprovesti će se javnim nadmetanjem - Licitacijom (u daljem tekstul licitacije) prodaja sljedećih nekretnina:
+
+- Građevinska parcela, nekretnina, označena prema Planu parcelizacije k.č. br. 61/10-35 i to k.č.br. 61/10-41, ukupne površine 1.000 m2, upisana u PL 266. K.O. Drvar grad, vlasnika Opštenarodna imovina sa udjelom 1/1.
+
+- Građevinska parcela, nekretnina, označena kao: k.č. br. 61/10-33, upisana u PL 266. K.O. Drvar grad, ukupne površine 5.280 m2, vlasnika Opštenarodna imovina sa udjelom 1/1.
+
+Član 2.
+
+Početna cijena
+
+1) Početna prodajna tržišna vrijednost nekretnine-zemljišta iz člana 1. Ove odluke, utvrđen je od stalnog sudskog vještaka g.Drago Rimac, ing . građevinarstva.
+
+2) Početna cijena građevinske parcele, nekretnine iz člana 1.Odluke, označene prema Planu parcelizacije k.č. br.61/10-35 I to k.č. br. 61/10-41,
+
+ukupne površine 1.000, m2 iznosi 17.000,00 KM, početna cijena građevinske parcele, nekretnine, označene kao: k.č. br. 61/10-33, upisana u PL 266. K.O. Drvar grad, kupne površine 5.280,0 m2, iznosi 79.200,00 KM.
+
+Član 3.
+
+Način polaganja jamčevine-kapare
+
+1) Da bi se ostarilo pravo učešća na licitaciji potrebno je uplatiti 10% od početne cijene neketnine na depozitni račun Opštine Drvar broj:154999500053959, vrsta prihoda 722321, šifra Opštine 027, budžetska organizacija 0000000,otvoren kod Intesa Sanpaolo banke a.d. Sarajevo.
+
+2) Sudionik javnog nadmetanja dužan je predočiti dokaz o položenoj jamčevini-kapari(u daljem tekstu kapari) Komisiji na dan, prije održavanja licitacije.
+
+Član 4.
+
+Način i uslovi plaćanja kupoprodajne cijene
+
+Sudionik licitacije čija je ponuda utvrđena kao najpovoljnija, nakon potpisivanja zapisnika sa licitacije, u od 8 (osam) dana, zaključuje odgovarajući ugovor u formi notarskih obrađene isprave, kojim će se regulisati međusobna prava i obaveze. Kupac preuzima obavezu plaćanja troškova postupka i notarskih obradenih isprava.
+
+Član 5.
+
+Vrijeme i način predaje nekretnine u posjedu kupcu
+
+Najdalje u roku od 8 (osam) dana nakon zaključenja ugovora u formi notarski obrađene isprave, te izvršene uplate cjelokupnog iznosa cijene nekretnine, pristupa se predaji nekretnine kupcu u posjed.
+
+Član 6.
+
+1) Ovom odlukom ovlašuje se Služba za imovinsko- pravne i geodetske poslove, da pripremi potrebne podatke, te da se raspiš javni oglas o licitaciji
+
+za prodaji predmetnih nekretnina u skladu s Pravilnikom o postupku javnog konkursa za raspolaganje nekretninama u vlasništvu Federacije Bosne i Hercegovine, kantona, općina i gradova(,, SI Novine FbiH“ broj:17/14).
+
+2) Cjelokupan proces javne licence provest će Komisija za provođenje postupka licitacije koju će po stupanju na snagu ove Odluke obrazovati rješenje Opštinskog načelnika.
+
+Član 7.
+
+Na sva ostala pitanja koja se odnose na postupak licitacije, a nisu propisana ovom Odlukom, primjenjivat će se odredbe Pravilnika o postupku javnog konkursa za raspolaganje nekretninama u vlasništvu Federacije Bosne i Hercegovine kantona, općina i gradova(,, SI Novine FBiH“ broj: 17/14).
+
+Član 8.
+
+Ova odluka stupa na snagu danom donošenja, a biće objavljena u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli.
+
+Broj: 01-02-368-4/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+104.
+
+Na osnovu član 13. Zakona o principima lokalne samouprave u Federaciji BiH ("Službene novine FBiH", broj: 49/06 i 51/09), člana 42. Statuta Opštine Drvar-Prečišćeni tekst („Službeni glasnik Opštine Drvar“, broj: 2/15) i člana 57. Poslovnika o radu Opštinskog vijeća Drvar („Službeni glasnik Opštine Drvar“, broj: 6/17 i 1/18), Opštinsko vijeće Drvar na 6.reдовnoj sjednici, održanoj dana 20.05.2025.godine, d.o.n.o.si:
+
+PROGRAM RADA OPŠTINSKOG VIJEĆA DRVAR ZA 2025. GODINU
+
+I-UVOD
+
+Član 1.
+
+Programom rada Opštinskog vijeća Drvar utvrđuju se poslovi i zadaci, njihov sadržaj, način izvršavanja, nosioci poslova i zadataka i rokovi za njihovo izvršenje koji su u skladu sa Ustavom, Zakonom, Statutom Opštine Drvar, utvrđenom politikom razvoja opštine Drvar i drugim u nadležnosti Opštinskog vijeća.
+
+II – SADRŻAJ PROGRAMA RADA
+
+Član 2.
+
+(1) Opštinsko vijeće će kod realizacije programskih sadržaja organizovati redovne, tematske, godišnje i svečane sjednice kao i druge oblike rada na kojima će razmatrati određena pitanja, zauzimati stavove i donositi odluke i druge akte u skladu sa utvrđenom tematikom.
+
+(2) Radna tijela Opštinskog vijeća će pri utvrđivanju svojih zadataka i obaveza pridržavati se ovog Programa rada u skladu sa Statutom i Poslovnikom o radu Opštinskog vijeća i s tim u vezi davaće svoja mišljenja i prijedloge putem pisanih izvještaja.
+
+Član 3.
+
+(1) Značaj planiranih tema i njihov sadržaj zahtjeva odgovoran odnos svih nosilaca u pripremi i realizaciji planiranih zadataka, poštujući princip međusobnog uvažavanja, saradnje, kao i utvrđene rokove.
+
+Član 4.
+
+(1) Ovaj Program rada Opštinskog vijeća će se razmatrati u toku 2025.godine po kvartalima (I., II., III., IV. kvartal - tromjesječe).
+
+(2) Ovaj Program obuhvata tri grupe pitanja koje će Opštinsko vijeće
+
+opštine Drvar razmatrati u toku 2025.godine i to:
+
+- Normativno-pravnog karatkera;
+
+- Programsko-razvojnog karaktera;
+
+Izvještajno informativnog karaktera.
+
+Član 5.
+
+(1) Pored pitanja sadržanih u ovom Programu rada Opštinsko vijeće će, u skladu sa svojim nadležnostima i prema ukazanoj potrebi, na prijedlog ovlăštenih predlagača, razmotriti i druga pitanja koja nisu predviđena ovim Programom, a za koja tokom godine pokrenu inicijativu nadležni organi u skladu sa Zakonom, Statutom opštine Drvar i Poslovnikom o radu Opštinskog vijeća Drvar.
+
+(2) Predložení Program rada Opštinskog vijeća Drvar za 2025. godinu predstavlja okvir za djelovanje lokalnih vlasti, s naglaskom na transparentnost, odgovornost i participaciju građana u donošenju odluka. Njegovom realizacijom, opština Drvar ima za cilj ostvarenje održivog razvoja i unapređenja kvaliteta života svih svojih stanovnika.
+
+(3) U cilju ostvarivanja prava i dužnosti iz svoje nadležnosti Opštinsko vijeće Drvar donosi Program rada za 2025. godinu, kako slijedi:
+
+III – GLAVNE AKTIVNOSTI I DINAMIKA RADA
+
+Član 6.
+
+Sadržaj Programa rada Opštinskog vijeća se odnosi na konkretna pitanja koje Vijeće razmatrati kvartalno po utvrđenom redoslijedu:
+
+I KVARTAL - ROK: 01.JANUAR - 31.MART
+
+
+Red. br. | Tema | Predlagač | Obrađivač
+NORMATIVNO PRAVNOG KARAKTERA:
+1. | Prijedlog Budžeta Opštine Drvar za 2025. godinu | Opštinski načelnik | Služba za privredu, finansije i inspek. poslove
+2. | Prijedlog Odluke o izvršenju Budžeta Opštine Drvar za 2025. godinu | Opštinski načelnik | Služba za privredu, finansije i inspek. poslove
+3. | Prijedlog Odluke o usvajanju Godišnjeg Plana rada za 2025. godinu za realizaciju strategije razvoja Opštine Drvar za period 2021.-2027. godinu | Opštinski načelnik | Sektor za lokalni razvoj i investicije
+4. | Prijedlog Odluke o davanju prethodne saglasnosti na Statut JU “Centar za socijalni rad Drvar” | Opštinski načelnik | Kabinet Opštinskog načelnika
+5. | Prijedlog Odluke o ovlaštenju Načelnika opštine Drvar za zaključenje Aneksa ugovora o korištenju poslovnog prostora sa Ministarstvom spolnih poslova Republike Srbije-Generalni konzulat R. Srbije u Mostaru | Opštinski načelnik | Kabinet Opštinskog načelnika
+6. | Prijedlog Odluke o utvrđivanju kriterijuma i objavljivanju Javnog oglasa za imenovanje 1(jednog) člana Opštinske izborne Komisije Drvar | Opštinski načelnik | Kabinet Opštinskog načelnika
+7. | Prijedlog Odluke o raspisivanju Javnog konkursa za imenovanje predsjednika i dva člana Skupštine, predsjednika i dva člana Nadzornog odbora JP „Komunalac Drvar“ d.o.o. Drvar i predsj. i dva člana Skupštine, predsj. i dva člana Nadzornog odbora JP „Radio stanica Drvar“ d.o.o. Drvar | Opštinski načelnik | Kabinet Opštinskog načelnika
+8. | Prijedlog Odluke o obrazovanju Drugostepenog žalbenog vijeća | Komisija za izbor imenov. i admini. poslove | Stručna služba OV
+9. | Prijedlog Odluke o naknadi za obavljanje poslova skladanja braka | Opštinski načelnik | Kabinet Opštinskog načelnika
+10. | Prijedlog Odluke o dostavljanju akata u elektronskoj formi | Odbornik Opštinskog vijeća – Jasna Pećanac | Stručna služba Opštinskog vijeća Drvar
+11. | Prijedlog Odluke o obavezi snimanja sjednica stalnih radnih tijela i Etičkog odbora OV Drvar | Odbornik Opštinskog vijeća Jasna Pećanac | Stručna služba Opštinskog vijeća Drvar
+12. | Prijedlog Odluke o usvajanju izvještaja o izvršenju Budžeta Opštine Drvar za period 01.01.-31.12.2023. godine | Opštinski načelnik | Služba za privredu finansije i inspekcijske poslove
+13. | Prijedlog Odluke o usvajanju izvještaja o izvršenju Budžeta Opštine Drvar za period 01.01.-31.03.2024. godine | Opštinski načelnik | Služba za privredu finansije i inspekcijske poslove
+14. | Prijedlog Odluke o usvajanju izvještaja o izvršenju Budžeta Opštine Drvar za period 01.01.-30.06.2024. godine | Opštinski načelnik | Služba za privredu finansije i inspekcijske poslove
+15. | Prijedlog Odluke o usvajanju izvještaja o izvršenju Budžeta Opštine Drvar za period 01.01.-30.09.2024. godine | Opštinski načelnik | Služba za privredu finansije i inspekcijske poslove
+16. | Prijedlog Odluke o usvajanju izvještaja o izvršenju Budžeta Opštine Drvar za period 01.01.-31.12.2024. godine | Opštinski načelnik | Služba za privredu finansije i inspekcijske poslove
+17. | Prijedlog Odluke o izmjeni Odluke o načinu i korištenju stanova na kojima Opština Drvar ima pravo raspolaganja | Opštinski načelnik | Kabinet Opštinskog načelnika
+18. | Prijedlog Odluke o raspisivanju Javnog konkursa za izbor i imenovanje predsjednika i dva člana Upravnog odbora JU Dječiji vrtić „Majka Hrabrosti“ Drvar i predsjednika i dva člana Upravnog odbora JU „Centar za kulturu i sport“ Drvar | Komisija za izbor, imenovanja i adm. poslove | Stručna služba Opštinskog vijeća Drvar
+19. | Prijedlog Odluke o ustupanju na korištenje motornog vozila javnom preduzeću „Komunalac“ Drvar, („RENAULT“ tip „MASTER KIPER“) | Opštinski načelnik | Kabinet Opštinskog načelnika
+20. | Prijedlog Odluke o ustupanju na korištenje motornog vozila javnom preduzeću „Komunalac“ Drvar, („MERCEDES BENZ“, model „ACTROS 2536L“) | Opštinski načelnik | Kabinet Opštinskog načelnika
+21. | Prijedlog Odluke o ustupanju na korištenje motornog vozila javnom preduzeću „Komunalac“ Drvar, („VOLKSWAGEN“, model „CADDY“) | Opštinski načelnik | Kabinet Opštinskog načelnika
+22. | Prijedlog Odluke o ustupanju na korištenje motornog vozila javnom preduzeću „Komunalac“ Drvar, („VOLVO“, model „FL 240 4x2”) | Opštinski načelnik | Kabinet Opštinskog načelnika
+23. | Prijedlog Odluke o određivanju naknade vanjskim članovima stalnih radnih tijela Opštinskog vijeća Drvar | Opštinski načelnik | Kabinet Opštinskog načelnika
+24. | Prijedlog Odluke o pokretanju postupka popune radnog mjesta rukovodećeg državnog službenika – sekretara Opštinskog vijeća Drvar | Komsija za izbor, imenovanja i admn. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+25. | Prijedlog Odluke o izmjenji Odluke o obrazovanju Drugostepenog žalbenog vijeća | Komisija za izbor, imenovanja i admn. Poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+26. | Prijedlog Odluke o izmjenama i dopunama Odluke o osnivanju i organizaciji radamjesnih zajednica na području Opštine Drvar | Opštinsko vijeće | Stručna služba\nOpštinskog vijeća\nDrvar
+27. | Prijedlog Odluke o visini naknade m2 gradskog građevinskog zemljišta u Opštini Drvar za 2025. godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove
+28. | Prijedlog Odluke o utvrđivanju prosječne konačne građevinske cijene m2 korisne stambene površine na području Opštine Drvar za 2025. godinu | Opštinski načelnik | Služba za imovinsko-pravne i geodetske poslove
+29. | Prijedlog Odluke o utvrđivanju prosječne konačne građevinske cijene m2 poljoprivrednog, građevinskog i šumskog zemljišta koje se ekspropriše u Opštini Drvar za 2025. godinu | Opštinski načelnik | Služba za imovinsko-pravne i geodetske poslove
+30. | Prijedlog Odluke o usvajanju Izvječaja Opštinske načelnice o ostvarivanju politike Opštine i svojim aktivnostima za 2024.godinu | Opštinska načelnik | Kabinet Opštinskog načelnika
+31. | Prijedlog Odluke o utvrđivanju deficitarnih zanimanja na području Opštine Drvar | Opštinski načelnik | Služba za opštu upravu i društvene djelatnosti
+32. | Prijedlog Odluke o određivanju Krsne Slave opštine Drvar | Opštinski načelnik | Služba za opštu upravu i društvene djelatnosti
+33. | Prijedlog Odluke o utvrđivanju prosječne končane građevinske cijene 1m2 korisne stambene površine na području Opštine Drvar za 2025. godinu | Opštinski načelnik | Služba za imovinsko-pravne i geodetske poslove
+34. | Prijedlog Odluke o visini naknade za m2 gradskog građevinskog zemljišta u Opštini Drvar za 2025. godinu | Opštinski načelnik | Služba za imovinsko-pravne i geodetske poslove
+35. | Prijedlog Odluke o visini naknade za m2 poljoprivrednog, građevinskog i šumskog zemljišta koje se ekspropriše u Opštini Drvar za 2025. godinu | Opštinski načelnik | Služba za imovinsko-pravne i geodetske poslove
+36. | Prijedlog Rješenja o imenovanju v.d. članova Skupštine JP „Radio stanica Drvar“ d.o.o. Drvar | Komisija za izbor imenov. i admin. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+37. | Prijedlog Rješenja o imenovanju v.d. članova Nadzornog odbora JP „Radio stanica Drvar“ d.o.o. Drvar | Komisija za izbor imenov. i admin. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+38. | Prijedlog Rješenja o imenovanju v.d. članova Skupštine JP „Komunalac Drvar“ d.o.o. Drvar | Komisija za izbor imenov. i admin. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+39. | Prijedlog Rješenja o imenovanju v.d. članova Nadzornog odbora JP „Komunalac Drvar“ d.o.o. Drvar | Komisija za izbor imenov. i admin. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+40. | Prijedlog Rješenja o imenovanju Komisije za izbor za provođenje Javnog konkursa za izbor članova Skupštine i Nadzornog odbora JP „Radio stanica Drvar“ d.o.o. Drvar i članova Skupštine i Nadzornog odbora JP „Komunalac Drvar“ d.o.o. Drvar | Opštinski načelnik | Kabinet Opštinskog načelnika
+41. | Prijedlog Rješenja o razrješenju privremenog predjednika i članova Upravnog odbora JU Dječiji vrtić „Majka Hraborst“ Drvar | Komisija za izbor, imenovanja i adm. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+42. | Prijedlog Rješenja o imenovanju v.d. predjednika i članova Upravnog odbora Javne ustanove Dječiji vrtić „Majka Hrabrost“ Drvar | Komisija za izbor, imenovanja i adm. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+43. | Prijedlog Rješenja o imenovanju Komisije za provođenje Javnog konkursa za izbor i imenovanje predjednika i dva člana Upravnog odbora JU Dječiji vrtić „Majka Hrabrost“ Drvar i predjednika i dva člana Upravnog odbora JU „Centar za kulturu i sport“ Drvar | Komisija za izbor, imenovanja i adm. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+44. | Prijedlog Rješenja o stavljanju van snage Rješenja o ovlaščenju Maje Filipović | Opštinski načelnik | Kabinet Opštinskog načelnika
+45. | Prijedlog Rješenja o imenovanju v.d. sekretara Opštinskog vijeća Drvar | Komisija za izbor, imenov. i adm. poslove | Stručna služba\nOpštinskog vijeća\nDrvar
+46. | Prijedlog Zaključka o usvajanju inicijative za promjenu naziva Osnovne škole „Drvar“ u Drvaru u naziv Osnovna škola „Nikola Tesla“ Drvar | Opštinski načelnik | Kabinet Opštinskog načelnika
+PROGRAMSKO-RAZVOJNOG KARAKTERA:
+47. | Prijedlog Programa finansiranja usluga zajedničke komunalne potrošnje u Opštini Drvar | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove
+48. | Prijedlog Plana zaštite od požara za područje Opštinne Drvar | Opštinski načelnik | Služba za civilnu zaštitu
+49. | Prijedlog Programa rada Opštinskog vijeća za 2025. godinu | Kolegijum Opštinskog vijeća | Stručna služba\nOpštinskog vijeća\nDrvar
+50. | Prijedlog Programa razvoja turizma na području opštine Drvar | Opštinski načelnik | Služba za PFiIP, Sektor za lokalni razvoj i investicije
+IZVJEŠTAJNO-INFORMATIVNOG KARAKTERA:
+51. | Izvještaj o radu Opštinskog načelnika za 2024. godinu | Opštinski načelnik | Službe jedinstvenog organsa uprave
+52. | Izvještaj o radu Opštinske izborne komisije Drvar za 2024. godinu | Opštinska izborna komisija Drvar | Opštinska izborna komisija Drvar
+53. | Izvještaj o radu Crveni krst Drvar za 2024.godinu i Program rada za 2025. godinu | Crveni krst Drvar | Crveni krst Drvar\n-Služba za privredu, finansije i inspekcijske poslove
+54. | Izvještaj o radu OŠ“Drvar“Drvar za 2024. godinu sa Programom rada za 2025.godinu | Direktor OŠ Drvar | Organi upravljanja OŠ Drvar - Služba za opštu upravu i društvene djelatnosti
+55. | Izvještaj o radu Srednje škole Drvar za 2024. godinu sa Programom rada za 2025.godinu | Direktor SŠ Drvar | Organi upravljanja SŠ Drvar - Služba za opštu upravu i društvene djelatnosti
+56. | Izvještaj o radu Drugostepenog žalbenog vijeća za 2024.godinu | Predsjednik DŽV | DžV
+57. | Izvještaj o radu JP Komunalac Drvar za 2024. godinu sa Programom rada za 2025.godinu | JP Komunalac Drvar | JP Komunalac Drvar
+58. | Izvještaj o radu JP „Radio Stanica Drvar“ d.o.o. za 2024.godinu sa Programom rada za 2025.godinu | JP Radio Drvar | JP Radio Drvar
+59. | Izvještaj o radu JU Centar za kulturu i sport za 2024.godinu sa Programom rada za 2025.godinu | JU Centar za kulturu i sport | JU Centar za kulturu i sport
+60. | Izvještaj o radu JU Dječiji vrtić „Majka Hrabrost“ za 2024 godinu, sa Programom rada za 2025 godinu. | JU Dječiji vrtić „Majka Hrabrost“ | JU Dječiji vrtić „Majka Hrabrost“
+61. | Informacija o stanju u oblasti poljoprivrede na području opštine Drvar za 2024.godinu | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+
+
+TEMATSKA SJEDNICA: Razmatranje stanja i izvještaja o radu i poslovanju Javnih produžeća i Javnih ustanova čiji je osnivač Opština Drvar – datum održavanja utvrdiće Kolegijum Opštinskog vijeća.
+
+Ⅱ KVARTAL - ROK: 01.APRIL – 30.JUN
+
+
+Red. br. | Tema | Predlagač | Obrađivač
+NORMATIVNO-PRAVNOG KARAKTERA:
+62. | Prijedlog Odluke o dodjeli nagrada i javnih priznanja Opštine Drvar za 2025.godinu | Opštinski načelnik | Komisija za dodjelu javnih priznanja Opštine Drvar,
+63. | Prijedlog Zaključka o usvajanju izvještaja o izvršenju Budžeta opštine Drvar za period 01.01.-31.03.2025.godinu | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+PROGRAMSKO – RAZVOJNOG KARAKTERA:
+64. | Prijedlog Programa za unapređenje turizma i promociju prirodnih resursa. | Opštinski načelnik | Služba za opštu upravu i društvene djelatnosti
+IZVJEŠTAJNO-INFORMATIVNOG KARAKTERA
+65. | Informacija o stanju u oblasti turizma za 2024.godinu | Opštinski načelnik | Služba za opštu upravu i društvene djelatnosti
+66. | Informacija u oblasti kulture za 2024.godinu | Opštinski načelnik | Služba za opštu upravu i društvene djelatnosti
+67. | Izvještaj o socijalnoj i zdravstvenoj zaštiti na području opštine Drvar, položaju građana u stanju socijalne potrebe i položaju djece i omladine sa posebnim potrebama za 2024.godinu | Opštinski načelnik | Služba za opštu upravu i društvene djelatnosti
+68. | Informacija sa analizom stanja u oblasti zapošljavanja na području opštine Drvar za 2024.godinu | Poslovnica zavoda za zapošljavanje Drvar | Poslovnica zavoda za zapošljavanje Drvar
+69. | Informacija o uklanjanju objekata koji predstavljao opasnost po stanovništvu opštine Drvar za 2024.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove i katastar.
+70. | Informacija o stanju javne rasvjete na području opštine Drvar za 2024.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove i katastar
+71. | Informacija o radu i poslovanju sa analizom stanja i kvaliteta zdravstvene zaštite stanovnika opštine Drvar za 2024.godinu sa Programom rada za 2025.godinu | JZU Dom zdravlja Drvar | JZU Dom zdravlja Drvar
+72. | Informacija o demografskom stanju u opštini Drvar za 2024.godinu | Opštinski načelnik | Služba za opštu upravu i dr. djelatnosti
+73. | Informacija o materijalno-finansijskom položaju penzionera za 2024.godinu | Udruženje penzionera Drvar | Služba za opštu upravu i društvene djelatnosti
+74. | Informacija o aktivnostima i stanju elektro-energetskog snabdjevanja na području opštine Drvar za 2024.godinu | JP "Elektro Drvar" Drvar | RJ "Elektro Drvar" Drvar
+75. | Informacija o upravljanju i gospodarenju državnom šumom i šumskim zemljištem koje se nalazi na teritoriji opštine Drvar na osnovu šumskoprivredne osnove i projekata sa posebnim osvrtom na šumskoprivrednu osnovu za šumu u privatnom vlasništvu i čuvanje šuma za 2024.godinu | ŠU Drvar | ŠU Drvar
+76. | Informacija o stanju javnog reda i mira na području Opštine Drvar za 2024.godinu | Policijska stanica Drvar | Policijska stanica Drvar
+
+
+TEMATSKA SJEDNICA:
+
+Razmatranje stanja u oblasti zdravstva, stanja privatizacije, rada, funkcionisanja, stečajnog postupka javnih preduzeća i ustanova čiji je osnivač opštine Drvar - datum održavanja utvrdiće Kolegijum Opštinskog vijeća.
+
+III - KVARTAL - ROK: 01.JUL - 30.SEPTEMBAR:
+
+
+Red. br. | Tema | Predlagač | Obrađivač
+NORMATIVNO-PRAVNOG KARAKTERA:
+77. | Prijedlog Odluke o usvajanju Plana jesenje sjetve za 2025.godinu | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+78. | Prijedlog Zaključka o usvajanju Izvještaja o izvršenju Budžeta opštine Drvar za period 01.01.-30.06.2025. godine | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+PROGRAMSKO-RAZVOJNOG KARAKTERA
+79. | Prijedlog Plana za zaštitu od poplava i prirodnih nepogoda. | Opštinski načelnik | Služba za civilnu zaštitu
+IZVJEŠTAJNO-INFORMATIVNOG KARAKTERA
+80. | Izvještaj o radu JP "Radio stanica Drvar" d.o.o.Drvar za period 01.01.30.06.2025. godine | JP Radio | Javno preduzeće „Radio stanica Drvar“ d.o.o. Drvar
+81. | Izvještaj o radu JP"Komunalac Drvar" d.o.o. Drvar za period 01.01.30.06.2025. godine | JP Komunalac | Javno preduzeće „Komunalac“ d.o.o. Drvar
+82. | Izvještaj o radu JP"Gradsko groblje"Drvar za period 01.01.-30.06.2025.godine | JP Gradsko groblje | Javno preduzeće „Gradsko groblje“ d.o.o. Drvar
+83. | Izvještaj o radu JU Dječiji vrtić „Majka Hrabrost“ za period 01.01.-30.06.2025.godine | JU Dječiji vrtić | Javna ustanova Dječiji vrtić „Majka Hrabrost“
+84. | Izvještaj o radu JU "Centar za kulturu i sport" za period 01.01.-30.06.2025.godine | JU Centar za kulturu i sport | Javna ustanova „Centar za kulturu i sport“
+85. | Informacija o stanju i aktivnostima u vezi gradske deponije za 2024.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove uključujući katastar
+86. | Informacija o stanju lokalnih puteva i saobračajne signalizacije za 2024.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove uključujući katastar
+87. | Informacija o organizaciono - tehničkim pripremama za školsku 2025/26 godinu sa osvrtom na realizaciju Godišnjeg programa rada na kraju školske 2024/25 godine u OŠ "Drvar" Drvar | OŠ DRVAR | JU Osnovna školska "Drvar" Drvar
+88. | Informacija SŠ o organizaciono - tehničkim pripremama za školsku 2025/26.godinu sa osvrtom na realizaciju Godišnjeg programa rada na kraju školske 2024/25 godine | SŠ Drvar | JU Srednja škola "Drvar" Drvar
+
+
+SVEČANA SJEDNICA povodom Dana opštine-27.juli.
+
+AVGUST – LJETNA PAUZA.
+
+IV – KVARTAL ROK: 01.OKTOBAR –
+
+31.DECEMBAR:
+
+
+Red. br. | Tema | Predlagač | Obrađivač
+NORMATIVNO-PRAVNOG KARAKTERA
+89. | Prijedlog Odluke o visini komunalne naknade za 2026.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove
+90. | Prijedlog Odluke o određivanju vrijednosti boda za izračunavanje naknade za uređenje gradskog građevinskog zemljišta za 2026.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove
+91. | Prijedlog Odluke o usvajanju Izvještaja o utrošku sredstava iz Tekuće budžetske rezerve za period 01.01—31.12.2025.godine. | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+92. | Prijedlog Zaključka o usvajanju nacrta Budžeta opštine Drvar za 2026.godinu | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+93. | Prijedlog Budžeta Opštine Drvar za 2026.godinu | Opštinski načelnik | Služba za privredu, finansije i inspek. poslove
+94. | Prijedlog Odluke o izvršenju Budžeta Opštine Drvar za 2026.godinu | Opštinski načelnik | Služba za privredu, finansije i inspek. poslove
+95. | Prijedlog Odluke o usvajanju Godišnjeg Plana rada za 2026. godinu za realizaciju strategije razvoja Opštine Drvar za period 2021.-2027.godinu | Opštinski načelnik | Sektor za lokalni razvoj i investicije
+96. | Prijedlog Zaključka o usvajanju Izvještaja o izvršenju Budžeta opštine Drvar za period 01.01.-30.09.2025.godine | Opštinski načelnik | Služba za privredu, finansije i inspekcijske poslove
+PROGRAMSKO-RAZVOJNO KARAKTERA:
+97. | Prijedlog Programa finansiranja usluga zajedničke komunalne potrošnje u Opštini Drvar | Opštinski načelnik | Služba za imovinsko-pravne i geodetske poslove
+98. | Prijedlog Programa rada Opštinskog vijeća Drvar za 2026.godinu | Kolegijum | Stručna služba Opštinskog vijeća
+IZVJEŠTAJNO-INFORMATIVNOG KARAKTERA
+99. | Izvještaj o realizaciji Programa rada Opštinskog vijeća opštine Drvar za 2025.godinu | Kolegijum | Stručna služba Opštinskog vijeća
+100. | Informacija o provođenju mjera zaštite od poplava, klizišta i odrona zemljišta za 2025.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove
+101. | Informacija o procesu deminiranja i zaštite Stanovніstva za 2025.godinu | Opštinski načelnik | Služba za imovinsko pravne i geodetske poslove
+
+
+IV - MJERE ZA REALIZACIJU PROGRAMA
+
+Član 7.
+
+(1) Za akte čije je donošenje predviđeno
+
+(2) Programom rada smatra se da je prihvaćena inicijativa za njihovo donošenje.
+
+(3) Akti načelnika i opštinskih službi koji nisu prednet ovog Programa upućuju se Opštinskom vijeću na razmatranje, bez razmatranja inicijative za njihovo donošenje.
+
+(4) Akti upućeni Opštinskom vijeću na razmatranje čiji predlagač nije opštinski načelnik dostavljava se opštinskom načelniku na mišljenje.
+
+(5) Prijedlozi odluka ili drugog akta podnose se Opštinskom vijeću u obliku u kome se odluke i druga akta Opštinskog vijeća donose i moraju biti obrazloženi u skladu sa članom 123. stav 2. Poslovnika o radu Opštinskog vijeća Drvar („Službeni glasnik Opštine Drvar”, broj: 6/17 i 1/18).
+
+(6) Proces pripreme prijedloga odluka ili drugog akta obuhvatiće i noveliranje ranije donešenih normativnih akata. Opštinskog vijeća sa pozitivnim zakonskim propisima i donošenje novih propisa iz nadležnosti Opštinskog vijeća, od strane nosioca poslova (obradivača).
+
+(7) Pored Programom rada utvrđenih poslova i zadataka, Opštinsko vijeće će obavljati i druge poslove iz svoje nadležnosti i ne ograničava ovlaštene predlagače da blagovremeno traže razmatranje svih pitanja od lokalnog značaja u skladu sa Ustavom, Zakonom i Statutom Opštine Drvar - Prečišćeni tekst („Službeni glasnik Opštine Drvar”, broj: 2/15), kao i u skladu sa postupkom utvrđenim Poslovnikom o radu Opštinskog vijeća Drvar („Službeni glasnik Opštine Drvar“, broj: 6/17 i 1/18).
+
+Član 8.
+
+(1) Izvršavanje Programa rada prati Kolegijum Opštinskog vijeća.
+
+(2) Predsjednik Opštinskog vijeća Drvar staraće se o provođenju ovog Programa i ovlašten je da u izuzetnim slučajevima može izmjeniti rokove razmatranja pojedinih pitanja.
+
+Član 9.
+
+(1) Poslovi, zadaci i rokovi utvrđeni Programom rada obavezuju obrađivače propisa.
+
+(2) Rokovi za dostavljanje materijala biće naknadno utvrđeni u skladu sa planom održavanja sjednica.
+
+(3) Ukoliko nosioci stručne obrade i predlagači nisu u mogućnosti dostaviti materijal u roku, dužni su dostaviti pisanu informaciju o razlozima kašnjenja u istom roku.
+
+(4) Materijali za sjednice dostavljaju se istovremeno u pisanoj i elektronskoj formi.
+
+(5) U pisanoj formi dostavljaju se putem Pisarnice Stručnoj službi Opštinskog vijeća Drvar, a u elektronskoj formi na e-mail Opštinskog vijeća Drvar ov.opsdrvar@tel.net.ba
+
+Član 10.
+
+(1) Sjednice Opštinskog vijeća održavaju se, u pravilu, jednom mjesčno.
+
+(2) U toku mjeseca avgusta određuje se ljetna pauza u radu Opštinskog vijeća zbog korištenja godišnjih odmora.
+
+(3) Sjednica će se održati i mimo utvrđenog roka iz stava (1), u slučaju da nastupe okolnosti koje ne dopuštaju odgađanje razmatranja, odnosno odlučivanja o određenom pitanju.
+
+V – ZAVRŠNE ODREDBE
+
+Član 11.
+
+Ovaj program stupa na snagu danom donošenja, a biće objavljen u Službenom glasniku opštine Drvar“ i na oglasnoj tabli.
+
+Broj: 01-02-153-2/25 Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA Jasna Pećanac,s.r.
+
+105.
+
+Na osnovu člana 4. Zakona o ministrskim, vladinim i drugim imenovanjima FBiH ("Službene novine FBiH", broj: 12/03, 43/03 i 65/13) i člana 42. stav 2. alineja 18. Statuta Opštine Drvar – Prečišćeni tekst ("Službeni glasnik opštine Drvar, broj: 2/15), Opštinsko vijeće Drvar na 6.redovnoj sjednici održanoj dana 20.05.2025. godine, d o n o s i:
+
+RJE SENJE
+
+o razrješenju privremenog predsjednika i članova Nadzornog odbora Javnog preduzeća "Gradsko groblje" d.o.o. Drvar
+
+I
+
+RAZRJEŠAVAJU SE dužnosti privremeni predsjednik i članovi Nadzornog odbora Javnog preduzeća “Gradsko groblje” d.o.o. Drvar, zbog isteka perioda na koji su izabrani, u sastavu:
+
+Adrijana Babić, predsjednik,
+
+- Olivera Jović, član i
+
+- Božana Babić, član.
+
+Ⅱ
+
+Stupanjem na snagu ovog Rješenja, prestaje da važi Rješenje o imenovanju privremenog predsjednika i članova Nadzornog odbora JP "Gradsko groblje" d.o.o. Drvar ("Službeni glasnik opštine Drvar", broj: 7/23.
+
+II
+
+Ovo Rješenje stupa na snagu danom donošenja, a objaviće se u "Službenom glasniku Opštine Drvar" i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-923/25 Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA Jasna Pećanac,s.r.
+
+106.
+
+Na osnovu člana 4. Zakona o ministrskim, vladinim i drugim imenovanjima FBIH ("Službene novine FBIH", broj: 12/03, 43/03 i 65/13) i člana 42. stav 2. alineja 18. Statuta Opštine Drvar – Prečišeni tekst ("Službeni glasnik Opštine Drvar, broj: 2/15), Opštinsko vijée Drvar na 6. redovnoj sjednici održanoj dana 20.05.2025. godine, d o n o s i:
+
+RJEŠENJE
+
+o razrješenju privremenog predsjednika i članova Skupštine
+
+Javnog preduzeća "Gradsko groblje" d.o.o.
+
+Drvar
+
+I
+
+RAZRJĘSAVAJU SE dužnosti privremeni predsjednik i članovi Skupštine Javnog preduzeća "Gradsko groblje" d.o.o. Drvar, zbog isteka perioda na koji su izabrani, u sastavu:
+
+- Draško Rodić, predsjednik.
+
+Aleksa Bodroža, član i
+
+- Vasilija Broćeta, član.
+
+Ⅱ
+
+Stupanjem na snagu ovog Rješenja, prestaje da važi Rješenje o imenovanju privremenog predsjednika i članova Skupštine JP "Gradsko groblje" d.o.o. Drvar ("Službeni glasnik opštine Drvar", broj: 7/23).
+
+M
+
+Ovo Rješenje stupa na snagu danom donošenja, a objaviće se u "Službenom glasniku Opštine Drvar" i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-919/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+107.
+
+Na osnovu člana 4. i 6. Zakona o ministrarskim, vladinim i drugim imenovanjima Federacije Bosne i Hercegovine ("Službene novine FBiH", broj: 12/03, 34/03, i 65/13) i člana 42. stav 2. alineja 18. Statuta Opštine Drvar ("Službeni glasnik Opštine Drvar", broj: 2/15), Opštinsko vijeće Drvar na 6.ređovnoj sjednici održanoj dana 20.05.2025. godine, dono s i:
+
+R J E Š E N J E o imenovanju privremenog predsjednika i članova Nadzornog odbora Javnog preduzeća "Gradsko groblje" d.o.o. Drvar
+
+- Goran Ació, predsjednik;
+
+I
+
+IMENUJU SE privremeni predsjednik i članovi Nadzornog odbora Javnog preduzeća "Gradsko groblje" d.o.o. Drvar u sastavu:
+
+Predrag Marić, član,
+
+- Slavka Bajić, član.
+
+Ⅱ
+
+Privremeni predsjednik i članovi Nadzornog odbora iz člana I ovog Rješenja imenuju se na period do okončanja postupka imenovanja, a najduže na period od 3 (tri) mjeseca.
+
+Ⅲ
+
+Ovo Rješenje stupa na snagu danom donošenja, a objaviće se u "Službenom glasniku Opštine Drvar" i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-917/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+108.
+
+Na osnovu člana 4. i 6. Zakona o ministrarskim, vladinim i drugim imenovanjima Federacije Bosne i Hercegovine ("Službene novine FBiH", broj: 12/03, 34/03, i 65/13) i člana 42. stav 2. alineja 18. Statuta Opštine Drvar ("Službeni glasnik Opštine Drvar", broj: 2/15), Opštinsko vijeće Drvar na 6.redocnjoj sjednici održanoj dana 20.05.2025. godine, d o n o s i:
+
+R J E Š E N J E o imenovanju privremenog predsjednika i članova Skupštine Javnog preduzeća "Gradsko groblje" d.o.o. Drvar
+
+I
+
+IMENUJU SE privremeni predsjednik i članovi Skupštine Javnog preduzeća "Gradsko groblje" d.o.o. Drvar u sastavu:
+
+– Draško Rodić, predsjednik.
+
+- Duško Rodić, član,
+
+- Gordana Miljević, član.
+
+Ⅱ
+
+Ⅲ
+
+Privremeni predsjednik i članovi Skupštine iz člana I ovog Rješenja imenuju se na period do okončanja postupka imenovanja, a najduže na period od 3 (tri) mjeseca.
+
+Ovo Rješenje stupa na snagu danom donošenja, a objaviće se u "Službenom glasniku Opštine Drvar" i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-921/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+109.
+
+Na osnovu člana 42. Statuta Opštine Drvar-Prečišćeni tekst („Službeni glasnik opštine Drvar“, broj: 2/15), člana 113. Poslovnika o radu Opštinskog vijeća („Službeni glasnik opštine Drvar“, broj: 6/17 i 1/18), Opštinsko vijeće Drvar na 6.reдовnoj sjednici održanoj dana 20.05.2025. godine, dono s i:
+
+RJEŠENJE
+
+o izmjeni Rješenja o imenovanju Komisije za provođenje Javnog konkursa za izbor i imenovanje predsjednika i dva člana Upravnog odbora Javne ustanove Dječiji vrtić „Majka Hrabrost“ Drvar i predsjednika i dva člana Upravnog odbora Javne ustanove „Centar za kulturu i sport“ Drvar
+
+I
+
+1) U članu I Rješenja o imenovanju Komisije za provođenje Javnog konkursa za izbor i imenovanje predsjednika i dva člana Upravnog odbora Javne ustanove Dječiji vrtić „Majka Hrabrost“ („Službeni glasnik opštine Drvar“, broj: 5/25), mijenja se član Komisije za provođenje Javnog konkursa za izbor i imenovanje predsjednika i dva člana Upravnog odbora Javne ustanove Dječiji vrtić „Majka Hrabrost“ (U daljem tekstu: Komisije).
+
+2) Umjesto člana Nataša Bajić, imenuje se Dijana Milisavić za člana Komisije.
+
+Ⅱ
+
+U ostalim odredbama Rješenje ostaje nepromijenjeno.
+
+III
+
+Ovo Rješenje stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na Oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-609-3/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+110.
+
+Na osnovu člana 42. stav 2. alineja 12. i člana 49. stav 1. alineja 4. Statuta Opštine Drvar – Prečišćeni tekst (“Službeni glasnik Opštine Drvar”, broj: 2/15), i člana 10. Odluke o ustanovljavanju javnih priznanja Opštine Drvar (“Službeni glasnik opštine Drvar”, broj: 3/18), Opštinsko vijée Drvar, na 6. redovnoj sjednici održanoj dana 20.05.2025. godine, d on o s i:
+
+R J E Š E N J E o imenovanju Komisije za dodijelu javnih priznanja Opštine Drvar
+
+I
+
+IMENUJE SE Komisija za dodijelu javnih priznanja Opštine Drvar (u daljem tekstu: Komisija) u sastavu:
+
+- Dijana Milisavić, predsjednik,
+
+Snježana Bodroža, član,
+
+- Dijana Vještica Karanović, član,
+
+Bojana Škrbić Šobot, član,
+
+- Bojana Bajić Zorić, član
+
+Milan Popović, član i
+
+Milorad Medarević, član.
+
+Ⅱ
+
+Komisija se imenuje na mandatni period odbornika Opštinskog vijeća.
+
+III
+
+Komisija pokreće i vodi postupak za dodijelu javnih priznanja Opštine Drvar u skladu sa Odlukom o ustanovljavanju javnih priznanja Opštine Drvar, broj: 01-02-165-6/18 od 12.04.2018. godine.
+
+IV
+
+Stupanjem na snagu ovog Rješenja, prestaje da važi Rješenje o imenovanju Komisije za dodjelu javnih priznanja Opštine Drvar ("Službeni glasnik opštine Drvar", broj: 7/21).
+
+V
+
+Ovo Rješenje stupa na snagu danom donošenja, a objaviće se u "Službenom glasniku Opštine Drvar" i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-916/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA Jasna Pećanac,s.r.
+
+111.
+
+Na osnovu člana 52. Zakona o organizaciji organa uprave u Federaciji BiH („Službene novine Federacije BiH“, broj: 35/05), člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, dono s i:
+
+ZAKLJUČAK
+
+o davanju saglasnosti na Pravilnik o unutrašnjoj organizaciji i sistematizaciji radnih mjesta Stručne službe Opštinskog vijeća Drvar
+
+1. Opštinsko vijée Drvar daje saglasnost na Pravilnik o unutrašnjoj organizaciji i sistematizaciji radnih mjesta Stručne službe Opštinskog vijéea Drvar, broj: 01-02-2437/17, od 27.07.2017.godine, Ispravku Pravilnika, broj: 01-02-2437-3/17, od 21.09.2017.godine i Ispravku Pravilnika, broj: 01-02-2437-4/17, od 01.04.2025.godine („Službeni glasnik opštine Drvar“, broj: 8/17, 9/17 i 7/25).
+
+2. Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-2078/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+112.
+
+Na osnovu člana 42. stav 2. alineja 18. Statuta Opštine Drvar – Prečišćeni tekst („Službeni glasnik Opštine Drvar“, broj: 2/15) i člana 106. Poslovnika o radu Opštinskog vijeća Drvar („Službeni glasnik Opštine Drvar“, broj: 6/17, 1/18 i 5/25), Opštinsko vijeće Drvar, na 6.reдовnoj sjednici održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK O PRIHVATANJU INICIJATIVE ZA IZMJENE I DOPUNE ZAKONA O KOMUNALNIM DJELATNOSTIMA HERCEGBOSANSKE ŽUPANIJE
+
+I
+
+Prihvata se Inicijativa Opštinskog načelnika Opštine Drvar, za izmjenu i dopunu Zakona o komunalnim djelatnostima Hercegbosanske županije, i ista upućuje Skupštini Hercegbosanske županije i Vladi Hercegbosanske županije na dalje postupanje.
+
+Ⅱ
+
+Navedenom inicjativom predlažemo izmjene i dopune Zakona o komunalnim djelatnostima Hercegbosanske županije po sledećem:
+
+1) U članu 28. Zakona o komunalnim djelatnostima Hercegbosanske županije ("Narodne novine Hercegbosanske županije", broj 2/06, 4/06, 13/17) u stavu 1. poslije riječi „poslovni prostor“, dodaju se riječi „kao i infrastrukturne objekte”.
+
+2) Poslije stava 1. dodaje se stav 2. koji glasi:
+
+,,(2) Komunalna naknada za nadzemne i podzemne elektro i telefonske instalacije, instalacije kablovskih operatera, mobilne telefonije, plinovodnih i toplovodnih instalacija određuje se po dužnom metru nadzemnih, odnosno podzemnih instalacija.
+
+3) U članu 29.poslije stava 2. dodaje se stav 3., koji glasi:
+
+„(3) Komunalna naknada se plaća za neketnine iz člana 28. ovog Zakona u naseljenim mjestima na području opštine na kojima se obavlja najmanje jedna komunikacija.
+
+djelatnost zajedničke komunalne potrošnje.“
+
+4) Član 30. mijenja se i glasi: „Obveze plaćanja komunalne naknade nastaju prvog dana sljedećeg mjeseca od sticanja vlasništva ili prava koriščenja na objektu ili prostoru.”
+
+5) U članu 35. stav 6. briše se.
+
+Ⅲ
+
+Ovaj zaključak stupa na snagu danom donošenja, a biće objavljen u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-1814-1/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+113.
+
+Na osnovu člana 35. Zakona o ustanovama ("Narodne novine HBŻ", broj: 10/98), člana 79. Zakona o osnovnom školstvu („Narodne novine HBŻ“, broj: 12/04 i 12/08), člana 86. i 120. Statuta Osnovne škole „Drvar“ Drvar, broj: 232-3/08, člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Izvještaja o radu za 2024. godinu Osnovne škole „Drvar“ Drvar, Opštinsko vijée Drvar, na 6.relovnoj sjednici, održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK
+
+o usvajanju Izvještaja o radu Osnovne škole „Drvar“ Drvar za 2024.godinu
+
+I
+
+Usvaja se Izvještaj o radu Osnovne škole „Drvar“ Drvar za 2024. godinu, koji sadrži detaljan prikaz aktivnosti, organizacije rada, postignuća i izazova sa kojima se osnovna škola susretala tokom izvještajnog perioda.
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-4454-9/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+114.
+
+Na osnovu člana 35. Zakona o ustanovama ("Narodne novine HBŽ", broj: 10/98), člana 79. Zakona o osnovnom školstvu („Narodne novine HBŽ“, broj: 12/04 i 12/08), člana 5. i člana 119. Statuta Osnovne škole „Drvar“, broj: 232-3/08, člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Godišnjeg Plana i Programa rada Osnovne škole „Drvar“ - Drvar za školsku 2024/2025.godinu, Opštinsko vijée Drvar, na 6.ređovnoj sjednici, održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK
+
+o davanju saglasnosti na Godišnji Plan i Program rada Osnovne škole „Drvar“-Drvar za školsku 2024/2025.godinu
+
+I
+
+Daje se saglasnost na Godišnji Plan i Program rada Osnovne škole „Drvar“ – Drvar za školsku 2024/2025.godinu.
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1274-6/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+115.
+
+Na osnovu člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. i člana 128. Statuta opštine
+
+Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Programa rada JP, „Radio stanica Drvar“ d.o.o. Drvar za 2025.godinu, broj: 01-04/25, od 08.04.2025.godine, Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK o davanju saglasnosti na Program rada JP „Radio stanica Drvar“ d.o.o. Drvar za 2025.godinu
+
+I
+
+Daje se saglasnost na Program rada JP, Radio stanica Drvar“ d.o.o. Drvar za 2025.godinu, broj: 01-04/25, od 08.04.2025godine.
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1461-1/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+116.
+
+Na osnovu člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Programa rada JP „Komunalac Drvar“ d.o.o. Drvar za 2025.godinu, broj: 01-02-1274/25, od 27.03.2025.godine, Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, d.o.o s i:
+
+ZAKLJUČAK
+
+o davanju saglasnosti na Program rada JP
+
+„Komunalac Drvar“
+
+d.o.o. Drvar za 2025.godinu
+
+I
+
+Daje se saglasnost na Program rada JP „Komunalac“ d.o.o. Drvar za 2025.godinu, broj: 766-04/25, od 11.04.2025godine.
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1274-7/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+117.
+
+Na osnovu člana 34. Zakona o predškolskom odgoju i obrazovanju u Hercegbosanskoj županiji ("Narodne novine HBŻ", broj: 8/09), člana 37. Statuta JU Dječiji vrtić „Majka Hrabrost“ Drvar („Službeni glasnik opštine Drvar“, broj: 9/17), člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), Opštinsko vijée Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK o davanju saglasnosti na Godišnji Program rada JU Dječiji vrtić“Majka Hrabrost” Drvar
+
+I
+
+Daje se saglasnost na Godišnji Program rada JU Dječiji vrtić „Majka Hrabrost“ Drvar, broj: 18/25, od 01.04.2025.godine
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1274-8/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+118.
+
+Na osnovu člana 6. Zakona o javnim preduzećima u Federaciji BiH ("Službene novine Federacije BiH", broj: 8/05, 81/08, 22/09 i 109/12), člana 27. Statuta JP, Gradsko groblje“ d.o.o. Drvar, broj: 01/1-17/05, od 18.03.2005.godine, člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Izvještaja o poslovanju i finansijskog Izvještaja za 2024. godinu Javnog preduzeća „Gradsko groblje“ d.o.o. Drvar, Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK
+
+o neusvajanju Izvještaja o poslovanju i finansijskog izvještaja Javnog preduzeća „Gradsko groblje“ d.o.o. Drvar za 2024.godinu
+
+I
+
+Opštinsko vijeće Drvar ne prihvata Izvještaj o poslovanju Javnog preduzeća „Gradsko groblje“ d.o.o. Drvar za 2024. godinu, sa pratećim Finansijskim izvješajem ovog Javnog preduzeća za 2024. godinu.
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-4454-9/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+119.
+
+Na osnovu člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, dono s i:
+
+ZAKLJUČAK o popisu i primopredaji akata v.d. direktora JP „Gradsko groblje“ d.o.o. Drvar
+
+I
+
+Opštinsko vijéeć Drvar u vezi sa negativnim finansijskim izvještajem i poslovanjem JP „Gradsko groblje“ d.o.o. Drvar, a radi razrješenja v.d. direktora ovog preduzeća i sticanja zakonskog prava iz radnog odnosa i socijalnog osiguranja (odlazak u penziju), obavezuje Opštinskog načelnika da formira Komisiju za popis i primopredaju dokumentacije i akata, (u daljem tekstur: Komisija) o radu i poslovanju JP „Gradsko groblje“ d.o.o. Drvar, zaključno sa 20.05.2025.godine, a koju posjeduje v.d. direktor Mladen Trikić.
+
+Ⅱ
+
+Komisija koju će imenovati Opštinski načelnik se sastoji od tri člana.
+
+II
+
+1) Zadatak Komisije je da u roku od 15 dana od dana imenovanja izvrši sveobuhvatan popis i primopredaju cjelokupne dokumentacije i akata u vezi sa radom i poslovanjem ovog javnog predučeća.
+
+2) Obavezuje se Komisija da o realizaciji aktivnosti popisa dokumentacije i akata, sačini zapisnik, koji dostavlja Opštinskom vijeću na uvid, zajedno sa pratećom dokumentacijom.
+
+IV
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-2076/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+120.
+
+Na osnovu člana 13. stav 2. Zakona o principima lokalne samouprave u FBiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Izvještaja o radu Crvenog krsta opštine Drvar za 2024., Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, d o n o s i:
+
+ZAKLJUČAK o usvajanju Izvještaja o radu Crvenog krsta opštine Drvar za 2024.godinu
+
+I
+
+Usvaja se Izvještaj o radu Crvenog krsta opštine Drvar za 2024.godinu, koji sadrži deteljan pregled aktivnosti, rada, organizacije i izazova sa kojima se Crveni krst opštine Drvar susretao tokom izvještajnog perioda.
+
+Ⅱ
+
+Usvaja se finansijski izvještaj za 2024.godinu, koji sadrži bilans stanja i uspijeha za 2024.godinu, sa detaljnim pregledom finansskih pokazatelja o radu i poslovanju Crvenog krsta opštine Drvar za posmatrani izvještajni period.
+
+Ⅲ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1230-2/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+121.
+
+Na osnovu člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. i člana 128. Statuta opštine Drvar ("Službeni glasnik opštine Drvar", broj: 2/15), nakon razmatranja Izvještaja o radu Drugostepenog žalbenog vijeća opštine Drvar za period od 01.01.2024.godine do 31.12.2024.godine, Opštinsko vijeće Drvar, na 6. redovnoj sjednici, održanoj dana 20.05.2025.godine, dono s i:
+
+ZAKLJUČAK o usvajanju Izvještaja o radu Drugostepenog žalbenog vijeća opštine Drvar za period od 01.01.2024.godine do 31.12.2024.godine
+
+I
+
+Usvaja se Izvještaj o radu Drugostepenog žalbenog vijeća opštine Drvar za period od 01.01.2024.godine do 31.12.2024.godine.
+
+Ⅱ
+
+Ovaj zaključak stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku opštine Drvar“ i na oglasnoj tabli opštine Drvar.
+
+Broj: 01-02-1457-1/25
+
+Datum: 20.05.2025. godine PREDSJEDNIK OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac,s.r.
+
+SADRŻAJ
+
+I. AKTI OPŠTINSKOG VIJEĆA
+
+99. ODLUKA_O USVAJANJU IZVJEŠTAJA O IZVRŠENJU BUDŽETA OPŠTINE DRVAR .. ZA PERIOD 01.01.-31.03.2025. GODINE.....1
+
+100. ODLUKA_o izmjeni i dopuni Odluke o stavljanju u promet devastiranih_postrojenja-kotlova u Osnovnoj školi „Drvar“.....9
+
+101. ODLUKA_o davanju saglasnosti načelniku Opštine Drvar za postupanje u slučaju privremene obustave rada JP „Komunalac“ d.o.o. Drvar.....9
+
+102. ODLUKA_o imenovanju člana Opštinske izborne komisije Drvar.....10
+
+103. ODLUKA_o načinu i uslovima raspolaganja nekretninama u vlasništvu/svojini opštine Drvar.....10
+
+104. PROGRAM RADA_OPŠTINSKOG VIJEĆA DRVAR_ZA 2025. GODINU.....12
+
+105.RJEŠENJE_o razriješenju privremenog predsjednika i članova Nadzornog odbora Javnog preduzeća "Gradsko groblje" d.o.o. Drvar ..... 23
+
+106.RJEŠENJE_o razriješenju privremenog predsjednika i članova Skupštine_Javnog preduzeća "Gradsko groblje" d.o.o. Drvar ..... 23
+
+107.RJEŠENJE_o imenovanju privremenog predsjednika i članova Nadzornog odbora Javnog preduzeća "Gradsko groblje" d.o.o. Drvar ..... 24
+
+108.RJEŠENJE_o imenovanju privremenog predsjednika i članova Skupštine_Javnog preduzeća "Gradsko groblje" d.o.o. Drvar ..... 24
+
+109.RJEŠENJE_o izmjeni Rješenja o imenovanju Komisije za provođenje Javnog konkursa za izbor i imenovanje predsjednika i dva člana Upravnog odbora Javne ustanove Dječiji vrtić „Majka Hrabrost“ Drvar i predsjednika i dva člana Upravnog odbora Javne ustanove „Centar za kulturu i sport“ Drvar ..... 25
+
+110.RJEŠENJE_o imenovanju Komisije za dodijelu javnih priznanja Opštine Drvar ..... 25
+
+111.ZAKLJUČAK_o davanju saglasnosti na Pravilnik o unutrašnjoj organizaciji i sistematizaciji radnih mjesta Stručne službe Opštinskog vijeća Drvar ..... 26
+
+112.ZAKLJUČAK_o prihvatanju Inicijative za izmjene i dopune Zakona o komunalnim djelatnostima Hercegbosanske županije ..... 26
+
+113.ZAKLJUČAK_o usvajanju Izvještaja o radu Osnovne škole „Drvar“ Drvar za 2024.godinu ..... 27
+
+114.ZAKLJUČAK_o davanju saglasnosti na Godišnji Plan i Program rada Osnovne škole „Drvar“ Drvar za 2024.godinu ..... 27
+
+„Drvar“ – Drvar za školsku 2024/2025.godinu.....27
+
+115_ZAKLJUČAK_o davanju saglasnosti na Program rada JP „Radio stanica Drvar“ d.o.o. Drvar za 2025.godinu.....28
+
+116_ZAKLJUČAK_o davanju saglasnosti na Program rada JP „Komunalac Drvar“ d.o.o. Drvar za 2025.godinu.....28
+
+117_ZAKLJUČAK_o davanju saglasnosti na Godišnji Program rada_JU Dječiji vrtić“Majka Hrabrost” Drvar.....28
+
+118_ZAKLJUČAK_o neusvajanju Izvještaja o poslovanju i finansijskog izvještaja Javnog preduzeća „Gradsko groblje“ d.o.o. Drvar za 2024.godinu.....29
+
+119_ZAKLJUČAK_o popisu i primopredaji akata v.d. direktora JP „Gradsko groblje“ d.o.o. Drvar.....29
+
+120_ZAKLJUČAK_o usvajanju Izvještaja o radu Crvenog krsta opštine Drvar za 2024.godinu.....30
+
+121_ZAKLJUČAK_o usvajanju Izvještaja o radu Drugostepenog žalbenog vijeća opštine Drvar za period od 01.01.2024.godine do 31.12.2024.godine.....30

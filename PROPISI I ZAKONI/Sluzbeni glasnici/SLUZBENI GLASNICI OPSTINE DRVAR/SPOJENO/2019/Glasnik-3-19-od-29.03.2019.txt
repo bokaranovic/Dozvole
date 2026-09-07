@@ -1,0 +1,630 @@
+UVOD
+SLUŽBENI GLASNIK
+
+OPŠTINE DRVAR
+
+GODINA XII | BROJ 3 | DRVAR, 29.03.2019. godine
+
+OPŠTINSKO VIJEĆE
+
+28
+
+Primljene: 29.03.2019
+Org. jed. | Broj | Priloga
+ | | 03-36/19
+
+Na osnovu člana 32. Zakona o budžetima FBiH ("Službene novine FBiH" broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16 i 5/18) i člana 42., a u vezi sa članom 49. stav 1. alineja 3. Statuta Opštine Drvar - Prečišćeni tekst ("Službeni glasnik Opštine Drvar", broj: 2/15), na prijedlog načelnice Opštine, Opštinsko vijeće Drvar na Vanrednoj sjednici održanoj 28.03.2019. godine, donijelo je
+
+IZMJENE BUDŽETA
+
+*opštine Drvar za 2018. godinu*
+
+I OPŠTI DIO
+
+Član 1.
+
+Izmjene budžet opštine Drvar za period 01.01. - 31.12.2018. godinu sadrži:
+
+ | BUDŽET | IZMJENE BUDŽET 2018
+1 | 2 | 3
+A | UKUPNI PRIHODI | 3,083,828.00
+B | UKUPNI RASHODI | 3,083,828.00
+A - B | RAZLIKA (DOBITAK-GUBITAK) | 0.00
+
+II RAČUN PRIHODA I RASHODA
+
+Član 2
+
+Prihodi i rashodi po grupama prikazani su u Računu prihoda i rashoda kako slijedi:
+
+Ekonom kod | OPIS | IZMJENE BUDŽET 2018
+1 | 2 | 3
+71 | POREZNI PRIHODI | 1,241,000.00
+711 | Porezi na dobit pojedinaca i preduzeća - zaostale uplate | 300.00
+713 | Porezi na plate i radnu snagu - zaostale uplatePorezi na plate i radnu snagu - zaostale | 1,000.00
+714 | Porezi na imovinu | 27,100.00
+714111 | Porez na imovinu od fizičkih lica | 8,000.00
+714112 | Porez na imovinu od pravnih lica | 2,000.00
+714113 | Porez na imovinu za motorna vozila | 1,000.00
+
+714131 | Porez na promet nepokretnosti od fizičkih lica | 8,000.00
+714132 | Porez na promet nepokretnosti od pravnih lica | 8,000.00
+714191 | Ostali porezi na imovinu | 100.00
+715 | Domaći porezi na dobra i usluge - zaostale uplate Domaći porezi na dobra i usluge - zaostale uplate | 100.00
+716 | Porez na dohodak | 206,000.00
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 172,000.00
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 2,000.00
+716113 | Porez na dohodak fizičkih lica od imonine i imovinskih prava | 2,000.00
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 12,000.00
+716116 | Porez na doh. od drugih samo. djel. iz čl. 12 stav 4. Zak. o por. na doh. | 17,000.00
+716117 | Porez na dohodak po konačnom obračunu | 1,000.00
+717 | Prihodi od indirektnih poreza | 992,000.00
+717130 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 70,000.00
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 922,000.00
+719 | Ostali porezi | 14,500.00
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1,000.00
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 2,500.00
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 11,000.00
+72 | NEPOREZNI PRIHODI | 1,423,328.00
+721 | Prihodi od preduzetničke aktivnosti i imovine | 70,100.00
+721112 | Prihodi od davanja prava za ekspl. prirodnih resursa, patenata i autor. prava | 1,000.00
+721121 | Prihodi od iznajmljivanja zemljišta | 36,000.00
+721122 | Prihodi od iznajmlji, poslovnih prostora i ostale materijalne imovine | 31,000.00
+721227 | Prihodi od zakupa - korišćenja sportsko-privrednih lovišta | 2,000.00
+721239 | Ostali prihodi od imovine | 100.00
+722 | Naknade, takse i prihodi od pružanja javnih usluga | 1,321,500.00
+722130 | Opštinske adminisrativne takse | 71,000.00
+722321 | Opštinske komunalne takse | 130,000.00
+722322 | Opštinske komunalne naknade za istaknutu firmu | 55,000.00
+722433 | Naknade za uređenje građevinskog zemljišta | 3,000.00
+722434 | Naknade za korišćenje građevinskog zemljišta | 2,000.00
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 1,000.00
+722441 | Opštinske komun. naknade u skladu sa kanton. propisima za poseb. namjene | 122,000.00
+722454 | Naknada za korišćenje državnih šuma | 860,000.00
+722461 | Naknada za zauzimanje javnih površina | 1,000.00
+722515 | Naknada za korištenje podataka premjera i katastra | 3,000.00
+722531 | Naknade za upotrebu puteva za vozila pravnih lica | 16,000.00
+722532 | Naknada za upotrebu puteva za vozila građana | 32,000.00
+722581 | Poseb. nakn. za zaš. od prir. i dr. nes. gdje je osn. zb. iznos NP za isplatu | 22,000.00
+722582 | Poseb. nakn. za zaš. od prir. i dr. nes. gdje je osn. zb. iznos prih. po drug. osnovam. | 2,000.00
+722583 | Naknada za vatrog. jedin. iz premije osig. imovine od požara i pr. sila | 500.00
+722584 | Naknada iz funkcionalne premije osig. od autoodgov. za vatrog. jedin. | 500.00
+722760 | Uplaćene refundacije iz ranijih godina | 0.00
+722790 | Ostale neplanirane uplate | 500.00
+723 | Novčane kazne | 31,728.00
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500.00
+723131 | Novčane kazne po opštinskim propisima | 1,000.00
+723139 | Ostali prihodi | 30,228.00
+73 | TEKUĆI GRANTOVI | 419,000.00
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 22,000.00
+731000 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 22,000.00
+732 | Tekući grantovi od ostalih nivoa vlasti | 388,000.00
+732111 | Primljeni tekući grantovi od Države | 15,000.00
+
+732112 | Primljeni tekući grantovi od Federacije | 110,000.00
+732113 | Primljeni tekući grantovi od Republike Srpske | 100,000.00
+732114 | Primljeni tekući grantovi od kantona | 160,000.00
+732116 | Primljeni tekući grantovi od opština | 3,000.00
+733 | Donacije | 9,000.00
+733112 | Donacije od pravnih lica | 9,000.00
+77 | PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 500.00
+777 | Prihodi po osnovu zaostalih obaveza | 500.00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 500.00
+81 | KAPITALNI PRIMICI | 0.00
+811111 | Primici od prodaje zemljišata | 0.00
+A | UKUPNO PRIHODI | 3,083,828.00
+
+61 | TEKUĆI RASHODI | 2,746,706.93
+611 | Plate i naknade troškova zaposlenih | 1,234,000.00
+611100 | Bruto plate i naknade plata | 1,100,000.00
+611110 | Plaće i naknade plaće po umanjenju doprinosa | 760,000.00
+611130 | Doprinosi na teret zaposlenih | 340,000.00
+611200 | Naknade troškova zaposlenih | 134,000.00
+611210 | Naknade za prijevoz i troškove smještaja | 14,000.00
+611220 | Naknade iz radnog odnosa | 120,000.00
+611230 | Posebne naknade | 0.00
+612 | Doprinosi poslodavca i ostali doprinosi | 115,000.00
+612100 | Doprinosi poslodavca | 115,000.00
+613 | Izdaci za materijal, sitan inventar i usluge | 510,500.00
+613100 | Putni troškovi | 17,500.00
+613110 | Putni troškovi u zemlji | 13,000.00
+613120 | Putni troškovi u inostranstvo | 4,500.00
+613200 | Izdaci za energiju | 97,000.00
+613210 | Izdaci za energiju | 97,000.00
+613211 | Izdaci za električnu energiju | 77,000.00
+613215 | Drvo | 20,000.00
+613300 | Izdaci za komunikaciju i komunalne usluge | 84,000.00
+613310 | Izdaci za komunikaciju | 37,000.00
+613320 | Izdaci za komunalne usluge | 47,000.00
+613400 | Nabavka materijala i sitnog inventara | 19,500.00
+613410 | Administrativni materijal i sitan inventar | 18,000.00
+613430 | Obrazovni materijal | 500.00
+613480 | Ostali materijali posebne namjene | 1,000.00
+613500 | Izdaci za usluge prevoza i goriva | 36,000.00
+613510 | Gorivo za prijevoz | 35,000.00
+613520 | Prijevozne usluge | 1,000.00
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 3,000.00
+613610 | Unajmljivanje imovine | 0.00
+613620 | Unajmljivanje opreme | 3,000.00
+613700 | Izdaci za tekuće održavanje | 80,000.00
+613710 | Materijal za popravke i održavanje | 30,000.00
+613720 | Usluge popravaka i održavanja | 50,000.00
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6,000.00
+613810 | Izdaci osiguranja | 3,500.00
+613820 | Usluge bankarskog i platnog prometa | 2,500.00
+613900 | Ugovorene i druge posebne usluge | 167,500.00
+
+613910 | Izdaci za informisanje | 32,000.00
+613911 | Usluge medija | 2,000.00
+613914 | Usluge reprezentacija | 26,000.00
+613915 | Ostale stručne usluge | 1,000.00
+613916 | Usluge objavljivanja tendera i oglasa | 2,000.00
+613919 | Ostali izdaci za informosanje | 1,000.00
+613920 | Usluge za stručno obrazovanje | 1,500.00
+613930 | Stručne usluge | 13,000.00
+613960 | Zatezne kamate i troškovi spora | 10,000.00
+613970 | Izdaci po osnovi drugih samost. djelatnosti i povremenog samost. rada | 92,000.00
+613974 | Izdaci za rad komisija | 12,000.00
+613975 | Izdaci za naknade opštinskim vijećnicima | 53,000.00
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 27,000.00
+613980 | Izdaci za poreze i dopr.na dohodak od druge samos.djelat i povrem.sam.rada | 17,000.00
+613983 | Posebna naknada na dohodak za zaštitu od prirodnih i drugih nepogoda | 400.00
+613986 | Dop.za zdrav.osig.iz primitaka od druge sam.djelat.i povrem.sam.rada | 3,500.00
+613987 | Dop.za MIO na primitke od druge sam.djelat.i povrem.sam.rada | 5,100.00
+613988 | Porez na dohodak od druge sam. djelat. i povrem. samostalnog rada | 8,000.00
+613990 | Ostale nespomenute usluge i dadžbine | 2,000.00
+613991 | Ostale nespomenute usluge i dadžbine | 2,000.00
+614 | Tekući transferi i drugi tekući rashodi | 815,300.00
+614100 | Tekući transferi drugim razinama vlasti | 427,000.00
+614110 | Tekući transferi drugim razinama vlasti | 91,000.00
+614117 | Tekući transferi mjesnim zajednicama | 25,000.00
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 66,000.00
+614120 | Namjenski transferi drugim razinama vlasti | 108,000.00
+614121 | Transfer za kulturu | 15,000.00
+614122 | Transfer za sport | 15,000.00
+614124 | Transfer za izbore | 31,000.00
+614129 | Transfer za JU "Centar za kulturu i sport" Drvar | 47,000.00
+614130 | Ostali namjenski transferi | 225,000.00
+614133 | Transfer obrazovnim institucijama | 75,000.00
+614136 | Transfer dječijem vrtiću | 70,000.00
+614139 | Transfer za razvoj turizma | 80,000.00
+614170 | Tekući transferi za zdravstvo | 3,000.00
+614200 | Tekući transferi pojedincima | 260,200.00
+614220 | Transferi pojedincima po osnovi materijalno-socijalne sigurn. nezaposl. osoba | 110,000.00
+614230 | Ostali tekući transferi pojedincima | 39,200.00
+614234 | Isplata stipendija | 26,000.00
+614239 | Ostali transferi pojedincima - pomoć za novorođenčad i prvačće | 12,000.00
+614239 | Ostali transferi pojedincima - nagrade, priznanja i plakete | 1,200.00
+614240 | Transferi pojedincima za posebne namjene | 85,000.00
+614241 | Transfer za posebne namjene-elementarne nepogode | 2,000.00
+614243 | Transfer za prevoz učenika | 57,000.00
+614244 | Transferi za poticaj poljoprivredne proizvodnje | 26,000.00
+614250 | Transferi pojedincima na području zdravstvenog osiguranja | 26,000.00
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1,000.00
+614253 | Pogrebni troškovi | 0.00
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 25,000.00
+614300 | Tekući transfer neprofitnim organizacijama | 39,100.00
+614310 | Tekući transferi neprofitnim organizacijama | 33,500.00
+614311 | Tekući transferi neprofitnim organizacijama | 28,000.00
+614319 | Tekući transferi vjerskim zajednicama | 5,500.00
+
+614320 | Ostali tekući transferi neprofitnim organizacijama | 5,600.00
+614324 | Tekući transfer udruženjima građana | 5,600.00
+614400 | Subvencije javnim preduzećima | 70,000.00
+614410 | Subvencije javnim preduzećima | 70,000.00
+614800 | Drugi tekući rashodi | 19,000.00
+614817 | Izvršenje sudskih presuda i rješenja o izvršenju | 19,000.00
+616 | Izdaci za kamate | 71,906.93
+616300 | Kamate na domaće pozajmljivanje | 71,906.93
+616331 | Kamate na pozajmice od domaćih financijskih institucija | 71,906.93
+82 | KAPITALNI IZDACI | 321,921.07
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada
+821200 | Nabavka građevina | 20,000.00
+821300 | Nabavka opreme | 60,000.00
+821500 | Nabava stalnih sredstava u obliku prava | 15,000.00
+821600 | Rekonstrukcija i investiciono održavanje | 115,000.00
+823300 | Otplate domaćeg pozajmljivanja | 111,921.07
+ | Tekuća budžetska rezerva | 15,200.00
+B | UKUPNO RASHODI | 3,083,828.00
+ | RAZLIKA (DOBITAK-GUBITAK) | 0.00
+
+Bosna i Hercegovina
+ Federacija Bosne i Hercegovine
+ Kanton 10
+ Opštinsko vijeće Drvar
+
+PREDSJEDNIK
+ OPŠTINSKOG VIJEĆA
+ Nikica Bosnić,s.r.
+
+Broj: 01-02-223-5/19
+ Datum: 28.03.2019. godine
+
+29Na osnovu člana 32. Zakona o budžetima FBiH ("Službene novine F BiH" broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15,104/16 i 5/18) i člana 42., a u vezi sa članom 49. stav 1. alineja 3. Statuta Opštine Drvar - Prečišćeni tekst ("Službeni glasnik Opštine Drvar", broj: 2/15), na prijedlog načelnice Opštine, Opštinsko vijeće Drvar na Vanrednoj sjednici održanoj 28.03.2019. godine, donijelo je
+
+BUDŽET opštine Drvar za 2019. godinu
+
+I OPŠTI DIO
+
+Član 1.
+
+Budžet opštine Drvar za period 01.01. - 31.12.2019. godinu sadrži:
+
+BUDŽET | | BUDŽET
+2019 |
+1 | 2 | 3
+
+A | UKUPNI PRIHODI | 3,154,300.00
+B | UKUPNI RASHODI | 3,154,300.00
+A - B | RAZLIKA (DOBITAK-GUBITAK) | 0.00
+
+II RAČUN PRIHODA I RASHODA
+
+Član 2
+
+Prihodi i rashodi po grupama prikazani su u Računu prihoda i rashoda kako slijedi:
+
+Ekonom kod | O P I S | BUDŽET
+2019 |
+1 | 2 | 3
+71 | POREZNI PRIHODI | 1,269,700.00
+711 | Porezi na dobit pojedinaca i preduzeća - zaostale uplate | 500.00
+713 | Porezi na plate i radnu snagu - zaostale uplate Porezi na plate i radnu snagu - zaostale | 1,000.00
+714 | Porezi na imovinu | 33,100.00
+714111 | Porez na imovinu od fizičkih lica | 10,000.00
+714112 | Porez na imovinu od pravnih lica | 2,000.00
+714113 | Porez na imovinu za motorna vozila | 1,000.00
+714131 | Porez na promet nepokretnosti od fizičkih lica | 10,000.00
+714132 | Porez na promet nepokretnosti od pravnih lica | 10,000.00
+714191 | Ostali porezi na imovinu | 100.00
+715 | Domaći porezi na dobra i usluge - zaostale uplate Domaći porezi na dobra i usluge - zaostale | 100.00
+716 | Porez na dohodak | 210,000.00
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 175,000.00
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 2,000.00
+716113 | Porez na dohodak fizičkih lica od imovine i imovinskih prava | 2,000.00
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 12,000.00
+716116 | Porez na doh.od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 18,000.00
+716117 | Porez na dohodak po konačnom obračunu | 1,000.00
+717 | Prihodi od indirektnih poreza | 1,010,000.00
+717130 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 75,000.00
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 935,000.00
+719 | Ostali porezi | 15,000.00
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1,000.00
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 2,000.00
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 12,000.00
+72 | NEPOREZNI PRIHODI | 1,354,100.00
+721 | Prihodi od preduzetničke aktivnosti i imovine | 79,100.00
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 2,000.00
+721121 | Prihodi od iznajmljivanja zemljišta | 40,000.00
+721122 | Prihodi od iznajmlji. poslovnih prostora i ostale materijalne imovine | 35,000.00
+721227 | Prihodi od zakupa - korišćenja sportsko-privrednih lovišta | 2,000.00
+721239 | Ostali prihodi od imovine | 100.00
+722 | Naknade, takse i prihodi od pružanja javnih usluga | 1,238,500.00
+722130 | Opštinske adminisrativne takse | 73,000.00
+722321 | Opštinske komunalne takse | 150,000.00
+722322 | Opštinske komunalne naknade za istaknutu firmu | 55,000.00
+722433 | Naknade za uređenje građevinskog zemljišta | 5,000.00
+722434 | Naknade za korišćenje građevinskog zemljišta | 5,000.00
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 3,000.00
+
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za poseb.namjene | 150,000.00
+722454 | Naknada za korišćenje državnih šuma | 700,000.00
+722461 | Naknada za zauzimanje javnih površina | 3,000.00
+722515 | Naknada za korištenje podataka premjera i katastra | 3,000.00
+722531 | Naknade za upotrebu puteva za vozila pravnih lica | 16,000.00
+722532 | Naknada za upotrebu puteva za vozila građana | 35,000.00
+722581 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos NP za isplatu | 22,000.00
+722582 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos prih.po drug.osnovam. | 2,000.00
+722583 | Naknada za vatrog.jedin.iz premije osig.imovine od požara i pr.sila | 500.00
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatrog.jedin. | 500.00
+722760 | Uplaćene refundacije iz ranijih godina | 15,000.00
+722790 | Ostale neplanirane uplate | 500.00
+723 | Novčane kazne | 36,500.00
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500.00
+723131 | Novčane kazne po opštinskim propisima | 1,000.00
+723139 | Ostali prihodi | 35,000.00
+73 | TEKUĆI GRANTOVI | 520,000.00
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 20,000.00
+731000 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 20,000.00
+732 | Tekući grantovi od ostalih nivoa vlasti | 490,000.00
+732111 | Primljeni tekući grantovi od Države | 50,000.00
+732112 | Primljeni tekući grantovi od Federacije | 120,000.00
+732113 | Primljeni tekući grantovi od Republike Srpske | 100,000.00
+732114 | Primljeni tekući grantovi od kantona | 200,000.00
+732116 | Primljeni tekući grantovi od opština | 20,000.00
+733 | Donacije | 10,000.00
+733112 | Donacije od pravnih lica | 10,000.00
+77 | PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 500.00
+777 | Prihodi po osnovu zaostalih obaveza | 500.00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 500.00
+81 | KAPITALNI PRIMICI | 10,000.00
+811111 | Primici od prodaje zemljišata | 10,000.00
+A | UKUPNO PRIHODI | 3,154,300.00
+
+61 | TEKUĆI RASHODI | 2,824,764.54
+611 | Plate i naknade troškova zaposlenih | 1,313,500.00
+611100 | Bruto plate i naknade plata | 1,156,500.00
+611110 | Plaće i naknade plaće po umanjenju doprinosa | 800,000.00
+611130 | Doprinosi na teret zaposlenih | 356,500.00
+611200 | Naknade troškova zaposlenih | 157,000.00
+611210 | Naknade za prijevoz i troškove smještaja | 15,000.00
+611220 | Naknade iz radnog odnosa | 140,000.00
+611230 | Posebne naknade | 2,000.00
+612 | Doprinosi poslodavca i ostali doprinosi | 120,000.00
+612100 | Doprinosi poslodavca | 120,000.00
+613 | Izdaci za materijal, sitan inventar i usluge | 521,972.00
+613100 | Putni troškovi | 19,000.00
+613110 | Putni troškovi u zemlji | 12,000.00
+613120 | Putni troškovi u inostranstvo | 7,000.00
+613200 | Izdaci za energiju | 98,552.00
+613210 | Izdaci za energiju | 98,552.00
+613211 | Izdaci za električnu energiju | 78,552.00
+
+613215 | Drvo | 20,000.00
+613300 | Izdaci za komunikaciju i komunalne usluge | 58,000.00
+613310 | Izdaci za komunikaciju | 35,000.00
+613320 | Izdaci za komunalne usluge | 23,000.00
+613400 | Nabavka materijala i sitnog inventara | 20,000.00
+613410 | Administrativni materijal i sitan inventar | 18,000.00
+613430 | Obrazovni materijal | 1,000.00
+613480 | Ostali materijali posebne namjene | 1,000.00
+613500 | Izdaci za usluge prevoza i goriva | 26,500.00
+613510 | Gorivo za prijevoz | 25,000.00
+613520 | Prijevozne usluge | 1,500.00
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 3,500.00
+613610 | Unajmljivanje imovine | 1,000.00
+613620 | Unajmljivanje opreme | 2,500.00
+613700 | Izdaci za tekuće održavanje | 135,000.00
+613710 | Materijal za popravke i održavanje | 15,000.00
+613720 | Usluge popravaka i održavanja | 120,000.00
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6,500.00
+613810 | Izdaci osiguranja | 4,000.00
+613820 | Usluge bankarskog i platnog prometa | 2,500.00
+613900 | Ugovorene i druge posebne usluge | 154,920.00
+613910 | Izdaci za informisanje | 28,000.00
+613911 | Usluge medija | 2,000.00
+613914 | Usluge reprezentacija | 20,000.00
+613915 | Ostale stručne usluge | 2,000.00
+613916 | Usluge objavljivanja tendera i oglasa | 2,000.00
+613919 | Ostali izdaci za informosanje | 2,000.00
+613920 | Usluge za stručno obrazovanje | 2,000.00
+613930 | Stručne usluge | 10,000.00
+613960 | Zatezne kamate i troškovi spora | 12,000.00
+613970 | Izdaci po osnovi drugih samost. djelatnosti i povremenog samost. rada | 83,000.00
+613974 | Izdaci za rad komisija | 8,000.00
+613975 | Izdaci za naknade opštinskim vijećnicima | 55,000.00
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 20,000.00
+613980 | Izdaci za poreze i dopr. na dohodak od druge samost. djelat i povrem. sam. rada | 17,920.00
+613983 | Posebna naknada na dohodak za zaštitu od prirodnih i drugih nepogoda | 380.00
+613986 | Dop. za zdrav. osig. iz primitaka od druge sam. djelat. i povrem. sam. rada | 3,580.00
+613987 | Dop. za MIO na primitke od druge sam. djelat. i povrem. sam. rada | 5,370.00
+613988 | Porez na dohodak od druge sam. djelat. i povrem. samostalnog rada | 8,590.00
+613990 | Ostale nespomenute usluge i dadžbine | 2,000.00
+613991 | Ostale nespomenute usluge i dadžbine | 2,000.00
+614 | Tekući transferi i drugi tekući rashodi | 805,000.00
+614100 | Tekući transferi drugim razinama vlasti | 419,000.00
+614110 | Tekući transferi drugim razinama vlasti | 86,000.00
+614117 | Tekući transferi mjesnim zajednicama | 20,000.00
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 66,000.00
+614120 | Namjenski transferi drugim razinama vlasti | 104,000.00
+614121 | Transfer za kulturu | 15,000.00
+614122 | Transfer za sport | 20,000.00
+614124 | Transfer za izbore | 27,000.00
+614129 | Transfer za JU Centar za socijalnu zaštitu | 2,000.00
+614129 | Transfer za JU Centar za kulturu i sport | 40,000.00
+614130 | Ostali namjenski transferi | 189,000.00
+
+614133 | Transfer obrazovnim institucijama | 69,000.00
+614136 | Transfer dječijem vrtiću | 80,000.00
+614139 | Transfer za razvoj turizma | 40,000.00
+614170 | Tekući transferi za zdravstvo | 40,000.00
+614200 | Tekući transferi pojedincima | 255,000.00
+614220 | Transferi pojedincima po osnovi materijalno-socijalne sigurn. nezaposl. osoba | 90,000.00
+614230 | Ostali tekući transferi pojedincima | 51,000.00
+614234 | Isplata stipendija | 25,000.00
+614239 | Ostali transferi pojedincima - pomoć za novorođenčad i prvačiće | 25,000.00
+614239 | Ostali transferi pojedincima - nagrade, priznanja i plakete | 1,000.00
+614240 | Transferi pojedincima za posebne namjene | 86,500.00
+614241 | Transfer za posebne namjene-elementarne nepogode | 3,500.00
+614243 | Transfer za prevoz učenika | 58,000.00
+614244 | Transferi za poticaj poljoprivredne proizvodnje | 25,000.00
+614250 | Transferi pojedincima na području zdravstvenog osiguranja | 27,500.00
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1,000.00
+614253 | Pogrebni troškovi | 1,000.00
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 25,500.00
+614300 | Tekući transfer neprofitnim organizacijama | 31,000.00
+614310 | Tekući transferi neprofitnim organizacijama | 26,000.00
+614311 | Transfer za Crveni krst | 18,000.00
+614311 | Tekući transferi neprofitnim organizacijama - ostali | 5,000.00
+614319 | Tekući transferi vjerskim zajednicama | 3,000.00
+614320 | Ostali tekući transferi neprofitnim organizacijama | 5,000.00
+614324 | Tekući transfer udruženjima građana | 5,000.00
+614400 | Subvencije javnim preduzećima | 60,000.00
+614410 | Subvencije javnim preduzećima | 60,000.00
+614800 | Drugi tekući rashodi | 40,000.00
+614817 | Izvršenje sudskih presuda i rješenja o izvršenju | 40,000.00
+616 | Izdaci za kamate | 64,292.54
+616300 | Kamate na domaće pozajmljivanje | 64,292.54
+616331 | Kamate na pozajmice od domaćih financijskih institucija | 64,292.54
+82 | KAPITALNI IZDACI | 299,535.46
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada
+821200 | Nabavka građevina | 25,000.00
+821300 | Nabavka opreme | 50,000.00
+821500 | Nabava stalnih sredstava u obliku prava | 65,000.00
+821600 | Rekonstrukcija i investiciono održavanje | 40,000.00
+823300 | Otplate domaćeg pozajmljivanja | 119,535.46
+ | Tekuća budžetska rezerva | 30,000.00
+B | UKUPNO RASHODI | 3,154,300.00
+ | RAZLIKA (DOBITAK-GUBITAK) | 0.00
+
+Bosna i Hercegovina
+ Federacija Bosne i Hercegovine
+ Kanton 10
+ Opštinsko vijeće Drvar
+
+Broj: 01-02-224-2/19
+ Datum: 28.03.2019. godine
+
+PREDSJEDNIK
+ OPŠTINSKOG VIJEĆA
+ Nikica Bosnić,s.r.
+
+30Na osnovu člana 5. stav 2. Zakona o budžetima u Federaciji BiH ("Službene novine F BiH", broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16 i 5/18) i člana 42. stav 2. alineja 2., a u vezi sa članom 49. stav 1. alineja 3. Statuta Opštine Drvar – Prečišćeni tekst ("Službeni glasnik Opštine Drvar", broj: 2/15), na prijedlog načelnice Opštine, Opštinsko vijeće Drvar, na Vanrednoj sjednici održanoj 28.03.2019.godine, donijelo je
+
+ODLUKU
+o izvršenju Budžeta opštine Drvar za 2019.
+godinu
+
+Član 1.
+
+Ovom Odlukom uređuje se način izvršenja Budžeta opštine Drvar za 2019. godinu ( u daljem tekstu: Budžet).
+
+Član 2.
+
+Sredstva Budžeta koriste se za finansiranje poslova, funkcija i programa opštine Drvar i budžetskih korisnika.
+
+Član 3.
+
+Sredstva Budžeta namjenski prikupljena mogu se upotrebiti isključivo za namjene za koje su prikupljena.
+
+Član 4.
+
+Hitni i nepredviđeni, odnosno nedovoljno predviđeni izdaci koji se pojave u toku budžetske godine, podmiruju se iz sredstava tekuće rezerve utvrđenih u Budžetu.
+
+O korištenju sredstava tekuće rezerve odlučuje opštinski načelnik.
+
+Opštinski načelnik obavezan je da o korištenju sredstava budžetske rezerve informiše Opštinsko vijeće kroz Izvještaj o izvršenju Budžeta.
+
+Član 5.
+
+Ako se tokom godine, na osnovu Zakona ili drugog propisa, umanji nadležnost korisnika, što zahtjeva smanjena sredstva, ili se korisnik ukine, neutrošena sredstva za njegove troškove prenose se u tekuću rezervu Budžeta, ili na korisnika koji preuzme njegove poslove, uz odobrenja opštinskog načelnika.
+
+Član 6.
+
+Prioritet izvršavanja Budžeta opštine Drvar za 2019. godinu je:
+
+- - Otplata kreditnih zaduženja,
+- - Plate i naknade zaposlenih,
+- - Materijalni troškovi poslovanja,
+
+- - Isplate socijalne pomoći ugroženim građanima i
+- - Ostale obaveze.
+
+Član 7.
+
+Budžet opštine Drvar, Odluka o izvršenju Budžeta Opštine, kao i svaka izmjena i dopuna Budžeta i Odluke objavljuju se u "Službenom glasniku Opštine Drvar".
+
+Godišnji izvještaj o izvršenju Budžeta objavljuje se u "Službenom glasniku Opštine Drvar".
+
+Odluke o dugu, garancijama i zajmovima objavljuju se u "Službenom glasniku Opštine Drvar".
+
+Član 8.
+
+Ova Odluka stupa na snagu osmog dana od dana objavljivanja u "Službenom glasniku Opštine Drvar", a objaviće se i na Oglasnoj tabli Opštine Drvar.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opštinsko vijeće Drvar
+
+PREDSJEDNIK
+OPŠTINSKOG VIJEĆA
+Nikica Bosnić, s.r.
+
+Broj: 01-02-873-1/19
+Drvar, 28.03.2019.godine
+
+31Na osnovu člana 42., a u vezi sa članom 127. stav 1. Statuta Opštine Drvar – Prečišćeni tekst („Službeni glasnik Opštine Drvar, broj: 2/15), člana 16. stav 1. alineja 2. Odluke o osnivanju Javne ustanove „Centar za kulturu i sport“ Drvar – Prečišćeni tekst („Službeni glasnik Opštine Drvar“, broj: 1/18) i člana 26. stav (5) Statuta Javne ustanove „Centar za kulturu i sport“ Drvar, broj: 179-2/17 od 29.09.2017.godine, na prijedlog Komisije za izbor, imenovanja i administrativne poslove, Opštinsko vijeće Drvar, na Vanrednoj sjednici održanoj 28.03.2019.godine, donijelo je
+
+ODLUKU
+
+o davanju saglasnosti na Odluku o
+razrješenju v.d. direktora Javne ustanove
+„Centar za kulturu i sport“ Drvar
+
+Član 1.
+
+DAJE se saglasnost na Odluku Upravnog odbora Javne ustanove „Centar za kulturu i sport“ Drvar, broj: 02-51/19 od 15.03.2019.godine o razrješenju SAŠE KARANOVIĆA iz Drvara dužnosti v.d. direktora Javne ustanove „Centar za kulturu i sport“ Drvar.
+
+Član 2.Odluka iz člana 1. je sastavni dio ove Odluke.
+
+Član 3.Ova Odluka stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku Opštine Drvar” i na Oglasnoj tabli Opštine Drvar.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opštinsko vijeće Drvar
+
+Broj: 01-02-846-3/19
+Drvar, 28.03.2019.godine
+
+PREDSJEDNIK
+OPŠTINSKOG VIJEĆA
+Nikica Bosnić, s.r.
+
+31a
+
+JAVNA USTANOVA
+"CENTAR ZA KULTURU I SPORT"
+DRVAR
+UPRAVNI ODBOR
+
+Broj: 02-51/19
+Datum: 15. mart 2019.godine
+
+Upravni odbor Javne ustanove "Centar za kulturu i sport" Drvar, na osnovu člana 37. stav 1. Zakona o ustanovama ("Narodne novine HBŽ", broj: 10/98), a u vezi sa članom 28. Statuta Javne ustanove "Centar za kulturu i sport" Drvar, broj: 179-2/17 od 29.09.2017.godine, na sjednici održanoj 15. marta 2019.godine, jednoglasno je u svoji o
+
+ODLUKUISaša Karanović iz Drvara, RAZRJEŠAVA SE funkcije vršioca dužnosti direktora Javne ustanove "Centar za kulturu i sport" Drvar na lični zahtjev sa danom stupanja na snagu ove odluke.
+
+IIStupanjem na snagu ove odluke, imenovani iz tačke I ove odluke, PRESTAJU sva prava i obaveze koji proizilate iz obavljanja funkcije direktora javne ustanove.
+
+IIIOva odluka stupa na snagu danom pribavljanja saglasnosti od strane osnivača javne ustanove – Opštine Drvar.
+
+IVOdluku i suglasnost osnivača OBJAVITI na oglasnoj tabli u sjedištu javne ustanove.
+
+PREDSJEDNIK UPRAVNOG ODBORA
+Nemanja Tomić, s.r.
+
+32
+
+Na osnovu člana 42., a u vezi sa članom 127. stav 1. Statuta Opštine Drvar – Prečišćeni tekst („Službeni glasnik Opštine Drvar, broj: 2/15), člana 16. stav 1. alineja 2. Odluke o osnivanju Javne ustanove „Centar za kulturu i sport” Drvar – Prečišćeni tekst („Službeni glasnik Opštine Drvar”, broj: 1/18) i člana 26. stav (5) Statuta Javne ustanove „Centar za kulturu i sport” Drvar, broj: 179-2/17 od 29.09.2017.godine, na prijedlog Komisije za izbor, imenovanja i administrativne poslove, Opštinsko vijeće Drvar, na Vanrednoj sjednici održanoj 28.03.2019.godine, donijelo je
+
+ODLUKUo davanju saglasnosti na Odluku o
+imenovanju v.d. direktora Javne ustanove
+„Centar za kulturu i sport” Drvar
+
+Član 1.DAJE se saglasnost na Odluku o imenovanju SUZANE JOVIĆ iz Drvara na dužnost v.d. direktora Javne ustanove „Centar za kulturu i sport” Drvar, broj: 02-55/19 od 20.03.2019.godine.
+
+Član 2.Odluka iz člana 1. je sastavni dio ove Odluke.
+
+Član 3.Ova Odluka stupa na snagu danom donošenja, a objaviće se u „Službenom glasniku Opštine Drvar” i na Oglasnoj tabli Opštine Drvar.
+
+Bosna i Hercegovina
+Federacija Bosne i Hercegovine
+Kanton 10
+Opštinsko vijeće Drvar
+
+PREDSJEDNIK
+OPŠTINSKOG VIJEĆA
+Nikica Bosnić, s.r.
+
+32aJAVNA USTANOVA
+"CENTAR ZA KULTURU I SPORT"
+DRVAR
+UPRAVNI ODBORBroj: 02-55/19Datum: 20.mart 2019.godineUpravni odbor Javne ustanove "Centar za kulturu i sport" Drvar, na osnovu člana 29. Statuta Javne ustanove "Centar za kulturu i sport" Drvar, broj: 179-2/17 od 29.09.2017.godine, na sjednici održanoj 20. marta 2019.godine, jednoglasno je u s v o j i o
+
+ODLUKU
+o imenovanju vršioca dužnosti direktora Javne
+ustanove "Centar za kulturu i sport" DrvarISuzana Jović, iz Drvara, IMENUJE SE za vršioca dužnosti direktora Javne ustanove "Centar za kulturu i sport" Drvar.
+
+IIImenovanoj iz tačke I ove odluke mandat vršioca dužnosti direktora traje do izbora direktora na osnovu javnog konkursa, a najduže jednu godinu i počinje teći danom stupanja na dužnost.
+
+IIIImenovana stupa na dužnost danom stupanja na snagu ove odluke.
+
+IVOva odluka stupa na snagu danom pribavljanja saglasnosti od strane osnivača javne ustanove Opštine Drvar.
+
+VOdluku i saglasnost osnivača OBJAVITI na oglasnoj tabli u sjedištu javne ustanove.
+
+
+PREDSJEDNIK UPRAVNOG ODBORA
+Nemanja Tomić, s.r.

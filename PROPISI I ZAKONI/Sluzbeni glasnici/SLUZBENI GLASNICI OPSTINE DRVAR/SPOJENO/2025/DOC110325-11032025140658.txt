@@ -1,0 +1,1786 @@
+title: "DOC110325-11032025140658"
+source: "DOC110325-11032025140658.pdf"
+pages: 42
+ocr: PaddleOCR-VL-1.6
+generated: 2026-08-07 08:34
+
+!
+
+SLUŻBENI GLASNIK
+
+Bosna i Hercegovina
+
+OSLA 2019N 17 CAREGOVINE
+
+OPŠTINE DRVAR OPŠTINA DRVAR DRVAR
+
+
+Primijeno: 11.03.2025
+Org. jed. | Broj | Primijno | Vrjedn.
+WFB-93 | 25
+
+
+GODINAXVIII | BROJ 6 | DRVAR, 04.03.2025.godine
+
+
+OPŠTINSKO VIJEĆE
+
+64.
+
+Na osnovu člana 7. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine FBiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19, 99/19 i 25/22), člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. alineja 18., a u vezi sa članom 49. stav 1. alineja 4. Statuta opštine Drvar – Prečišćeni tekst („Službeni glasnik opštine Drvar“, broj: 2/15), na prijedlog opštinskog Načelnika, Opštinsko vijée Drvar, na 4. redovnoj sjednici održanoj 28.02.2025.godine, d o n o s i:
+
+ODLUKU
+
+o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.31.12.2023.godine
+
+Član 1.
+
+1. Ovom Odlukom Opštinsko vijeće Drvar usvaja Izvještaj o izvršenju budžeta za period od 01.01.31.12.2023.godine.
+
+2. Izvršenje Budžeta opštine Drvar za period 01.01.-31.12.2023.godine, sastoji se od:
+
+UKUPNI PRIHODI.....3,888,048.23
+
+POREZNI PRIHODI.....1,581,916.63
+
+NEPOREZNI PRIHODI.....1,116,827.38
+
+TEKUĆI GRANTOVI.....829,304.22
+
+PRIHODI PO OSNOVU ZAOSTALIH
+
+OBAVEZA.....0.00
+
+KAPITALNI PRIMICI.....0.00
+
+PRENESENA SREDSTVA.....360,000.00
+
+UKUPNI RASHODI.....4,273,666.24
+
+TEKUĆI RASHODI.....3,591,422.94
+
+KAPITALNI IZDACI.....682,243.30
+
+Član 2.
+
+Sastavni dio ove Odluke je Izvršenje budžeta Opštine Drvar za period 01.01.-31.12.2023.godine.
+
+Član 3.
+
+Ova Odluka stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-912-1/24
+
+Datum: 28.02.2025.godine
+
+PREDSJEDNIK
+
+OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac, s.r.
+
+PRILOG
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA OPŠTINE DRVAR ZA PERIOD 01.01.-31.12.2023.GODINE
+
+I OPŠTI DIO
+
+
+O P I S | BUDŽET\n2023 | Izvršenje za\nperiod 01.01.-\n31.12.2023. | Index 2023
+1 | 2 | 3 | 4 | 5
+A | UKUPNI PRIHODI | 4.750.000,00 | 3.888.048,23 | 81,85
+71 | POREZNI PRIHODI | 1.459.500,00 | 1.581.916,63 | 108,39
+72 | NEPOREZNI PRIHODI | 1.420.000,00 | 1.116.827,38 | 78,65
+73 | TEKUĆI GRANTOVI | 1.505.000,00 | 829.304,22 | 55,10
+77 | PRIHODI PO OSNOVU\nZAOSTALIH OBAVEZA | 500,00 | 0,00 | 0,00
+81 | KAPITALNI PRIMICI | 5.000,00 | 0,00 | 0,00
+59 | PRENESENA SREDSTVA | 360.000,00 | 360.000,00 | 100,00
+B | UKUPNI RASHODI | 4.750.000,00 | 4.273.666,24 | 89,97
+61 | TEKUĆI RASHODI | 3.619.000,00 | 3.591.422,94 | 99,24
+82 | KAPITALNI IZDACI | 1.131.000,00 | 682.243,30 | 60,32
+
+
+PRIHODI I PRIMICI
+
+
+Ekonomski kod | PRIHODI- A | BUDŽET 2023 | Izvršenje za period 01.01.-31.12.2023. | Index
+1 | 2 | 3 | 4 | 5
+71 | I- POREZNI PRIHODI | 1.459.500,00 | 1.581.916,63 | 108,39
+711000 | Porezi na dobit pojedinaca i produzeća - zaostale uplate | 500,00 | 479,73 | 95,95
+711115 | Porez na prihod od imovine i imovinskih prava | 500,00 | 479,73 | 95,95
+713000 | Porezi na plate i radnu snagu - zaostale uplate | 2.000,00 | 188,07 | 9,40
+713111 | Porez na platu i druga lična primanja | 2.000,00 | 188,07 | 9,40
+714000 | Porezi na imovinu | 40.500,00 | 54.355,89 | 134,21
+714111 | Porez na imovinu od fizičkih lica | 8.000,00 | 6.598,17 | 82,48
+714112 | Porez na imovinu od pravnih lica | 1.500,00 | 1.200,63 | 80,04
+714113 | Porez na imovinu za motorna vozila | 500,00 | 175,00 | 35,00
+714121 | Porez na nasljedstvo i darove | 500,00 | 4.808,47 | 961,69
+714131 | Porez na promet nekretnina | 30.000,00 | 41.573,62 | 138,58
+715000 | Domaći porezi na dobra i usluge - zaostale uplate | 500,00 | 0,00 | 0,00
+716000 | Prihodi od poreza na dohodak | 258.000,00 | 306.431,57 | 118,77
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 200.000,00 | 255.032,67 | 127,52
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 4.000,00 | 2.940,91 | 73,52
+716113 | Porez na dohodak fizičkih lica od imonine i imovinskih prava | 2.000,00 | 642,91 | 32,15
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 22.000,00 | 25.820,71 | 117,37
+716116 | Porez na dohod od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 20.000,00 | 15.262,41 | 76,31
+716117 | Porez na dohodak po konačnom obračunu | 10.000,00 | 6.731,96 | 67,32
+717000 | Prihodi od indirektnih poreza | 1.140.000,00 | 1.205.793,70 | 105,77
+717131 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 80.000,00 | 88.877,37 | 111,10
+717140 | Prihodi od indirektnih pore za koji pripadaju jedinicama lokalne samouprave | 1.060.000,00 | 1.116.916,33 | 105,37
+719000 | Ostali porezi | 18.000,00 | 14.667,67 | 81,49
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1.500,00 | 277,10 | 18,47
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 1.500,00 | 850,02 | 56,67
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 15.000,00 | 13.540,55 | 90,27
+72 | II-NEPOREZNI PRIHODI | 1.420.000,00 | 1.116.827,38 | 78,65
+721000 | Prihodi od preduzetničke aktivnosti i imovine | 85.000,00 | 81.293,06 | 95,64
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 2.000,00 | 629,45 | 31,47
+721121 | Prihodi od iznajmljivanja zemljišta | 70.000,00 | 66.622,88 | 95,18
+721122 | Prihodi od iznajmljivi poslovnih prostora i ostale materijalne imovine | 10.000,00 | 12.498,23 | 124,98
+721227 | Prihodi od zakupa - koriščenja sportsko-privrednih lovišta | 2.000,00 | 1.542,50 | 77,13
+721239 | Ostali prihodi od imovine | 1.000,00 | 0,00 | 0,00
+722000 | Naknade, takse i prihodi od pružanja javnih usluga | 1.288.500,00 | 997.543,90 | 77,42
+722130 | Opšтинske administrative takse | 80.000,00 | 69.430,78 | 86,79
+722321 | Opštinske komunalne takse | 150.000,00 | 91.785,00 | 61,19
+722322 | Opštinske komunalne naknade za istaknutu firmu | 70.000,00 | 73.768,35 | 105,38
+722433 | Naknade za uređenje građevinskog zemljišta | 10.000,00 | 1.936,87 | 19,37
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 1.000,00 | 0,00 | 0,00
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za poseb.namjene | 190.000,00 | 79.289,19 | 41,73
+722454 | Naknada za koriščenje državnih šuma | 700.000,00 | 601.992,64 | 86,00
+722461 | Naknada za zauzimanje javnih površina | 1.000,00 | 96,50 | 9,65
+722475 | Naknada u postupku promjene namjene šumskog zemljišta (krčenje šuma) | 1.000,00 | 0,00 | 0,00
+722515 | Naknada za korištenje podataka premjera i katastra | 2.000,00 | 2.148,50 | 107,43
+722531 | Naknada za upotrebu puteva za vozila pravnih lica | 16.000,00 | 16.071,28 | 100,45
+722532 | Naknada za upotrebu puteva za vozila građana | 35.000,00 | 35.353,37 | 101,01
+722581 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos NP za isplatu | 20.000,00 | 25.208,51 | 126,04
+722582 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos prih.po drug.osnovam. | 1.000,00 | 436,13 | 43,61
+722583 | Naknada za vatrog.jedin.iz premije osig.imovine od požara i pr.sila | 500,00 | 6,68 | 1,34
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatrog.jedin. | 500,00 | 20,10 | 4,02
+722760 | Uplaćene refundacije iz ranijih godina | 10.000,00 | 0,00 | 0,00
+722790 | Ostale neplanirane uplate | 500,00 | 0,00 | 0,00
+723000 | Novčane kazne | 46.500,00 | 37.990,42 | 81,70
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500,00 | 0,00 | 0,00
+723131 | Novčane kazne po opštinskim propisima | 1.000,00 | 300,00 | 30,00
+723139 | Ostali prihodi | 45.000,00 | 37.690,42 | 83,76
+73 | III- TEKUĆI GRANTOVI | 1.505.000,00 | 829.304,22 | 55,10
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 500.000,00 | 2.542,58 | 0,51
+731111 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 500.000,00 | 2.542,58 | 0,51
+732 | Tekući grantovi od ostalih nivoa vlasti | 995.000,00 | 826.761,64 | 83,09
+732111 | Primljeni tekući grantovi od Države | 50.000,00 | 0,00 | 0,00
+732112 | Primljeni tekući grantovi od Federacije | 400.000,00 | 576.300,10 | 144,08
+732113 | Primljeni tekući grantovi od Republike Srpske | 150.000,00 | 0,00 | 0,00
+732114 | Primljeni tekući grantovi od kantona | 370.000,00 | 247.461,54 | 66,88
+732116 | Primljeni tekući grantovi od opština | 25.000,00 | 3.000,00 | 12,00
+733 | Donacije | 10.000,00 | 0,00 | 0,00
+733112 | Donacije od pravnih lica | 10.000,00 | 0,00 | 0,00
+77 | IV- PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 500,00 | 0,00 | 0,00
+777 | Prihodi po osnovu zaostalih obaveza | 500,00 | 0,00 | 0,00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 500,00 | 0,00 | 0,00
+81 | V- KAPITALNI PRIMICI | 5.000,00 | 0,00 | 0,00
+811111 | Primici od prodaje zemljišta | 5.000,00 | 0,00 | 0,00
+VI PRENESENA SREDSTVA | 360.000,00 | 360.000,00 | 100,00
+591100 | Prenesena sredstva iz prethodnih godina | 360.000,00 | 360.000,00 | 100,00
+A | UKUPNO PRIHODI\n(I+II+III+IV+V+VI) | 4.750.000,00 | 3.888.048,23 | 81,85
+
+
+RASHODI I IZDACI
+
+
+61 | I- TEKUĆI RASHODI | 3.619.000,00 | 3.591.422,94 | 99,24
+611000 | Plate i naknade troškova zaposlenih | 1.655.000,00 | 1.999.900,10 | 120,84
+611100 | Bruto plate zaposlenih | 1.450.000,00 | 1.758.359,84 | 121,27
+611200 | Naknade troškova zaposlenih | 205.000,00 | 241.540,26 | 117,82
+611211 | Naknada za prijevoz s posla i na posao | 15.000,00 | 15.590,00 | 103,93
+611221 | Naknada za topli obrok tokom rada | 120.000,00 | 159.889,76 | 133,24
+611224 | Regres za godišnji odmor | 40.000,00 | 41.632,50 | 104,08
+611225 | Otpremnine zbog odlaska u penziju | 10.000,00 | 0,00 | 0,00
+611227 | Pomoć u slučaju smrti, invalidnosti, bolesti | 20.000,00 | 24.428,00 | 122,14
+612000 | Doprinosi poslodavca i ostali doprinosi | 150.000,00 | 184.035,21 | 122,69
+612100 | Doprinosi poslodavca | 150.000,00 | 184.035,21 | 122,69
+613000 | Izdaci za materijal, sitan inventar i usluge | 602.000,00 | 551.593,84 | 91,63
+613100 | Putni troškovi | 17.000,00 | 13.582,22 | 79,90
+613200 | Izdaci za energiju i grijanje | 150.000,00 | 160.330,88 | 106,89
+613300 | Izdaci za komunikaciju i komunikalne usluge | 45.000,00 | 50.243,48 | 111,65
+613400 | Nabavka materijala i sitnog inventara | 21.000,00 | 17.177,13 | 81,80
+613500 | Izdaci za usluge gorivo i registraciju | 70.000,00 | 47.684,03 | 68,12
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 10.000,00 | 3.915,70 | 39,16
+613700 | Izdaci za tekuće održavanje | 55.000,00 | 44.887,02 | 81,61
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 10.000,00 | 3.078,34 | 30,78
+613900 | Ugovorene usluge | 224.000,00 | 210.695,04 | 94,06
+614000 | Tekući transferi i drugi tekući rashodi | 1.212.000,00 | 855.893,79 | 70,62
+614100 | Tekući transferi drugim nivoima vlasti | 156.000,00 | 16.146,75 | 10,35
+614200 | Tekući transferi pojedincima | 350.000,00 | 365.993,77 | 104,57
+614300 | Tekući transfer neprofitnim organizacijama | 525.000,00 | 353.156,16 | 67,27
+614400 | Transferi javnim preduzećima | 165.000,00 | 102.549,55 | 62,15
+614800 | Drugi tekući rashodi | 16.000,00 | 18.047,56 | 112,80
+82 | II- KAPITALNI IZDACI | 1.131.000,00 | 682.243,30 | 60,32
+821 | Izdaci za nabavku stalnih sredstava | 1.131.000,00 | 682.243,30 | 60,32
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada | 31.000,00 | 0,00 | 0,00
+821200 | Nabavka građevina | 600.000,00 | 349.169,32 | 58,19
+821300 | Nabavka opreme | 90.000,00 | 88.674,30 | 98,53
+821500 | Nabava stalnih sredstava u obliku prava | 40.000,00 | 36.232,66 | 90,58
+821600 | Rekonstrukcija i investiciono održavanje | 320.000,00 | 208.167,02 | 65,05
+823 | Izdaci za otplatu dugova | 50.000,00 | 0,00 | 0,00
+823511 | Garancije date JP Komunalac | 50.000,00 | 0,00 | 0,00
+B | UKUPNO RASHODI (I + II) | 4.750.000,00 | 4.273.666,24 | 89,97
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | -385.618,01 | 0,00
+
+
+Ⅱ POSEBNI DIO
+
+
+Ekonomski kod | RASHODI | Budžet 2023 | Izvršenje za period 01.01.-31.12.2023. | Index
+KABINET OPŠTINSKOG NAČELNIKA
+611100 | Bruto plate i naknade | 165.000,00 | 231.286,55 | 140,17
+611200 | Naknade troškova zaposlenih | 19.500,00 | 25.285,22 | 129,67
+612100 | Doprinosi poslodavca | 16.000,00 | 24.208,05 | 151,30
+Ukupno | 200.500,00 | 280.779,82 | 140,04
+OPŠTINSKO VIJEĆE
+611100 | Bruto plate i naknade | 100.000,00 | 109.522,16 | 109,52
+611200 | Naknade troškova zaposlenih | 13.000,00 | 9.735,69 | 74,89
+612100 | Doprinosi poslodavca | 10.000,00 | 11.463,59 | 114,64
+Ukupno | 123.000,00 | 130.721,44 | 106,28
+SLUŻBA ZA PRIVREDU FINANSIJE I INSPEKCIJSKE POSLOVE
+611100 | Bruto plate i naknade | 285.000,00 | 269.538,27 | 94,57
+611200 | Naknade troškova zaposlenih | 37.500,00 | 37.927,54 | 101,14
+612100 | Doprinosi poslodavca | 30.000,00 | 28.211,00 | 94,04
+Ukupno | 352.500,00 | 335.676,81 | 95,23
+SLUŻBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE
+611100 | Bruto plate i naknade | 220.000,00 | 260.561,17 | 118,44
+611200 | Naknade troškova zapolenih | 28.500 | 32.907,92 | 115,47
+612100 | Doprinosi poslodavca | 23.000,00 | 27.271,74 | 118,57
+Ukupno | 271.500,00 | 320.740,83 | 118,14
+SLUŻBA ZA OPSTU UPRAVU I DRUŠTVENE DJELATNOSTI
+611100 | Bruto plate i naknade | 440.000,00 | 648.821,23 | 147,46
+611200 | Naknade troškova zapolenih | 74.000,00 | 98.654,55 | 133,32
+612100 | Doprinosi poslodavca | 46.000,00 | 67.905,04 | 147,62
+Ukupno | 560.000,00 | 815.380,82 | 145,60
+SLUŽBA ZA CIVILNU ZAŠTITU
+611100 | Bruto plate i naknade | 125.000,00 | 123.089,94 | 98,47
+611200 | Naknade troškova zapolenih | 17.500,00 | 21.438,26 | 122,50
+612100 | Doprinosi poslodavca | 13.000,00 | 12.882,76 | 99,10
+Ukupno | 155.500,00 | 157.410,96 | 101,23
+SEKTOR ZA LOKALNI RAZVOJI INVESTICIJE
+611100 | Bruto plate i naknade | 115.000,00 | 115.540,52 | 100,47
+611200 | Naknade troškova zapolenih | 15.000,00 | 15.591,08 | 103,94
+612100 | Doprinosi poslodavca | 12.000,00 | 12.093,03 | 100,78
+Ukupno | 142.000,00 | 143.224,63 | 100,86
+
+
+611 | UKUPNO | 1.655.000,00 | 1.999.900,10 | 120,84
+612 | UKUPNO | 150.000,00 | 184.035,21 | 122,69
+611-612 | UKUPNO | 1.805.000,00 | 2.183.935,31 | 120,99
+613000 | Izdaci za materijal, sitan inventar i usluge | 602.000,00 | 551.593,84 | 91,63
+613110 | Putni troškovi u zemlji | 7.000,00 | 5.964,65 | 85,21
+613120 | Putni troškovi u inostranstvo | 10.000,00 | 7.617,57 | 76,18
+613211 | Izdaci za električnu energiju | 100.000,00 | 108.160,49 | 108,16
+613215 | Drvo/pelet | 50.000,00 | 52.170,39 | 104,34
+613310 | Izdaci za komunikaciju | 35.000,00 | 42.479,19 | 121,37
+613320 | Izdaci za komunikalne usluge | 10.000,00 | 7.764,29 | 77,64
+613411 | Izdaci za obrasce | 6.000,00 | 1.630,60 | 27,18
+613416 | Izdaci za kancelarijski materijal | 10.000,00 | 5.865,28 | 58,65
+613417 | Izdaci za sitan inventar | 2.000,00 | 1.474,23 | 73,71
+613418 | Ostali izdaci | 3.000,00 | 8.207,02 | 273,57
+613510 | Gorivo za prijevoz | 60.000,00 | 39.765,68 | 66,28
+613520 | Prijevozne usluge | 3.000,00 | 2.433,00 | 81,10
+613523 | Registracija vozila | 7.000,00 | 5.485,35 | 78,36
+613611 | Unajmljivanje imovine | 1.000,00 | 0,00 | 0,00
+613621 | Unajmljivanje opreme | 9.000,00 | 3.915,70 | 43,51
+613710 | Materijal za popravke i održavanje | 15.000,00 | 3.228,47 | 21,52
+613720 | Usluge popravaka i održavanja | 40.000,00 | 41.658,55 | 104,15
+613810 | Izdaci osiguranja | 2.000,00 | 0,00 | 0,00
+613820 | Usluge bankarskog i platnog prometa | 8.000,00 | 3.078,34 | 38,48
+613911 | Usluge medija | 5.000,00 | 3.639,40 | 72,79
+613912 | Usluge štampanja | 3.000,00 | 0,00 | 0,00
+613914 | Usluge reprezentacija | 20.000,00 | 20.399,42 | 102,00
+613915 | Ostale stručne usluge | 6.000,00 | 1.350,00 | 22,50
+613916 | Usluge objavljivanja tendera i oglasa | 3.000,00 | 4.679,70 | 155,99
+613923 | Usluge za specijalizaciju i školovanje | 1.000,00 | 219,00 | 21,90
+613930 | Stručne usluge | 15.000,00 | 9.142,15 | 60,95
+613932 | Budžetska rezerva | 40.000,00 | 29.108,22 | 72,77
+613960 | Zatezne kamate i troškovi spora | 1.000,00 | 1,54 | 0,15
+613971 | Ugovor o djelu | 0,00 | 0,00
+613974 | Izdaci za rad komisija | 15.000,00 | 12.486,00 | 83,24
+613975 | Izdaci za naknade opštinskim | 55.000,00 | 59.700,00 | 108,55
+odbornicima
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 40.000,00 | 48.110,00 | 120,28
+613980 | Izdaci za poreze i dopr.na dohodak od druge samos.djelat i povrem.sam.rada | 15.000,00 | 19.820,14 | 132,13
+613990 | Ostale nespomenute usluge i dadžbine | 5.000,00 | 2.039,47 | 40,79
+614000 | Tekući transfer i drugi tekući rashodi | 1.212.000,00 | 855.893,79 | 70,62
+614100 | Tekući transferi drugim nivoima vlasti | 156.000,00 | 16.146,75 | 10,35
+614117 | Tekući transferi mjesnim zajednicama | 35.000,00 | 5.976,74 | 17,08
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 60.000,00 | 3.000,00 | 5,00
+614124 | Transfer za izbore | 6.000,00 | 7.170,01 | 119,50
+614170 | Tekući transferi zdravstvu | 55.000,00 | 0,00 | 0,00
+614200 | Tekući transferi pojedincima | 350.000,00 | 365.993,77 | 104,57
+614220 | Transferi pojedincima po osnovi materijalno-socijalne sigurn.nezaposl. osoba | 85.000,00 | 40.184,09 | 47,28
+614234 | Isplata stipendija | 30.000,00 | 12.000,00 | 40,00
+614235 | Jednokratne novčane pomoći | 15.000,00 | 134.316,50 | 895,44
+614239 | Ostali transferi pojedincima | 30.000,00 | 25.262,30 | 84,21
+614239 | Program zapošljavanja | 0,00 | 0,00 | #DIV/0!
+614241 | Transfer za posebne namjene- elementarne nepogode | 5.000,00 | 3.268,84 | 65,38
+614243 | Transfer za prevoz učenika | 50.000,00 | 35.309,01 | 70,62
+614244 | Transferi za podsticaj poljoprivredne proizvodnje | 30.000,00 | 6.600,00 | 22,00
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 2.000,00 | 0,00 | 0,00
+614253 | Pogrebni troškovi | 3.000,00 | 3.342,70 | 111,42
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 100.000,00 | 105.710,33 | 105,71
+614300 | Tekući transfer neprofitnim organizacijama | 525.000,00 | 353.156,16 | 67,27
+614311 | Transfer za Crveni krst | 15.000,00 | 10.000,00 | 66,67
+614311 | Transfer za kulturu | 20.000,00 | 18.861,83 | 94,31
+614311 | Transfer za sport | 50.000,00 | 28.239,07 | 56,48
+614311 | Transfer za obrazovanje | 80.000,00 | 68.004,18 | 85,01
+614311 | Transfer za projekte mladih | 10.000,00 | 15.410,00 | 154,10
+614311 | Transfer za turizam | 30.000,00 | 33.257,00 | 110,86
+614311 | Transfer za JU Dječiji vrtić Majka hrabrost | 210.000,00 | 141.177,59 | 67,23
+614311 | Transfer za JU Centar za kulturu i sport | 70.000,00 | 23.945,13 | 34,21
+614311 | Transfer za Centar za socijalni rad | 5.000,00 | 0,00 | 0,00
+614311 | Transfer udruženjima građana | 20.000,00 | 8.410,86 | 42,05
+614319 | Tekući transferi vjerskim zajednicama | 15.000,00 | 5.850,50 | 39,00
+614400 | Transferi javnim produzećima | 165.000,00 | 102.549,55 | 62,15
+614411 | Transfer za Radio Drvar | 60.000,00 | 19.804,53 | 33,01
+614411 | Transfer za JP Komunalac Drvar | 0,00 | 5.694,66
+Usluge zajedničke komunalne potrošnje | 100.000,00 | 75.500,36 | 75,50
+Subvencija za odvoz pitke vode | 5.000,00 | 1.550,00 | 31,00
+614800 | Drugi tekući rashodi | 16.000,00 | 18.047,56 | 112,80
+614811 | Povrat više ili pogrešno uplaćenih sredstava | 1.500,00 | 3.547,56 | 236,50
+614817 | Izvršenje sudskih presuda i riješenja o izvršenju | 14.500,00 | 14.500,00 | 100,00
+82 | KAPITALNI IZDACI | 1.131.000,00 | 682.243,30 | 60,32
+821 | Izdaci za nabavku stalnih sredstava | 1.131.000,00 | 682.243,30 | 60,32
+821111 | Nabavka zemljišta- eksproprijacija | 31.000,00 | 0,00 | 0,00
+821211 | Zgrada opštine- II faza | 0,00 | 136.141,20
+821211 | Pijaca- | 600.000,00 | 213.028,12 | 35,50
+821211 | Spomenik palim borcima- dovršetak radova | 0,00 | 0,00
+821310 | Kancelarijska oprema | 30.000,00 | 982,80 | 3,28
+821321 | Motoma vozila | 60.000,00 | 87.691,50 | 146,15
+821510 | Materijalna prava- službeni automobil | 0,00 | 0,00
+821521 | Studije izvodljivosti, projektne pripreme i projektovanje | 30.000,00 | 36.232,66 | 120,78
+821611 | Rekonstrukcija SRC Radomir Kovačević | 10.000,00 | 6.539,72 | 65,40
+821612 | Rekonstrukcija ulica | 200.000,00 | 46.162,72 | 23,08
+821614 | Rekonstrukcija zgrada- krovovi | 0,00 | 0,00
+821618 | Rekonstrukcija objekata vezanih za vodovod,kanalizaciju i čvrsti otpad | 70.000,00 | 72.417,74 | 103,45
+821619 | Ostale rekonstrukcije i poboljšanja | 50.000,00 | 83.046,84 | 166,09
+821629 | Adresni registar- table sa nazivima ulica i kuénim brojevima | 0,00 | 0,00
+823 | Izdaci za otplatu dugova | 50000 | 0 | 0,00
+823511 | Garancije date JP Komunalac | 50000 | 0 | 0,00
+B | UKUPNO RASHODI | 4.750.000,00 | 4.273.666,24 | 89,97
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | -385.618,01
+
+
+Broj: 02-04-912/24
+
+Datum: 01.03.2024.godine
+
+OPŠTINSKI NAČELNIK
+
+Dušica Runić, s.r.
+
+65.
+
+Na osnovu člana 7. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine FBiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19, 99/19 i 25/22), člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. alineja 18., a u vezi sa članom 49. stav 1. alineja 4. Statuta opštine Drvar – Prečišcienik tekst („Službeni glasnik opštine Drvar“, broj: 2/15), na prijedlog opštinskog Načelnika, Opštinsko vijeće Drvar, na 4.reдовnoj sjednici održanoj 28.02.2025.godine, d o n o s i:
+
+ODLUKU
+
+o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.31.03.2024.godine
+
+Član 1.
+
+1. Ovom Odlukom Opštinsko vijéeć Drvar usvaja Izvještaj o izvršenju
+
+budžeta za period od 01.01.31.03.2024.godine.
+
+2. Izvršenje Budžeta opštine Drvar za period 01.01.-31.03.2024.godine, sastoji se od:
+
+UKUPNI PRIHODI.....1.094.809.00
+
+POREZNI PRIHODI.....403.585.00
+
+NEPOREZNI PRIHODI.....469.807.88
+
+TEKUĆI GRANTOVI.....221.415.72
+
+PRIHODI PO OSNOVU ZAOSTALIH
+
+OBAVEZA.....0.00
+
+KAPITALNI PRIMICI.....0.00
+
+PRENESENA SREDSTVA.....0.00
+
+UKUPNI RASHODI.....899.805,71
+
+TEKUĆI RASHODI.....899.805,71
+
+KAPITALNI IZDACI.....0,00
+
+Član 2.
+
+Sastavni dio ove Odluke je Izvještaj o izvršenje budžeta Opštine Drvar za period 01.01.-31.03.2024.godine.
+
+Član 3.
+
+Ova Odluka stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-2146-1/24
+
+Datum: 28.02.2025.godine
+
+PREDSJEDNIK
+
+OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac, s.r.
+
+PRILOG
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA OPŠTINE DRVAR ZA PERIOD 01.01.-31.03.2024.GODINE
+
+I OPŠTI DIO
+
+
+O P I S | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-31.03. | Index
+1 | 2 | 4 | 5 | 5
+A | UKUPNI PRIHODI | 3.997,000,00 | 1.094.809,00 | 27,39
+71 | POREZNI PRIHODI | 1.501.800,00 | 403.585,40 | 26,87
+72 | NEPOREZNI PRIHODI | 1.304.800,00 | 469.807,88 | 36,01
+73 | TEKUČI GRANTOVI | 1.020.000,00 | 221.415,72 | 21,71
+77 | PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+81 | KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+59 | PRENESENA SREDSTVA | 50.000,00 | 0,00 | 0,00
+B | UKUPNI RASHODI | 3.997.000,00 | 899.805,71 | 22,51
+61 | TEKUČI RASHODI | 3.565.000,00 | 899.805,71 | 25,24
+82 | KAPITALNI IZDACI | 432.000,00 | 0,00 | 0,00
+
+
+PRIHODI I PRIMICI
+
+
+Ekonomski kod | PRIHODI- A | BUDŽET 2024 | Izvršenje budžeta za period 01.01.- 31.03. | Index
+1 | 2 | 4 | 5 | 6
+71 | I- POREZNI PRIHODI | 1.501.800,00 | 403.585,40 | 26,87
+711000 | Porezi na dobit pojedinaca i produžeća - zaostale uplate | 500,00 | 152,64 | 30,53
+711115 | Porez na prihod od imovine i imovinskih prava | 500,00 | 152,64 | 30,53
+713000 | Porezi na plate i radnu snagu - zaostale uplate | 1.000,00 | 9,78 | 0,98
+713111 | Porez na platu i druga lična primanja | 1.000,00 | 9,78 | 0,98
+714000 | Porezi na imovinu | 60.800,00 | 8.168,34 | 13,43
+714111 | Porez na imovinu od fizičkih lica | 8.000,00 | 1.489,11 | 18,61
+714112 | Porez na imovinu od pravnih lica | 1.300,00 | 225,63 | 17,36
+714113 | Porez na imovinu za motorna vozila | 500,00 | 2,50 | 0,50
+714121 | Porez na nasljedstvo i darove | 1.000,00 | 4.246,68 | 424,67
+714131 | Porez na promet nekretnina | 50.000,00 | 2.204,42 | 4,41
+715000 | Domać porezi na dobra i usluge - zaostale uplate | 500,00 | 0,00 | 0,00
+716000 | Prihodi od poreza na dohodak | 272.000,00 | 99.380,19 | 36,54
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 220.000,00 | 82.099,31 | 37,32
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 4.000,00 | 465,19 | 11,63
+716113 | Porez na dohodak fizičkih lica od imonine i imovinskih prava | 1.000,00 | 211,32 | 21,13
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 22.000,00 | 7.976,37 | 36,26
+716116 | Porez na dohod.od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 15.000,00 | 3.380,09 | 22,53
+716117 | Porez na dohodak po konačnom obračunu | 10.000,00 | 5.247,91 | 52,48
+717000 | Prihodi od indirektnih poreza | 1.150.000,00 | 289.416,82 | 25,17
+717131 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 80.000,00 | 21.038,71 | 26,30
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 1.070.000,00 | 268.378,11 | 25,08
+719000 | Ostali porezi | 17.000,00 | 6.457,63 | 37,99
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1.000,00 | 2,06 | 0,21
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 1.000,00 | 33,54 | 3,35
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 15.000,00 | 6.422,03 | 42,81
+72 | II- NEPOREZNI PRIHODI | 1.304.800,00 | 469.807,88 | 36,01
+721000 | Prihodi od preduzetničke aktivnosti i imovine | 114.000,00 | 35.261,79 | 30,93
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 1.500,00 | 319,45 | 21,30
+721121 | Prihodi od iznajmljivanja zemljišta | 80.000,00 | 30.777,86 | 38,47
+721122 | Prihodi od iznajmljivi. poslovnih prostora i ostale materijalne imovine | 30.000,00 | 4.161,98 | 13,87
+721227 | Prihodi od zakupa - koriščenja sportsko-privrednih lovišta | 2.000,00 | 2,50 | 0,13
+721239 | Ostali prihodi od imovine | 500,00 | 0,00 | 0,00
+722000 | Naknade, takse i prihodi od pružanja javnih usluga | 1.149.800,00 | 427.422,44 | 37,17
+722130 | Opšтинske administrative takse | 70.000,00 | 18.454,00 | 26,36
+722321 | Opštinske komunikacije | 200.000,00 | 44.244,20 | 22,12
+722322 | Opštinske komunikacije | 75.000,00 | 101.746,38 | 135,66
+722433 | Naknade za uređenje građevinskog zemljišta | 8.000,00 | 21,60 | 0,27
+722435 | Naknade po osnovi prirodnih pogodnosti - Renta | 100,00 | 0,00 | 0,00
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za poseb.namjene | 120.000,00 | 34.261,02 | 28,55
+722454 | Naknada za koriščenje državnih šuma | 595.000,00 | 212.073,68 | 35,64
+722461 | Naknada za zauzimanje javnih površina | 1.000,00 | 200,00 | 20,00
+722475 | Naknada u postupku promjene namjene šumskog zemljišta (kroženje šuma) | 500,00 | 0,00 | 0,00
+722515 | Naknada za korištenje podataka premjera i katastra | 2.000,00 | 444,60 | 22,23
+722531 | Naknada za upotrebu puteva za vozila pravnih lica | 16.000,00 | 2.012,05 | 12,58
+722532 | Naknada za upotrebu puteva za vozila građana | 35.000,00 | 6.607,43 | 18,88
+722581 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos NP za isplatu | 25.000,00 | 6.774,82 | 27,10
+722582 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos prih.po drug.osnovam. | 500,00 | 137,29 | 27,46
+722583 | Naknada za vatrog.jedin.iz premije osig.imovine od požara i pr.sila | 100,00 | 216,47 | 216,47
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatrog.jedin. | 100,00 | 228,90 | 228,90
+722760 | Uplaćene refundacije iz ranijih godina | 1.000,00 | 0,00 | 0,00
+722790 | Ostale neplanirane update | 500,00 | 0,00 | 0,00
+723000 | Novčane kazne | 41.000,00 | 7.123,65 | 17,37
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500,00 | 0,00 | 0,00
+723131 | Novčane kazne po opštinskim propisima | 500,00 | 150,00 | 30,00
+723139 | Ostali prihodi | 40.000,00 | 6.973,65 | 17,43
+73 | III- TEKUĆI GRANTOVI | 1.020.000,00 | 221.415,72 | 21,71
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 150.000,00 | 3.911,66 | 2,61
+731111 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 150.000,00 | 3.911,66 | 2,61
+732 | Tekući grantovi od ostalih nivoa vlasti | 870.000,00 | 217.504,06 | 25,00
+732111 | Primljeni tekući grantovi od Države | 50.000,00 | 1.500,00 | 3,00
+732112 | Primljeni tekući grantovi od Federacije | 400.000,00 | 51.200,00 | 12,80
+732113 | Primljeni tekući grantovi od Republike Srpske | 130.000,00 | 0,00 | 0,00
+732114 | Primljeni tekući grantovi od kantona | 270.000,00 | 164.804,06 | 61,04
+732116 | Primljeni tekući grantovi od opština | 20.000,00 | 0,00 | 0,00
+733 | Donacije | 0,00 | 0,00 | #DIV/0!
+733112 | Donacije od pravnih lica | 0,00 | 0,00 | #DIV/0!
+77 | IV- PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+777 | Prihodi po osnovu zaostalih obaveza | 400,00 | 0,00 | 0,00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 400,00 | 0,00 | 0,00
+81 | V- KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+811111 | Primici od prodaje zemljišta | 120.000,00 | 0,00 | 0,00
+VI PRENESENA SREDSTVA | 50.000,00 | | 0,00
+591100 | Prenesena sredstva iz prethodnih godina | 50.000,00 | | 0,00
+A | UKUPNO PRIHODI (I+II+III+IV+V+VI) | 3.997.000,00 | 1.094.809,00 | 27,39
+
+
+RASHODI I IZDACI
+
+
+61 | I- TEKUĆI RASHODI | 3.565.000,00 | 899.805,71 | 25,24
+611000 | Plate i naknade troškova zaposlenih | 1.622.000,00 | 442.568,25 | 27,29
+611100 | Bruto plate zaposlenih | 1.410.000,00 | 371.300,07 | 26,33
+611200 | Naknade troškova zaposlenih | 212.000,00 | 71.268,18 | 33,62
+611211 | Naknada za prijevoz s posla i na posao | 15.000,00 | 3.935,00 | 26,23
+611221 | Naknada za topli obrok tokom rada | 120.000,00 | 39.498,98 | 32,92
+611224 | Regres za godišnji odmor | 40.000,00 | 960,75 | 2,40
+611225 | Otpremnine zbog odlaska u penziju | 22.000,00 | 11.060,45 | 50,27
+611227 | Pomoć u slučaju smrti, invalidnosti, bolesti | 15.000,00 | 15.813,00 | 105,42
+612000 | Doprinosi poslodavca i ostali doprinosi | 145.000,00 | 38.862,04 | 26,80
+612100 | Doprinosi poslodavca | 145.000,00 | 38.862,04 | 26,80
+613000 | Izdaci za materijal, sitan inventar i usluge | 490.000,00 | 91.809,60 | 18,74
+613100 | Putni troškovi | 13.000,00 | 1.830,95 | 14,08
+613200 | Izdaci za energiju i grijanje | 140.000,00 | 32.156,86 | 22,97
+613300 | Izdaci za komunikaciju i komunalne usluge | 32.000,00 | 8.215,73 | 25,67
+613400 | Nabavka materijala i sitnog inventara | 14.500,00 | 934,50 | 6,44
+613500 | Izdaci za usluge gorivo i registraciju | 48.000,00 | 7.017,80 | 14,62
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 9.400,00 | 889,34 | 9,46
+613700 | Izdaci za tekuće održavanje | 38.000,00 | 2.011,08 | 5,29
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6.000,00 | 641,95 | 10,70
+613900 | Ugovorene usluge | 189.100,00 | 38.111,39 | 20,15
+614000 | Tekući transferi i drugi tekući rashodi | 1.308.000,00 | 326.565,82 | 24,97
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 8.735,95 | 5,75
+614200 | Tekući transferi pojedincima | 514.000,00 | 147.801,30 | 28,76
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 122.611,68 | 25,87
+614400 | Transferi javnim produzećima | 155.000,00 | 47.416,89 | 30,59
+614800 | Drugi tekući rashodi | 13.000,00 | 0,00 | 0,00
+82 | II- KAPITALNI IZDACI | 432.000,00 | 0,00 | 0,00
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 0,00 | 0,00
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada | 31.000,00 | 0,00 | 0,00
+821200 | Nabavka građevina | 160.000,00 | 0,00 | 0,00
+821300 | Nabavka opreme | 30.000,00 | 0,00 | 0,00
+821500 | Nabava stalnih sredstava u obliku prava | 15.000,00 | 0,00 | 0,00
+821600 | Rekonstrukcija i investiciono održavanje | 196.000,00 | 0,00 | 0,00
+B | UKUPNO RASHODI (I + II) | 3.997.000,00 | 899.805,71 | 22,51
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 195.003,29
+
+
+II POSEBNI DIO
+
+
+Ekonomski kod | RASHODI | BUDŽET 2024 | Izvršenje budžeta za period 01.01.- 31.03. | Index
+KABINET OPŠTINSKOG NAČELNIKA
+611100 | Bruto plate i naknade | 165.000,00 | 46.335,26 | 28,08
+611200 | Naknade troškova zaposlenih | 30.000,00 | 19.218,09 | 64,06
+612100 | Doprinosi poslodavca | 16.000,00 | 4.849,74 | 30,31
+Ukupno | 211.000,00 | 70.403,09 | 33,37
+OPŠTINSKO VIJEĆE
+611100 | Bruto plate i naknade | 100.000,00 | 18.134,51 | 18,13
+611200 | Naknade troškova zaposlenih | 11.000,00 | 5.933,92 | 53,94
+612100 | Doprinosi poslodavca | 10.000,00 | 1.898,13 | 18,98
+Ukupno | 121.000,00 | 25.966,56 | 21,46
+SLUŻBA ZA PRIVREDU, FINANSIJE I INSPEKCIJSKE POSLOVE
+611100 | Bruto plate i naknade | 285.000,00 | 73.635,17 | 25,84
+611200 | Naknade troškova zaposlenih | 35.000,00 | 7.990,94 | 22,83
+612100 | Doprinosi poslodavca | 30.000,00 | 7.707,02 | 25,69
+Ukupno | 350.000,00 | 89.333,13 | 25,52
+SLUŻBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE
+611100 | Bruto plate i naknade | 220.000,00 | 68.146,94 | 30,98
+611200 | Naknade troškova zaposlenih | 26.000 | 12.201 | 46,93
+612100 | Doprinosi poslodavca | 23.000,00 | 7.132,64 | 31,01
+Ukupno | 269.000,00 | 87.481,02 | 32,52
+SLUŻBA ZA OPSTU UPRAVU I DRUŠTVENE DJELATNOSTI
+611100 | Bruto plate i naknade | 400.000,00 | 106.170,22 | 26,54
+611200 | Naknade troškova zaposlenih | 82.000,00 | 15.440,81 | 18,83
+612100 | Doprinosi poslodavca | 41.000,00 | 11.112,18 | 27,10
+Ukupno | 523.000,00 | 132.723,21 | 25,38
+SLUŻBA ZA CIVILNU ZAŠTITU
+611100 | Bruto plate i naknade | 125.000,00 | 30.416,00 | 24,33
+611200 | Naknade troškova zaposlenih | 15.000,00 | 4.093,32 | 27,29
+612100 | Doprinosi poslodavca | 13.000,00 | 3.183,34 | 24,49
+Ukupno | 153.000,00 | 37.692,66 | 24,64
+SEKTOR ZA LOKALNI RAZVOJ I INVESTICIJE
+611100 | Bruto plate i naknade | 115.000,00 | 28.461,97 | 24,75
+611200 | Naknade troškova zaposlenih | 13.000,00 | 6.389,66 | 49,15
+612100 | Doprinosi poslodavca | 12.000,00 | 2.978,99 | 24,82
+Ukupno | 140.000,00 | 37.830,62 | 27,02
+
+
+611 | UKUPNO | 1.622.000,00 | 442.568,25 | 27,29
+612 | UKUPNO | 145.000,00 | 38.862,04 | 26,80
+611-612 | UKUPNO | 1.767.000,00 | 481.430,29 | 27,25
+613000 | Izdaci za materijal, sitan inventar i usluge | 490.000,00 | 91.809,60 | 18,74
+613110 | Putni troškovi u zemlji | 5.000,00 | 1.830,95 | 36,62
+613120 | Putni troškovi u inostranstvo | 8.000,00 | 0,00 | 0,00
+613211 | Izdaci za električnu energiju | 100.000,00 | 20.793,23 | 20,79
+613215 | Drvo/pelet | 40.000,00 | 11.363,63 | 28,41
+613310 | Izdaci za komunikaciju | 25.000,00 | 7.155,50 | 28,62
+613320 | Izdaci za komunalne usluge | 7.000,00 | 1.060,23 | 15,15
+613411 | Izdaci za obrasce | 3.000,00 | 551,00 | 18,37
+613416 | Izdaci za kancelarijski materijal | 7.000,00 | 81,50 | 1,16
+613417 | Izdaci za sitan inventar | 1.500,00 | 76,40 | 5,09
+613418 | Ostali izdaci | 3.000,00 | 225,60 | 7,52
+613510 | Gorivo za prijevoz | 40.000,00 | 3.003,47 | 7,51
+613520 | Prijevozne usluge | 2.000,00 | 3.840,00 | 192,00
+613523 | Registracija vozila | 6.000,00 | 174,33 | 2,91
+613611 | Unajmljivanje imovine | 400,00 | 0,00 | 0,00
+613621 | Unajmljivanje opreme | 9.000,00 | 889,34 | 9,88
+613710 | Materijal za popravke i održavanje | 3.000,00 | 934,56 | 31,15
+613720 | Usluge popravaka i održavanja | 35.000,00 | 1.076,52 | 3,08
+613810 | Izdaci osiguranja | 1.000,00 | 0,00 | 0,00
+613820 | Usluge bankarskog i platnog prometa | 5.000,00 | 641,95 | 12,84
+613911 | Usluge medija | 5.000,00 | 1.215,50 | 24,31
+613912 | Usluge štampanja | 500,00 | 0,00 | 0,00
+613914 | Usluge reprezentacija | 20.000,00 | 2.710,04 | 13,55
+613915 | Ostale stručne usluge | 1.000,00 | 0,00 | 0,00
+613916 | Usluge objavljivanja tendera i oglasa | 4.000,00 | 964,66 | 24,12
+613923 | Usluge za specijalizaciju i školovanje | 500,00 | 0,00 | 0,00
+613930 | Stručne usluge | 5.000,00 | 1.305,52 | 26,11
+613932 | Budžetska rezerva | 30.000,00 | 3.900,00 | 13,00
+613960 | Zatezne kamate i troškovi spora | 100,00 | 0,00 | 0,00
+613974 | Izdaci za rad komisija | 10.000,00 | 1.520,00 | 15,20
+613975 | Izdaci za naknade opštinskim odbornicima | 55.000,00 | 13.600,00 | 24,73
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 40.000,00 | 7.300,00 | 18,25
+613980 | Izdaci za poree i dopr.na dohodak od druge samos.djelat i povrem.sam.rada | 15.000,00 | 4.313,67 | 28,76
+613990 | Ostale nespomenute usluge i dadžbine | 3.000,00 | 1.282,00 | 42,73
+614000 | Tekući transferi i drugi tekuić rashodi | 1.308.000,00 | 326.565,82 | 24,97
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 8.735,95 | 5,75
+614117 | Tekući transferi mjesnim zajednicama | 20.000,00 | 867,63 | 4,34
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 60.000,00 | 6.180,00 | 10,30
+614124 | Transfer za izbore | 62.000,00 | 1.688,32 | 2,72
+614170 | Tekući transferi zdravstvu | 10.000,00 | 0,00 | 0,00
+614200 | Tekući transferi pojedincima | 514.000,00 | 147.801,30 | 28,76
+614220 | Transferi pojedincima po osnovi materijalno-socijalne sigurn. nezaposl. osoba | 60.000,00 | 8.589,42 | 14,32
+614234 | Isplata stipendija | 30.000,00 | 18.500,00 | 61,67
+614235 | Jednokratne novčane pomoći | 195.000,00 | 28.000,00 | 14,36
+614239 | Ostali transferi pojedincima | 25.000,00 | 5.300,00 | 21,20
+614241 | Transfer za posebne namjene-elementarne nepogode | 5.000,00 | 50.000,00 | 1000,00
+614243 | Transfer za prevoz učenika | 45.000,00 | 12.088,50 | 26,86
+614244 | Transferi za podsticaj poljoprivredne proizvodnje | 50.000,00 | 900,00 | 1,80
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1.000,00 | 0,00 | 0,00
+614253 | Pogrebni troškovi | 3.000,00 | 1.765,60 | 58,85
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 100.000,00 | 22.657,78 | 22,66
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 122.611,68 | 25,87
+614311 | Transfer za Crveni krst | 24.000,00 | 3.799,50 | 15,83
+614311 | Transfer za kulturu | 15.000,00 | | 0,00
+614311 | Transfer za sport | 30.000,00 | 936,00 | 3,12
+614311 | Transfer za obrazovanje | 50.000,00 | 33.001,67 | 66,00
+614311 | Transfer za projekte mladih | 10.000,00 | 1.000,00 | 10,00
+614311 | Transfer za turizam | 30.000,00 | 3.812,54 | 12,71
+614311 | Transfer za JU Dječiji vrtić Majka hrabrost | 210.000,00 | 72.559,98 | 34,55
+614311 | Transfer za JU Centar za kulturu i sport- Muzej | 40.000,00 | 5.338,94 | 13,35
+614311 | Transfer za Centar za socijalni rad | 40.000,00 | | 0,00
+614311 | Transfer za Starački dom- Projektna dokumentacija | 5.000,00 | 2.014,85 | 40,30
+614311 | Transfer udruženjima građana | 10.000,00 | 148,20 | 1,48
+614319 | Tekući transferi vjerskim zajednicama | 10.000,00 | | 0,00
+614400 | Transferi javnim produzečima | 155.000,00 | 47.416,89 | 30,59
+614411 | Transfer za Radio Drvar | 50.000,00 | 10.000,00 | 20,00
+614411 | Transfer za JP Komunalac Drvar | | 3.830,45 | #DIV/0!
+Usluge zajedničke komunalne potrošnje | 100.000,00 | 33.486,44 | 33,49
+Subvencija za odvoz pitke vode | 5.000,00 | 100,00 | 2,00
+614800 | Drugi tekuići rashodi | 13.000,00 | 0,00 | 0,00
+614811 | Povrat više ili pogrešno uplaćenih sredstava | 1.000,00 | 0,00 | 0,00
+614817 | Izvršenje sudskih presuda i rješenja o izvršenju | 12.000,00 | 0,00 | 0,00
+82 | KAPITALNI IZDACI | 432.000,00 | 0,00 | 0,00
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 0,00 | 0,00
+821111 | Nabavka zemljišta- eksproprijacija | 31.000,00 | 0,00 | 0,00
+821211 | Zgrada opštine- II faza | 10.000,00 | 0,00 | 0,00
+821211 | Pijaca- | 150.000,00 | 0,00 | 0,00
+821310 | Kancelijska oprema | 20.000,00 | 0,00 | 0,00
+821321 | Motorna vozila | 10.000,00 | 0,00 | 0,00
+821521 | Studije izvodljivosti, projektne pripreme i projektovanje | 15.000,00 | 0,00 | 0,00
+821611 | Rekonstrukcija SRC Radomir Kovačević | 6.000,00 | 0,00 | 0,00
+821612 | Rekonstrukcija ulica | 70.000,00 | 0,00 | 0,00
+821614 | Rekonstrukcija zgrada- krovovi | 10.000,00 | 0,00 | 0,00
+821618 | Rekonstrukcija objekata vezanih za vodovod, kanalizaciju i čvrsti otpad | 70.000,00 | 0,00 | 0,00
+821619 | Ostale rekonstrukcije i poboljšanja | 40.000,00 | 0,00 | 0,00
+823 | Izdaci za otplat u dugova | 0 | 0
+823511 | Garancije date JP Komunalac | 0 | 0
+B | UKUPNO RASHODI | 3.997.000,00 | 899.805,71 | 22,51
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 195.003,29
+
+
+Broj: 02-04-2146/24
+
+Datum: 05.06.2024.godine
+
+OPŠTINSKI NAČELNIK
+
+Dušica Runić, s.r.
+
+66.
+
+Na osnovu člana 7. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine FBiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19, 99/19 i 25/22), člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. alineja 18., a u vezi sa članom 49. stav 1. alineja 4. Statuta opštine Drvar – Prečišćeni tekst („Službeni glasnik opštine Drvar“, broj: 2/15), na prijedlog opštinskog Načelnika, Opštinsko vijeće Drvar, na 4.redocvoj sjednici održanoj 28.02.2025.godine, d o n o s i:
+
+ODLUKU
+
+o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.30.06.2024.godine
+
+Član 1.
+
+1. Ovom Odlukom Opštinsko vijeće Drvar usvaja Izvještaj o izvršenju budžeta za period od 01.01.-30.06.2024.godine.
+
+2. Izvršenje Budžeta opštine Drvar za
+
+period 01.01.-30.06.2024.godine,
+
+sastoji se od:
+
+UKUPNI PRIHODI.....2.030.935,35
+
+POREZNI PRIHODI.....836.618,64
+
+NEPOREZNI PRIHODI911.....534,90
+
+TEKUĆI GRANTOVI.....282.781,81
+
+PRIHODI PO OSNOVU ZAOSTALIH
+
+OBAVEZA.....0,00
+
+KAPITALNI PRIMICI.....0,00
+
+PRENESENA SREDSTVA.....0,00
+
+UKUPNI RASHODI.....1.896.773,48
+
+TEKUĆI RASHODI.....1.894.950,48
+
+KAPITALNI IZDACI.....1.823,00
+
+Član 2.
+
+Sastavni dio ove Odluke je Izvještaj o izvršenje budžeta Opštine Drvar za period 01.01.-30.06.2024.godine.
+
+Član 3.
+
+Ova Odluka stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-1491-4/24
+
+Datum: 28.02.2025.godine
+
+PRILOG
+
+PREDSJEDNIK OPŠTINSKOG VIJEĆA Jasna Pećanac, s.r.
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA OPŠTINE DRVAR ZA PERIOD 01.01.-30.06.2024.GODINE
+
+I OPŠTI DIO
+
+
+O P I S | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-30.06.2024. | Index
+1 | 2 | 4 | 5 | 5
+A | UKUPNI PRIHODI | 3.997.000,00 | 2.030.935,35 | 50,81
+71 | POREZNI PRIHODI | 1.501.800,00 | 836.618,64 | 55,71
+72 | NEPOREZNI PRIHODI | 1.304.800,00 | 911.534,90 | 69,86
+73 | TEKUĆI GRANTOVI | 1.020.000,00 | 282.781,81 | 27,72
+77 | PRIHODI PO OSNOVU\nZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+81 | KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+59 | PRENESENA SREDSTVA | 50.000,00 | 0,00 | 0,00
+B | UKUPNI RASHODI | 3.997.000,00 | 1.896.773,48 | 47,45
+61 | TEKUĆI RASHODI | 3.565.000,00 | 1.894.950,48 | 53,15
+82 | KAPITALNI IZDACI | 432.000,00 | 1.823,00 | 0,42
+
+
+PRIHODI I PRIMICI
+
+
+Ekonomski kod | PRIHODI- A | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-30.06.2024. | Index
+1 | 2 | 4 | 5 | 6
+71 | I- POREZNI PRIHODI | 1.501.800,00 | 836.618,64 | 55,71
+711000 | Porezi na dobit pojedinaca i produžeća - zaostale uplate | 500,00 | 299,37 | 59,87
+711115 | Porez na prihod od imovine i imovinskih prava | 500,00 | 299,37 | 59,87
+713000 | Porezi na plate i radnu snagu - zaostale uplate | 1.000,00 | 24,45 | 2,45
+713111 | Porez na platju i druga lična primanja | 1.000,00 | 24,45 | 2,45
+714000 | Porezi na imovinu | 60.800,00 | 16.388,30 | 26,95
+714111 | Porez na imovinu od fizičkih lica | 8.000,00 | 4.087,72 | 51,10
+714112 | Porez na imovinu od pravnih lica | 1.300,00 | 713,13 | 54,86
+714113 | Porez na imovinu za motorna vozila | 500,00 | 7,50 | 1,50
+714121 | Porez na nasljedstvo i darove | 1.000,00 | 5.904,18 | 590,42
+714131 | Porez na promet nekretnina | 50.000,00 | 5.675,77 | 11,35
+715000 | Domać porezi na dobra i usluge - zaostale uplate | 500,00 | 0,00 | 0,00
+716000 | Prihodi od poreza na dohodak | 272.000,00 | 187.220,11 | 68,83
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 220.000,00 | 159.307,70 | 72,41
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 4.000,00 | 952,78 | 23,82
+716113 | Porez na dohodak fizičkih lica od imonine i imovinskih prava | 1.000,00 | 240,27 | 24,03
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 22.000,00 | 13.660,63 | 62,09
+716116 | Porez na doh.od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 15.000,00 | 5.975,64 | 39,84
+716117 | Porez na dohodak po konačnom obračinu | 10.000,00 | 7.083,09 | 70,83
+717000 | Prihodi od indirektnih poreza | 1.150.000,00 | 621.576,17 | 54,05
+717131 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 80.000,00 | 46.233,68 | 57,79
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 1.070.000,00 | 575.342,49 | 53,77
+719000 | Ostali porezi | 17.000,00 | 11.110,24 | 65,35
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1.000,00 | 88,12 | 8,81
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 1.000,00 | 33,54 | 3,35
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 15.000,00 | 10.988,58 | 73,26
+72 | II-NEPOREZNI PRIHODI | 1.304.800,00 | 911.534,90 | 69,86
+721000 | Prihodi od preduzetničke aktivnosti i imovine | 114.000,00 | 51.578,43 | 45,24
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 1.500,00 | 319,45 | 21,30
+721121 | Prihodi od iznajmljivanja zemljišta | 80.000,00 | 43.269,22 | 54,09
+721122 | Prihodi od iznajmlji. poslovnih prostora i ostale materijalne imovine | 30.000,00 | 7.987,26 | 26,62
+721227 | Prihodi od zakupa - koriščenja sportsko-privrednih lovišta | 2.000,00 | 2,50 | 0,13
+721239 | Ostali prihodi od imovine | 500,00 | 0,00 | 0,00
+722000 | Naknade, takse i prihodi od pružanja javnih usluga | 1.149.800,00 | 847.192,48 | 73,68
+722130 | Opštinske administrativne takse | 70.000,00 | 38.437,99 | 54,91
+722321 | Opštinske komunalne takse | 200.000,00 | 107.123,20 | 53,56
+722322 | Opštinske komunalne naknade za istaknutu firmu | 75.000,00 | 118.506,12 | 158,01
+722433 | Naknade za uređenje građevinskog zemljišta | 8.000,00 | 21,60 | 0,27
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 100,00 | 0,00 | 0,00
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za poseb.namjene | 120.000,00 | 49.136,12 | 40,95
+722454 | Naknada za koriščenje državnih šuma | 595.000,00 | 492.404,24 | 82,76
+722461 | Naknada za zauzimanje javnih površina | 1.000,00 | 200,00 | 20,00
+722475 | Naknada u postupku promjene namjene šumskog zemljišta (kričenje šuma) | 500,00 | 0,00 | 0,00
+722515 | Naknada za korištenje podataka premjera i katastra | 2.000,00 | 923,40 | 46,17
+722531 | Naknada za upotrebu puteva za vozila pravnih lica | 16.000,00 | 7.940,32 | 49,63
+722532 | Naknada za upotrebu puteva za vozila građana | 35.000,00 | 17.173,59 | 49,07
+722581 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos NP za isplatu | 25.000,00 | 14.459,05 | 57,84
+722582 | Poseb.nakn.za zaš.od prir.i dr.nes.gdje je osn.zb.iznos prih.po drug.osnovam. | 500,00 | 292,08 | 58,42
+722583 | Naknada za vatrog.jedin.iz premije osig.imovine od požara i pr.sila | 100,00 | 242,56 | 242,56
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatrog.jedin. | 100,00 | 332,21 | 332,21
+722760 | Uplaćene refundacije iz ranijih godina | 1.000,00 | 0,00 | 0,00
+722790 | Ostale neplanirane uplate | 500,00 | 0,00 | 0,00
+723000 | Novčane kazne | 41.000,00 | 12.763,99 | 31,13
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500,00 | 0,00 | 0,00
+723131 | Novčane kazne po opštinskim propisima | 500,00 | 150,00 | 30,00
+723139 | Ostali prihodi | 40.000,00 | 12.613,99 | 31,53
+73 | III- TEKUĆI GRANTOVI | 1.020.000,00 | 282.781,81 | 27,72
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 150.000,00 | 33.249,11 | 22,17
+731111 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 150.000,00 | 33.249,11 | 22,17
+732 | Tekući grantovi od ostalih nivoa vlasti | 870.000,00 | 249.532,70 | 28,68
+732111 | Primljeni tekući grantovi od Države | 50.000,00 | 1.500,00 | 3,00
+732112 | Primljeni tekući grantovi od Federacije | 400.000,00 | 55.707,91 | 13,93
+732113 | Primljeni tekući grantovi od Republike Srpske | 130.000,00 | 0,00 | 0,00
+732114 | Primljeni tekući grantovi od kantona | 270.000,00 | 192.324,79 | 71,23
+732116 | Primljeni tekući grantovi od opštna | 20.000,00 | 0,00 | 0,00
+733 | Donacije | 0,00 | 0,00 | #DIV/0!
+733112 | Donacije od pravnih lica | 0,00 | 0,00 | #DIV/0!
+77 | IV- PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+777 | Prihodi po osnovu zaostalih obaveza | 400,00 | 0,00 | 0,00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 400,00 | 0,00 | 0,00
+81 | V- KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+811111 | Primici od prodaje zemljišta | 120.000,00 | 0,00 | 0,00
+VI PRENESENA SREDSTVA | 50.000,00 | 0,00 | 0,00
+591100 | Prenesena sredstva iz prethodnih godina | 50.000,00 | 0,00 | 0,00
+A | UKUPNO PRIHODI\n(I+II+III+IV+V+VI) | 3.997.000,00 | 2.030.935,35 | 50,81
+
+
+RASHODI I IZDACI
+
+
+61 | I- TEKUĆI RASHODI | 3.565.000,00 | 1.894.950,48 | 53,15
+611000 | Plate i naknade troškova zaposlenih | 1.622.000,00 | 898.820,30 | 55,41
+611100 | Bruto plate zaposlenih | 1.410.000,00 | 779.574,37 | 55,29
+611200 | Naknade troškova zaposlenih | 212.000,00 | 119.245,93 | 56,25
+611211 | Naknada za prijevoz s posla i na posao | 15.000,00 | 7.871,00 | 52,47
+611221 | Naknada za topli obrok tokom rada | 120.000,00 | 79.540,73 | 66,28
+611224 | Regres za godišnji odmor | 40.000,00 | 960,75 | 2,40
+611225 | Otpremnine zbog odlaska u penziju | 22.000,00 | 15.060,45 | 68,46
+611227 | Pomoć u slučaju smrti, invalidnosti, bolesti | 15.000,00 | 15.813,00 | 105,42
+612000 | Doprinosi poslodavca i ostali doprinosi | 145.000,00 | 81.593,72 | 56,27
+612100 | Doprinosi poslodavca | 145.000,00 | 81.593,72 | 56,27
+613000 | Izdaci za materijal, sitan inventar i usluge | 490.000,00 | 190.892,07 | 38,96
+613100 | Putni troškovi | 13.000,00 | 3.602,90 | 27,71
+613200 | Izdaci za energiju i grijanje | 140.000,00 | 51.351,93 | 36,68
+613300 | Izdaci za komunikaciju i komunalne usluge | 32.000,00 | 22.547,88 | 70,46
+613400 | Nabavka materijala i sitnog inventara | 14.500,00 | 7.935,37 | 54,73
+613500 | Izdaci za usluge gorivo i registraciju | 48.000,00 | 25.024,72 | 52,13
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 9.400,00 | 3.732,26 | 39,70
+613700 | Izdaci za tekuće održavanje | 38.000,00 | 3.133,78 | 8,25
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6.000,00 | 1.798,17 | 29,97
+613900 | Ugovorene usluge | 189.100,00 | 71.765,06 | 37,95
+614000 | Tekući transferi i drugi tekuići rashodi | 1.308.000,00 | 723.644,39 | 55,32
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 16.412,75 | 10,80
+614200 | Tekući transferi pojedincima | 514.000,00 | 329.119,07 | 64,03
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 269.350,93 | 56,83
+614400 | Transferi javnim preduzećima | 155.000,00 | 97.061,64 | 62,62
+614800 | Drugi tekući rashodi | 13.000,00 | 11.700,00 | 90,00
+82 | II- KAPITALNI IZDACI | 432.000,00 | 1.823,00 | 0,42
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 1.823,00 | 0,42
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada | 31.000,00 | 0,00 | 0,00
+821200 | Nabavka građevina | 160.000,00 | 0,00 | 0,00
+821300 | Nabavka opreme | 30.000,00 | 0,00 | 0,00
+821500 | Nabava stalnih sredstava u obliku prava | 15.000,00 | 0,00 | 0,00
+821600 | Rekonstrukcija i investiciono održavanje | 196.000,00 | 1.823,00 | 0,93
+B | UKUPNO RASHODI (I + II) | 3.997.000,00 | 1.896.773,48 | 47,45
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 134.161,87 | #DIV/0!
+
+
+II POSEBNI DIO
+
+
+Ekonomski kod | RASHODI | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-30.06. | Index
+KABINET OPŠTINSKOG NAČELNIKA
+611100 | Bruto plate i naknade | 165.000,00 | 82.762,25 | 50,16
+611200 | Naknade troškova zaposlenih | 30.000,00 | 27.252,49 | 90,84
+612100 | Doprinosi poslodavca | 16.000,00 | 8.662,32 | 54,14
+Ukupno | 211.000,00 | 118.677,06 | 56,25
+OPŠTINSKO VIJEĆE
+611100 | Bruto plate i naknade | 100.000,00 | 50.089,61 | 50,09
+611200 | Naknade troškova zaposlenih | 11.000,00 | 7.877,02 | 71,61
+612100 | Doprinosi poslodavca | 10.000,00 | 5.242,76 | 52,43
+Ukupno | 121.000,00 | 63.209,39 | 52,24
+SLUŻBA ZA PRIVREDU FINANSIJE I INSPEKCIJSKE POSLOVE
+611100 | Bruto plate i naknade | 285.000,00 | 138.827,34 | 48,71
+611200 | Naknade troškova zaposlenih | 35.000,00 | 16.266,79 | 46,48
+612100 | Doprinosi poslodavca | 30.000,00 | 14.530,30 | 48,43
+Ukupno | 350.000,00 | 169.624,43 | 48,46
+SLUŽBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE
+611100 | Bruto plate i naknade | 220.000,00 | 146.406,28 | 66,55
+611200 | Naknade troškova zaposlenih | 26.000 | 27.033,44 | 103,97
+612100 | Doprinosi poslodavca | 23.000,00 | 15.323,76 | 66,63
+Ukupno | 269.000,00 | 188.763,48 | 70,17
+SLUŽBA ZA OPSTU UPRAVU I DRUŠTVENE DJELATNOSTI
+611100 | Bruto plate i naknade | 400.000,00 | 238.681,75 | 59,67
+611200 | Naknade troškova zaposlenih | 82.000,00 | 23.863,46 | 29,10
+612100 | Doprinosi poslodavca | 41.000,00 | 24.981,20 | 60,93
+Ukupno | 523.000,00 | 287.526,41 | 54,98
+SLUŽBA ZA CIVILNU ZAŠTITU
+611100 | Bruto plate i naknade | 125.000,00 | 65.851,01 | 52,68
+611200 | Naknade troškova zaposlenih | 15.000,00 | 8.152,62 | 54,35
+612100 | Doprinosi poslodavca | 13.000,00 | 6.892,06 | 53,02
+Ukupno | 153.000,00 | 80.895,69 | 52,87
+SEKTOR ZA LOKALNI RAZVOJ FINVESTICIJE
+611100 | Bruto plate i naknade | 115.000,00 | 56.956,13 | 49,53
+611200 | Naknade troškova zaposlenih | 13.000,00 | 8.800,11 | 67,69
+612100 | Doprinosi poslodavca | 12.000,00 | 5.961,32 | 49,68
+Ukupno | 140.000,00 | 71.717,56 | 51,23
+
+
+611 | UKUPNO | 1.622.000,00 | 898.820,30 | 55,41
+612 | UKUPNO | 145.000,00 | 81.593,72 | 56,27
+611-612 | UKUPNO | 1.767.000,00 | 980.414,02 | 55,48
+613000 | Izdaci za materijal, sitan inventar i usluge | 490.000,00 | 190.892,07 | 38,96
+613110 | Putni troškovi u zemlji | 5.000,00 | 3.602,90 | 72,06
+613120 | Putni troškovi u inostranstvo | 8.000,00 | 0,00 | 0,00
+613211 | Izdaci za električnu energiju | 100.000,00 | 38.240,05 | 38,24
+613215 | Drvo/pelet | 40.000,00 | 13.111,88 | 32,78
+613310 | Izdaci za komunikaciju | 25.000,00 | 18.581,79 | 74,33
+613320 | Izdaci za komunikaciju | 7.000,00 | 3.966,09 | 56,66
+613411 | Izdaci za obrasce | 3.000,00 | 551,00 | 18,37
+613416 | Izdaci za kancelarijski materijal | 7.000,00 | 5.870,49 | 83,86
+613417 | Izdaci za sitan inventar | 1.500,00 | 572,00 | 38,13
+613418 | Ostali izdaci | 3.000,00 | 941,88 | 31,40
+613510 | Gorivo za prijevoz | 40.000,00 | 19.908,14 | 49,77
+613520 | Prijevozne usluge | 2.000,00 | 4.274,00 | 213,70
+613523 | Registracija vozila | 6.000,00 | 842,58 | 14,04
+613611 | Unajmljivanje imovine | 400,00 | 0,00 | 0,00
+613621 | Unajmljivanje opreme | 9.000,00 | 3.732,26 | 41,47
+613710 | Materijal za popravke i održavanje | 3.000,00 | 1.296,43 | 43,21
+613720 | Usluge popravaka i | 35.000,00 | 1.837,35 | 5,25
+održavanja
+613810 | Izdaci osiguranja | 1.000,00 | 0,00 | 0,00
+613820 | Usluge bankarskog i platnog prometa | 5.000,00 | 1.798,17 | 35,96
+613911 | Usluge medija | 5.000,00 | 900,00 | 18,00
+613912 | Usluge štampanja | 500,00 | 1.315,50 | 263,10
+613914 | Usluge reprezentacija | 20.000,00 | 6.153,61 | 30,77
+613915 | Ostale stručne usluge | 1.000,00 | 1.240,00 | 124,00
+613916 | Usluge objavljivanja tendera i oglasa | 4.000,00 | 1.748,66 | 43,72
+613923 | Usluge za specijalizaciju i školovanje | 500,00 | 0,00 | 0,00
+613930 | Stručne usluge | 5.000,00 | 1.978,02 | 39,56
+613932 | Budžetska rezerva | 30.000,00 | 5.100,00 | 17,00
+613960 | Zatezne kamate i troškovi spora | 100,00 | 0,00 | 0,00
+613974 | Izdaci za rad komisija | 10.000,00 | 7.920,00 | 79,20
+613975 | Izdaci za naknade opštinskim odbornicima | 55.000,00 | 26.900,00 | 48,91
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 40.000,00 | 9.350,00 | 23,38
+613980 | Izdaci za poreze i dopr.na dohodak od druge samos.djelat i povrem.sam.rada | 15.000,00 | 7.506,27 | 50,04
+613990 | Ostale nespomenute usluge i dadžbine | 3.000,00 | 1.653,00 | 55,10
+614000 | Tekući transferi i drugi tekući rashodi | 1.308.000,00 | 723.644,39 | 55,32
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 16.412,75 | 10,80
+614117 | Tekući transferi mjesnim zajednicama | 20.000,00 | 3.051,61 | 15,26
+614118 | Tekući transfer opštinskom javnom pravobranicu | 60.000,00 | 6.180,00 | 10,30
+614124 | Transfer za izbore | 62.000,00 | 7.181,14 | 11,58
+614170 | Tekući transferi zdravstvu | 10.000,00 | 0,00 | 0,00
+614200 | Tekući transferi pojedincima | 514.000,00 | 329.119,07 | 64,03
+614220 | Transferi pojedincima po osnovi materijalno-socijalne sigurn. nezaposl. osoba | 60.000,00 | 20.424,35 | 34,04
+614234 | Isplata stipendija | 30.000,00 | 21.300,00 | 71,00
+614235 | Jednokratne novčane pomoći | 195.000,00 | 141.000,00 | 72,31
+614239 | Ostali transferi pojedincima | 25.000,00 | 10.350,00 | 41,40
+614241 | Transfer za posebne namjene-elementarne nepogode | 5.000,00 | 50.000,00 | 1000,00
+614243 | Transfer za prevoz učenika | 45.000,00 | 26.219,34 | 58,27
+614244 | Transferi za podsticaj poljoprivredne proizvodnje | 50.000,00 | 1.950,00 | 3,90
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1.000,00 | 0,00 | 0,00
+614253 | Pogrebni troškovi | 3.000,00 | 2.265,00 | 75,50
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 100.000,00 | 55.610,38 | 55,61
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 269.350,93 | 56,83
+614311 | Transfer za Crveni krst | 24.000,00 | 11.049,50 | 46,04
+614311 | Transfer za kulturu | 15.000,00 | 3.406,50 | 22,71
+614311 | Transfer za sport | 30.000,00 | 5.336,00 | 17,79
+614311 | Transfer za obrazovanje | 50.000,00 | 45.505,26 | 91,01
+614311 | Transfer za projekte mladih | 10.000,00 | 13.798,00 | 137,98
+614311 | Transfer za turizam | 30.000,00 | 13.740,44 | 45,80
+614311 | Transfer za JU Dječiji vrtić Majka hrabrost | 210.000,00 | 137.855,93 | 65,65
+614311 | Transfer za JU Centar za kulturu i sport- Muzej | 40.000,00 | 30.390,15 | 75,98
+614311 | Transfer za Centar za socijalni rad | 40.000,00 | 0,00 | 0,00
+614311 | Transfer za Starački dom-Projektna dokumentacija | 5.000,00 | 0,00 | 0,00
+614311 | Transfer udruženjima građana | 10.000,00 | 4.889,85 | 48,90
+614319 | Tekući transferi vjerskim zajednicama | 10.000,00 | 3.379,30 | 33,79
+614400 | Transferi javnim produzečima | 155.000,00 | 97.061,64 | 62,62
+614411 | Transfer za Radio Drvar | 50.000,00 | 30.150,00 | 60,30
+614411 | Transfer za JP Komunalac Drvar | | 8.130,20 | #DIV/0!
+Usluge zajedničke komunalne potrošnje | 100.000,00 | 58.681,44 | 58,68
+Subvencija za odvoz pitke vode | 5.000,00 | 100,00 | 2,00
+614800 | Drugi tekući rashodi | 13.000,00 | 11.700,00 | 90,00
+614811 | Povrat više ili pogrešno uplaćenih sredstava | 1.000,00 | 0,00 | 0,00
+614817 | Izvršenje sudskih presuda i riješenja o izvršenju | 12.000,00 | 11.700,00 | 97,50
+82 | KAPITALNI IZDACI | 432.000,00 | 1.823,00 | 0,42
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 1.823,00 | 0,42
+821111 | Nabavka zemljišta- eksproprijacija | 31.000,00 | 0,00 | 0,00
+821211 | Zgrada opštine- II faza | 10.000,00 | 0,00 | 0,00
+821211 | Pijaca- | 150.000,00 | 0,00 | 0,00
+821310 | Kancelarijska oprema | 20.000,00 | 0,00 | 0,00
+821321 | Motorna vozila | 10.000,00 | 0,00 | 0,00
+821521 | Studije izvodljivosti, projektne pripreme i projektovanje | 15.000,00 | 0,00 | 0,00
+821611 | Rekonstrukcija SRC Radomir Kovačević | 6.000,00 | 0,00 | 0,00
+821612 | Rekonstrukcija ulica | 70.000,00 | 0,00 | 0,00
+821614 | Rekonstrukcija zgrada- krovovi | 10.000,00 | 0,00 | 0,00
+821618 | Rekonstrukcija objekata vezanih za vodovod, | 70.000,00 | 1.823,00 | 2,60
+kanalizaciju i čvrsti otpad
+821619 | Ostale rekonstrukcije i poboljšanja | 40.000,00 | 0,00 | 0,00
+823 | Izdaci za otplatu dugova | 0 | 0 | #DIV/0!
+823511 | Garancije date JP Komunalac | 0 | 0 | #DIV/0!
+B | UKUPNO RASHODI | 3.997.000,00 | 1.896.773,48 | 47,45
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 134.161,87
+
+
+Broj: 02-04-1491-3/24
+
+Datum: 05.08.2024.godine
+
+OPŠTINSKI NAČELNIK
+
+Dušica Runić, s.r.
+
+67.
+
+Na osnovu člana 7. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine FBiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19, 99/19 i 25/22), člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. alineja 18., a u vezi sa članom 49. stav 1. alineja 4. Statuta opštine Drvar – Prečišćeni tekst („Službeni glasnik opštine Drvar“, broj: 2/15), na prijedlog opštinskog Načelnika, Opštinsko vijée Drvar, na 4.reдовnoj sjednici održanoj 28.02.2025.godine, d o n o s i:
+
+ODLUKU
+
+o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.30.09.2024.godine
+
+Član 1.
+
+1. Ovom Odlukom Opštinsko vijeće Drvar usvaja Izvještaj o izvršenju budžeta za period od 01.01.30.09.2024.godine.
+
+2. Izvršenje Budžeta opštine Drvar za period 01.01.-30.09.2024.godine, sastoji se od:
+
+UKUPNI PRIHODI.....2.993.134,97
+
+POREZNI PRIHODI.....1.319.014,40
+
+NEPOREZNI PRIHODI.....1.066.142,75
+
+TEKUĆI GRANTOVI.....607.977,82
+
+PRIHODI PO OSNOVU ZAOSTALIH
+
+OBAVEZA.....0,00
+
+KAPITALNI PRIMICI.....0,00
+
+PRENESENA SREDSTVA.....0,00
+
+UKUPNI RASHODI.....2.713.867,19
+
+TEKUĆI RASHODI.....2.712.044,19
+
+KAPITALNI IZDACI.....1.823,00
+
+Član 2.
+
+Sastavni dio ove Odluke je Izvještaj o izvršenje budžeta Opštine Drvar za period 01.01.-30.09.2024.godine.
+
+Član 3.
+
+Ova Odluka stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-1491-6/24
+
+Datum: 28.02.2025.godine
+
+PREDSJEDNIK
+
+OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac, s.r.
+
+PRILOG
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETAOPŠTINE DRVAR ZA PERIOD 01.01.-30.09.2024. GODINE
+
+I OPŠTI DIO
+
+
+O P I S | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-30.09.2024. | Index
+1 | 2 | 4 | 5 | 5
+A | UKUPNI PRIHODI | 3.997.000,00 | 2.993.134,97 | 74,88
+71 | POREZNI PRIHODI | 1.501.800,00 | 1.319.014,40 | 87,83
+72 | NEPOREZNI PRIHODI | 1.304.800,00 | 1.066.142,75 | 81,71
+73 | TEKUĆI GRANTOVI | 1.020.000,00 | 607.977,82 | 59,61
+77 | PRIHODI PO OSNOVU\nZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+81 | KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+59 | PRENESENA\nSREDSTVA | 50.000,00 | 0,00 | 0,00
+B | UKUPNI RASHODI | 3.997.000,00 | 2.713.867,19 | 67,90
+61 | TEKUĆI RASHODI | 3.565.000,00 | 2.712.044,19 | 76,07
+82 | KAPITALNI IZDACI | 432.000,00 | 1.823,00 | 0,42
+
+
+PRIHODI I PRIMICI
+
+
+Ekonomski kod | PRIHODI- A | BUDŽET 2024 | Izvršenje budžeta za period 01.01.- 30.09.2024. | Index
+1 | 2 | 4 | 5 | 6
+71 | I- POREZNI PRIHODI | 1.501.800,00 | 1.319.014,40 | 87,83
+711000 | Porezi na dobit pojedinaca i preduzeća - zaostale uplate | 500,00 | 419,37 | 83,87
+711115 | Porez na prihod od imovine i imovinskih prava | 500,00 | 419,37 | 83,87
+713000 | Porezi na plate i radnu snagu - zaostale uplate | 1.000,00 | 44,01 | 4,40
+713111 | Porez na platnu i druga lična primanja | 1.000,00 | 44,01 | 4,40
+714000 | Porezi na imovinu | 60.800,00 | 25.040,82 | 41,19
+714111 | Porez na imovinu od fizičkih lica | 8.000,00 | 6.342,72 | 79,28
+714112 | Porez na imovinu od pravnih lica | 1.300,00 | 900,63 | 69,28
+714113 | Porez na imovinu za motorna vozila | 500,00 | 125,00 | 25,00
+714121 | Porez na nasljedstvo i darove | 1.000,00 | 7.148,10 | 714,81
+714131 | Porez na promet nekretnina | 50.000,00 | 10.524,37 | 21,05
+715000 | Domaći porezi na dobra i usluge - zaostale uplate | 500,00 | 0,00 | 0,00
+716000 | Prihodi od poreza na dohodak | 272.000,00 | 279.807,85 | 102,87
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 220.000,00 | 243.264,16 | 110,57
+716112 | Porez na dohodak fizičkih | 4.000,00 | 1.685,04 | 42,13
+lica od samostalne djelatnosti
+716113 | Porez na dohodak fizičkih lica od imonine i imovinskih prava | 1.000,00 | 370,53 | 37,05
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 22.000,00 | 18.651,04 | 84,78
+716116 | Porez na dohod od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 15.000,00 | 8.610,23 | 57,40
+716117 | Porez na dohodak po konačnom obračunu | 10.000,00 | 7.226,85 | 72,27
+717000 | Prihodi od indirektnih poreza | 1.150.000,00 | 998.679,37 | 86,84
+717131 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 80.000,00 | 77.834,02 | 97,29
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 1.070.000,00 | 920.845,35 | 86,06
+719000 | Ostali porezi | 17.000,00 | 15.022,98 | 88,37
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1.000,00 | 92,24 | 9,22
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 1.000,00 | 153,72 | 15,37
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 15.000,00 | 14.777,02 | 98,51
+72 | II- NEPOREZNI PRIHODI | 1.304.800,00 | 1.066.142,75 | 81,71
+721000 | Prihodi od preduzetičke aktivnosti i imovine | 114.000,00 | 75.076,37 | 65,86
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 1.500,00 | 737,05 | 49,14
+721121 | Prihodi od iznajmljivanja zemljišta | 80.000,00 | 56.887,16 | 71,11
+721122 | Prihodi od iznajmlji. poslovnih prostora i ostale materijalne imovine | 30.000,00 | 15.497,86 | 51,66
+721227 | Prihodi od zakupa - koriščenja sportsko-privrednih lovišta | 2.000,00 | 1.542,50 | 77,13
+721239 | Ostali prihodi od imovine | 500,00 | 411,80 | 82,36
+722000 | Naknade, takse i prihodi od pružanja javnih usluga | 1.149.800,00 | 973.317,19 | 84,65
+722130 | Opšтинske administrativnetakse | 70.000,00 | 58.198,41 | 83,14
+722321 | Opštinske komunalne takse | 200.000,00 | 109.461,20 | 54,73
+722322 | Opštinske komunalne naknade za istaknutu firmu | 75.000,00 | 120.317,63 | 160,42
+722433 | Naknade za uređenje građevinskog zemljišta | 8.000,00 | 21,60 | 0,27
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 100,00 | 1.464,00 | 1464,00
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za poseb.namjene | 120.000,00 | 61.193,77 | 50,99
+722454 | Naknada za koriščenje državnih šuma | 595.000,00 | 557.332,38 | 93,67
+722461 | Naknada za zauzimanje javnih površina | 1.000,00 | 200,00 | 20,00
+722475 | Naknada u postupku promjene namjene šumskog zemljišta (krečenje šuma) | 500,00 | 0,00 | 0,00
+722515 | Naknada za korištenje podataka premjera i katastra | 2.000,00 | 1.539,90 | 77,00
+722531 | Naknada za upotrebu puteva za vozila pravnih lica | 16.000,00 | 13.510,93 | 84,44
+722532 | Naknada za upotrebu puteva za vozila građana | 35.000,00 | 28.562,26 | 81,61
+722581 | Poseb.nakn.za zaš.od prir.i\ndr.nes.gdje je osn.zb.iznos\nNP za isplatu | 25.000,00 | 20.147,80 | 80,59
+722582 | Poseb.nakn.za zaš.od prir.i\ndr.nes.gdje je osn.zb.iznos\nprih.po drug.osnovam. | 500,00 | 442,84 | 88,57
+722583 | Naknada za vatro.jedin.iz premije osig.imovine od požara i pri.sila | 100,00 | 544,21 | 544,21
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatro.jedin. | 100,00 | 380,26 | 380,26
+722760 | Uplaćene refundacije iz ranijih godina | 1.000,00 | 0,00 | 0,00
+722790 | Ostale neplanirane uplate | 500,00 | 0,00 | 0,00
+723000 | Novčane kazne | 41.000,00 | 17.749,19 | 43,29
+723114 | Novčane kazne za privredne prestupe po federalnim propisima | 500,00 | 0,00 | 0,00
+723131 | Novčane kazne po opštinskim propisima | 500,00 | 150,00 | 30,00
+723139 | Ostali prihodi | 40.000,00 | 17.599,19 | 44,00
+73 | III- TEKUĆI GRANTOVI | 1.020.000,00 | 607.977,82 | 59,61
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 150.000,00 | 36.182,86 | 24,12
+731111 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 150.000,00 | 36.182,86 | 24,12
+732 | Tekući grantovi od ostalih nivoa vlasti | 870.000,00 | 571.794,96 | 65,72
+732111 | Primljeni tekući grantovi od Države | 50.000,00 | 1.500,00 | 3,00
+732112 | Primljeni tekući grantovi od Federacije | 400.000,00 | 333.284,78 | 83,32
+732113 | Primljeni tekući grantovi od Republike Srpske | 130.000,00 | 0,00 | 0,00
+732114 | Primljeni tekući grantovi od kantona | 270.000,00 | 237.010,18 | 87,78
+732116 | Primljeni tekući grantovi od opština | 20.000,00 | 0,00 | 0,00
+733 | Donacije | 0,00 | 0,00 | #DIV/0!
+733112 | Donacije od pravnih lica | 0,00 | 0,00 | #DIV/0!
+77 | IV- PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+777 | Prihodi po osnovu zaostalih obaveza | 400,00 | 0,00 | 0,00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 400,00 | 0,00 | 0,00
+81 | V- KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+811111 | Primici od prodaje zemljišta | 120.000,00 | 0,00 | 0,00
+VI PRENESENA SREDSTVA | 50.000,00 | 0,00 | 0,00
+591100 | Prenesena sredstva iz prethodnih godina | 50.000,00 | 0,00 | 0,00
+A | UKUPNO PRIHODI (I+II+III+IV+V+VI) | 3.997.000,00 | 2.993.134,97 | 74,88
+
+
+RASHODI I IZDACI
+
+
+61 | I- TEKUĆI RASHODI | 3.565.000,00 | 2.712.044,19 | 76,07
+611000 | Plate i naknade troškova zaposlenih | 1.622.000,00 | 1.344.657,30 | 82,90
+611100 | Bruto plate zaposlenih | 1.410.000,00 | 1.171.183,25 | 83,06
+611200 | Naknade troškova zaposlenih | 212.000,00 | 173.474,05 | 81,83
+611211 | Naknada za prijevoz s posla i na posao | 15.000,00 | 11.386,00 | 75,91
+611221 | Naknada za topli obrok tokom rada | 120.000,00 | 118.671,85 | 98,89
+611224 | Regres za godišnji odmor | 40.000,00 | 960,75 | 2,40
+611225 | Otpremnine zbog odlaska u penziju | 22.000,00 | 21.060,45 | 95,73
+611227 | Pomoć u slučaju smrti, invalidnosti, bolesti | 15.000,00 | 21.395,00 | 142,63
+612000 | Doprinosi poslodavca i ostali doprinosi | 145.000,00 | 122.581,14 | 84,54
+612100 | Doprinosi poslodavca | 145.000,00 | 122.581,14 | 84,54
+613000 | Izdaci za materijal, sitan inventar i usluge | 490.000,00 | 258.784,66 | 52,81
+613100 | Putni troškovi | 13.000,00 | 6.429,00 | 49,45
+613200 | Izdaci za energiju i grijanje | 140.000,00 | 64.923,22 | 46,37
+613300 | Izdaci za komunikaciju i komunalne usluge | 32.000,00 | 37.121,33 | 116,00
+613400 | Nabavka materijala i sitnog inventara | 14.500,00 | 10.556,82 | 72,81
+613500 | Izdaci za usluge gorivo i registraciju | 48.000,00 | 32.687,15 | 68,10
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 9.400,00 | 6.456,02 | 68,68
+613700 | Izdaci za tekuće održavanje | 38.000,00 | 11.362,87 | 29,90
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6.000,00 | 2.808,77 | 46,81
+613900 | Ugovorene usluge | 189.100,00 | 86.439,48 | 45,71
+614000 | Tekući transferi i drugi tekući rashodi | 1.308.000,00 | 986.021,09 | 75,38
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 20.200,88 | 13,29
+614200 | Tekući transferi pojedincima | 514.000,00 | 420.513,55 | 81,81
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 398.713,90 | 84,12
+614400 | Transferi javnim preduzećima | 155.000,00 | 133.892,76 | 86,38
+614800 | Drugi tekući rashodi | 13.000,00 | 12.700,00 | 97,69
+82 | II- KAPITALNI IZDACI | 432.000,00 | 1.823,00 | 0,42
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 1.823,00 | 0,42
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada | 31.000,00 | 0,00 | 0,00
+821200 | Nabavka građevina | 160.000,00 | 0,00 | 0,00
+821300 | Nabavka opreme | 30.000,00 | 0,00 | 0,00
+821500 | Nabava stalnih sredstava u obliku prava | 15.000,00 | 0,00 | 0,00
+821600 | Rekonstrukcija i investiciono održavanje | 196.000,00 | 1.823,00 | 0,93
+B | UKUPNO RASHODI (I + II) | 3.997.000,00 | 2.713.867,19 | 67,90
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 279.267,78 | #DIV/0!
+
+
+II POSEBNI DIO
+
+
+Ekonomski kod | RASHODI | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-30.09. | Index
+KABINET OPŠTINSKOG NAČELNIKA
+611100 | Bruto plate i naknade | 165.000,00 | 123.962,02 | 75,13
+611200 | Naknade troškova zaposlenih | 30.000,00 | 30.072,52 | 100,24
+612100 | Doprinosi poslodavca | 16.000,00 | 12.974,47 | 81,09
+Ukupno | 211.000,00 | 167.009,01 | 79,15
+OPŠTINSKO VIJEĆE
+611100 | Bruto plate i naknade | 100.000,00 | 81.315,89 | 81,32
+611200 | Naknade troškova zaposlenih | 11.000,00 | 10.561,29 | 96,01
+612100 | Doprinosi poslodavca | 10.000,00 | 8.511,07 | 85,11
+Ukupno | 121.000,00 | 100.388,25 | 82,97
+SLUŻBA ZA PRIVREDU FINANSIJE I INSPEKCIJSKE POSLOVE
+611100 | Bruto plate i naknade | 285.000,00 | 208.026,63 | 72,99
+611200 | Naknade troškova zaposlenih | 35.000,00 | 23.750,21 | 67,86
+612100 | Doprinosi poslodavca | 30.000,00 | 21.773,00 | 72,58
+Ukupno | 350.000,00 | 253.549,84 | 72,44
+SLUŻBA ZA IMOVINSKO-PRAVNEI GEODETSKE POSLOVE
+611100 | Bruto plate i naknade | 220.000,00 | 223.352,99 | 101,52
+611200 | Naknade troškova zaposlenih | 26.000 | 37.514,02 | 144,28
+612100 | Doprinosi poslodavca | 23.000,00 | 23.377,53 | 101,64
+Ukupno | 269.000,00 | 284.244,54 | 105,67
+SLUŻBA ZA OPSTU UPRAVU I DRUŠTVENE DJELATNOSTI
+611100 | Bruto plate i naknade | 400.000,00 | 352.767,84 | 88,19
+611200 | Naknade troškova zaposlenih | 82.000,00 | 41.137,64 | 50,17
+612100 | Doprinosi poslodavca | 41.000,00 | 36.921,66 | 90,05
+Ukupno | 523.000,00 | 430.827,14 | 82,38
+SLUŻBA ZA CIVILNU ZAŠTITU
+611100 | Bruto plate i naknade | 125.000,00 | 96.315,37 | 77,05
+611200 | Naknade troškova zaposlenih | 15.000,00 | 12.668,81 | 84,46
+612100 | Doprinosi poslodavca | 13.000,00 | 10.080,53 | 77,54
+Ukupno | 153.000,00 | 119.064,71 | 77,82
+SEKTOR ZA LOKALNI RAZVOJI INVESTICIJE
+611100 | Bruto plate i naknade | 115.000,00 | 85.442,51 | 74,30
+611200 | Naknade troškova zaposlenih | 13.000,00 | 11.769,56 | 90,54
+612100 | Doprinosi poslodavca | 12.000,00 | 8.942,88 | 74,52
+Ukupno | 140.000,00 | 106.154,95 | 75,82
+
+
+611 | UKUPNO | 1.622.000,00 | 1.344.657,30 | 82,90
+612 | UKUPNO | 145.000,00 | 122.581,14 | 84,54
+611-612 | UKUPNO | 1.767.000,00 | 1.467.238,44 | 83,04
+613000 | Izdaci za materijal, sitan inventari usluge | 490.000,00 | 258.784,66 | 52,81
+613110 | Putni troškovi u zemlji | 5.000,00 | 6.429,00 | 128,58
+613120 | Putni troškovi u inostranstvo | 8.000,00 | 0,00 | 0,00
+613211 | Izdaci za električnu energiju | 100.000,00 | 51.308,24 | 51,31
+613215 | Drvo/pelet | 40.000,00 | 13.614,98 | 34,04
+613310 | Izdaci za komunikaciju | 25.000,00 | 30.005,81 | 120,02
+613320 | Izdaci za komunalne usluge | 7.000,00 | 7.115,52 | 101,65
+613411 | Izdaci za obrasce | 3.000,00 | 701,29 | 23,38
+613416 | Izdaci za kancelarijski materijal | 7.000,00 | 6.238,34 | 89,12
+613417 | Izdaci za sitan inventar | 1.500,00 | 642,00 | 42,80
+613418 | Ostali izdaci | 3.000,00 | 2.975,19 | 99,17
+613510 | Gorivo za prijevoz | 40.000,00 | 19.908,14 | 49,77
+613520 | Prijevozne usluge | 2.000,00 | 4.274,00 | 213,70
+613523 | Registracija vozila | 6.000,00 | 8.505,01 | 141,75
+613611 | Unajmljivanje imovine | 400,00 | 0,00 | 0,00
+613621 | Unajmljivanje opreme | 9.000,00 | 6.456,02 | 71,73
+613710 | Materijal za popravke i održavanje | 3.000,00 | 4.915,85 | 163,86
+613720 | Usluge popravaka i održavanje | 35.000,00 | 6.447,02 | 18,42
+613810 | Izdaci osiguranja | 1.000,00 | 0,00 | 0,00
+613820 | Usluge bankarskog i platnog prometa | 5.000,00 | 2.808,77 | 56,18
+613911 | Usluge medija | 5.000,00 | 1.412,00 | 28,24
+613912 | Usluge štampanja | 500,00 | 1.315,50 | 263,10
+613914 | Usluge reprezentacija | 20.000,00 | 11.971,05 | 59,86
+613915 | Ostale stručne usluge | 1.000,00 | 1.240,00 | 124,00
+613916 | Usluge objavljivanja tendera i oglasa | 4.000,00 | 2.042,66 | 51,07
+613923 | Usluge za specijalizaciju i školovanje | 500,00 | 0,00 | 0,00
+613930 | Stručne usluge | 5.000,00 | 5.060,52 | 101,21
+613932 | Budžetska rezerva | 30.000,00 | 5.100,00 | 17,00
+613960 | Zatezne kamate i troškovi spora | 100,00 | 0,00 | 0,00
+613974 | Izdaci za rad komisija | 10.000,00 | 10.720,00 | 107,20
+613975 | Izdaci za naknade opštinskim odbornicima | 55.000,00 | 26.900,00 | 48,91
+613976 | Ostali izdaci za druge samost. djelatnosti i povremenog samost. rada | 40.000,00 | 10.350,00 | 25,88
+613980 | Izdaci za poreze i dopr. na dohodak od druge samos.djelat i povrem.sam.rada | 15.000,00 | 7.506,27 | 50,04
+613990 | Ostale nespomenute usluge i dadžbine | 3.000,00 | 2.821,48 | 94,05
+614000 | Tekući transferi i drugi tekući rashodi | 1.308.000,00 | 986.021,09 | 75,38
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 20.200,88 | 13,29
+614117 | Tekući transferi mjesnim zajednicama | 20.000,00 | 6.531,89 | 32,66
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 60.000,00 | 6.180,00 | 10,30
+614124 | Transfer za izbore | 62.000,00 | 7.488,99 | 12,08
+614170 | Tekući transferi zdravstvu | 10.000,00 | 0,00 | 0,00
+614200 | Tekući transferi pojedincima | 514.000,00 | 420.513,55 | 81,81
+614220 | Transferi pojedincima po | 60.000,00 | 25.133,31 | 41,89
+osnovi materijalno-socijalne sigurn. nezaposl. osoba
+614234 | Isplata stipendija | 30.000,00 | 24.400,00 | 81,33
+614235 | Jednokratne novčane pomoći | 195.000,00 | 141.000,00 | 72,31
+614239 | Ostali transferi pojedincima | 25.000,00 | 17.352,40 | 69,41
+614241 | Transfer za posebne namjene-elementarne nepogode | 5.000,00 | 50.000,00 | 1000,00
+614243 | Transfer za prevoz učenika | 45.000,00 | 30.672,46 | 68,16
+614244 | Transferi za podsticaj poljoprivredne proizvodnje | 50.000,00 | 47.050,00 | 94,10
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1.000,00 | 0,00 | 0,00
+614253 | Pogrebni troškovi | 3.000,00 | 2.265,00 | 75,50
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 100.000,00 | 82.640,38 | 82,64
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 398.713,90 | 84,12
+614311 | Transfer za Crveni krst | 24.000,00 | 17.049,50 | 71,04
+614311 | Transfer za kulturu | 15.000,00 | 11.597,29 | 77,32
+614311 | Transfer za sport | 30.000,00 | 22.897,70 | 76,33
+614311 | Transfer za obrazovanje | 50.000,00 | 57.455,04 | 114,91
+614311 | Transfer za projekte mladih | 10.000,00 | 14.038,00 | 140,38
+614311 | Transfer za turizam | 30.000,00 | 25.726,74 | 85,76
+614311 | Transfer za JU Dječiji vrtić Majka hrabrost | 210.000,00 | 195.355,93 | 93,03
+614311 | Transfer za JU Centar za kulturu i sport- Muzej | 40.000,00 | 35.673,27 | 89,18
+614311 | Transfer za Centar za socijalni rad | 40.000,00 | 0,00 | 0,00
+614311 | Transfer za Starački dom-Projektna dokumentacija | 5.000,00 | 0,00 | 0,00
+614311 | Transfer udruženjima građana | 10.000,00 | 7.389,85 | 73,90
+614319 | Tekući transferi vjerskim zajednicama | 10.000,00 | 11.530,58 | 115,31
+614400 | Transferi javnim preduzećima | 155.000,00 | 133.892,76 | 86,38
+614411 | Transfer za Radio Drvar | 50.000,00 | 41.086,00 | 82,17
+614411 | Transfer za JP Komunalac Drvar | | 33.870,32 | #DIV/0!
+Usluge zajedničke komunalne potrošnje | 100.000,00 | 58.681,44 | 58,68
+Subvencija za odvoz pitke vode | 5.000,00 | 255,00 | 5,10
+614800 | Drugi tekući rashodi | 13.000,00 | 12.700,00 | 97,69
+614811 | Povrat više ili pogrešno uplaćenih sredstava | 1.000,00 | 0,00 | 0,00
+614817 | Izvršenje sudskih presuda i rješenja o izvršenju | 12.000,00 | 12.700,00 | 105,83
+82 | KAPITALNI IZDACI | 432.000,00 | 1.823,00 | 0,42
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 1.823,00 | 0,42
+821111 | Nabavka zemljišta- eksproprijacija | 31.000,00 | 0,00 | 0,00
+821211 | Zgrada opštine- II faza | 10.000,00 | 0,00 | 0,00
+821211 | Pijaca- | 150.000,00 | 0,00 | 0,00
+821310 | Kancelarijska oprema | 20.000,00 | 0,00 | 0,00
+821321 | Motorna vozila | 10.000,00 | 0,00 | 0,00
+821521 | Studije izvodljivosti, projektne pripreme i projektovanje | 15.000,00 | 0,00 | 0,00
+821611 | Rekonstrukcija SRC Radomir Kovačević | 6.000,00 | 0,00 | 0,00
+821612 | Rekonstrukcija ulica | 70.000,00 | 0,00 | 0,00
+821614 | Rekonstrukcija zgrada- krovovi | 10.000,00 | 0,00 | 0,00
+821618 | Rekonstrukcija objekata vezanih za vodovod, kanalizaciju i čvrsti otpad | 70.000,00 | 1.823,00 | 2,60
+821619 | Ostale rekonstrukcije i poboljšanja | 40.000,00 | 0,00 | 0,00
+823 | Izdaci za otplatu dugova | 0 | 0 | #DIV/0!
+823511 | Garancije date JP Komunalac | 0 | 0 | #DIV/0!
+B | UKUPNO RASHODI | 3.997.000,00 | 2.713.867,19 | 67,90
+RAZLIKA (DOBITAK- GUBITAK) | 0,00 | 279.267,78
+
+
+Broj: 02-04-1491-3-5/24
+
+Datum: 15.10.2024.godine
+
+OPŠTINSKI NAČELNIK
+
+Dušica Runić, s.r.
+
+68.
+
+Na osnovu člana 7. Zakona o budžetima u Federaciji Bosne i Hercegovine („Službene novine FBiH“, broj: 102/13, 9/14, 13/14, 8/15, 91/15, 102/15, 104/16, 5/18, 11/19, 99/19 i 25/22), člana 13. Zakona o principima lokalne samouprave u Federaciji BiH („Službene novine FBiH“, broj: 49/06 i 51/09), člana 42. stav 2. alineja 18., a u vezi sa članom 49. stav 1. alineja 4. Statuta opštine Drvar – Prečišćeni tekst („Službeni glasnik opštine Drvar“, broj: 2/15), na prijedlog opštinskog Načelnika, Opštinsko vijée Drvar, na 4.redocnjoj sjednici održanoj 28.02.2025.godine, d o n o s i:
+
+ODLUKU
+
+o usvajanju Izvještaja o izvršenju budžeta
+
+Opštine Drvar za period 01.01.-
+
+31.12.2024.godine
+
+Član 1.
+
+1. Ovom Odlukom Opštinsko vijeće Drvar usvaja Izvještaj o izvršenju budžeta za period od 01.01.31.12.2024.godine.
+
+2. Izvršenje Budžeta opštine Drvar za period 01.01.-31.12.2024.godine, sastoji se od:
+
+UKUPNI PRIHODI .....4.675.509,90
+
+POREZNI PRIHODI .....1.814.451,12
+
+NEPOREZNI PRIHODI .....1.376.523,13
+
+TEKUĆI GRANTOVI .....1.434.535,65
+
+PRIHODI PO OSNOVU ZAOSTALIH
+
+OBAVEZA .....0,00
+
+KAPITALNI PRIMICI .....0,00
+
+PRENESENA SREDSTVA .....50.000,00
+
+UKUPNI RASHODI.....4.127.141,42
+
+TEKUĆI RASHODI.....3.837.434,25
+
+KAPITALNI IZDACI.....289.707,17
+
+Član 2.
+
+Sastavni dio ove Odluke je Izvještaj o izvršenje budžeta Opštine Drvar za period 01.01.-31.12.2024.godine.
+
+Član 3.
+
+Ova Odluka stupa na snagu osmog dana od dana objavljivanja u „Službenom glasniku Opštine Drvar“ i na oglasnoj tabli Opštine Drvar.
+
+Broj: 01-02-495-1/24
+
+Datum: 28.02.2025.godine
+
+PREDSJEDNIK
+
+OPŠTINSKOG VIJEĆA
+
+Jasna Pećanac, s.r.
+
+PRILOG
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA OPŠTINE DRVAR ZA PERIOD 01.01.-31.12.2024. GODINE
+
+I OPŠTI DIO
+
+
+O P I S | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-31.12.2024. | Index
+1 | 2 | 4 | 5 | 5
+A | UKUPNI PRIHODI | 3.997.000,00 | 4.675.509,90 | 116,98
+71 | POREZNI PRIHODI | 1.501.800,00 | 1.814.451,12 | 120,82
+72 | NEPOREZNI PRIHODI | 1.304.800,00 | 1.376.523,13 | 105,50
+73 | TEKUĆI GRANTOVI | 1.020.000,00 | 1.434.535,65 | 140,64
+77 | PRIHODI PO OSNOVU\nZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+81 | KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+59 | PRENESENA SREDSTVA | 50.000,00 | 50.000,00 | 100,00
+B | UKUPNI RASHODI | 3.997.000,00 | 4.127.141,42 | 103,26
+61 | TEKUĆI RASHODI | 3.565.000,00 | 3.837.434,25 | 107,64
+82 | KAPITALNI IZDACI | 432.000,00 | 289.707,17 | 67,06
+
+
+548.368,48
+
+PRIHODI I PRIMICI
+
+
+Ekonomski kod | PRIHODI- A | BUDŽET 2024 | Izvršenje budžeta za period 01.01.- 31.12.2024. | Index
+1 | 2 | 4 | 5 | 6
+71 | I- POREZNI PRIHODI | 1.501.800,00 | 1.814.451,12 | 120,82
+711000 | Porezi na dobit pojedinaca i produžeća - zaostale uplate | 500,00 | 434,50 | 86,90
+711115 | Porez na prihod od imovine i imovinskih prava | 500,00 | 434,50 | 86,90
+713000 | Porezi na plate i radnu snagu - zaostale uplate | 1.000,00 | 58,68 | 5,87
+713111 | Porez na platju i druga lična primanja | 1.000,00 | 58,68 | 5,87
+714000 | Porezi na imovinu | 60.800,00 | 34.116,33 | 56,11
+714111 | Porez na imovinu od fizičkih lica | 8.000,00 | 7.754,00 | 96,93
+714112 | Porez na imovinu od pravnih lica | 1.300,00 | 1.213,13 | 93,32
+714113 | Porez na imovinu za motorna vozila | 500,00 | 175,00 | 35,00
+714121 | Porez na nasljedstvo i darove | 1.000,00 | 7.248,10 | 724,81
+714131 | Porez na promet nekretnina | 50.000,00 | 17.726,10 | 35,45
+715000 | Domaći porezi na dobra i usluge - zaostale uplate | 500,00 | 0,00 | 0,00
+716000 | Prihodi od poreza na dohodak | 272.000,00 | 382.637,50 | 140,68
+716111 | Porez na dohodak fizičkih lica od nesamostalne djelatnosti | 220.000,00 | 335.270,56 | 152,40
+716112 | Porez na dohodak fizičkih lica od samostalne djelatnosti | 4.000,00 | 2.376,59 | 59,41
+716113 | Porez na dohodak fizičkih lica od imonine i imovinskih prava | 1.000,00 | 556,96 | 55,70
+716115 | Porez na dohodak fizičkih lica na dobitke od igara na sreću | 22.000,00 | 24.816,13 | 112,80
+716116 | Porez na doh.od drugih samo.djel. iz čl. 12 stav 4. Zak.o por.na doh. | 15.000,00 | 11.939,85 | 79,60
+716117 | Porez na dohodak po konačnom obračunu | 10.000,00 | 7.677,41 | 76,77
+717000 | Prihodi od indirektnih poreza | 1.150.000,00 | 1.375.597,68 | 119,62
+717131 | Prihodi od indirektnih poreza koji pripadaju Direkciji cesta | 80.000,00 | 105.789,21 | 132,24
+717140 | Prihodi od indirektnih poreza koji pripadaju jedinicama lokalne samouprave | 1.070.000,00 | 1.269.808,47 | 118,67
+719000 | Ostali porezi | 17.000,00 | 21.606,43 | 127,10
+719114 | Poseban porez za zaštitu od prirodnih i drugih nesreća - zaostale obaveze | 1.000,00 | 104,26 | 10,43
+719116 | Porez na potrošnju u ugostiteljstvu od pravnih lica | 1.000,00 | 153,72 | 15,37
+719117 | Porez na potrošnju u ugostiteljstvu od fizičkih lica | 15.000,00 | 21.348,45 | 142,32
+72 | II- NEPOREZNI PRIHODI | 1.304.800,00 | 1.376.523,13 | 105,50
+721000 | Prihodi od preduzetičke aktivnosti i imovine | 114.000,00 | 91.218,89 | 80,02
+721112 | Prihodi od davanja prava za ekspl.prirodnih resursa, patenata i autor.prava | 1.500,00 | 737,05 | 49,14
+721121 | Prihodi od iznajmljivanja zemljišta | 80.000,00 | 71.673,58 | 89,59
+721122 | Prihodi od iznajmlji. poslovnih prostora i ostale materijalne imovine | 30.000,00 | 16.051,36 | 53,50
+721227 | Prihodi od zakupa - koriščenja sportsko-privrednih lovišta | 2.000,00 | 1.742,50 | 87,13
+721239 | Ostali prihodi od imovine | 500,00 | 1.014,40 | 202,88
+722000 | Naknade, takse i prihodi od pružanja javnih usluga | 1.149.800,00 | 1.257.220,07 | 109,34
+722130 | Opštinske administrative takse | 70.000,00 | 74.080,41 | 105,83
+722321 | Opštinske komunalne takse | 200.000,00 | 109.461,20 | 54,73
+722322 | Opštinske komunalne naknade za istaknutu firmu | 75.000,00 | 124.820,60 | 166,43
+722433 | Naknade za uređenje građevinskog zemljišta | 8.000,00 | 21,60 | 0,27
+722435 | Naknada po osnovi prirodnih pogodnosti - Renta | 100,00 | 1.464,00 | 1464,00
+722441 | Opštinske komun.naknade u skladu sa kanton.propisima za | 120.000,00 | 103.531,06 | 86,28
+poseb.namjene
+722454 | Naknada za koriščenje državnih šuma | 595.000,00 | 757.682,61 | 127,34
+722461 | Naknada za zauzimanje javnih površina | 1.000,00 | 200,00 | 20,00
+722475 | Naknada u postupku promjene namjene šumskog zemljišta (krčenje šuma) | 500,00 | 0,00 | 0,00
+722515 | Naknada za korištenje podataka premjera i katastra | 2.000,00 | 2.279,10 | 113,96
+722531 | Naknada za upotrebu puteva za vozila pravnih lica | 16.000,00 | 16.679,37 | 104,25
+722532 | Naknada za upotrebu puteva za vozila građana | 35.000,00 | 37.640,33 | 107,54
+722581 | Poseb.nakn.za zaš.od prir.i\ndr.nes.gdje je osn.zb.iznos NP za isplatu | 25.000,00 | 27.696,98 | 110,79
+722582 | Poseb.nakn.za zaš.od prir.i\ndr.nes.gdje je osn.zb.iznos prih.pod drug.osnovam. | 500,00 | 585,01 | 117,00
+722583 | Naknada za vatrog.jedin.iz premije osig.imovine od požara i pr.sila | 100,00 | 642,12 | 642,12
+722584 | Naknada iz funkcionalne premije osig.od autoodgov.za vatrog.jedin. | 100,00 | 435,68 | 435,68
+722760 | Uplaćene refundacije iz ranijih godina | 1.000,00 | 0,00 | 0,00
+722790 | Ostale neplanirane uplate | 500,00 | 0,00 | 0,00
+723000 | Novčanice kazne | 41.000,00 | 28.084,17 | 68,50
+723114 | Novčanice kazne za privredne prestupe po federalnim propisima | 500,00 | 0,00 | 0,00
+723131 | Novčanice kazne po opštinskim propisima | 500,00 | 150,00 | 30,00
+723139 | Ostali prihodi | 40.000,00 | 27.934,17 | 69,84
+73 | III- TEKUĆI GRANTOVI | 1.020.000,00 | 1.434.535,65 | 140,64
+731 | Tekući grantovi iz inostranstva vlada i međunarodnih organizacija | 150.000,00 | 44.006,26 | 29,34
+731111 | Primljeni tekući grantovi od inostranih vlada i međunarodnih organizacija | 150.000,00 | 44.006,26 | 29,34
+732 | Tekući grantovi od ostalih nivoa vlasti | 870.000,00 | 1.390.529,39 | 159,83
+732111 | Primljeni tekući grantovi od Države | 50.000,00 | 1.500,00 | 3,00
+732112 | Primljeni tekući grantovi od Federacije | 400.000,00 | 693.344,77 | 173,34
+732113 | Primljeni tekući grantovi od Republike Srpske | 130.000,00 | 342.000,00 | 263,08
+732114 | Primljeni tekući grantovi od kantona | 270.000,00 | 353.684,62 | 130,99
+732116 | Primljeni tekući grantovi od opština | 20.000,00 | 0,00 | 0,00
+733 | Donacije | 0,00 | 0,00 | #DIV/0!
+733112 | Donacije od pravnih lica | 0,00 | 0,00 | #DIV/0!
+77 | IV- PRIHODI PO OSNOVU ZAOSTALIH OBAVEZA | 400,00 | 0,00 | 0,00
+777 | Prihodi po osnovu zaostalih obaveza | 400,00 | 0,00 | 0,00
+777779 | Uplata zaostalih naknada za puteve iz cijene naftinih derivata | 400,00 | 0,00 | 0,00
+81 | V- KAPITALNI PRIMICI | 120.000,00 | 0,00 | 0,00
+811111 | Primici od prodaje zemljišta | 120.000,00 | 0,00 | 0,00
+VI PRENESENA SREDSTVA | 50.000,00 | 50.000,00 | 100,00
+591100 | Prenesena sredstva iz prethodnih godina | 50.000,00 | 50.000,00 | 100,00
+A | UKUPNO PRIHODI\n(I+II+III+IV+V+VI) | 3.997.000,00 | 4.675.509,90 | 116,98
+
+
+RASHODI I IZDACI
+
+
+61 | I- TEKUĆI RASHODI | 3.565.000,00 | 3.837.434,25 | 107,64
+611000 | Plate i naknade troškova\nzaposlenih | 1.622.000,00 | 1.830.357,66 | 112,85
+611100 | Bruto plate zaposlenih | 1.410.000,00 | 1.572.741,07 | 111,54
+611200 | Naknade troškova zaposlenih | 212.000,00 | 257.616,59 | 121,52
+611211 | Naknada za prijevoz s posla i na posao | 15.000,00 | 14.367,00 | 95,78
+611221 | Naknada za topli obrok tokom rada | 120.000,00 | 154.040,74 | 128,37
+611224 | Regres za godišnji odmor | 40.000,00 | 38.328,75 | 95,82
+611225 | Otpremnine zbog odlaska u penziju | 22.000,00 | 21.910,10 | 99,59
+611227 | Pomoć u slučaju smrti, invalidnosti, bolesti | 15.000,00 | 28.970,00 | 193,13
+612000 | Doprinosi poslodavca i ostali doprinosi | 145.000,00 | 164.610,05 | 113,52
+612100 | Doprinosi poslodavca | 145.000,00 | 164.610,05 | 113,52
+613000 | Izdaci za materijal, sitan inventari i usluge | 490.000,00 | 458.194,18 | 93,51
+613100 | Putni troškovi | 13.000,00 | 14.576,60 | 112,13
+613200 | Izdaci za energiju i grijanje | 140.000,00 | 107.349,48 | 76,68
+613300 | Izdaci za komunikaciju i komunalne usluge | 32.000,00 | 53.760,10 | 168,00
+613400 | Nabavka materijala i sitnog inventara | 14.500,00 | 17.173,34 | 118,44
+613500 | Izdaci za usluge gorivo i registraciju | 48.000,00 | 58.853,30 | 122,61
+613600 | Unajmljivanje imovine, opreme i nematerijalne imovine | 9.400,00 | 8.725,93 | 92,83
+613700 | Izdaci za tekuće održavanje | 38.000,00 | 26.056,70 | 68,57
+613800 | Izdaci osiguranja, bankarskih usluga i usluga platnog prometa | 6.000,00 | 4.171,14 | 69,52
+613900 | Ugovorene usluge | 189.100,00 | 167.527,59 | 88,59
+614000 | Tekući transferi i drugi tekući rashodi | 1.308.000,00 | 1.384.272,36 | 105,83
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 79.168,03 | 52,08
+614200 | Tekući transferi pojedincima | 514.000,00 | 489.916,62 | 95,31
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 593.461,27 | 125,20
+614400 | Transferi javnim produzećima | 155.000,00 | 209.026,44 | 134,86
+614800 | Drugi tekući rashodi | 13.000,00 | 12.700,00 | 97,69
+82 | II- KAPITALNI IZDACI | 432.000,00 | 289.707,17 | 67,06
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 289.707,17 | 67,06
+821100 | Nabavka zemljišta, šuma i višegodišnjih zasada | 31.000,00 | 0,00 | 0,00
+821200 | Nabavka građevina | 160.000,00 | 139.963,59 | 87,48
+821300 | Nabavka opreme | 30.000,00 | 601,30 | 2,00
+821500 | Nabava stalnih sredstava u obliku prava | 15.000,00 | 6.117,30 | 40,78
+821600 | Rekonstrukcija i investiciono održavanje | 196.000,00 | 143.024,98 | 72,97
+B | UKUPNO RASHODI (I + II) | 3.997.000,00 | 4.127.141,42 | 103,26
+RAZLIKA (DOBITAK-GUBITAK) | 0,00 | 548.368,48 | #DIV/0!
+
+
+II POSEBNI DIO
+
+
+Ekonomski kod | RASHODI | BUDŽET 2024 | Izvršenje budžeta za period 01.01.-31.12.2024. | Index
+KABINET OPŠTINSKOG NAČELNIKA
+611100 | Bruto plate i naknade | 165.000,00 | 171.555,47 | 103,97
+611200 | Naknade troškova zaposlenih | 30.000,00 | 42.881,06 | 142,94
+612100 | Doprinosi poslodavca | 16.000,00 | 17.955,80 | 112,22
+Ukupno | 211.000,00 | 232.392,33 | 110,14
+OPŠTINSKO VIJEĆE
+611100 | Bruto plate i naknade | 100.000,00 | 121.504,23 | 121,50
+611200 | Naknade troškova zaposlenih | 11.000,00 | 17.917,61 | 162,89
+612100 | Doprinosi poslodavca | 10.000,00 | 12.717,45 | 127,17
+Ukupno | 121.000,00 | 152.139,29 | 125,73
+SLUŻBA ZA PRIVREDU FINANSIJE I INSPEKCIJSKE POSLOVE
+611100 | Bruto plate i naknade | 285.000,00 | 277.536,78 | 97,38
+611200 | Naknade troškova zaposlenih | 35.000,00 | 36.436,14 | 104,10
+612100 | Doprinosi poslodavca | 30.000,00 | 29.048,27 | 96,83
+Ukupno | 350.000,00 | 343.021,19 | 98,01
+SLUŻBA ZA IMOVINSKO PRAVNE I GEODETSKE POSLOVE
+611100 | Bruto plate i naknade | 220.000,00 | 297.124,91 | 135,06
+611200 | Naknade troškova zaposlenih | 26.000 | 50.999,77 | 196,15
+612100 | Doprinosi poslodavca | 23.000,00 | 31.099,00 | 135,21
+Ukupno | 269.000,00 | 379.223,68 | 140,98
+SLUŻBA ZA OPŠTU UPRAVU I DRUŠTIVENE DJELAINOSTI
+611100 | Bruto plate i naknade | 400.000,00 | 464.010,25 | 116,00
+611200 | Naknade troškova zaposlenih | 82.000,00 | 71.340,26 | 87,00
+612100 | Doprinosi poslodavca | 41.000,00 | 48.564,58 | 118,45
+Ukupno | 523.000,00 | 583.915,09 | 111,65
+SLUŻBA ZA CIVILNU ZAŠTITU
+611100 | Bruto plate i naknade | 125.000,00 | 126.987,72 | 101,59
+611200 | Naknade troškova zaposlenih | 15.000,00 | 21.078,70 | 140,52
+612100 | Doprinosi poslodavca | 13.000,00 | 13.290,78 | 102,24
+Ukupno | 153.000,00 | 161.357,20 | 105,46
+SEKTOR ZA LOKALNI RAZVOJ I INVESTICIJE
+611100 | Bruto plate i naknade | 115.000,00 | 114.021,71 | 99,15
+611200 | Naknade troškova zaposlenih | 13.000,00 | 16.963,05 | 130,49
+612100 | Doprinosi poslodavca | 12.000,00 | 11.934,17 | 99,45
+Ukupno | 140.000,00 | 142.918,93 | 102,08
+
+
+611 | UKUPNO | 1.622.000,00 | 1.830.357,66 | 112,85
+612 | UKUPNO | 145.000,00 | 164.610,05 | 113,52
+611-612 | UKUPNO | 1.767.000,00 | 1.994.967,71 | 112,90
+613000 | Izdaci za materijal, sitan inventari i usluge | 490.000,00 | 458.194,18 | 93,51
+613110 | Putni troškovi u zemlji | 5.000,00 | 12.063,60 | 241,27
+613120 | Putni troškovi u inostranstvo | 8.000,00 | 2.513,00 | 31,41
+613211 | Izdaci za električnu energiju | 100.000,00 | 84.817,84 | 84,82
+613215 | Drvo/pelet | 40.000,00 | 22.531,64 | 56,33
+613310 | Izdaci za komunikaciju | 25.000,00 | 45.038,05 | 180,15
+613320 | Izdaci za komunalne usluge | 7.000,00 | 8.722,05 | 124,60
+613411 | Izdaci za obrasce | 3.000,00 | 7.271,29 | 242,38
+613416 | Izdaci za kancelarijski materijal | 7.000,00 | 7.188,03 | 102,69
+613417 | Izdaci za sitan inventar | 1.500,00 | 252,50 | 16,83
+613418 | Ostali izdaci | 3.000,00 | 2.461,52 | 82,05
+613510 | Gorivo za prijevoz | 40.000,00 | 46.074,29 | 115,19
+613520 | Prijevozne usluge | 2.000,00 | 4.274,00 | 213,70
+613523 | Registracija vozila | 6.000,00 | 8.505,01 | 141,75
+613611 | Unajmljivanje imovine | 400,00 | 0,00 | 0,00
+613621 | Unajmljivanje opreme | 9.000,00 | 8.725,93 | 96,95
+613710 | Materijal za popravke i održavanje | 3.000,00 | 8.974,24 | 299,14
+613720 | Usluge popravaka i održavanja | 35.000,00 | 17.082,46 | 48,81
+613810 | Izdaci osiguranja | 1.000,00 | 0,00 | 0,00
+613820 | Usluge bankarskog i platnog prometa | 5.000,00 | 4.171,14 | 83,42
+613911 | Usluge medija | 5.000,00 | 2.815,00 | 56,30
+613912 | Usluge štampanja | 500,00 | 315,50 | 63,10
+613914 | Usluge reprezentacija | 20.000,00 | 19.911,38 | 99,56
+613915 | Ostale stručne usluge | 1.000,00 | 351,00 | 35,10
+613916 | Usluge objavljivanja tendera i oglasa | 4.000,00 | 4.295,61 | 107,39
+613923 | Usluge za specijalizaciju i školovanje | 500,00 | 300,00 | 60,00
+613930 | Stručne usluge | 5.000,00 | 9.477,02 | 189,54
+613932 | Budžetska rezerva | 30.000,00 | 26.961,95 | 89,87
+613960 | Zatezne kamate i troškovi spora | 100,00 | 650,00 | 650,00
+613974 | Izdaci za rad komisija | 10.000,00 | 19.110,00 | 191,10
+613975 | Izdaci za naknade opštinskim odbornicima | 55.000,00 | 54.500,00 | 99,09
+613976 | Ostali izdaci za druge samost. | 40.000,00 | 10.900,00 | 27,25
+djelatnosti i povremenog samost. Rada
+613980 | Izdaci za poreze i dopr.na dohodak od druge samos.djelat i povrem.sam.rada | 15.000,00 | 14.017,81 | 93,45
+613990 | Ostale nespomenute usluge i dadžbine | 3.000,00 | 3.922,32 | 130,74
+614000 | Tekući transferi i drugi tekući rashodi | 1.308.000,00 | 1.384.272,36 | 105,83
+614100 | Tekući transferi drugim nivoima vlasti | 152.000,00 | 79.168,03 | 52,08
+614117 | Tekući transferi mjesnim zajednicama | 20.000,00 | 10.768,64 | 53,84
+614118 | Tekući transfer opštinskom javnom pravobraniocu | 60.000,00 | 7.079,23 | 11,80
+614124 | Transfer za izbore | 62.000,00 | 61.320,16 | 98,90
+614170 | Tekući transferi zdravstvu | 10.000,00 | 0,00 | 0,00
+614200 | Tekući transferi pojedincima | 514.000,00 | 489.916,62 | 95,31
+614220 | Transferi pojedincima po osnovi materijalno-socijalne sigurn. nezaposl. osoba | 60.000,00 | 33.615,30 | 56,03
+614234 | Isplata stipendija | 30.000,00 | 34.800,00 | 116,00
+614235 | Jednokratne novčane pomoći | 195.000,00 | 141.000,00 | 72,31
+614239 | Ostali transferi pojedincima | 25.000,00 | 23.201,64 | 92,81
+614241 | Transfer za posebne namjene- elementarne nepogode | 5.000,00 | 50.000,00 | 1000,00
+614243 | Transfer za prevoz učenika | 45.000,00 | 40.744,30 | 90,54
+614244 | Transferi za podsticaj poljoprivredne proizvodnje | 50.000,00 | 48.250,00 | 96,50
+614252 | Naknada putnih troškova i dnevnica zbog ostvarivanja zdravstvene zaštite | 1.000,00 | 0,00 | 0,00
+614253 | Pogrebni troškovi | 3.000,00 | 2.265,00 | 75,50
+614259 | Ostali transferi pojedincima na području zdravstvenog osiguranja | 100.000,00 | 116.040,38 | 116,04
+614300 | Tekući transfer neprofitnim organizacijama | 474.000,00 | 593.461,27 | 125,20
+614311 | Transfer za Crveni krst | 24.000,00 | 25.056,90 | 104,40
+614311 | Transfer za kulturu | 15.000,00 | 25.809,28 | 172,06
+614311 | Transfer za sport | 30.000,00 | 29.343,20 | 97,81
+614311 | Transfer za obrazovanje | 50.000,00 | 85.978,83 | 171,96
+614311 | Transfer za projekte mladih | 10.000,00 | 14.038,00 | 140,38
+614311 | Transfer za turizam | 30.000,00 | 32.246,74 | 107,49
+614311 | Transfer za JU Dječiji vrtić Majka hrabrost | 210.000,00 | 300.106,00 | 142,91
+614311 | Transfer za JU Centar za kulturu i sport- Muzej | 40.000,00 | 56.909,80 | 142,27
+614311 | Transfer za Centar za socijalni rad | 40.000,00 | 0,00 | 0,00
+614311 | Transfer za Starački dom- Projektna dokumentacija | 5.000,00 | 0,00 | 0,00
+614311 | Transfer udruženjima građana | 10.000,00 | 9.591,94 | 95,92
+614319 | Tekući transferi vjerskim zajednicama | 10.000,00 | 14.380,58 | 143,81
+614400 | Transferi javnim produzećima | 155.000,00 | 209.026,44 | 134,86
+614411 | Transfer za Radio Drvar | 50.000,00 | 58.586,00 | 117,17
+614411 | Transfer za JP Komunalac Drvar | | 20.000,00 | #DIV/0!
+Usluge zajedničke komunalne potrošnje | 100.000,00 | 130.185,44 | 130,19
+Subvencija za odvoz pitke vode | 5.000,00 | 255,00 | 5,10
+614800 | Drugi tekući rashodi | 13.000,00 | 12.700,00 | 97,69
+614811 | Povrat više ili pogrešno uplaćenih sredstava | 1.000,00 | 0,00 | 0,00
+614817 | Izvršenje sudskih presuda i rješenja o izvršenju | 12.000,00 | 12.700,00 | 105,83
+82 | KAPITALNI IZDACI | 432.000,00 | 289.707,17 | 67,06
+821 | Izdaci za nabavku stalnih sredstava | 432.000,00 | 289.707,17 | 67,06
+821111 | Nabavka zemljišta- eksproprijacija | 31.000,00 | 0,00 | 0,00
+821211 | Zgrada opštine- II faza | 10.000,00 | 0,00 | 0,00
+821211 | Pijaca- | 150.000,00 | 139.963,59 | 93,31
+821310 | Kancelarijska oprema | 20.000,00 | 601,30 | 3,01
+821321 | Motorna vozila | 10.000,00 | 0,00 | 0,00
+821521 | Studije izvodljivosti, projektne pripreme i projektovanje | 15.000,00 | 6.117,30 | 40,78
+821611 | Rekonstrukcija SRC Radomir Kovačević | 6.000,00 | 5.486,59 | 91,44
+821612 | Rekonstrukcija ulica | 70.000,00 | 56.160,00 | 80,23
+821614 | Rekonstrukcija zgrada- krovovi | 10.000,00 | 0,00 | 0,00
+821618 | Rekonstrukcija objekata vezanih za vodovod, kanalizaciju i čvrsti otpad | 70.000,00 | 79.181,13 | 113,12
+821619 | Ostale rekonstrukcije i poboljšanja | 40.000,00 | 2.197,26 | 5,49
+823 | Izdaci za otplat u dugova | 0 | 0 | #DIV/0!
+823511 | Garancije date JP Komunalac | 0 | 0 | #DIV/0!
+B | UKUPNO RASHODI | 3.997.000,00 | 4.127.141,42 | 103,26
+RAZLIKA (DOBITAK- GUBITAK) | 0,00 | 548.368,48
+
+
+Broj: 02-04-495/24
+
+Datum: 10.02.2025.godine
+
+OPŠTINSKI NAČELNIK Dušica Runić, s.r.
+
+SADRŻAJ
+
+I. AKTI SKUPŠTINSKOG VIJEĆA
+
+O D L U K A_o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.-31.12.2023.godine.....1
+
+O D L U K A_o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.-31.03.2024.godine.....8
+
+O D L U K A_o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.-30.06.2024.godine.....15
+
+O D L U K A_o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.-30.09.2024.godine.....24
+
+O D L U K A_o usvajanju Izvještaja o izvršenju budžeta Opštine Drvar za period 01.01.-31.12.2024.godine.....33
+
+II. AKTI OPŠTINSKOG NAČELNIKA
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA
+
+OPŠTINE DRVAR ZA PERIOD 01.01.-31.12.2023.GODINE .....1
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA
+
+OPŠTINE DRVAR ZA PERIOD 01.01.-31.03.2024.GODINE .....9
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA
+
+OPŠTINE DRVAR ZA PERIOD 01.01.-30.06.2024.GODINE .....16
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA
+
+OPŠTINE DRVAR ZA PERIOD 01.01.-30.09.2024.GODINE .....24
+
+IZVJEŠTAJ O IZVRŠENJU BUDŽETA
+
+OPŠTINE DRVAR ZA PERIOD 01.01.-31.12.2024.GODINE .....34

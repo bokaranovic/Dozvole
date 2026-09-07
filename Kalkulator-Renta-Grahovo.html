@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obračun rente — Opština Bosansko Grahovo (Sl. glasnik 7/20)</title>
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922; --err:#f85149;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light #out,body.light #g_out{background:#f1f4f8;color:#0d141c}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:14px;max-width:900px;margin:0 auto}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+  .htitle{flex:1;min-width:0}
+  .themebtn{padding:8px 12px;font-size:13px;white-space:nowrap}
+  body.light .grb{filter:drop-shadow(0 1px 2px rgba(0,0,0,.12))}
+  .wrap{max-width:900px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card h2{font-size:13px;margin:0 0 14px;color:var(--h2);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 5px;font-weight:500}
+  input,select,textarea{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:11px;font-size:15px;font-family:inherit}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:560px){.row,.row3{grid-template-columns:1fr}}
+  .chk{display:flex;align-items:center;gap:9px;margin:7px 0;font-size:14px;color:var(--ink);font-weight:400}
+  .chk input{width:auto;margin:0}
+  input[type=checkbox]{width:auto!important;flex:0 0 auto}
+  .homebtn{padding:8px 12px;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  .det{display:none;margin:6px 0 4px;padding:10px 12px;border-left:2px solid var(--accent);border-radius:0 8px 8px 0;background:rgba(76,154,255,.07)}
+  .det.show{display:block}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin:6px 0 30px}
+  button{border:0;border-radius:10px;padding:13px 18px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .primary{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  .primary:hover{filter:brightness(1.05)}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  .ghost:hover{border-color:var(--accent)}
+  .oprem{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+  .oprem .pts{font-size:12px;color:var(--muted);white-space:nowrap}
+  .kzrow{display:grid;grid-template-columns:1fr 92px 1.4fr auto;gap:8px;margin-bottom:8px;align-items:center}
+  @media(max-width:560px){.kzrow{grid-template-columns:1fr 1fr}}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+  th,td{padding:8px;border-bottom:1px solid var(--line);text-align:right}
+  th:first-child,td:first-child{text-align:left}
+  thead th{color:var(--h2);font-size:11px;text-transform:uppercase;letter-spacing:.5px;border-bottom:2px solid var(--line)}
+  tr.total td{font-weight:800;font-size:16px;border-top:2px solid var(--accent);border-bottom:none}
+  .kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:4px 0 8px}
+  @media(max-width:560px){.kpi{grid-template-columns:1fr 1fr}}
+  .kpibox{background:var(--field);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+  .kpibox .k{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+  .kpibox .v{font-size:20px;font-weight:800;margin-top:2px}
+  .big{font-size:28px;font-weight:800;margin:8px 0 2px}
+  .slovima{font-size:13px;color:var(--muted);font-style:italic}
+  .warnnote{margin-top:8px;padding:9px 12px;border-radius:9px;border:1px solid var(--warn);background:rgba(210,153,34,.12);font-size:12px;line-height:1.45}
+  #out,#g_out{white-space:pre-wrap;background:#0a1019;border:1px solid var(--line);border-radius:10px;padding:14px;font-family:ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:13px;display:none;margin-top:12px;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ok);color:#fff;padding:11px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;font-weight:500}
+  .toast.show{opacity:1}
+  details{margin-top:6px;font-size:13px;color:var(--muted)}
+  details summary{cursor:pointer;color:var(--h2);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+  .mini{padding:7px 12px;font-size:13px}
+  .opnav{display:flex;gap:8px;margin:2px 0 16px;flex-wrap:wrap}
+  .opbtn{flex:1;min-width:180px;border:1px solid var(--line);border-radius:11px;background:var(--field);color:var(--muted);padding:13px 16px;font-size:15px;font-weight:650;cursor:pointer;font-family:inherit;transition:.15s}
+  .opbtn:hover{border-color:var(--accent)}
+  .opbtn.active{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;border-color:transparent;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  /* ===== PDF / A4 dokument ===== */
+  #printDoc{display:none}
+  #printDoc .pd-wrap{font-family:"Times New Roman",Georgia,serif;color:#000;font-size:11pt;line-height:1.24}
+  #printDoc .pd-head{display:flex;align-items:center;gap:12px;border-bottom:2px solid #000;padding-bottom:5px}
+  #printDoc .pd-grb{width:54px;height:56px;object-fit:contain}
+  #printDoc .pd-org{flex:1;text-align:center;font-size:11pt;line-height:1.28}
+  #printDoc .pd-org b{font-size:12.5pt;letter-spacing:.2px}
+  #printDoc .pd-meta{text-align:left;font-size:11pt;margin:6px 2px 0;line-height:1.35}
+  #printDoc h1.pd-title{font-size:13pt;text-align:center;margin:7px 0 5px;text-transform:uppercase;letter-spacing:.3px}
+  #printDoc .pd-sec{margin:6px 0 1px;font-size:11pt}
+  #printDoc table.pd{width:100%;border-collapse:collapse;margin:2px 0;font-size:11pt}
+  #printDoc table.pd th,#printDoc table.pd td{border:1px solid #000;padding:2.4px 7px;text-align:left;vertical-align:top}
+  #printDoc table.pd th{background:#ececec;font-weight:bold;font-size:11pt}
+  #printDoc table.pd td.n,#printDoc table.pd th.n{text-align:right;white-space:nowrap}
+  #printDoc .pd-total{font-size:12.5pt;font-weight:bold;margin:6px 0 0;text-align:right}
+  #printDoc .pd-sign{margin-top:30px;display:flex;justify-content:flex-end;align-items:flex-end}
+  #printDoc .pd-sign .mp{font-size:11pt;font-weight:bold;letter-spacing:1.5px;margin-bottom:2px}
+  #printDoc .pd-sign .box{text-align:center;width:44%;font-size:11pt}
+  #printDoc .pd-line{border-top:1px solid #000;margin-top:30px}
+  #printDoc .pd-cap{font-size:11pt;color:#333;padding-top:2px}
+  #printDoc table.pd,#printDoc .pd-sign{break-inside:avoid}
+  @media print{
+    @page{size:A4;margin:13mm 14mm}
+    header,.wrap,.toast,#odjavaFix,#koefWrap{display:none!important}
+    body{background:#fff;color:#000}
+    #printDoc{display:block!important}
+  }
+  #koefWrap{position:fixed;inset:0;z-index:100000;display:none;pointer-events:none}
+  #koefWrap.on{display:block}
+  #koefWrap .kb{position:absolute;inset:0;background:transparent;pointer-events:none}
+  #koefPanel{pointer-events:auto}
+  #koefPanel{position:absolute;top:0;right:0;height:100%;width:min(560px,94vw);background:var(--card);
+    border-left:2px solid var(--accent2);box-shadow:-8px 0 30px rgba(0,0,0,.28);overflow-y:auto;padding:18px 20px 40px;
+    transform:translateX(20px);transition:transform .18s ease}
+  #koefWrap.on #koefPanel{transform:none}
+  #koefPanel h3{margin:0 0 2px;font-size:16px;color:var(--h2)}
+  #koefPanel .src{font-size:12px;color:var(--muted);margin:0 0 14px}
+  #koefPanel .kf{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  #koefPanel .kf-h{display:flex;align-items:center;gap:10px;background:var(--field);padding:8px 12px;border-bottom:1px solid var(--line)}
+  #koefPanel .kf-v{font-size:18px;font-weight:800;color:var(--accent);min-width:44px}
+  #koefPanel .kf-t{font-size:12px;color:var(--muted);font-weight:600}
+  #koefPanel ul{margin:8px 0;padding:8px 14px 8px 30px}
+  #koefPanel li{font-size:13px;margin:0 0 6px;line-height:1.4}
+  #koefPanel .kclose{position:sticky;top:0;float:right;background:#c0392b;color:#fff;border:0;border-radius:8px;padding:6px 11px;font-weight:700;cursor:pointer}
+</style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<style>
+  .zonecard{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--field);margin-top:8px;font-size:12.5px;color:var(--muted);line-height:1.5}
+  .zonecard b{color:var(--ink)}
+  .stopabox{display:flex;align-items:baseline;gap:8px;margin-top:8px}
+  .stopabox .s{font-size:24px;font-weight:800;color:var(--accent)}
+  .rrow{display:grid;grid-template-columns:1.7fr 110px auto;gap:8px;margin-bottom:8px;align-items:center}
+  @media(max-width:560px){.rrow{grid-template-columns:1fr 1fr}}
+  .infonote{margin-top:8px;padding:9px 12px;border-radius:9px;border:1px solid var(--accent);background:rgba(76,154,255,.09);font-size:12px;line-height:1.5}
+  .errnote{margin-top:8px;padding:9px 12px;border-radius:9px;border:1px solid var(--err);background:rgba(248,81,73,.10);font-size:12px;line-height:1.5}
+  .lawbox{border-left:2px solid var(--accent);background:rgba(76,154,255,.06);border-radius:0 8px 8px 0;padding:9px 12px;margin:8px 0;font-size:12.5px;line-height:1.5;color:var(--muted)}
+  .lawbox b{color:var(--h2)}
+  #printDoc .pd-note{font-size:9.5pt;font-style:italic;margin:4px 0 0}
+  #printDoc table.pd thead th{color:#000;font-size:11pt;text-transform:none;letter-spacing:normal;border:1px solid #000}
+  #printDoc .pd-wrap{font-size:10.5pt}
+  #printDoc h1.pd-title{font-size:12.5pt;margin:5px 0 3px}
+  #printDoc .pd-sec{margin:5px 0 1px;font-size:10.5pt}
+  #printDoc table.pd,#printDoc table.pd th,#printDoc table.pd td{font-size:10.5pt}
+  #printDoc table.pd thead th{font-size:10.5pt}
+  #printDoc .pd-note{font-size:9pt;line-height:1.2}
+  #printDoc .pd-sign{margin-top:12px}
+  #printDoc .pd-head{padding-bottom:3px}
+  #printDoc .pd-grb{width:46px;height:48px}
+  #printDoc .pd-org{font-size:10pt;line-height:1.22}
+  #printDoc .pd-org b{font-size:11.5pt}
+  #printDoc .pd-meta{font-size:10pt;margin:4px 2px 0}
+  #printDoc table.pd th,#printDoc table.pd td{padding:1.9px 6px}
+  #printDoc .pd-total{margin:4px 0 0}
+  #printDoc .pd-line{margin-top:26px}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
+</head>
+</head>
+<body class="light">
+<div id="odjavaFix" style="position:fixed;top:8px;right:10px;z-index:99999"><button type="button" onclick="try{localStorage.removeItem('ipp-auth')}catch(e){};location.replace('index.html')" style="padding:7px 12px;font-size:13px;font-weight:600;border:0;border-radius:8px;background:#c0392b;color:#fff;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.28)">&#128274; Odjava</button></div>
+<script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+
+<header>
+  <div class="hwrap">
+    <img class="grb" id="hgrb" src="" alt="Grb" onerror="this.style.display='none'">
+    <div class="htitle">
+      <h1>Obračun rente &mdash; naknade iz osnova pogodnosti gradskog građevinskog zemljišta</h1>
+      <p>Opština Bosansko Grahovo &mdash; Odluka o građevinskom zemljištu („Sl. glasnik Opštine Bosansko Grahovo“, broj 7/20), čl. 31&ndash;43</p>
+    </div>
+    <a class="ghost homebtn" href="index.html">&larr; Početna</a>
+    <button type="button" class="ghost themebtn" id="themeBtn" onclick="toggleTheme()">&#127769; Tamna</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="warnnote" style="margin-bottom:14px">
+    <b>Renta i naknada za uređenje su DVIJE ODVOJENE naknade.</b> Ovaj alat računa <b>samo rentu</b> (čl. 35&ndash;43),
+    koja se obračunava po <b>NETO korisnoj površini</b> (čl. 32 i čl. 40). Naknada za uređenje građevinskog zemljišta
+    obračunava se posebno i po <b>BRUTO površini svih etaža</b> (čl. 47) &mdash; za nju koristi drugi kalkulator.
+    Obje se utvrđuju rješenjem o urbanističkoj saglasnosti (čl. 38 st. 2 i čl. 47).
+  </div>
+
+  <a href="Kalkulator-Uredjenje-Zemljista.html" style="display:block;text-decoration:none;border:1px solid var(--accent);background:rgba(76,154,255,.10);border-radius:12px;padding:13px 16px;color:inherit;margin-bottom:14px">
+    <div style="font-weight:700;color:var(--h2);margin-bottom:3px">&#129518; Obračun naknade za uređenje građevinskog zemljišta &rarr;</div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.45">Kalkulator za Drvar i Bosansko Grahovo (bruto površina, čl. 44&ndash;58). Ova stranica je isključivo obračun <b>rente</b>.</div>
+  </a>
+
+  <!-- ============ 1. PREDMET ============ -->
+  <div class="card">
+    <h2>1. Podaci o predmetu</h2>
+    <div class="row">
+      <div><label>Broj predmeta</label><input id="r_broj" placeholder="npr. 05-23-1-____/26"></div>
+      <div><label>Datum obračuna</label><input id="r_datum" placeholder="dd.mm.gggg."></div>
+    </div>
+    <label>Investitor / podnosilac zahtjeva</label>
+    <input id="r_investitor" placeholder="ime i prezime / naziv pravnog lica">
+    <div class="row">
+      <div><label>Katastarska opština</label><input id="r_ko" placeholder="k.o. ______"></div>
+      <div><label>Katastarska čestica</label><input id="r_kc" placeholder="k.č. ______"></div>
+    </div>
+    <label>Naziv / vrsta građevine</label>
+    <input id="r_objekat" placeholder="npr. stambeno-poslovni objekat, nadstrešnica, poslovni objekat">
+    <div class="hint">Renta se plaća i kada se gradi na gradskom građevinskom zemljištu <b>u privatnoj svojini</b> (čl. 38 st. 1),
+      a njena visina se utvrđuje <b>rješenjem o urbanističkoj saglasnosti</b> (čl. 38 st. 2).</div>
+  </div>
+
+  <!-- ============ 2. OSNOVICA ============ -->
+  <div class="card">
+    <h2>2. Osnovica &mdash; prosječna konačna građevinska cijena (čl. 35 i čl. 39 st. 2)</h2>
+    <div class="row">
+      <div>
+        <label>Prosječna konačna građevinska cijena po m² korisne stambene površine (KM)</label>
+        <input id="r_osnovica" inputmode="decimal" value="500,00" oninput="rCalc()">
+      </div>
+      <div>
+        <label>Odluka OV za godinu</label>
+        <input id="r_godina" value="2026" oninput="rCalc()">
+      </div>
+    </div>
+    <label>Valorizacija osnovice od dana utvrđivanja &mdash; kumulativni indeks rasta (%)</label>
+    <input id="r_valor" inputmode="decimal" value="0,00" oninput="rCalc()">
+    <div class="hint">Osnovica je prosječna konačna građevinska cijena <b>iz prethodne godine</b>; utvrđuje je Opštinsko vijeće
+      <b>najkasnije do 31. marta tekuće godine</b> i <b>valorizuje se svaka tri mjeseca</b> po indeksu rasta cijena građevinskih radova
+      u visokogradnji i niskogradnji (podaci Zavoda za statistiku FBiH) &mdash; čl. 39 st. 2. Ako valorizacije nije bilo, ostavi 0,00.</div>
+    <div class="kpibox" style="margin-top:12px"><div class="k">Valorizovana osnovica</div><div class="v" id="r_osnOut">500,00 KM/m²</div></div>
+    <details>
+      <summary>Referentna odluka i kontrolne vrijednosti</summary>
+      <p style="margin:8px 0 4px">Odluka o visini prosječne konačne građevinske cijene po m² korisne stambene površine i visini naknade
+        iz osnova pogodnosti gradskog građevinskog zemljišta &ndash; rente. Za 2020. godinu (Sl. glasnik B. Grahovo 7/20, br. 01-26-1-915-1/20
+        od 29.07.2020.) osnovica je bila <b>500,00 KM/m²</b> (cijena iz 2019. godine), pa su fiksni iznosi rente bili:
+        III zona 20,00 &middot; IV zona 15,00 &middot; V zona 10,00 &middot; VI zona 5,00 KM/m².</p>
+      <p style="margin:0">Osnovica utvrđena tom odlukom primjenjuje se <b>do 31. marta naredne godine, odnosno do stupanja na snagu nove odluke</b>
+        (čl. 5 te odluke). Prije obračuna provjeri koja je odluka o osnovici na snazi na dan donošenja rješenja.</p>
+    </details>
+  </div>
+
+  <!-- ============ 3. ZONA ============ -->
+  <div class="card">
+    <h2>3. Zona i fiksni procenat rente (čl. 39 st. 1, čl. 40, čl. 4)</h2>
+    <label>Stambeno-poslovna zona</label>
+    <select id="r_zona" onchange="rCalc()"></select>
+    <div class="stopabox"><span class="s" id="r_stopaOut">20,00 KM/m²</span><span class="hint" style="margin:0" id="r_stopaFormula">500,00 &times; 4 % </span></div>
+    <div class="zonecard" id="r_zonaOpis"></div>
+    <div class="hint">Gradsko građevinsko zemljište dijeli se na <b>četiri stambeno-poslovne zone, počev od treće</b> (čl. 39 st. 1).
+      Fiksni procenti (čl. 40): III &ndash; 4 %, IV &ndash; 3 %, V &ndash; 2 %, VI &ndash; 1 %.</div>
+    <div class="infonote">Ako se prema opisu ili grafičkom prikazu <b>na granici zone</b> ne može sa sigurnošću utvrditi kojoj zoni zemljište pripada,
+      smatra se da pripada onoj zoni <b>za koju se plaća manja naknada</b> (čl. 5 st. 3 Odluke).</div>
+  </div>
+
+  <!-- ============ 4. POVRŠINA ============ -->
+  <div class="card">
+    <h2>4. Obračunska površina (čl. 32 i čl. 34)</h2>
+    <label>Način utvrđivanja površine</label>
+    <select id="r_pmode" onchange="rOnPmode();rCalc()">
+      <option value="neto">Neto korisna površina &mdash; zbir podnih površina zatvorenog prostora po svim etažama (čl. 32)</option>
+      <option value="k05">Otvorena skladišta, asfaltne/betonske baze, benzinske stanice, pilane, kamenolomi, bazeni, hangari sa nadstrešnicama, igrališta i stadioni &mdash; parcela &times; 0,5 (čl. 34 st. 2)</option>
+      <option value="k06">Diplomatska i konzularna predstavništva i vojne organizacije bez ovjerenog glavnog projekta &mdash; parcela &times; 0,6 (čl. 34 st. 1)</option>
+    </select>
+
+    <div id="r_wrapNeto">
+      <label style="margin-top:14px">Etaže / prostori (zatvoreni prostor)</label>
+      <div id="r_rows"></div>
+      <button type="button" class="ghost mini" onclick="rAddRow('',null)">+ dodaj etažu / prostor</button>
+      <div class="hint">Korisnom površinom smatra se <b>zbir podnih površina zatvorenog prostora po svim etažama, bez obzira na svijetlu visinu</b>
+        (čl. 32 st. 1) &mdash; dakle <b>bez koeficijenata</b>. U stambenoj zgradi sa dva ili više etažnih vlasnika stanova
+        <b>ne ulaze podne površine zajedničkih prostorija</b> (čl. 32 st. 2).</div>
+    </div>
+
+    <div id="r_wrapParc" style="display:none">
+      <label style="margin-top:14px">Površina građevinske parcele (m²)</label>
+      <input id="r_parcela" inputmode="decimal" placeholder="npr. 1.250,00" oninput="rCalc()">
+      <div class="hint" id="r_parcHint"></div>
+    </div>
+
+    <div class="kpibox" style="margin-top:12px"><div class="k">Obračunska (neto korisna) površina</div><div class="v" id="r_povOut">0,00 m²</div></div>
+  </div>
+
+  <!-- ============ 5. POSEBNI SLUČAJEVI ============ -->
+  <div class="card">
+    <h2>5. Posebni slučajevi (čl. 36 i čl. 37)</h2>
+    <label>Slučaj</label>
+    <select id="r_slucaj" onchange="rOnSlucaj();rCalc()">
+      <option value="nova">Nova građevina &mdash; redovan obračun</option>
+      <option value="zamjena">Nova građevina umjesto porušene legalne građevine (čl. 36)</option>
+      <option value="namjena">Promjena namjene u namjenu sa većom rentom (čl. 37)</option>
+    </select>
+
+    <div class="det" id="r_detZamjena">
+      <div class="row">
+        <div><label>Neto korisna površina ranije (porušene) građevine (m²)</label><input id="r_rp" inputmode="decimal" placeholder="0,00" oninput="rCalc()"></div>
+        <div><label>Zona ranije građevine</label><select id="r_rz" onchange="rCalc()"></select></div>
+      </div>
+      <div class="hint">Iznos rente za novu građevinu <b>umanjuje se za iznos rente koji bi bio utvrđen za raniju građevinu</b>,
+        uzimajući u obzir razlike u korisnoj površini, namjeni i zoni (čl. 36). Odnosi se na građevinu koja posjeduje odobrenje za građenje,
+        odnosno izgrađenu prije stupanja na snagu Zakona o prostornom uređenju („Sl. list SR BiH“, broj 13/74), koja je porušena ili će biti porušena.</div>
+    </div>
+
+    <div class="det" id="r_detNamjena">
+      <div class="row">
+        <div><label>Površina po ranijoj namjeni (m²)</label><input id="r_np" inputmode="decimal" placeholder="0,00" oninput="rCalc()"></div>
+        <div><label>Zona / stopa po ranijoj namjeni</label><select id="r_nz" onchange="rCalc()"></select></div>
+      </div>
+      <div class="hint">Renta se utvrđuje kao <b>pozitivna razlika</b> između rente koja bi bila utvrđena za raniju namjenu
+        i rente utvrđene za novu namjenu (čl. 37). Ako razlika nije pozitivna, renta se ne obračunava.</div>
+      <div class="errnote">Napomena o odluci: čl. 40 vezuje procenat rente <b>samo za zonu</b>, a ne i za namjenu, pa se „veća renta zbog namjene“
+        u praksi može pojaviti samo kroz promjenu površine ili zone. Ovo je nedosljednost u tekstu Odluke koju treba imati u vidu pri obrazloženju rješenja.</div>
+    </div>
+  </div>
+
+  <!-- ============ 6. PLAĆANJE ============ -->
+  <div class="card">
+    <h2>6. Način plaćanja (čl. 41, 42 i 43)</h2>
+    <label>Način plaćanja</label>
+    <select id="r_placanje" onchange="rCalc()">
+      <option value="jedno">Jednokratno &mdash; sa umanjenjem po čl. 41</option>
+      <option value="obrocno">Obročno (na rate) &mdash; bez umanjenja, čl. 42</option>
+    </select>
+    <div class="chk" style="margin-top:10px"><input type="checkbox" id="r_poslovni" checked onchange="rCalc()">
+      <label for="r_poslovni" style="margin:0">Radi se o poslovnom, stambeno-poslovnom ili drugom objektu (uslov za umanjenje / obročno plaćanje po čl. 41 i 42)</label></div>
+    <div id="r_placOut"></div>
+    <div class="hint">Umanjenje kod jednokratnog plaćanja (čl. 41 st. 2): do 400 m² &ndash; 5 %; od 401 do 1.000 m² &ndash; 10 %; iznad 1.001 m² &ndash; 15 %.
+      Kod obročnog plaćanja iznos se <b>ne umanjuje</b> (čl. 42 st. 1).</div>
+  </div>
+
+  <!-- ============ 7. REZULTAT ============ -->
+  <div class="card">
+    <h2>7. Rezultat obračuna</h2>
+    <div class="kpi">
+      <div class="kpibox"><div class="k">Renta po m²</div><div class="v" id="r_k1">0,00</div></div>
+      <div class="kpibox"><div class="k">Obračunska površina</div><div class="v" id="r_k2">0,00</div></div>
+      <div class="kpibox"><div class="k">Umanjenje</div><div class="v" id="r_k3">0,00</div></div>
+    </div>
+    <div class="big" id="r_total">0,00 KM</div>
+    <div class="slovima" id="r_slovima">slovima: nula konvertibilne marke</div>
+    <div id="r_rateWrap"></div>
+    <div class="warnnote" id="r_warn" style="display:none"></div>
+
+    <div class="actions" style="margin-top:16px">
+      <button type="button" class="primary" onclick="rGenerate()">Generiši obračun</button>
+      <button type="button" class="ghost" onclick="rCopy()">Kopiraj tekst</button>
+      <button type="button" class="ghost" onclick="rExportPDF()">&#128196; PDF (A4)</button>
+      <button type="button" class="ghost" onclick="rExportDOCX()">&#128209; Word (.docx)</button>
+      <button type="button" class="ghost" onclick="rDownload()">.txt</button>
+    </div>
+    <div id="r_out"></div>
+  </div>
+
+  <!-- ============ 8. PRAVNI OSNOV ============ -->
+  <div class="card">
+    <h2>8. Formula i članovi Odluke</h2>
+    <div class="lawbox"><b>Formula:</b> renta = <i>valorizovana prosječna konačna građevinska cijena</i> &times; <i>procenat zone</i> &times;
+      <i>neto korisna površina</i> &minus; <i>umanjenja (čl. 36 / čl. 41)</i>.</div>
+    <details open>
+      <summary>Članovi Odluke o građevinskom zemljištu Opštine Bosansko Grahovo (Sl. glasnik 7/20)</summary>
+      <div class="lawbox"><b>Čl. 31.</b> Renta i naknada za uređenje plaćaju se na korisnu površinu stambenog, proizvodnog i poslovnog prostora izraženu u m².
+        Stambenim prostorom smatra se svaki prostor koji ne spada u proizvodne i poslovne prostore.</div>
+      <div class="lawbox"><b>Čl. 32.</b> Korisna površina = zbir podnih površina <b>zatvorenog prostora po svim etažama, bez obzira na svijetlu visinu</b>.
+        U zgradi sa dva ili više etažnih vlasnika ne ulaze zajedničke prostorije.</div>
+      <div class="lawbox"><b>Čl. 33.</b> Naknade se plaćaju i za <b>ostalo</b> građevinsko zemljište, po osnovama i mjerilima iz zakona,
+        odluke o usvajanju planskog dokumenta i ove Odluke.</div>
+      <div class="lawbox"><b>Čl. 34.</b> Diplomatska i konzularna predstavništva i vojne organizacije koje ne stave na uvid ovjerene glavne projekte:
+        <b>parcela &times; 0,6</b>. Otvorena skladišta, asfaltne i betonske baze, benzinske stanice, pilane, kamenolomi, bazeni za kupanje,
+        hangari sa nadstrešnicama, igrališta i stadioni: <b>parcela &times; 0,5</b>.</div>
+      <div class="lawbox"><b>Čl. 35.</b> Osnovica = prosječna konačna građevinska cijena <b>iz prethodne godine</b> po m² korisne stambene površine;
+        visina rente utvrđuje se u procentu od te cijene, shodno čl. 68. Zakona o građevinskom zemljištu.</div>
+      <div class="lawbox"><b>Čl. 36.</b> Nova građevina umjesto porušene &mdash; renta se umanjuje za iznos rente koji bi bio utvrđen za raniju građevinu.</div>
+      <div class="lawbox"><b>Čl. 37.</b> Promjena namjene u namjenu sa većom rentom &mdash; obračunava se <b>pozitivna razlika</b>.</div>
+      <div class="lawbox"><b>Čl. 38.</b> Rentu plaća i investitor koji gradi na gradskom građevinskom zemljištu <b>u privatnoj svojini</b>;
+        visina se utvrđuje <b>rješenjem o urbanističkoj saglasnosti</b>.</div>
+      <div class="lawbox"><b>Čl. 39.</b> Četiri stambeno-poslovne zone <b>počev od treće</b>. Osnovicu utvrđuje Opštinsko vijeće
+        <b>najkasnije do 31. marta</b> tekuće godine; valorizuje se <b>svaka tri mjeseca</b> po indeksu Zavoda za statistiku FBiH.</div>
+      <div class="lawbox"><b>Čl. 40.</b> Renta po 1 m² <b>neto</b> korisne površine: III zona <b>4 %</b>, IV <b>3 %</b>, V <b>2 %</b>, VI <b>1 %</b>.</div>
+      <div class="lawbox"><b>Čl. 41.</b> Jednokratno ili u ratama &mdash; utvrđuje se <b>rješenjem u postupku izdavanja odobrenja za građenje</b>.
+        Kod jednokratnog plaćanja: do 400 m² &ndash; 5 %, od 401 do 1.000 m² &ndash; 10 %, iznad 1.001 m² &ndash; 15 % umanjenja.</div>
+      <div class="lawbox"><b>Čl. 42.</b> Obročno &mdash; bez umanjenja: 400&ndash;600 m² &rarr; 3 jednaka obroka u periodu od 3 mjeseca (kvartalno);
+        601&ndash;1.500 m² &rarr; 6 jednakih obroka u periodu od 8 mjeseci; preko 1.501 m² &rarr; 9 jednakih obroka u periodu od 12 mjeseci.
+        Investitor predaje <b>mjenicu ili bankovnu garanciju</b>.</div>
+      <div class="lawbox"><b>Čl. 43.</b> Obročno plaćanje odobrava <b>Opštinski načelnik zaključkom</b> prije donošenja rješenja. Rješenje sadrži
+        posebnu tačku dispozitiva i elemente izvršnog naslova (čl. 23 Zakona o izvršnom postupku FBiH). Pravomoćno rješenje dostavlja se
+        <b>zemljišnoknjižnom uredu radi zabilježbe duga</b>. Na zakašnjele uplate plaća se zakonska zatezna kamata; kod kašnjenja
+        <b>dužeg od tri mjeseca</b> predmet ide <b>Pravobranilaštvu</b> na naplatu cjelokupnog duga.</div>
+      <div class="lawbox"><b>Čl. 47.</b> (za razgraničenje) Naknada za <b>uređenje</b> plaća se prema <b>BRUTO</b> površini svih etaža objekta
+        i utvrđuje se rješenjem o urbanističkoj saglasnosti; snosi je investitor bez obzira na oblik svojine zemljišta.</div>
+    </details>
+    <details>
+      <summary>Uočene nedosljednosti u tekstu Odluke</summary>
+      <div class="lawbox">1. <b>Čl. 4</b> &mdash; opisi zona: uz opis treće, četvrte, pete i šeste zone stoje rečenice koje govore o „prvoj“, „drugoj“, „trećoj“ i „četvrtoj“ zoni.
+        To je preuzeti tekst iz ranijeg predloška; zone su faktički III&ndash;VI, kako i propisuje čl. 39 st. 1.</div>
+      <div class="lawbox">2. <b>Čl. 41 st. 2</b> &mdash; razredi „do 400“, „401&ndash;1.000“ i „iznad 1.001“ ostavljaju prazninu između 1.000 i 1.001 m².
+        Kalkulator primjenjuje 15 % na sve preko 1.000 m².</div>
+      <div class="lawbox">3. <b>Čl. 42</b> &mdash; razredi „400&ndash;600“, „601&ndash;1.500“ i „preko 1.501“ ne pokrivaju objekte <b>ispod 400 m²</b>
+        niti prazninu 1.500&ndash;1.501 m². Za objekte ispod 400 m² Odluka ne propisuje broj obroka.</div>
+      <div class="lawbox">4. <b>Čl. 43 st. 2</b> upućuje na dostavu <b>zemljišnoknjižnom uredu</b> radi zabilježbe duga. Tamo gdje zemljišna knjiga nije uspostavljena,
+        dostava se vrši nadležnom katastru, uz odgovarajuće obrazloženje u rješenju.</div>
+    </details>
+  </div>
+
+</div>
+
+<div id="printDoc"></div>
+<div class="toast" id="toast"></div>
+<script>
+var G_GRB_DATA="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXUAAAGzCAYAAADQTIdhAAAACXBIWXMAABJ0AAASdAHeZh94AAAFFmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgNzkuMTY0NDYwLCAyMDIwLzA1LzEyLTE2OjA0OjE3ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMiAoV2luZG93cykiIHhtcDpDcmVhdGVEYXRlPSIyMDIzLTA3LTAzVDAwOjM3OjE3KzAyOjAwIiB4bXA6TW9kaWZ5RGF0ZT0iMjAyMy0xMS0wN1QxMzozMTo0MiswMTowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMy0xMS0wN1QxMzozMTo0MiswMTowMCIgZGM6Zm9ybWF0PSJpbWFnZS9wbmciIHBob3Rvc2hvcDpDb2xvck1vZGU9IjMiIHBob3Rvc2hvcDpJQ0NQcm9maWxlPSJzUkdCIElFQzYxOTY2LTIuMSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5NmQ3ODk0NC1hMzcyLWI4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";
+/* ---- parsiranje i formatiranje brojeva ---- */
+function numStr(raw){ var v=(raw==null?'':raw).toString().replace(/\s|KM|km|m²|m2|%/g,'').replace(/\.(?=\d{3}(\D|$))/g,'').replace(/,/g,'.'); var n=parseFloat(v); if(isNaN(n)||!isFinite(n)) return 0; return n<0?0:n; }
+function num(id){ var e=document.getElementById(id); if(!e) return 0; return numStr(e.value); }
+function fmt(n){ return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2})+' KM'; }
+function fmtN(n){ return (n||0).toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+function val2(id){ var e=document.getElementById(id); return e?e.value.trim():''; }
+function esc(s){ return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+/* ---- broj u riječi ---- */
+function brojURijeci(n){ n=parseInt(n,10); if(isNaN(n)) return ''; if(n===0) return 'nula';
+  var jed=['','jedan','dva','tri','četiri','pet','šest','sedam','osam','devet'];
+  var des11=['deset','jedanaest','dvanaest','trinaest','četrnaest','petnaest','šesnaest','sedamnaest','osamnaest','devetnaest'];
+  var des=['','','dvadeset','trideset','četrdeset','pedeset','šezdeset','sedamdeset','osamdeset','devedeset'];
+  var fem=function(d){ return d===2?'dvije':jed[d]; };
+  function stotine(h){ if(h===0) return ''; if(h===1) return 'stotinu'; if(h>=2&&h<=4) return fem(h)+'stotine'; return jed[h]+'stotina'; }
+  function dvocifra(d){ if(d<10) return jed[d]; if(d<20) return des11[d-10]; var t=Math.floor(d/10),u=d%10; return des[t]+(u?'i'+jed[u]:''); }
+  function ispod1000(x){ var h=Math.floor(x/100), r=x%100; var s=stotine(h); if(r>0){ s+=dvocifra(r); } return s; }
+  var out=''; var hilj=Math.floor(n/1000), ost=n%1000;
+  if(hilj>0){ if(hilj===1) out='hiljadu'; else if(hilj>=2&&hilj<=4){ out=(hilj===2?'dvije':ispod1000(hilj))+'hiljade'; } else out=ispod1000(hilj)+'hiljada'; }
+  if(ost>0) out+=ispod1000(ost); return out; }
+function slovima(numv){ var uk=Math.round((numv||0)*100); var cijeli=Math.floor(uk/100); var para=uk%100; var t=brojURijeci(cijeli)+' konvertibilne marke'; if(para>0) t+=' i '+(para<10?'0':'')+para+'/100'; return t; }
+
+</script>
+<script>
+/* Word (.doc) kao MHT — jedini pouzdan način da se grb (slika) UGRADI u Word */
+function mhtBytes(str){
+  var b=[];
+  for(var i=0;i<str.length;i++){
+    var c=str.charCodeAt(i);
+    if(c<0x80){ b.push(c); }
+    else if(c<0x800){ b.push(0xC0|(c>>6),0x80|(c&63)); }
+    else if(c>=0xD800&&c<0xDC00&&i+1<str.length){
+      var c2=str.charCodeAt(++i), u=0x10000+((c-0xD800)<<10)+(c2-0xDC00);
+      b.push(0xF0|(u>>18),0x80|((u>>12)&63),0x80|((u>>6)&63),0x80|(u&63));
+    }
+    else { b.push(0xE0|(c>>12),0x80|((c>>6)&63),0x80|(c&63)); }
+  }
+  return b;
+}
+function mhtQP(str){
+  var by=mhtBytes(str), hex='0123456789ABCDEF', out='', line='';
+  function put(tok){ if(line.length+tok.length>73){ out+=line+'=\r\n'; line=''; } line+=tok; }
+  for(var i=0;i<by.length;i++){
+    var b=by[i];
+    if(b===13){ continue; }
+    if(b===10){
+      if(line.length && (line.charAt(line.length-1)===' '||line.charAt(line.length-1)==='\t')){
+        var lc=line.charCodeAt(line.length-1); line=line.slice(0,-1)+'='+hex[lc>>4]+hex[lc&15];
+      }
+      out+=line+'\r\n'; line=''; continue;
+    }
+    if((b>=33&&b<=126&&b!==61)||b===32||b===9){ put(String.fromCharCode(b)); }
+    else { put('='+hex[b>>4]+hex[b&15]); }
+  }
+  if(line.length && (line.charAt(line.length-1)===' '||line.charAt(line.length-1)==='\t')){
+    var lc2=line.charCodeAt(line.length-1); line=line.slice(0,-1)+'='+hex[lc2>>4]+hex[lc2&15];
+  }
+  out+=line;
+  return out;
+}
+function mhtB64Wrap(s){ var o=''; for(var i=0;i<s.length;i+=76){ o+=s.substr(i,76)+'\r\n'; } return o; }
+function docMHT(html, grbData){
+  var m=/^data:([^;,]+);base64,([\s\S]*)$/.exec(grbData||'');
+  var B='----=_NextPart_IPP_Obracun_01';
+  var base='file:///C:/IPP/obracun.htm';
+  var out='MIME-Version: 1.0\r\n'
+    +'Content-Type: multipart/related; type="text/html"; boundary="'+B+'"\r\n'
+    +'X-MimeOLE: Produced By IPP Alati\r\n\r\n'
+    +'This is a multi-part message in MIME format.\r\n\r\n';
+  if(m){
+    var mime=m[1];
+    var ext = mime==='image/png' ? 'png' : (mime==='image/gif' ? 'gif' : 'jpg');
+    var name='grb001.'+ext;
+    html = html.split(grbData).join(name);
+    out+='--'+B+'\r\n'
+      +'Content-Type: text/html; charset="utf-8"\r\n'
+      +'Content-Transfer-Encoding: quoted-printable\r\n'
+      +'Content-Location: '+base+'\r\n\r\n'
+      +mhtQP(html)+'\r\n\r\n'
+      +'--'+B+'\r\n'
+      +'Content-Type: '+mime+'\r\n'
+      +'Content-Transfer-Encoding: base64\r\n'
+      +'Content-Location: file:///C:/IPP/'+name+'\r\n\r\n'
+      +mhtB64Wrap(m[2])+'\r\n';
+  } else {
+    out+='--'+B+'\r\n'
+      +'Content-Type: text/html; charset="utf-8"\r\n'
+      +'Content-Transfer-Encoding: quoted-printable\r\n'
+      +'Content-Location: '+base+'\r\n\r\n'
+      +mhtQP(html)+'\r\n\r\n';
+  }
+  out+='--'+B+'--\r\n';
+  return out;
+}
+
+/* ======================= PRAVI .DOCX EXPORT (grb ugrađen u dokument) ======================= */
+var DXCRC=(function(){var t=new Uint32Array(256);for(var n=0;n<256;n++){var c=n;for(var k=0;k<8;k++){c=(c&1)?(0xEDB88320^(c>>>1)):(c>>>1);}t[n]=c>>>0;}return t;})();
+function dxCrc32(u8){var c=0xFFFFFFFF;for(var i=0;i<u8.length;i++){c=DXCRC[(c^u8[i])&0xFF]^(c>>>8);}return (c^0xFFFFFFFF)>>>0;}
+function dxU8(str){var b=[];for(var i=0;i<str.length;i++){var c=str.charCodeAt(i);
+  if(c<0x80)b.push(c);
+  else if(c<0x800)b.push(0xC0|(c>>6),0x80|(c&63));
+  else if(c>=0xD800&&c<0xDC00&&i+1<str.length){var c2=str.charCodeAt(++i),u=0x10000+((c-0xD800)<<10)+(c2-0xDC00);b.push(0xF0|(u>>18),0x80|((u>>12)&63),0x80|((u>>6)&63),0x80|(u&63));}
+  else b.push(0xE0|(c>>12),0x80|((c>>6)&63),0x80|(c&63));}
+  return new Uint8Array(b);}
+function dxB64(b64){var bin=atob(b64),u=new Uint8Array(bin.length);for(var i=0;i<bin.length;i++)u[i]=bin.charCodeAt(i);return u;}
+function dxZip(files){
+  var parts=[],cen=[],off=0;
+  function w16(a,v){a.push(v&255,(v>>8)&255);}
+  function w32(a,v){a.push(v&255,(v>>8)&255,(v>>16)&255,(v>>>24)&255);}
+  files.forEach(function(f){
+    var nm=dxU8(f.name),crc=dxCrc32(f.data),sz=f.data.length;
+    var lh=[];w32(lh,0x04034b50);w16(lh,20);w16(lh,0x0800);w16(lh,0);w16(lh,0);w16(lh,20513);
+    w32(lh,crc);w32(lh,sz);w32(lh,sz);w16(lh,nm.length);w16(lh,0);
+    var lu=new Uint8Array(lh);
+    parts.push(lu,nm,f.data);
+    var ch=[];w32(ch,0x02014b50);w16(ch,20);w16(ch,20);w16(ch,0x0800);w16(ch,0);w16(ch,0);w16(ch,20513);
+    w32(ch,crc);w32(ch,sz);w32(ch,sz);w16(ch,nm.length);w16(ch,0);w16(ch,0);w16(ch,0);w16(ch,0);w32(ch,0);w32(ch,off);
+    cen.push(new Uint8Array(ch),nm);
+    off+=lu.length+nm.length+sz;
+  });
+  var cs=0;cen.forEach(function(x){cs+=x.length;});
+  var eo=[];w32(eo,0x06054b50);w16(eo,0);w16(eo,0);w16(eo,files.length);w16(eo,files.length);w32(eo,cs);w32(eo,off);w16(eo,0);
+  return parts.concat(cen).concat([new Uint8Array(eo)]);
+}
+function dxEsc(s){return (s||'').toString().replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+var DXIMG='';
+function dxDraw(wpx,hpx,rid){
+  var cx=Math.round(wpx*9525),cy=Math.round(hpx*9525);
+  return '<w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0">'
+  +'<wp:extent cx="'+cx+'" cy="'+cy+'"/><wp:effectExtent l="0" t="0" r="0" b="0"/><wp:docPr id="1" name="Grb"/>'
+  +'<wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr>'
+  +'<a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">'
+  +'<pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">'
+  +'<pic:nvPicPr><pic:cNvPr id="1" name="Grb"/><pic:cNvPicPr/></pic:nvPicPr>'
+  +'<pic:blipFill><a:blip r:embed="'+rid+'"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>'
+  +'<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="'+cx+'" cy="'+cy+'"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr>'
+  +'</pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>';
+}
+function dxRun(t,st){
+  var r='<w:rPr>'+(st.b?'<w:b/>':'')+(st.i?'<w:i/>':'')+(st.caps?'<w:caps/>':'')+(st.sz?'<w:sz w:val="'+st.sz+'"/><w:szCs w:val="'+st.sz+'"/>':'')+'</w:rPr>';
+  return '<w:r>'+r+'<w:t xml:space="preserve">'+dxEsc(t)+'</w:t></w:r>';
+}
+function dxInline(node,st){
+  var out='',ch=node.childNodes;
+  for(var i=0;i<ch.length;i++){
+    var n=ch[i];
+    if(n.nodeType===3){ var t=n.nodeValue.replace(/[\r\n\t]+/g,' '); if(t.replace(/\s/g,'')!==''||/ /.test(t)){ if(t.trim()!=='') out+=dxRun(t,st); } }
+    else if(n.nodeType===1){
+      var tag=n.tagName.toLowerCase();
+      if(tag==='br'){ out+='<w:r><w:br/></w:r>'; continue; }
+      if(tag==='img'){ out+=DXIMG; continue; }
+      var s2={b:st.b||tag==='b'||tag==='strong',i:st.i||tag==='i'||tag==='em',caps:st.caps,sz:st.sz};
+      var sty=n.getAttribute('style')||'';
+      var m=/font-size:\s*([\d.]+)pt/.exec(sty); if(m) s2.sz=Math.round(parseFloat(m[1])*2);
+      if(/text-transform:\s*uppercase/.test(sty)) s2.caps=true;
+      out+=dxInline(n,s2);
+    }
+  }
+  return out;
+}
+function dxPara(node,o){
+  o=o||{};
+  var runs=dxInline(node,{b:!!o.b,sz:o.sz||0,caps:!!o.caps});
+  if(!runs) runs='<w:r><w:t xml:space="preserve"></w:t></w:r>';
+  var pr='<w:pPr><w:spacing w:before="'+(o.before||0)+'" w:after="'+(o.after==null?60:o.after)+'" w:line="240" w:lineRule="auto"/>'
+    +(o.jc?'<w:jc w:val="'+o.jc+'"/>':'')
+    +'<w:rPr>'+(o.b?'<w:b/>':'')+(o.sz?'<w:sz w:val="'+o.sz+'"/>':'')+'</w:rPr></w:pPr>';
+  return '<w:p>'+pr+runs+'</w:p>';
+}
+function dxCellPct(el){ var m=/width:\s*([\d.]+)%/.exec(el.getAttribute('style')||''); return m?parseFloat(m[1]):0; }
+function dxSpan(el){ var v=parseInt(el.getAttribute('colspan')||'1',10); return (isNaN(v)||v<1)?1:v; }
+function dxTable(tbl){
+  var bordered = /(^|\s)pd(\s|$)/.test(tbl.getAttribute('class')||'');
+  var bv = bordered ? '<w:top w:val="single" w:sz="6" w:color="000000"/><w:left w:val="single" w:sz="6" w:color="000000"/><w:bottom w:val="single" w:sz="6" w:color="000000"/><w:right w:val="single" w:sz="6" w:color="000000"/><w:insideH w:val="single" w:sz="6" w:color="000000"/><w:insideV w:val="single" w:sz="6" w:color="000000"/>'
+                    : '<w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/>';
+  var rows=tbl.rows, ncol=0, refRow=null, i, k;
+  for(i=0;i<rows.length;i++){
+    var n=0; for(k=0;k<rows[i].cells.length;k++) n+=dxSpan(rows[i].cells[k]);
+    if(n>ncol){ ncol=n; refRow=rows[i]; }
+  }
+  if(!ncol){ ncol=1; }
+  /* širine kolona u % */
+  var pcts=[]; for(i=0;i<ncol;i++) pcts.push(0);
+  if(refRow){
+    var ci=0;
+    for(k=0;k<refRow.cells.length;k++){
+      var cel=refRow.cells[k], sp=dxSpan(cel), w=dxCellPct(cel);
+      for(var q=0;q<sp;q++){ if(ci<ncol) pcts[ci]= w>0 ? (w/sp) : 0; ci++; }
+    }
+  }
+  var known=0, zeros=0;
+  for(i=0;i<ncol;i++){ if(pcts[i]>0) known+=pcts[i]; else zeros++; }
+  if(zeros>0){ var rest=(100-known)/zeros; if(rest<=0) rest=100/ncol; for(i=0;i<ncol;i++) if(pcts[i]<=0) pcts[i]=rest; }
+  var tot=0; for(i=0;i<ncol;i++) tot+=pcts[i];
+  if(tot<=0){ for(i=0;i<ncol;i++) pcts[i]=100/ncol; tot=100; }
+  for(i=0;i<ncol;i++) pcts[i]=pcts[i]*100/tot;
+  var TW=9638, cw=[], grid='<w:tblGrid>';
+  for(i=0;i<ncol;i++){ cw.push(Math.round(TW*pcts[i]/100)); grid+='<w:gridCol w:w="'+cw[i]+'"/>'; }
+  grid+='</w:tblGrid>';
+  var out='<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:tblLayout w:type="fixed"/><w:tblBorders>'+bv+'</w:tblBorders>'
+    +'<w:tblCellMar><w:top w:w="40" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:bottom w:w="40" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr>'+grid;
+  for(var r=0;r<rows.length;r++){
+    out+='<w:tr>';
+    var cells=rows[r].cells, col=0;
+    for(k=0;k<cells.length;k++){
+      var cl=cells[k], cs=cl.getAttribute('style')||'', cc=cl.getAttribute('class')||'', sp2=dxSpan(cl);
+      var isTh = cl.tagName.toLowerCase()==='th';
+      var numAl = /(^|\s)n(\s|$)/.test(cc) || /text-align:\s*right/.test(cs);
+      var ctr = /text-align:\s*center/.test(cs);
+      var vm  = /vertical-align:\s*middle/.test(cs);
+      var w=0; for(var z=0;z<sp2;z++){ w += cw[col+z]||0; } col+=sp2;
+      if(!w) w=Math.round(TW/ncol);
+      var tcPr='<w:tcPr><w:tcW w:w="'+w+'" w:type="dxa"/>'
+        +(sp2>1?'<w:gridSpan w:val="'+sp2+'"/>':'')
+        +(isTh?'<w:shd w:val="clear" w:color="auto" w:fill="ECECEC"/>':'')
+        +(vm?'<w:vAlign w:val="center"/>':'')
+        +(bordered?'':'<w:tcBorders><w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/></w:tcBorders>')
+        +'</w:tcPr>';
+      var jc = numAl?'right':(ctr?'center':'');
+      var fs=0, ms=/font-size:\s*([\d.]+)pt/.exec(cs); if(ms) fs=Math.round(parseFloat(ms[1])*2);
+      var runs=dxInline(cl,{b:isTh,sz:fs});
+      if(!runs) runs='<w:r><w:t xml:space="preserve"></w:t></w:r>';
+      out+='<w:tc>'+tcPr+'<w:p><w:pPr><w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/>'+(jc?'<w:jc w:val="'+jc+'"/>':'')+'</w:pPr>'+runs+'</w:p></w:tc>';
+    }
+    out+='</w:tr>';
+  }
+  return out+'</w:tbl>';
+}
+function dxBody(html){
+  var doc=new DOMParser().parseFromString(html,'text/html');
+  var out='', ch=doc.body.children;
+  for(var i=0;i<ch.length;i++){
+    var el=ch[i], tag=el.tagName.toLowerCase(), cls=el.getAttribute('class')||'';
+    if(tag==='table'){
+      out+=dxTable(el);
+      var nx=ch[i+1];
+      /* razmak iza tabele samo ako odmah slijedi nova tabela (Word to traži) */
+      if(nx && nx.tagName.toLowerCase()==='table')
+        out+='<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="240" w:lineRule="auto"/><w:rPr><w:sz w:val="8"/></w:rPr></w:pPr></w:p>';
+    }
+    else if(tag==='h1'||/pd-title/.test(cls)){ out+=dxPara(el,{jc:'center',b:true,sz:26,caps:true,before:160,after:160}); }
+    else if(/pd-sec/.test(cls)){ out+=dxPara(el,{b:true,before:180,after:40}); }
+    else if(/pd-total/.test(cls)){ out+=dxPara(el,{jc:'right',b:true,sz:25,before:140,after:80}); }
+    else { out+=dxPara(el,{before:40,after:40}); }
+  }
+  return out;
+}
+function docxBuild(html,grbData,wpx,hpx){
+  var m=/^data:([^;,]+);base64,([\s\S]*)$/.exec(grbData||'');
+  var files=[], imgExt=null, imgMime=null, imgU8=null;
+  if(m){ imgMime=m[1]; imgExt=(imgMime==='image/png')?'png':((imgMime==='image/gif')?'gif':'jpg'); imgU8=dxB64(m[2]); }
+  DXIMG = imgU8 ? dxDraw(wpx,hpx,'rId10') : '';
+  var body=dxBody(html);
+  var sect='<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1021" w:right="1134" w:bottom="964" w:left="1134" w:header="708" w:footer="708" w:gutter="0"/></w:sectPr>';
+  var docXml='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+   +'<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"'
+   +' xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"'
+   +' xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing">'
+   +'<w:body>'+body+sect+'</w:body></w:document>';
+  var styles='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+   +'<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr>'
+   +'<w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/><w:sz w:val="22"/><w:szCs w:val="22"/>'
+   +'<w:lang w:val="bs-Latn-BA"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="60" w:line="240" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>'
+   +'<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style></w:styles>';
+  var ct='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+   +'<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">'
+   +'<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>'
+   +'<Default Extension="xml" ContentType="application/xml"/>'
+   +'<Default Extension="png" ContentType="image/png"/><Default Extension="jpg" ContentType="image/jpeg"/><Default Extension="gif" ContentType="image/gif"/>'
+   +'<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>'
+   +'<Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>';
+  var rels='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+   +'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+   +'<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';
+  var drels='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+   +'<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+   +'<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>'
+   +(imgU8?'<Relationship Id="rId10" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/grb.'+imgExt+'"/>':'')
+   +'</Relationships>';
+  files.push({name:'[Content_Types].xml',data:dxU8(ct)});
+  files.push({name:'_rels/.rels',data:dxU8(rels)});
+  files.push({name:'word/document.xml',data:dxU8(docXml)});
+  files.push({name:'word/styles.xml',data:dxU8(styles)});
+  files.push({name:'word/_rels/document.xml.rels',data:dxU8(drels)});
+  if(imgU8) files.push({name:'word/media/grb.'+imgExt,data:imgU8});
+  return new Blob(dxZip(files),{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+function dlDocx(blob,fname){
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=fname;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); document.body.removeChild(a); },1500);
+}
+
+function dlDoc(mht, fname){
+  var blob=new Blob([mht],{type:'application/msword'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=fname;
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); document.body.removeChild(a); },1500);
+}
+</script>
+<script>
+
+/* =====================================================================
+   OBRAČUN RENTE — Opština Bosansko Grahovo
+   Odluka o građevinskom zemljištu („Sl. glasnik Opštine Bosansko Grahovo“, broj 7/20)
+   ===================================================================== */
+
+var R_ZONE=[
+ {z:'III', p:4, naziv:'Treća zona — uže područje grada',
+  opis:'Dio grada oivčen ulicom Gavrila Principa, ulicom Đure Pucara (od raskrsnice sa ul. Gavrila Principa do raskrsnice sa ul. Huseina Abdičevića), ulicom Huseina Abdičevića (do raskrsnice sa ul. Ive Lole Ribara), ulicom Ive Lole Ribara, ulicom Maršala Tita (od raskrsnice sa ul. Ive Lole Ribara do raskrsnice sa ul. IV Krajiške brigade) — uključujući i krug bivše tvornice obuće — te ulicom IV Krajiške brigade (do raskrsnice sa ul. Gavrila Principa).'},
+ {z:'IV', p:3, naziv:'Četvrta zona — ostali dio grada',
+  opis:'Područje od granice treće zone do granice prostornog obuhvata, izuzimajući granice prostornog obuhvata ostalog građevinskog zemljišta.'},
+ {z:'V', p:2, naziv:'Peta zona — industrijska zona i područje graničnog prelaza',
+  opis:'Industrijska zona uz regionalni put Bos. Grahovo – Preodac: pojas širine 200 m sa obje strane puta, od raskrsnice sa magistralnim putem Bos. Grahovo – Livno do mosta na rijeci Korani na ulazu u Obljaj. Područje graničnog prelaza Strmica: pojas širine 200 m sa obje strane magistralnog puta Bos. Grahovo – Knin, od graničnog prelaza 2 km u pravcu naseljenog mjesta Zaseok.'},
+ {z:'VI', p:1, naziv:'Šesta zona — vikend naselja i pojasevi uz magistralne puteve',
+  opis:'Vikend naselje u Borovači, Fabrika ciglarskih proizvoda u Vidovićima i područje udaljeno 200 m od iste, pojas širine 500 m sa obje strane magistralnih puteva Bos. Grahovo – Knin, Bos. Grahovo – Livno i Bos. Grahovo – Drvar, te vikend naselja u Malom Tičevu i Preocu.'}
+];
+
+var RLAST=null;
+
+function rEl(id){return document.getElementById(id);}
+function rZoneOptions(sel){var h='';R_ZONE.forEach(function(z,i){h+='<option value="'+i+'"'+(sel===i?' selected':'')+'>'+z.z+' zona — '+z.p+' %</option>';});return h;}
+
+function rAddRow(opis,pov){
+  var wrap=rEl('r_rows'); if(!wrap) return;
+  var d=document.createElement('div'); d.className='rrow';
+  d.innerHTML='<input class="r_opis" placeholder="npr. prizemlje, sprat, potkrovlje, poslovni prostor">'
+    +'<input class="r_pov" inputmode="decimal" placeholder="m²" oninput="rCalc()">'
+    +'<button type="button" class="ghost" style="padding:8px 12px" onclick="this.closest(\'.rrow\').remove();rCalc()">&times;</button>';
+  wrap.appendChild(d);
+  if(opis) d.querySelector('.r_opis').value=opis;
+  if(pov!=null) d.querySelector('.r_pov').value=pov;
+  rCalc();
+}
+function rRowData(){var a=[];document.querySelectorAll('#r_rows .rrow').forEach(function(r){
+  var o=r.querySelector('.r_opis'),p=r.querySelector('.r_pov');
+  var v=numStr(p?p.value:0); if(v>0) a.push({opis:(o?o.value.trim():''),pov:v});});return a;}
+
+function rOnPmode(){
+  var m=rEl('r_pmode').value;
+  rEl('r_wrapNeto').style.display = m==='neto'?'block':'none';
+  rEl('r_wrapParc').style.display = m==='neto'?'none':'block';
+  rEl('r_parcHint').innerHTML = m==='k05'
+    ? 'Korisnom površinom smatra se <b>površina građevinske parcele &times; 0,5</b> (minimalni koeficijent izgrađenosti) — čl. 34 st. 2.'
+    : 'Korisnom površinom smatra se <b>površina građevinske parcele &times; 0,6</b> (minimalni koeficijent izgrađenosti) — čl. 34 st. 1.';
+}
+function rOnSlucaj(){
+  var s=rEl('r_slucaj').value;
+  rEl('r_detZamjena').classList.toggle('show', s==='zamjena');
+  rEl('r_detNamjena').classList.toggle('show', s==='namjena');
+}
+
+/* --- razredi umanjenja (čl. 41 st. 2) --- */
+function rPopust(P){
+  if(P<=0) return {p:0,opis:'—'};
+  if(P<=400)  return {p:5, opis:'do 400 m² neto korisne površine — 5 %'};
+  if(P<=1000) return {p:10,opis:'od 401 m² do 1.000 m² neto korisne površine — 10 %'};
+  return {p:15,opis:'preko 1.000 m² neto korisne površine — 15 %'};
+}
+/* --- razredi obroka (čl. 42 st. 2) --- */
+function rObroci(P){
+  if(P<400)   return {n:0,per:'',opis:'Odluka ne propisuje broj obroka za objekte ispod 400 m² neto korisne površine (čl. 42). Obročno plaćanje u tom slučaju treba posebno obrazložiti zaključkom načelnika (čl. 43) ili primijeniti jednokratno plaćanje.'};
+  if(P<=600)  return {n:3,per:'u periodu od 3 mjeseca (kvartalno)',opis:'400–600 m² neto korisne površine → 3 jednaka obroka u periodu od 3 mjeseca (kvartalno)'};
+  if(P<=1500) return {n:6,per:'u periodu od 8 mjeseci',opis:'601–1.500 m² neto korisne površine → 6 jednakih obroka u periodu od 8 mjeseci'};
+  return {n:9,per:'u periodu od 12 mjeseci',opis:'preko 1.501 m² neto korisne površine → 9 jednakih obroka u periodu od 12 mjeseci'};
+}
+
+function rCalc(){
+  var osn0=num('r_osnovica'), val=num('r_valor');
+  var osn=osn0*(1+val/100);
+  var zi=parseInt(rEl('r_zona').value||'0',10); if(isNaN(zi)) zi=0;
+  var Z=R_ZONE[zi];
+  var stopa=osn*Z.p/100;
+
+  /* površina */
+  var mode=rEl('r_pmode').value, rows=[], parc=0, koef=1, P=0;
+  if(mode==='neto'){ rows=rRowData(); rows.forEach(function(r){P+=r.pov;}); }
+  else { parc=num('r_parcela'); koef=(mode==='k05')?0.5:0.6; P=parc*koef; }
+
+  var bruto=stopa*P;
+
+  /* posebni slučajevi */
+  var slucaj=rEl('r_slucaj').value, odbitak=0, opisSlucaj='Nova građevina — redovan obračun', negativna=false;
+  if(slucaj==='zamjena'){
+    var rp=num('r_rp'), rzi=parseInt(rEl('r_rz').value||'0',10); if(isNaN(rzi)) rzi=zi;
+    var rstopa=osn*R_ZONE[rzi].p/100;
+    odbitak=rp*rstopa;
+    opisSlucaj='Nova građevina umjesto porušene (čl. 36): umanjenje za rentu ranije građevine — '
+      +fmtN(rp)+' m² × '+fmtN(rstopa)+' KM/m² ('+R_ZONE[rzi].z+' zona) = '+fmt(odbitak);
+  } else if(slucaj==='namjena'){
+    var np=num('r_np'), nzi=parseInt(rEl('r_nz').value||'0',10); if(isNaN(nzi)) nzi=zi;
+    var nstopa=osn*R_ZONE[nzi].p/100;
+    odbitak=np*nstopa;
+    if(bruto-odbitak<=0) negativna=true;
+    opisSlucaj='Promjena namjene (čl. 37): pozitivna razlika u odnosu na raniju namjenu — '
+      +fmtN(np)+' m² × '+fmtN(nstopa)+' KM/m² ('+R_ZONE[nzi].z+' zona) = '+fmt(odbitak);
+  }
+  var poslije=bruto-odbitak; if(poslije<0) poslije=0;
+
+  /* plaćanje */
+  var nac=rEl('r_placanje').value, posl=rEl('r_poslovni').checked;
+  var pop={p:0,opis:'—'}, ob={n:0,per:'',opis:''}, umanjenje=0, iznos=poslije, rata=0;
+  if(nac==='jedno'){
+    if(posl){ pop=rPopust(P); umanjenje=poslije*pop.p/100; iznos=poslije-umanjenje; }
+    else { pop={p:0,opis:'umanjenje se po čl. 41 st. 2 vezuje za poslovni, stambeno-poslovni i drugi objekat'}; }
+  } else {
+    ob=rObroci(P);
+    if(ob.n>0) rata=poslije/ob.n;
+    iznos=poslije;
+  }
+
+  RLAST={osn0:osn0,val:val,osn:osn,zi:zi,Z:Z,stopa:stopa,mode:mode,rows:rows,parc:parc,koef:koef,P:P,
+    bruto:bruto,slucaj:slucaj,odbitak:odbitak,opisSlucaj:opisSlucaj,poslije:poslije,nac:nac,posl:posl,
+    pop:pop,umanjenje:umanjenje,ob:ob,rata:rata,iznos:iznos,negativna:negativna};
+
+  /* ispis */
+  rEl('r_osnOut').textContent=fmtN(osn)+' KM/m²';
+  rEl('r_stopaOut').textContent=fmtN(stopa)+' KM/m²';
+  rEl('r_stopaFormula').innerHTML=fmtN(osn)+' &times; '+Z.p+' % ('+Z.z+' zona, čl. 40)';
+  rEl('r_zonaOpis').innerHTML='<b>'+Z.naziv+'</b><br>'+Z.opis;
+  rEl('r_povOut').textContent=fmtN(P)+' m²';
+  rEl('r_k1').textContent=fmtN(stopa);
+  rEl('r_k2').textContent=fmtN(P)+' m²';
+  rEl('r_k3').textContent=(nac==='jedno'? fmt(umanjenje) : '0,00 KM');
+  rEl('r_total').textContent=fmt(iznos);
+  rEl('r_slovima').textContent='slovima: '+slovima(iznos);
+
+
+  /* blok o plaćanju */
+  var ph='';
+  if(nac==='jedno'){
+    ph='<div class="kpibox" style="margin-top:12px"><div class="k">Umanjenje za jednokratno plaćanje (čl. 41 st. 2)</div><div class="v">'
+      +(posl? pop.p+' %  ('+fmt(umanjenje)+')' : '0 %')+'</div></div>';
+    ph+='<div class="hint">'+esc(pop.opis)+'</div>';
+  } else {
+    if(ob.n>0){
+      ph='<div class="kpibox" style="margin-top:12px"><div class="k">Obročno plaćanje (čl. 42)</div><div class="v">'+ob.n+' &times; '+fmt(rata)+'</div></div>';
+      ph+='<div class="hint">'+esc(ob.opis)+'. Iznos se <b>ne umanjuje</b>. Investitor je dužan predati jedan od instrumenata obezbjeđenja plaćanja '
+        +'(<b>mjenica ili bankovna garancija</b>) — čl. 42 st. 3.</div>';
+    } else {
+      ph='<div class="warnnote" style="margin-top:12px">'+esc(ob.opis)+'</div>';
+    }
+    ph+='<div class="infonote">Obročno plaćanje odobrava <b>Opštinski načelnik zaključkom</b> prije donošenja rješenja; rješenje sadrži posebnu tačku dispozitiva '
+      +'i elemente izvršnog naslova (čl. 23 ZIP FBiH). Pravomoćno rješenje dostavlja se zemljišnoknjižnom uredu radi <b>zabilježbe duga</b>. '
+      +'Na zakašnjele uplate teče zakonska zatezna kamata; kašnjenje duže od tri mjeseca — predmet Pravobranilaštvu (čl. 43).</div>';
+  }
+  rEl('r_placOut').innerHTML=ph;
+
+  /* tabela rata */
+  var rw='';
+  if(nac==='obrocno' && ob.n>0 && poslije>0){
+    rw='<table><thead><tr><th>Obrok</th><th>Iznos</th></tr></thead><tbody>';
+    var zbir=0;
+    for(var i=1;i<=ob.n;i++){
+      var v=(i===ob.n)?(poslije-zbir):Math.round(rata*100)/100; zbir+=v;
+      rw+='<tr><td>'+i+'. obrok</td><td>'+fmt(v)+'</td></tr>';
+    }
+    rw+='<tr class="total"><td>Ukupno '+ob.per+'</td><td>'+fmt(poslije)+'</td></tr></tbody></table>';
+  }
+  rEl('r_rateWrap').innerHTML=rw;
+
+  /* upozorenja */
+  var w=[];
+  if(osn0<=0) w.push('Nije unesena osnovica — prosječna konačna građevinska cijena po m² (čl. 35).');
+  if(P<=0) w.push('Nije unesena površina za obračun (čl. 32 / čl. 34).');
+  if(negativna) w.push('Kod promjene namjene (čl. 37) razlika nije pozitivna — renta se ne obračunava.');
+  if(slucaj==='zamjena' && odbitak>bruto) w.push('Umanjenje po čl. 36 veće je od obračunate rente — renta se utvrđuje u iznosu 0,00 KM.');
+  var we=rEl('r_warn');
+  if(w.length){ we.style.display='block'; we.innerHTML='&#9888; '+w.join('<br>&#9888; '); } else { we.style.display='none'; we.innerHTML=''; }
+}
+
+/* ---------------- tekstualni izlaz ---------------- */
+function rBuild(){
+  rCalc(); var L=RLAST;
+  if(!L || L.osn0<=0){ toast('Upiši osnovicu (prosječnu konačnu građevinsku cijenu)','warn'); return null; }
+  if(L.P<=0){ toast('Upiši površinu za obračun','warn'); return null; }
+  var t='';
+  t+='OBRACUN RENTE (naknade iz osnova pogodnosti gradskog gradjevinskog zemljista)\n';
+  t+='Opstina Bosansko Grahovo - Odluka o gradjevinskom zemljistu (Sl. glasnik 7/20)\n';
+  t+='------------------------------------------------------------\n';
+  if(val2('r_broj')) t+='Broj predmeta   : '+val2('r_broj')+'\n';
+  if(val2('r_investitor')) t+='Investitor      : '+val2('r_investitor')+'\n';
+  if(val2('r_kc')||val2('r_ko')) t+='Lokacija        : k.c. '+(val2('r_kc')||'-')+(val2('r_ko')?', k.o. '+val2('r_ko'):'')+'\n';
+  if(val2('r_objekat')) t+='Gradjevina      : '+val2('r_objekat')+'\n';
+  t+='------------------------------------------------------------\n';
+  t+='Osnovica (cl.35/39): '+fmtN(L.osn0)+' KM/m2'+(L.val>0?(' + valorizacija '+fmtN(L.val)+'% = '+fmtN(L.osn)+' KM/m2'):'')+'\n';
+  t+='Zona (cl.39/40)    : '+L.Z.z+' zona - '+L.Z.p+'%\n';
+  t+='Renta po m2        : '+fmtN(L.osn)+' x '+L.Z.p+'% = '+fmtN(L.stopa)+' KM/m2\n';
+  t+='------------------------------------------------------------\n';
+  if(L.mode==='neto'){
+    t+='NETO KORISNA POVRSINA (cl.32):\n';
+    L.rows.forEach(function(r){ t+='   - '+(r.opis||'prostor')+': '+fmtN(r.pov)+' m2\n'; });
+    t+='Ukupno             : '+fmtN(L.P)+' m2\n';
+  } else {
+    t+='POVRSINA (cl.34)   : parcela '+fmtN(L.parc)+' m2 x '+fmtN(L.koef)+' = '+fmtN(L.P)+' m2\n';
+  }
+  t+='------------------------------------------------------------\n';
+  t+='Renta = '+fmtN(L.P)+' m2 x '+fmtN(L.stopa)+' KM/m2 = '+fmt(L.bruto)+'\n';
+  if(L.odbitak>0) t+='Posebni slucaj     : '+L.opisSlucaj.replace(/&times;/g,'x')+'\n                     -> '+fmt(L.poslije)+'\n';
+  if(L.nac==='jedno'){
+    if(L.umanjenje>0) t+='Umanjenje (cl.41)  : '+L.pop.p+'% = -'+fmt(L.umanjenje)+'\n';
+    t+='Nacin placanja     : jednokratno\n';
+  } else {
+    t+='Nacin placanja     : obrocno';
+    if(L.ob.n>0) t+=' - '+L.ob.n+' jednakih obroka '+L.ob.per+' (po '+fmt(L.rata)+'), bez umanjenja\n';
+    else t+=' - broj obroka nije propisan za ovu povrsinu\n';
+  }
+  t+='------------------------------------------------------------\n';
+  t+='UKUPNA RENTA       : '+fmt(L.iznos)+'\n';
+  t+='slovima            : '+slovima(L.iznos)+'\n';
+  t+='------------------------------------------------------------\n';
+  t+='Napomena: visina rente utvrdjuje se rjesenjem o urbanistickoj saglasnosti (cl.38 st.2),\n';
+  t+='a nacin placanja rjesenjem u postupku izdavanja odobrenja za gradjenje (cl.41 st.1).\n';
+  t+='Renta se obracunava na NETO korisnu povrsinu, a naknada za uredjenje na BRUTO\n';
+  t+='povrsinu svih etaza (cl.47) - to su dvije odvojene naknade.\n';
+  return t;
+}
+function rGenerate(){ var t=rBuild(); if(t===null) return; var o=rEl('r_out'); o.textContent=t; o.style.display='block'; o.scrollIntoView({behavior:'smooth',block:'nearest'}); toast('Obračun generisan','ok'); }
+function rCopy(){ var t=rBuild(); if(t===null) return; navigator.clipboard.writeText(t).then(function(){toast('Kopirano','ok');},function(){ var o=rEl('r_out'); o.textContent=t; o.style.display='block'; toast('Kopiraj ručno','warn'); }); }
+function rDownload(){ var t=rBuild(); if(t===null) return; var b=new Blob([t],{type:'text/plain;charset=utf-8'}); var a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='OBRACUN_RENTE_GRAHOVO.txt'; a.click(); toast('Preuzeto','ok'); }
+
+/* ---------------- A4 / PDF ---------------- */
+function rDocTables(){
+  var L=RLAST, h='';
+  h+='<table class="pd"><tbody>';
+  var inv=val2('r_investitor'), ko=val2('r_ko'), kc=val2('r_kc'), ob=val2('r_objekat');
+  if(inv) h+='<tr><td style="width:38%">Investitor / podnosilac</td><td>'+esc(inv)+'</td></tr>';
+  if(ko||kc) h+='<tr><td>Lokacija</td><td>k.č. '+esc(kc||'-')+(ko?', k.o. '+esc(ko):'')+'</td></tr>';
+  if(ob) h+='<tr><td>Građevina</td><td>'+esc(ob)+'</td></tr>';
+  h+='<tr><td>Zona</td><td>'+L.Z.z+' zona ('+L.Z.p+' %) &ndash; '+esc(L.Z.naziv)+'</td></tr>';
+  h+='</tbody></table>';
+
+  h+='<p class="pd-sec"><b>1. Osnovica (čl. 35 i čl. 39 st. 2)</b></p>';
+  h+='<table class="pd"><tbody>';
+  h+='<tr><td style="width:60%">Prosječna konačna građevinska cijena po m² korisne stambene površine</td><td class="n">'+fmtN(L.osn0)+' KM/m²</td></tr>';
+  if(L.val>0) h+='<tr><td>Valorizacija (indeks rasta cijena građevinskih radova)</td><td class="n">+ '+fmtN(L.val)+' % &rarr; '+fmtN(L.osn)+' KM/m²</td></tr>';
+  h+='<tr><td>Fiksni procenat rente za '+L.Z.z+' zonu (čl. 40)</td><td class="n">'+L.Z.p+' %</td></tr>';
+  h+='<tr><td><b>Renta po 1 m² neto korisne površine</b></td><td class="n"><b>'+fmtN(L.osn)+' &times; '+L.Z.p+' % = '+fmtN(L.stopa)+' KM/m²</b></td></tr>';
+  h+='</tbody></table>';
+
+  h+='<p class="pd-sec"><b>2. Obračunska površina ('+(L.mode==='neto'?'čl. 32':'čl. 34')+')</b></p>';
+  if(L.mode==='neto'){
+    h+='<table class="pd"><thead><tr><th>Etaža / prostor</th><th class="n">Neto korisna površina (m²)</th></tr></thead><tbody>';
+    L.rows.forEach(function(r){ h+='<tr><td>'+esc(r.opis||'prostor')+'</td><td class="n">'+fmtN(r.pov)+'</td></tr>'; });
+    h+='<tr><td><b>Ukupno (zbir podnih površina zatvorenog prostora po svim etažama)</b></td><td class="n"><b>'+fmtN(L.P)+'</b></td></tr></tbody></table>';
+  } else {
+    h+='<table class="pd"><tbody><tr><td style="width:60%">Površina građevinske parcele &times; minimalni koeficijent izgrađenosti</td>'
+      +'<td class="n">'+fmtN(L.parc)+' m² &times; '+fmtN(L.koef)+' = <b>'+fmtN(L.P)+' m²</b></td></tr></tbody></table>';
+  }
+
+  h+='<p class="pd-sec"><b>3. Obračun rente (čl. 40)</b></p>';
+  h+='<table class="pd"><tbody>';
+  h+='<tr><td style="width:60%">Renta = '+fmtN(L.P)+' m² &times; '+fmtN(L.stopa)+' KM/m²</td><td class="n"><b>'+fmt(L.bruto)+'</b></td></tr>';
+  if(L.odbitak>0){
+    h+='<tr><td>'+esc(L.opisSlucaj)+'</td><td class="n">&minus; '+fmt(L.odbitak)+'</td></tr>';
+    h+='<tr><td>Renta nakon primjene posebnog slučaja</td><td class="n"><b>'+fmt(L.poslije)+'</b></td></tr>';
+  }
+  if(L.nac==='jedno'){
+    h+='<tr><td>Način plaćanja</td><td class="n">jednokratno (čl. 41 st. 1)</td></tr>';
+    if(L.umanjenje>0) h+='<tr><td>Umanjenje &mdash; '+esc(L.pop.opis)+'</td><td class="n">&minus; '+fmt(L.umanjenje)+'</td></tr>';
+  } else {
+    h+='<tr><td>Način plaćanja</td><td class="n">obročno (čl. 42) &mdash; bez umanjenja</td></tr>';
+    if(L.ob.n>0) h+='<tr><td>'+esc(L.ob.opis)+'</td><td class="n">'+L.ob.n+' &times; '+fmt(L.rata)+'</td></tr>';
+  }
+  h+='</tbody></table>';
+
+  if(L.nac==='obrocno' && L.ob.n>0 && L.poslije>0){
+    h+='<p class="pd-sec"><b>4. Plan obročnog plaćanja (čl. 42 i čl. 43)</b></p>';
+    var zb=0, vals=[];
+    for(var i=1;i<=L.ob.n;i++){ var v=(i===L.ob.n)?(L.poslije-zb):Math.round(L.rata*100)/100; zb+=v; vals.push(v); }
+    h+='<table class="pd"><tbody>';
+    for(var r=0;r<vals.length;r+=3){
+      h+='<tr>';
+      for(var c=0;c<3;c++){ var k=r+c;
+        if(k<vals.length) h+='<td style="width:16%">'+(k+1)+'. obrok</td><td class="n" style="width:17%">'+fmt(vals[k])+'</td>';
+        else h+='<td></td><td></td>'; }
+      h+='</tr>';
+    }
+    h+='<tr><td colspan="5"><b>Ukupno '+esc(L.ob.per)+'</b></td><td class="n"><b>'+fmt(L.poslije)+'</b></td></tr></tbody></table>';
+    h+='<p class="pd-note">Investitor je dužan predati mjenicu ili bankovnu garanciju kao instrument obezbjeđenja plaćanja (čl. 42 st. 3). '
+      +'Obročno plaćanje odobrava Opštinski načelnik zaključkom prije donošenja rješenja; rješenje sadrži posebnu tačku dispozitiva i elemente '
+      +'izvršnog naslova u skladu sa članom 23. Zakona o izvršnom postupku FBiH, a pravomoćno rješenje dostavlja se zemljišnoknjižnom uredu radi zabilježbe duga (čl. 43).</p>';
+  }
+  return h;
+}
+function rBuildPrintDoc(){
+  rCalc(); var L=RLAST; if(!L||L.osn0<=0||L.P<=0) return false;
+  var brP=val2('r_broj')||'____________', dat=val2('r_datum');
+  var h='<div class="pd-wrap">';
+  h+='<div class="pd-head"><img class="pd-grb" src="'+G_GRB_DATA+'" alt="grb Opštine Bosansko Grahovo">'
+    +'<div class="pd-org">BOSNA I HERCEGOVINA<br>FEDERACIJA BOSNE I HERCEGOVINE<br>KANTON 10<br><b>OPŠTINA BOSANSKO GRAHOVO</b><br>Služba za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove</div>'
+    +'<div style="width:60px"></div></div>';
+  h+='<div class="pd-meta">Broj predmeta: <b>'+esc(brP)+'</b><br>Bosansko Grahovo, '+esc(dat||'____________')+'</div>';
+  h+='<h1 class="pd-title">Obračun rente &mdash; naknade iz osnova pogodnosti gradskog građevinskog zemljišta</h1>';
+  h+='<p style="text-align:center;font-size:10pt;margin:0 0 6px">Odluka o građevinskom zemljištu Opštine Bosansko Grahovo („Službeni glasnik Opštine Bosansko Grahovo“, broj 7/20)</p>';
+  h+=rDocTables();
+  h+='<p class="pd-total">Ukupna renta: '+fmt(L.iznos)+'</p>';
+  h+='<p style="font-style:italic;font-size:11pt;text-align:right;margin:2px 0 0">slovima: '+slovima(L.iznos)+'</p>';
+  h+='<p class="pd-note">Visina rente utvrđuje se rješenjem o urbanističkoj saglasnosti (čl. 38 st. 2), a način plaćanja rješenjem u postupku '
+    +'izdavanja odobrenja za građenje (čl. 41 st. 1). Rentu plaća i investitor koji gradi na gradskom građevinskom zemljištu u privatnoj svojini (čl. 38 st. 1). '
+    +'Renta se obračunava na <b>neto</b> korisnu površinu (čl. 32 i čl. 40), dok se naknada za uređenje građevinskog zemljišta obračunava posebno, '
+    +'prema <b>bruto</b> površini svih etaža (čl. 47).</p>';
+  h+='<table style="width:100%;border:none;margin-top:10px"><tr><td style="width:52%;border:none"></td>'
+    +'<td style="width:48%;border:none;text-align:center">Obračun izvršio:<div style="border-top:1px solid #000;margin-top:26px"></div>'
+    +'<span style="font-size:9.5pt">(potpis)</span></td></tr></table>';
+  h+='</div>';
+  document.getElementById('printDoc').innerHTML=h; return true;
+}
+function rExportPDF(){ if(!rBuildPrintDoc()){ toast('Popuni osnovicu i površinu','warn'); return; } setTimeout(function(){ window.print(); },60); }
+
+/* ---------------- Word ---------------- */
+function rBuildWordHTML(){
+  rCalc(); var L=RLAST; if(!L||L.osn0<=0||L.P<=0) return false;
+  var brP=val2('r_broj')||'____________', dat=val2('r_datum');
+  var h="<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Obračun rente</title><style>body{font-family:'Times New Roman',serif;font-size:11pt;} table.pd{width:100%;border-collapse:collapse;margin:2px 0;} table.pd th,table.pd td{border:1px solid #000;padding:4px 7px;text-align:left;vertical-align:top;} table.pd th{background:#ececec;font-weight:bold;} table.pd td.n,table.pd th.n{text-align:right;} .pd-title{text-align:center;font-size:13pt;text-transform:uppercase;margin:15px 0 4px;} .pd-sec{font-weight:bold;margin-top:14px;margin-bottom:5px;} .pd-total{font-size:12.5pt;font-weight:bold;text-align:right;margin-top:10px;} .pd-note{font-size:10pt;font-style:italic;margin-top:8px;}</style></head><body>";
+  h+='<table style="width:100%;border-bottom:2px solid #000;padding-bottom:5px;margin-bottom:10px;"><tr><td style="width:20%;text-align:left;vertical-align:middle;border:none;"><img width="52" height="60" style="width:52px;height:60px;" src="'+G_GRB_DATA+'" alt="Grb Opštine Bosansko Grahovo"></td><td style="width:60%;text-align:center;vertical-align:middle;border:none;font-size:11pt;">BOSNA I HERCEGOVINA<br>FEDERACIJA BOSNE I HERCEGOVINE<br>KANTON 10<br><b style="font-size:12.5pt;">OPŠTINA BOSANSKO GRAHOVO</b><br>Služba za obnovu, urbanizam, stambeno-komunalne i imovinsko-pravne poslove</td><td style="width:20%;border:none;"></td></tr></table>';
+  h+='<div style="margin-top:10px;">Broj predmeta: <b>'+esc(brP)+'</b><br>Bosansko Grahovo, '+esc(dat||'____________')+'</div>';
+  h+='<div class="pd-title">Obračun rente &mdash; naknade iz osnova pogodnosti gradskog građevinskog zemljišta</div>';
+  h+='<div style="text-align:center;font-size:10pt;margin-bottom:8px;">Odluka o građevinskom zemljištu Opštine Bosansko Grahovo („Službeni glasnik Opštine Bosansko Grahovo“, broj 7/20)</div>';
+  h+=rDocTables();
+  h+='<div class="pd-total">Ukupna renta: '+fmt(L.iznos)+'</div>';
+  h+='<div style="font-style:italic;font-size:11pt;text-align:right;margin-top:2px;">slovima: '+slovima(L.iznos)+'</div>';
+  h+='<div class="pd-note">Visina rente utvrđuje se rješenjem o urbanističkoj saglasnosti (čl. 38 st. 2), a način plaćanja rješenjem u postupku izdavanja odobrenja za građenje (čl. 41 st. 1). '
+    +'Renta se obračunava na neto korisnu površinu (čl. 32 i čl. 40), dok se naknada za uređenje građevinskog zemljišta obračunava posebno, prema bruto površini svih etaža (čl. 47).</div>';
+  h+='<table style="width:100%;margin-top:40px;"><tr><td style="width:50%;border:none;"></td><td style="width:50%;text-align:center;border:none;">Obračun izvršio:<br><br><br>___________________________<br><span style="font-size:11pt;">(potpis)</span></td></tr></table>';
+  h+='</body></html>'; return h;
+}
+function rExportDOCX(){
+  var html=rBuildWordHTML(); if(!html){ toast('Popuni osnovicu i površinu','warn'); return; }
+  try{ dlDocx(docxBuild(html, G_GRB_DATA, 52, 60), 'Obracun_rente_Grahovo.docx'); toast('Preuzeto kao Word dokument (.docx)','ok'); return; }
+  catch(e){ dlDoc(docMHT(html, G_GRB_DATA), 'Obracun_rente_Grahovo.doc'); }
+  toast('Preuzeto kao Word dokument','ok');
+}
+
+/* ---------------- opšte ---------------- */
+var tT;
+function toast(m,type){var el=document.getElementById('toast');el.textContent=m; el.style.background = type==='warn' ? '#d29922' : '#2ea043'; el.classList.add('show'); clearTimeout(tT);tT=setTimeout(function(){el.classList.remove('show');},2400);}
+function toggleTheme(){ document.body.classList.toggle('light'); try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){} syncThemeBtn(); }
+function syncThemeBtn(){var b=document.getElementById('themeBtn'); if(b) b.innerHTML = document.body.classList.contains('light') ? '&#127769; Tamna' : '&#9728;&#65039; Svijetla';}
+
+document.addEventListener('DOMContentLoaded',function(){
+  try{ var g=document.getElementById('hgrb'); if(g) g.src=G_GRB_DATA; }catch(e){}
+  rEl('r_zona').innerHTML=rZoneOptions(0);
+  rEl('r_rz').innerHTML=rZoneOptions(0);
+  rEl('r_nz').innerHTML=rZoneOptions(0);
+  try{ var n=new Date(); var dd=String(n.getDate()).padStart(2,'0'), mm=String(n.getMonth()+1).padStart(2,'0');
+       var pe=rEl('r_datum'); if(pe&&!pe.value) pe.value=dd+'.'+mm+'.'+n.getFullYear()+'.';
+       var gy=rEl('r_godina'); if(gy) gy.value=n.getFullYear(); }catch(e){}
+  rOnPmode(); rOnSlucaj();
+  rAddRow('',null);
+  syncThemeBtn();
+  rCalc();
+});
+</script>
+</body>
+</html>
