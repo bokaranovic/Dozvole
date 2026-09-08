@@ -176,19 +176,22 @@
     <h2>1 · Podaci o predmetu</h2>
     <div class="row">
       <div>
-        <label>Broj predmeta (upiši samo ostatak broja) <span class="req">*</span></label>
-        <div style="display:flex;align-items:center;gap:6px">
-          <span style="white-space:nowrap;color:var(--muted);font-weight:600">UP:04-</span>
-          <input name="broj_redni" placeholder="_______">
-        </div>
-        <p class="hint">Ispada: <b id="brojPrikaz">UP:04-_______</b></p>
+        <label>Broj akta</label>
+        <input name="broj_akta" placeholder="npr. 04-26-… — ostavi prazno ako se upisuje rukom">
+        <p class="hint">U aktu stoji: <b id="brojPrikaz">(prazno — dopisuje se)</b></p>
       </div>
-      <div><label>Datum zahtjeva</label><input name="datum" placeholder="dd.mm.gggg."></div>
+      <div><label>Datum zahtjeva</label>
+        <div style="display:flex;gap:6px;align-items:center">
+          <input name="datum" placeholder="dd.mm.gggg.">
+          <button type="button" class="ghost" style="white-space:nowrap" onclick="naDanas()" title="Upiši današnji datum">Danas</button>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div><label>Veza — broj predmeta stranke</label><input name="veza_broj" placeholder="npr. 04-19-8-123/26"></div>
       <div><label>Veza — datum</label><input name="veza_datum" placeholder="dd.mm.gggg."></div>
     </div>
+    <div id="det_povod_red">
     <label>Povod (u kojem se postupku traži) <span class="req">*</span></label>
     <select name="povod" onchange="onPovod()">
       <option>izdavanja lokacijske dozvole</option>
@@ -211,14 +214,23 @@
     </select>
     <p class="hint">Ulazi u rečenicu: „U postupku koji se pred organima Opštine Drvar vodi radi <b>…</b>“ — zato su stavke u ovom padežu.</p>
     <div id="det_povod" class="det"><label>Opiši povod (u istom padežu)</label><input name="povod_drugo" placeholder="npr. eksproprijacije zemljišta radi izgradnje pristupnog puta"></div>
+    </div>
   </div>
 
   <div class="card">
-    <h2>2 · Stranka u postupku</h2>
-    <p class="hint">Ostavi prazno ako organ traži za svoju potrebu, a ne po zahtjevu stranke.</p>
-    <div class="row">
-      <div><label>Podnosilac zahtjeva / stranka</label><input name="investitor" placeholder="ime i prezime ili naziv pravnog lica"></div>
-      <div><label>Adresa / sjedište</label><input name="adresa_investitora"></div>
+    <h2>2 · Ko traži</h2>
+    <label class="chk"><input type="checkbox" name="sluzbeno" onchange="onSluzbeno()"> <b>Službeno</b> — traži se za službene potrebe organa, bez obrazlaganja povoda</label>
+    <p class="hint" id="sluzbeno_hint"></p>
+    <div id="det_stranka">
+      <div class="row">
+        <div><label>Podnosilac zahtjeva / stranka</label><input name="investitor" placeholder="ime i prezime ili naziv pravnog lica"></div>
+        <div><label>Adresa / sjedište</label><input name="adresa_investitora"></div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+        <button type="button" class="ghost" onclick="popuniNacelnika()">Popuni: opštinski načelnik</button>
+        <button type="button" class="ghost" onclick="setEl('investitor','');setEl('adresa_investitora','')">Isprazni</button>
+      </div>
+      <p class="hint">Dugme upisuje <b>Opštinski načelnik Opštine Drvar</b> i adresu <b>Titova 1, 80260 Drvar</b>.</p>
     </div>
   </div>
 
@@ -273,22 +285,28 @@
 
   <div class="card">
     <h2>5 · Šta kopija plana treba da sadrži</h2>
-    <p class="hint">Označi šta ulazi u akt. Svaka označena stavka postaje zasebna tačka zahtjeva.</p>
+    <p class="hint">Ništa nije unaprijed označeno — označi samo ono što ti treba. Svaka označena stavka postaje zasebna tačka akta, a brojevi se sami slažu.</p>
     <div id="trazi_box"></div>
-    <label style="margin-top:10px">Dodatno (svojim riječima) — postaje posljednja tačka</label>
-    <textarea name="trazi_dodatno" rows="2" placeholder="npr. ucrtati trasu postojećeg vodovodnog priključka"></textarea>
+    <label style="margin-top:10px">Ostalo (svojim riječima) — <b>svaki red postaje zasebna tačka</b>, koliko god ih treba</label>
+    <textarea name="trazi_dodatno" rows="4" placeholder="Ucrtati trasu postojećeg vodovodnog priključka.&#10;Označiti položaj betonskog potpornog zida uz sjevernu među.&#10;…"></textarea>
   </div>
 
   <div class="card">
     <h2>6 · Rok, taksa i potpis</h2>
     <div class="row">
       <div><label>Rok za postupanje (dana od prijema)</label><input name="rok_dana" value="8"></div>
-      <div><label>Broj primjeraka</label><input name="primjeraka" value="2"></div>
+      <div><label>Broj primjeraka</label>
+        <select name="primjeraka">
+          <option value="1">1 primjerak</option>
+          <option value="2">2 primjerka</option>
+          <option value="3">3 primjerka</option>
+        </select></div>
     </div>
     <label class="chk"><input type="checkbox" name="taksa_oslobodjeno" checked> Navesti da je zahtjev oslobođen plaćanja takse — traži ga organ u službene svrhe</label>
     <label class="chk"><input type="checkbox" name="hitno"> Označiti kao <b>HITNO</b></label>
     <div class="row">
-      <div><label>Obradio (referent)</label><input name="obradio" placeholder="ime i prezime"></div>
+      <div><label>Obradio (referent) <span style="font-weight:400;color:var(--muted)">— nije obavezno</span></label>
+        <input name="obradio" placeholder="ostavi prazno pa se uopšte ne pojavi u aktu"></div>
       <div><label>Opštinski načelnik</label><input name="nacelnik" placeholder="ime i prezime"></div>
     </div>
   </div>
@@ -320,11 +338,11 @@ const SLUZBA = 'Služba za imovinsko-pravne i geodetske poslove';
 
 /* Stavke koje se traze od Sluzbe. Redoslijed je i redoslijed tacaka u aktu. */
 const TRAZI = [
-  {k:'t_granice', d:1, label:'Ucrtane granice predmetne parcele',
+  {k:'t_granice', d:0, label:'Ucrtane granice predmetne parcele',
    txt:'Kopiju katastarskog plana izraditi tako da su na njoj jasno ucrtane granice predmetne katastarske čestice.'},
-  {k:'t_susjedne', d:1, label:'Ucrtane susjedne parcele sa upisanim brojevima k.č.',
+  {k:'t_susjedne', d:0, label:'Ucrtane susjedne parcele sa upisanim brojevima k.č.',
    txt:'Na kopiji plana prikazati i sve susjedne katastarske čestice, sa upisanim brojevima katastarskih čestica.'},
-  {k:'t_povrsina', d:1, label:'Podatak o površini i kulturi predmetne parcele',
+  {k:'t_povrsina', d:0, label:'Podatak o površini i kulturi predmetne parcele',
    txt:'Uz kopiju plana dostaviti podatak o površini predmetne katastarske čestice po katastarskom operatu, kao i o kulturi odnosno načinu korištenja zemljišta.'},
   {k:'t_objekti', d:0, label:'Ucrtani postojeći objekti na parceli',
    txt:'Na kopiji plana prikazati postojeće objekte izgrađene na predmetnoj katastarskoj čestici, onako kako su evidentirani u katastarskom operatu.'},
@@ -334,7 +352,7 @@ const TRAZI = [
    txt:'Uz kopiju plana dostaviti podatak o tome kojoj katastarskoj čestici po starom premjeru odgovara predmetna čestica po novom premjeru, odnosno obrnuto, sa naznakom zemljišnoknjižnog uloška.'},
   {k:'t_koordinate', d:0, label:'Koordinate prelomnih tačaka granice parcele',
    txt:'Uz kopiju plana dostaviti spisak koordinata prelomnih tačaka granice predmetne katastarske čestice, u važećem koordinatnom sistemu.'},
-  {k:'t_ovjera', d:1, label:'Ovjera kopije plana pečatom i potpisom ovlaštenog lica',
+  {k:'t_ovjera', d:0, label:'Ovjera kopije plana pečatom i potpisom ovlaštenog lica',
    txt:'Kopiju katastarskog plana ovjeriti pečatom Službe i potpisom ovlaštenog lica, sa naznakom datuma izdavanja i stanja katastarskog operata na taj dan.'},
 ];
 
@@ -342,12 +360,45 @@ function F(){ return document.getElementById('f'); }
 function val(n){ const e=F().elements[n]; return e ? String(e.value).trim() : ''; }
 function chk(n){ const e=F().elements[n]; return !!(e && e.checked); }
 function godina2(){ return String(new Date().getFullYear()).slice(-2); }
-function brojPredmeta(){ return 'UP:04-' + (val('broj_redni') || '_______'); }
-function osvjeziBroj(){ const el=document.getElementById('brojPrikaz'); if(el) el.textContent=brojPredmeta(); }
 
+
+/* Ovo nije broj upravnog predmeta. Nacelnik ovim aktom trazi podatak od svoje
+   Sluzbe, pa broj ide onakav kakav mu da pisarnica - ili se ostavi prazno pa
+   se dopise rukom. Zato se ovdje potiskuju brojPredmeta i osvjeziBroj iz uzora. */
+function brojPredmeta(){ return val('broj_akta') || '__________________'; }
+function osvjeziBroj(){
+  const el=document.getElementById('brojPrikaz');
+  if(el) el.textContent = val('broj_akta') || '(prazno — dopisuje se)';
+}
 
 function onPovod(){ const d=document.getElementById('det_povod');
   if(d) d.style.display = (val('povod').indexOf('drugo')===0) ? 'block' : 'none'; }
+
+/* --- datum ------------------------------------------------------------- */
+function danas(){
+  const d=new Date(), p=function(n){ return (n<10?'0':'')+n; };
+  return p(d.getDate())+'.'+p(d.getMonth()+1)+'.'+d.getFullYear()+'.';
+}
+function naDanas(){ setEl('datum', danas()); }
+
+/* --- ko trazi ----------------------------------------------------------- */
+const NACELNIK_ADRESA = 'Titova 1, 80260 Drvar';
+function popuniNacelnika(){
+  setEl('investitor', 'Opštinski načelnik Opštine Drvar');
+  setEl('adresa_investitora', NACELNIK_ADRESA);
+  toast('Upisani podaci opštinskog načelnika','ok');
+}
+function onSluzbeno(){
+  const sl=chk('sluzbeno');
+  const st=document.getElementById('det_stranka');
+  const pv=document.getElementById('det_povod_red');
+  const h=document.getElementById('sluzbeno_hint');
+  if(st) st.style.display = sl ? 'none' : 'block';
+  if(pv) pv.style.display = sl ? 'none' : 'block';
+  if(h) h.innerHTML = sl
+    ? 'U aktu će stajati: „Za službene potrebe Opštine Drvar, u postupku koji se vodi pred ovim organom, …“ — bez navođenja povoda i stranke.'
+    : 'Ako je zahtjev za službene potrebe organa, označi ovo pa ne moraš popunjavati ni povod ni stranku.';
+}
 
 /* Stavke koje su u obrascu ponudjene kao kvacice slazu se u tacke akta. */
 function buildTrazi(){
@@ -365,37 +416,53 @@ function zaglavljeAkta(naslovAkta){
   t+='Broj: '+brojPredmeta()+NL;
   t+='Drvar, '+dat+' godine'+NL+NL;
   t+='OPŠTINA DRVAR'+NL;
-  t+='SLUŽBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE'+NL;
-  t+='- n/r rukovodioca Službe -'+NL+NL;
+  t+='SLUŽBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE'+NL+NL;
   t+='PREDMET: '+naslovAkta+' - traži se'+NL;
   if(chk('hitno')) t+='         H I T N O'+NL;
   return t+NL;
 }
 function uvodAkta(zavrsetak){
+  /* „Službeno“ je za slucaj kad organ trazi podatak za svoju potrebu, pa nema
+     ni stranke ni postupka koji bi se posebno obrazlagao. */
+  if(chk('sluzbeno')){
+    let u='Za službene potrebe Opštine Drvar, u postupku koji se vodi pred ovim organom';
+    if(val('veza_broj')) u+=' (naš broj: '+val('veza_broj')+(val('veza_datum')?' od '+val('veza_datum'):'')+')';
+    return omotaj(u+', '+zavrsetak, 96, '');
+  }
   const povod=(val('povod').indexOf('drugo')===0) ? (val('povod_drugo')||'____________') : val('povod');
   let u='U postupku koji se pred organima Opštine Drvar vodi radi '+povod;
   if(val('investitor')) u+=', a po zahtjevu koji je podnio '+val('investitor')+(val('adresa_investitora')?', '+val('adresa_investitora'):'');
   if(val('veza_broj')) u+=' (naš broj: '+val('veza_broj')+(val('veza_datum')?' od '+val('veza_datum'):'')+')';
   return omotaj(u+', '+zavrsetak, 96, '');
 }
+var AKT_REP = null;                     /* zapamceno za dvokolonski PDF */
+
 function repAkta(){
-  const nac=val('nacelnik')||'____________________';
+  const nac=val('nacelnik');
   let t='';
-  t+=omotaj('Traženo dostaviti ovom organu u '+(val('primjeraka')||'2')+' primjerka, u roku od '+
+  const br=val('primjeraka')||'1';
+  t+=omotaj('Traženo dostaviti ovom organu u '+br+(br==='1'?' primjerku':' primjerka')+', u roku od '+
       (val('rok_dana')||'8')+' dana od dana prijema ovog akta, radi daljeg vođenja postupka.',96,'')+NL+NL;
   if(chk('taksa_oslobodjeno')){
     t+=omotaj('Zahtjev je oslobođen plaćanja opštinske administrativne takse, jer ga u službene '+
-        'svrhe podnosi organ Opštine Drvar u postupku koji vodi po službenoj dužnosti, odnosno po '+
-        'zahtjevu stranke.',96,'')+NL+NL;
+        'svrhe podnosi organ Opštine Drvar u postupku iz svoje nadležnosti'+
+        (chk('sluzbeno') ? '.' : ', koji vodi po službenoj dužnosti odnosno po zahtjevu stranke.'),96,'')+NL+NL;
   }
   if(val('obradio')) t+='obradio: '+val('obradio')+NL+NL;
+
+  /* Jedna crta za potpis, ime ispod nje - kako stoji i na rjesenjima.
+     Ranije je ovdje bila jos jedna crta jer se prazno ime pretvaralo u crtu. */
   t+='                                                     OPŠTINSKI NAČELNIK'+NL;
   t+='                                                     ____________________'+NL;
-  t+='                                                       '+nac+NL+NL;
+  if(nac) t+='                                                     '+nac+NL;
+  t+=NL;
+
+  const dost=[sluzbaPun(), 'a/a'];
   t+='Dostaviti:'+NL;
-  t+=' 1x - '+sluzbaPun()+NL;
-  t+=' 1x - Opštinski načelnik'+NL;
-  t+=' 1x - u spis (a/a)'+NL;
+  dost.forEach(function(x){ t+=' 1x - '+x+NL; });
+
+  AKT_REP = { obradio: val('obradio'), nacelnik: nac, dostaviti: dost };
+
   const nap=val('napomene'); if(nap){ t+=NL+'NAPOMENE ZA OBRADU:'+NL+nap+NL; }
   return t;
 }
@@ -407,10 +474,15 @@ function tackeAkta(izabrano){
     t+='  '+oz+' '.repeat(Math.max(1,6-oz.length))+omotaj(p.txt,88,'        ')+NL+NL;
     n++;
   });
-  if(val('trazi_dodatno')){
+  /* U polju „Dodatno“ svaki red je zasebna tacka - moze ih se upisati koliko
+     god treba, brojevi se nastavljaju na oznacene stavke. */
+  val('trazi_dodatno').split(String.fromCharCode(10)).forEach(function(red){
+    red = red.trim();
+    if(!red) return;
     const oz=(RIM[n]||String(n+1))+'.';
-    t+='  '+oz+' '.repeat(Math.max(1,6-oz.length))+omotaj(val('trazi_dodatno'),88,'        ')+NL+NL;
-  }
+    t+='  '+oz+' '.repeat(Math.max(1,6-oz.length))+omotaj(red,88,'        ')+NL+NL;
+    n++;
+  });
   return t;
 }
 
@@ -467,7 +539,7 @@ function build(){
 
   const o={broj_predmeta:brojPredmeta(), opstina:'Drvar', organ:'Opština Drvar — '+SLUZBA,
            akt:'Zahtjev za izdavanje kopije katastarskog plana'};
-  ['broj_redni','datum','veza_broj','veza_datum','povod','povod_drugo','investitor','adresa_investitora',
+  ['broj_akta','datum','veza_broj','veza_datum','povod','povod_drugo','investitor','adresa_investitora',
    'ko','kc','pl_broj','posjednik','mjesto','povrsina_parcele','kc_stari','ko_stari','zk_ulozak',
    'razmjera','razmjera_drugo','oblik','trazi_dodatno','rok_dana','primjeraka','obradio','nacelnik','napomene']
     .forEach(function(k){ o[k]=val(k); });
@@ -493,7 +565,17 @@ function _dcell(inner,w){return '<w:tc><w:tcPr><w:tcW w:w="'+w+'" w:type="dxa"/>
 function _memoTbl(cyr,lat){var C=cyr.map(function(l){return _parap({text:l,align:'center',size:9,bold:true,after:0,before:0,line:240});}).join('');var L=lat.map(function(l){return _parap({text:l,align:'center',size:9,bold:true,after:0,before:0,line:240});}).join('');var IMG='<w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0"><wp:extent cx="904875" cy="1100931"/><wp:effectExtent l="0" t="0" r="0" b="0"/><wp:docPr id="1" name="grb"/><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main"><a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><pic:nvPicPr><pic:cNvPr id="1" name="grb"/><pic:cNvPicPr/></pic:nvPicPr><pic:blipFill><a:blip r:embed="rIdImg1"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill><pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="904875" cy="1100931"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r></w:p>';var row='<w:tr>'+_dcell(C,3900)+_dcell(IMG,1838)+_dcell(L,3900)+'</w:tr>';return '<w:tbl><w:tblPr><w:tblW w:w="9638" w:type="dxa"/><w:tblBorders><w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders><w:tblLook w:val="0000"/></w:tblPr><w:tblGrid><w:gridCol w:w="3900"/><w:gridCol w:w="1838"/><w:gridCol w:w="3900"/></w:tblGrid>'+row+'</w:tbl>';}
 function _hrp(){return '<w:p><w:pPr><w:pBdr><w:bottom w:val="single" w:sz="8" w:space="1" w:color="000000"/></w:pBdr></w:pPr></w:p>';}
 var _STYLES='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="Times New Roman" w:cs="Times New Roman"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="sr-Latn-BA"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="0" w:line="240" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults></w:styles>';
-function _buildDocx(cyr,lat,paras){var body=_memoTbl(cyr,lat)+_hrp()+paras.map(_parap).join('');var sect='<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="360" w:footer="360" w:gutter="0"/></w:sectPr>';var doc='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>'+body+sect+'</w:body></w:document>';var ct='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="jpg" ContentType="image/jpeg"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>';var rl='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';var dr='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rIdImg1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image1.jpg"/><Relationship Id="rIdSty1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>';var enc=new TextEncoder();return _zip([{name:'[Content_Types].xml',data:enc.encode(ct)},{name:'_rels/.rels',data:enc.encode(rl)},{name:'word/document.xml',data:enc.encode(doc)},{name:'word/_rels/document.xml.rels',data:enc.encode(dr)},{name:'word/styles.xml',data:enc.encode(_STYLES)},{name:'word/media/image1.jpg',data:_b64bytes(GRB_DOCX)}]);}
+/* ==== ipp-futer-v1 — podnozje Word dokumenta ==== */
+function _futerXml(){
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+    '<w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="8" w:space="1" w:color="000000"/></w:pBdr>' +
+    '<w:jc w:val="center"/><w:spacing w:before="0" w:after="0" w:line="200" w:lineRule="auto"/>' +
+    '<w:rPr><w:i/><w:sz w:val="16"/></w:rPr></w:pPr>' +
+    '<w:r><w:rPr><w:i/><w:sz w:val="16"/></w:rPr>' +
+    '<w:t xml:space="preserve">' + _xesc(FUTER) + '</w:t></w:r></w:p></w:ftr>';
+}
+function _buildDocx(cyr,lat,paras){var body=_memoTbl(cyr,lat)+_hrp()+paras.map(_parap).join('');var sect='<w:sectPr><w:footerReference w:type="default" r:id="rIdFtr1"/><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="709" w:footer="34" w:gutter="0"/></w:sectPr>';var doc='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>'+body+sect+'</w:body></w:document>';var ct='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="jpg" ContentType="image/jpeg"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/></Types>';var rl='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>';var dr='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rIdImg1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image1.jpg"/><Relationship Id="rIdSty1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rIdFtr1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/></Relationships>';var enc=new TextEncoder();return _zip([{name:'[Content_Types].xml',data:enc.encode(ct)},{name:'_rels/.rels',data:enc.encode(rl)},{name:'word/document.xml',data:enc.encode(doc)},{name:'word/_rels/document.xml.rels',data:enc.encode(dr)},{name:'word/footer1.xml',data:enc.encode(_futerXml())},{name:'word/styles.xml',data:enc.encode(_STYLES)},{name:'word/media/image1.jpg',data:_b64bytes(GRB_DOCX)}]);}
 function memoLines(op){var g=(op==='Bosansko Grahovo')?'BOSANSKO GRAHOVO':'DRVAR',gc=(op==='Bosansko Grahovo')?'БОСАНСКО ГРАХОВО':'ДРВАР';
   return {cyr:['БОСНА И ХЕРЦЕГОВИНА','ФЕДЕРАЦИЈА БОСНЕ И ХЕРЦЕГОВИНЕ','КАНТОН 10','ОПШТИНА '+gc,'ОПШТИНСКИ НАЧЕЛНИК'],
           lat:['BOSNA I HERCEGOVINA','FEDERACIJA BOSNE I HERCEGOVINE','KANTON 10','OPŠTINA '+g,'OPŠTINSKI NAČELNIK']};}
@@ -546,7 +628,7 @@ function _lines2paras(txt){
       continue;
     }
 
-    if(/^Broj:/.test(tr)||/^Drvar,/.test(tr)){ out.push({text:tr,align:'left'}); i++; continue; }
+    if(/^Broj:/.test(tr)||/^Drvar, .*godine$/.test(tr)){ out.push({text:tr,align:'left'}); i++; continue; }
     if(/^(OPŠTINA DRVAR|SLUŽBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE|- n\/r rukovodioca Službe -)$/.test(tr)){
       out.push({text:tr,align:'left',bold:true}); i++; continue; }
     if(/^PREDMET:/.test(tr)||/^H I T N O$/.test(tr)){ out.push({text:tr,align:'left',bold:true}); i++; continue; }
@@ -557,7 +639,7 @@ function _lines2paras(txt){
     /* obična rečenica prelomljena na više redova — spoji je nazad u jedan pasus */
     var t=tr; i++;
     while(i<lines.length && lines[i].trim()!=='' && (lines[i].match(/^ */)||[''])[0].length<6
-          && !/^(Broj:|Drvar,|OPŠTINA DRVAR|SLUŽBA ZA|- n\/r|PREDMET:|Dostaviti:|obradio:|NAPOMENE)/.test(lines[i].trim())
+          && !/^(Broj:|Drvar, .*godine$|OPŠTINA DRVAR|SLUŽBA ZA|- n\/r|PREDMET:|Dostaviti:|obradio:|NAPOMENE)/.test(lines[i].trim())
           && !/^ {2}([IVXLC]+\.|\d+\.)\s/.test(lines[i])){
       t+=' '+lines[i].trim(); i++;
     }
@@ -571,7 +653,7 @@ function docxSourceText(){
   if(i<0) i=0; if(j<0) j=s.length;
   return s.slice(i,j);
 }
-function _fname(){ return 'ZAHTJEV_KOPIJA_PLANA_'+(brojPredmeta()||'').replace(/[\\/:*?"<>|]/g,'-')+'_'+(val('kc')||'').replace(/[\\/:*?"<>|]/g,'-'); }
+function _fname(){ return 'ZAHTJEV_KOPIJA_PLANA_'+((val('broj_akta')||'bez-broja').replace(/[\\/:*?"<>|]/g,'-'))+'_'+(val('kc')||'').replace(/[\\/:*?"<>|]/g,'-'); }
 
 function exportWord(){
   var src=docxSourceText(); if(src===null) return;
@@ -581,14 +663,26 @@ function exportWord(){
   var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=_fname()+'.docx'; a.click();
   toast('Word (.docx) preuzet','ok');
 }
+/* ==== ipp-futer-v1 ==== */
+
 function exportPDF(){
   var src=docxSourceText(); if(src===null) return;
-  var body=memoHTMLpdf('Drvar')+'<div style="white-space:pre-wrap">'+_xesc(src)+'</div>';
+  var body=memoHTMLpdf('Drvar')+'<div style="white-space:pre-wrap">'+_xesc(src)+'</div>'+
+           '<div class="futer">'+_xesc(FUTER)+'</div>';
   var w=window.open('','_blank'); if(!w){ toast('Dozvoli pop-up za PDF','warn'); return; }
-  w.document.write('<html><head><meta charset="utf-8"><title>'+_fname()+'</title><style>@page{size:A4;margin:2cm}body{font-family:"Times New Roman",serif;font-size:11pt;line-height:1.4;color:#000}</style></head><body>'+body+'</body></html>');
+  w.document.write('<html><head><meta charset="utf-8"><title>'+_fname()+'</title><style>'+
+    '@page{size:A4;margin:2cm 2cm 1.15cm}'+
+    'body{font-family:"Times New Roman",serif;font-size:11pt;line-height:1.4;color:#000;'+
+      'margin:0;padding-bottom:0.9cm}'+
+    /* futer je prikovan uz dno lista, sa crtom iznad - kao na rjesenjima */
+    '.futer{border-top:1px solid #000;text-align:center;font-size:8pt;font-style:italic;padding-top:2pt}'+
+    '@media print{.futer{position:fixed;left:0;right:0;bottom:0}}'+
+    '@media screen{.futer{margin-top:26pt}}'+
+    '</style></head><body>'+body+'</body></html>');
   w.document.close(); w.focus(); setTimeout(function(){try{w.print();}catch(e){}},500);
   toast('Otvoren pregled — Sačuvaj kao PDF','ok');
 }
+/* ==== /ipp-futer-v1 ==== */
 
 /* ================= ostalo ================= */
 function generate(){ const t=build(); if(t===null) return;
@@ -611,6 +705,330 @@ function toast(m,type){ const el=document.getElementById('toast'); el.textConten
 /* ---------- uvoz paketa iz ranijih formi ---------- */
 function setEl(n,v){ const e=F().elements[n]; if(e && v!=null && String(v).trim()!==''){ e.value=String(v); } }
 
+/* ---------------------------------------------------------------------------
+   Izvoz u PDF i Word.
+
+   Uzor je akt slagao u PDF kao jedan blok sa `white-space:pre-wrap`, pa je
+   svaki red ostajao onako prelomljen kako je prelomljen za .txt - na 96
+   znakova. Zbog toga je desna ivica bila razbijena i dokument je izgledao kao
+   da je pomjeren ulijevo. Ovdje se nastavci ponovo spajaju u pasuse i pusti se
+   preglednik da sam prelama i poravnava obostrano, isto kao u Wordu.
+
+   Potpis i „Dostaviti“ idu jedno pored drugog, a na dnu stoji memorandumski
+   futer - kako stoji i na rjesenjima.
+   ------------------------------------------------------------------------ */
+
+const FUTER = 'Titova 1, 80260 Drvar, Tel/fax:+38734819001, www.opstinadrvar.net, ' +
+              'opcina.drvar@tel.net.ba, JIB: 4281088340004, ŽR: 154999-5000539591';
+const POTPIS_RED = 'OPŠTINSKI NAČELNIK';
+
+function pdfPasusi(txt){
+  return _lines2paras(txt).map(function(o){
+    if(o.pre){
+      return '<table style="width:100%;border:none;border-collapse:collapse;margin:0 0 5pt"><tr>' +
+             '<td style="width:34pt;vertical-align:top;border:none;padding:0">' + _xesc(o.pre) + '</td>' +
+             '<td style="text-align:justify;border:none;padding:0">' + _xesc(o.text) + '</td></tr></table>';
+    }
+    if(!o.text) return '<div style="height:4pt"></div>';
+    var poravnanje = (o.align === 'both') ? 'justify' : (o.align === 'right' ? 'right' : 'left');
+    /* obican pasus teksta pocinje uvucen za oko cetiri znaka */
+    var uvlaka = (o.align === 'both') ? 'text-indent:4ch;' : '';
+    /* redovi koji cine jednu cjelinu idu jedan ispod drugog, bez razmaka:
+       "Broj:" i datum, te "OPŠTINA DRVAR" i naziv Sluzbe */
+    var spojen = /^(Broj:|OPŠTINA DRVAR$)/.test(o.text);
+    return '<p style="margin:0 0 ' + (spojen ? '0' : '4pt') + ';text-align:' + poravnanje + ';' + uvlaka +
+           (o.bold ? 'font-weight:bold;' : '') + '">' + _xesc(o.text) + '</p>';
+  }).join('');
+}
+
+function exportPDF(){
+  var src = docxSourceText(); if(src === null) return;
+  /* Rep akta (obradio + potpis + Dostaviti) crta se posebno, u dvije kolone,
+     pa se iz teksta uzima samo ono iznad njega. */
+  var i = src.indexOf(POTPIS_RED);
+  var o = src.indexOf(String.fromCharCode(10) + 'obradio: ');
+  if(o >= 0 && (i < 0 || o < i)) i = o;
+  var gornji = (i >= 0 ? src.slice(0, i) : src).replace(/\s+$/, '');
+  var rep = AKT_REP || {};
+
+  var dostava = '';
+  if(rep.obradio) dostava += 'obradio: ' + _xesc(rep.obradio) + '<br>';
+  dostava += '<b>Dostaviti:</b><br>';
+  (rep.dostaviti || []).forEach(function(x){ dostava += '1x &ndash; ' + _xesc(x) + '<br>'; });
+
+  var potpis = 'OPŠTINSKI NAČELNIK<br><br>____________________' +
+               (rep.nacelnik ? '<br>' + _xesc(rep.nacelnik) : '');
+
+  /* Potpis ide odmah iza teksta, sa M.P. lijevo od njega; „Dostaviti“ se
+     spusta skroz dolje lijevo — zato je stranica flex kolona pa donji blok
+     ima margin-top:auto i sam se prilijepi uz futer. */
+  var body = '<div class="memo">' + memoHTMLpdf('Drvar') + '</div>' +
+    '<div class="sadrzaj">' + pdfPasusi(gornji) +
+      '<table style="width:100%;border:none;border-collapse:collapse;margin-top:24pt"><tr>' +
+        '<td style="width:46%;border:none;padding:0"></td>' +
+        '<td style="width:16%;vertical-align:top;text-align:center;border:none;padding:0;padding-top:14pt">M.P.</td>' +
+        '<td style="width:38%;vertical-align:top;text-align:center;border:none;padding:0">' + potpis + '</td>' +
+      '</tr></table>' +
+    '</div>' +
+    '<div class="rep">' + dostava + '</div>' +
+    '<div class="futer">' + _xesc(FUTER) + '</div>';
+
+  var w = window.open('', '_blank');
+  if(!w){ toast('Preglednik je zaustavio novi prozor — dozvoli pop-up','warn'); return; }
+  w.document.write('<html><head><meta charset="utf-8"><title>' + _fname() + '</title><style>' +
+    /* margine i razmaci su isti kao u Word predlosku: 1,27 cm sa svih strana,
+       futer skroz na dnu lista */
+    '@page{size:A4;margin:1.27cm 1.1cm 1.15cm}' +
+    'body{font-family:"Times New Roman",serif;font-size:12pt;line-height:1.28;color:#000;' +
+      'margin:0 auto;width:18.8cm}' +   /* A4 minus lijeva i desna margina */
+    'p{orphans:2;widows:2}' +
+    /* stranica je flex kolona da se „Dostaviti“ spusti do dna lista */
+    /* „Dostaviti“ se prikiva uz dno lista, tacno iznad futera. Flex sa
+       min-height se u Chromeovoj stampi ne ponasa pouzdano, pa je jednostavnije
+       i sigurnije fiksno pozicioniranje. */
+    '.rep{padding-top:18pt;font-size:10.5pt;line-height:1.3}' +
+    /* Futer je fiksan pa ne zauzima mjesto u toku teksta - zato se dnu lista
+       ostavlja razmak da tekst ne naleti na njega. „Dostaviti“ ide na kraj
+       dokumenta, a posto ovi zahtjevi ionako popune list, tu i zavrsi - uz
+       sam futer. Kad tekst predje na drugi list, blok posteno ide za njim,
+       bez dupliranja i bez preklapanja. */
+    '@media print{body{display:flex;flex-direction:column;box-sizing:border-box;' +
+      /* najmanja visina je nesto manja od lista, pa se kod kraceg akta
+         „Dostaviti“ spusti do dna, a kod duzeg se nista ne gura preko */
+      'min-height:26.2cm;padding-bottom:0.62cm}' +
+      '.rep{margin-top:auto;padding-top:4pt}}' +
+    '.memo td{padding:0 4pt}' +
+    '.futer{border-top:1px solid #000;text-align:center;font-size:8pt;font-style:italic;padding-top:2pt}' +
+    '@media print{.futer{position:fixed;left:0;right:0;bottom:0}}' +
+    '@media screen{.futer{margin-top:26pt}}' +
+    '</style></head><body>' + body + '</body></html>');
+  w.document.close(); w.focus();
+
+  /* Zahtjev treba da stane na jedan list. Ako je duzi - recimo kad se oznace
+     sve stavke u tacki 5 - slova se sama smanje u koracima od cetvrt tacke,
+     najvise do 9,5. Ispod toga se pusta da predje na drugi list, jer bi
+     sitnije bilo neupotrebljivo. */
+  setTimeout(function(){
+    /* Nista se ne smanjuje: obican zahtjev sa sest-sedam tacaka staje na jedan
+       list, a ako se oznaci mnogo stavki neka posteno predje na drugi - bolje
+       nego da se cio akt stisne i suzi. */
+    try{ w.print(); }catch(e){}
+  }, 420);
+  toast('Otvoren pregled — Sačuvaj kao PDF','ok');
+}
+
+function exportWord(){
+  var src = docxSourceText(); if(src === null) return;
+  var m = memoLines('Drvar');
+  var rep = AKT_REP || {};
+
+  /* Rep akta (obradio, potpis, Dostaviti) se crta posebno, pa se iz teksta
+     uzima samo ono iznad njega. */
+  var i = src.indexOf(POTPIS_RED);
+  var o = src.indexOf(String.fromCharCode(10) + 'obradio: ');
+  if(o >= 0 && (i < 0 || o < i)) i = o;
+  var gornji = (i >= 0 ? src.slice(0, i) : src).replace(/\s+$/, '');
+
+  /* svaki pasus teksta pocinje uvucen za oko cetiri znaka */
+  /* Prazni redovi iz .txt prikaza se ne prenose u Word - umjesto svakog
+     praznog reda pasus dobija razmak ispod sebe (w:after). Tako akt sa sest
+     ili sedam tacaka staje na jedan list, kao i u PDF-u. Redovi koji cine
+     jednu cjelinu - "Broj:" sa datumom i "OPŠTINA DRVAR" sa nazivom Sluzbe -
+     ostaju zbijeni. */
+  var paras = [];
+  _lines2paras(gornji).forEach(function(x){
+    if(!x.text && !x.pre) return;
+    if(x.align === 'both' && !x.pre) x.firstLine = UVLAKA_TW;
+    x.after = /^(Broj:|OPŠTINA DRVAR)/.test(x.text || '') ? 0 : 120;
+    paras.push(x);
+  });
+
+  var repXml = _potpisTbl(rep.nacelnik) + _dostavaOkvir(rep.obradio, rep.dostaviti);
+  var bytes = _buildDocx(m.cyr, m.lat, paras, repXml);
+  var blob = new Blob([bytes], {type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+  a.download = _fname() + '.docx'; a.click();
+  toast('Word (.docx) preuzet','ok');
+}
+
+/* ---------------------------------------------------------------------------
+   Izgled dokumenta je prepisan iz Bobanovog Word predloska
+   GENERISANO/Sabloni/TEMPLATE PRAZAN.docx:
+
+     margine       720 twips  = 1,27 cm  sa sve cetiri strane
+     zaglavlje     709 twips  = 1,25 cm  od ivice papira
+     podnozje       34 twips  = 0,06 cm  - futer stoji skroz na dnu lista
+
+   Uz to, po Bobanovom trazenju:
+     - cio dokument je Times New Roman 12
+     - memorandum je krupniji i grb veci, da popuni prostor gore
+     - svaki pasus teksta pocinje uvucen za oko cetiri znaka
+     - lijevo od potpisa stoji M.P.
+     - "Dostaviti" ide skroz dolje lijevo, uz sam futer
+   ------------------------------------------------------------------------ */
+
+const GRB_SIRINA_PDF = 108;      /* px u pregledu za stampu */
+const GRB_CX = 1030000;          /* EMU: 2,86 cm sirina - kao u PDF-u */
+const GRB_CY = 1253200;          /* EMU: 3,48 cm visina - isti odnos kao slika */
+const UVLAKA_TW = 567;           /* 1 cm = oko cetiri znaka u TNR 12 */
+
+/* --- memorandum za PDF: krupnija slova, veci grb, deblja linija ---------- */
+function memoHTMLpdf(op){
+  var m = memoLines(op);
+  function col(a){ return a.map(function(x){ return '<div>' + x + '</div>'; }).join(''); }
+  return '<table style="width:100%;border-collapse:collapse;font-weight:bold;text-align:center"><tr>' +
+    '<td style="width:35%;vertical-align:middle;line-height:1.24;font-size:10.5pt">' + col(m.cyr) + '</td>' +
+    '<td style="width:30%;text-align:center;vertical-align:middle">' +
+      '<img src="' + GRB_DATA + '" style="width:' + GRB_SIRINA_PDF + 'px;height:auto"></td>' +
+    '<td style="width:35%;vertical-align:middle;line-height:1.24;font-size:10.5pt">' + col(m.lat) + '</td>' +
+    '</tr></table>' +
+    '<hr style="border:none;border-top:3px solid #000;margin:2px 0 6px">';
+}
+
+/* --- Word: Times New Roman 12 kao osnovno pismo -------------------------- */
+var _STYLES = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+  '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults>' +
+  '<w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" ' +
+  'w:eastAsia="Times New Roman" w:cs="Times New Roman"/><w:sz w:val="24"/><w:szCs w:val="24"/>' +
+  '<w:lang w:val="sr-Latn-BA"/></w:rPr></w:rPrDefault>' +
+  '<w:pPrDefault><w:pPr><w:spacing w:after="0" w:line="240" w:lineRule="auto"/></w:pPr></w:pPrDefault>' +
+  '</w:docDefaults></w:styles>';
+
+/* pasus: dodata je uvlaka prvog reda (w:firstLine) i okvir (w:framePr) */
+function _parap(o){
+  var jc = o.align || 'left', rpr = '';
+  if(o.bold) rpr += '<w:b/>';
+  if(o.italic) rpr += '<w:i/>';
+  if(o.size) rpr += '<w:sz w:val="' + Math.round(o.size * 2) + '"/>';
+  var rp = rpr ? '<w:rPr>' + rpr + '</w:rPr>' : '';
+  var af = (o.after != null) ? o.after : 0;
+  var ln = (o.line != null) ? o.line : 240;
+  var fr = o.frame || '';
+  var sp = '<w:spacing' + (o.before != null ? ' w:before="' + o.before + '"' : '') +
+           ' w:after="' + af + '" w:line="' + ln + '" w:lineRule="auto"/>';
+  var ind = '';
+  if(o.ind) ind = '<w:ind w:left="' + o.ind + '" w:hanging="' + (o.hang || o.ind) + '"/>';
+  else if(o.firstLine) ind = '<w:ind w:firstLine="' + o.firstLine + '"/>';
+  var run = '';
+  if(o.pre){
+    run = '<w:r>' + rp + '<w:t xml:space="preserve">' + _xesc(o.pre) + '</w:t></w:r>' +
+          '<w:r>' + rp + '<w:tab/></w:r>' +
+          '<w:r>' + rp + '<w:t xml:space="preserve">' + _xesc(o.text || '') + '</w:t></w:r>';
+  } else if(o.text){
+    run = '<w:r>' + rp + '<w:t xml:space="preserve">' + _xesc(o.text) + '</w:t></w:r>';
+  }
+  return '<w:p><w:pPr>' + fr + sp + ind + '<w:jc w:val="' + jc + '"/>' + rp + '</w:pPr>' + run + '</w:p>';
+}
+
+/* --- Word: memorandum ---------------------------------------------------- */
+function _memoTbl(cyr, lat){
+  var red = function(l){ return _parap({text:l, align:'center', size:11, bold:true, after:0, before:0, line:240}); };
+  var C = cyr.map(red).join(''), L = lat.map(red).join('');
+  var IMG = '<w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:drawing><wp:inline distT="0" distB="0" distL="0" distR="0">' +
+    '<wp:extent cx="' + GRB_CX + '" cy="' + GRB_CY + '"/><wp:effectExtent l="0" t="0" r="0" b="0"/>' +
+    '<wp:docPr id="1" name="grb"/><a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">' +
+    '<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">' +
+    '<pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">' +
+    '<pic:nvPicPr><pic:cNvPr id="1" name="grb"/><pic:cNvPicPr/></pic:nvPicPr>' +
+    '<pic:blipFill><a:blip r:embed="rIdImg1"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>' +
+    '<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="' + GRB_CX + '" cy="' + GRB_CY + '"/></a:xfrm>' +
+    '<a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr></pic:pic></a:graphicData></a:graphic>' +
+    '</wp:inline></w:drawing></w:r></w:p>';
+  return '<w:tbl><w:tblPr><w:tblW w:w="10466" w:type="dxa"/><w:tblBorders>' +
+    '<w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/>' +
+    '<w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders><w:tblLook w:val="0000"/></w:tblPr>' +
+    '<w:tblGrid><w:gridCol w:w="3700"/><w:gridCol w:w="3066"/><w:gridCol w:w="3700"/></w:tblGrid>' +
+    '<w:tr>' + _dcell(C, 3780) + _dcell(IMG, 3098) + _dcell(L, 3780) + '</w:tr></w:tbl>';
+}
+
+function _hrp(){
+  return '<w:p><w:pPr><w:pBdr><w:bottom w:val="single" w:sz="18" w:space="1" w:color="000000"/></w:pBdr>' +
+         '<w:spacing w:after="160"/></w:pPr></w:p>';
+}
+
+/* --- Word: M.P. lijevo od potpisa ---------------------------------------- */
+function _potpisTbl(nacelnik){
+  var razmak = _parap({text:'', align:'left', after:360});
+  var mp = _parap({text:'M.P.', align:'center', before:400});
+  var pot = _parap({text:'OPŠTINSKI NAČELNIK', align:'center'}) +
+            _parap({text:'', align:'center'}) +
+            _parap({text:'____________________', align:'center'}) +
+            (nacelnik ? _parap({text:nacelnik, align:'center'}) : '');
+  return '<w:tbl><w:tblPr><w:tblW w:w="10466" w:type="dxa"/><w:tblBorders>' +
+    '<w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/>' +
+    '<w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders><w:tblLook w:val="0000"/></w:tblPr>' +
+    '<w:tblGrid><w:gridCol w:w="4700"/><w:gridCol w:w="1766"/><w:gridCol w:w="4000"/></w:tblGrid>' +
+    '<w:tr>' + _dcell(_parap({text:''}), 4800) + _dcell(mp, 1800) + _dcell(pot, 4058) + '</w:tr></w:tbl>';
+}
+
+/* --- Word: "Dostaviti" prikovan uz donju marginu ------------------------- */
+/* w:framePr je Wordov nacin da se blok teksta zakaci za dno margine; svi
+   pasusi jednog okvira moraju nositi isti framePr i ici jedan za drugim. */
+function _dostavaOkvir(obradio, dostaviti){
+  var fr = '<w:framePr w:w="5600" w:hRule="auto" w:wrap="around" w:vAnchor="margin" ' +
+           'w:hAnchor="margin" w:xAlign="left" w:yAlign="bottom"/>';
+  var red = function(t, bold){ return _parap({text:t, align:'left', frame:fr, bold:!!bold, size:10}); };
+  var h = '';
+  if(obradio) h += red('obradio: ' + obradio) + red('');
+  h += red('Dostaviti:', true);
+  (dostaviti || []).forEach(function(x){ h += red('1x – ' + x); });
+  return h;
+}
+
+/* --- Word: cio paket ----------------------------------------------------- */
+function _buildDocx(cyr, lat, paras, repXml){
+  var body = _memoTbl(cyr, lat) + _hrp() + paras.map(_parap).join('') + (repXml || '');
+  var sect = '<w:sectPr>' +
+    '<w:footerReference w:type="default" r:id="rIdFtr1"/>' +
+    '<w:pgSz w:w="11906" w:h="16838"/>' +
+    '<w:pgMar w:top="720" w:right="624" w:bottom="720" w:left="624" w:header="709" w:footer="34" w:gutter="0"/>' +
+    '</w:sectPr>';
+  var doc = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" ' +
+    'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" ' +
+    'xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing">' +
+    '<w:body>' + body + sect + '</w:body></w:document>';
+
+  var ftr = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+    '<w:p><w:pPr><w:pBdr><w:top w:val="single" w:sz="8" w:space="1" w:color="000000"/></w:pBdr>' +
+    '<w:jc w:val="center"/><w:spacing w:before="0" w:after="0" w:line="200" w:lineRule="auto"/>' +
+    '<w:rPr><w:i/><w:sz w:val="16"/></w:rPr></w:pPr>' +
+    '<w:r><w:rPr><w:i/><w:sz w:val="16"/></w:rPr>' +
+    '<w:t xml:space="preserve">' + _xesc(FUTER) + '</w:t></w:r></w:p></w:ftr>';
+
+  var ct = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">' +
+    '<Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/>' +
+    '<Default Extension="xml" ContentType="application/xml"/>' +
+    '<Default Extension="jpg" ContentType="image/jpeg"/>' +
+    '<Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>' +
+    '<Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/>' +
+    '<Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/>' +
+    '</Types>';
+  var rl = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+    '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/>' +
+    '</Relationships>';
+  var dr = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">' +
+    '<Relationship Id="rIdImg1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="media/image1.jpg"/>' +
+    '<Relationship Id="rIdSty1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>' +
+    '<Relationship Id="rIdFtr1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/>' +
+    '</Relationships>';
+
+  var enc = new TextEncoder();
+  return _zip([
+    {name:'[Content_Types].xml',          data:enc.encode(ct)},
+    {name:'_rels/.rels',                  data:enc.encode(rl)},
+    {name:'word/document.xml',            data:enc.encode(doc)},
+    {name:'word/footer1.xml',             data:enc.encode(ftr)},
+    {name:'word/_rels/document.xml.rels', data:enc.encode(dr)},
+    {name:'word/styles.xml',              data:enc.encode(_STYLES)},
+    {name:'word/media/image1.jpg',        data:_b64bytes(GRB_DOCX)}
+  ]);
+}
+
 function importPaket(){
   const raw=document.getElementById('import_box').value;
   if(!raw.trim()){ toast('Naljepi paket u polje','warn'); return; }
@@ -627,6 +1045,7 @@ function importPaket(){
   if(o.ko){ const sel=F().elements['ko'];
     for(let x=0;x<sel.options.length;x++){ if(sel.options[x].value===o.ko || sel.options[x].textContent===o.ko){ sel.selectedIndex=x; break; } } }
   if(o.broj_predmeta && !val('veza_broj')) setEl('veza_broj',o.broj_predmeta);
+  setEl('broj_akta', o.broj_akta);
   osvjeziBroj();
   toast('Uvezeno u formu','ok');
 }
@@ -641,9 +1060,10 @@ document.addEventListener('DOMContentLoaded',function(){
   const sel=F().elements['ko'];
   if(sel) KO_DRVAR.forEach(function(k){ const op=document.createElement('option'); op.textContent=k; sel.appendChild(op); });
   buildTrazi();
-  onPovod(); osvjeziBroj();
+  onPovod(); onSluzbeno(); osvjeziBroj();
+  if(!val('datum')) setEl('datum', danas());   /* datum se sam popuni na danasnji */
   if(typeof onDodatno==='function') onDodatno();
-  const br=F().elements['broj_redni']; if(br) br.addEventListener('input',osvjeziBroj);
+  const br=F().elements['broj_akta']; if(br) br.addEventListener('input',osvjeziBroj);
   try{ if(localStorage.getItem('ipp-tema')!=='dark') document.body.classList.add('light'); }catch(e){ document.body.classList.add('light'); }
   syncThemeBtn();
 });
