@@ -668,6 +668,81 @@ body.orig #ippDock{right:calc(clamp(400px, 46vw, 960px) + 12px)}
 }
 @media print{ #ippDock{display:none !important} }
 /* ==== /ipp-dock-v1 ==== */
+
+/* ==== ipp-ui2-v1 ==== */
+
+/* --- tamna tema: dublja i tamnoplava --------------------------------- */
+:root{
+  --bg:#0a111e; --card:#111c2e; --ink:#e7eef8; --muted:#93a6bd;
+  --line:#20304a; --accent:#5aa2ff; --accent2:#2a6ad4; --field:#0c1526;
+  --h2:#8ec2ff; --chip:#182740;
+  --mark:#7a5f14; --markink:#fff3cd;
+  --sjena:0 1px 2px rgba(0,0,0,.34), 0 10px 28px rgba(0,0,0,.26);
+  --fokus:rgba(90,162,255,.26);
+}
+body:not(.light){
+  background:
+    radial-gradient(1100px 560px at 10% -12%, rgba(42,106,212,.13), transparent 62%),
+    radial-gradient(900px 500px at 100% 0%, rgba(20,60,120,.10), transparent 60%),
+    var(--bg);
+  background-attachment:fixed;
+}
+body:not(.light) header{background:linear-gradient(180deg,#0f1e33,#0a1526)}
+body:not(.light) .side, body:not(.light) .card{background:var(--card)}
+
+body.light{
+  --sjena:0 1px 2px rgba(13,20,28,.05), 0 8px 22px rgba(13,20,28,.07);
+  --fokus:rgba(11,78,162,.18);
+}
+
+/* --- zaglavlje -------------------------------------------------------- */
+header{border-bottom:1px solid var(--accent2)}
+header h1{letter-spacing:-.2px}
+
+/* --- kolona sa spiskom propisa: skrivanje ---------------------------- */
+body.nolist .side{display:none !important}
+body.nolist .layout{grid-template-columns:minmax(0,1fr) !important}
+
+#spisakBtn.off{opacity:.62}
+#spisakBtn.off:hover{opacity:1}
+
+.side h4{display:flex;align-items:center;gap:8px;padding-bottom:9px;margin-bottom:10px;
+  border-bottom:1px solid var(--line);font-size:11px;letter-spacing:1px}
+.side h4 span{float:none !important;margin-left:auto;font-size:11.5px;font-weight:700;
+  color:var(--accent) !important;background:var(--chip);border:1px solid var(--line);
+  border-radius:999px;padding:2px 9px;white-space:nowrap}
+.sidex{flex:0 0 auto;width:22px;height:22px;padding:0;border:1px solid var(--line);
+  border-radius:7px;background:var(--chip);color:var(--muted);cursor:pointer;
+  font:inherit;font-size:11px;line-height:1;display:flex;align-items:center;justify-content:center}
+.sidex:hover{border-color:var(--accent);color:var(--ink)}
+
+/* --- kartice, dugmad, polja ------------------------------------------ */
+.side{border-radius:16px;padding:14px 12px;box-shadow:var(--sjena)}
+.card{box-shadow:var(--sjena)}
+.ghost{transition:background .15s ease, border-color .15s ease, color .15s ease}
+.ghost:hover{border-color:var(--accent)}
+.sinput:focus, .sidefilter:focus, .docsearch input:focus, .jumpbox input:focus,
+input[type="text"]:focus, input[type="search"]:focus, select:focus, textarea:focus{
+  outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--fokus)}
+button:focus-visible, a:focus-visible, .tg:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px}
+
+/* tagovi u kartici propisa su bili preglasni za trideset komada */
+.tagrow .tg, .card .tg{font-size:11.5px;padding:3px 9px;opacity:.9}
+.tagrow .tg:hover, .card .tg:hover{opacity:1}
+
+/* --- trake za pomjeranje --------------------------------------------- */
+*{scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px;
+  border:2px solid transparent;background-clip:content-box}
+::-webkit-scrollbar-thumb:hover{background:var(--accent2);background-clip:content-box}
+
+@media (max-width:900px){
+  .side h4{font-size:10.5px}
+}
+/* ==== /ipp-ui2-v1 ==== */
 </style>
 <style id="ipp-mobile-fix">
 /* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
@@ -741,6 +816,7 @@ body.orig #ippDock{right:calc(clamp(400px, 46vw, 960px) + 12px)}
     <nav class="hnav">
       <a class="ghost navbtn" href="index.html">🏗️ Urbanizam</a>
       <a class="ghost navbtn" href="Imovinsko-Pravni.html">⚖️ Imovinsko-pravni</a>
+      <button type="button" id="spisakBtn" class="ghost navbtn" onclick="ui2Spisak()" title="Sakrij ili prikaži spisak propisa">&#128203; Spisak</button>
       <button type="button" id="themeBtn" class="ghost navbtn" onclick="toggleTheme()">☀️ Svijetla</button>
       <button type="button" class="ghost navbtn" onclick="logout()">🔒 Odjava</button>
     </nav>
@@ -3027,6 +3103,58 @@ function ippDockSync(){
 document.addEventListener('DOMContentLoaded', function(){ setTimeout(ippDockSync, 80); });
 window.addEventListener('resize', function(){ clearTimeout(ipdTajmer); ipdTajmer = setTimeout(ippDockSync, 150); });
 /* ==== /ipp-dock-v1 ==== */
+/* ==== ipp-ui2-v1 — skrivanje kolone sa spiskom propisa ==== */
+/* Kolona „Propisi (filter)“ zna smetati kad se cita duzi propis. Dugme
+   „Spisak“ u zaglavlju je sklanja i vraca, a stanje se pamti u pregledniku
+   pa ostaje takvo i sljedeci put. Isto radi i ✕ u zaglavlju same kolone. */
+
+var UI2_OTV = (function(){
+  try{ return localStorage.getItem('ipp-spisak') !== '0'; }catch(e){ return true; }
+})();
+
+function ui2Spisak(){
+  UI2_OTV = !UI2_OTV;
+  try{ localStorage.setItem('ipp-spisak', UI2_OTV ? '1' : '0'); }catch(e){}
+  ui2Sync();
+  if(typeof toast === 'function') toast(UI2_OTV ? 'Spisak propisa prikazan' : 'Spisak propisa sakriven');
+}
+
+function ui2Sync(){
+  document.body.classList.toggle('nolist', !UI2_OTV);
+
+  var b = document.getElementById('spisakBtn');
+  if(b){
+    b.classList.toggle('off', !UI2_OTV);
+    b.setAttribute('aria-pressed', UI2_OTV ? 'true' : 'false');
+    b.title = UI2_OTV ? 'Sakrij spisak propisa' : 'Prikaži spisak propisa';
+  }
+
+  /* ✕ u zaglavlju kolone — dodaje se poslije svakog crtanja spiska */
+  var h = document.querySelector('.side h4');
+  if(h && !h.querySelector('.sidex')){
+    var x = document.createElement('button');
+    x.type = 'button'; x.className = 'sidex'; x.textContent = '✕';
+    x.title = 'Sakrij spisak propisa';
+    x.onclick = ui2Spisak;
+    h.appendChild(x);
+  }
+
+  if(typeof mjeriSticky === 'function') setTimeout(mjeriSticky, 30);
+  if(typeof ippDockSync === 'function') setTimeout(ippDockSync, 30);
+}
+
+(function(){
+  if(typeof renderSide === 'function'){
+    var stari = renderSide;
+    window.renderSide = function(){
+      var r = stari.apply(this, arguments);
+      try{ ui2Sync(); }catch(e){}
+      return r;
+    };
+  }
+})();
+document.addEventListener('DOMContentLoaded', function(){ setTimeout(ui2Sync, 60); });
+/* ==== /ipp-ui2-v1 ==== */
 </script>
 <div class="fab" id="ippFab"><button type="button" title="Na članove" onclick="naClanove()">📖</button><button type="button" title="Na sadržaj" onclick="naSadrzaj()">📑</button><button type="button" title="Na vrh" onclick="naVrh()">⬆</button></div>
 <div id="ippDock" role="toolbar" aria-label="Radnje nad propisom"></div>
