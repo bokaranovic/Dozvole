@@ -210,27 +210,24 @@
       <option>izgradnje komunalne infrastrukture</option>
       <option>identifikacije predmetne nekretnine</option>
       <option>upisa u zemljišnu knjigu</option>
+      <option value="sluzbeno">službeno — bez navođenja povoda i stranke</option>
       <option>drugo (upiši ispod)</option>
     </select>
-    <p class="hint">Ulazi u rečenicu: „U postupku koji se pred organima Opštine Drvar vodi radi <b>…</b>“ — zato su stavke u ovom padežu.</p>
+    <p class="hint" id="povod_hint"></p>
     <div id="det_povod" class="det"><label>Opiši povod (u istom padežu)</label><input name="povod_drugo" placeholder="npr. eksproprijacije zemljišta radi izgradnje pristupnog puta"></div>
     </div>
   </div>
 
-  <div class="card">
-    <h2>2 · Ko traži</h2>
-    <label class="chk"><input type="checkbox" name="sluzbeno" onchange="onSluzbeno()"> <b>Službeno</b> — traži se za službene potrebe organa, bez obrazlaganja povoda</label>
-    <p class="hint" id="sluzbeno_hint"></p>
-    <div id="det_stranka">
-      <div class="row">
-        <div><label>Podnosilac zahtjeva / stranka</label><input name="investitor" placeholder="ime i prezime ili naziv pravnog lica"></div>
-        <div><label>Adresa / sjedište</label><input name="adresa_investitora"></div>
-      </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
-        <button type="button" class="ghost" onclick="popuniNacelnika()">Popuni: opštinski načelnik</button>
-        <button type="button" class="ghost" onclick="setEl('investitor','');setEl('adresa_investitora','')">Isprazni</button>
-      </div>
-      <p class="hint">Dugme upisuje <b>Opštinski načelnik Opštine Drvar</b> i adresu <b>Titova 1, 80260 Drvar</b>.</p>
+  <div class="card" id="kart_stranka">
+    <h2>2 · Ko podnosi zahtjev</h2>
+    <select name="ko_trazi" onchange="onKoTrazi()">
+      <option value="stranka">po zahtjevu stranke</option>
+      <option value="nacelnik">podnosi opštinski načelnik</option>
+    </select>
+    <p class="hint" id="ko_hint"></p>
+    <div class="row">
+      <div><label>Podnosilac zahtjeva / stranka</label><input name="investitor" placeholder="ime i prezime ili naziv pravnog lica"></div>
+      <div><label>Adresa / sjedište</label><input name="adresa_investitora"></div>
     </div>
   </div>
 
@@ -357,8 +354,38 @@ function osvjeziBroj(){
   if(el) el.textContent = val('broj_akta') || '(prazno — dopisuje se)';
 }
 
-function onPovod(){ const d=document.getElementById('det_povod');
-  if(d) d.style.display = (val('povod').indexOf('drugo')===0) ? 'block' : 'none'; }
+/* „Službeno“ je sada prva stavka u spisku povoda. Kad se izabere, nema ni
+   povoda ni stranke - akt kaze samo da se trazi za sluzbene potrebe organa,
+   pa se cijela kartica o podnosiocu sklanja. */
+function jeSluzbeno(){ return val('povod') === 'sluzbeno'; }
+
+function onPovod(){
+  const sl = jeSluzbeno();
+  const d = document.getElementById('det_povod');
+  if(d) d.style.display = (!sl && val('povod').indexOf('drugo') === 0) ? 'block' : 'none';
+  const k = document.getElementById('kart_stranka');
+  if(k) k.style.display = sl ? 'none' : 'block';
+  const h = document.getElementById('povod_hint');
+  if(h) h.innerHTML = sl
+    ? 'U aktu će stajati: „Za službene potrebe Opštine Drvar, u postupku koji se vodi pred ovim organom, …“ — bez povoda i bez stranke.'
+    : 'Ulazi u rečenicu: „U postupku koji se pred organima Opštine Drvar vodi radi <b>…</b>“ — zato su stavke u ovom padežu.';
+}
+
+/* Kad se izabere da zahtjev podnosi opstinski nacelnik, polja se sama popune. */
+function onKoTrazi(){
+  const nac = val('ko_trazi') === 'nacelnik';
+  if(nac){
+    setEl('investitor', 'Opštinski načelnik Opštine Drvar');
+    setEl('adresa_investitora', NACELNIK_ADRESA);
+  } else if((val('investitor') || '').indexOf('Opštinski načelnik') === 0){
+    F().elements['investitor'].value = '';
+    F().elements['adresa_investitora'].value = '';
+  }
+  const h = document.getElementById('ko_hint');
+  if(h) h.innerHTML = nac
+    ? 'Polja su popunjena podacima opštinskog načelnika — možeš ih ispraviti ako treba.'
+    : 'Upiši stranku po čijem se zahtjevu vodi postupak; ostavi prazno ako je nema.';
+}
 
 /* --- datum ------------------------------------------------------------- */
 function danas(){
@@ -369,22 +396,7 @@ function naDanas(){ setEl('datum', danas()); }
 
 /* --- ko trazi ----------------------------------------------------------- */
 const NACELNIK_ADRESA = 'Titova 1, 80260 Drvar';
-function popuniNacelnika(){
-  setEl('investitor', 'Opštinski načelnik Opštine Drvar');
-  setEl('adresa_investitora', NACELNIK_ADRESA);
-  toast('Upisani podaci opštinskog načelnika','ok');
-}
-function onSluzbeno(){
-  const sl=chk('sluzbeno');
-  const st=document.getElementById('det_stranka');
-  const pv=document.getElementById('det_povod_red');
-  const h=document.getElementById('sluzbeno_hint');
-  if(st) st.style.display = sl ? 'none' : 'block';
-  if(pv) pv.style.display = sl ? 'none' : 'block';
-  if(h) h.innerHTML = sl
-    ? 'U aktu će stajati: „Za službene potrebe Opštine Drvar, u postupku koji se vodi pred ovim organom, …“ — bez navođenja povoda i stranke.'
-    : 'Ako je zahtjev za službene potrebe organa, označi ovo pa ne moraš popunjavati ni povod ni stranku.';
-}
+
 
 /* Stavke koje su u obrascu ponudjene kao kvacice slazu se u tacke akta. */
 function buildTrazi(){
@@ -410,7 +422,7 @@ function zaglavljeAkta(naslovAkta){
 function uvodAkta(zavrsetak){
   /* „Službeno“ je za slucaj kad organ trazi podatak za svoju potrebu, pa nema
      ni stranke ni postupka koji bi se posebno obrazlagao. */
-  if(chk('sluzbeno')){
+  if(jeSluzbeno()){
     let u='Za službene potrebe Opštine Drvar, u postupku koji se vodi pred ovim organom';
     if(val('veza_broj')) u+=' (naš broj: '+val('veza_broj')+(val('veza_datum')?' od '+val('veza_datum'):'')+')';
     return omotaj(u+', '+zavrsetak, 96, '');
@@ -432,7 +444,7 @@ function repAkta(){
   if(chk('taksa_oslobodjeno')){
     t+=omotaj('Zahtjev je oslobođen plaćanja opštinske administrativne takse, jer ga u službene '+
         'svrhe podnosi organ Opštine Drvar u postupku iz svoje nadležnosti'+
-        (chk('sluzbeno') ? '.' : ', koji vodi po službenoj dužnosti odnosno po zahtjevu stranke.'),96,'')+NL+NL;
+        (jeSluzbeno() ? '.' : ', koji vodi po službenoj dužnosti odnosno po zahtjevu stranke.'),96,'')+NL+NL;
   }
   if(val('obradio')) t+='obradio: '+val('obradio')+NL+NL;
 
@@ -536,7 +548,7 @@ function build(){
   const o={broj_predmeta:brojPredmeta(), opstina:'Drvar', organ:'Opština Drvar — '+SLUZBA,
            akt:'Zahtjev za izdavanje posjedovnog lista'};
   ['broj_akta','datum','veza_broj','veza_datum','povod','povod_drugo','investitor','adresa_investitora',
-   'ko','kc','pl_broj','posjednik','posjednik_otac','mjesto','obim_pl','oblik','stanje_dan',
+   'ko_trazi','ko','kc','pl_broj','posjednik','posjednik_otac','mjesto','obim_pl','oblik','stanje_dan',
    'trazi_dodatno','rok_dana','primjeraka','obradio','nacelnik','napomene']
     .forEach(function(k){ o[k]=val(k); });
   o.hitno=chk('hitno')?'Da':'';
@@ -1056,7 +1068,7 @@ document.addEventListener('DOMContentLoaded',function(){
   const sel=F().elements['ko'];
   if(sel) KO_DRVAR.forEach(function(k){ const op=document.createElement('option'); op.textContent=k; sel.appendChild(op); });
   buildTrazi();
-  onPovod(); onSluzbeno(); osvjeziBroj();
+  onPovod(); onKoTrazi(); osvjeziBroj();
   if(!val('datum')) setEl('datum', danas());   /* datum se sam popuni na danasnji */
   if(typeof onDodatno==='function') onDodatno();
   const br=F().elements['broj_akta']; if(br) br.addEventListener('input',osvjeziBroj);
