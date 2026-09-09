@@ -437,7 +437,7 @@ function zaglavljeAkta(naslovAkta){
   t+='SLUŽBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE'+NL+NL;
   t+='PREDMET: '+naslovAkta+' - traži se'+NL;
   if(chk('hitno')) t+='         H I T N O'+NL;
-  return t+NL;
+  return t+NL+NL;          /* prazan red izmedju PREDMET-a i teksta zahtjeva */
 }
 function uvodAkta(zavrsetak){
   /* „Službeno“ je za slucaj kad organ trazi podatak za svoju potrebu, pa nema
@@ -908,7 +908,8 @@ function exportWord(){
     if(!x.text && !x.pre) return;
     if(/^Podnosilac: /.test(x.text || '')) x.align = 'left';
     else if(x.align === 'both' && !x.pre) x.firstLine = UVLAKA_TW;
-    x.after = /^(Broj:|OPŠTINA DRVAR)/.test(x.text || '') ? 0 : 100;
+    x.after = /^(Broj:|OPŠTINA DRVAR)/.test(x.text || '') ? 0
+            : /^(PREDMET:|H I T N O)/.test(x.text || '') ? 170 : 100;
     paras.push(x);
   });
 
