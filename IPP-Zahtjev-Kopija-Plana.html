@@ -299,12 +299,17 @@
           <option value="3">3 primjerka</option>
         </select></div>
     </div>
-    <label class="chk" id="red_taksa"><input type="checkbox" name="taksa_oslobodjeno" checked> Navesti da je zahtjev oslobođen plaćanja takse — traži ga organ u službene svrhe</label>
+    <label class="chk" id="red_taksa"><input type="checkbox" name="taksa_oslobodjeno" checked> Navesti da zahtjev ne podliježe plaćanju opštinske administrativne takse (čl. 15. Odluke 4/14, 3/20 i 8/22)</label>
+    <label class="chk" id="red_taksa_zup"><input type="checkbox" name="taksa_zup" checked> Navesti osnov za podnošenje zahtjeva — <b>član 158. stav 4. ZUP-a</b></label>
     <label class="chk"><input type="checkbox" name="hitno"> Označiti kao <b>HITNO</b></label>
     <div class="row">
       <div><label>Obradio (referent) <span style="font-weight:400;color:var(--muted)">— nije obavezno</span></label>
-        <input name="obradio" placeholder="ostavi prazno pa se uopšte ne pojavi u aktu"></div>
-      <div><label>Opštinski načelnik</label><input name="nacelnik" placeholder="ime i prezime"></div>
+        <select name="obradio">
+          <option value="">— ne prikazuj u aktu —</option>
+          <option>Boban Karanović</option>
+          <option>Marko Marković</option>
+        </select></div>
+      <div><label>Opštinski načelnik</label><input name="nacelnik" value="Dušica Runić" placeholder="ime i prezime"></div>
     </div>
   </div>
 
@@ -408,6 +413,8 @@ function onKoTrazi(){
   if(l2) l2.textContent = nac ? 'Adresa stranke' : 'Adresa / sjedište podnosioca';
   const tk = document.getElementById('red_taksa');
   if(tk) tk.style.display = nac ? '' : 'none';
+  const tz = document.getElementById('red_taksa_zup');
+  if(tz) tz.style.display = nac ? '' : 'none';
   const h = document.getElementById('ko_hint');
   if(h) h.innerHTML = nac
     ? 'Akt ide na <b>memorandumu Opštine Drvar</b> — sa grbom, futerom i potpisom opštinskog načelnika, i oslobođen je takse.'
@@ -469,7 +476,10 @@ function uvodAkta(zavrsetak){
     return omotaj(z+', '+zavrsetak, 96, '');
   }
   let u='U postupku koji se pred organima Opštine Drvar vodi radi '+povod;
-  if(val('investitor')) u+=', a po zahtjevu koji je podnio '+val('investitor')+(val('adresa_investitora')?', '+val('adresa_investitora'):'');
+  /* ipp-rod-v1: „podnio/podnijela“ je zavisilo od pola stranke i znalo je ispasti
+     pogresno; „povodom zahtjeva stranke:“ je tacno bez obzira na pol i na to da li
+     je podnosilac fizicko ili pravno lice. */
+  if(val('investitor')) u+=', a povodom zahtjeva stranke: '+val('investitor')+(val('adresa_investitora')?', '+val('adresa_investitora'):'');
   if(val('veza_broj')) u+=' (naš broj: '+val('veza_broj')+(val('veza_datum')?' od '+val('veza_datum'):'')+')';
   return omotaj(u+', '+zavrsetak, 96, '');
 }
@@ -481,25 +491,30 @@ function repAkta(){
   const br=val('primjeraka')||'1';
   t+=omotaj('Traženo dostaviti ovom organu u '+br+(br==='1'?' primjerku':' primjerka')+', u roku od '+
       (val('rok_dana')||'8')+' dana od dana prijema ovog akta, radi daljeg vođenja postupka.',96,'')+NL+NL;
-  if(chk('taksa_oslobodjeno') && jeOrgan()){
-    /* Tacan pravni osnov: Odluka o opstinskim administrativnim taksama i tarifi
-       opstinskih administrativnih taksi („Sluzbeni glasnik Opstine Drvar“, broj 4/14),
-       izmijenjena u 3/20 i 8/22.
-         clan 15.                  - spisi i radnje u postupcima koji se vode po
-                                     sluzbenoj duznosti ne podlijezu taksi;
-         clan 16. stav 1. tacka a) - od placanja taksa oslobodjeni su organi i tijela
-                                     drzavne, federalne, kantonalne i opstinske vlasti.
-       Izmjena iz 3/20 dirala je clan 16. stav 1. tacku f), ne i tacku a). */
-    var OSNOV_TAKSA = 'Odluke o opštinskim administrativnim taksama i tarifi opštinskih ' +
-        'administrativnih taksi („Službeni glasnik Opštine Drvar“, broj: 4/14, 3/20 i 8/22)';
-    t+=omotaj(jeSluzbeno()
-        ? 'S obzirom na to da organ kojem se zahtjev podnosi tražene spise vodi po službenoj ' +
-          'dužnosti, zahtjev ne podliježe plaćanju opštinske administrativne takse, u skladu ' +
-          'sa članom 15. ' + OSNOV_TAKSA + '.'
-        : 'Zahtjev je oslobođen plaćanja opštinske administrativne takse, u skladu sa članom 16. ' +
-          'stav 1. tačka a) ' + OSNOV_TAKSA + ', jer ga u službene svrhe podnosi organ Opštine ' +
-          'Drvar u postupku iz svoje nadležnosti.',96,'')+NL+NL;
+  /* ---- ipp-taksa-v4 ---------------------------------------------------
+     Kratka forma, ista kakvu Sluzba vec koristi, sa jednom ispravkom.
+     Osnov, provjeren na skenu „Sluzbenog glasnika Opstine Drvar“ broj 4/14,
+     strana 2 (OCR i prekucani .md tu imaju gresku dvokolonskog preloma -
+     tekst clana 15. im je zavrsio pod clanom 16.):
+       clan 15. - „Spisi i radnje u postupcima koji se vode po sluzbenoj
+                   duznosti ne podlijezu taksi.“
+     Zato u aktu stoji „ne podlijeze placanju“, a ne „oslobodjen je“:
+     oslobodjenje je drugi institut (clanovi 16. i 18.), a kod clana 15.
+     taksena obaveza uopste ne nastaje. Iz istog razloga se recenica vezuje
+     za POSTUPAK koji organ vodi po sluzbenoj duznosti - clan 15. govori o
+     postupcima, a ne o spisima koje organ „vodi“. */
+  if(chk('taksa_zup') && jeOrgan()){
+    t+=omotaj('Zahtjev se podnosi u skladu sa članom 158. stav 4. Zakona o upravnom postupku ' +
+        '(„Službene novine Federacije BiH“, broj: 2/98, 48/99 i 61/22).',96,'')+NL+NL;
   }
+  if(chk('taksa_oslobodjeno') && jeOrgan()){
+    t+=omotaj('Zahtjev ne podliježe plaćanju opštinske administrativne takse, u skladu sa ' +
+        'članom 15. Odluke o opštinskim administrativnim taksama i tarifi opštinskih ' +
+        'administrativnih taksi („Službeni glasnik Opštine Drvar“, broj: 4/14, 3/20 i 8/22), ' +
+        'jer se radi o spisima u postupku koji Jedinstveni opštinski organ uprave ' +
+        'Opštine Drvar vodi po službenoj dužnosti.',96,'')+NL+NL;
+  }
+  /* ---- /ipp-taksa-v4 -------------------------------------------------- */
   if(val('obradio')) t+='obradio: '+val('obradio')+NL+NL;
 
   /* Jedna crta za potpis, ime ispod nje - kako stoji i na rjesenjima.
@@ -602,6 +617,7 @@ function build(){
     .forEach(function(k){ o[k]=val(k); });
   o.hitno=chk('hitno')?'Da':'';
   o.taksa_oslobodjeno=chk('taksa_oslobodjeno')?'Da':'';
+  o.taksa_zup=chk('taksa_zup')?'Da':'';
   o.traze_se=izabrano.map(function(p){ return p.label; });
   t+=NL+'--- JSON ---'+NL+JSON.stringify(o,null,2)+NL;
   return t;
@@ -687,9 +703,9 @@ function _lines2paras(txt){
 
     if(/^Broj:/.test(tr)||/^Drvar, .*godine$/.test(tr)){ out.push({text:tr,align:'left'}); i++; continue; }
     if(/^(OPŠTINA DRVAR|SLUŽBA ZA IMOVINSKO-PRAVNE I GEODETSKE POSLOVE|- n\/r rukovodioca Službe -)$/.test(tr)){
-      out.push({text:tr,align:'left',bold:true}); i++; continue; }
-    if(/^PREDMET:/.test(tr)||/^H I T N O$/.test(tr)){ out.push({text:tr,align:'left',bold:true}); i++; continue; }
-    if(/^Dostaviti:$/.test(tr)){ out.push({text:tr,align:'left',bold:true}); i++; continue; }
+      out.push({text:tr,align:'left'}); i++; continue; }
+    if(/^PREDMET:/.test(tr)||/^H I T N O$/.test(tr)){ out.push({text:tr,align:'left'}); i++; continue; }
+    if(/^Dostaviti:$/.test(tr)){ out.push({text:tr,align:'left'}); i++; continue; }
     if(/^obradio:/.test(tr)||/^NAPOMENE ZA OBRADU:$/.test(tr)||/^ 1x - /.test(ln)){ out.push({text:tr,align:'left'}); i++; continue; }
     if(lead>=30){ out.push({text:tr,align:'right'}); i++; continue; }
 
@@ -806,7 +822,12 @@ function pdfPasusi(txt){
     /* redovi koji cine jednu cjelinu idu jedan ispod drugog, bez razmaka:
        "Broj:" i datum, te "OPŠTINA DRVAR" i naziv Sluzbe */
     var spojen = /^(Broj:|OPŠTINA DRVAR$)/.test(o.text);
-    return '<p style="margin:0 0 ' + (spojen ? '0' : '3pt') + ';text-align:' + poravnanje + ';' + uvlaka +
+    /* ipp-forma-v3: cio prazan red iza datuma, iza naziva Sluzbe i iza
+       PREDMET-a. Kad je akt oznacen kao HITNO, taj red stoji ispod oznake
+       H I T N O, a PREDMET ostaje zbijen uz nju. */
+    var razmaknut = /^(Drvar, .*godine$|SLUŽBA ZA |H I T N O$)/.test(o.text)
+                 || (/^PREDMET:/.test(o.text) && !chk('hitno'));
+    return '<p style="margin:0 0 ' + (spojen ? '0' : razmaknut ? '11pt' : '3pt') + ';text-align:' + poravnanje + ';' + uvlaka +
            (o.bold ? 'font-weight:bold;' : '') + '">' + _xesc(o.text) + '</p>';
   }).join('');
 }
@@ -822,7 +843,10 @@ function exportPDF(){
   var dostava = '';
   if(rep.obradio) dostava += 'obradio: ' + _xesc(rep.obradio) + '<br>';
   if((rep.dostaviti || []).length){
-    dostava += '<b>Dostaviti:</b><br>';
+    /* ipp-forma-v3: prazan red izmedju „obradio“ i „Dostaviti“ - kako je vec
+       bilo u Word izvozu, sad i u pregledu za stampu */
+    if(rep.obradio) dostava += '<br>';
+    dostava += 'Dostaviti:<br>';   /* ipp-forma-v3: bez podebljanja */
     rep.dostaviti.forEach(function(x){ dostava += '1x &ndash; ' + _xesc(x) + '<br>'; });
   }
 
@@ -834,13 +858,11 @@ function exportPDF(){
      ima margin-top:auto i sam se prilijepi uz futer. */
   var body = (rep.memo === false ? '' : '<div class="memo">' + memoHTMLpdf('Drvar') + '</div>') +
     '<div class="sadrzaj">' + pdfPasusi(gornji) +
+      /* ipp-forma-v3: oznaka M.P. je uklonjena sa svih zahtjeva, a izmedju
+         posljednje recenice i potpisa stoji jedan prazan red */
       '<table style="width:100%;border:none;border-collapse:collapse;margin-top:' +
-        (rep.memo === false ? '40pt' : '16pt') + '"><tr>' +
-        '<td style="width:46%;border:none;padding:0"></td>' +
-        /* fizicko lice nema pecat, firma ga moze staviti - ali oznaka M.P.
-           stoji samo na aktu koji potpisuje opstinski nacelnik */
-        '<td style="width:16%;vertical-align:top;text-align:center;border:none;padding:0;padding-top:14pt">' +
-        (rep.memo === false ? '' : 'M.P.') + '</td>' +
+        (rep.memo === false ? '46pt' : '26pt') + '"><tr>' +
+        '<td style="width:62%;border:none;padding:0"></td>' +
         '<td style="width:38%;vertical-align:top;text-align:center;border:none;padding:0">' + potpis + '</td>' +
       '</tr></table>' +
     '</div>' +
@@ -852,9 +874,10 @@ function exportPDF(){
   w.document.write('<html><head><meta charset="utf-8"><title>' + _fname() + '</title><style>' +
     /* margine i razmaci su isti kao u Word predlosku: 1,27 cm sa svih strana,
        futer skroz na dnu lista */
-    '@page{size:A4;margin:1.27cm 1.1cm 1.15cm}' +
+    /* ipp-forma-v3: margine svedene na minimum, posebno gornja */
+    '@page{size:A4;margin:0.5cm 1cm 0.9cm}' +
     'body{font-family:"Times New Roman",serif;font-size:12pt;line-height:1.22;color:#000;' +
-      'margin:0 auto;width:18.8cm}' +   /* A4 minus lijeva i desna margina */
+      'margin:0 auto;width:19cm}' +     /* A4 minus lijeva i desna margina */
     'p{orphans:2;widows:2}' +
     /* stranica je flex kolona da se „Dostaviti“ spusti do dna lista */
     /* „Dostaviti“ se prikiva uz dno lista, tacno iznad futera. Flex sa
@@ -869,7 +892,7 @@ function exportPDF(){
     '@media print{body{display:flex;flex-direction:column;box-sizing:border-box;' +
       /* najmanja visina je nesto manja od lista, pa se kod kraceg akta
          „Dostaviti“ spusti do dna, a kod duzeg se nista ne gura preko */
-      'min-height:26.2cm;padding-bottom:0.62cm}' +
+      'min-height:27.5cm;padding-bottom:0.62cm}' +
       '.rep{margin-top:auto;padding-top:4pt}}' +
     '.memo td{padding:0 4pt}' +
     '.futer{border-top:1px solid #000;text-align:center;font-size:8pt;font-style:italic;padding-top:2pt}' +
@@ -912,8 +935,10 @@ function exportWord(){
     if(!x.text && !x.pre) return;
     if(/^Podnosilac: /.test(x.text || '')) x.align = 'left';
     else if(x.align === 'both' && !x.pre) x.firstLine = UVLAKA_TW;
+    /* ipp-forma-v3: cio prazan red iza datuma i iza naziva Sluzbe */
     x.after = /^(Broj:|OPŠTINA DRVAR)/.test(x.text || '') ? 0
-            : /^(PREDMET:|H I T N O)/.test(x.text || '') ? 170 : 100;
+            : /^(Drvar, .*godine$|SLUŽBA ZA |H I T N O)/.test(x.text || '') ? 260
+            : /^PREDMET:/.test(x.text || '') ? (chk('hitno') ? 60 : 260) : 100;
     paras.push(x);
   });
 
@@ -1022,14 +1047,12 @@ function _hrp(){
          '<w:spacing w:after="60"/></w:pPr></w:p>';
 }
 
-/* --- Word: M.P. lijevo od potpisa ---------------------------------------- */
+/* --- Word: potpis ------------------------------------------------------- */
 function _potpisTbl(nacelnik, oznaka, mp_ima){
-  /* Fizicko lice nema pecat, firma ga moze staviti - oznaka M.P. ide samo na
-     aktu koji potpisuje opstinski nacelnik. Kad podnosi stranka, umjesto M.P.
-     ostaje vise praznog prostora iznad potpisa. */
-  var razmak = (mp_ima === false) ? _parap({text:'', align:'left', after:480}) : '';
-  var mp = (mp_ima === false) ? _parap({text:'', align:'center'})
-                              : _parap({text:'M.P.', align:'center', before:400});
+  /* ipp-forma-v3: oznaka M.P. je uklonjena sa svih zahtjeva. Iznad potpisa
+     ostaje jedan prazan red, a kod stranke nesto vise mjesta za pecat firme. */
+  var razmak = _parap({text:'', align:'left', after:(mp_ima === false) ? 420 : 180});
+  var mp = _parap({text:'', align:'center'});
   var pot = _parap({text:oznaka || 'OPŠTINSKI NAČELNIK', align:'center'}) +
             _parap({text:'', align:'center'}) +
             _parap({text:'____________________', align:'center'}) +
@@ -1050,7 +1073,7 @@ function _dostavaOkvir(obradio, dostaviti){
   var red = function(t, bold){ return _parap({text:t, align:'left', frame:fr, bold:!!bold, size:12}); };
   var h = '';
   if(obradio) h += red('obradio: ' + obradio) + red('');
-  h += red('Dostaviti:', true);
+  h += red('Dostaviti:');   /* ipp-forma-v3: bez podebljanja */
   (dostaviti || []).forEach(function(x){ h += red('1x – ' + x); });
   return h;
 }
@@ -1062,7 +1085,8 @@ function _buildDocx(cyr, lat, paras, repXml, memo){
   var sect = '<w:sectPr>' +
     '<w:footerReference w:type="default" r:id="rIdFtr1"/>' +
     '<w:pgSz w:w="11906" w:h="16838"/>' +
-    '<w:pgMar w:top="720" w:right="624" w:bottom="720" w:left="624" w:header="709" w:footer="34" w:gutter="0"/>' +
+    /* ipp-forma-v3: gornja margina 0,5 cm, bocne 1 cm */
+    '<w:pgMar w:top="283" w:right="567" w:bottom="680" w:left="567" w:header="283" w:footer="34" w:gutter="0"/>' +
     '</w:sectPr>';
   var doc = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
     '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" ' +
