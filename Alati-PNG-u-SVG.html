@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PNG / JPEG → SVG — vektorizacija slike</title>
+<link rel="icon" href="grb.jpg">
+<style>
+  :root{
+    --bg:#0f1720; --card:#172230; --ink:#e8eef5; --muted:#9fb0c2;
+    --line:#26384a; --accent:#4c9aff; --accent2:#1f6feb; --ok:#2ea043; --warn:#d29922; --err:#f85149;
+    --field:#0e1620; --h2:#7db4ff;
+  }
+  body.light{
+    --bg:#eef1f6; --card:#ffffff; --ink:#0d141c; --muted:#3d4b5a;
+    --line:#cdd6e0; --accent:#0b4ea2; --accent2:#0b4ea2; --field:#ffffff; --h2:#0a3d7a;
+  }
+  body.light header{background:linear-gradient(180deg,#ffffff,#e7edf5)}
+  body.light header h1{color:#0a2540}
+  body.light .ghost{background:#e7edf5;color:#0d141c}
+  body.light #kod{background:#f1f4f8;color:#0d141c}
+  *{box-sizing:border-box}
+  body{margin:0;
+    font-family:"Segoe UI Variable Text","Segoe UI Variable","Segoe UI",system-ui,-apple-system,Inter,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.5;letter-spacing:.1px;-webkit-font-smoothing:antialiased}
+  header{position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#13202e,#101a26);border-bottom:2px solid var(--accent2);padding:12px 16px}
+  header h1{font-size:18px;margin:0;font-weight:650;letter-spacing:-.2px}
+  header p{margin:4px 0 0;font-size:12px;color:var(--muted)}
+  .hwrap{display:flex;align-items:center;gap:14px;max-width:1100px;margin:0 auto}
+  .grb{width:46px;height:47px;flex:0 0 auto;border-radius:6px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.25))}
+  .htitle{flex:1;min-width:0}
+  .themebtn,.homebtn{padding:8px 12px;font-size:13px;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center}
+  .wrap{max-width:1100px;margin:0 auto;padding:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .card h2{font-size:13px;margin:0 0 14px;color:var(--h2);text-transform:uppercase;letter-spacing:.8px;font-weight:700}
+  label{display:block;font-size:13px;color:var(--muted);margin:11px 0 5px;font-weight:500}
+  input,select{width:100%;background:var(--field);border:1px solid var(--line);color:var(--ink);border-radius:9px;padding:10px;font-size:15px;font-family:inherit}
+  input[type=range]{padding:0;height:34px;accent-color:var(--accent)}
+  input:focus,select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(76,154,255,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  @media(max-width:640px){.row,.row3{grid-template-columns:1fr}}
+  .chk{display:flex;align-items:flex-start;gap:9px;margin:10px 0;font-size:14px;color:var(--ink);font-weight:400}
+  .chk input{width:auto;margin-top:3px}
+  .hint{font-size:12px;color:var(--muted);margin-top:5px;line-height:1.45}
+  .val{float:right;color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+  button{border:0;border-radius:10px;padding:12px 18px;font-size:15px;font-weight:600;cursor:pointer;font-family:inherit}
+  .primary{background:linear-gradient(180deg,var(--accent),var(--accent2));color:#fff;box-shadow:0 2px 6px rgba(31,111,235,.28)}
+  .primary:hover{filter:brightness(1.05)}
+  .primary:disabled{opacity:.55;cursor:default;filter:none}
+  .ghost{background:#1d2c3d;color:var(--ink);border:1px solid var(--line)}
+  .ghost:hover{border-color:var(--accent)}
+  .actions{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 4px}
+  .drop{border:2px dashed var(--line);border-radius:14px;padding:26px 16px;text-align:center;color:var(--muted);cursor:pointer;transition:.2s}
+  .drop.over,.drop:hover{border-color:var(--accent);background:rgba(76,154,255,.06)}
+  .drop b{color:var(--ink)}
+  .preset{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  .preset button{padding:8px 12px;font-size:13px}
+  .preset button.on{border-color:var(--accent);box-shadow:0 0 0 2px rgba(76,154,255,.25)}
+  .cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:760px){.cmp{grid-template-columns:1fr}}
+  .pane{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--field)}
+  .pane .ttl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);padding:8px 10px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+  .pane .ttl span{font-weight:500;text-transform:none;letter-spacing:0}
+  .view{height:360px;display:flex;align-items:center;justify-content:center;overflow:auto;
+    background-color:#fff;background-image:linear-gradient(45deg,#e2e6ec 25%,transparent 25%),linear-gradient(-45deg,#e2e6ec 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#e2e6ec 75%),linear-gradient(-45deg,transparent 75%,#e2e6ec 75%);
+    background-size:18px 18px;background-position:0 0,0 9px,9px -9px,-9px 0}
+  .view img,.view svg{max-width:100%;max-height:100%;height:auto;width:auto;display:block}
+  .view.zoom img,.view.zoom svg{max-width:none;max-height:none;width:200%}
+  .stats{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--muted);margin-top:10px}
+  .stats b{color:var(--ink)}
+  .prog{height:6px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:12px;display:none}
+  .prog i{display:block;height:100%;width:0;background:var(--accent);transition:width .15s}
+  #kod{display:none;white-space:pre-wrap;word-break:break-all;background:#0a1019;border:1px solid var(--line);border-radius:10px;padding:12px;font-family:ui-monospace,"Cascadia Code",Menlo,Consolas,monospace;font-size:12px;max-height:260px;overflow:auto;margin-top:12px;color:var(--ink)}
+  .toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ok);color:#fff;padding:11px 18px;border-radius:30px;font-size:14px;opacity:0;transition:.3s;pointer-events:none;font-weight:500;z-index:50}
+  .toast.show{opacity:1}
+  .toast.err{background:var(--err)}
+  details{margin-top:6px;font-size:13px;color:var(--muted)}
+  details summary{cursor:pointer;color:var(--h2);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.6px}
+  details p,details li{margin:6px 0}
+  .batch{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-top:10px}
+  .bitem{border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--field);font-size:12px;cursor:pointer}
+  .bitem.on{border-color:var(--accent)}
+  .bitem .th{height:90px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:6px;overflow:hidden;margin-bottom:6px}
+  .bitem .th svg,.bitem .th img{max-width:100%;max-height:100%}
+  .bitem .nm{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
+  @media (max-width:760px){
+    header{position:static;padding:10px 12px}
+    .hwrap{flex-wrap:wrap;row-gap:6px;column-gap:8px}
+    .grb{width:38px;height:39px}
+    header h1{font-size:15px}
+    .wrap{padding:14px 12px 48px}
+    .card{padding:13px 14px;border-radius:12px}
+    .view{height:260px}
+  }
+</style>
+</head>
+<body class="light">
+<script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
+<script>try{if(localStorage.getItem('ipp-tema')==='dark')document.body.classList.remove('light');}catch(e){}</script>
+<header>
+  <div class="hwrap">
+    <img class="grb" src="grb.jpg" alt="Grb" onerror="this.style.display='none'">
+    <div class="htitle">
+      <h1>PNG / JPEG → SVG</h1>
+      <p>Vektorizacija slike · sve radi lokalno u pregledniku, ništa se ne šalje na server</p>
+    </div>
+    <a class="ghost homebtn" href="index.html">🏠 Početna</a>
+    <button type="button" class="ghost themebtn" id="themeBtn" onclick="toggleTheme()">🌙 Tamna</button>
+    <button type="button" class="ghost themebtn" style="background:#c0392b;color:#fff;border-color:#a93226" onclick="try{localStorage.removeItem('ipp-auth')}catch(e){};location.replace('index.html')">🔒 Odjava</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="card">
+    <h2>1. Slika</h2>
+    <div class="drop" id="drop">
+      <b>Prevuci sliku ovdje</b> ili klikni za izbor · može i Ctrl+V iz clipboarda<br>
+      <span style="font-size:12px">PNG, JPEG, WebP, GIF, BMP · više fajlova odjednom</span>
+      <input type="file" id="file" accept="image/*" multiple style="display:none">
+    </div>
+    <div class="batch" id="batch"></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Podešavanja</h2>
+    <div class="preset" id="presets">
+      <button type="button" class="ghost" data-p="logo">🏛️ Logo / grb (oštro)</button>
+      <button type="button" class="ghost" data-p="ikona">🎨 Ikona / ilustracija</button>
+      <button type="button" class="ghost" data-p="bw">⬛ Crno-bijelo</button>
+      <button type="button" class="ghost" data-p="foto">📷 Fotografija (posterizacija)</button>
+    </div>
+    <div class="row3">
+      <div>
+        <label>Broj boja <span class="val" id="vBoje">16</span></label>
+        <input type="range" id="boje" min="2" max="48" value="16">
+        <div class="hint">Manje boja = čistiji i manji SVG. Za grb 12–20, za crno-bijelo 2.</div>
+      </div>
+      <div>
+        <label>Glatkoća krivih <span class="val" id="vGlat">1.0</span></label>
+        <input type="range" id="glat" min="0.2" max="3" step="0.1" value="1">
+        <div class="hint">Dozvoljeno odstupanje u pikselima. Manje = vjernije, više čvorova.</div>
+      </div>
+      <div>
+        <label>Ukloni mrlje manje od <span class="val" id="vMrlje">8</span> px²</label>
+        <input type="range" id="mrlje" min="0" max="128" step="1" value="8">
+        <div class="hint">Površina u pikselima. Mrlja se stopi sa okolnom bojom. Za JPEG 16–48, 0 = zadrži sve.</div>
+      </div>
+    </div>
+    <div class="row3">
+      <div>
+        <label>Zamućenje prije obrade <span class="val" id="vBlur">0</span></label>
+        <input type="range" id="blur" min="0" max="3" step="1" value="0">
+        <div class="hint">1–2 za JPEG sa artefaktima, 0 za čist PNG.</div>
+      </div>
+      <div>
+        <label>Maksimalna dimenzija za obradu</label>
+        <select id="maxdim">
+          <option value="600">600 px (brzo)</option>
+          <option value="1000" selected>1000 px (preporučeno)</option>
+          <option value="1600">1600 px (sporije, detaljnije)</option>
+          <option value="0">bez smanjivanja</option>
+        </select>
+      </div>
+      <div>
+        <label>Ivica iste boje <span class="val" id="vIvica">0.0</span></label>
+        <input type="range" id="ivica" min="0" max="1.5" step="0.1" value="0">
+        <div class="hint">Tanka linija u boji ispune. Treba samo ako su slojevi odvojeni i vide se šavovi.</div>
+      </div>
+    </div>
+    <label class="chk"><input type="checkbox" id="slojevi" checked> Naslagani slojevi (svaka boja pokriva sve iznad sebe — nema šavova, manji fajl; isključi ako želiš svaki oblik zasebno, npr. za laser ili plotter)</label>
+    <div class="row">
+      <div>
+        <label>Svijetla pozadina koja dodiruje rub slike</label>
+        <select id="pozadina">
+          <option value="none">Ne diraj</option>
+          <option value="white">Izbijeli (svijetlo-siva → čisto bijela; uklanja JPEG „oreol“)</option>
+          <option value="clear">Ukloni (providna pozadina)</option>
+        </select>
+      </div>
+      <div>
+        <label>Prag svjetline za pozadinu <span class="val" id="vPrag">225</span></label>
+        <input type="range" id="prag" min="160" max="250" step="5" value="225">
+        <div class="hint">Piksel čiji su R, G i B iznad praga smatra se pozadinom (samo ako je spojen s rubom).</div>
+      </div>
+    </div>
+    <div class="actions">
+      <button type="button" class="primary" id="btnRun" disabled>⚡ Pretvori u SVG</button>
+      <button type="button" class="ghost" id="btnDl" disabled>⬇️ Preuzmi SVG</button>
+      <button type="button" class="ghost" id="btnDlAll" disabled style="display:none">⬇️ Preuzmi sve</button>
+      <button type="button" class="ghost" id="btnCopy" disabled>📋 Kopiraj SVG kod</button>
+      <button type="button" class="ghost" id="btnKod" disabled>{ } Prikaži kod</button>
+    </div>
+    <div class="prog" id="prog"><i></i></div>
+  </div>
+
+  <div class="card">
+    <h2>3. Rezultat</h2>
+    <div class="cmp">
+      <div class="pane">
+        <div class="ttl">Original <span id="infoOrig">—</span></div>
+        <div class="view" id="vOrig"><span style="color:#999;font-size:13px">nema slike</span></div>
+      </div>
+      <div class="pane">
+        <div class="ttl">SVG <span id="infoSvg">—</span></div>
+        <div class="view" id="vSvg"><span style="color:#999;font-size:13px">nema rezultata</span></div>
+      </div>
+    </div>
+    <div class="stats" id="stats"></div>
+    <label class="chk" style="margin-top:8px"><input type="checkbox" id="zoom"> Uvećaj 200% (skroluj po prikazu da uporediš detalje)</label>
+    <pre id="kod"></pre>
+    <details>
+      <summary>Kako radi i kad koristiti</summary>
+      <p><b>Postupak:</b> boje slike se svedu na zadani broj (kvantizacija, median-cut + k-means), za svaku boju se prati kontura oblika piksel po piksel, kontura se zaglađuje i pretvara u prave i Bezier krive, a sve se upiše kao <code>&lt;path&gt;</code> elementi u SVG.</p>
+      <p><b>Najbolje za:</b> grbove, logotipe, ikone, pečate, crteže, skenirane potpise. Za fotografije daje posterizovan (plakatski) izgled — to nije greška, tako radi svaka vektorizacija.</p>
+      <p><b>Savjeti:</b> daj što veću i čistiju ulaznu sliku; za JPEG stavi zamućenje 1 i mrlje 8–16; za crno-bijeli pečat ili potpis koristi preset „Crno-bijelo“ pa ako treba uključi uklanjanje pozadine. Rezultat se može dalje doraditi u Inkscape-u (besplatan).</p>
+    </details>
+  </div>
+
+  <p class="hint" style="text-align:center">Kod je otvoren i bez zavisnosti — isti motor može ići u Android aplikaciju (WebView) ili Node servis.</p>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- ====================== MOTOR ZA VEKTORIZACIJU (radi i u Web Workeru) ====================== -->
+<script id="engine">
+var VektorTracer = (function(){
+  'use strict';
+
+  function clamp(v,a,b){ return v<a?a:(v>b?b:v); }
+
+  /* --- separabilno box zamućenje (samo RGB, alfa se ne dira) --- */
+  function boxBlur(src,w,h,r){
+    if(r<=0) return src;
+    var tmp=new Uint8ClampedArray(src.length), out=new Uint8ClampedArray(src.length), div=2*r+1, x,y,i,p;
+    for(y=0;y<h;y++){
+      var row=y*w, sr=0,sg=0,sb=0;
+      for(i=-r;i<=r;i++){ p=(row+clamp(i,0,w-1))*4; sr+=src[p]; sg+=src[p+1]; sb+=src[p+2]; }
+      for(x=0;x<w;x++){
+        p=(row+x)*4; tmp[p]=sr/div; tmp[p+1]=sg/div; tmp[p+2]=sb/div; tmp[p+3]=src[p+3];
+        var po=(row+clamp(x-r,0,w-1))*4, pi=(row+clamp(x+r+1,0,w-1))*4;
+        sr+=src[pi]-src[po]; sg+=src[pi+1]-src[po+1]; sb+=src[pi+2]-src[po+2];
+      }
+    }
+    for(x=0;x<w;x++){
+      var sr2=0,sg2=0,sb2=0;
+      for(i=-r;i<=r;i++){ p=(clamp(i,0,h-1)*w+x)*4; sr2+=tmp[p]; sg2+=tmp[p+1]; sb2+=tmp[p+2]; }
+      for(y=0;y<h;y++){
+        p=(y*w+x)*4; out[p]=sr2/div; out[p+1]=sg2/div; out[p+2]=sb2/div; out[p+3]=tmp[p+3];
+        var qo=(clamp(y-r,0,h-1)*w+x)*4, qi=(clamp(y+r+1,0,h-1)*w+x)*4;
+        sr2+=tmp[qi]-tmp[qo]; sg2+=tmp[qi+1]-tmp[qo+1]; sb2+=tmp[qi+2]-tmp[qo+2];
+      }
+    }
+    return out;
+  }
+
+  /* --- uklanjanje svijetle pozadine koja dodiruje rub (flood fill) --- */
+  function removeBorderBackground(data,w,h,thr,whiten){
+    var vis=new Uint8Array(w*h), stack=[], i, x, y;
+    function light(i){ var p=i*4; return data[p+3]>=128 && data[p]>=thr && data[p+1]>=thr && data[p+2]>=thr; }
+    for(x=0;x<w;x++){ stack.push(x); stack.push((h-1)*w+x); }
+    for(y=0;y<h;y++){ stack.push(y*w); stack.push(y*w+w-1); }
+    while(stack.length){
+      i=stack.pop(); if(vis[i]) continue; vis[i]=1;
+      if(!light(i)) continue;
+      if(whiten){ data[i*4]=255; data[i*4+1]=255; data[i*4+2]=255; } else data[i*4+3]=0;
+      x=i%w; y=(i-x)/w;
+      if(x>0) stack.push(i-1); if(x<w-1) stack.push(i+1);
+      if(y>0) stack.push(i-w); if(y<h-1) stack.push(i+w);
+    }
+  }
+
+  /* --- kvantizacija boja: median-cut inicijalizacija + k-means po jedinstvenim bojama --- */
+  function quantize(data,w,h,K,cycles){
+    var n=w*h, map=new Map(), keys=[], cnts=[], i, p, key, id;
+    var pix=new Int32Array(n);              // indeks jedinstvene boje ili -1 (providno)
+    for(i=0;i<n;i++){
+      p=i*4;
+      if(data[p+3]<128){ pix[i]=-1; continue; }
+      key=(data[p]<<16)|(data[p+1]<<8)|data[p+2];
+      id=map.get(key);
+      if(id===undefined){ id=keys.length; map.set(key,id); keys.push(key); cnts.push(0); }
+      cnts[id]++; pix[i]=id;
+    }
+    var U=keys.length;
+    if(U===0) return {pal:[],idx:new Int16Array(n).fill(-1),counts:[]};
+    K=Math.min(K,U);
+    var R=new Float32Array(U), G=new Float32Array(U), B=new Float32Array(U);
+    for(i=0;i<U;i++){ R[i]=(keys[i]>>16)&255; G[i]=(keys[i]>>8)&255; B[i]=keys[i]&255; }
+
+    // median cut
+    var boxes=[{ids:Array.from({length:U},function(_,k){return k;}),cnt:0}];
+    boxes[0].cnt=cnts.reduce(function(a,b){return a+b;},0);
+    function boxRange(bx){
+      var mn=[255,255,255], mx=[0,0,0], ids=bx.ids;
+      for(var k=0;k<ids.length;k++){ var j=ids[k];
+        if(R[j]<mn[0])mn[0]=R[j]; if(R[j]>mx[0])mx[0]=R[j];
+        if(G[j]<mn[1])mn[1]=G[j]; if(G[j]>mx[1])mx[1]=G[j];
+        if(B[j]<mn[2])mn[2]=B[j]; if(B[j]>mx[2])mx[2]=B[j]; }
+      var rg=[mx[0]-mn[0],mx[1]-mn[1],mx[2]-mn[2]];
+      var ch=rg[0]>=rg[1]&&rg[0]>=rg[2]?0:(rg[1]>=rg[2]?1:2);
+      return {ch:ch,span:rg[ch]};
+    }
+    while(boxes.length<K){
+      var best=-1, bestScore=-1;
+      for(i=0;i<boxes.length;i++){ if(boxes[i].ids.length<2) continue;
+        var br=boxRange(boxes[i]); var score=br.span*Math.sqrt(boxes[i].cnt);
+        if(score>bestScore){ bestScore=score; best=i; boxes[i].rng=br; } }
+      if(best<0) break;
+      var bx=boxes[best], arr=bx.rng.ch===0?R:(bx.rng.ch===1?G:B);
+      bx.ids.sort(function(a,b){ return arr[a]-arr[b]; });
+      var half=bx.cnt/2, acc=0, cut=0;
+      for(i=0;i<bx.ids.length-1;i++){ acc+=cnts[bx.ids[i]]; if(acc>=half){ cut=i+1; break; } }
+      if(cut===0) cut=Math.floor(bx.ids.length/2);
+      var a1=bx.ids.slice(0,cut), a2=bx.ids.slice(cut), c1=0;
+      for(i=0;i<a1.length;i++) c1+=cnts[a1[i]];
+      boxes.splice(best,1,{ids:a1,cnt:c1},{ids:a2,cnt:bx.cnt-c1});
+    }
+    var pal=boxes.map(function(bx){ var r=0,g=0,b=0,c=0;
+      for(var k=0;k<bx.ids.length;k++){ var j=bx.ids[k], cc=cnts[j]; r+=R[j]*cc; g+=G[j]*cc; b+=B[j]*cc; c+=cc; }
+      return c?[r/c,g/c,b/c]:[0,0,0]; });
+
+    // k-means dorada
+    var assign=new Int32Array(U), Kn=pal.length, c;
+    for(c=0;c<cycles;c++){
+      var sr=new Float64Array(Kn), sg=new Float64Array(Kn), sb=new Float64Array(Kn), sc=new Float64Array(Kn);
+      for(i=0;i<U;i++){
+        var bi=0, bd=1e12, r0=R[i], g0=G[i], b0=B[i];
+        for(var k=0;k<Kn;k++){ var dr=r0-pal[k][0], dg=g0-pal[k][1], db=b0-pal[k][2];
+          var d=dr*dr*2+dg*dg*3+db*db; if(d<bd){ bd=d; bi=k; } }
+        assign[i]=bi; var cc2=cnts[i]; sr[bi]+=r0*cc2; sg[bi]+=g0*cc2; sb[bi]+=b0*cc2; sc[bi]+=cc2;
+      }
+      if(c<cycles-1) for(k=0;k<Kn;k++) if(sc[k]>0) pal[k]=[sr[k]/sc[k],sg[k]/sc[k],sb[k]/sc[k]];
+    }
+    var idx=new Int16Array(n), counts=new Array(Kn).fill(0);
+    for(i=0;i<n;i++){ if(pix[i]<0){ idx[i]=-1; } else { var q=assign[pix[i]]; idx[i]=q; counts[q]++; } }
+    return {pal:pal,idx:idx,counts:counts};
+  }
+
+  /* --- uklanjanje mrlja: povezane komponente manje od minArea piksela spajaju se sa dominantnim susjedom --- */
+  function despeckle(idx,w,h,K,minArea){
+    if(minArea<=1) return;
+    var n=w*h, lab=new Int32Array(n).fill(-1), stack=new Int32Array(n), comp=new Int32Array(n), i, cnt=0;
+    var nb=new Int32Array(K+1);
+    for(var start=0;start<n;start++){
+      if(lab[start]>=0) continue;
+      var col=idx[start], sp=0, size=0, cid=cnt++;
+      stack[sp++]=start; lab[start]=cid; nb.fill(0);
+      while(sp>0){
+        i=stack[--sp]; comp[size++]=i;
+        var x=i%w, y=(i-x)/w, j;
+        if(x>0){ j=i-1; if(idx[j]===col){ if(lab[j]<0){ lab[j]=cid; stack[sp++]=j; } } else nb[idx[j]<0?K:idx[j]]++; }
+        if(x<w-1){ j=i+1; if(idx[j]===col){ if(lab[j]<0){ lab[j]=cid; stack[sp++]=j; } } else nb[idx[j]<0?K:idx[j]]++; }
+        if(y>0){ j=i-w; if(idx[j]===col){ if(lab[j]<0){ lab[j]=cid; stack[sp++]=j; } } else nb[idx[j]<0?K:idx[j]]++; }
+        if(y<h-1){ j=i+w; if(idx[j]===col){ if(lab[j]<0){ lab[j]=cid; stack[sp++]=j; } } else nb[idx[j]<0?K:idx[j]]++; }
+      }
+      if(size<minArea){
+        var best=-1, bc=0;
+        for(var k=0;k<=K;k++) if(nb[k]>bc){ bc=nb[k]; best=k; }
+        if(best>=0){ var nc=best===K?-1:best; for(var q=0;q<size;q++){ idx[comp[q]]=nc; lab[comp[q]]=-1; } }
+      }
+    }
+  }
+
+  /* --- praćenje kontura jednog sloja boje: usmjerene ivice između piksela -> zatvorene petlje --- */
+  function traceLayer(m,w,h){
+    var W=w+1, V=W*(h+1), out1=new Int32Array(V).fill(-1), out2=new Int32Array(V).fill(-1), x,y,i;
+    function add(a,b){ if(out1[a]<0) out1[a]=b; else out2[a]=b; }
+    for(y=0;y<h;y++){ for(x=0;x<w;x++){
+      i=y*w+x; if(!m[i]) continue;
+      var v00=y*W+x, v10=v00+1, v01=v00+W, v11=v01+1;
+      if(y===0   || !m[i-w]) add(v00,v10);
+      if(x===w-1 || !m[i+1]) add(v10,v11);
+      if(y===h-1 || !m[i+w]) add(v11,v01);
+      if(x===0   || !m[i-1]) add(v01,v00);
+    }}
+    var loops=[], v, cur, next, dx=0, dy=0;
+    for(v=0;v<V;v++){
+      while(out1[v]>=0){
+        var pts=[]; cur=v; dx=0; dy=0;
+        do{
+          var cx=cur%W, cy=(cur-cx)/W; pts.push(cx,cy);
+          var a=out1[cur], b=out2[cur];
+          if(b<0){ next=a; out1[cur]=-1; }
+          else{
+            // desno skretanje u odnosu na dolazni smjer (drži se istog piksela)
+            var rx=-dy, ry=dx, ax=(a%W)-cx, ay=((a-(a%W))/W)-cy;
+            if(dx===0&&dy===0){ next=a; out1[cur]=b; out2[cur]=-1; }
+            else if(ax===rx&&ay===ry){ next=a; out1[cur]=b; out2[cur]=-1; }
+            else{ next=b; out2[cur]=-1; }
+          }
+          var nx=next%W, ny=(next-nx)/W; dx=nx-cx; dy=ny-cy; cur=next;
+        }while(cur!==v);
+        loops.push(pts);
+      }
+    }
+    return loops;
+  }
+
+  /* --- zaglađivanje (sredine ivica) i aproksimacija pravcima / kvadratnim Bezier krivama --- */
+  function fmt(n){ var s=(Math.round(n*100)/100).toString(); return s; }
+
+  function fitLoop(raw,ltres,qtres){
+    var n=raw.length/2, pts=new Float64Array((n+1)*2), i;
+    for(i=0;i<n;i++){ var j=(i+1)%n; pts[i*2]=(raw[i*2]+raw[j*2])/2; pts[i*2+1]=(raw[i*2+1]+raw[j*2+1])/2; }
+    pts[n*2]=pts[0]; pts[n*2+1]=pts[1];
+    // početak pomjeri na "ugao" (najveće odstupanje od pravca kroz susjede) da krive ne sijeku uglove
+    var lt2=ltres*ltres, qt2=qtres*qtres, segs=[];
+    function fit(i,j){
+      if(j-i<=1){ segs.push('L',fmt(pts[j*2]),fmt(pts[j*2+1])); return; }
+      var x0=pts[i*2], y0=pts[i*2+1], x1=pts[j*2], y1=pts[j*2+1];
+      var vx=x1-x0, vy=y1-y0, vl=vx*vx+vy*vy, maxd=-1, mi=i+1, k;
+      for(k=i+1;k<j;k++){
+        var px=pts[k*2]-x0, py=pts[k*2+1]-y0, d;
+        if(vl<1e-9){ d=px*px+py*py; }
+        else{ var t=(px*vx+py*vy)/vl; if(t<0)t=0; if(t>1)t=1; var ex=px-t*vx, ey=py-t*vy; d=ex*ex+ey*ey; }
+        if(d>maxd){ maxd=d; mi=k; }
+      }
+      if(maxd<=lt2){ segs.push('L',fmt(x1),fmt(y1)); return; }
+      if(j-i>=3){
+        var m=(i+j)>>1, cpx=2*pts[m*2]-(x0+x1)/2, cpy=2*pts[m*2+1]-(y0+y1)/2, ok=true, qmax=-1, qi=mi;
+        for(k=i+1;k<j;k++){
+          var t2=(k-i)/(j-i), u=1-t2, bx=u*u*x0+2*u*t2*cpx+t2*t2*x1, by=u*u*y0+2*u*t2*cpy+t2*t2*y1;
+          var qx=bx-pts[k*2], qy=by-pts[k*2+1], qd=qx*qx+qy*qy;
+          if(qd>qmax){ qmax=qd; qi=k; }
+          if(qd>qt2){ ok=false; }
+        }
+        if(ok){ segs.push('Q',fmt(cpx),fmt(cpy),fmt(x1),fmt(y1)); return; }
+        mi=qi>i&&qi<j?qi:mi;
+      }
+      fit(i,mi); fit(mi,j);
+    }
+    // nađi ugao za početak
+    var best=0, bestd=-1;
+    for(i=0;i<n;i++){ var p=(i+n-1)%n, q=(i+1)%n;
+      var ax=pts[i*2]-pts[p*2], ay=pts[i*2+1]-pts[p*2+1], bx2=pts[q*2]-pts[i*2], by2=pts[q*2+1]-pts[i*2+1];
+      var cr=Math.abs(ax*by2-ay*bx2); if(cr>bestd){ bestd=cr; best=i; } }
+    if(best!==0){
+      var rot=new Float64Array((n+1)*2);
+      for(i=0;i<n;i++){ var s=(i+best)%n; rot[i*2]=pts[s*2]; rot[i*2+1]=pts[s*2+1]; }
+      rot[n*2]=rot[0]; rot[n*2+1]=rot[1]; pts=rot;
+    }
+    fit(0,n);
+    return 'M'+fmt(pts[0])+' '+fmt(pts[1])+' '+segs.join(' ')+'Z';
+  }
+
+  function hex(c){ return '#'+[c[0],c[1],c[2]].map(function(v){ v=Math.round(clamp(v,0,255)); return (v<16?'0':'')+v.toString(16); }).join(''); }
+
+  /* --- glavni ulaz --- */
+  function trace(data,w,h,opt,progress){
+    opt=opt||{};
+    var colors=opt.colors||16, ltres=opt.ltres!=null?opt.ltres:1, qtres=opt.qtres!=null?opt.qtres:1;
+    var pathomit=opt.pathomit!=null?opt.pathomit:8, blur=opt.blur||0, stroke=opt.stroke!=null?opt.stroke:0.5;
+    var src=new Uint8ClampedArray(data);
+    if(opt.bg==='clear'||opt.bg==='white'||opt.removeBg) removeBorderBackground(src,w,h,opt.bgThreshold||225,opt.bg==='white');
+    if(blur>0) src=boxBlur(src,w,h,blur);
+    var q=quantize(src,w,h,colors,opt.cycles||3);
+    var minArea=opt.minArea!=null?opt.minArea:8, stacked=opt.stacked!==false;
+    if(minArea>1){ despeckle(q.idx,w,h,q.pal.length,minArea); q.counts=q.counts.map(function(){ return 0; }); for(var ci=0;ci<w*h;ci++) if(q.idx[ci]>=0) q.counts[q.idx[ci]]++; }
+    var order=q.pal.map(function(_,i){ return i; }).sort(function(a,b){ return q.counts[b]-q.counts[a]; });
+    var rank=new Int32Array(q.pal.length); order.forEach(function(k,i){ rank[k]=i; });
+    var paths=[], nLoops=0, nSegs=0, li, n=w*h, mask=new Uint8Array(n);
+    for(li=0;li<order.length;li++){
+      var k=order[li]; if(!q.counts[k]) continue;
+      for(var pi=0;pi<n;pi++){ var c=q.idx[pi]; mask[pi]=c<0?0:(stacked?(rank[c]>=li?1:0):(c===k?1:0)); }
+      var loops=traceLayer(mask,w,h), d=[];
+      for(var i=0;i<loops.length;i++){ if(loops[i].length/2<pathomit) continue; var s=fitLoop(loops[i],ltres,qtres); d.push(s); nLoops++; nSegs+=(s.match(/[LQ]/g)||[]).length; }
+      if(d.length){ var col=hex(q.pal[k]);
+        paths.push('<path fill="'+col+'"'+(stroke>0?' stroke="'+col+'" stroke-width="'+fmt(stroke)+'" stroke-linejoin="round"':'')+' d="'+d.join(' ')+'"/>'); }
+      if(progress) progress((li+1)/order.length);
+    }
+    var svg='<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 '+w+' '+h+'" width="'+w+'" height="'+h+'">\n'+paths.join('\n')+'\n</svg>';
+    return {svg:svg, width:w, height:h, colors:q.pal.length, paths:nLoops, segments:nSegs, layers:paths.length};
+  }
+
+  return {trace:trace, quantize:quantize, traceLayer:traceLayer, fitLoop:fitLoop, boxBlur:boxBlur, despeckle:despeckle};
+})();
+
+if(typeof importScripts==='function'){
+  self.onmessage=function(e){
+    var m=e.data;
+    try{
+      var r=VektorTracer.trace(new Uint8ClampedArray(m.data), m.w, m.h, m.opt, function(p){ self.postMessage({type:'prog',p:p,id:m.id}); });
+      self.postMessage({type:'done',id:m.id,result:r});
+    }catch(err){ self.postMessage({type:'err',id:m.id,msg:String(err&&err.message||err)}); }
+  };
+}
+</script>
+
+<!-- ====================== UI ====================== -->
+<script>
+(function(){
+  var $=function(id){ return document.getElementById(id); };
+  var items=[], active=-1, worker=null, workerBroken=false, jobId=0, running=false;
+
+  /* tema */
+  window.toggleTheme=function(){ document.body.classList.toggle('light'); try{ localStorage.setItem('ipp-tema', document.body.classList.contains('light')?'light':'dark'); }catch(e){} syncThemeBtn(); };
+  function syncThemeBtn(){ $('themeBtn').textContent=document.body.classList.contains('light')?'🌙 Tamna':'☀️ Svijetla'; }
+  syncThemeBtn();
+
+  function toast(msg,err){ var t=$('toast'); t.textContent=msg; t.className='toast show'+(err?' err':''); clearTimeout(t._t); t._t=setTimeout(function(){ t.className='toast'; },2200); }
+
+  /* klizači */
+  var sl=[['boje','vBoje',0],['glat','vGlat',1],['mrlje','vMrlje',0],['blur','vBlur',0],['ivica','vIvica',1],['prag','vPrag',0]];
+  sl.forEach(function(s){ var i=$(s[0]); function u(){ $(s[1]).textContent=(+i.value).toFixed(s[2]); } i.addEventListener('input',u); u(); });
+
+  /* preseti */
+  var presets={
+    logo:{boje:16,glat:0.8,mrlje:12,blur:0,ivica:0,pozadina:'white'},
+    ikona:{boje:24,glat:1.2,mrlje:16,blur:1,ivica:0,pozadina:'none'},
+    bw:{boje:2,glat:0.8,mrlje:6,blur:0,ivica:0,pozadina:'white'},
+    foto:{boje:32,glat:1.6,mrlje:48,blur:2,ivica:0,pozadina:'none'}
+  };
+  Array.prototype.forEach.call($('presets').querySelectorAll('button'),function(b){
+    b.addEventListener('click',function(){
+      var p=presets[b.dataset.p]; if(!p) return;
+      ['boje','glat','mrlje','blur','ivica'].forEach(function(k){ $(k).value=p[k]; $(k).dispatchEvent(new Event('input')); });
+      $('pozadina').value=p.pozadina;
+      Array.prototype.forEach.call($('presets').querySelectorAll('button'),function(x){ x.classList.toggle('on',x===b); });
+      if(active>=0) run();
+    });
+  });
+
+  /* učitavanje */
+  var drop=$('drop'), file=$('file');
+  drop.addEventListener('click',function(){ file.click(); });
+  file.addEventListener('change',function(){ addFiles(file.files); file.value=''; });
+  ['dragenter','dragover'].forEach(function(ev){ drop.addEventListener(ev,function(e){ e.preventDefault(); drop.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(ev){ drop.addEventListener(ev,function(e){ e.preventDefault(); drop.classList.remove('over'); }); });
+  drop.addEventListener('drop',function(e){ addFiles(e.dataTransfer.files); });
+  document.addEventListener('paste',function(e){
+    var fs=[]; var it=e.clipboardData&&e.clipboardData.items; if(!it) return;
+    for(var i=0;i<it.length;i++){ if(it[i].type.indexOf('image/')===0){ var f=it[i].getAsFile(); if(f) fs.push(f); } }
+    if(fs.length){ addFiles(fs); toast('Slika zalijepljena'); }
+  });
+
+  function addFiles(list){
+    var arr=Array.prototype.filter.call(list,function(f){ return f && /^image\//.test(f.type); });
+    if(!arr.length){ toast('Nije izabrana slika',true); return; }
+    addUrls(arr.map(function(f){ return {url:URL.createObjectURL(f), name:f.name}; }));
+  }
+  function addUrls(arr){
+    var pending=arr.length;
+    arr.forEach(function(f){
+      var img=new Image(); img.crossOrigin='anonymous';
+      img.onload=function(){
+        items.push({name:f.name||('slika-'+(items.length+1)+'.png'), img:img, url:f.url, w:img.naturalWidth, h:img.naturalHeight, svg:null, stats:null});
+        if(--pending===0){ renderBatch(); select(items.length-1); run(); }
+      };
+      img.onerror=function(){ toast('Ne mogu učitati: '+(f.name||f.url),true); if(--pending===0){ renderBatch(); } };
+      img.src=f.url;
+    });
+  }
+  // ?src=putanja/do/slike.png — otvori sliku odmah (npr. link sa sajta)
+  try{ var qs=new URLSearchParams(location.search).get('src'); if(qs){ addUrls([{url:qs, name:decodeURIComponent(qs.split('/').pop().split('?')[0])}]); } }catch(e){}
+
+  function renderBatch(){
+    var b=$('batch'); b.innerHTML='';
+    if(items.length<2){ $('btnDlAll').style.display='none'; return; }
+    items.forEach(function(it,i){
+      var d=document.createElement('div'); d.className='bitem'+(i===active?' on':'');
+      var th=document.createElement('div'); th.className='th';
+      if(it.svg){ th.innerHTML=it.svg; } else { var im=document.createElement('img'); im.src=it.url; th.appendChild(im); }
+      var nm=document.createElement('div'); nm.className='nm'; nm.textContent=(it.svg?'✅ ':'⏳ ')+it.name;
+      d.appendChild(th); d.appendChild(nm);
+      d.addEventListener('click',function(){ select(i); if(!it.svg) run(); });
+      b.appendChild(d);
+    });
+    $('btnDlAll').style.display=''; $('btnDlAll').disabled=!items.some(function(x){ return x.svg; });
+  }
+
+  function select(i){
+    active=i; var it=items[i]; if(!it) return;
+    $('vOrig').innerHTML=''; var im=document.createElement('img'); im.src=it.url; $('vOrig').appendChild(im);
+    $('infoOrig').textContent=it.w+'×'+it.h+' px · '+it.name;
+    $('btnRun').disabled=false;
+    showResult(it);
+    renderBatch();
+  }
+
+  function showResult(it){
+    if(it.svg){
+      $('vSvg').innerHTML=it.svg;
+      var kb=(new Blob([it.svg]).size/1024).toFixed(1);
+      $('infoSvg').textContent=it.stats.width+'×'+it.stats.height+' · '+kb+' KB';
+      $('stats').innerHTML='<span>Boje: <b>'+it.stats.colors+'</b></span><span>Slojevi: <b>'+it.stats.layers+'</b></span><span>Oblici: <b>'+it.stats.paths+'</b></span><span>Segmenti: <b>'+it.stats.segments+'</b></span><span>Vrijeme: <b>'+it.stats.ms+' ms</b></span>';
+      $('kod').textContent=it.svg;
+      $('btnDl').disabled=$('btnCopy').disabled=$('btnKod').disabled=false;
+    } else {
+      $('vSvg').innerHTML='<span style="color:#999;font-size:13px">nema rezultata</span>';
+      $('infoSvg').textContent='—'; $('stats').innerHTML=''; $('kod').textContent='';
+      $('btnDl').disabled=$('btnCopy').disabled=$('btnKod').disabled=true;
+    }
+  }
+
+  function getWorker(){
+    if(worker) return worker;
+    var code=$('engine').textContent;
+    worker=new Worker(URL.createObjectURL(new Blob([code],{type:'text/javascript'})));
+    return worker;
+  }
+
+  function opts(){
+    var g=+$('glat').value;
+    return {colors:+$('boje').value, ltres:g, qtres:g, minArea:+$('mrlje').value, pathomit:4, blur:+$('blur').value, stroke:+$('ivica').value, bg:$('pozadina').value, bgThreshold:+$('prag').value, stacked:$('slojevi').checked, cycles:3};
+  }
+
+  function run(){
+    var it=items[active]; if(!it||running) return;
+    running=true; $('btnRun').disabled=true; $('btnRun').textContent='⏳ Obrada…';
+    var prog=$('prog'); prog.style.display='block'; prog.firstChild.style.width='2%';
+    var maxdim=+$('maxdim').value, sc=1;
+    if(maxdim>0 && Math.max(it.w,it.h)>maxdim) sc=maxdim/Math.max(it.w,it.h);
+    var w=Math.max(1,Math.round(it.w*sc)), h=Math.max(1,Math.round(it.h*sc));
+    var c=document.createElement('canvas'); c.width=w; c.height=h;
+    var ctx=c.getContext('2d',{willReadFrequently:true}); ctx.imageSmoothingQuality='high'; ctx.drawImage(it.img,0,0,w,h);
+    var id; try{ id=ctx.getImageData(0,0,w,h); }catch(e){ done(null,'Preglednik ne dozvoljava čitanje piksela ove slike.'); return; }
+    var t0=performance.now(), myId=++jobId, o=opts();
+    function done(res,err){
+      running=false; $('btnRun').disabled=false; $('btnRun').textContent='⚡ Pretvori u SVG'; prog.style.display='none';
+      if(err){ toast(err,true); return; }
+      res.ms=Math.round(performance.now()-t0);
+      it.svg=res.svg; it.stats=res; showResult(it); renderBatch();
+      var nxt=items.findIndex(function(x){ return !x.svg; });
+      if(nxt>=0){ select(nxt); run(); }
+    }
+    // bez Workera (ili ako Worker zakaže): obrada na glavnoj niti
+    function syncRun(){
+      setTimeout(function(){ try{ done(VektorTracer.trace(id.data,w,h,o,function(p){ prog.firstChild.style.width=Math.round(p*100)+'%'; })); }catch(e2){ done(null,'Greška: '+e2.message); } },30);
+    }
+    if(workerBroken){ syncRun(); return; }
+    try{
+      var wk=getWorker(), alive=false;
+      var watchdog=setTimeout(function(){ if(alive) return; workerBroken=true; try{ wk.terminate(); }catch(e){} worker=null; syncRun(); },4000);
+      wk.onmessage=function(e){ var m=e.data; if(m.id!==myId) return; alive=true; clearTimeout(watchdog);
+        if(m.type==='prog'){ prog.firstChild.style.width=Math.round(m.p*100)+'%'; }
+        else if(m.type==='done'){ done(m.result); }
+        else if(m.type==='err'){ done(null,'Greška: '+m.msg); } };
+      wk.onerror=function(){ if(alive) return; alive=true; clearTimeout(watchdog); workerBroken=true; worker=null; syncRun(); };
+      wk.postMessage({id:myId,data:id.data.buffer,w:w,h:h,opt:o});   // kopija, ne transfer — da fallback ima podatke
+    }catch(e){
+      workerBroken=true; syncRun();
+    }
+  }
+
+  function svgName(n){ return n.replace(/\.[^.]+$/,'')+'.svg'; }
+  function download(name,text){
+    var a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([text],{type:'image/svg+xml'})); a.download=name; document.body.appendChild(a); a.click();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); },500);
+  }
+
+  $('btnRun').addEventListener('click',run);
+  $('btnDl').addEventListener('click',function(){ var it=items[active]; if(it&&it.svg){ download(svgName(it.name),it.svg); toast('SVG preuzet'); } });
+  $('btnDlAll').addEventListener('click',function(){ var n=0; items.forEach(function(it,i){ if(it.svg){ setTimeout(function(){ download(svgName(it.name),it.svg); },n*300); n++; } }); toast('Preuzimanje '+n+' fajlova'); });
+  $('btnCopy').addEventListener('click',function(){ var it=items[active]; if(!it||!it.svg) return;
+    (navigator.clipboard?navigator.clipboard.writeText(it.svg):Promise.reject()).then(function(){ toast('SVG kod kopiran'); },function(){ $('kod').style.display='block'; toast('Označi i kopiraj kod ručno',true); }); });
+  $('btnKod').addEventListener('click',function(){ var k=$('kod'); k.style.display=k.style.display==='block'?'none':'block'; });
+  $('zoom').addEventListener('change',function(){ $('vOrig').classList.toggle('zoom',this.checked); $('vSvg').classList.toggle('zoom',this.checked); });
+  ['boje','glat','mrlje','blur','ivica','prag'].forEach(function(k){ $(k).addEventListener('change',function(){ if(active>=0) run(); }); });
+  $('pozadina').addEventListener('change',function(){ if(active>=0) run(); });
+  $('slojevi').addEventListener('change',function(){ if(active>=0) run(); });
+  $('maxdim').addEventListener('change',function(){ if(active>=0) run(); });
+})();
+</script>
+</body>
+</html>
