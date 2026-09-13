@@ -261,6 +261,7 @@
               <label for="ivica">Ivica iste boje <output id="vIvica">0</output></label>
               <input type="range" id="ivica" min="0" max="1.5" step="0.1" value="0">
             </div>
+            <label class="check only-browser"><input type="checkbox" id="ostro" checked><span>Oštre ivice<small>Prelazne boje s ivica (anti-aliasing) stapaju se u susjednu boju: bijela slova ostaju bijela, bez sivih aureola.</small></span></label>
             <label class="check only-browser"><input type="checkbox" id="slojevi" checked><span>Naslagani slojevi<small>Svaka boja pokriva sve iznad sebe: bez šavova, manji fajl. Isključi za laser ili plotter.</small></span></label>
             <div class="ctl only-local">
               <label for="engine">Motor za crno-bijelo</label>
@@ -318,7 +319,7 @@
   <h3>Šta se dešava sa slikom</h3>
   <div class="steps">
     <div class="step"><div class="n">Korak 1</div><h4>Boje se svode</h4><p>Milioni nijansi postaju paleta od nekoliko boja (median-cut pa k-means). Zato grb ispadne čist, a fotografija plakatska.</p></div>
-    <div class="step"><div class="n">Korak 2</div><h4>Mrlje se stapaju</h4><p>Svaki otočić manji od zadane površine preuzima boju okoline. Tu nestaju JPEG artefakti.</p></div>
+    <div class="step"><div class="n">Korak 2</div><h4>Ivice se čiste</h4><p>Prelazne boje s ivica (anti-aliasing) i mrlje manje od zadane površine stapaju se u susjednu boju. Tu nestaju sive aureole i JPEG artefakti.</p></div>
     <div class="step"><div class="n">Korak 3</div><h4>Konture se prate</h4><p>Za svaku boju granica se obiđe piksel po piksel, pa se izravna u prave i Bezier krive unutar zadane tolerancije.</p></div>
     <div class="step"><div class="n">Korak 4</div><h4>Slojevi se slažu</h4><p>Boje se crtaju od najveće ka najmanjoj, svaka preko prethodne, pa nema pukotina između oblika.</p></div>
   </div>
@@ -443,6 +444,54 @@ var VektorTracer = (function(){
     return {pal:pal,idx:idx,counts:counts};
   }
 
+  /* --- čišćenje prelaznih (anti-aliasing) boja ---
+     1) spoji boje bliže od mergeDist; 2) iterativno izbacuj "tanke" klastere (skoro svi pikseli na rubu)
+     čija boja leži između dvije jače boje, a njihove piksele daj većinskom susjedu. --- */
+  function cleanPalette(q,w,h,mergeDist,mixTol,edgeThr){
+    var pal=q.pal, K=pal.length, idx=q.idx, n=w*h, i, a, b, c;
+    if(K<3) return;
+    function d2(p,r){ var dr=p[0]-r[0], dg=p[1]-r[1], db=p[2]-r[2]; return dr*dr+dg*dg+db*db; }
+    var map=new Int32Array(K); for(i=0;i<K;i++) map[i]=i;
+    function root(x){ while(map[x]!==x){ map[x]=map[map[x]]; x=map[x]; } return x; }
+    var order=[]; for(i=0;i<K;i++) order.push(i); order.sort(function(x,y){ return q.counts[y]-q.counts[x]; });
+    var md2=mergeDist*mergeDist;
+    for(a=0;a<K;a++) for(b=a+1;b<K;b++){ var ra=root(order[a]), rb=root(order[b]); if(ra!==rb && d2(pal[order[a]],pal[order[b]])<=md2) map[rb]=ra; }
+    for(i=0;i<n;i++){ if(idx[i]>=0) idx[i]=root(idx[i]); }
+    var alive=new Uint8Array(K).fill(1), mt2=mixTol*mixTol, votes=new Int32Array(K+1), pass;
+    for(pass=0;pass<10;pass++){
+      var edge=new Float64Array(K), cnt=new Float64Array(K);
+      for(i=0;i<n;i++){ c=idx[i]; if(c<0) continue; cnt[c]++;
+        var x=i%w, y=(i-x)/w;
+        if((x>0&&idx[i-1]!==c)||(x<w-1&&idx[i+1]!==c)||(y>0&&idx[i-w]!==c)||(y<h-1&&idx[i+w]!==c)) edge[c]++; }
+      var total=0, kept=[]; for(c=0;c<K;c++){ total+=cnt[c]; if(cnt[c]>0) kept.push(c); else alive[c]=0; }
+      var drop=new Uint8Array(K), any=false;
+      for(var ki=0;ki<kept.length;ki++){ c=kept[ki];
+        if(cnt[c]>0.08*total || edge[c]/cnt[c]<edgeThr) continue;
+        var ok=false;
+        for(a=0;a<kept.length&&!ok;a++){ var A=kept[a]; if(A===c||cnt[A]<=cnt[c]) continue;
+          for(b=a+1;b<kept.length;b++){ var B=kept[b]; if(B===c||cnt[B]<=cnt[c]) continue;
+            var vx=pal[B][0]-pal[A][0], vy=pal[B][1]-pal[A][1], vz=pal[B][2]-pal[A][2], vl=vx*vx+vy*vy+vz*vz; if(vl<1) continue;
+            var px=pal[c][0]-pal[A][0], py=pal[c][1]-pal[A][1], pz=pal[c][2]-pal[A][2], t=(px*vx+py*vy+pz*vz)/vl;
+            if(t<0.08||t>0.92) continue;
+            var ex=px-t*vx, ey=py-t*vy, ez=pz-t*vz; if(ex*ex+ey*ey+ez*ez<=mt2){ ok=true; break; } } }
+        if(ok){ drop[c]=1; any=true; } }
+      if(!any) break;
+      var pending=0; for(i=0;i<n;i++) if(idx[i]>=0&&drop[idx[i]]){ idx[i]=-2; pending++; }
+      var it=0;
+      while(pending>0&&it<64){ it++; var next=new Int32Array(n), changed=0;
+        for(i=0;i<n;i++){ if(idx[i]!==-2) continue; votes.fill(0); var x2=i%w, y2=(i-x2)/w, bestc=-3, bv=0;
+          for(var dy=-1;dy<=1;dy++) for(var dx=-1;dx<=1;dx++){ if(!dx&&!dy) continue; var xx=x2+dx, yy=y2+dy; if(xx<0||yy<0||xx>=w||yy>=h) continue;
+            var v=idx[yy*w+xx]; if(v===-2) continue; var slot=v<0?K:v; votes[slot]+=(dx&&dy)?1:2; if(votes[slot]>bv){ bv=votes[slot]; bestc=v; } }
+          if(bestc!==-3){ next[i]=bestc+3; changed++; } }
+        for(i=0;i<n;i++) if(next[i]){ idx[i]=next[i]-3; pending--; }
+        if(!changed) break; }
+      for(i=0;i<n;i++) if(idx[i]===-2) idx[i]=-1;
+    }
+    var remap=new Int32Array(K).fill(-1), npal=[], ncounts=[];
+    for(i=0;i<n;i++){ c=idx[i]; if(c<0) continue; if(remap[c]<0){ remap[c]=npal.length; npal.push(pal[c]); ncounts.push(0); } idx[i]=remap[c]; ncounts[remap[c]]++; }
+    q.pal=npal; q.counts=ncounts;
+  }
+
   /* --- uklanjanje mrlja: povezane komponente manje od minArea piksela spajaju se sa dominantnim susjedom --- */
   function despeckle(idx,w,h,K,minArea){
     if(minArea<=1) return;
@@ -561,6 +610,7 @@ var VektorTracer = (function(){
     if(opt.bg==='clear'||opt.bg==='white'||opt.removeBg) removeBorderBackground(src,w,h,opt.bgThreshold||225,opt.bg==='white');
     if(blur>0) src=boxBlur(src,w,h,blur);
     var q=quantize(src,w,h,colors,opt.cycles||3);
+    if(opt.sharp!==false) cleanPalette(q,w,h,opt.mergeDist!=null?opt.mergeDist:12,opt.mixTol!=null?opt.mixTol:22,opt.edgeThr!=null?opt.edgeThr:0.85);
     var minArea=opt.minArea!=null?opt.minArea:8, stacked=opt.stacked!==false;
     if(minArea>1){ despeckle(q.idx,w,h,q.pal.length,minArea); q.counts=q.counts.map(function(){ return 0; }); for(var ci=0;ci<w*h;ci++) if(q.idx[ci]>=0) q.counts[q.idx[ci]]++; }
     var order=q.pal.map(function(_,i){ return i; }).sort(function(a,b){ return q.counts[b]-q.counts[a]; });
@@ -579,7 +629,7 @@ var VektorTracer = (function(){
     return {svg:svg, width:w, height:h, colors:q.pal.length, paths:nLoops, segments:nSegs, layers:paths.length};
   }
 
-  return {trace:trace, quantize:quantize, traceLayer:traceLayer, fitLoop:fitLoop, boxBlur:boxBlur, despeckle:despeckle};
+  return {trace:trace, quantize:quantize, traceLayer:traceLayer, fitLoop:fitLoop, boxBlur:boxBlur, despeckle:despeckle, cleanPalette:cleanPalette};
 })();
 
 if(typeof importScripts==='function'){
@@ -734,7 +784,7 @@ if(typeof importScripts==='function'){
   function opts(){
     var g=+$('glat').value, blur=+$('blur').value;
     return {colors:+$('boje').value, ltres:g, qtres:g, minArea:+$('mrlje').value, pathomit:4, blur:blur, stroke:+$('ivica').value,
-            bg:$('pozadina').value, bgThreshold:+$('prag').value, stacked:$('slojevi').checked, cycles:3,
+            bg:$('pozadina').value, bgThreshold:+$('prag').value, stacked:$('slojevi').checked, sharp:$('ostro').checked, cycles:3,
             preset:preset, denoise:blur===0?0:(blur>=3?5:3), engine:$('engine').value};
   }
   function busy(on,p){ cmp.classList.toggle('working',on); $('busyBar').style.width=on?Math.max(3,Math.round((p||0)*100))+'%':'0'; $('btnRun').disabled=on; $('btnRun').textContent=on?'Obrada…':'Pretvori u SVG'; }
@@ -804,7 +854,7 @@ if(typeof importScripts==='function'){
     (navigator.clipboard?navigator.clipboard.writeText(it.svg):Promise.reject()).then(function(){ toast('SVG kod kopiran'); },function(){ $('kod').classList.add('show'); toast('Označi i kopiraj kod ručno',true); }); });
   $('btnKod').addEventListener('click',function(){ $('kod').classList.toggle('show'); });
   ['boje','mrlje','blur','prag','glat','ivica'].forEach(function(k){ $(k).addEventListener('change',function(){ if(active>=0) run(); }); });
-  ['pozadina','slojevi','maxdim','engine'].forEach(function(k){ $(k).addEventListener('change',function(){ if(active>=0) run(); }); });
+  ['pozadina','slojevi','ostro','maxdim','engine'].forEach(function(k){ $(k).addEventListener('change',function(){ if(active>=0) run(); }); });
 
   /* start: ?src=… ili ugrađeni primjer */
   var qs=null; try{ qs=new URLSearchParams(location.search).get('src'); }catch(e){}
