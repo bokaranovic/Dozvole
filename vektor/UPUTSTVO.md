@@ -18,7 +18,8 @@ Tok obrade, sve besplatno i bez slanja slike ikome:
 
 ## Korištenje
 
-- **Prozor:** dupli klik `POKRENI.bat` → izaberi slike, preset, pozadinu → *Pretvori u SVG*.
+- **Web prozor (preporučeno):** dupli klik `POKRENI-WEB.bat` → otvara se stranica na `http://127.0.0.1:8765` u tvom pregledniku, isti izgled kao na sajtu, ali obradu radi VTracer/Potrace. Svaki SVG se automatski snima i u `vektor/izlaz/`.
+- **Klasični prozor:** dupli klik `POKRENI.bat` (Tkinter, bez preglednika).
 - **Prevuci i pusti:** prevuci sliku ili cijeli folder na `VEKTORIZUJ-OVDJE.bat`.
 - **Komandna linija:**
 

@@ -214,14 +214,13 @@ def ocisti(svg: str) -> str:
 
 
 # ---------------------------------------------------------------- glavni tok
-def vektorizuj(putanja: str, out_dir: str | None, preset: str, **kw) -> str:
+def vektorizuj_sliku(img: Image.Image, preset: str, **kw) -> tuple[str, dict]:
+    """Jezgro toka: PIL slika → (svg tekst, info). Koriste ga CLI, prozor i lokalni web UI."""
     p = dict(PRESETS[preset])
     for k in ("colors", "speckle", "corner"):
         if kw.get(k) is not None:
             p[k] = kw[k]
     t0 = time.time()
-    print(f"\n▶ {os.path.basename(putanja)}")
-    img = Image.open(putanja)
     img = pripremi(img, kw.get("scale"), kw.get("denoise") if kw.get("denoise") is not None else p["denoise"],
                    kw.get("bg", "none"), kw.get("bg_thresh", 225))
 
@@ -239,12 +238,21 @@ def vektorizuj(putanja: str, out_dir: str | None, preset: str, **kw) -> str:
     prije = len(svg)
     if not kw.get("no_optimize"):
         svg = ocisti(svg)
+    info = dict(motor=motor, mode=mode, prije=prije, poslije=len(svg), ms=int((time.time() - t0) * 1000),
+                w=img.size[0], h=img.size[1])
+    log(f"{motor} · {prije/1024:.1f} KB → {len(svg)/1024:.1f} KB · {info['ms']/1000:.1f} s")
+    return svg, info
+
+
+def vektorizuj(putanja: str, out_dir: str | None, preset: str, **kw) -> str:
+    print(f"\n▶ {os.path.basename(putanja)}")
+    svg, _ = vektorizuj_sliku(Image.open(putanja), preset, **kw)
     izlaz_dir = out_dir or os.path.dirname(os.path.abspath(putanja))
     os.makedirs(izlaz_dir, exist_ok=True)
     izlaz = os.path.join(izlaz_dir, os.path.splitext(os.path.basename(putanja))[0] + ".svg")
     with open(izlaz, "w", encoding="utf-8") as f:
         f.write(svg)
-    log(f"{motor} · {prije/1024:.1f} KB → {len(svg)/1024:.1f} KB · {time.time()-t0:.1f} s · {izlaz}")
+    log(f"→ {izlaz}")
     return izlaz
 
 
