@@ -1120,6 +1120,50 @@ h3 .ptbadge{font-size:11px;vertical-align:3px}
 .brzside{font-size:12px;color:var(--muted);padding:6px 10px 10px;font-style:italic}
 .brzstatus{font-size:12.5px;padding:8px 12px;border-radius:10px;margin:0 0 12px;border:1px solid var(--line);background:var(--chip);color:var(--ink)}
 </style>
+<style id="ipp-brzina-v4">
+/* ipp-brzina-v4 — življe animacije: opruga (blagi odskok), samo transform i opacity */
+:root{--spring:cubic-bezier(.34,1.56,.64,1)}
+@supports (animation-timing-function: linear(0, 1)){
+  :root{--spring:linear(0, 0.009, 0.035 2.1%, 0.141, 0.281 6.7%, 0.723 12.9%, 0.938 16.7%, 1.017, 1.077, 1.121, 1.149 24.3%, 1.159, 1.163, 1.161, 1.154 29.9%, 1.129 32.8%, 1.051 39.6%, 1.017 43.1%, 0.991, 0.977 51%, 0.974 53.8%, 0.975 57.1%, 0.997 69.8%, 1.003 76.9%, 1.004 83.8%, 1)}
+}
+@keyframes brzUlaz{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes brzPop{0%{transform:scale(.84)}100%{transform:scale(1)}}
+@keyframes brzPanel{from{opacity:.3;transform:translateX(56px)}to{opacity:1;transform:none}}
+@keyframes brzToast{from{opacity:0;transform:translateX(-50%) translateY(20px) scale(.88)}to{opacity:1;transform:translateX(-50%) translateY(-6px) scale(1)}}
+#viewList .card,#viewDoc .card{animation:brzUlaz .62s var(--spring) both}
+#viewList > .card:nth-child(2), #viewList div[id^="brz"] > .card:nth-child(1){animation-delay:0.04s}
+#viewList > .card:nth-child(3), #viewList div[id^="brz"] > .card:nth-child(1){animation-delay:0.07s}
+#viewList > .card:nth-child(4), #viewList div[id^="brz"] > .card:nth-child(2){animation-delay:0.11s}
+#viewList > .card:nth-child(5), #viewList div[id^="brz"] > .card:nth-child(3){animation-delay:0.14s}
+#viewList > .card:nth-child(6), #viewList div[id^="brz"] > .card:nth-child(4){animation-delay:0.18s}
+#viewList > .card:nth-child(7), #viewList div[id^="brz"] > .card:nth-child(5){animation-delay:0.21s}
+#viewList > .card:nth-child(8), #viewList div[id^="brz"] > .card:nth-child(6){animation-delay:0.25s}
+#viewList > .card:nth-child(9), #viewList div[id^="brz"] > .card:nth-child(7){animation-delay:0.28s}
+#viewList > .card:nth-child(10), #viewList div[id^="brz"] > .card:nth-child(8){animation-delay:0.32s}
+#viewList > .card:nth-child(11), #viewList div[id^="brz"] > .card:nth-child(9){animation-delay:0.35s}
+#viewList > .card:nth-child(12), #viewList div[id^="brz"] > .card:nth-child(10){animation-delay:0.39s}
+#viewList > .card:nth-child(13), #viewList div[id^="brz"] > .card:nth-child(11){animation-delay:0.42s}
+#viewList > .card:nth-child(14), #viewList div[id^="brz"] > .card:nth-child(12){animation-delay:0.46s}
+#viewList > .card:nth-child(15), #viewList div[id^="brz"] > .card:nth-child(13){animation-delay:0.49s}
+#viewDoc .clan{animation:brzUlaz .58s var(--spring) both}
+#viewDoc .clan:nth-of-type(n+16){animation:none}
+.card.klik{transition:transform .5s var(--spring),box-shadow .25s ease,border-color .2s ease}
+.card.klik:hover{transform:translateY(-4px) scale(1.006)}
+.card.klik:active{transform:translateY(-1px) scale(.985);transition-duration:.12s}
+.vf,.chip,.sortbtn,.ghost,.brzjos,.hitbtn,.mini,.fsbtn,.izmv,.tg,.sgod{transition:transform .45s var(--spring),background-color .2s ease,border-color .2s ease,color .2s ease,box-shadow .2s ease}
+.vf:hover,.chip:hover,.sortbtn:hover,.hitbtn:hover,.izmv:hover,.ghost:hover{transform:translateY(-2px)}
+.vf:active,.chip:active,.sortbtn:active,.ghost:active,.brzjos:active,.hitbtn:active,.mini:active,.fsbtn:active,.izmv:active{transform:scale(.9);transition-duration:.1s}
+.vf.on,.chip.on,.sortbtn.on{animation:brzPop .5s var(--spring)}
+.brzjos:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.sitem{transition:transform .4s var(--spring),background-color .15s ease}
+.sitem:hover{transform:translateX(4px)}
+.sgod .kar{transition:transform .5s var(--spring)}
+body.orig #origPane{animation:brzPanel .6s var(--spring) both}
+.toast.show{animation:brzToast .55s var(--spring) both}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
+}
+</style>
 </head>
 <body class="light">
 <script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
@@ -1808,6 +1852,137 @@ function brzSideJos(n){
 /* na javnom sajtu tekstovi stižu u dijelovima — tamo se ova funkcija zamijeni */
 function brzStatus(q){ return ''; }
 /* ==== /ipp-brzina-v1 ==== */
+/* ==== ipp-izvoz-v1 — izvoz otvorenog propisa u Word (.docx) i PDF ====
+   Radi bez interneta: .docx se slaže ovdje u pregledniku (mali ZIP bez sažimanja),
+   a PDF ide preko prozora za štampu ("Sačuvaj kao PDF"). */
+function izvozTekstClana(d, c){ return (typeof izTekst === 'function') ? izTekst(d, c) : c.tekst; }
+function izvozIme(d){
+  var z = {'š':'s','Š':'S','č':'c','Č':'C','ć':'c','Ć':'C','ž':'z','Ž':'Z','đ':'dj','Đ':'Dj'};
+  var s = String(d.naslov || d.id || 'propis').replace(/[šŠčČćĆžŽđĐ]/g, function(x){ return z[x]; })
+    .replace(/[^A-Za-z0-9 ._,()\-]+/g, ' ').replace(/\s+/g, ' ').trim();
+  if(s.length > 90){ s = s.slice(0, 90); var k = s.lastIndexOf(' '); if(k > 50) s = s.slice(0, k); }
+  if((s.match(/\(/g) || []).length > (s.match(/\)/g) || []).length) s = s.replace(/\s*\([^)]*$/, '');
+  return s.trim() || 'propis';
+}
+function izvozPodnaslov(d){
+  return (d.glasnik || d.broj || '') + (d.brojAkta ? ' · Broj: ' + d.brojAkta : '') + (d.datum ? ' · ' + d.datum : '');
+}
+/* --- Word --- */
+function izvozXml(s){
+  return String(s == null ? '' : s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g, '')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+function izvozPar(tekst, o){
+  o = o || {};
+  var pPr = '<w:pPr>' + (o.stil ? '' : '') +
+    '<w:spacing w:before="' + (o.prije || 0) + '" w:after="' + (o.poslije == null ? 120 : o.poslije) + '"/>' +
+    '<w:jc w:val="' + (o.jc || 'both') + '"/></w:pPr>';
+  var rPr = '<w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:cs="Times New Roman"/>' +
+    (o.b ? '<w:b/>' : '') + (o.i ? '<w:i/>' : '') + '<w:sz w:val="' + (o.sz || 24) + '"/></w:rPr>';
+  return '<w:p>' + pPr + '<w:r>' + rPr + '<w:t xml:space="preserve">' + izvozXml(tekst) + '</w:t></w:r></w:p>';
+}
+function izvozDocumentXml(d){
+  var b = [];
+  b.push(izvozPar(d.naslov, {jc: 'center', b: true, sz: 28, poslije: 80}));
+  var pod = izvozPodnaslov(d);
+  if(pod) b.push(izvozPar(pod, {jc: 'center', i: true, sz: 22, poslije: 240}));
+  if(d.preambula) String(d.preambula).split(/\n+/).forEach(function(r){ if(r.trim()) b.push(izvozPar(r.trim(), {i: true, sz: 22})); });
+  var sek = null;
+  (d.clanovi || []).forEach(function(c){
+    if(c.sekcija && c.sekcija !== sek){ sek = c.sekcija; b.push(izvozPar(sek, {jc: 'center', b: true, prije: 240, poslije: 120})); }
+    b.push(izvozPar(c.oznaka, {jc: 'center', b: true, prije: 200, poslije: c.naslov ? 0 : 80}));
+    if(c.naslov) b.push(izvozPar(c.naslov, {jc: 'center', i: true, poslije: 80}));
+    String(izvozTekstClana(d, c) || '').split(/\n/).forEach(function(r){ if(r.trim()) b.push(izvozPar(r.trim(), {})); });
+  });
+  b.push(izvozPar('Izvezeno iz Baze propisa i odluka (Opština Drvar). Mjerodavan je tekst objavljen u službenom glasilu.',
+                  {i: true, sz: 18, prije: 360}));
+  return '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+    '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body>' + b.join('') +
+    '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1418" w:right="1418" w:bottom="1418" w:left="1418" w:header="709" w:footer="709" w:gutter="0"/></w:sectPr>' +
+    '</w:body></w:document>';
+}
+var IZVOZ_CRC = null;
+function izvozCrc(u8){
+  if(!IZVOZ_CRC){ IZVOZ_CRC = new Uint32Array(256);
+    for(var n = 0; n < 256; n++){ var c = n; for(var k = 0; k < 8; k++) c = (c & 1) ? (0xEDB88320 ^ (c >>> 1)) : (c >>> 1); IZVOZ_CRC[n] = c >>> 0; } }
+  var crc = 0xFFFFFFFF;
+  for(var i = 0; i < u8.length; i++) crc = IZVOZ_CRC[(crc ^ u8[i]) & 0xFF] ^ (crc >>> 8);
+  return (crc ^ 0xFFFFFFFF) >>> 0;
+}
+function izvozZip(fajlovi){   /* [{ime, tekst}] -> Blob (ZIP, bez sažimanja) */
+  var enc = new TextEncoder(), dijelovi = [], central = [], off = 0;
+  function u16(v){ return [v & 255, (v >>> 8) & 255]; }
+  function u32(v){ return [v & 255, (v >>> 8) & 255, (v >>> 16) & 255, (v >>> 24) & 255]; }
+  fajlovi.forEach(function(f){
+    var ime = enc.encode(f.ime), pod = enc.encode(f.tekst), crc = izvozCrc(pod);
+    var lh = [].concat(u32(0x04034b50), u16(20), u16(0x0800), u16(0), u16(0), u16(0x21), u32(crc), u32(pod.length), u32(pod.length), u16(ime.length), u16(0));
+    dijelovi.push(new Uint8Array(lh), ime, pod);
+    central.push({ime: ime, crc: crc, n: pod.length, off: off});
+    off += lh.length + ime.length + pod.length;
+  });
+  var cdStart = off, cdLen = 0;
+  central.forEach(function(c){
+    var h = [].concat(u32(0x02014b50), u16(20), u16(20), u16(0x0800), u16(0), u16(0), u16(0x21), u32(c.crc), u32(c.n), u32(c.n),
+                      u16(c.ime.length), u16(0), u16(0), u16(0), u16(0), u32(0), u32(c.off));
+    dijelovi.push(new Uint8Array(h), c.ime); cdLen += h.length + c.ime.length;
+  });
+  dijelovi.push(new Uint8Array([].concat(u32(0x06054b50), u16(0), u16(0), u16(central.length), u16(central.length), u32(cdLen), u32(cdStart), u16(0))));
+  return new Blob(dijelovi, {type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+function izvozWord(oid){
+  var d = DATA.find(function(x){ return x.id === oid; }); if(!d) return;
+  var blob = izvozZip([
+    {ime: '[Content_Types].xml', tekst: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/></Types>'},
+    {ime: '_rels/.rels', tekst: '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>'},
+    {ime: 'word/document.xml', tekst: izvozDocumentXml(d)}
+  ]);
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = izvozIme(d) + '.docx';
+  document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+  if(typeof toast === 'function') toast('Word dokument je preuzet');
+}
+/* --- PDF (prozor za štampu) --- */
+function izvozHtml(d){
+  var e = (typeof escHtml === 'function') ? escHtml : function(s){ return String(s); };
+  var h = '<h1>' + e(d.naslov) + '</h1>';
+  var pod = izvozPodnaslov(d); if(pod) h += '<div class="pod">' + e(pod) + '</div>';
+  if(d.preambula) h += '<div class="pre">' + e(d.preambula).replace(/\n+/g, '<br>') + '</div>';
+  var sek = null;
+  (d.clanovi || []).forEach(function(c){
+    if(c.sekcija && c.sekcija !== sek){ sek = c.sekcija; h += '<h2>' + e(sek) + '</h2>'; }
+    h += '<div class="cl"><h3>' + e(c.oznaka) + '</h3>' + (c.naslov ? '<div class="cn">' + e(c.naslov) + '</div>' : '') +
+         String(izvozTekstClana(d, c) || '').split(/\n/).filter(function(r){ return r.trim(); })
+           .map(function(r){ return '<p>' + e(r.trim()) + '</p>'; }).join('') + '</div>';
+  });
+  h += '<div class="nap">Izvezeno iz Baze propisa i odluka (Opština Drvar). Mjerodavan je tekst objavljen u službenom glasilu.</div>';
+  return '<!doctype html><html lang="sr"><head><meta charset="utf-8"><title>' + e(izvozIme(d)) + '</title><style>' +
+    '@page{size:A4;margin:2cm}body{font-family:"Times New Roman",Times,serif;font-size:12pt;line-height:1.4;color:#000;margin:0}' +
+    'h1{font-size:15pt;text-align:center;margin:0 0 4pt}.pod{text-align:center;font-style:italic;font-size:11pt;margin-bottom:14pt}' +
+    '.pre{font-style:italic;font-size:11pt;margin-bottom:10pt;text-align:justify}' +
+    'h2{font-size:12pt;text-align:center;margin:16pt 0 6pt}h3{font-size:12pt;text-align:center;margin:12pt 0 2pt}' +
+    '.cn{text-align:center;font-style:italic;margin-bottom:4pt}p{margin:0 0 5pt;text-align:justify}.cl{break-inside:avoid-page}' +
+    '.nap{margin-top:20pt;font-size:9pt;font-style:italic;color:#444}</style></head><body>' + h + '</body></html>';
+}
+function izvozPdf(oid){
+  var d = DATA.find(function(x){ return x.id === oid; }); if(!d) return;
+  var html = izvozHtml(d);
+  var w = null;
+  try{ w = window.open('', '_blank'); }catch(e){ w = null; }
+  if(w){
+    w.document.open(); w.document.write(html); w.document.close();
+    setTimeout(function(){ try{ w.focus(); w.print(); }catch(e){} }, 400);
+  } else {
+    var f = document.createElement('iframe');
+    f.style.cssText = 'position:fixed;right:0;bottom:0;width:0;height:0;border:0';
+    document.body.appendChild(f);
+    f.contentDocument.open(); f.contentDocument.write(html); f.contentDocument.close();
+    setTimeout(function(){ f.contentWindow.focus(); f.contentWindow.print(); setTimeout(function(){ f.remove(); }, 4000); }, 300);
+  }
+  if(typeof toast === 'function') toast('U prozoru za štampu izaberi „Sačuvaj kao PDF“');
+}
+/* ==== /ipp-izvoz-v1 ==== */
+
 
 /* ================= GLAVNA PRETRAGA ================= */
 function collect(toks, whole, onlyUser){
@@ -2054,6 +2229,8 @@ function renderDoc(id){
   let h='<div class="backbar"><button type="button" class="ghost" onclick="closeDoc()">← Nazad na pretragu</button>'+
     '<button type="button" class="ghost" onclick="window.print()">🖨️ Štampaj</button>'+
     '<button type="button" class="ghost" onclick="copyDoc(\''+d.id+'\')">📋 Kopiraj tekst</button>'+
+    '<button type="button" class="ghost" onclick="izvozWord(\''+d.id+'\')" title="Preuzmi propis kao Word dokument (.docx)">⬇️ Word</button>'+   /* ipp-izvoz-v1 */
+    '<button type="button" class="ghost" onclick="izvozPdf(\''+d.id+'\')" title="Sačuvaj propis kao PDF (preko prozora za štampu)">⬇️ PDF</button>'+
     ((d.izvor||d.prek)?'<button type="button" class="ghost" onclick="otvoriOriginal(\''+d.id+'\')">📄 Original</button>':'')+(d.url?'<button type="button" class="ghost" data-u="'+escHtml(d.url)+'" onclick="window.open(this.dataset.u,\'_blank\',\'noopener\')">🌐 Zvanični izvor</button>':'')+   /* ipp-sudska-v1 */ ptDugmad(d)+   /* ipp-precisceni-v1 */   /* ipp-original-v1, ipp-prekucano-prikaz-v1 */
     '<button type="button" class="ghost" id="pickBtn" onclick="showPick()">📌 Moj izbor ('+ST.pick.length+')</button>'+
     '<button type="button" class="ghost flBtnGlavni" onclick="flPanelToggle()">🚩 Prijave ('+flBroj()+')</button>'+   /* ipp-flag-v1 */
@@ -2674,12 +2851,13 @@ function zatvoriOriginal(){
   try{ localStorage.setItem('ipp-orig','0'); }catch(e){}
 }
 function origSync(oid){
-  /* ako je panel ostao otvoren, novi propis se odmah prikaže i u njemu */
-  let zeli=false;
-  try{ zeli = localStorage.getItem('ipp-orig')==='1'; }catch(e){}
+  /* ipp-brzina-v3: novi propis se uvijek otvara kao tekst. Original ga prati samo ako je panel
+     upravo otvoren i ekran je širok (rad uporedo) — ne pamti se poslije ponovnog otvaranja stranice,
+     a na telefonu se panel zatvara (inače prekrije cijeli ekran). */
+  let zeli = document.body.classList.contains('orig') && !(window.matchMedia && matchMedia('(max-width: 900px)').matches);
   const d = DATA.find(x=>x.id===oid);
   if(zeli && imaOriginal(d)){ otvoriOriginal(oid, IZVOR_VRSTA); }   /* ipp-prekucano-prikaz-v1: ista verzija (Sken/PDF/MD) i za sljedeći akt */
-  else if(!imaOriginal(d)) { document.body.classList.remove('orig'); }
+  else if(document.body.classList.contains('orig')) { zatvoriOriginal(); }   /* ipp-brzina-v3 */
 }
 /* ==== /ipp-original-v1 ==== */
 
@@ -4729,7 +4907,7 @@ function _izmDugme(v){
 <div id="ippDock" role="toolbar" aria-label="Radnje nad propisom"></div>
 <script id="ipp-brzina-javno-v1">
 /* baza u dijelovima — samo na javnom sajtu (pripremi_sajt.py) */
-var BRZ_V='ed7296a562', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
+var BRZ_V='9cb5faad82', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
 /* na telefonu (ili uz štednju podataka) tekstovi se ne skidaju sami — tek kad korisnik nešto traži ili otvori propis */
 var BRZ_TELEFON=!!((window.matchMedia && matchMedia('(max-width: 900px)').matches) || (navigator.connection && navigator.connection.saveData));
 var BRZ_SVE=!BRZ_TELEFON;
@@ -4752,6 +4930,8 @@ async function brzDalje(){
       delete x.i; Object.assign(d,x); delete d._ceka;
       if(typeof NORMKES!=='undefined') delete NORMKES[d.id];
     }
+    if(curDoc){ const cd=DATA.find(function(x){ return x.id===curDoc; });   /* čekani propis se crta odmah */
+      if(cd && cd._brzCekao && !cd._ceka){ cd._brzCekao=false; renderDoc(curDoc); } }
     BRZ_GOTOVO++;
   }catch(e){
     BRZ_POKUSAJ[k]=(BRZ_POKUSAJ[k]||0)+1;
@@ -4782,7 +4962,10 @@ function brzOsvjezi(){
     if(curDoc){
       const d=DATA.find(function(x){ return x.id===curDoc; });
       if(d && d._brzCekao && !d._ceka){ d._brzCekao=false; renderDoc(curDoc); }
-    } else if(q){ run(); }
+    } else if(q){
+      run();   /* dopuna dok tekstovi stižu — bez ponovne animacije kartica */
+      document.querySelectorAll('#viewList .card').forEach(function(c){ c.style.animation='none'; });
+    }
   }, 350);
 }
 (function(){
