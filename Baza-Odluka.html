@@ -1160,9 +1160,117 @@ h3 .ptbadge{font-size:11px;vertical-align:3px}
 .sgod .kar{transition:transform .5s var(--spring)}
 body.orig #origPane{animation:brzPanel .6s var(--spring) both}
 .toast.show{animation:brzToast .55s var(--spring) both}
-@media (prefers-reduced-motion: reduce){
-  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
-}
+/* ipp-dizajn-v1: animacije se uključuju i isključuju dugmetom u traci „Prikaz“ (ne zavise od postavke Windowsa) */
+</style>
+<style id="ipp-ribbon-v1">
+/* ipp-ribbon-v1 — traka sa opcijama + širina važi i za spisak */
+body:not(.wide) #viewList{max-width:var(--sirina,112ch)}
+#ippDock:empty{display:none !important}
+#ippRibbon{position:fixed;top:var(--hdrH,64px);left:0;right:0;z-index:29;overflow:hidden;pointer-events:none;
+  padding:0 16px 14px}
+body.orig #ippRibbon{right:clamp(400px,46vw,960px)}
+#ippRibbon .rbSadrzaj{pointer-events:auto;display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;
+  margin-top:calc(-1 * var(--rbH,60px) - 2px);transition:margin-top .55s var(--spring,cubic-bezier(.34,1.56,.64,1));
+  background:var(--card);border:1px solid var(--line);border-top:0;border-radius:0 0 14px 14px;
+  box-shadow:0 12px 28px rgba(0,0,0,.14);padding:9px 14px;font-size:12.5px;color:var(--muted)}
+#ippRibbon.otv .rbSadrzaj{margin-top:0}
+#ippRibbon .rbRucka{pointer-events:auto;width:max-content;margin:0 auto;padding:3px 14px 4px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px;
+  font-size:11.5px;font-weight:700;color:var(--muted);box-shadow:0 6px 14px rgba(0,0,0,.10);user-select:none}
+#ippRibbon .rbRucka:hover{color:var(--accent)}
+#ippRibbon .rbRucka .kar{display:inline-block;transition:transform .45s var(--spring,ease)}
+#ippRibbon.otv .rbRucka .kar{transform:rotate(180deg)}
+#ippRibbon .rbGrupa{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+#ippRibbon .rbGrupa + .rbGrupa{padding-left:12px;border-left:1px solid var(--line)}
+#ippRibbon .rbGrupa{gap:6px}
+#ippRibbon .fontbox select{max-width:140px;padding:4px 6px}
+#ippRibbon .fsbtn{padding:4px 8px}
+#ippRibbon #tagToggleBtn{padding:4px 10px;font-size:12px}
+#ippRibbon label{display:inline-flex;align-items:center;gap:5px;cursor:pointer;color:var(--ink)}
+#ippRibbon .fontbox{margin:0;width:auto;flex-wrap:nowrap}
+#ippRibbon .rbSir::before{content:'↔';font-weight:800;color:var(--muted);margin-right:2px}
+#ippRibbon .rbSir button,#ippRibbon .rbPin{font-size:12px;padding:4px 8px;border-radius:9px;border:1px solid var(--line);
+  background:var(--chip);color:var(--ink);cursor:pointer;font-weight:650}
+#ippRibbon .rbSir button.on,#ippRibbon .rbPin.on{background:var(--accent2);border-color:var(--accent2);color:#fff}
+#ippRibbon #rbKliz{width:84px;accent-color:var(--accent2)}
+#ippRibbon .rbRucka{white-space:nowrap}
+#ippRibbon .rbRucka .stat{display:inline !important;margin:0 !important;width:auto !important;font-weight:600;color:var(--muted);font-size:11.5px}
+#ippRibbon .rbSep{margin:0 6px;opacity:.6}
+#ippRibbon .rbPin{margin-left:auto}
+#ippRibbon .rbPin{padding:4px 8px}
+.sopts.rbPrazno{display:none !important}
+body.rbima.rbpin .layout{padding-top:calc(var(--rbH,0px) + 30px)}
+body.rbima.rbpin.lijevo .searchbar{top:calc(var(--hdrH,64px) + var(--rbH,0px))}
+@media print{ #ippRibbon{display:none !important} }
+</style>
+<style id="ipp-dizajn-v1">
+/* ipp-dizajn-v1 — življi izgled: mekše kartice, boja nivoa, sjene, odskok, talas pri kliku */
+:root{--ipp-r:16px}
+@keyframes dzSpust{from{opacity:0;transform:translateY(-24px)}to{opacity:1;transform:none}}
+@keyframes dzLijevo{from{opacity:0;transform:translateX(-36px)}to{opacity:1;transform:none}}
+@keyframes dzDesno{from{opacity:0;transform:translateX(42px)}to{opacity:1;transform:none}}
+@keyframes dzUlaz{0%{opacity:0;transform:translateY(34px) scale(.93)}100%{opacity:1;transform:none}}
+@keyframes dzTalas{from{transform:scale(0);opacity:.38}to{transform:scale(1);opacity:0}}
+@keyframes dzJezik{0%{transform:translateY(-140%)}100%{transform:none}}
+@keyframes dzSjaj{0%{background-position:-200% 0}100%{background-position:200% 0}}
+@keyframes dzSkok{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+/* --- ulazak stranice --- */
+header{animation:dzSpust .7s var(--spring) both}
+body.lijevo .searchbar{animation:dzLijevo .75s var(--spring) .08s both}
+#ippRibbon .rbRucka{animation:dzJezik .8s var(--spring) .5s both}
+#viewDoc:not(.hidden){animation:dzDesno .6s var(--spring) both}
+/* --- kartice --- */
+#viewList .card,#viewDoc .card{animation:dzUlaz .75s var(--spring) both}
+.card{border-radius:var(--ipp-r);position:relative;
+  box-shadow:0 1px 2px rgba(16,32,64,.06),0 6px 22px rgba(16,32,64,.06);border-color:rgba(120,140,170,.22)}
+#viewList .card{overflow:hidden}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--dzBoja,transparent);border-radius:var(--ipp-r) 0 0 var(--ipp-r);
+  transition:width .45s var(--spring)}
+.card.klik:hover{transform:translateY(-6px) scale(1.008);box-shadow:0 2px 4px rgba(16,32,64,.06),0 18px 40px rgba(16,32,64,.14)}
+.card.klik:hover::before{width:7px}
+.card:has(.nvbadge.n-drvar){--dzBoja:#d4a72c}
+.card:has(.nvbadge.n-grahovo){--dzBoja:#d6559b}
+.card:has(.nvbadge.n-kanton){--dzBoja:#2ea043}
+.card:has(.nvbadge.n-fbih){--dzBoja:#4c9aff}
+.card:has(.nvbadge.n-bih){--dzBoja:#ff9d5c}
+.card:has(.nvbadge.n-livno){--dzBoja:#14aab4}
+.card:has(.nvbadge.n-tomislavgrad){--dzBoja:#6366f1}
+.card:has(.nvbadge.n-ostalo){--dzBoja:#8f9bab}
+.card h3{letter-spacing:-.15px}
+body.light .card h3{color:#0f2747}
+/* --- naslovi odjeljaka --- */
+.secttl{position:relative;padding-bottom:6px}
+.secttl::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:46px;border-radius:3px;
+  background:linear-gradient(90deg,var(--accent2),var(--accent));animation:dzLijevo .7s var(--spring) both}
+/* --- filteri, dugmad --- */
+.vf,.chip,.sortbtn,.ghost,.brzjos,.hitbtn,.mini,.fsbtn{position:relative;overflow:hidden}
+.vf.on,.chip.on,.sortbtn.on{background:linear-gradient(135deg,var(--accent2),var(--accent));border-color:transparent;
+  box-shadow:0 6px 16px rgba(42,106,212,.28)}
+.vf:hover,.chip:hover{box-shadow:0 6px 14px rgba(16,32,64,.10)}
+.ghost{border-radius:11px}
+.ghost:hover{box-shadow:0 8px 18px rgba(16,32,64,.12)}
+.brzjos{background:linear-gradient(90deg,transparent,rgba(90,162,255,.10),transparent);background-size:200% 100%;
+  animation:dzSjaj 2.8s linear infinite}
+/* --- polje za pretragu --- */
+#q{transition:box-shadow .35s var(--spring),border-color .2s ease,transform .35s var(--spring)}
+#q:focus{box-shadow:0 0 0 4px rgba(90,162,255,.22),0 10px 26px rgba(42,106,212,.14);transform:translateY(-1px)}
+/* --- članovi u otvorenom propisu --- */
+#viewDoc .clan{border-radius:var(--ipp-r);transition:transform .45s var(--spring),box-shadow .25s ease}
+#viewDoc .clan:hover{transform:translateX(4px);box-shadow:0 10px 26px rgba(16,32,64,.10)}
+/* --- učitavanje --- */
+.loading .spin{animation:sp .8s linear infinite,dzSkok 1s var(--spring) infinite}
+/* --- talas pri kliku --- */
+.dzTalas{position:absolute;border-radius:50%;pointer-events:none;background:currentColor;opacity:.3;
+  transform:scale(0);animation:dzTalas .65s ease-out forwards}
+/* --- tanji klizači --- */
+*{scrollbar-width:thin;scrollbar-color:rgba(120,140,170,.45) transparent}
+/* --- svijetla tema: mekša pozadina --- */
+body.light{background:radial-gradient(1200px 600px at 8% -10%,rgba(90,162,255,.10),transparent 60%),
+  radial-gradient(900px 520px at 100% 0%,rgba(99,102,241,.08),transparent 60%),#f3f6fb;background-attachment:fixed}
+body.light header{box-shadow:0 6px 24px rgba(16,32,64,.08)}
+/* --- isključene animacije (dugme u traci „Prikaz“) --- */
+body.bezanim *,body.bezanim *::before,body.bezanim *::after,html.bezanim-pre *{animation:none !important;transition:none !important}
+@media print{ .card::before,.dzTalas{display:none !important} }
 </style>
 </head>
 <body class="light">
@@ -4905,6 +5013,154 @@ function _izmDugme(v){
 </script>
 <div class="fab" id="ippFab"><button type="button" title="Na članove" onclick="naClanove()">📖</button><button type="button" title="Na sadržaj" onclick="naSadrzaj()">📑</button><button type="button" title="Na vrh" onclick="naVrh()">⬆</button></div>
 <div id="ippDock" role="toolbar" aria-label="Radnje nad propisom"></div>
+<script id="ipp-ribbon-v1">
+/* ==== ipp-ribbon-v1 — opcije prikaza u traci ispod zaglavlja ====
+   Na računaru (miš, lijevi raspored) opcije pretrage, slova, širine i tagova
+   prelaze iz lijeve kolone u jedan red ispod zaglavlja. Traka je skupljena na
+   mali jezičak „⚙ Prikaz“ i otvara se kad miš pređe preko nje; 📌 je drži
+   otvorenom. Širina važi i za spisak i za otvoren propis i pamti se. */
+(function(){
+  var RB_TAJM = null, RB_PIN = false;
+  try{ RB_PIN = localStorage.getItem('ipp-ribbon-pin') === '1'; }catch(e){}
+  function mozeRibbon(){
+    return document.body.classList.contains('lijevo') &&
+      !!(window.matchMedia && matchMedia('(hover: hover) and (min-width: 901px)').matches);
+  }
+  function rbMjeri(){
+    var w = document.getElementById('ippRibbon'); if(!w) return;
+    var p = w.querySelector('.rbSadrzaj');
+    var h = p ? p.offsetHeight : 0;
+    document.documentElement.style.setProperty('--rbH', h + 'px');
+  }
+  function rbOtvori(){ clearTimeout(RB_TAJM); var w = document.getElementById('ippRibbon'); if(w) w.classList.add('otv'); }
+  function rbZatvori(){
+    clearTimeout(RB_TAJM);
+    RB_TAJM = setTimeout(function(){ var w = document.getElementById('ippRibbon'); if(w && !RB_PIN) w.classList.remove('otv'); }, 550);
+  }
+  window.rbPin = function(){
+    RB_PIN = !RB_PIN;
+    try{ localStorage.setItem('ipp-ribbon-pin', RB_PIN ? '1' : '0'); }catch(e){}
+    document.body.classList.toggle('rbpin', RB_PIN);
+    var b = document.getElementById('rbPinBtn'); if(b){ b.classList.toggle('on', RB_PIN); b.title = RB_PIN ? 'Otkači traku (skuplja se kad miš ode)' : 'Zakači traku da stalno stoji otvorena'; }
+    if(RB_PIN) rbOtvori(); else rbZatvori();
+    rbMjeri();
+  };
+  function rbOsvjezi(){
+    var w = document.getElementById('ippRibbon'); if(!w) return;
+    var puna = (typeof SZ_PUNA !== 'undefined') && SZ_PUNA, ch = (typeof SZ_CH !== 'undefined') ? SZ_CH : 112;
+    w.querySelectorAll('.rbSir button').forEach(function(b){
+      var v = b.getAttribute('data-v');
+      b.classList.toggle('on', v === 'puna' ? puna : (!puna && String(ch) === v));
+    });
+    var k = document.getElementById('rbKliz'); if(k){ k.value = ch; k.disabled = !!puna; }
+    if(k) k.title = (puna ? 'Cijela širina prozora' : ch + ' znakova u redu') + ' — važi za spisak i za otvoren propis';
+  }
+  window.rbSirina = function(v){
+    if(v === 'puna'){ if(typeof szPuna === 'function') szPuna(); }
+    else if(typeof szPostavi === 'function') szPostavi(parseInt(v, 10));
+    rbOsvjezi();
+  };
+  window.rbKliz = function(v){ if(typeof szKliznuo === 'function') szKliznuo(v); rbOsvjezi(); };
+  function grupa(lbl){
+    var g = document.createElement('span'); g.className = 'rbGrupa';
+    if(lbl) g.title = lbl;
+    return g;
+  }
+  function gradi(){
+    if(document.getElementById('ippRibbon') || !mozeRibbon()) return;
+    var so = document.querySelector('.sopts'); if(!so) return;
+    var w = document.createElement('div'); w.id = 'ippRibbon';
+    var p = document.createElement('div'); p.className = 'rbSadrzaj';
+    var g1 = grupa('Pretraga');
+    so.querySelectorAll(':scope > label').forEach(function(l){
+      l.childNodes.forEach(function(n){ if(n.nodeType === 3) n.nodeValue = n.nodeValue.replace(' / sa bilješkom', ''); });
+      g1.appendChild(l); });
+    var g2 = grupa('Slova');
+    var fb = so.querySelector('.fontbox');
+    if(fb){ var lb = fb.firstElementChild; if(lb && lb.tagName === 'SPAN' && /Font/.test(lb.textContent)) lb.remove(); g2.appendChild(fb); }
+    var g3 = grupa('Širina teksta — važi za spisak i za otvoren propis'); g3.classList.add('rbSir');
+    g3.insertAdjacentHTML('beforeend',
+      '<button type="button" data-v="72" onclick="rbSirina(\'72\')">Usko</button>' +
+      '<button type="button" data-v="96" onclick="rbSirina(\'96\')">Srednje</button>' +
+      '<button type="button" data-v="128" onclick="rbSirina(\'128\')">Široko</button>' +
+      '<button type="button" data-v="puna" onclick="rbSirina(\'puna\')" title="Cijela širina prozora">Cijela</button>' +
+      '<input type="range" id="rbKliz" min="56" max="170" step="2" oninput="rbKliz(this.value)" title="Koliko znakova staje u jedan red — važi za spisak i za otvoren propis">' +
+      '');
+    var g4 = grupa('');
+    var tb = document.getElementById('tagToggleBtn'); if(tb) g4.appendChild(tb);
+    var pin = document.createElement('button'); pin.type = 'button'; pin.id = 'rbPinBtn'; pin.className = 'rbPin'; pin.textContent = '📌';
+    pin.onclick = window.rbPin;
+    [g1, g2, g3, g4].forEach(function(g){ if(g.childNodes.length) p.appendChild(g); });
+    p.appendChild(pin);
+    var r = document.createElement('div'); r.className = 'rbRucka'; r.innerHTML = '⚙ Prikaz <span class="kar">▾</span>';
+    var st = document.getElementById('stat'); if(st){ var sep = document.createElement('span'); sep.className = 'rbSep'; sep.textContent = '·'; r.appendChild(sep); r.appendChild(st); }
+    r.onclick = function(){ var x = document.getElementById('ippRibbon'); if(x.classList.contains('otv') && !RB_PIN) x.classList.remove('otv'); else rbOtvori(); };
+    w.appendChild(p); w.appendChild(r);
+    document.body.appendChild(w);
+    so.classList.add('rbPrazno');
+    [p, r].forEach(function(el){ el.addEventListener('mouseenter', rbOtvori); el.addEventListener('mouseleave', rbZatvori); });
+    document.body.classList.add('rbima');
+    document.body.classList.toggle('rbpin', RB_PIN);
+    if(RB_PIN){ w.classList.add('otv'); pin.classList.add('on'); }
+    rbOsvjezi(); rbMjeri();
+    setTimeout(rbMjeri, 300);
+    window.addEventListener('resize', rbMjeri);
+    if(typeof szPrimijeni === 'function'){
+      var stari = szPrimijeni;
+      szPrimijeni = function(){ var x = stari.apply(this, arguments); try{ rbOsvjezi(); }catch(e){} return x; };
+    }
+  }
+  /* poslije crtanja spiska skloni traku za radnje nad propisom (zna ostati prazna desno) */
+  if(typeof run === 'function'){
+    var runStari = run;
+    run = function(){ var x = runStari.apply(this, arguments); try{ if(!curDoc && typeof fabSync === 'function') fabSync(); }catch(e){} return x; };
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(gradi, 250); });
+  else setTimeout(gradi, 250);
+})();
+</script>
+<script id="ipp-dizajn-v1">
+/* talas pri kliku na kartice, filtere i dugmad + prekidač za animacije */
+(function(){
+  try{ if(localStorage.getItem('ipp-anim') === '0') document.documentElement.classList.add('bezanim-pre'); }catch(e){}
+  function primijeni(){
+    var off = false; try{ off = localStorage.getItem('ipp-anim') === '0'; }catch(e){}
+    document.body.classList.toggle('bezanim', off);
+    document.documentElement.classList.toggle('bezanim-pre', off);
+    var b = document.getElementById('rbAnimBtn');
+    if(b){ b.classList.toggle('on', !off); b.textContent = off ? '✨ Animacije: isklj.' : '✨ Animacije'; b.title = off ? 'Uključi animacije' : 'Isključi animacije'; }
+  }
+  window.dzAnim = function(){
+    var off = false; try{ off = localStorage.getItem('ipp-anim') === '0'; localStorage.setItem('ipp-anim', off ? '1' : '0'); }catch(e){}
+    primijeni();
+    if(typeof toast === 'function') toast(off ? 'Animacije uključene' : 'Animacije isključene');
+  };
+  document.addEventListener('pointerdown', function(e){
+    if(document.body.classList.contains('bezanim')) return;
+    var el = e.target.closest && e.target.closest('.card.klik,.vf,.chip,.ghost,.brzjos,.hitbtn,.sortbtn,.mini,.fsbtn,#ippRibbon button');
+    if(!el) return;
+    var r = el.getBoundingClientRect(), d = Math.max(r.width, r.height) * 2.2;
+    var s = document.createElement('span'); s.className = 'dzTalas';
+    s.style.width = s.style.height = d + 'px';
+    s.style.left = (e.clientX - r.left - d / 2) + 'px'; s.style.top = (e.clientY - r.top - d / 2) + 'px';
+    if(getComputedStyle(el).position === 'static') el.style.position = 'relative';
+    el.appendChild(s);
+    setTimeout(function(){ s.remove(); }, 700);
+  }, {passive: true});
+  function dugme(){
+    var p = document.querySelector('#ippRibbon .rbSadrzaj'), pin = document.getElementById('rbPinBtn');
+    if(p && !document.getElementById('rbAnimBtn')){
+      var g = document.createElement('span'); g.className = 'rbGrupa'; g.title = 'Animacije';
+      var b = document.createElement('button'); b.type = 'button'; b.id = 'rbAnimBtn'; b.className = 'rbPin'; b.onclick = window.dzAnim;
+      g.appendChild(b);
+      if(pin) p.insertBefore(g, pin); else p.appendChild(g);
+    }
+    primijeni();
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ primijeni(); setTimeout(dugme, 600); });
+  else { primijeni(); setTimeout(dugme, 600); }
+})();
+</script>
 <script id="ipp-brzina-javno-v1">
 /* baza u dijelovima — samo na javnom sajtu (pripremi_sajt.py) */
 var BRZ_V='9cb5faad82', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
