@@ -1056,6 +1056,9 @@ h3 .ptbadge{font-size:11px;vertical-align:3px}
 .godbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 14px}
 .godbar .godlbl{font-size:11.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-right:4px}
 .godbar .vf{font-size:12px;padding:4px 10px}
+.godbar.glasbar{margin-top:-8px}.godbar.glasbar .glasnivo{font-size:11.5px;font-weight:700;color:var(--muted);margin-right:2px}/* ipp-glasbar-v1 */
+
+
 .brzhint{font-size:12.5px;color:var(--muted);margin:-4px 0 12px}
 .brzjos{display:block;width:100%;margin:10px 0 18px;padding:10px;border-radius:10px;border:1px dashed var(--accent);
   background:transparent;color:var(--accent);font-weight:700;font-size:13.5px;cursor:pointer}
@@ -1912,6 +1915,47 @@ function brzGodBar(out){
   if(god.length > VID) h += '<span class="vf ponisti" onclick="GF_SVE=!GF_SVE;run()">' + (GF_SVE ? 'manje ▴' : 'starije ▾ (' + (god.length - VID) + ')') + '</span>';
   return h + '</div>';
 }
+/* ==== ipp-glasbar-v1/v2: red sa brojevima službenih glasnika (izabrana jedna godina) ==== */
+function glasBroj(b){ var m = String(b || '').match(/^\s*(\d{1,3})/); return m ? parseInt(m[1], 10) : 999; }
+function glasGod(d){           /* ipp-glasbar-v2: godina glasnika iz broja (8/26 → 2026), inače godina akta */
+  var m = String(d.broj || '').match(/\/\s*(\d{2,4})\b/);
+  if(!m) return godKey(d);
+  var y = parseInt(m[1], 10); if(y < 100) y += (y < 50 ? 2000 : 1900);
+  return String(y);
+}
+function glasRep(a, b){            /* koji akt glasnika nosi original: PDF ispred Worda, pa sken/prekucano */
+  if(!a) return b;
+  var pa = /\.pdf$/i.test(a.izvorPut || a.izvor || ''), pb = /\.pdf$/i.test(b.izvorPut || b.izvor || '');
+  if(pb && !pa) return b;
+  return a;
+}
+function brzGlasBar(out){
+  if(GF.size !== 1 || GF.has('bez')) return '';
+  var po = {}, red = [], i, d, k, god = Array.from(GF)[0];
+  for(i = 0; i < out.length; i++){
+    d = out[i].d;
+    if(!d.glasnik || !d.broj || d.vrsta === 'sudska' || !imaOriginal(d)) continue;
+    if(glasGod(d) !== god) continue;   /* ipp-glasbar-v2: glasnik te godine, i kad je akt donesen ranije */
+    k = (d.nivo || '') + '|' + d.glasnik;
+    if(!po[k]){ po[k] = {nivo: d.nivo || '', nl: d.nivoKratko || '', broj: d.broj, gl: d.glasnik, n: 0, rep: null}; red.push(po[k]); }
+    po[k].n++; po[k].rep = glasRep(po[k].rep, d);
+  }
+  if(!red.length) return '';
+  var nivoi = {}; red.forEach(function(x){ (nivoi[x.nivo] = nivoi[x.nivo] || {nl: x.nl, g: []}).g.push(x); });
+  var kljucevi = Object.keys(nivoi), h = '';
+  kljucevi.forEach(function(nv, j){
+    var g = nivoi[nv].g.sort(function(a, b){ return glasBroj(a.broj) - glasBroj(b.broj) || (a.broj < b.broj ? -1 : 1); });
+    h += '<div class="godbar glasbar"><span class="godlbl">' + (j === 0 ? 'Glasnik' : '&nbsp;') + '</span>' +
+      (kljucevi.length > 1 ? '<span class="glasnivo">' + escHtml(nivoi[nv].nl) + '</span>' : '');
+    g.forEach(function(x){
+      h += '<span class="vf" onclick="otvoriOriginal(\'' + x.rep.id + '\')" title="Otvori original: ' +
+        escHtml(x.gl) + ' (' + x.n + ' akata u bazi)">📄 ' + escHtml(x.broj) + '<span class="cnt">' + x.n + '</span></span>';
+    });
+    h += '</div>';
+  });
+  return h;
+}
+/* ==== /ipp-glasbar-v2 ==== */
 function brzKljuc(d){
   if(d._bk === undefined){
     var m = String(d.datum || '').match(/(\d{1,2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{4})/), v = 0;
@@ -2163,7 +2207,7 @@ function run(){
       if(rowsOf(o2)){ out=o2; USED=t2; fallback='Nema doslovnog pogotka za „'+escHtml(q)+'“ — prikazano po osnovi riječi <b>'+escHtml(t2.join(' '))+'</b> (obuhvata sve padeže).'; break; }
     }
   }
-  const GODBAR=brzGodBar(out);            /* ipp-brzina-v1 */
+  const GODBAR=brzGodBar(out)+(USED.length?'':brzGlasBar(out));   /* ipp-brzina-v1, ipp-glasbar-v2 */
   out=out.filter(o=>godOK(o.d));
   BRZ_SPREM={};
   const res=USED.map(t=>tokRe(t,whole));
@@ -5163,7 +5207,7 @@ function _izmDugme(v){
 </script>
 <script id="ipp-brzina-javno-v1">
 /* baza u dijelovima — samo na javnom sajtu (pripremi_sajt.py) */
-var BRZ_V='2f5d932302', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
+var BRZ_V='c961856565', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
 /* na telefonu (ili uz štednju podataka) tekstovi se ne skidaju sami — tek kad korisnik nešto traži ili otvori propis */
 var BRZ_TELEFON=!!((window.matchMedia && matchMedia('(max-width: 900px)').matches) || (navigator.connection && navigator.connection.saveData));
 var BRZ_SVE=!BRZ_TELEFON;
