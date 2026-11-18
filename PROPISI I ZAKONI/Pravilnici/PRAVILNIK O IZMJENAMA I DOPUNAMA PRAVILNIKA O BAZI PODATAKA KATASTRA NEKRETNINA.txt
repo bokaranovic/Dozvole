@@ -1,0 +1,285 @@
+("Službene novine Federacije BiH", broj 89/23)
+
+Na osnovu člana 210. Zakona o premjeru i katastru nekretnina ("Službeni list SR BiH", br. 22/84, 12/87, 26/90 i 36/90,
+"Službeni list R BiH", br. 4/93 i 13/94 i "Službene novine
+Federacije BiH", broj 61/22), koji se primjenjuje kao federalni
+propis na osnovu člana IX.5.(1) Ustava Federacije Bosne i
+Hercegovine, direktor Federalne uprave za geodetske i imovinskopravne poslove donosi
+
+PRAVILNIK
+
+O IZMJENAMA I DOPUNAMA PRAVILNIKA O BAZI
+PODATAKA KATASTRA NEKRETNINA
+Član 1.
+U Pravilniku o bazi podataka katastra nekretnina ("Službene
+novine Federacije BiH", br. 21/08, 14/09, 54/09 i 85/10) u čl. 73. i
+81. riječi: "Privremenom odlukom o naknadama za korištenje
+podataka premjera i katastra nekretnina ("Službene novine
+Federacje BiH", broj 69/05)", zamjenjuju se riječima: "Odlukom o
+naknadama za korištenje podataka premjera i katastra ("Službene
+novine Federacije BiH", broj 30/22).".
+Član 2.
+Iza člana 81. dodaje se novo poglavlje Va. i novi čl. 81a.,
+81b., 81c., 81d., 81e., 81f., 81g. i 81h. koji glase:
+"Va. RAZMJENA PODATAKA IZMEĐU KATASTARSKOG I ZEMLJIŠNOKNJIŽNOG INFORMACIJSKOG
+SISTEMA
+Član 81a.
+Razmjena podataka između katastarskog i zemljišnoknjižnog informacijskog sistema mora se odvijati kontinuirano. U cilju
+održavanja međusobne usaglašenosti i razmjene podataka između
+katastra nekretnina i zemljišne knjige, nadležni organi za vođenje
+katastra nekretnina i zemljišne knjige obavezni su osigurati
+tehničke preduvjete i uspostaviti elektronsku vezu između
+informacijskih sistema katastra i zemljišne knjige.
+Član 81b.
+Ako su podaci o nekretnini upisani u katastru nekretnina i
+zemljišnoj knjizi u svemu usaglašeni, razmjena podataka o
+promjenama između katastarskog informacijskog sistema i
+zemljišnoknjižnog informacijskog sistema odvija se obostrano, u
+trenutku zaključenja promjene u bazi podataka katastra nekretnina,
+odnosno provođenja promjene u bazi podataka zemljišne knjige.
+Član 81c.
+Ako su podaci o nekretnini upisani u katastru nekretnina i
+zemljišnoj knjizi u svemu usaglašeni, provođenjem upisa
+promjene u bazi podataka zemljišne knjige, preuzimaju se podaci
+o korisniku u bazu podataka katastra nekretnina. Katastarski
+informacijski sistem automatski evidentira preuzetu promjenu u
+bazi podataka katastra nekretnina.
+Član 81d.
+Ako podaci o nekretnini upisani u katastru nekretnina i
+zemljišnoj knjizi nisu u svemu usaglašeni, a zemljišna knjiga
+uspostavljena prema podacima novog premjera, provođenjem
+upisa u bazi podataka zemljišne knjige, katastarski informacijski
+sistem automatski evidentira promjenu u bazi podataka katastra
+
+Broj 89 - Strana 16
+
+SLUŽBENE NOVINE FEDERACIJE BiH
+
+nekretnina, a postupak se provodi po zaprimanju
+zemljišnoknjižnog rješenja dostavljenog analognim putem.
+Član 81e.
+Ako podaci o nekretnini upisani u katastru nekretnina i
+zemljišnoj knjizi nisu u svemu usaglašeni, a zemljišna knjiga
+uspostavljena prema podacima novog premjera, podaci premjera
+(oblik, površina i način korištenja nekretnine), nakon zaključenja
+promjene u bazi podataka katastra nekretnina automatski se
+prosljeđuju zemljišnoknjižnom informacijskom sistemu, a
+katastarski ured dostavlja prijavni list A u analognom obliku
+zemljišnoknjižnom uredu.
+Član 81f.
+Ako su podaci o nekretnini upisani u katastru nekretnina i
+zemljišnoj knjizi u svemu usaglašeni, podatke premjera (oblik,
+površina i način korištenja nekretnine), nakon zaključenja
+promjene u bazi podataka katastra nekretnina, katastarski
+informacijski
+sistem
+prosljeđuje
+zemljišnoknjižnom
+informacijskom sistemu.
+Član 81g.
+Ako se tehnička promjena odnosi na nekretnine na kojima je
+u C odjeljku zemljišnoknjižnog uloška upisan teret, podaci
+premjera (oblik, površina i način korištenja nekretnine) prosljeđuju
+se zemljišnoknjižnom informacijskom sistemu po pravilima iz
+člana 81f., samo u slučaju da se sa upisom iste u bazu podataka
+katastra nekretnina založni vjerovnik prethodno saglasio.
+Član 81h.
+Preduvjet za razmjenu podataka opisanu u čl. 81a. do 81g.
+ovog pravilnika, u katastarskom informacijskom sistemu je
+izvršenje verifikacije usaglašenosti podataka na katastarskim
+parcelama od strane općinskog/gradskog organa uprave nadležnog
+za poslove održavanja premjera i katastra nekretnina u bazi
+podataka katastra nekretnina, kao i verifikacija usaglašenosti u
+bazi podataka zemljišne knjige od strane nadležnog zemljišnoknjižnog ureda.
+Postupak verifikacije usaglašenosti podataka u bazi podataka
+katastra nekretnina započinje inicijalnom provjerom podataka
+koju automatski pokreće katastarski informacijski sistem, a
+potvrdu verifikacije usaglašenosti podataka u bazi podataka
+katastra nekretnina vrši službena osoba zaposlena u
+općinskom/gradskom organu uprave nadležnom za poslove
+održavanja premjera i katastra nekretnina.
+Ukoliko općinski/gradski organ uprave nadležan za poslove
+održavanja premjera i katastra nekretnina verifikacijom utvrdi da
+su ispunjeni uvjeti usaglašenosti navedeni u stavu (9) člana 13.
+Pravilnika o održavanju premjera, katastra zemljišta i katastra
+nekretnina, verificirane nekretnine dobivaju atribut "USAGLAŠEN" u bazi podataka katastra nekretnina.
+Ukoliko općinski/gradski organ uprave nadležan za poslove
+održavanja premjera i katastra nekretnina verifikacijom utvrdi da
+nisu ispunjeni uvjeti usaglašenosti navedeni u stavu (9) člana 13.
+Pravilnika o održavanju premjera, katastra zemljišta i katastra
+nekretnina, verificirane nekretnine dobivaju atribut "NIJE
+USAGLAŠEN" u bazi podataka katastra nekretnina.
+Ukoliko verifikacijom katastarska parcela dobije atribut
+"USAGLAŠEN" u bazi podataka katastra nekretnina, nije moguća
+naknadna izmjena atributa usaglašenosti.".
+Član 3.
+Član 90. mijenja se i glasi:
+"Član 90.
+Zaštita podataka izradom zaštitnih kopija sprovodi se tako
+što se izrada zaštitnih kopija vrši dnevno, kvartalno i godišnje.
+Dnevne, periodične i godišnje zaštitne kopije se odlažu i
+čuvaju na odgovarajućim medijima, u skladu s odredbama čl. 84.
+do 86. ovog pravilnika.
+
+Petak, 17. 11. 2023.
+
+Godišnje zaštitne kopije izrađuju se najkasnije do 15. marta
+tekuće godine.
+Periodične zaštitne kopije izrađuju se najmanje kvartalno, a
+po potrebi se mogu izrađivati i češće. Potrebno je odrediti mjesto
+za skladištenje periodičnih i godišnjih zaštitnih kopija na dovoljnoj
+udaljenosti i dovoljnim nivoom fizičke zaštite kako bi se izbjeglo
+bilo kakvo oštećenje u slučaju nepredviđene situacije na glavnoj
+lokaciji.
+Najmanje dva puta godišnje potrebno je testirati medije za
+čuvanje zaštitnih kopija kako bi se osigurala njihova pouzdanost.
+Testiranje obavezno uključuje i ispitivanje sposobnosti vraćanja
+podataka iz zaštitnih kopija.
+Operativne procedure izrade rezervnih kopija podataka i
+sistema koje sadrže detaljne korake procesa mogu se u organu
+uprave nadležnom za poslove premjera i katastra nekretnina
+izrađivati zavisno o potrebama tog organa uprave.
+O izradi zaštitnih kopija podataka vodi se Dnevnik izrade
+zaštitnih kopija podataka (Prilog VIII. ovog pravilnika).".
+Član 4.
+Iza člana 90. dodaje se novi član 90a., koji glasi:
+"Član 90a.
+Korisnici su dužni sve datoteke, čiji bi eventualni gubitak
+mogao proizvesti poteškoće u obavljanju njihovih radnih zadataka,
+pohranjivati na fajl serveru ili drugim eksternim medijima.".
+Član 5.
+U članu 91. stav (4) riječ "kvartalno" zamjenjuje se riječima:
+"najmanje svakih šest mjeseci".
+Stav (5) mijenja se i gasi:
+"(5) U slučaju sumnje na kompromitiranost lozinke,
+događaj se bez odlaganja mora prijaviti IT
+administratoru, kao i neposrednom rukovodiocu,
+nakon čega će lozinka biti promijenjena, a razlog
+promjene lozinke upisan u Evidenciju o dodjeli
+lozinki."
+Iza stava (6) dodaju se novi st. (7) i (8) koji glase:
+"(7) Lozinke trebaju imati najmanje 8 karaktera, od čega
+minimalno jedno veliko slovo, broj i specijalni znak (?;
+!; $; %, #).
+(8) Zabranjeno je sačinjavanje bilješke sa lozinkom u bilo
+kojoj formi, kao i ostavljanje bilješke sa lozinkom na
+ili ispod računara ili na drugom vidnom mjestu u
+radnom prostoru.".
+Član 6.
+Iza člana 91. dodaju se novi čl. 91a., 91b. i 91c. koji glase:
+"Član 91a.
+Administratorska lozinka se čuva u zatvorenoj koverti u
+adekvatnom ormariću u server sobi.
+Na koverti je sadržan podatak na koji informacijski sistem ili
+uređaj se lozinka odnosi, kao i datum kada je lozinka posljednji
+puta ažurirana.
+Ukoliko je potrebno izvršiti uvid u administratorsku lozinku,
+zapečaćenu kovertu otvara IT administrator, uz prisustvo
+rukovodioca organa uprave nadležnog za poslove premjera i
+katastra nekretnina.
+Nakon izvršenog uvida u podatak o administratorskoj
+lozinki, administratorska lozinka se bez odlaganja mijenja, a nova
+lozinka se potom pohranjuje u zatvorenoj koverti u ormariću u
+server sobi.
+Član 91b.
+Kontrola prava pristupa korisnika revidira se najmanje
+jednom godišnje.
+Provjera prava pristupa korisnika vrši se kako bi se
+identificirali oni nalozi koji se iz bilo kojeg razloga više ne koriste,
+
+Petak, 17. 11. 2023.
+
+SLUŽBENE NOVINE FEDERACIJE BiH
+
+odnosno pripadaju zaposlenima kojima je radni odnos ili druga
+vrsta angažmana u nadležnom organu uprave prestao.
+Rukovodilac organizacijske cjeline u kojoj se obavljaju
+geodetski poslovi, dužan je ažurirati prava pristupa zaposlenih, u
+skladu s poslovima koji isti obavljaju u organizacijskoj cjelini.
+Član 91c.
+Korisnik je dužan odjaviti se sa mreže ili zaključati svoje
+uređaje kada napušta radno mjesto.
+Korisnik je na kraju radnog dana dužan odjaviti se sa iz svih
+aplikacijskih sistema i isključiti radnu stanicu, izuzev ako postoji
+izričit nalog nadređenog prema kojem radna stanica mora ostati
+uključena, bez obzira na odsustvo zaposlenika.".
+Član 7.
+Iza člana 93. dodaju se novi čl. 93a. do 93d., koji glase:
+"Član 93a.
+Prema stepenu povjerljivosti informacije nadležnog organa
+klasificirane su u sljedeće kategorije:
+1) javne,
+2) interne,
+3) povjerljive,
+4) strogo povjerljive.
+Javne informacije su informacije čijim objavljivanjem se ne
+uzrokuje šteta nadležnom organu (npr. Pravilnik o BPKN, web
+stranica nadležnog organa). Objavljivanje javnih podataka vrši se
+u skladu sa posebnim propisima o slobodi pristupa informacijama.
+Interne informacije su informacije koje se mogu dijeliti
+unutar nadležnog organa uprave sa svim zaposlenima (npr.
+Pravilnik o unutrašnjem uređenju, Pravilnik o materijalnom i
+knjigovodstvenom poslovanju). Objavljivanje interne informacije
+van nadležnog organa mora biti odobreno od strane rukovodioca.
+Povjerljive informacije su informacije kojima pristup imaju
+samo ovlašteni zaposleni nadležnog organa uprave (npr. ugovori
+sa pružaocima usluga, strateški planovi razvoja). Dijeljenje
+povjerljivih informacija svim zaposlenim u nadležnom organu ili
+trećim osobama dopušteno je isključivo uz odobrenje
+rukovodioca.
+Strogo povjerljive informacije su informacije čije otkrivanje
+ima ozbiljan, dugoročan utjecaj na strateške ciljeve i dovodi do
+ozbiljnih reputacijskih rizika nadležnog organa uprave (npr.
+osobni podaci, izvorni programski kod softvera katastar.ba).
+Pristup strogo povjerljivim informacijama mora biti odobren u
+pismenoj formi.
+Član 93b.
+Rukovodilac nadležnog organa uprave utvrđuje ključne
+procese, odnosno zadatke i razvrstava ih po značaju.
+Incidentom se smatra svaki događaj koji utječe na
+funkcionalnost informacijskog sistema nadležnog organa.
+Rukovodilac nadležnog organa uprave utvrđuje osnovne
+elemente kriznog upravljanja, s ciljem nastavka poslovnih procesa
+u ograničenom, odnosno punom obimu u slučaju vanrednih
+događaja.
+U slučaju vanrednog događaja svi zaposlenici dužni su
+pridržavati se klasifikacije poslovnih procesa i zadataka iz stava
+(1) ovog člana, te u skladu sa istom izvršavati akcioni plan za
+uspostavljanje funkcionalnog stanja, sve do normalizacije procesa
+rada u nadležnom organu.
+Član 93c.
+Akcioni plan iz člana 93b. ovog pravilnika donosi
+rukovodilac nadležnog organa uprave u pisanoj formi i dužan je
+starati se o njegovom redovnom ažuriranju.
+Rukovodilac se stara o izradi i redovnom ažuriranju popisa
+ovlaštenih osoba, ključnih dobavljača, telefonskih brojeva
+interventnih službi (vatrogasci, hitna pomoć, policija, službe
+
+Broj 89 - Strana 17
+
+osiguranja) i drugih podataka potrebnih za realizaciju planova i
+mjera u slučaju vanrednog događaja.
+U svrhu pripreme za eventualni vanredni događaj nadležni
+organi uprave dužni su osigurati interno osposobljavanje
+zaposlenih koje podrazumijeva i provođenje simulacije vanrednog
+događaja najmanje jednom godišnje.
+U okolnostima vanrednog događaja općinski, odnosno
+gradski organ uprave nadležan za poslove premjera i katastra
+nekretnina sa zaposlenima, poslovnim partnerima i javnošću
+komunicira usmenim putem, odnosno putem elektronske pošte
+ukoliko je ovakav vid komunikacije moguć.
+Član 93d.
+Rukovodilac nadležnog organa dužan je osigurati prostorne,
+tehničke i sve druge uvjete neophodne za sigurno čuvanje zaštitne
+kopije ključnih dokumenata i zapisa.
+Rukovodilac nadležnog organa odredit će osobu koja je
+odgovorna za osiguranje i čuvanje zaštitne kopije ključnih
+dokumenata i zapisa."
+Član 8.
+Ovaj pravilnik stupa na snagu osmog dana od dana
+objavljivanja u "Službenim novinama Federacije BiH".
+Broj 01-02-1-2108-9/2023
+13. novembra 2023. godine
+Direktor
+Sarajevo
+Željko Obradović, s. r.

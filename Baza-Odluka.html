@@ -1052,63 +1052,6 @@ h3 .ptbadge{font-size:11px;vertical-align:3px}
 .ptbadge.vs{background:#6b7280}
 /* ---- /ipp-precisceni-v1 ---- */
 </style>
-<style id="ipp-mobile-fix">
-/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
-   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
-.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
-.ipp-logout:hover{filter:brightness(1.08)}
-@media (max-width:760px){
-  header{position:static !important;padding:10px 12px !important}
-  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
-  .grb{width:38px !important;height:39px !important;order:1}
-  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
-  header h1{font-size:15px !important;line-height:1.25 !important}
-  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
-  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
-  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
-  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
-  .lead{font-size:13px}
-  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
-  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
-  .tbody h3{font-size:14.5px !important;line-height:1.35}
-  .tbody p{font-size:12.5px !important}
-  .tarrow{display:none !important}
-  .card{padding:13px 14px !important;border-radius:12px !important}
-  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
-  .side{position:static !important;width:100% !important;max-height:none !important}
-  input,select,textarea{font-size:16px !important;max-width:100%}
-  label{font-size:12.5px}
-  img,table,pre{max-width:100% !important}
-  table{font-size:11.5px !important;table-layout:auto}
-  th,td{padding:4px 5px !important;word-break:break-word}
-  .card,.box,.panel{overflow-x:auto !important}
-  .secttl{margin:18px 0 8px !important}
-  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
-  .btnrow,.actions{flex-wrap:wrap !important}
-}
-@media (max-width:420px){
-  header h1{font-size:14px !important}
-  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
-  .tbody h3{font-size:14px !important}
-}
-</style>
-<script id="ipp-mobile-fix-js">
-/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
-   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
-(function(){
-  function relocate(){
-    var fix=document.getElementById('odjavaFix'); if(!fix) return;
-    var hw=document.querySelector('header .hwrap'); if(!hw) return;
-    var b=fix.querySelector('button'); if(!b) return;
-    b.removeAttribute('style');
-    b.className='ghost navbtn ipp-logout';
-    hw.appendChild(b);
-    fix.parentNode.removeChild(fix);
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
-  else relocate();
-})();
-</script>
 <style id="ipp-brzina-v1">
 .godbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 14px}
 .godbar .godlbl{font-size:11.5px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-right:4px}
@@ -1272,6 +1215,63 @@ body.light header{box-shadow:0 6px 24px rgba(16,32,64,.08)}
 body.bezanim *,body.bezanim *::before,body.bezanim *::after,html.bezanim-pre *{animation:none !important;transition:none !important}
 @media print{ .card::before,.dzTalas{display:none !important} }
 </style>
+<style id="ipp-mobile-fix">
+/* ===== IPP — zajednički sloj: mobilni prikaz + dugme Odjava u zaglavlju =====
+   Dodano automatski. PC izgled ostaje netaknut (sve je unutar @media). ===== */
+.ipp-logout{background:#c0392b !important;color:#fff !important;border:1px solid #a93226 !important}
+.ipp-logout:hover{filter:brightness(1.08)}
+@media (max-width:760px){
+  header{position:static !important;padding:10px 12px !important}
+  .hwrap{flex-wrap:wrap !important;row-gap:6px !important;column-gap:8px !important;align-items:center !important;max-width:100% !important}
+  .grb{width:38px !important;height:39px !important;order:1}
+  .htitle{order:2;flex:1 1 calc(100% - 52px) !important;min-width:0 !important}
+  header h1{font-size:15px !important;line-height:1.25 !important}
+  header p{font-size:11px !important;margin-top:2px !important;line-height:1.35}
+  .hwrap > a,.hwrap > button{order:3;flex:0 0 auto;margin-left:0 !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:7px 10px !important;font-size:12px !important}
+  .wrap{padding:14px 12px 48px !important;max-width:100% !important}
+  .lead{font-size:13px}
+  .tile{padding:13px 14px !important;gap:12px !important;border-radius:12px !important}
+  .tico-img{width:46px !important;height:46px !important;font-size:23px !important;border-radius:11px !important}
+  .tbody h3{font-size:14.5px !important;line-height:1.35}
+  .tbody p{font-size:12.5px !important}
+  .tarrow{display:none !important}
+  .card{padding:13px 14px !important;border-radius:12px !important}
+  .row,.row2,.row3,.row4,.grid,.cols{grid-template-columns:1fr !important;flex-direction:column !important}
+  .side{position:static !important;width:100% !important;max-height:none !important}
+  input,select,textarea{font-size:16px !important;max-width:100%}
+  label{font-size:12.5px}
+  img,table,pre{max-width:100% !important}
+  table{font-size:11.5px !important;table-layout:auto}
+  th,td{padding:4px 5px !important;word-break:break-word}
+  .card,.box,.panel{overflow-x:auto !important}
+  .secttl{margin:18px 0 8px !important}
+  .toast{left:12px !important;right:12px !important;transform:none !important;text-align:center}
+  .btnrow,.actions{flex-wrap:wrap !important}
+}
+@media (max-width:420px){
+  header h1{font-size:14px !important}
+  .navbtn,.homebtn,.themebtn,.logoutbtn,.ipp-logout{padding:6px 9px !important;font-size:11.5px !important}
+  .tbody h3{font-size:14px !important}
+}
+</style>
+<script id="ipp-mobile-fix-js">
+/* Prebacuje plutajuće dugme "Odjava" (#odjavaFix) iz fiksnog položaja u zaglavlje,
+   da se na telefonu ne preklapa sa naslovom. Ako zaglavlja nema — ostaje kako jeste. */
+(function(){
+  function relocate(){
+    var fix=document.getElementById('odjavaFix'); if(!fix) return;
+    var hw=document.querySelector('header .hwrap'); if(!hw) return;
+    var b=fix.querySelector('button'); if(!b) return;
+    b.removeAttribute('style');
+    b.className='ghost navbtn ipp-logout';
+    hw.appendChild(b);
+    fix.parentNode.removeChild(fix);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',relocate);
+  else relocate();
+})();
+</script>
 </head>
 <body class="light">
 <script>try{if(localStorage.getItem('ipp-auth')!=='ok'){location.replace('index.html');}}catch(e){location.replace('index.html');}</script>
@@ -5163,7 +5163,7 @@ function _izmDugme(v){
 </script>
 <script id="ipp-brzina-javno-v1">
 /* baza u dijelovima — samo na javnom sajtu (pripremi_sajt.py) */
-var BRZ_V='9cb5faad82', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
+var BRZ_V='016580af90', BRZ_CEKA=true, BRZ_DIJELOVI=[], BRZ_RED=[], BRZ_GOTOVO=0, BRZ_RADI=false, BRZ_TMR=null, BRZ_POKUSAJ={};
 /* na telefonu (ili uz štednju podataka) tekstovi se ne skidaju sami — tek kad korisnik nešto traži ili otvori propis */
 var BRZ_TELEFON=!!((window.matchMedia && matchMedia('(max-width: 900px)').matches) || (navigator.connection && navigator.connection.saveData));
 var BRZ_SVE=!BRZ_TELEFON;
