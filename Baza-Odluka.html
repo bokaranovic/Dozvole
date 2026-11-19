@@ -1173,6 +1173,7 @@ body.rbima.rbpin.lijevo .searchbar{top:var(--hdrH,64px)}
 #rbGearBtn.on{background:var(--accent2);border-color:var(--accent2);color:#fff}
 #rbGearBtn .zup{display:inline-block;transition:transform .6s var(--spring,ease)}
 #rbGearBtn.on .zup{transform:rotate(90deg)}
+.card.glasorig{padding:12px 16px;margin:4px 0 14px;border-left:4px solid var(--accent2)}.card.glasorig .gohdr{font-size:15px;margin-bottom:9px}.card.glasorig .gosub{color:var(--muted);font-weight:600}.card.glasorig .gobtn{display:flex;flex-wrap:wrap;gap:8px}.card.glasorig .gonap{font-size:12px;color:var(--muted);margin-top:8px}/* ipp-glasbar-v4 */
 </style>
 <style id="ipp-dizajn-v1">
 /* ipp-dizajn-v1 — življi izgled: mekše kartice, boja nivoa, sjene, odskok, talas pri kliku */
@@ -2005,6 +2006,34 @@ function brzGlasBar(out){
   });
   return h;
 }
+/* ipp-glasbar-v4: kartica „cijeli glasnik“ – originalni glasnik u svim oblicima koji postoje */
+function glasOrigKartica(lista){
+  var vidjeno = {}, dug = '', rep = null, i, d, put, tip, lbl;
+  for(i = 0; i < lista.length; i++){
+    d = lista[i];
+    if(!imaOriginal(d)) continue;
+    rep = glasRep(rep, d);
+    put = d.izvorPut || d.izvor || '';
+    if(d.izvor && !vidjeno[put]){
+      vidjeno[put] = 1;
+      tip = String(d.izvorTip || put.split('.').pop() || '').toLowerCase();
+      lbl = d.prek ? '🖨️ Original – sken' : (/pdf/.test(tip) ? '📄 Original – PDF' : (/doc/.test(tip) ? '📝 Original – Word' : '🖨️ Original – sken'));
+      dug += '<button type="button" class="ghost" onclick="otvoriOriginal(\'' + d.id + '\',\'sken\')" title="' +
+        escHtml(put.split('/').pop()) + '">' + lbl + '</button>';
+    }
+  }
+  if(rep){
+    var v = prekVrste(rep);
+    if(v.indexOf('pdf') >= 0) dug += '<button type="button" class="ghost" onclick="otvoriOriginal(\'' + rep.id + '\',\'pdf\')">📄 Prekucano – PDF</button>';
+    if(v.indexOf('word') >= 0) dug += '<button type="button" class="ghost" onclick="otvoriOriginal(\'' + rep.id + '\',\'word\')">📝 Prekucano – Word</button>';
+    if(v.indexOf('md') >= 0) dug += '<button type="button" class="ghost" onclick="otvoriOriginal(\'' + rep.id + '\',\'md\')">🗒️ Prekucano – tekst</button>';
+  }
+  if(!dug) return '';
+  var gl = (rep || lista[0] || {}).glasnik || '';
+  return '<div class="card glasorig"><div class="gohdr">📰 <b>' + escHtml(gl) + '</b> <span class="gosub">– cijeli glasnik</span></div>' +
+    '<div class="gobtn">' + dug + '</div>' +
+    '<div class="gonap">Glasnik se otvara u bočnom prozoru; odatle se može i preuzeti (⬇️ Preuzmi) ili otvoriti u novom prozoru.</div></div>';
+}
 /* ==== /ipp-glasbar-v3 ==== */
 function brzKljuc(d){
   if(d._bk === undefined){
@@ -2290,6 +2319,7 @@ function run(){
     /* ipp-brzina-v1: najnovije prvo, crta se po 50 — ostalo preko pretrage, godine ili "Prikaži još" */
     const _sv=out.map(o=>o.d).sort(GLF?glasRedom:brzNovije);   /* ipp-glasbar-v3 */
     html += '<div class="secttl">'+(GLF?glasNaslov():(GF.size?'Propisi iz izabrane godine':'Najnovije u bazi'))+' <span class="n">'+_sv.length+'</span>'+(GLF?' <span class="glasx" onclick="setGLF(-1)" title="Prikaži sve akte izabrane godine">✕ cijela godina</span>':'')+'</div>';   /* ipp-glasbar-v3 */
+    if(GLF) html += glasOrigKartica(_sv);   /* ipp-glasbar-v4 */
     if(_sv.length>BRZ_KORAK) html += '<div class="brzhint">Prikazano je '+BRZ_KORAK+' najnovijih po datumu akta. Za ostalo upiši riječ u pretragu, izaberi godinu iznad ili klikni „Prikaži još“ na dnu.</div>';
     html += brzKomadi(_sv, docCard, 'Prikaži još', BRZ_KORAK, true);   /* ipp-brzina-v2: dopunjava se pri skrolanju */
   } else {
