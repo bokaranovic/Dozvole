@@ -1149,6 +1149,31 @@ body.rbima.rbpin .layout{padding-top:calc(var(--rbH,0px) + 30px)}
 body.rbima.rbpin.lijevo .searchbar{top:calc(var(--hdrH,64px) + var(--rbH,0px))}
 @media print{ #ippRibbon{display:none !important} }
 </style>
+<style id="ipp-zupcanik-v1">
+/* ipp-glasbar-v3 — dugme glasnika: broj = filter, 📄 = original */
+.godbar.glasbar .glasvf{display:inline-flex;align-items:center;gap:3px;padding-left:5px}
+.godbar.glasbar .glasorig{display:inline-flex;align-items:center;justify-content:center;width:22px;height:20px;
+  border-radius:7px;cursor:pointer;font-size:12px;line-height:1}
+.godbar.glasbar .glasorig:hover{background:rgba(90,162,255,.25)}
+.godbar.glasbar .glasvf.on .glasorig:hover{background:rgba(255,255,255,.28)}
+.secttl .glasx{margin-left:10px;font-size:12px;font-weight:650;color:var(--accent);cursor:pointer;
+  text-transform:none;letter-spacing:0}
+.secttl .glasx:hover{text-decoration:underline}
+/* ipp-zupcanik-v1 — „Prikaz“ se otvara dugmetom ⚙ u zaglavlju; zatvorena traka je skrivena */
+#ippRibbon .rbRucka{display:none !important}
+#ippRibbon{left:auto;right:6px;padding:0 10px 16px;overflow:visible;max-width:calc(100vw - 32px)}
+body.lijevo #ippRibbon{max-width:calc(100vw - 360px)}
+body.orig #ippRibbon{right:calc(clamp(400px,46vw,960px) + 6px);max-width:calc(100vw - clamp(400px,46vw,960px) - 32px)}
+#ippRibbon .rbSadrzaj{margin-top:0 !important;display:none}
+#ippRibbon.otv .rbSadrzaj{display:flex;animation:dzSpust .45s var(--spring,ease) both}
+#ippRibbon .rbStat{font-weight:650;color:var(--muted);white-space:nowrap}
+#ippRibbon .rbStat .stat{display:inline !important;margin:0 !important;width:auto !important;font-size:12px}
+body.rbima.rbpin.lijevo .searchbar{top:var(--hdrH,64px)}
+#rbGearBtn{font-size:16px;padding-left:11px;padding-right:11px}
+#rbGearBtn.on{background:var(--accent2);border-color:var(--accent2);color:#fff}
+#rbGearBtn .zup{display:inline-block;transition:transform .6s var(--spring,ease)}
+#rbGearBtn.on .zup{transform:rotate(90deg)}
+</style>
 <style id="ipp-dizajn-v1">
 /* ipp-dizajn-v1 — življi izgled: mekše kartice, boja nivoa, sjene, odskok, talas pri kliku */
 :root{--ipp-r:16px}
@@ -1915,47 +1940,72 @@ function brzGodBar(out){
   if(god.length > VID) h += '<span class="vf ponisti" onclick="GF_SVE=!GF_SVE;run()">' + (GF_SVE ? 'manje ▴' : 'starije ▾ (' + (god.length - VID) + ')') + '</span>';
   return h + '</div>';
 }
-/* ==== ipp-glasbar-v1/v2: red sa brojevima službenih glasnika (izabrana jedna godina) ==== */
+/* ==== ipp-glasbar-v3: red sa brojevima službenih glasnika (izabrana jedna godina) ====
+   Klik na broj = filter (svi akti tog glasnika); ikonica 📄 = original glasnika. */
+var GLF = '', GLK = [], GLINFO = {};
 function glasBroj(b){ var m = String(b || '').match(/^\s*(\d{1,3})/); return m ? parseInt(m[1], 10) : 999; }
-function glasGod(d){           /* ipp-glasbar-v2: godina glasnika iz broja (8/26 → 2026), inače godina akta */
+function glasGod(d){           /* godina glasnika iz broja (8/26 → 2026), inače godina akta */
   var m = String(d.broj || '').match(/\/\s*(\d{2,4})\b/);
   if(!m) return godKey(d);
   var y = parseInt(m[1], 10); if(y < 100) y += (y < 50 ? 2000 : 1900);
   return String(y);
 }
+function glasKljuc(d){ return (d.nivo || '') + '|' + (d.glasnik || ''); }
 function glasRep(a, b){            /* koji akt glasnika nosi original: PDF ispred Worda, pa sken/prekucano */
   if(!a) return b;
   var pa = /\.pdf$/i.test(a.izvorPut || a.izvor || ''), pb = /\.pdf$/i.test(b.izvorPut || b.izvor || '');
   if(pb && !pa) return b;
   return a;
 }
+function glasRedom(a, b){          /* redoslijed akata u glasniku (…-01, …-02 …) */
+  var x = String(a.rb || '') || String(a.id || ''), y = String(b.rb || '') || String(b.id || '');
+  return x.localeCompare(y, undefined, {numeric: true});
+}
+function glasNaslov(){
+  var g = GLINFO[GLF] || {};
+  return 'Glasnik ' + escHtml(g.broj || '') + (g.nl ? ' · ' + escHtml(g.nl) : '');
+}
+function setGLF(i){
+  var k = (i >= 0 && i < GLK.length) ? GLK[i] : '';
+  GLF = (k && GLF !== k) ? k : '';
+  curDoc = null;
+  run();
+}
 function brzGlasBar(out){
-  if(GF.size !== 1 || GF.has('bez')) return '';
+  GLK = [];
+  if(GF.size !== 1 || GF.has('bez')){ GLF = ''; return ''; }
   var po = {}, red = [], i, d, k, god = Array.from(GF)[0];
   for(i = 0; i < out.length; i++){
     d = out[i].d;
-    if(!d.glasnik || !d.broj || d.vrsta === 'sudska' || !imaOriginal(d)) continue;
-    if(glasGod(d) !== god) continue;   /* ipp-glasbar-v2: glasnik te godine, i kad je akt donesen ranije */
-    k = (d.nivo || '') + '|' + d.glasnik;
-    if(!po[k]){ po[k] = {nivo: d.nivo || '', nl: d.nivoKratko || '', broj: d.broj, gl: d.glasnik, n: 0, rep: null}; red.push(po[k]); }
-    po[k].n++; po[k].rep = glasRep(po[k].rep, d);
+    if(!d.glasnik || !d.broj || d.vrsta === 'sudska') continue;
+    if(glasGod(d) !== god) continue;   /* glasnik te godine, i kad je akt donesen ranije */
+    k = glasKljuc(d);
+    if(!po[k]){ po[k] = {k: k, nivo: d.nivo || '', nl: d.nivoKratko || '', broj: d.broj, gl: d.glasnik, n: 0, rep: null}; red.push(po[k]); }
+    po[k].n++;
+    if(imaOriginal(d)) po[k].rep = glasRep(po[k].rep, d);
   }
+  if(GLF && !po[GLF]) GLF = '';       /* promijenjena godina ili opština — filter glasnika otpada */
   if(!red.length) return '';
-  var nivoi = {}; red.forEach(function(x){ (nivoi[x.nivo] = nivoi[x.nivo] || {nl: x.nl, g: []}).g.push(x); });
+  GLINFO = {};
+  var nivoi = {}; red.forEach(function(x){ GLINFO[x.k] = {broj: x.broj, nl: x.nl}; (nivoi[x.nivo] = nivoi[x.nivo] || {nl: x.nl, g: []}).g.push(x); });
   var kljucevi = Object.keys(nivoi), h = '';
   kljucevi.forEach(function(nv, j){
     var g = nivoi[nv].g.sort(function(a, b){ return glasBroj(a.broj) - glasBroj(b.broj) || (a.broj < b.broj ? -1 : 1); });
     h += '<div class="godbar glasbar"><span class="godlbl">' + (j === 0 ? 'Glasnik' : '&nbsp;') + '</span>' +
       (kljucevi.length > 1 ? '<span class="glasnivo">' + escHtml(nivoi[nv].nl) + '</span>' : '');
     g.forEach(function(x){
-      h += '<span class="vf" onclick="otvoriOriginal(\'' + x.rep.id + '\')" title="Otvori original: ' +
-        escHtml(x.gl) + ' (' + x.n + ' akata u bazi)">📄 ' + escHtml(x.broj) + '<span class="cnt">' + x.n + '</span></span>';
+      var idx = GLK.length; GLK.push(x.k);
+      h += '<span class="vf glasvf' + (GLF === x.k ? ' on' : '') + '" onclick="setGLF(' + idx + ')" title="Prikaži sve akte iz glasnika ' +
+        escHtml(x.broj) + ' (' + x.n + ')">' +
+        (x.rep ? '<span class="glasorig" onclick="event.stopPropagation();otvoriOriginal(\'' + x.rep.id + '\')" title="Otvori original glasnika ' +
+          escHtml(x.broj) + '">📄</span>' : '') +
+        escHtml(x.broj) + '<span class="cnt">' + x.n + '</span></span>';
     });
     h += '</div>';
   });
   return h;
 }
-/* ==== /ipp-glasbar-v2 ==== */
+/* ==== /ipp-glasbar-v3 ==== */
 function brzKljuc(d){
   if(d._bk === undefined){
     var m = String(d.datum || '').match(/(\d{1,2})\s*\.\s*(\d{1,2})\s*\.\s*(\d{4})/), v = 0;
@@ -2207,8 +2257,10 @@ function run(){
       if(rowsOf(o2)){ out=o2; USED=t2; fallback='Nema doslovnog pogotka za „'+escHtml(q)+'“ — prikazano po osnovi riječi <b>'+escHtml(t2.join(' '))+'</b> (obuhvata sve padeže).'; break; }
     }
   }
-  const GODBAR=brzGodBar(out)+(USED.length?'':brzGlasBar(out));   /* ipp-brzina-v1, ipp-glasbar-v2 */
+  if(USED.length) GLF='';   /* ipp-glasbar-v3: pretraga riječi gasi filter glasnika */
+  const GODBAR=brzGodBar(out)+(USED.length?'':brzGlasBar(out));   /* ipp-brzina-v1, ipp-glasbar-v3 */
   out=out.filter(o=>godOK(o.d));
+  if(GLF) out=out.filter(o=>glasKljuc(o.d)===GLF);   /* ipp-glasbar-v3 */
   BRZ_SPREM={};
   const res=USED.map(t=>tokRe(t,whole));
   let nCl=0; out.forEach(o=>nCl+=o.rows.length);
@@ -2236,8 +2288,8 @@ function run(){
     '<button type="button" class="ghost flBtnGlavni" onclick="flPanelToggle()">🚩 Prijave ('+flBroj()+')</button>'+   /* ipp-flag-v1 */
             '<button type="button" class="ghost" onclick="toggleWide()">⛶ Širina</button></div>';
     /* ipp-brzina-v1: najnovije prvo, crta se po 50 — ostalo preko pretrage, godine ili "Prikaži još" */
-    const _sv=out.map(o=>o.d).sort(brzNovije);
-    html += '<div class="secttl">'+(GF.size?'Propisi iz izabrane godine':'Najnovije u bazi')+' <span class="n">'+_sv.length+'</span></div>';
+    const _sv=out.map(o=>o.d).sort(GLF?glasRedom:brzNovije);   /* ipp-glasbar-v3 */
+    html += '<div class="secttl">'+(GLF?glasNaslov():(GF.size?'Propisi iz izabrane godine':'Najnovije u bazi'))+' <span class="n">'+_sv.length+'</span>'+(GLF?' <span class="glasx" onclick="setGLF(-1)" title="Prikaži sve akte izabrane godine">✕ cijela godina</span>':'')+'</div>';   /* ipp-glasbar-v3 */
     if(_sv.length>BRZ_KORAK) html += '<div class="brzhint">Prikazano je '+BRZ_KORAK+' najnovijih po datumu akta. Za ostalo upiši riječ u pretragu, izaberi godinu iznad ili klikni „Prikaži još“ na dnu.</div>';
     html += brzKomadi(_sv, docCard, 'Prikaži još', BRZ_KORAK, true);   /* ipp-brzina-v2: dopunjava se pri skrolanju */
   } else {
@@ -5161,6 +5213,61 @@ function _izmDugme(v){
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function(){ setTimeout(gradi, 250); });
   else setTimeout(gradi, 250);
+})();
+</script>
+<script id="ipp-zupcanik-v1">
+/* ==== ipp-zupcanik-v1 — dugme ⚙ u zaglavlju otvara traku „Prikaz“; visina zaglavlja se prati stalno ==== */
+(function(){
+  var pokusaj = 0;
+  function otvorena(){ var w = document.getElementById('ippRibbon'); return !!(w && w.classList.contains('otv')); }
+  function zakacena(){ return document.body.classList.contains('rbpin'); }
+  function sync(){ var b = document.getElementById('rbGearBtn'); if(b) b.classList.toggle('on', otvorena()); }
+  function postavi(otv){
+    var w = document.getElementById('ippRibbon'); if(!w) return;
+    if(!otv && zakacena() && typeof rbPin === 'function') rbPin();   /* zatvaranje dugmetom otkači traku */
+    w.classList.toggle('otv', !!otv);
+    sync();
+  }
+  function gradi(){
+    var w = document.getElementById('ippRibbon');
+    if(!w){ if(++pokusaj < 40) setTimeout(gradi, 150); return; }
+    if(document.getElementById('rbGearBtn')) return;
+    var nav = document.querySelector('header .hnav');
+    if(nav){
+      var b = document.createElement('button');
+      b.type = 'button'; b.id = 'rbGearBtn'; b.className = 'ghost navbtn';
+      b.title = 'Prikaz: pretraga, slova, širina teksta, tagovi, animacije';
+      b.innerHTML = '<span class="zup">⚙️</span>';
+      b.onclick = function(e){ e.stopPropagation(); postavi(!otvorena()); };
+      var odj = nav.querySelector('button[onclick^="logout"]');
+      nav.insertBefore(b, odj || null);
+    }
+    var p = w.querySelector('.rbSadrzaj'), st = document.getElementById('stat');
+    if(p && st){ var s = document.createElement('span'); s.className = 'rbGrupa rbStat'; s.appendChild(st); p.insertBefore(s, p.firstChild); }
+    new MutationObserver(sync).observe(w, {attributes: true, attributeFilter: ['class']});
+    document.addEventListener('click', function(e){
+      if(!otvorena() || zakacena()) return;
+      if(e.target.closest && (e.target.closest('#ippRibbon') || e.target.closest('#rbGearBtn'))) return;
+      postavi(false);
+    });
+    if(window.ResizeObserver && p){
+      new ResizeObserver(function(){
+        document.documentElement.style.setProperty('--rbH', (otvorena() ? p.offsetHeight : 0) + 'px');
+      }).observe(p);
+    }
+    sync();
+  }
+  function pratiZaglavlje(){
+    var hd = document.querySelector('header');
+    if(hd && window.ResizeObserver && typeof mjeriSticky === 'function')
+      new ResizeObserver(function(){ try{ mjeriSticky(); }catch(e){} }).observe(hd);
+  }
+  if(typeof zatvoriOriginal === 'function'){
+    var zo = zatvoriOriginal;
+    zatvoriOriginal = function(){ var x = zo.apply(this, arguments); try{ if(typeof mjeriSticky === 'function') setTimeout(mjeriSticky, 60); }catch(e){} return x; };
+  }
+  function start(){ setTimeout(gradi, 400); pratiZaglavlje(); }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
 </script>
 <script id="ipp-dizajn-v1">
